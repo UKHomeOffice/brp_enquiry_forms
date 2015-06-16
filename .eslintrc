@@ -3,7 +3,6 @@ env:
 
 plugins:
   - filenames
-  - one-variable-per-var
   - mocha
 
 rules:
@@ -432,6 +431,3 @@ rules:
     # the pattern a file name must match
     # ('<text>' is to ensure interop with eslint --stdin)
     - '^(<text>$|[a-z\-\.]+$)'
-
-  # enforce declaring only one variable per var statement
-  one-variable-per-var/one-variable-per-var: 2
