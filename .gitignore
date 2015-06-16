@@ -1,4 +1,8 @@
-node_modules/
-
 #ide specific
 .idea/
+
+node_modules
+reports
+*.log
+TODO.txt
+.DS_Store
