@@ -1,7 +1,7 @@
 {
   "name": "BRP",
   "version": "0.0.0",
-  "descritption": "The BRP application",
+  "description": "The BRP application",
   "scripts": {
     "start": "node .",
     "start:dev": "npm run mon",
