@@ -14,7 +14,13 @@
   },
   "author": "HomeOffice",
   "dependencies": {
-    "express": "^4.12.4"
+    "express": "^4.12.4",
+    "hmpo-form-controller": "^0.2.4",
+    "hmpo-form-wizard": "^1.0.1",
+    "hmpo-frontend-toolkit": "^1.2.0",
+    "hmpo-govuk-template": "0.0.3",
+    "hmpo-model": "^0.1.2",
+    "hmpo-template-mixins": "^0.3.0"
   },
   "devDependencies": {
     "chai": "^3.0.0",
