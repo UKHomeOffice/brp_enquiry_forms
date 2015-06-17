@@ -11,13 +11,15 @@
     "lint": "eslint .",
     "style": "jscs **/*.js --config=./.jscsrc.json",
     "quality": "plato -r -x 'node_modules|reports|test' -d reports/plato .",
-    "mon": "DEBUG=* nodemon ."
+    "mon": "DEBUG=* nodemon .",
+    "postinstall": "node-sass ./assets/css/app.scss ./assets/css/app.css --include-path ./node_modules"
   },
   "author": "HomeOffice",
   "dependencies": {
     "body-parser": "^1.13.0",
     "express": "^4.12.4",
     "express-partial-templates": "^0.1.0",
+    "govuk_frontend_toolkit": "^4.0.1",
     "hmpo-form-wizard": "^1.0.1",
     "hmpo-govuk-template": "0.0.3",
     "hmpo-template-mixins": "^0.3.0",
