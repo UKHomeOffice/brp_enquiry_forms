@@ -1,27 +1,32 @@
 'use strict';
 
-var DeliveryModel = function DeliveryModel(attr) {
-  this.attr = attr;
-};
+var deliveryModel = require('hmpo-model');
+var emailService = require('../lib/ses-mailer');
 
-DeliveryModel.prototype = {
-
-  get: function get(key) {
-    if (key in this.attr) {
-      return this.attr[key];
+deliveryModel.prototype.save = function() {
+  emailService.sendEmail(
+    {
+      Source     : this.get('sender'),
+      Destination: {ToAddresses: [this.get('recipient')]},
+      Message    : {
+        Subject: {
+          Data: this.get('subject')
+        },
+        Body   : {
+          Text: {
+            Data: this.toString()
+          }
+        }
+      }
     }
-
-    return null;
-  },
-
-  set: function set(key, value) {
-    this.attr[key] = value;
-  },
-
-  save: function save() {
-
-  }
+    , function (err, data) {
+      if (err) throw err
+      console.log('Email sent:');
+      console.log(data);
+    });
 };
 
-module.exports = DeliveryModel;
+
+
+module.exports = deliveryModel;
 
