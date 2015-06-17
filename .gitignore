@@ -2,7 +2,7 @@
 .idea/
 
 node_modules
+assets/css/app.css
 reports
 *.log
-TODO.txt
 .DS_Store
