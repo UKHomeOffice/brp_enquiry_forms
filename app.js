@@ -6,6 +6,7 @@ var path = require('path');
 var debug = require('debug')('index');
 
 app.use('/public', express.static(path.resolve(__dirname, './public')));
+
 app.use(function setAssetPath(req, res, next) {
   res.locals.assetPath = '/public';
   next();
@@ -27,5 +28,10 @@ app.use(function setBaseUrl(req, res, next) {
 
 app.use(require('./routes'));
 
+app.use(function errorHandler(err, req, res) {
+  debug('err %o', err);
+  res.status(500).render('pages/error', {err: err});
+});
+
 app.listen(require('./config').PORT);
-debug('App listening on port %n', require('./config').PORT);
+debug('App listening on port %o', require('./config').PORT);

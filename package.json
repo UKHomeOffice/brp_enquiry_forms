@@ -1,6 +1,7 @@
 {
   "name": "BRP",
   "version": "0.0.0",
+  "main": "app.js",
   "description": "The BRP application",
   "scripts": {
     "start": "node .",
@@ -19,7 +20,10 @@
     "express-partial-templates": "^0.1.0",
     "hmpo-form-wizard": "^1.0.1",
     "hmpo-govuk-template": "0.0.3",
-    "hogan-express-strict": "^0.5.4"
+    "hmpo-template-mixins": "^0.3.0",
+    "hogan-express-strict": "^0.5.4",
+    "node-sass": "^3.2.0",
+    "underscore": "^1.8.3"
   },
   "devDependencies": {
     "chai": "^3.0.0",
