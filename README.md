@@ -2,6 +2,10 @@
 
 #### Scripts (For a llist of all scripts available see ./package.json#scripts)
 
+### Current build status
+
+[![Build Status](https://travis-ci.org/UKHomeOffice/brp_app.svg)](https://travis-ci.org/UKHomeOffice/brp_app)
+
 ### Set up
 
 - Pull in all the dependencies

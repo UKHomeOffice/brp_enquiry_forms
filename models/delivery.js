@@ -3,30 +3,30 @@
 var deliveryModel = require('hmpo-model');
 var emailService = require('../lib/ses-mailer');
 
-deliveryModel.prototype.save = function() {
+deliveryModel.prototype.save = function save() {
   emailService.sendEmail(
     {
-      Source     : this.get('sender'),
+      Source: this.get('sender'),
       Destination: {ToAddresses: [this.get('recipient')]},
-      Message    : {
+      Message: {
         Subject: {
           Data: this.get('subject')
         },
-        Body   : {
+        Body: {
           Text: {
             Data: this.toString()
           }
         }
       }
+    },
+    function processResponse(err, data) {
+      if (err) {
+        throw err;
+      }
+      return data;
     }
-    , function (err, data) {
-      if (err) throw err
-      console.log('Email sent:');
-      console.log(data);
-    });
+  );
 };
-
-
 
 module.exports = deliveryModel;
 

@@ -5,10 +5,9 @@ var modelParams = {
   parameter2: 'Value 2',
   booleanParam: false,
   numericParam: 123.12,
-  sender: "brett@bdb-studios.co.uk",
+  sender: 'brett@bdb-studios.co.uk',
   recipient: 'brett.minnie@gmail.com',
   subject: 'Test Email'
-
 };
 
 var testKey = global.testUid();
@@ -40,8 +39,8 @@ describe('Model initialisation', function () {
     expect(model.get(testKey)).to.equal(expected);
   });
 
-  //Can we send an email
+  // Can we send an email
   it('When we save the model it should send an email', function() {
     model.save();
-  })
+  });
 });
