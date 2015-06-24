@@ -1,7 +1,3 @@
-{{$validationSummary}}
-    {{> partials-validation-summary}}
-{{/validationSummary}}
-
 <form action="{{action}}" method="POST" {{$encoding}}{{/encoding}} autocomplete="off" novalidate="true" spellcheck="false" role="form">
   {{$form}}{{/form}}
   {{#csrf-token}}

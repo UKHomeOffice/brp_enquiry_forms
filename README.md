@@ -14,6 +14,7 @@ $  npm install
 ```bash
 $ npm start
 ```
+Then browse to `http://localhost:8080` to view the app in your browser
 
 - Run nodemon (Node daemon - for development only)
 ```bash

@@ -1,0 +1,21 @@
+{{<layout}}
+
+{{$insideHeader}}<h1>{{#t}}journey.header{{/t}}</h1>{{/insideHeader}}
+
+{{$content}}
+  <h2>{{#t}}steps.two.header{{/t}}</h2>
+  <p>{{#t}}steps.two.delivery-instruction{{/t}}</p>
+
+  {{<partials-form}}
+
+    {{$form}}
+
+      {{#textarea}}{{/textarea}}
+
+    {{/form}}
+
+  {{/partials-form}}
+
+{{/content}}
+
+{{/layout}}
