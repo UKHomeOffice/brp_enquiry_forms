@@ -27,7 +27,7 @@
     "hmpo-frontend-toolkit": "^1.2.1",
     "hmpo-govuk-template": "0.0.3",
     "hmpo-model": "^0.1.2",
-    "hmpo-template-mixins": "^0.3.0",
+    "hmpo-template-mixins": "^0.4.0",
     "hogan-express-strict": "^0.5.4",
     "i18n-future": "^0.1.4",
     "i18n-lookup": "^0.1.0",

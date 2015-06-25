@@ -12,8 +12,17 @@ module.exports = {
       'dated',
       'continue'
     ],
-    next: '/submit',
+    next: '/step2',
     backLink: '/'
+  },
+  '/step2': {
+    fields: [
+      'delivery-details',
+      'address-street',
+      'continue'
+    ],
+    next: '/submit',
+    backLink: '/step1'
   },
   '/submit': {
     controller: require('../controllers/submit'),

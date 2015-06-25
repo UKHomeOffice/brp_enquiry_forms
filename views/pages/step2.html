@@ -10,7 +10,36 @@
 
     {{$form}}
 
-      {{#textarea}}{{/textarea}}
+      <fieldset id="delivery-details-group" {{#errors.delivery-details}}class="validation-error"{{/errors.delivery-details}}>
+        <legend>
+            {{#errors.delivery-details}}
+              <span id="delivery-details-error" class="error-message">{{#t}}errors.delivery-details.message{{/t}}</span>
+            {{/errors.delivery-details}}
+            <span class="form-label-bold">{{#t}}fields.delivery-details.legend{{/t}}</span>
+        </legend>
+        <div class="form-delivery-details">
+            <p id="delivery-details-hint" class="form-hint">{{#t}}fields.delivery-details.hint{{/t}}</p>
+            <textarea></textarea>
+        </div>
+      </fieldset>
+
+      <fieldset id="address-group" {{#errors.address}}class="validation-error"{{/errors.address}}>
+        <legend>
+            {{#errors.address-street}}<span id="address-error" class="error-message">HAHAHAHAHAHAHA</span>{{/errors.address-street}}
+            <span class="form-label-bold">{{#t}}fields.address.legend{{/t}}</span>
+        </legend>
+
+        {{#input-text}}address.street{{/input-text}}
+
+        {{#input-text}}address-town{{/input-text}}
+
+        {{#input-text}}address-county{{/input-text}}
+
+        {{#input-text-postcode}}address-postcode{{/input-text-postcode}}
+
+      </fieldset>
+
+      {{#input-submit}}continue{{/input-submit}}
 
     {{/form}}
 
