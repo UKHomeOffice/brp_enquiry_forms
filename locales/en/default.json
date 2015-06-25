@@ -4,6 +4,18 @@
     "continue": "Continue"
   },
   "fields": {
+    "received": {
+      "options": {
+        "yes": {
+          "label": "Yes",
+          "value": "yes"
+        },
+        "no": {
+          "label": "No",
+          "value": "no"
+        }
+      }
+    },
     "dated": {
       "legend": "Date on the letter",
       "hint": "For example, 11  6  2015"
@@ -19,6 +31,14 @@
     },
     "letter-gone": {
       "label": "I don't have the letter anymore"
+    },
+    "delivery-details": {
+      "label": "If you think the courier may have had a problem delivering items to this address (for example there is no number on the door) then let us know and we will contact the courier."
+    },
+    "address": {
+      "street": {
+        "label": "Street"
+      }
     }
   },
   "errors": {
@@ -41,8 +61,7 @@
       "date-question": "What is the date on the letter?"
     },
     "two": {
-      "header": "Is your address the same as on the letter from the Home Office about your biometric residence permit?",
-      "delivery-instruction": "Please let us know if you know of any problems with deliveries before at your address"
+      "header": "Is your address the same as on the letter from the Home Office about your biometric residence permit?"
     }
   }
 }

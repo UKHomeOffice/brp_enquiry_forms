@@ -2,29 +2,54 @@
 
 module.exports = {
   received: {
-    validate: ['required'],
     options: [
-      {value: 'yes', label: 'Yes'},
-      {value: 'no', label: 'No'}
-    ]
+      {
+        value: 'fields.received.options.yes.value',
+        label: 'fields.received.options.yes.label'
+      },
+      {
+        value: 'fields.received.options.no.value',
+        label: 'fields.received.options.no.label'
+      }
+    ],
+    display: 'inline'
   },
-  continue: {
+  'continue': {
     value: 'Continue',
     label: 'Continue'
   },
   'dated-day': {
-    label: 'Day',
-    hint: 'Day hint!',
+    label: 'fields.dated-day.label'
   },
   'dated-month': {
-    label: 'Month',
-    hint: 'Month hint!'
+    label: 'fields.dated-month.label'
   },
   'dated-year': {
-    label: 'Year',
-    hint: 'year hint!'
+    label: 'fields.dated-year.label'
   },
   'letter-gone': {
-    label: 'I don\'t have the letter anymore'
+    label: 'fields.letter-gone.label',
+    className: 'form-checkbox'
+  },
+  'delivery-details': {
+    legend: 'fields.delivery-details.legend',
+    label: 'fields.delivery-details.label'
+  },
+  'address-street': {
+    id: 'address-street',
+    validate: ['required'],
+    label: 'Your address'
+  },
+  'address-town': {
+    validate: ['required'],
+    label: 'Town/City'
+  },
+  'address-county': {
+    validate: ['required'],
+    label: 'County'
+  },
+  'address-postcode': {
+    validate: ['required'],
+    label: 'Postcode'
   }
 };
