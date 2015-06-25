@@ -1,43 +1,45 @@
 {{<layout}}
 
-{{$insideHeader}}<h1>{{#t}}journey.header{{/t}}</h1>{{/insideHeader}}
+  {{$propositionHeader}}
+    {{> partials-navigation}}
+  {{/propositionHeader}}
 
-{{$content}}
-  <h2>{{#t}}steps.one.header{{/t}}</h2>
-  <p>{{#t}}steps.one.subheader{{/t}}</p>
+  {{$content}}
+    <h2>{{#t}}steps.one.header{{/t}}</h2>
+    <p>{{#t}}steps.one.subheader{{/t}}</p>
 
-  <ul>
-    <li>{{#t}}steps.one.list.one{{/t}}</li>
-    <li>{{#t}}steps.one.list.two{{/t}}</li>
-    <li>{{#t}}steps.one.list.three{{/t}}</li>
-  </ul>
+    <ul>
+      <li>{{#t}}steps.one.list.one{{/t}}</li>
+      <li>{{#t}}steps.one.list.two{{/t}}</li>
+      <li>{{#t}}steps.one.list.three{{/t}}</li>
+    </ul>
 
 
-  {{<partials-form}}
+    {{<partials-form}}
 
-    {{$form}}
-      {{#radio-group}}received{{/radio-group}}
+      {{$form}}
+        {{#radio-group}}received{{/radio-group}}
 
-      <p>{{#t}}steps.one.date-question{{/t}}</p>
+        <p>{{#t}}steps.one.date-question{{/t}}</p>
 
-      <fieldset id="dated-group" {{#errors.dated}}class="validation-error"{{/errors.dated}}>
-        <legend>
-            {{#errors.dated}}<span id="dated-error" class="error-message">{{#t}}errors.dated.message{{/t}}</span>{{/errors.dated}}
-            <span class="form-label-bold">{{#t}}fields.dated.legend{{/t}}</span>
-        </legend>
-        <div class="form-date">
-            <p id="dated-hint" class="form-hint">{{#t}}fields.dated.hint{{/t}}</p>
-            {{#input-date}}dated{{/input-date}}
-        </div>
+        <fieldset id="dated-group" {{#errors.dated}}class="validation-error"{{/errors.dated}}>
+          <legend>
+              {{#errors.dated}}<span id="dated-error" class="error-message">{{#t}}errors.dated.message{{/t}}</span>{{/errors.dated}}
+              <span class="form-label-bold">{{#t}}fields.dated.legend{{/t}}</span>
+          </legend>
+          <div class="form-date">
+              <p id="dated-hint" class="form-hint">{{#t}}fields.dated.hint{{/t}}</p>
+              {{#input-date}}dated{{/input-date}}
+          </div>
 
-        {{#checkbox}}letter-gone{{/checkbox}}
-      </fieldset>
+          {{#checkbox}}letter-gone{{/checkbox}}
+        </fieldset>
 
-      {{#input-submit}}continue{{/input-submit}}
-    {{/form}}
+        {{#input-submit}}continue{{/input-submit}}
+      {{/form}}
 
-  {{/partials-form}}
+    {{/partials-form}}
 
-{{/content}}
+  {{/content}}
 
 {{/layout}}
