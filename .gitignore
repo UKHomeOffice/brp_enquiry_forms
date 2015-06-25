@@ -6,3 +6,4 @@ assets/css/app.css
 reports
 *.log
 .DS_Store
+dist/

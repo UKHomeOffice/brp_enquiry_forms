@@ -5,7 +5,7 @@ var app = express();
 var path = require('path');
 var debug = require('debug')('index');
 
-app.use('/public', express.static(path.resolve(__dirname, './assets')));
+app.use('/public', express.static(path.resolve(__dirname, './dist')));
 
 app.use(function setAssetPath(req, res, next) {
   res.locals.assetPath = '/public';
