@@ -1,0 +1,48 @@
+{
+  "buttons": {
+    "test": "Start",
+    "continue": "Continue"
+  },
+  "fields": {
+    "dated": {
+      "legend": "Date on the letter",
+      "hint": "For example, 11  6  2015"
+    },
+    "dated-day": {
+      "label": "Day"
+    },
+    "dated-month": {
+      "label": "Month"
+    },
+    "dated-year": {
+      "label": "Year"
+    },
+    "letter-gone": {
+      "label": "I don't have the letter anymore"
+    }
+  },
+  "errors": {
+    "dated": {
+      "message": "Error!"
+    }
+  },
+  "journey": {
+    "header": "My BRP has not been delivered"
+  },
+  "steps": {
+    "one": {
+      "header": "Have you received a letter from the Home Office telling you your biometrics residence permit was being delivered to you by a courier?",
+      "subheader": "This letter may tell you:",
+      "list": {
+        "one": "your biometric residence permit (BRP) is going to be delivered",
+        "two": "your application to stay in the UK was successful",
+        "three": "your documents are being returned"
+      },
+      "date-question": "What is the date on the letter?"
+    },
+    "two": {
+      "header": "Is your address the same as on the letter from the Home Office about your biometric residence permit?",
+      "delivery-instruction": "Please let us know if you know of any problems with deliveries before at your address"
+    }
+  }
+}

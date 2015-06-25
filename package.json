@@ -15,14 +15,18 @@
   },
   "author": "HomeOffice",
   "dependencies": {
+    "aws-sdk": "^2.1.35",
     "body-parser": "^1.13.0",
     "express": "^4.12.4",
     "express-partial-templates": "^0.1.0",
     "govuk_frontend_toolkit": "^4.0.1",
     "hmpo-form-wizard": "^1.0.1",
     "hmpo-govuk-template": "0.0.3",
+    "hmpo-model": "^0.1.2",
     "hmpo-template-mixins": "^0.3.0",
     "hogan-express-strict": "^0.5.4",
+    "i18n-future": "^0.1.4",
+    "i18n-lookup": "^0.1.0",
     "node-sass": "^3.2.0",
     "underscore": "^1.8.3"
   },
@@ -39,6 +43,7 @@
     "mocha-multi": "^0.7.1",
     "plato": "^1.5.0",
     "pre-commit": "^1.0.10",
+    "proxyquire": "^1.5.0",
     "sinomocha": "^0.2.4",
     "sinon": "^1.15.3",
     "sinon-chai": "^2.8.0"

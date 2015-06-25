@@ -2,6 +2,7 @@
 
 var util = require('util');
 var _ = require('underscore');
+var fields = require('../routes/fields');
 
 var Controller = require('hmpo-form-wizard').Controller;
 var Model = require('../models/submit');
@@ -13,7 +14,7 @@ var Submit = function Submit() {
 util.inherits(Submit, Controller);
 
 Submit.prototype.saveValues = function saveValues(req, res, callback) {
-  var data = _.pick(req.sessionModel.toJSON(), Object.keys(require('../routes/fields')));
+  var data = _.pick(req.sessionModel.toJSON(), Object.keys(fields));
   var model = new Model(data);
   model.save(callback);
 };
