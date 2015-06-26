@@ -5,11 +5,11 @@ module.exports = {
     display: 'inline',
     options: [
       {
-        value: 'fields.received.options.yes.value',
+        value: 'yes',
         label: 'fields.received.options.yes.label'
       },
       {
-        value: 'fields.received.options.no.value',
+        value: 'no',
         label: 'fields.received.options.no.label'
       }
     ]
@@ -39,11 +39,11 @@ module.exports = {
     display: 'inline',
     options: [
        {
-        value: 'fields.same-address.options.yes.value',
+        value: 'yes',
         label: 'fields.same-address.options.yes.label'
       },
       {
-        value: 'fields.same-address.options.no.value',
+        value: 'no',
         label: 'fields.same-address.options.no.label'
       }
     ]

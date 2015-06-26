@@ -7,12 +7,10 @@
     "received": {
       "options": {
         "yes": {
-          "label": "Yes",
-          "value": "yes"
+          "label": "Yes"
         },
         "no": {
-          "label": "No",
-          "value": "no"
+          "label": "No"
         }
       }
     },
@@ -38,12 +36,10 @@
     "same-address": {
       "options": {
         "yes": {
-          "label": "Yes",
-          "value": "yes"
+          "label": "Yes"
         },
         "no": {
-          "label": "No",
-          "value": "no"
+          "label": "No"
         }
       }
     },
