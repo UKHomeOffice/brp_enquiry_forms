@@ -21,8 +21,19 @@ module.exports = {
       'address-street',
       'continue'
     ],
-    next: '/submit',
+    next: '/step3',
     backLink: '/step1'
+  },
+  '/step3': {
+    fields: [
+      'fullname',
+      'date-of-birth',
+      'nationality',
+      'passport',
+      'continue'
+    ],
+    next: '/submit',
+    backLink: '/step2'
   },
   '/submit': {
     controller: require('../controllers/submit'),

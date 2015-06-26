@@ -27,6 +27,19 @@
     "dated-year": {
       "label": "Year"
     },
+    "date-of-birth": {
+      "legend": "Date of birth",
+      "hint": "For example, 31  3  1970"
+    },
+    "date-of-birth-day": {
+      "label": "Day"
+    },
+    "date-of-birth-month": {
+      "label": "Month"
+    },
+    "date-of-birth-year": {
+      "label": "Year"
+    },
     "letter-gone": {
       "label": "I don't have the letter anymore"
     },
@@ -54,6 +67,15 @@
     },
     "address-postcode": {
       "label": "Postcode"
+    },
+    "fullname": {
+      "label": "Fullname"
+    },
+    "nationality": {
+      "label": "Nationality"
+    },
+    "passport": {
+      "label": "Passport number (optional)"
     }
   },
   "errors": {
@@ -83,6 +105,10 @@
       "address": {
         "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce condimentum lobortis eros vitae vestibulum. Donec in arcu vehicula, dictum lacus et, luctus eros."
       }
+    },
+    "three": {
+      "header": "Provide your personal details",
+      "subheader": "Complete this section carefully as these details will help us to find your information."
     }
   }
 }
