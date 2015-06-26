@@ -7,12 +7,10 @@
     "received": {
       "options": {
         "yes": {
-          "label": "Yes",
-          "value": "yes"
+          "label": "Yes"
         },
         "no": {
-          "label": "No",
-          "value": "no"
+          "label": "No"
         }
       }
     },
@@ -33,12 +31,29 @@
       "label": "I don't have the letter anymore"
     },
     "delivery-details": {
-      "label": "If you think the courier may have had a problem delivering items to this address (for example there is no number on the door) then let us know and we will contact the courier."
+      "legend": "Delivery details"
     },
-    "address": {
-      "street": {
-        "label": "Street"
+    "same-address": {
+      "options": {
+        "yes": {
+          "label": "Yes"
+        },
+        "no": {
+          "label": "No"
+        }
       }
+    },
+    "address-street": {
+      "label": "Your address"
+    },
+    "address-town": {
+      "label": "Town"
+    },
+    "address-county": {
+      "label": "County"
+    },
+    "address-postcode": {
+      "label": "Postcode"
     }
   },
   "errors": {
@@ -61,7 +76,13 @@
       "date-question": "What is the date on the letter?"
     },
     "two": {
-      "header": "Is your address the same as on the letter from the Home Office about your biometric residence permit?"
+      "header": "Is your address the same as on the letter from the Home Office about your biometric residence permit?",
+      "delivery-details": {
+        "explanation": "If you think the courier may have had a problem delivering items to this address (for example there is no number on the door) then let us know and we will contact the courier."
+      },
+      "address": {
+        "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce condimentum lobortis eros vitae vestibulum. Donec in arcu vehicula, dictum lacus et, luctus eros."
+      }
     }
   }
 }

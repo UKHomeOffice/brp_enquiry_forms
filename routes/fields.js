@@ -2,17 +2,17 @@
 
 module.exports = {
   received: {
+    display: 'inline',
     options: [
       {
-        value: 'fields.received.options.yes.value',
+        value: 'yes',
         label: 'fields.received.options.yes.label'
       },
       {
-        value: 'fields.received.options.no.value',
+        value: 'no',
         label: 'fields.received.options.no.label'
       }
-    ],
-    display: 'inline'
+    ]
   },
   'continue': {
     value: 'Continue',
@@ -35,21 +35,29 @@ module.exports = {
     legend: 'fields.delivery-details.legend',
     label: 'fields.delivery-details.label'
   },
+  'same-address': {
+    display: 'inline',
+    options: [
+       {
+        value: 'yes',
+        label: 'fields.same-address.options.yes.label'
+      },
+      {
+        value: 'no',
+        label: 'fields.same-address.options.no.label'
+      }
+    ]
+  },
   'address-street': {
-    id: 'address-street',
-    validate: ['required'],
-    label: 'Your address'
+    label: 'fields.address-street.label'
   },
   'address-town': {
-    validate: ['required'],
-    label: 'Town/City'
+    label: 'fields.address-town.label'
   },
   'address-county': {
-    validate: ['required'],
-    label: 'County'
+    label: 'fields.address-county.label'
   },
   'address-postcode': {
-    validate: ['required'],
-    label: 'Postcode'
+    label: 'fields.address-postcode.label'
   }
 };

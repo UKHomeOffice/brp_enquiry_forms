@@ -5,17 +5,14 @@
   "description": "The BRP application",
   "scripts": {
     "start": "node .",
-    "start:dev":
-      "./node_modules/parallelshell/index.js 'DEBUG=* ./node_modules/nodemon/bin/nodemon.js .' 'npm run watch:scss'",
-    "watch:scss": "./node_modules/nodemon/bin/nodemon.js -e scss -x 'npm run sass'",
+    "start:dev": "parallelshell 'DEBUG=* nodemon .' 'npm run watch:scss'",
+    "watch:scss": "nodemon -e scss -x 'npm run sass'",
     "test": "NODE_ENV=test mocha",
-    "lint": "./node_modules/eslint/bin/eslint.js .",
-    "style": "./node_modules/jscs/bin/jscs **/*.js --config=./.jscsrc.json",
-    "quality":
-      "./node_modules/plato/bin/plato -r -x 'node_modules|reports|test' -d reports/plato .",
+    "lint": "eslint .",
+    "style": "jscs **/*.js --config=./.jscsrc.json",
+    "quality": "plato -r -x 'node_modules|reports|test' -d reports/plato .",
     "postinstall": "npm run sass",
-    "sass":
-      "./node_modules/node-sass/bin/node-sass ./assets/scss/app.scss ./dist/css/app.css --include-path ./node_modules"
+    "sass": "node-sass ./assets/scss/app.scss ./dist/css/app.css --include-path ./node_modules"
   },
   "author": "HomeOffice",
   "dependencies": {

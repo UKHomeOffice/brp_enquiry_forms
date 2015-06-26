@@ -20,10 +20,8 @@
       {{$form}}
         {{#radio-group}}received{{/radio-group}}
 
-        <p>{{#t}}steps.one.date-question{{/t}}</p>
-
         <fieldset id="dated-group" class="panel-indent {{#errors.dated}}validation-error{{/errors.dated}}">
-          <legend>
+          <legend class="visuallyhidden">
               {{#errors.dated}}
                 <span id="dated-error" class="error-message">
                     {{#t}}errors.dated.message{{/t}}
@@ -31,10 +29,14 @@
               {{/errors.dated}}
               <span class="form-label-bold">{{#t}}fields.dated.legend{{/t}}</span>
           </legend>
+
+          <p>{{#t}}steps.one.date-question{{/t}}</p>
+
           <div class="form-date">
               <p id="dated-hint" class="form-hint">{{#t}}fields.dated.hint{{/t}}</p>
               {{#input-date}}dated{{/input-date}}
           </div>
+
           {{#checkbox}}letter-gone{{/checkbox}}
         </fieldset>
 
