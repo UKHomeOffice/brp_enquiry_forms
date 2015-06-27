@@ -18,21 +18,17 @@
     {{<partials-form}}
 
       {{$form}}
+
         {{#radio-group}}received{{/radio-group}}
 
-        <fieldset id="dated-group" class="panel-indent {{#errors.dated}}validation-error{{/errors.dated}}">
+        <fieldset id="dated-group" class="panel-indent">
           <legend class="visuallyhidden">
-              {{#errors.dated}}
-                <span id="dated-error" class="error-message">
-                    {{#t}}errors.dated.message{{/t}}
-                </span>
-              {{/errors.dated}}
               <span class="form-label-bold">{{#t}}fields.dated.legend{{/t}}</span>
           </legend>
 
           <p>{{#t}}steps.one.date-question{{/t}}</p>
 
-          <div class="form-date">
+          <div class="form-group form-date">
               <p id="dated-hint" class="form-hint">{{#t}}fields.dated.hint{{/t}}</p>
               {{#input-date}}dated{{/input-date}}
           </div>

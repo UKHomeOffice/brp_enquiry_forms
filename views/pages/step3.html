@@ -1,0 +1,41 @@
+{{<layout}}
+
+{{$propositionHeader}}
+  {{> partials-navigation}}
+{{/propositionHeader}}
+
+{{$content}}
+  <h2>{{#t}}steps.three.header{{/t}}</h2>
+  <p>{{#t}}steps.three.subheader{{/t}}</p>
+
+  {{<partials-form}}
+
+    {{$form}}
+
+      {{#input-text}}fullname{{/input-text}}
+
+      <fieldset id="date-of-birth-group">
+        <legend>
+          <span class="form-label-bold">{{#t}}fields.date-of-birth.legend{{/t}}</span>
+        </legend>
+
+        <div class="form-group form-date">
+          <p id="date-hint" class="form-hint">{{#t}}fields.date-of-birth.hint{{/t}}</p>
+          {{#input-date}}date-of-birth{{/input-date}}
+        </div>
+
+      </fieldset>
+
+      {{#input-text}}nationality{{/input-text}}
+
+      {{#input-text}}passport{{/input-text}}
+
+      {{#input-submit}}continue{{/input-submit}}
+
+    {{/form}}
+
+  {{/partials-form}}
+
+{{/content}}
+
+{{/layout}}
