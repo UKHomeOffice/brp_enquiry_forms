@@ -17,31 +17,38 @@ module.exports = {
   submit: {
     value: 'buttons.submit'
   },
-  'dated-day': {
-    label: 'fields.dated-day.label'
+  change: {
+    value: 'buttons.change'
   },
-  'dated-month': {
-    label: 'fields.dated-month.label'
+  'delivery-date': {
+    legend: 'fields.delivery-date.legend',
+    hint: 'fields.dalivery-date.hint'
   },
-  'dated-year': {
-    label: 'fields.dated-year.label'
+  'delivery-date-day': {
+    label: 'fields.delivery-date-day.label'
   },
-  'letter-gone': {
-    label: 'fields.letter-gone.label',
+  'delivery-date-month': {
+    label: 'fields.delivery-date-month.label'
+  },
+  'delivery-date-year': {
+    label: 'fields.delivery-date-year.label'
+  },
+  'no-letter': {
+    label: 'fields.no-letter.label',
     className: 'form-checkbox'
   },
   'delivery-details': {
     legend: 'fields.delivery-details.legend',
     label: 'fields.delivery-details.label'
   },
-  'same-address': {
+  'address-match': {
     display: 'inline',
     options: [{
       value: 'yes',
-      label: 'fields.same-address.options.yes.label'
+      label: 'fields.address-match.options.yes.label'
     }, {
       value: 'no',
-      label: 'fields.same-address.options.no.label'
+      label: 'fields.address-match.options.no.label'
     }]
   },
   'address-street': {
@@ -60,8 +67,8 @@ module.exports = {
     label: 'fields.fullname.label'
   },
   'date-of-birth': {
-    legend: 'Date of birth',
-    hint: 'For example, 31  3  1970'
+    legend: 'fields.date-of-birth.legend',
+    hint: 'fields.date-of-birth.hint'
   },
   'date-of-birth-day': {
     label: 'fields.date-of-birth-day.label'

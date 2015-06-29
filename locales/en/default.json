@@ -2,7 +2,8 @@
   "buttons": {
     "test": "Start",
     "continue": "Continue",
-    "submit": "Submit"
+    "submit": "Submit",
+    "change": "Change"
   },
   "fields": {
     "received": {
@@ -15,17 +16,17 @@
         }
       }
     },
-    "dated": {
+    "delivery-date": {
       "legend": "Date on the letter",
       "hint": "For example, 11  6  2015"
     },
-    "dated-day": {
+    "delivery-date-day": {
       "label": "Day"
     },
-    "dated-month": {
+    "delivery-date-month": {
       "label": "Month"
     },
-    "dated-year": {
+    "delivery-date-year": {
       "label": "Year"
     },
     "date-of-birth": {
@@ -41,13 +42,13 @@
     "date-of-birth-year": {
       "label": "Year"
     },
-    "letter-gone": {
+    "no-letter": {
       "label": "I don't have the letter anymore"
     },
     "delivery-details": {
       "legend": "Delivery details"
     },
-    "same-address": {
+    "address-match": {
       "options": {
         "yes": {
           "label": "Yes"
@@ -70,7 +71,7 @@
       "label": "Postcode"
     },
     "fullname": {
-      "label": "Fullname"
+      "label": "Full name"
     },
     "nationality": {
       "label": "Nationality"
@@ -86,11 +87,6 @@
     },
     "phone": {
       "label": "Phone number (optional)"
-    }
-  },
-  "errors": {
-    "dated": {
-      "message": "Error!"
     }
   },
   "journey": {
@@ -125,6 +121,24 @@
       "subheader": "We need your contact details to reply to your enquiry about why you have not received a BRP.",
       "address": {
         "title": "Please provide your address so that we contact you by post"
+      }
+    },
+    "five": {
+      "header": "Check your details",
+      "subheader": "Check through the information that you have provided to make sure it is correct. If it is incorrect you can change it here.",
+      "table": {
+        "headers": {
+          "address": "Address",
+          "fullname": "Full name",
+          "date-of-birth": "Date of birth",
+          "nationality": "Nationality",
+          "passport": "Passport",
+          "email": "Email"
+        }
+      },
+      "footer": {
+        "title": "Send your submission",
+        "explanation": "By sending us your details you confirm that the information you have provided is true and that you accept our terms and conditions and privacy policy.hared with other government departments."
       }
     }
   }
