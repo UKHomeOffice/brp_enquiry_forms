@@ -12,8 +12,10 @@ module.exports = {
     }]
   },
   'continue': {
-    value: 'Continue',
-    label: 'Continue'
+    value: 'buttons.continue'
+  },
+  submit: {
+    value: 'buttons.submit'
   },
   'dated-day': {
     label: 'fields.dated-day.label'
@@ -75,5 +77,22 @@ module.exports = {
   },
   passport: {
     label: 'fields.passport.label'
+  },
+  email: {
+    type: 'email',
+    label: 'fields.email.label'
+  },
+  'no-email': {
+    display: 'inline',
+    options: [{
+      value: 'yes',
+      label: 'fields.no-email.options.yes.label'
+    }, {
+      value: 'no',
+      label: 'fields.no-email.options.no.label'
+    }]
+  },
+  phone: {
+    label: 'fields.phone.label'
   }
 };

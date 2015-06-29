@@ -1,7 +1,8 @@
 {
   "buttons": {
     "test": "Start",
-    "continue": "Continue"
+    "continue": "Continue",
+    "submit": "Submit"
   },
   "fields": {
     "received": {
@@ -57,13 +58,13 @@
       }
     },
     "address-street": {
-      "label": "Your address"
+      "label": "House name or number and street"
     },
     "address-town": {
-      "label": "Town"
+      "label": "Town/City"
     },
     "address-county": {
-      "label": "County"
+      "label": "County (optional)"
     },
     "address-postcode": {
       "label": "Postcode"
@@ -76,6 +77,15 @@
     },
     "passport": {
       "label": "Passport number (optional)"
+    },
+    "email": {
+      "label": "Email address"
+    },
+    "no-email": {
+      "label": "I do not have an email address"
+    },
+    "phone": {
+      "label": "Phone number (optional)"
     }
   },
   "errors": {
@@ -109,6 +119,13 @@
     "three": {
       "header": "Provide your personal details",
       "subheader": "Complete this section carefully as these details will help us to find your information."
+    },
+    "four": {
+      "header": "Provide your contact details",
+      "subheader": "We need your contact details to reply to your enquiry about why you have not received a BRP.",
+      "address": {
+        "title": "Please provide your address so that we contact you by post"
+      }
     }
   }
 }

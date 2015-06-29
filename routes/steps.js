@@ -9,36 +9,37 @@ module.exports = {
   '/step1': {
     fields: [
       'received',
-      'dated',
-      'continue'
+      'dated'
     ],
-    next: '/step2',
-    backLink: '/'
+    next: '/step2'
   },
   '/step2': {
     fields: [
       'delivery-details',
-      'address-street',
-      'continue'
+      'address-street'
     ],
-    next: '/step3',
-    backLink: '/step1'
+    next: '/step3'
   },
   '/step3': {
     fields: [
       'fullname',
       'date-of-birth',
       'nationality',
-      'passport',
-      'continue'
+      'passport'
     ],
-    next: '/submit',
-    backLink: '/step2'
+    next: '/step4'
+  },
+  '/step4': {
+    fields: [
+      'email',
+      'no-email',
+      'phone'
+    ],
+    next: '/step5'
   },
   '/submit': {
     controller: require('../controllers/submit'),
-    next: '/done',
-    backLink: '/step2'
+    next: '/done'
   },
   '/done': {
     backLink: null
