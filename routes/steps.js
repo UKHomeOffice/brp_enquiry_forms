@@ -11,16 +11,14 @@ module.exports = {
       'received',
       'dated'
     ],
-    next: '/step2',
-    backLink: '/'
+    next: '/step2'
   },
   '/step2': {
     fields: [
       'delivery-details',
       'address-street'
     ],
-    next: '/step3',
-    backLink: '/step1'
+    next: '/step3'
   },
   '/step3': {
     fields: [
@@ -29,8 +27,7 @@ module.exports = {
       'nationality',
       'passport'
     ],
-    next: '/step4',
-    backLink: '/step2'
+    next: '/step4'
   },
   '/step4': {
     fields: [
@@ -38,13 +35,11 @@ module.exports = {
       'no-email',
       'phone'
     ],
-    next: '/step5',
-    backLink: '/step3'
+    next: '/step5'
   },
   '/submit': {
     controller: require('../controllers/submit'),
-    next: '/done',
-    backLink: '/step4'
+    next: '/done'
   },
   '/done': {
     backLink: null
