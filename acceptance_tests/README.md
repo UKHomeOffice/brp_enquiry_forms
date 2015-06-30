@@ -1,10 +1,28 @@
-BRP Acceptance Tests
+#BRP Acceptance Tests
 
-Install:
+##Installation: 
 
-Bundle install the Gem file 
+###Install Bundler
 
-Run:
+```
+gem install bundler
+```
 
-Run with "cucumber" or "cucumber features/example.feature" for to run specific features.
+###Bundle install the Gem file
 
+cd to the acceptance_tests folder
+
+```
+bundle install
+```
+
+##Run:
+
+Run with 
+```
+cucumber
+```
+or to run specific features:
+```
+cucumber features/example.feature
+```
