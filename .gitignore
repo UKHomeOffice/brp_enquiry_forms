@@ -2,7 +2,7 @@
 .idea/
 
 node_modules
-assets/css/app.css
+dist/css/app.css
 reports
 *.log
 .DS_Store
