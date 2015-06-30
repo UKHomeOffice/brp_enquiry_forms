@@ -14,7 +14,6 @@
       <li>{{#t}}steps.one.list.three{{/t}}</li>
     </ul>
 
-
     {{<partials-form}}
 
       {{$form}}
@@ -23,17 +22,17 @@
 
         <fieldset id="dated-group" class="panel-indent">
           <legend class="visuallyhidden">
-              <span class="form-label-bold">{{#t}}fields.dated.legend{{/t}}</span>
+              <span class="form-label-bold">{{#t}}fields.delivery-date.legend{{/t}}</span>
           </legend>
 
           <p>{{#t}}steps.one.date-question{{/t}}</p>
 
           <div class="form-group form-date">
-              <p id="dated-hint" class="form-hint">{{#t}}fields.dated.hint{{/t}}</p>
-              {{#input-date}}dated{{/input-date}}
+              <p id="delivery-date-hint" class="form-hint">{{#t}}fields.delivery-date.hint{{/t}}</p>
+              {{#input-date}}delivery-date{{/input-date}}
           </div>
 
-          {{#checkbox}}letter-gone{{/checkbox}}
+          {{#checkbox}}no-letter{{/checkbox}}
         </fieldset>
 
         {{#input-submit}}continue{{/input-submit}}
