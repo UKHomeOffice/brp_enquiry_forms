@@ -50,10 +50,9 @@ module.exports = {
     next: '/step5'
   },
   '/step5': {
-    next: '/submit'
+    next: '/confirmation'
   },
-  '/submit': {
-    controller: require('../controllers/submit'),
+  '/confirmation': {
     next: '/done'
   },
   '/done': {

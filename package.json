@@ -5,11 +5,12 @@
   "description": "The BRP application",
   "scripts": {
     "start": "node .",
-    "start:dev": "parallelshell 'NODE_ENV=development DEBUG=* nodemon .' 'npm run watch:scss'",
+    "start:dev": "parallelshell 'NODE_ENV=development DEBUG=* nodemon .' 'npm run watch:scss' 'npm run copy:images'",
     "watch:scss": "nodemon -e scss -x 'npm run sass'",
     "test": "NODE_ENV=test mocha",
     "test:ci": "npm run lint && npm run style && npm run test",
     "lint": "eslint .",
+    "copy:images": "nodemon -e png -x 'cp -r ./assets/images ./dist/images'",
     "style": "jscs **/*.js --config=./.jscsrc.json",
     "quality": "plato -r -x 'node_modules|reports|test' -d reports/plato .",
     "postinstall": "npm run sass",
