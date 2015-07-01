@@ -13,7 +13,7 @@ var errorWizard = wizard(errorSteps, fields, {translate: i18n.translate.bind(i18
 
 app.use(mixins(i18n.translate.bind(i18n), fields));
 
-app.use('/permit-delivery', deliveryWizard);
-app.use('/permit-error', errorWizard);
+app.use('/permit-delivery/', deliveryWizard);
+app.use('/permit-error/', errorWizard);
 
 module.exports = app;

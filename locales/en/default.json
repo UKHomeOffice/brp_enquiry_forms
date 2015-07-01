@@ -87,6 +87,42 @@
     },
     "phone": {
       "label": "Phone number (optional)"
+    },
+    "error-first-name-checkbox": {
+      "label": "First name"
+    },
+    "error-first-name-text": {
+      "label": "What is your correct first name?",
+      "title": "This is the first line of name on your BRP card"
+    },
+    "error-last-name-checkbox": {
+      "label": "Last name"
+    },
+    "error-last-name-text": {
+      "label": "What is your correct last name?",
+      "title": "This is the last line of name on your BRP card"
+    },
+    "date-of-birth-error-checkbox": {
+      "label": "Date of birth?"
+    },
+    "date-of-birth-error": {
+      "label": "What is your correct date of birth?",
+      "hint": "For example: 31  3  1970"
+    },
+    "date-of-birth-error-day": {
+      "label": "Day"
+    },
+    "date-of-birth-error-month": {
+      "label": "Month"
+    },
+    "date-of-birth-error-year": {
+      "label": "Year"
+    },
+    "birth-place-error-checkbox": {
+      "label": "Place of birth"
+    },
+    "birth-place-error": {
+      "label": "What is your correct place of birth?"
     }
   },
   "journey": {
@@ -153,6 +189,12 @@
           "three": "We will then advise you what to do next."
         }
       }
+    }
+  },
+  "pages": {
+    "about-error": {
+      "header": "Tell us about the error on your BRP",
+      "subheader": "You can select one or more options if needed."
     }
   }
 }
