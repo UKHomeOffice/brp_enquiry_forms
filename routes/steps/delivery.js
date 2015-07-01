@@ -2,7 +2,7 @@
 
 module.exports = {
   '/': {
-    controller: require('../controllers/start'),
+    controller: require('../../controllers/start'),
     template: 'index',
     next: '/letter-received'
   },
