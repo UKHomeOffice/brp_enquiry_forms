@@ -5,7 +5,7 @@
   "description": "The BRP application",
   "scripts": {
     "start": "node .",
-    "start:dev": "parallelshell 'NODE_ENV=development DEBUG=* nodemon .' 'npm run watch:scss' 'npm run copy:images'",
+    "dev": "parallelshell 'NODE_ENV=development DEBUG=* nodemon .' 'npm run watch:scss' 'npm run copy:images'",
     "watch:scss": "nodemon -e scss -x 'npm run sass'",
     "test": "NODE_ENV=test mocha",
     "test:ci": "npm run lint && npm run style && npm run test",
