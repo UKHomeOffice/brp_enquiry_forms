@@ -4,18 +4,18 @@ module.exports = {
   '/': {
     controller: require('../controllers/start'),
     template: 'index',
-    next: '/step1'
+    next: '/letter-received'
   },
-  '/step1': {
+  '/letter-received': {
     fields: [
       'received',
       'delivery-date-day',
       'delivery-date-month',
       'delivery-date-year'
     ],
-    next: '/step2'
+    next: '/same-address'
   },
-  '/step2': {
+  '/same-address': {
     fields: [
       'address-match',
       'delivery-details',
@@ -24,9 +24,9 @@ module.exports = {
       'address-county',
       'address-postcode'
     ],
-    next: '/step3'
+    next: '/personal-details'
   },
-  '/step3': {
+  '/personal-details': {
     fields: [
       'fullname',
       'date-of-birth-day',
@@ -35,9 +35,9 @@ module.exports = {
       'nationality',
       'passport'
     ],
-    next: '/step4'
+    next: '/contact-details'
   },
-  '/step4': {
+  '/contact-details': {
     fields: [
       'email',
       'no-email',
@@ -47,9 +47,9 @@ module.exports = {
       'address-postcode',
       'phone'
     ],
-    next: '/step5'
+    next: '/check-details'
   },
-  '/step5': {
+  '/check-details': {
     next: '/confirmation'
   },
   '/confirmation': {
