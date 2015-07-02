@@ -13,9 +13,9 @@ module.exports = {
       'delivery-date-month',
       'delivery-date-year'
     ],
-    next: '/same-address'
+    next: '/same-address-details'
   },
-  '/same-address': {
+  '/same-address-details': {
     fields: [
       'address-match',
       'delivery-details',
