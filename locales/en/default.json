@@ -88,17 +88,17 @@
     "phone": {
       "label": "Phone number (optional)"
     },
-    "error-first-name-checkbox": {
+    "first-name-error-checkbox": {
       "label": "First name"
     },
-    "error-first-name-text": {
+    "first-name-error": {
       "label": "What is your correct first name?",
       "title": "This is the first line of name on your BRP card"
     },
-    "error-last-name-checkbox": {
+    "last-name-error-checkbox": {
       "label": "Last name"
     },
-    "error-last-name-text": {
+    "last-name-error": {
       "label": "What is your correct last name?",
       "title": "This is the last line of name on your BRP card"
     },
@@ -123,6 +123,67 @@
     },
     "birth-place-error": {
       "label": "What is your correct place of birth?"
+    },
+    "gender-error-checkbox": {
+      "label": "Gender"
+    },
+    "gender-error": {
+      "legend": "Gender",
+      "title": "What is your correct gender?",
+      "options": {
+        "female": {
+          "label": "Female"
+        },
+        "male": {
+          "label": "Male"
+        },
+        "unspecified": {
+          "label": "Unspecified"
+        }
+      }
+    },
+    "sponsor-details-error-checkbox": {
+      "label": "Sponsor details"
+    },
+    "sponsor-details-error": {
+      "legend": "Sponsor details",
+      "title": "This is the third line of remark on the front of your BRP card. These are details from your employer of university or college",
+      "label": "What is the correct sponsor reference?"
+    },
+    "nationality-error-checkbox": {
+      "label": "Nationality"
+    },
+    "nationality-error": {
+      "legend": "Nationality",
+      "label": "What is your correct nationality?"
+    },
+    "signature-error-checkbox": {
+      "label": "Signature"
+    },
+    "signature-error": {
+      "legend": "Signature",
+      "label": "What is wrong with your signature?"
+    },
+    "photograph-error-checkbox": {
+      "label": "Photograph"
+    },
+    "photograph-error": {
+      "legend": "Photograph",
+      "label": "What is wrong with your photograph?"
+    },
+    "damaged-error-checkbox": {
+      "label": "Faulty and damaged"
+    },
+    "damaged-error": {
+      "legend": "Faulty and damaged",
+      "label": "Please describe the fault"
+    },
+    "conditions-error-checkbox": {
+      "label": "Conditions or length of stay"
+    },
+    "conditions-error": {
+      "legend": "Conditions or length of stay",
+      "label": "This includes wrong expiry date, leave duration, remarks on front and on the back of the card."
     }
   },
   "journey": {

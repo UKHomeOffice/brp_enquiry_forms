@@ -102,17 +102,17 @@ module.exports = {
   phone: {
     label: 'fields.phone.label'
   },
-  'error-first-name-checkbox': {
-    label: 'fields.error-first-name-checkbox.label'
+  'first-name-error-checkbox': {
+    label: 'fields.first-name-error-checkbox.label'
   },
-  'error-first-name-text': {
-    label: 'fields.error-first-name-text.label'
+  'first-name-error': {
+    label: 'fields.first-name-error.label'
   },
-  'error-last-name-checkbox': {
-    label: 'fields.error-last-name-checkbox.label'
+  'last-name-error-checkbox': {
+    label: 'fields.last-name-error-checkbox.label'
   },
-  'error-last-name-text': {
-    label: 'fields.error-last-name-text.label'
+  'last-name-error': {
+    label: 'fields.last-name-error.label'
   },
   'date-of-birth-error-checkbox': {
     label: 'fields.date-of-birth-error-checkbox.label'
@@ -122,7 +122,6 @@ module.exports = {
     hint: 'fields.date-of-birth-error.hint'
   },
   'date-of-birth-day-error': {
-    className: ['form-date'],
     label: 'fields.date-of-birth-day-error.label',
     hint: 'fields.date-of-birth-day-error.hint'
   },
@@ -139,5 +138,54 @@ module.exports = {
   },
   'birth-place-error': {
     label: 'fields.birth-place-error.label'
+  },
+  'gender-error-checkbox': {
+    label: 'fields.gender-error-checkbox.label'
+  },
+  'gender-error': {
+    display: 'block',
+    options: [{
+      value: 'female',
+      label: 'fields.gender-error.options.female.label'
+    }, {
+      value: 'male',
+      label: 'fields.gender-error.options.male.label'
+    }, {
+      value: 'unspecified',
+      label: 'fields.gender-error.options.unspecified.label'
+    }]
+  },
+  'sponsor-details-error-checkbox': {
+    label: 'fields.sponsor-details-error-checkbox.label'
+  },
+  'sponsor-details-error': {
+    label: 'fields.sponsor-details-error.label',
+  },
+  'nationality-error-checkbox': {
+    label: 'fields.nationality-error-checkbox.label'
+  },
+  'nationality-error': {
+    label: 'fields.nationality-error.label',
+  },
+  'signature-error-checkbox': {
+    label: 'fields.signature-error-checkbox.label'
+  },
+  'signature-error': {
+    label: 'fields.signature-error.label',
+  },
+  'photograph-error-checkbox': {
+    label: 'fields.photograph-error-checkbox.label'
+  },
+  'photograph-error': {
+    label: 'fields.photograph-error.label',
+  },
+  'damaged-error-checkbox': {
+    label: 'fields.damaged-error-checkbox.label'
+  },
+  'damaged-error': {
+    label: 'fields.damaged-error.label',
+  },
+  'conditions-error-checkbox': {
+    label: 'fields.conditions-error-checkbox.label'
   }
 };
