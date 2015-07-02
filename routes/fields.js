@@ -101,5 +101,43 @@ module.exports = {
   },
   phone: {
     label: 'fields.phone.label'
+  },
+  'error-first-name-checkbox': {
+    label: 'fields.error-first-name-checkbox.label'
+  },
+  'error-first-name-text': {
+    label: 'fields.error-first-name-text.label'
+  },
+  'error-last-name-checkbox': {
+    label: 'fields.error-last-name-checkbox.label'
+  },
+  'error-last-name-text': {
+    label: 'fields.error-last-name-text.label'
+  },
+  'date-of-birth-error-checkbox': {
+    label: 'fields.date-of-birth-error-checkbox.label'
+  },
+  'date-of-birth-error': {
+    label: 'fields.date-of-birth-error.label',
+    hint: 'fields.date-of-birth-error.hint'
+  },
+  'date-of-birth-day-error': {
+    className: ['form-date'],
+    label: 'fields.date-of-birth-day-error.label',
+    hint: 'fields.date-of-birth-day-error.hint'
+  },
+  'date-of-birth-month-error': {
+    label: 'fields.date-of-birth-month-error.label',
+    hint: 'fields.date-of-birth-month-error.hint'
+  },
+  'date-of-birth-year-error': {
+    label: 'fields.date-of-birth-year-error.label',
+    hint: 'fields.date-of-birth-year-error.hint'
+  },
+  'birth-place-error-checkbox': {
+    label: 'fields.birth-place-error-checkbox.label'
+  },
+  'birth-place-error': {
+    label: 'fields.birth-place-error.label'
   }
 };

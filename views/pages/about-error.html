@@ -1,0 +1,87 @@
+{{<layout}}
+{{$step}}Step 1 of 5{{/step}}
+{{$propositionHeader}}
+  {{> partials-navigation}}
+{{/propositionHeader}}
+
+{{$content}}
+  <h2>{{#t}}pages.about-error.header{{/t}}</h2>
+  <p>{{#t}}pages.about-error.subheader{{/t}}</p>
+
+  {{<partials-form}}
+
+    {{$form}}
+
+      {{#checkbox}}error-first-name-checkbox{{/checkbox}}
+
+      <fieldset id="error-first-name-group" class="panel-indent">
+        <legend class="visuallyhidden">
+            <span class="form-legend">
+              {{#t}}fields.address.legend{{/t}}
+            </span>
+        </legend>
+
+        <p>{{#t}}fields.error-first-name-text.title{{/t}}</p>
+
+        {{#input-text}}error-first-name-text{{/input-text}}
+
+      </fieldset>
+
+      {{#checkbox}}error-last-name-checkbox{{/checkbox}}
+
+      <fieldset id="error-last-name-group" class="panel-indent">
+        <legend class="visuallyhidden">
+            <span class="form-legend">
+              {{#t}}fields.address.legend{{/t}}
+            </span>
+        </legend>
+
+        <p>{{#t}}fields.error-last-name-text.title{{/t}}</p>
+
+        {{#input-text}}error-last-name-text{{/input-text}}
+
+      </fieldset>
+
+      {{#checkbox}}birth-place-error-checkbox{{/checkbox}}
+
+      <fieldset id="birth-place-error-group" class="panel-indent">
+        <legend class="visuallyhidden">
+            <span class="form-legend">
+              {{#t}}fields.address.legend{{/t}}
+            </span>
+        </legend>
+
+        <p>{{#t}}fields.birth-place-error.title{{/t}}</p>
+
+        {{#input-text}}birth-place-error{{/input-text}}
+
+      </fieldset>
+
+      {{#checkbox}}date-of-birth-error-checkbox{{/checkbox}}
+
+      <fieldset id="date-of-birth-error-group" class="panel-indent">
+        <legend class="visuallyhidden">
+            <span class="form-legend">
+              {{#t}}fields.address.legend{{/t}}
+            </span>
+        </legend>
+
+        <div class="form-group form-date">
+          <label for="date-of-birth-error-day" class="form-label">{{#t}}fields.date-of-birth-error.label{{/t}}</p>
+          <p id="date-hint" class="form-hint">{{#t}}fields.date-of-birth-error.hint{{/t}}</p>
+          {{#input-date}}date-of-birth-error{{/input-date}}
+        </div>
+
+      </fieldset>
+
+      {{#input-submit}}continue{{/input-submit}}
+
+
+    {{/form}}
+
+  {{/partials-form}}
+
+
+{{/content}}
+
+{{/layout}}
