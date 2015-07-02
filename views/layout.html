@@ -12,10 +12,15 @@
 {{$insideHeader}}{{/insideHeader}}
 {{$main}}
    <main id="content" class="main" role="main">
-        {{> partials-back}}
-        <div class="steps">
-          {{$step}}{{/step}}
+        <div class="phase-banner">
+            <p>
+                <strong class="phase-tag">ALPHA</strong>
+                <span>This is a new service – your <a href="mailto:brp-email???@?subject=BRP Feedback">feedback</a> will help us to improve it.</span>
+            </p>
         </div>
+        <span id="step">
+            {{> partials-back}} <span>{{$step}}{{/step}}</span>
+        </span>
         <div class="grid-row">
             {{> partials-maincontent-left}}
         </div>
