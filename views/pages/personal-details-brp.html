@@ -1,0 +1,42 @@
+{{<layout}}
+{{$step}}Step 3 of 5{{/step}}
+{{$propositionHeader}}
+  {{> partials-navigation}}
+{{/propositionHeader}}
+
+{{$header}}{{#t}}steps.three.header{{/t}}{{/header}}
+
+{{$content}}
+  <p>{{#t}}steps.three.subheader{{/t}}</p>
+
+  {{<partials-form}}
+
+    {{$form}}
+
+      {{#input-text}}fullname{{/input-text}}
+
+      <fieldset id="date-of-birth-group">
+        <legend>
+          <span class="form-label-bold">{{#t}}fields.date-of-birth.legend{{/t}}</span>
+        </legend>
+
+        <div class="form-group form-date">
+          <p id="date-hint" class="form-hint">{{#t}}fields.date-of-birth.hint{{/t}}</p>
+          {{#input-date}}date-of-birth{{/input-date}}
+        </div>
+
+      </fieldset>
+
+      {{#input-text}}nationality{{/input-text}}
+
+      {{#input-text}}brp-card{{/input-text}}
+
+      {{#input-submit}}continue{{/input-submit}}
+
+    {{/form}}
+
+  {{/partials-form}}
+
+{{/content}}
+
+{{/layout}}

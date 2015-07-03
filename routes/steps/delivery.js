@@ -13,9 +13,10 @@ module.exports = {
       'delivery-date-month',
       'delivery-date-year'
     ],
-    next: '/same-address-details'
+    next: '/same-address'
   },
-  '/same-address-details': {
+  '/same-address': {
+    template: 'same-address-details.html',
     fields: [
       'address-match',
       'delivery-details',
@@ -27,6 +28,7 @@ module.exports = {
     next: '/personal-details'
   },
   '/personal-details': {
+    template: 'personal-details-passport.html',
     fields: [
       'fullname',
       'date-of-birth-day',

@@ -79,6 +79,10 @@
     "passport": {
       "label": "Passport number (optional)"
     },
+    "brp-card": {
+      "label": "BRP card number  (optional)",
+      "hint": "For example, AB12345CD"
+    },
     "email": {
       "label": "Email address"
     },

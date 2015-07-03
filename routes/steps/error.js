@@ -46,10 +46,23 @@ module.exports = {
       'phone'
     ],
     backLink: '/same-address',
+    next: '/personal-details'
+  },
+  '/personal-details': {
+    backLink: '/same-address',
+    template: 'personal-details-brp.html',
+    fields: [
+      'fullname',
+      'date-of-birth-day',
+      'date-of-birth-month',
+      'date-of-birth-year',
+      'nationality',
+      'passport'
+    ],
     next: '/confirmation'
   },
   '/confirmation': {
-    backLink: '/same-address',
+    backLink: '/personal-details',
     next: '/done'
   },
   '/done': {
