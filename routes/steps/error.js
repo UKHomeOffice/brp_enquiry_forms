@@ -22,10 +22,21 @@ module.exports = {
       'damaged-error',
       'conditions-error'
     ],
+    next: '/same-address'
+  },
+  '/same-address': {
+    backLink: '/about-error',
+    fields: [
+      'address-match',
+      'address-street',
+      'address-town',
+      'address-county',
+      'address-postcode'
+    ],
     next: '/confirmation'
   },
   '/confirmation': {
-    backLink: '/about-error',
+    backLink: '/same-address',
     next: '/done'
   },
   '/done': {
