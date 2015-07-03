@@ -25,7 +25,6 @@ module.exports = {
     next: '/same-address'
   },
   '/same-address': {
-    backLink: '/about-error',
     fields: [
       'address-match',
       'address-street',
@@ -33,6 +32,20 @@ module.exports = {
       'address-county',
       'address-postcode'
     ],
+    backLink: '/about-error',
+    next: '/personal-details'
+  },
+  '/personal-details': {
+    template: 'personal-details-brp.html',
+    fields: [
+      'fullname',
+      'date-of-birth-day',
+      'date-of-birth-month',
+      'date-of-birth-year',
+      'nationality',
+      'passport'
+    ],
+    backLink: '/same-address',
     next: '/contact-details'
   },
   '/contact-details': {
@@ -45,11 +58,11 @@ module.exports = {
       'address-postcode',
       'phone'
     ],
-    backLink: '/same-address',
+    backLink: '/personal-details',
     next: '/confirmation'
   },
   '/confirmation': {
-    backLink: '/same-address',
+    backLink: '/contact-details',
     next: '/done'
   },
   '/done': {

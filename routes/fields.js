@@ -85,6 +85,10 @@ module.exports = {
   passport: {
     label: 'fields.passport.label'
   },
+  'brp-card': {
+    label: 'fields.brp-card.label',
+    hint: 'fields.brp-card.hint'
+  },
   email: {
     type: 'email',
     label: 'fields.email.label'
