@@ -4,10 +4,10 @@
   {{> partials-navigation}}
 {{/propositionHeader}}
 
-{{$header}}{{#t}}steps.five.header{{/t}}{{/header}}
+{{$header}}{{#t}}pages.check-details-delivery.header{{/t}}{{/header}}
 
 {{$content}}
-  <p>{{#t}}steps.five.subheader{{/t}}</p>
+  <p>{{#t}}pages.check-details-delivery.subheader{{/t}}</p>
 
   {{<partials-form}}
 
@@ -15,7 +15,7 @@
 
       <table>
         <tr>
-          <td>{{#t}}steps.five.table.headers.address{{/t}}</td>
+          <td>{{#t}}pages.check-details-delivery.table.headers.address{{/t}}</td>
           <td>
             {{values.address-street}},
             {{values.address-town}},
@@ -25,34 +25,34 @@
           <td><a href="/step2#address-street" class="button">{{#t}}buttons.change{{/t}}</a></td>
         </tr>
          <tr>
-          <td>{{#t}}steps.five.table.headers.fullname{{/t}}</td>
+          <td>{{#t}}pages.check-details-delivery.table.headers.fullname{{/t}}</td>
           <td>{{values.fullname}}</td>
           <td><a href="/step3#fullname" class="button">{{#t}}buttons.change{{/t}}</a></td>
         </tr>
          <tr>
-          <td>{{#t}}steps.five.table.headers.date-of-birth{{/t}}</td>
+          <td>{{#t}}pages.check-details-delivery.table.headers.date-of-birth{{/t}}</td>
           <td>{{values.date-of-birth-day}}-{{values.date-of-birth-month}}-{{values.date-of-birth-year}}</td>
           <td><a href="/step3#date-of-birth-day" class="button">{{#t}}buttons.change{{/t}}</a></td>
         </tr>
          <tr>
-          <td>{{#t}}steps.five.table.headers.nationality{{/t}}</td>
+          <td>{{#t}}pages.check-details-delivery.table.headers.nationality{{/t}}</td>
           <td>{{values.nationality}}</td>
           <td><a href="/step3#nationality" class="button">{{#t}}buttons.change{{/t}}</a></td>
         </tr>
          <tr>
-          <td>{{#t}}steps.five.table.headers.passport{{/t}}</td>
+          <td>{{#t}}pages.check-details-delivery.table.headers.passport{{/t}}</td>
           <td>{{values.passport}}</td>
           <td><a href="/step3#passport" class="button">{{#t}}buttons.change{{/t}}</a></td>
         </tr>
          <tr>
-          <td>{{#t}}steps.five.table.headers.email{{/t}}</td>
+          <td>{{#t}}pages.check-details-delivery.table.headers.email{{/t}}</td>
           <td>{{values.email}}</td>
           <td><a href="/step4#email" class="button">{{#t}}buttons.change{{/t}}</a></td>
         </tr>
       </table>
 
-      <h2>{{#t}}steps.five.footer.title{{/t}}</h2>
-      <p>{{#t}}steps.five.footer.explanation{{/t}}</p>
+      <h2>{{#t}}pages.check-details-delivery.footer.title{{/t}}</h2>
+      <p>{{#t}}pages.check-details-delivery.footer.explanation{{/t}}</p>
 
       {{#input-submit}}submit{{/input-submit}}
 
