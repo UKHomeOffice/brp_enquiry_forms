@@ -33,6 +33,19 @@ module.exports = {
       'address-county',
       'address-postcode'
     ],
+    next: '/contact-details'
+  },
+  '/contact-details': {
+    fields: [
+      'email',
+      'no-email',
+      'address-street',
+      'address-town',
+      'address-county',
+      'address-postcode',
+      'phone'
+    ],
+    backLink: '/same-address',
     next: '/confirmation'
   },
   '/confirmation': {
