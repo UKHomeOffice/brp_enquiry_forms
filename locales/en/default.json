@@ -200,13 +200,13 @@
       },
       "date-question": "What is the date on the letter?"
     },
-    "two": {
-      "header": "Is your address the same as on the letter from the Home Office about your biometric residence permit?",
+    "same-address": {
+      "header": "Is your address the same as on the Home Office letter saying your application to remain in the UK was successful?",
       "delivery-details": {
         "explanation": "If you think the courier may have had a problem delivering items to this address (for example there is no number on the door) then let us know and we will contact the courier."
       },
       "address": {
-        "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce condimentum lobortis eros vitae vestibulum. Donec in arcu vehicula, dictum lacus et, luctus eros."
+        "title": "Tell us your new address."
       }
     },
     "three": {
