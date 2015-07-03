@@ -8,8 +8,19 @@ module.exports = {
   },
   '/about-error': {
     fields: [
-      'first-name',
-      'last-name'
+      'first-name-error',
+      'last-name-error',
+      'date-of-birth-day-error',
+      'date-of-birth-month-error',
+      'date-of-birth-year-error',
+      'birth-place-error',
+      'gender-error',
+      'sponsor-details-error',
+      'nationality-error',
+      'signature-error',
+      'photograph-error',
+      'damaged-error',
+      'conditions-error'
     ],
     next: '/confirmation'
   },
