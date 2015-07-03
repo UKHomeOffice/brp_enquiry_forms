@@ -1,5 +1,5 @@
 When(/^I go to Step Three$/) do                                              
-  visit('http://localhost:8080')
+  visit config['dev_host']
   # page.status_code.should == 302
   click_button('Start')
   # page.status_code.should == 200
@@ -13,17 +13,16 @@ Then(/^I am on Step Three$/) do
   page.should have_content('Provide your personal details')
   page.should have_content('Complete this section carefully as these details will help us to find your information.')
   page.should have_content('Full name')
-
   page.should have_content('Date of birth')
   page.should have_content('For example, 31  3  1970')
   page.should have_content('Day')
-  page.has_css?('') #Await Name
+  page.has_css?('date-of-birth-day')
   page.should have_content('Month')
-  page.has_css?('') #Await Name
+  page.has_css?('date-of-birth-month')
   page.should have_content('Year')
-  page.has_css?('') #Await Name
+  page.has_css?('date-of-birth-year')
   page.should have_content('Nationality')
-  page.has_css?('') #Await Name
+  page.has_css?('nationality')
   page.should have_content('Passport number (optional)')
-  page.has_css?('') #Await Name                                      
+  page.has_css?('passport')                                      
 end                                                                          

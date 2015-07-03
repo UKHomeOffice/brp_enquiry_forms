@@ -1,5 +1,5 @@
 When(/^I go to Step Two$/) do                                                
-  visit('http://localhost:8080')
+  visit config['dev_host']
   # page.status_code.should == 302
   click_button('Start')
   # page.status_code.should == 200
@@ -11,9 +11,9 @@ Then(/^I am on Step Two$/) do
   page.should have_content('Step 2 of 5')
   page.should have_content('Is your address the same as on the letter from the Home Office about your biometric residence permit?')
   # page.should have_content('') #Awaiting content
-  page.should have_content('Your address')
+  page.should have_content('House name or number and street')
   page.has_css?('address.street')
-  page.should have_content('Town / City')
+  page.should have_content('Town/City')
   page.has_css?('address-town')
   page.should have_content('County')
   page.has_css?('address-county')

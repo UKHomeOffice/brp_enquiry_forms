@@ -1,5 +1,6 @@
-# Feature: DSP-19
+@StepFive
+Feature: DSP-19
 
-# 	Scenario: Go to Start page and assert content
-# 		When I go to step 5
-# 		Then I am on step 5
+	Scenario: Go to Step Five and assert content
+		When I go to Step Five
+		Then I am on Step Five

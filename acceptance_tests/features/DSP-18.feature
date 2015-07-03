@@ -1,5 +1,6 @@
-# Feature: DSP-18
+@StepFour
+Feature: DSP-18
 
-# 	Scenario: Go to Start page and assert content
-# 		When I go to step 4
-# 		Then I am on step 4
+	Scenario: Go to Step Four and assert content
+		When I go to Step Four
+		Then I am on Step Four

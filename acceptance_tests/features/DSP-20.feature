@@ -1,5 +1,6 @@
-# Feature: DSP-20
+@StepSix
+Feature: DSP-20
 
-# 	Scenario: Go to Start page and assert content
-# 		When I go to step 6
-# 		Then I am on step 6
+	Scenario: Go to Step Six and assert content
+		When I go to Step Six
+		Then I am on Step Six
