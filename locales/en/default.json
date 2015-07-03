@@ -204,18 +204,12 @@
       },
       "date-question": "What is the date on the letter?"
     },
-    "same-address": {
-      "header": "Is your address the same as on the Home Office letter saying your application to remain in the UK was successful?",
-      "delivery-details": {
-        "explanation": "If you think the courier may have had a problem delivering items to this address (for example there is no number on the door) then let us know and we will contact the courier."
-      },
+    "four": {
+      "header": "Provide your contact details",
+      "subheader": "We need your contact details to reply to your enquiry about why you have not received a BRP.",
       "address": {
-        "title": "Tell us your new address."
+        "title": "Please provide your address so that we contact you by post"
       }
-    },
-    "personal-details": {
-      "header": "Provide your personal details",
-      "subheader": "Complete this section carefully as these details will help us to find your information."
     },
     "five": {
       "header": "Check your details",
@@ -260,6 +254,19 @@
       "address": {
         "title": "Please provide your address so that we contact you by post"
       }
+    },
+    "same-address": {
+      "header": "Is your address the same as on the Home Office letter saying your application to remain in the UK was successful?",
+      "delivery-details": {
+        "explanation": "If you think the courier may have had a problem delivering items to this address (for example there is no number on the door) then let us know and we will contact the courier."
+      },
+      "address": {
+        "title": "Tell us your new address."
+      }
+    },
+    "personal-details": {
+      "header": "Provide your personal details",
+      "subheader": "Complete this section carefully as these details will help us to find your information."
     }
   }
 }
