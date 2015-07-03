@@ -213,13 +213,6 @@
       "header": "Provide your personal details",
       "subheader": "Complete this section carefully as these details will help us to find your information."
     },
-    "four": {
-      "header": "Provide your contact details",
-      "subheader": "We need your contact details to reply to your enquiry about why you have not received a BRP.",
-      "address": {
-        "title": "Please provide your address so that we contact you by post"
-      }
-    },
     "five": {
       "header": "Check your details",
       "subheader": "Check through the information that you have provided to make sure it is correct. If it is incorrect you can change it here.",
@@ -256,6 +249,13 @@
     "about-error": {
       "header": "Tell us about the error on your BRP",
       "subheader": "You can select one or more options if needed."
+    },
+    "contact-details": {
+      "header": "Provide your contact details",
+      "subheader": "We need your contact details to reply to your enquiry about why you have not received a BRP.",
+      "address": {
+        "title": "Please provide your address so that we contact you by post"
+      }
     }
   }
 }

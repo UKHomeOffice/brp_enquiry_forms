@@ -4,9 +4,10 @@
   {{> partials-navigation}}
 {{/propositionHeader}}
 
-{{$header}}{{#t}}steps.four.header{{/t}}{{/header}}
+{{$header}}{{#t}}pages.contact-details.header{{/t}}{{/header}}
 
 {{$content}}
+  <p>{{#t}}pages.contact-details.subheader{{/t}}</p>
   {{<partials-form}}
 
     {{$form}}
@@ -22,7 +23,7 @@
             </span>
         </legend>
 
-        <p>{{#t}}steps.four.address.title{{/t}}</p>
+        <p>{{#t}}pages.contact-details.address.title{{/t}}</p>
 
         {{#input-text}}address-street{{/input-text}}
 
