@@ -52,9 +52,11 @@ module.exports = {
     next: '/check-details'
   },
   '/check-details': {
+    backLink: '/contact-details',
     next: '/confirmation'
   },
   '/confirmation': {
+    backLink: false,
     next: '/done'
   },
   '/done': {
