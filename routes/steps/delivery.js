@@ -52,6 +52,7 @@ module.exports = {
     next: '/check-details'
   },
   '/check-details': {
+    template: 'check-details-delivery.html',
     backLink: '/contact-details',
     next: '/confirmation'
   },
