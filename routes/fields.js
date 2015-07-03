@@ -148,6 +148,7 @@ module.exports = {
   },
   'gender-error': {
     display: 'block',
+    className: 'panel-indent',
     options: [{
       value: 'female',
       label: 'fields.gender-error.options.female.label'
