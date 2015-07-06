@@ -1,6 +1,6 @@
 #BRP Acceptance Tests
 
-##Installation: 
+##Installation:
 
 ###Install Bundler
 
@@ -18,11 +18,16 @@ bundle install
 
 ##Run:
 
-Run with 
+Run with
 ```
 cucumber
 ```
 or to run specific features:
 ```
 cucumber features/example.feature
+```
+
+You can also run/install the tests from the root of the project using npm
+```
+npm run test:acceptance
 ```
