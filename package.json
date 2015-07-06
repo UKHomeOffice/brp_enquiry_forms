@@ -8,6 +8,7 @@
     "dev": "parallelshell 'NODE_ENV=development DEBUG=* nodemon .' 'npm run watch:scss' 'npm run copy:images'",
     "watch:scss": "nodemon -e scss -x 'npm run sass'",
     "test": "NODE_ENV=test mocha",
+    "test:acceptance": "cd acceptance_tests/; bundle install && cucumber",
     "test:ci": "npm run lint && npm run style && npm run test",
     "lint": "eslint .",
     "copy:images": "mkdir -p ./dist; cp -r ./assets/images ./dist/images",
