@@ -268,5 +268,26 @@
         "explanation": "By sending us your details you confirm that the information you have provided is true and that you accept our terms and conditions and privacy policy.hared with other government departments."
       }
     },
+    "check-details-error": {
+      "header": "Check your details",
+      "subheader": "Check through the information that you have provided to make sure it is correct. If it is still incorrect you can change it here.",
+      "corrected-details-table": {
+        "title": "Corrected BRP details"
+      },
+      "personal-details-table": {
+        "title": "Your personal and contact details",
+        "headers": {
+          "fullname": "Address",
+          "date-of-birth": "Date of birth",
+          "nationality": "Nationality",
+          "brp-card-number": "BRP card number",
+          "email": "Email"
+        }
+      },
+      "footer": {
+        "title": "Send your submission",
+        "explanation": "By sending us your details you confirm that the information you have provided is true and that you accept our terms and conditions and privacy policy.hared with other government departments."
+      }
+    }
   }
 }
