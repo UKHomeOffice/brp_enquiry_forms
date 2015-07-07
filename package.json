@@ -22,7 +22,7 @@
     "body-parser": "^1.13.0",
     "express": "^4.12.4",
     "express-partial-templates": "^0.1.0",
-    "hmpo-form-wizard": "^1.0.1",
+    "hmpo-form-wizard": "^1.1.0",
     "hmpo-frontend-toolkit": "^1.2.1",
     "hmpo-govuk-template": "0.0.3",
     "hmpo-model": "^0.1.2",

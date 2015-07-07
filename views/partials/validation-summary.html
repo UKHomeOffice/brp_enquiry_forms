@@ -1,5 +1,6 @@
 {{#errorlist.length}}
 <div class="validation-summary" tabindex="-1">
+    {{$errorlist-title}}<h2>{{#t}}errorlist.title{{/t}}</h2>{{/errorlist-title}}
     {{<partials-validation-list}}
         {{$validation-list}}
             {{#errorlist}}
