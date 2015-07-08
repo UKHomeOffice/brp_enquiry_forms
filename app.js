@@ -70,11 +70,9 @@ function initSession(req, res, next) {
   })(req, res, next);
 }
 
-module.exports = [
-  require('cookie-parser')(config.session.secret),
-  secureCookies,
-  initSession
-];
+app.use(require('cookie-parser')(config.session.secret));
+app.use(secureCookies);
+app.use(initSession);
 
 app.use(require('./routes'));
 
