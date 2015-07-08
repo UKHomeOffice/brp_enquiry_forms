@@ -113,10 +113,9 @@
               {{#t}}fields.signature-error.legend{{/t}}
             </span>
         </legend>
-        <div class="form-group">
-            <label for="signature-error-label" class="form-label">{{#t}}fields.signature-error.label{{/t}}</label>
-            <textarea id="signature-error-label" class="form-control form-control-textarea"></textarea>
-        </div>
+
+        {{#textarea}}signature-error{{/textarea}}
+
       </fieldset>
 
       {{#checkbox}}photograph-error-checkbox{{/checkbox}}
@@ -127,10 +126,8 @@
               {{#t}}fields.photograph-error.legend{{/t}}
             </span>
         </legend>
-        <div class="form-group">
-            <label for="photograph-error-label" class="form-label">{{#t}}fields.photograph-error.label{{/t}}</label>
-            <textarea id="photograph-error-label" class="form-control form-control-textarea"></textarea>
-        </div>
+
+        {{#textarea}}photograph-error{{/textarea}}
       </fieldset>
 
       {{#checkbox}}damaged-error-checkbox{{/checkbox}}
@@ -141,10 +138,9 @@
               {{#t}}fields.damaged-error.legend{{/t}}
             </span>
         </legend>
-        <div class="form-group">
-            <label for="damaged-error-label" class="form-label">{{#t}}fields.damaged-error.label{{/t}}</label>
-            <textarea id="damaged-error-label" class="form-control form-control-textarea"></textarea>
-        </div>
+
+        {{#textarea}}damaged-error{{/textarea}}
+
       </fieldset>
 
       {{#checkbox}}conditions-error-checkbox{{/checkbox}}
@@ -155,9 +151,9 @@
               {{#t}}fields.conditions-error.legend{{/t}}
             </span>
         </legend>
-        <div class="form-group">
-            <label for="conditions-error-label" class="form-label">{{#t}}fields.conditions-error.label{{/t}}</label>
-        </div>
+
+        {{#textarea}}conditions-error{{/textarea}}
+
       </fieldset>
 
       {{#input-submit}}continue{{/input-submit}}

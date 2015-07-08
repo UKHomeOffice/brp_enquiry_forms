@@ -125,17 +125,17 @@ module.exports = {
     label: 'fields.date-of-birth-error.label',
     hint: 'fields.date-of-birth-error.hint'
   },
-  'date-of-birth-day-error': {
-    label: 'fields.date-of-birth-day-error.label',
-    hint: 'fields.date-of-birth-day-error.hint'
+  'date-of-birth-error-day': {
+    label: 'fields.date-of-birth-error-day.label',
+    hint: 'fields.date-of-birth-error-day.hint'
   },
-  'date-of-birth-month-error': {
-    label: 'fields.date-of-birth-month-error.label',
-    hint: 'fields.date-of-birth-month-error.hint'
+  'date-of-birth-error-month': {
+    label: 'fields.date-of-birth-error-month.label',
+    hint: 'fields.date-of-birth-error-month.hint'
   },
-  'date-of-birth-year-error': {
-    label: 'fields.date-of-birth-year-error.label',
-    hint: 'fields.date-of-birth-year-error.hint'
+  'date-of-birth-error-year': {
+    label: 'fields.date-of-birth-error-year.label',
+    hint: 'fields.date-of-birth-error-year.hint'
   },
   'birth-place-error-checkbox': {
     label: 'fields.birth-place-error-checkbox.label'

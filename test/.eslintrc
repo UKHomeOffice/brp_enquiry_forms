@@ -4,6 +4,7 @@ globals:
   chai: true
   expect: true
   sinon: true
+  should: true
 rules:
   func-names: 0
   max-nested-callbacks: 0

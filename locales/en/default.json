@@ -46,7 +46,7 @@
       "label": "I don't have the letter anymore"
     },
     "delivery-details": {
-      "legend": "Delivery details"
+      "label": "If you think the courier may have had a problem delivering items to this address (for example there is no number on the door) then let us know and we will contact the courier."
     },
     "address-match": {
       "options": {
@@ -107,7 +107,7 @@
       "title": "This is the last line of name on your BRP card"
     },
     "date-of-birth-error-checkbox": {
-      "label": "Date of birth?"
+      "label": "Date of birth"
     },
     "date-of-birth-error": {
       "label": "What is your correct date of birth?",
@@ -211,24 +211,6 @@
         "title": "Please provide your address so that we contact you by post"
       }
     },
-    "five": {
-      "header": "Check your details",
-      "subheader": "Check through the information that you have provided to make sure it is correct. If it is incorrect you can change it here.",
-      "table": {
-        "headers": {
-          "address": "Address",
-          "fullname": "Full name",
-          "date-of-birth": "Date of birth",
-          "nationality": "Nationality",
-          "passport": "Passport",
-          "email": "Email"
-        }
-      },
-      "footer": {
-        "title": "Send your submission",
-        "explanation": "By sending us your details you confirm that the information you have provided is true and that you accept our terms and conditions and privacy policy.hared with other government departments."
-      }
-    },
     "confirmation": {
       "header": "Thank you, we have received the information you have provided. We are now looking into this.",
       "privacy": "We keep your personal data secure according to our <a href=''>privacy policy.</a>",
@@ -257,9 +239,6 @@
     },
     "same-address": {
       "header": "Is your address the same as on the Home Office letter saying your application to remain in the UK was successful?",
-      "delivery-details": {
-        "explanation": "If you think the courier may have had a problem delivering items to this address (for example there is no number on the door) then let us know and we will contact the courier."
-      },
       "address": {
         "title": "Tell us your new address."
       }
@@ -267,6 +246,45 @@
     "personal-details": {
       "header": "Provide your personal details",
       "subheader": "Complete this section carefully as these details will help us to find your information."
+    },
+    "check-details-delivery": {
+      "header": "Check your details",
+      "subheader": "Check through the information that you have provided to make sure it is correct. If it is incorrect you can change it here.",
+      "table": {
+        "headers": {
+          "address": "Address",
+          "fullname": "Full name",
+          "date-of-birth": "Date of birth",
+          "nationality": "Nationality",
+          "passport": "Passport",
+          "email": "Email"
+        }
+      },
+      "footer": {
+        "title": "Send your submission",
+        "explanation": "By sending us your details you confirm that the information you have provided is true and that you accept our terms and conditions and privacy policy.hared with other government departments."
+      }
+    },
+    "check-details-error": {
+      "header": "Check your details",
+      "subheader": "Check through the information that you have provided to make sure it is correct. If it is still incorrect you can change it here.",
+      "corrected-details-table": {
+        "title": "Corrected BRP details"
+      },
+      "personal-details-table": {
+        "title": "Your personal and contact details",
+        "headers": {
+          "fullname": "Address",
+          "date-of-birth": "Date of birth",
+          "nationality": "Nationality",
+          "brp-card-number": "BRP card number",
+          "email": "Email"
+        }
+      },
+      "footer": {
+        "title": "Send your submission",
+        "explanation": "By sending us your details you confirm that the information you have provided is true and that you accept our terms and conditions and privacy policy.hared with other government departments."
+      }
     }
   }
 }

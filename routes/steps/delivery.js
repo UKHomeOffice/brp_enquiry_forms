@@ -25,6 +25,7 @@ module.exports = {
       'address-county',
       'address-postcode'
     ],
+    backLink: '/letter-received',
     next: '/personal-details'
   },
   '/personal-details': {
@@ -37,6 +38,7 @@ module.exports = {
       'nationality',
       'passport'
     ],
+    backLink: '/same-address',
     next: '/contact-details'
   },
   '/contact-details': {
@@ -49,9 +51,11 @@ module.exports = {
       'address-postcode',
       'phone'
     ],
+    backLink: '/personal-details',
     next: '/check-details'
   },
   '/check-details': {
+    template: 'check-details-delivery.html',
     backLink: '/contact-details',
     next: '/confirmation'
   },

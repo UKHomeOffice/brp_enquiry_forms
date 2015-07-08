@@ -7,12 +7,13 @@ module.exports = {
     next: '/about-error'
   },
   '/about-error': {
+    controller: require('../../controllers/about-error'),
     fields: [
       'first-name-error',
       'last-name-error',
-      'date-of-birth-day-error',
-      'date-of-birth-month-error',
-      'date-of-birth-year-error',
+      'date-of-birth-error-day',
+      'date-of-birth-error-month',
+      'date-of-birth-error-year',
       'birth-place-error',
       'gender-error',
       'sponsor-details-error',
@@ -59,6 +60,11 @@ module.exports = {
       'phone'
     ],
     backLink: '/personal-details',
+    next: '/check-details'
+  },
+  '/check-details': {
+    template: 'check-details-error.html',
+    backLink: '/contact-details',
     next: '/confirmation'
   },
   '/confirmation': {
