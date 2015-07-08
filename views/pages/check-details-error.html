@@ -1,0 +1,170 @@
+{{<layout}}
+{{$step}}Step 5 of 5{{/step}}
+{{$propositionHeader}}
+  {{> partials-navigation}}
+{{/propositionHeader}}
+
+{{$header}}{{#t}}pages.check-details-error.header{{/t}}{{/header}}
+
+{{$content}}
+  <p>{{#t}}pages.check-details-error.subheader{{/t}}</p>
+
+  {{<partials-form}}
+
+    {{$form}}
+
+      <h3>{{#t}}pages.check-details-error.corrected-details-table.title{{/t}}</h3>
+      <table>
+        {{#values.first-name-error}}
+          <tr>
+            <td>{{#t}}fields.first-name-error-checkbox.label{{/t}}</td>
+            <td>
+              {{values.first-name-error}}
+            </td>
+            <td><a href="/step1#first-name-error" class="button">{{#t}}buttons.change{{/t}}</a></td>
+          </tr>
+        {{/values.first-name-error}}
+
+        {{#values.last-name-error}}
+          <tr>
+            <td>{{#t}}fields.last-name-error-checkbox.label{{/t}}</td>
+            <td>
+              {{values.last-name-error}}
+            </td>
+            <td><a href="/step1#last-name-error" class="button">{{#t}}buttons.change{{/t}}</a></td>
+          </tr>
+        {{/values.last-name-error}}
+
+        {{#values.birth-place-error}}
+          <tr>
+            <td>{{#t}}fields.birth-place-error-checkbox.label{{/t}}</td>
+            <td>
+              {{values.birth-place-error}}
+            </td>
+            <td><a href="/step1#birth-place-error" class="button">{{#t}}buttons.change{{/t}}</a></td>
+          </tr>
+        {{/values.birth-place-error}}
+
+        {{#values.date-of-birth-error-day}}
+          <tr>
+            <td>{{#t}}fields.date-of-birth-error-checkbox.label{{/t}}</td>
+            <td>
+              {{values.date-of-birth-error-formatted}}
+            </td>
+            <td><a href="/step1#date-of-birth-error-group" class="button">{{#t}}buttons.change{{/t}}</a></td>
+          </tr>
+        {{/values.date-of-birth-error-day}}
+
+        {{#values.gender-error}}
+          <tr>
+            <td>{{#t}}fields.gender-error-checkbox.label{{/t}}</td>
+            <td>
+              {{values.gender-error}}
+            </td>
+            <td><a href="/step1#gender-error" class="button">{{#t}}buttons.change{{/t}}</a></td>
+          </tr>
+        {{/values.gender-error}}
+
+        {{#values.sponsor-details-error}}
+          <tr>
+            <td>{{#t}}fields.sponsor-details-error-checkbox.label{{/t}}</td>
+            <td>
+              {{values.sponsor-details-error}}
+            </td>
+            <td><a href="/step1#sponsor-details-error" class="button">{{#t}}buttons.change{{/t}}</a></td>
+          </tr>
+        {{/values.sponsor-details-error}}
+
+        {{#values.nationality-error}}
+          <tr>
+            <td>{{#t}}fields.nationality-error-checkbox.label{{/t}}</td>
+            <td>
+              {{values.nationality-error}}
+            </td>
+            <td><a href="/step1#nationality-error" class="button">{{#t}}buttons.change{{/t}}</a></td>
+          </tr>
+        {{/values.nationality-error}}
+
+        {{#values.signature-error}}
+          <tr>
+            <td>{{#t}}fields.signature-error-checkbox.label{{/t}}</td>
+            <td>
+              {{values.signature-error}}
+            </td>
+            <td><a href="/step1#signature-error" class="button">{{#t}}buttons.change{{/t}}</a></td>
+          </tr>
+        {{/values.signature-error}}
+
+        {{#values.photograph-error}}
+          <tr>
+            <td>{{#t}}fields.photograph-error-checkbox.label{{/t}}</td>
+            <td>
+              {{values.photograph-error}}
+            </td>
+            <td><a href="/step1#photograph-error" class="button">{{#t}}buttons.change{{/t}}</a></td>
+          </tr>
+        {{/values.photograph-error}}
+
+        {{#values.damaged-error}}
+          <tr>
+            <td>{{#t}}fields.damaged-error-checkbox.label{{/t}}</td>
+            <td>
+              {{values.damaged-error}}
+            </td>
+            <td><a href="/step1#damaged-error" class="button">{{#t}}buttons.change{{/t}}</a></td>
+          </tr>
+        {{/values.damaged-error}}
+
+        {{#values.conditions-error}}
+          <tr>
+            <td>{{#t}}fields.conditions-error-checkbox.label{{/t}}</td>
+            <td>
+              {{values.conditions-error}}
+            </td>
+            <td><a href="/step1#conditions-error" class="button">{{#t}}buttons.change{{/t}}</a></td>
+          </tr>
+        {{/values.conditions-error}}
+      </table>
+
+      <h3>{{#t}}pages.check-details-error.personal-details-table.title{{/t}}</h3>
+      <table>
+         <tr>
+          <td>{{#t}}pages.check-details-error.personal-details-table.headers.fullname{{/t}}</td>
+          <td>{{values.fullname}}</td>
+          <td><a href="/step3#fullname" class="button">{{#t}}buttons.change{{/t}}</a></td>
+        </tr>
+         <tr>
+          <td>{{#t}}pages.check-details-error.personal-details-table.headers.date-of-birth{{/t}}</td>
+          <td>{{values.date-of-birth-day}}-{{values.date-of-birth-month}}-{{values.date-of-birth-year}}</td>
+          <td><a href="/step3#date-of-birth-day" class="button">{{#t}}buttons.change{{/t}}</a></td>
+        </tr>
+         <tr>
+          <td>{{#t}}pages.check-details-error.personal-details-table.headers.nationality{{/t}}</td>
+          <td>{{values.nationality}}</td>
+          <td><a href="/step3#nationality" class="button">{{#t}}buttons.change{{/t}}</a></td>
+        </tr>
+         <tr>
+          <td>{{#t}}pages.check-details-error.personal-details-table.headers.brp-card-number{{/t}}</td>
+          <td>{{values.brp-card-number}}</td>
+          <td><a href="/step3#passport" class="button">{{#t}}buttons.change{{/t}}</a></td>
+        </tr>
+         <tr>
+          <td>{{#t}}pages.check-details-error.personal-details-table.headers.email{{/t}}</td>
+          <td>{{values.email}}</td>
+          <td><a href="/step4#email" class="button">{{#t}}buttons.change{{/t}}</a></td>
+        </tr>
+      </table>
+
+      <h2>{{#t}}pages.check-details-error.footer.title{{/t}}</h2>
+      <p>{{#t}}pages.check-details-error.footer.explanation{{/t}}</p>
+
+      {{#input-submit}}submit{{/input-submit}}
+
+    {{/form}}
+
+  {{/partials-form}}
+
+
+{{/content}}
+
+{{/layout}}

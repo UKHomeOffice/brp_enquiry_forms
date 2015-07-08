@@ -7,6 +7,7 @@ module.exports = {
     next: '/about-error'
   },
   '/about-error': {
+    controller: require('../../controllers/about-error'),
     fields: [
       'first-name-error',
       'last-name-error',
@@ -59,6 +60,11 @@ module.exports = {
       'phone'
     ],
     backLink: '/personal-details',
+    next: '/check-details'
+  },
+  '/check-details': {
+    template: 'check-details-error.html',
+    backLink: '/contact-details',
     next: '/confirmation'
   },
   '/confirmation': {
