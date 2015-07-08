@@ -62,7 +62,7 @@ module.exports = {
     next: '/confirmation'
   },
   '/confirmation': {
-    backLink: '/contact-details',
+    backLink: false,
     next: '/done'
   },
   '/done': {
