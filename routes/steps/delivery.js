@@ -7,8 +7,10 @@ module.exports = {
     next: '/letter-received'
   },
   '/letter-received': {
+    controller: require('../../controllers/letter-received'),
     fields: [
       'received',
+      'delivery-date',
       'delivery-date-day',
       'delivery-date-month',
       'delivery-date-year'

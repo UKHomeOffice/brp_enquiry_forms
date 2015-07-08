@@ -1,16 +1,6 @@
 'use strict';
 
 module.exports = {
-  received: {
-    display: 'inline',
-    options: [{
-      value: 'yes',
-      label: 'fields.received.options.yes.label'
-    }, {
-      value: 'no',
-      label: 'fields.received.options.no.label'
-    }]
-  },
   'continue': {
     value: 'buttons.continue'
   },
@@ -20,17 +10,31 @@ module.exports = {
   change: {
     value: 'buttons.change'
   },
+  received: {
+    validate: ['required'],
+    display: 'inline',
+    options: [{
+      value: 'yes',
+      label: 'fields.received.options.yes.label'
+    }, {
+      value: 'no',
+      label: 'fields.received.options.no.label'
+    }]
+  },
   'delivery-date': {
     legend: 'fields.delivery-date.legend',
     hint: 'fields.dalivery-date.hint'
   },
   'delivery-date-day': {
-    label: 'fields.delivery-date-day.label'
+    validate: ['required', 'numeric'],
+    label: 'fields.delivery-date-day.label',
   },
   'delivery-date-month': {
+    validate: ['required', 'numeric'],
     label: 'fields.delivery-date-month.label'
   },
   'delivery-date-year': {
+    validate: ['required', 'numeric'],
     label: 'fields.delivery-date-year.label'
   },
   'no-letter': {

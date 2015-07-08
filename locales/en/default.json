@@ -5,6 +5,18 @@
     "submit": "Submit",
     "change": "Change"
   },
+  "errorlist": {
+    "title": "Please fix the following error(s)"
+  },
+  "validation": {
+    "delivery-date": {
+      "required": "Date is a required field",
+      "numeric": "Date must be a number"
+    },
+    "received": {
+      "required": "Have you received a letter?"
+    }
+  },
   "fields": {
     "received": {
       "options": {
@@ -17,6 +29,7 @@
       }
     },
     "delivery-date": {
+      "label": "Date",
       "legend": "Date on the letter",
       "hint": "For example, 11  6  2015"
     },

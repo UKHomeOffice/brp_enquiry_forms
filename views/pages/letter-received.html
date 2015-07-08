@@ -1,5 +1,10 @@
 {{<layout}}
   {{$step}}Step 1 of 5{{/step}}
+
+  {{$validationSummary}}
+    {{> partials-validation-summary}}
+  {{/validationSummary}}
+
   {{$propositionHeader}}
     {{> partials-navigation}}
   {{/propositionHeader}}
@@ -18,19 +23,27 @@
     {{<partials-form}}
 
       {{$form}}
-
         {{#radio-group}}received{{/radio-group}}
 
-        <fieldset id="dated-group" class="panel-indent">
+        <fieldset id="delivery-date-group" class="panel-indent {{#errors.delivery-date}}validation-error{{/errors.delivery-date}}">
+
           <legend class="visuallyhidden">
-              <span class="form-label-bold">{{#t}}fields.delivery-date.legend{{/t}}</span>
+            <span class="form-label-bold">{{#t}}fields.delivery-date.legend{{/t}}</span>
           </legend>
 
           <p>{{#t}}steps.one.date-question{{/t}}</p>
 
+          {{#errors.delivery-date}}
+            <span id="delivery-date-error" class="error-message">
+              {{errors.delivery-date.message}}
+            </span>
+          {{/errors.delivery-date}}
+
           <div class="form-group form-date">
-              <p id="delivery-date-hint" class="form-hint">{{#t}}fields.delivery-date.hint{{/t}}</p>
-              {{#input-date}}delivery-date{{/input-date}}
+            <p id="delivery-date-hint" class="form-hint">
+              {{#t}}fields.delivery-date.hint{{/t}}
+            </p>
+            {{#input-date}}delivery-date{{/input-date}}
           </div>
 
           {{#checkbox}}no-letter{{/checkbox}}

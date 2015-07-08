@@ -15,8 +15,7 @@
     "copy:images": "mkdir -p ./dist; cp -r ./assets/images ./dist/images",
     "style": "jscs **/*.js --config=./.jscsrc.json",
     "quality": "plato -r -x 'node_modules|reports|test' -d reports/plato .",
-    "postinstall": "npm run sass",
-    "sass": "node-sass ./assets/scss/app.scss ./dist/css/app.css --include-path ./node_modules"
+    "sass": "./node_modules/node-sass/bin/node-sass ./assets/scss/app.scss ./dist/css/app.css --include-path ./node_modules"
   },
   "author": "HomeOffice",
   "dependencies": {
@@ -24,7 +23,7 @@
     "body-parser": "^1.13.0",
     "express": "^4.12.4",
     "express-partial-templates": "^0.1.0",
-    "hmpo-form-wizard": "^1.0.1",
+    "hmpo-form-wizard": "^1.1.0",
     "hmpo-frontend-toolkit": "^1.2.1",
     "hmpo-govuk-template": "0.0.3",
     "hmpo-model": "^0.1.2",
