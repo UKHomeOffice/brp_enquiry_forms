@@ -20,10 +20,9 @@
               {{#t}}fields.delivery-details.legend{{/t}}
             </span>
         </legend>
-        <div class="form-group">
-            <label for="delivery-details-label" class="form-label">{{#t}}pages.same-address.delivery-details.explanation{{/t}}</label>
-            <textarea id="delivery-details-label" class="form-control form-control-textarea"></textarea>
-        </div>
+
+        {{#textarea}}delivery-details{{/textarea}}
+
       </fieldset>
 
       <fieldset id="address-group" class="panel-indent">

@@ -46,7 +46,7 @@
       "label": "I don't have the letter anymore"
     },
     "delivery-details": {
-      "legend": "Delivery details"
+      "label": "If you think the courier may have had a problem delivering items to this address (for example there is no number on the door) then let us know and we will contact the courier."
     },
     "address-match": {
       "options": {
@@ -239,9 +239,6 @@
     },
     "same-address": {
       "header": "Is your address the same as on the Home Office letter saying your application to remain in the UK was successful?",
-      "delivery-details": {
-        "explanation": "If you think the courier may have had a problem delivering items to this address (for example there is no number on the door) then let us know and we will contact the courier."
-      },
       "address": {
         "title": "Tell us your new address."
       }
