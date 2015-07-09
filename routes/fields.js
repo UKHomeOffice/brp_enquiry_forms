@@ -46,6 +46,7 @@ module.exports = {
     label: 'fields.delivery-details.label'
   },
   'address-match': {
+    validate: ['required'],
     display: 'inline',
     options: [{
       value: 'yes',
@@ -56,15 +57,18 @@ module.exports = {
     }]
   },
   'address-street': {
+    validate: ['required'],
     label: 'fields.address-street.label'
   },
   'address-town': {
+    validate: ['required'],
     label: 'fields.address-town.label'
   },
   'address-county': {
     label: 'fields.address-county.label'
   },
   'address-postcode': {
+    validate: ['required'],
     label: 'fields.address-postcode.label'
   },
   fullname: {
