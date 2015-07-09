@@ -17,6 +17,18 @@
     },
     "received": {
       "required": "1. This is a required field and must be completed"
+    },
+    "address-match": {
+      "required": "1. This is a required field and must be completed"
+    },
+    "address-street": {
+      "required": "1. This is a required field and must be completed"
+    },
+    "address-town": {
+      "required": "2. This is a required field and must be completed"
+    },
+    "address-postcode": {
+      "required": "3. This is a required field and must be completed"
     }
   },
   "fields": {

@@ -18,6 +18,7 @@ module.exports = {
     next: '/same-address'
   },
   '/same-address': {
+    controller: require('../../controllers/same-address'),
     template: 'same-address-details.html',
     fields: [
       'address-match',
