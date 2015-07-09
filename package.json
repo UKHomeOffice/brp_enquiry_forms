@@ -2,8 +2,7 @@
   "name": "BRP",
   "version": "0.0.0",
   "main": "app.js",
-  "description": "A Home Office application for Biometric Residence Permit covering lost and stolen, error on card and delivery error services.",
-  "license": "MIT",
+  "description": "The BRP application",
   "scripts": {
     "start": "node .",
     "dev": "parallelshell 'NODE_ENV=development DEBUG=* nodemon .' 'npm run watch:scss' 'npm run copy:images'",
