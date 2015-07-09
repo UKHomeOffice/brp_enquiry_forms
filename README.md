@@ -45,3 +45,5 @@ $ npm run sass
 ```
 
 - See the ./package.json for a full list of scripts.
+
+- Full list of [environment variables]('./documentation/ENVIRONMENT_VARIABLES.md')
