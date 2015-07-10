@@ -13,7 +13,8 @@ module.exports = {
       'delivery-date',
       'delivery-date-day',
       'delivery-date-month',
-      'delivery-date-year'
+      'delivery-date-year',
+      'no-letter'
     ],
     next: '/same-address'
   },
@@ -32,9 +33,11 @@ module.exports = {
     next: '/personal-details'
   },
   '/personal-details': {
+    controller: require('../../controllers/personal-details-passport'),
     template: 'personal-details-passport.html',
     fields: [
       'fullname',
+      'date-of-birth',
       'date-of-birth-day',
       'date-of-birth-month',
       'date-of-birth-year',

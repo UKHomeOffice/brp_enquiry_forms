@@ -10,25 +10,37 @@
   },
   "validation": {
     "delivery-date": {
-      "required": "1. This is a required field and must be completed",
-      "numeric": "1. Please enter the date as day, month and year.",
-      "future": "1. Date cannot be in the future",
-      "format": "1. Please enter the date as day, month and year."
+      "required": "This is a required field and must be completed",
+      "numeric": "Date must only contain numbers",
+      "future": "Date cannot be in the future",
+      "format": "Please enter a valid date as day, month and year."
     },
     "received": {
-      "required": "1. This is a required field and must be completed"
+      "required": "This is a required field and must be completed"
     },
     "address-match": {
-      "required": "1. This is a required field and must be completed"
+      "required": "This is a required field and must be completed"
     },
     "address-street": {
-      "required": "1. This is a required field and must be completed"
+      "required": "This is a required field and must be completed"
     },
     "address-town": {
-      "required": "2. This is a required field and must be completed"
+      "required": "This is a required field and must be completed"
     },
     "address-postcode": {
-      "required": "3. This is a required field and must be completed"
+      "required": "This is a required field and must be completed"
+    },
+    "fullname": {
+      "required": "This is a required field and must be completed"
+    },
+    "date-of-birth": {
+      "required": "This is a required field and must be completed",
+      "numeric": "Date must only contain numbers",
+      "future": "Date cannot be in the future",
+      "format": "Please enter a valid date as day, month and year."
+    },
+    "nationality": {
+      "required": "This is a required field and must be completed"
     }
   },
   "fields": {
