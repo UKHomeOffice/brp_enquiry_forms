@@ -21,11 +21,12 @@ describe('controllers/same-address', function () {
 
       beforeEach(function () {
         controller = new SameAddressController({template: 'index'});
+        controller.validateField(key, req);
       });
 
 
-      it('does not validate the address fields', function () {
-        should.equal(controller.validateField(key, req), undefined);
+      it('validates the address fields', function () {
+        Controller.prototype.validateField.should.have.been.calledWith(key, req);
       });
 
     });
@@ -48,8 +49,8 @@ describe('controllers/same-address', function () {
         controller.validateField(key, req);
       });
 
-      it('calls the validateField method on the parent controller with arguments', function () {
-        Controller.prototype.validateField.should.have.been.calledWith(key, req);
+      it('does not validate the address fields', function () {
+        should.equal(controller.validateField(key, req), undefined);
       });
 
     });
