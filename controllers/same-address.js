@@ -10,14 +10,14 @@ var SameAddress = function SameAddress() {
 
 util.inherits(SameAddress, Controller);
 
-function notSameDates(form) {
-  return form && form.values && form.values['address-match'] !== 'yes';
+function addressMatch(form) {
+  return form && form.values && form.values['address-match'] === 'yes';
 }
 
 SameAddress.prototype.validateField = function validateField(key, req) {
   debug('Validating field %s', key);
 
-  if (notSameDates(req.form)) {
+  if (addressMatch(req.form)) {
     if (key !== 'address-match') {
       return undefined;
     }
