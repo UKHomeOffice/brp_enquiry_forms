@@ -15,7 +15,8 @@ module.exports = {
     display: 'inline',
     options: [{
       value: 'yes',
-      label: 'fields.received.options.yes.label'
+      label: 'fields.received.options.yes.label',
+      toggle: 'delivery-date-group'
     }, {
       value: 'no',
       label: 'fields.received.options.no.label'
@@ -49,10 +50,12 @@ module.exports = {
     display: 'inline',
     options: [{
       value: 'yes',
-      label: 'fields.address-match.options.yes.label'
+      label: 'fields.address-match.options.yes.label',
+      toggle: 'delivery-details-group'
     }, {
       value: 'no',
-      label: 'fields.address-match.options.no.label'
+      label: 'fields.address-match.options.no.label',
+      toggle: 'address-match'
     }]
   },
   'address-street': {
@@ -99,31 +102,29 @@ module.exports = {
   },
   'no-email': {
     display: 'inline',
-    options: [{
-      value: 'yes',
-      label: 'fields.no-email.options.yes.label'
-    }, {
-      value: 'no',
-      label: 'fields.no-email.options.no.label'
-    }]
+    label: 'fields.no-email.label',
+    toggle: 'address-group'
   },
   phone: {
     label: 'fields.phone.label'
   },
   'first-name-error-checkbox': {
-    label: 'fields.first-name-error-checkbox.label'
+    label: 'fields.first-name-error-checkbox.label',
+    toggle: 'first-name-error-group'
   },
   'first-name-error': {
-    label: 'fields.first-name-error.label'
+    label: 'fields.first-name-error.label',
   },
   'last-name-error-checkbox': {
-    label: 'fields.last-name-error-checkbox.label'
+    label: 'fields.last-name-error-checkbox.label',
+    toggle: 'last-name-error-group'
   },
   'last-name-error': {
     label: 'fields.last-name-error.label'
   },
   'date-of-birth-error-checkbox': {
-    label: 'fields.date-of-birth-error-checkbox.label'
+    label: 'fields.date-of-birth-error-checkbox.label',
+    toggle: 'date-of-birth-error-group'
   },
   'date-of-birth-error': {
     label: 'fields.date-of-birth-error.label',
@@ -142,13 +143,15 @@ module.exports = {
     hint: 'fields.date-of-birth-error-year.hint'
   },
   'birth-place-error-checkbox': {
-    label: 'fields.birth-place-error-checkbox.label'
+    label: 'fields.birth-place-error-checkbox.label',
+    toggle: 'birth-place-error-group'
   },
   'birth-place-error': {
     label: 'fields.birth-place-error.label'
   },
   'gender-error-checkbox': {
-    label: 'fields.gender-error-checkbox.label'
+    label: 'fields.gender-error-checkbox.label',
+    toggle: 'gender-error-group'
   },
   'gender-error': {
     display: 'block',
@@ -165,36 +168,42 @@ module.exports = {
     }]
   },
   'sponsor-details-error-checkbox': {
-    label: 'fields.sponsor-details-error-checkbox.label'
+    label: 'fields.sponsor-details-error-checkbox.label',
+    toggle: 'sponsor-details-error-group'
   },
   'sponsor-details-error': {
     label: 'fields.sponsor-details-error.label',
   },
   'nationality-error-checkbox': {
-    label: 'fields.nationality-error-checkbox.label'
+    label: 'fields.nationality-error-checkbox.label',
+    toggle: 'nationality-error-group'
   },
   'nationality-error': {
     label: 'fields.nationality-error.label',
   },
   'signature-error-checkbox': {
-    label: 'fields.signature-error-checkbox.label'
+    label: 'fields.signature-error-checkbox.label',
+    toggle: 'signature-error-group'
   },
   'signature-error': {
     label: 'fields.signature-error.label',
   },
   'photograph-error-checkbox': {
-    label: 'fields.photograph-error-checkbox.label'
+    label: 'fields.photograph-error-checkbox.label',
+    toggle: 'photograph-error-group'
   },
   'photograph-error': {
     label: 'fields.photograph-error.label',
   },
   'damaged-error-checkbox': {
-    label: 'fields.damaged-error-checkbox.label'
+    label: 'fields.damaged-error-checkbox.label',
+    toggle: 'damaged-error-group'
   },
   'damaged-error': {
     label: 'fields.damaged-error.label',
   },
   'conditions-error-checkbox': {
-    label: 'fields.conditions-error-checkbox.label'
+    label: 'fields.conditions-error-checkbox.label',
+    toggle: 'conditions-error-group'
   }
 };
