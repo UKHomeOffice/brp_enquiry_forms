@@ -1,30 +1,21 @@
 'use strict';
 
-var emailService = require('../services/ses-mailer');
+var util = require('util');
+var emailService = require('../services/email');
 var Model = require('hmpo-model');
 
-var submitModel = new Model();
+function SubmitModel() {
+  Model.apply(this, arguments);
+}
 
-submitModel.save = function save() {
-  emailService.sendMail({
-    Source: this.getSender('sender'),
-    Destination: {ToAddresses: [this.get('recipient')]},
-    Message: {
-      Subject: {
-        Data: this.get('subject')
-      },
-      Body: {
-        Text: {
-          Data: this.toString()
-        }
-      }
-    }
-  }, function processResponse(err, data) {
-    if (err) {
-      throw err;
-    }
-    return data;
-  });
+util.inherits(SubmitModel, Model);
+
+SubmitModel.prototype.save = function save(callback) {
+  emailService.send({
+    to: this.get('email'),
+    subject: this.get('subject'),
+    text: JSON.stringify(this.toJSON())
+  }, callback);
 };
 
-module.exports = submitModel;
+module.exports = SubmitModel;

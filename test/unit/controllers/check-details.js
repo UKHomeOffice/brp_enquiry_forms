@@ -7,12 +7,12 @@ var modelProto = {
 };
 var Model = sinon.stub().returns(modelProto);
 
-var SubmitController = proxyquire('../../../controllers/submit', {
+var SubmitController = proxyquire('../../../controllers/check-details', {
   '../models/submit': Model,
   '../routes/fields': {foo: {}, bar: {}}
 });
 
-describe('controllers/submit', function () {
+describe('controllers/check-details', function () {
 
   describe('.saveValues()', function () {
 

@@ -81,6 +81,7 @@ module.exports = {
     next: '/check-details'
   },
   '/check-details': {
+    controller: require('../../controllers/check-details'),
     template: 'check-details-error.html',
     fields: [
       'org-help',
