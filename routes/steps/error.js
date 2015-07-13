@@ -38,9 +38,11 @@ module.exports = {
     next: '/personal-details'
   },
   '/personal-details': {
+    controller: require('../../controllers/personal-details'),
     template: 'personal-details-brp.html',
     fields: [
       'fullname',
+      'date-of-birth',
       'date-of-birth-day',
       'date-of-birth-month',
       'date-of-birth-year',

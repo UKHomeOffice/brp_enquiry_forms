@@ -33,7 +33,7 @@ module.exports = {
     next: '/personal-details'
   },
   '/personal-details': {
-    controller: require('../../controllers/personal-details-passport'),
+    controller: require('../../controllers/personal-details'),
     template: 'personal-details-passport.html',
     fields: [
       'fullname',
