@@ -106,6 +106,7 @@ module.exports = {
     hint: 'fields.brp-card.hint'
   },
   email: {
+    validate: ['required', 'email'],
     type: 'email',
     label: 'fields.email.label'
   },
