@@ -21,6 +21,10 @@
     "address-match": {
       "required": "This is a required field and must be completed"
     },
+    "email": {
+      "required": "This is a required field and must be completed",
+      "email": "Must be a valid email address"
+    },
     "address-street": {
       "required": "This is a required field and must be completed"
     },
