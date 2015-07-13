@@ -4,25 +4,35 @@ var util = require('util');
 var Controller = require('hmpo-form-wizard').Controller;
 var debug = require('debug');
 
-var SameAddress = function SameAddress() {
+var SameAddressController = function SameAddressController() {
   Controller.apply(this, arguments);
 };
 
-util.inherits(SameAddress, Controller);
+util.inherits(SameAddressController, Controller);
 
-function addressMatch(form) {
-  return form && form.values && form.values['address-match'] === 'yes';
+function checkValue(value, test) {
+  return value === test;
 }
 
-SameAddress.prototype.validateField = function validateField(key, req) {
+function isAddressMatch(key) {
+  return key === 'address-match';
+}
+
+SameAddressController.prototype.validateField = function validateField(key, req) {
   debug('Validating field %s', key);
 
-  if (addressMatch(req.form)) {
-    if (key !== 'address-match') {
-      return undefined;
-    }
+  if (isAddressMatch(key) && checkValue(req.form.values['address-match'], 'yes')) {
+    return undefined;
   }
-  return Controller.prototype.validateField.apply(this, arguments);
+
+  if (isAddressMatch(key) && checkValue(req.form.values['address-match'], '')) {
+    return Controller.prototype.validateField.apply(this, arguments);
+  }
+
+  if (checkValue(req.form.values['address-match'], 'no')) {
+    return Controller.prototype.validateField.apply(this, arguments);
+  }
+
 };
 
-module.exports = SameAddress;
+module.exports = SameAddressController;
