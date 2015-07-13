@@ -26,6 +26,7 @@ module.exports = {
     next: '/same-address'
   },
   '/same-address': {
+    controller: require('../../controllers/same-address'),
     fields: [
       'address-match',
       'address-street',
