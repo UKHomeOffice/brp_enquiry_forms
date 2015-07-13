@@ -1,1 +1,3 @@
 dev_host: 'http://localhost:8080/permit-delivery'
+
+error_host: 'http://localhost:8080/permit-error'

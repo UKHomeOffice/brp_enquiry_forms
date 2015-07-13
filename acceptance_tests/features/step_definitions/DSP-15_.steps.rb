@@ -14,7 +14,7 @@ Then(/^I am on Step One$/) do
   page.should have_content('your application to stay in the UK was successful ')
   page.should have_content('your documents are being returned')
   page.should have_content('What is the date on the letter?')
-  page.should have_content('For example, 11 6 2015')
+  page.should have_content('               For example, 11  06  2015             ')
   page.should have_content('                  Day                       ')
   page.should have_content('                  Month                       ')
   page.should have_content('                  Year                       ')

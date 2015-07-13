@@ -1,14 +1,23 @@
 When(/^I go to Step Five$/) do                                              
   visit config['dev_host']
-  # page.status_code.should == 302
   click_button('Start')
-  # page.status_code.should == 200
+  choose('received-yes')
+  fill_in('delivery-date-day', :with => '17')
+  fill_in('delivery-date-month', :with => '08')
+  fill_in('delivery-date-year', :with => '1988')
   click_button('Continue')
-  # page.status_code.should == 200
+  choose('address-match-yes')
+  fill_in('address-street', :with => '2 Marsham Street')
+  fill_in('address-town', :with => 'Westminster')
+  fill_in('address-postcode', :with => 'SW1P 4DF')
   click_button('Continue')
-  # page.status_code.should == 200
+  fill_in('fullname', :with => 'Alex Murphy')
+  fill_in('date-of-birth-day', :with => '17')
+  fill_in('date-of-birth-month', :with => '08')
+  fill_in('date-of-birth-year', :with => '1988')
+  fill_in('nationality', :with => 'Chinese')
   click_button('Continue')
-  # page.status_code.should == 200
+  fill_in('email', :with => 'alex.murphy@uksogeti.com')
   click_button('Continue')
   page.should have_content('Check your details')
 end
