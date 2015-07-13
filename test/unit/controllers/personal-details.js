@@ -2,11 +2,11 @@
 
 var DateController = sinon.stub();
 var proxyquire = require('proxyquire');
-var PersonalDetailController = proxyquire('../../../controllers/personal-details-passport', {
+var PersonalDetailController = proxyquire('../../../controllers/personal-details', {
   '../lib/date-controller': DateController
 });
 
-describe('controllers/personal-details-passport', function () {
+describe('controllers/personal-details', function () {
 
   var controller;
   var args = {template: 'index'};
