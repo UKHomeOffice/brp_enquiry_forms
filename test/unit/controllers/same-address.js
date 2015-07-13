@@ -21,6 +21,7 @@ describe('controllers/same-address', function () {
 
       beforeEach(function () {
         controller = new SameAddressController({template: 'index'});
+        Controller.prototype.validateField = sinon.stub();
         controller.validateField(key, req);
       });
 
