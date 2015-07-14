@@ -123,6 +123,7 @@ module.exports = {
     toggle: 'first-name-error-group'
   },
   'first-name-error': {
+    validate: ['required'],
     label: 'fields.first-name-error.label',
   },
   'last-name-error-checkbox': {
@@ -130,6 +131,7 @@ module.exports = {
     toggle: 'last-name-error-group'
   },
   'last-name-error': {
+    validate: ['required'],
     label: 'fields.last-name-error.label'
   },
   'date-of-birth-error-checkbox': {
@@ -141,14 +143,17 @@ module.exports = {
     hint: 'fields.date-of-birth-error.hint'
   },
   'date-of-birth-error-day': {
+    validate: ['required', 'numeric'],
     label: 'fields.date-of-birth-error-day.label',
     hint: 'fields.date-of-birth-error-day.hint'
   },
   'date-of-birth-error-month': {
+    validate: ['required', 'numeric'],
     label: 'fields.date-of-birth-error-month.label',
     hint: 'fields.date-of-birth-error-month.hint'
   },
   'date-of-birth-error-year': {
+    validate: ['required', 'numeric'],
     label: 'fields.date-of-birth-error-year.label',
     hint: 'fields.date-of-birth-error-year.hint'
   },
@@ -157,6 +162,7 @@ module.exports = {
     toggle: 'birth-place-error-group'
   },
   'birth-place-error': {
+    validate: ['required'],
     label: 'fields.birth-place-error.label'
   },
   'gender-error-checkbox': {
@@ -164,6 +170,7 @@ module.exports = {
     toggle: 'gender-error-group'
   },
   'gender-error': {
+    validate: ['required'],
     display: 'block',
     className: 'panel-indent',
     options: [{
@@ -182,6 +189,7 @@ module.exports = {
     toggle: 'sponsor-details-error-group'
   },
   'sponsor-details-error': {
+    validate: ['required'],
     label: 'fields.sponsor-details-error.label',
   },
   'nationality-error-checkbox': {
@@ -189,6 +197,7 @@ module.exports = {
     toggle: 'nationality-error-group'
   },
   'nationality-error': {
+    validate: ['required'],
     label: 'fields.nationality-error.label',
   },
   'signature-error-checkbox': {
@@ -196,6 +205,7 @@ module.exports = {
     toggle: 'signature-error-group'
   },
   'signature-error': {
+    validate: ['required'],
     label: 'fields.signature-error.label',
   },
   'photograph-error-checkbox': {
@@ -203,6 +213,7 @@ module.exports = {
     toggle: 'photograph-error-group'
   },
   'photograph-error': {
+    validate: ['required'],
     label: 'fields.photograph-error.label',
   },
   'damaged-error-checkbox': {
@@ -210,10 +221,15 @@ module.exports = {
     toggle: 'damaged-error-group'
   },
   'damaged-error': {
+    validate: ['required'],
     label: 'fields.damaged-error.label',
   },
   'conditions-error-checkbox': {
     label: 'fields.conditions-error-checkbox.label',
     toggle: 'conditions-error-group'
-  }
+  },
+  'conditions-error': {
+    validate: ['required'],
+    label: 'fields.conditions-error.label',
+  },
 };

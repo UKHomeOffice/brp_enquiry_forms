@@ -45,6 +45,42 @@
     },
     "nationality": {
       "required": "This is a required field and must be completed"
+    },
+    "first-name-error": {
+      "required": "First name is a required field and must be complete"
+    },
+    "last-name-error": {
+      "required": "Last name is a required field and must be complete"
+    },
+    "date-of-birth-error": {
+      "required": "Date of birth is a required field and must be completed",
+      "numeric": "Date must only contain numbers",
+      "future": "Date cannot be in the future",
+      "format": "Please enter a valid date as day, month and year."
+    },
+    "birth-place-error": {
+      "required": "Place of birth is a required field and must be complete"
+    },
+    "gender-error": {
+      "required": "Gender is a required field and must be complete"
+    },
+    "damaged-error": {
+      "required": "Damaged is a required field and must be complete"
+    },
+    "photograph-error": {
+      "required": "Photograph is a required field and must be complete"
+    },
+    "signature-error": {
+      "required": "Signature is a required field and must be complete"
+    },
+    "nationality-error": {
+      "required": "Nationality is a required field and must be complete"
+    },
+    "conditions-error": {
+      "required": "This is required field and must be complete"
+    },
+    "sponsor-details-error": {
+      "required": "Sponsor details is required field and must be complete"
     }
   },
   "fields": {

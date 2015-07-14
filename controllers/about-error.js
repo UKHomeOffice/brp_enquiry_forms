@@ -1,16 +1,29 @@
 'use strict';
 
 var util = require('util');
+var DateController = require('../lib/date-controller');
 var Controller = require('hmpo-form-wizard').Controller;
 var moment = require('moment');
 
-var AboutError = function AboutError() {
-  Controller.apply(this, arguments);
+var AboutErrorController = function AboutErrorController() {
+  this.dateKey = 'date-of-birth-error';
+  DateController.apply(this, arguments);
 };
 
-util.inherits(AboutError, Controller);
+util.inherits(AboutErrorController, DateController);
 
-AboutError.prototype.saveValues = function saveValues(req) {
+function isDatePart(key) {
+  return key.indexOf('date') !== -1;
+}
+
+function isChecked(key, req) {
+  if (isDatePart(key)) {
+    key = this.dateKey;
+  }
+  return req.form.values[key + '-checkbox'] === 'true';
+}
+
+AboutErrorController.prototype.saveValues = function saveValues(req) {
   if (req.form.values['date-of-birth-error-day']) {
     var day = req.form.values['date-of-birth-error-day'];
     var month = req.form.values['date-of-birth-error-month'];
@@ -19,8 +32,17 @@ AboutError.prototype.saveValues = function saveValues(req) {
 
     req.form.values['date-of-birth-error-formatted'] = formattedDate.format('D MMMM YYYY');
   }
-
-  Controller.prototype.saveValues.apply(this, arguments);
+  DateController.prototype.saveValues.apply(this, arguments);
 };
 
-module.exports = AboutError;
+AboutErrorController.prototype.validateField = function validateField(key) {
+  if (isChecked.apply(this, arguments)) {
+    if (isDatePart(key)) {
+      return DateController.prototype.validateField.apply(this, arguments);
+    }
+    return Controller.prototype.validateField.apply(this, arguments);
+  }
+  return undefined;
+};
+
+module.exports = AboutErrorController;
