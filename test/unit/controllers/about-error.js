@@ -61,4 +61,40 @@ describe('controllers/about-error', function () {
 
   });
 
+  describe('.validateField(keyToValidate, req)', function () {
+
+    var controller;
+    var req;
+
+    beforeEach(function () {
+      req = {form: {values: {}}};
+      Controller.prototype.validateField = sinon.stub();
+      controller = new AboutErrorController({template: 'index'});
+    });
+
+    it('returns undefined when the checkbox is not checked', function () {
+      req.form.values['first-name-error-checkbox'] = '';
+      req.form.values['first-name-error'] = 'Foo';
+      var result = controller.validateField('first-name-error', req);
+
+      should.equal(result, undefined);
+      Controller.prototype.validateField.should.not.have.been.called;
+    });
+
+    it('calls Controller#validateField when the checkbox is checked', function () {
+      req.form.values['first-name-error-checkbox'] = 'true';
+      controller.validateField('first-name-error', req);
+
+      Controller.prototype.validateField.should.have.been.calledWithExactly('first-name-error', req);
+    });
+
+    it('calls DateController#validateField when the date checkbox is checked', function () {
+      req.form.values['date-of-birth-error-checkbox'] = 'true';
+      controller.validateField('date-of-birth-day-error', req);
+
+      Controller.prototype.validateField.should.have.been.calledWithExactly('date-of-birth-day-error', req);
+    });
+
+  });
+
 });

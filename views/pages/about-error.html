@@ -1,5 +1,10 @@
 {{<layout}}
 {{$step}}Step 1 of 5{{/step}}
+
+{{$validationSummary}}
+  {{> partials-validation-summary}}
+{{/validationSummary}}
+
 {{$propositionHeader}}
   {{> partials-navigation}}
 {{/propositionHeader}}
@@ -15,7 +20,8 @@
 
       {{#checkbox}}first-name-error-checkbox{{/checkbox}}
 
-      <fieldset id="first-name-error-group" class="panel-indent js-hidden">
+      <fieldset id="first-name-error-group" class="panel-indent js-hidden {{#errors.first-name-error}}validation-error{{/errors.first-name-error}}">
+
         <legend class="visuallyhidden">
             <span class="form-legend">
               {{#t}}fields.first-name-error.legend{{/t}}
@@ -30,7 +36,8 @@
 
       {{#checkbox}}last-name-error-checkbox{{/checkbox}}
 
-      <fieldset id="last-name-error-group" class="panel-indent js-hidden">
+      <fieldset id="last-name-error-group" class="panel-indent js-hidden {{#errors.last-name-error}}validation-error{{/errors.last-name-error}}">
+
         <legend class="visuallyhidden">
             <span class="form-legend">
               {{#t}}fields.last-name-error.legend{{/t}}
@@ -45,7 +52,7 @@
 
       {{#checkbox}}birth-place-error-checkbox{{/checkbox}}
 
-      <fieldset id="birth-place-error-group" class="panel-indent js-hidden">
+      <fieldset id="birth-place-error-group" class="panel-indent js-hidden {{#errors.birth-place-error}}validation-error{{/errors.birth-place-error}}">
         <legend class="visuallyhidden">
             <span class="form-legend">
               {{#t}}fields.birth-place-error.legend{{/t}}
@@ -58,15 +65,21 @@
 
       {{#checkbox}}date-of-birth-error-checkbox{{/checkbox}}
 
-      <fieldset id="date-of-birth-error-group" class="panel-indent js-hidden">
+      <fieldset id="date-of-birth-error-group" class="panel-indent js-hidden {{#errors.date-of-birth-error}}validation-error{{/errors.date-of-birth-error}}">
         <legend class="visuallyhidden">
             <span class="form-legend">
               {{#t}}fields.date-of-birth-error.legend{{/t}}
             </span>
         </legend>
 
+
         <div class="form-group form-date">
           <label for="date-of-birth-error-day" class="form-label">{{#t}}fields.date-of-birth-error.label{{/t}}</p>
+          {{#errors.date-of-birth-error}}
+            <span id="date-of-birth-error" class="error-message">
+              {{errors.date-of-birth-error.message}}
+            </span>
+          {{/errors.date-of-birth-error}}
           <p id="date-hint" class="form-hint">{{#t}}fields.date-of-birth-error.hint{{/t}}</p>
           {{#input-date}}date-of-birth-error{{/input-date}}
         </div>
@@ -79,7 +92,7 @@
 
       {{#checkbox}}sponsor-details-error-checkbox{{/checkbox}}
 
-      <fieldset id="sponsor-details-error-group" class="panel-indent js-hidden">
+      <fieldset id="sponsor-details-error-group" class="panel-indent js-hidden {{#errors.sponsor-details-error}}validation-error{{/errors.sponsor-details-error}}">
         <legend class="visuallyhidden">
             <span class="form-legend">
               {{#t}}fields.sponsor-details-error.legend{{/t}}
@@ -94,7 +107,7 @@
 
       {{#checkbox}}nationality-error-checkbox{{/checkbox}}
 
-      <fieldset id="nationality-error-group" class="panel-indent js-hidden">
+      <fieldset id="nationality-error-group" class="panel-indent js-hidden {{#errors.nationality-error}}validation-error{{/errors.nationality-error}}">
         <legend class="visuallyhidden">
             <span class="form-legend">
               {{#t}}fields.nationality-error.legend{{/t}}
@@ -107,7 +120,7 @@
 
       {{#checkbox}}signature-error-checkbox{{/checkbox}}
 
-      <fieldset id="signature-error-group" class="panel-indent js-hidden">
+      <fieldset id="signature-error-group" class="panel-indent js-hidden {{#errors.signature-error}}validation-error{{/errors.signature-error}}">
         <legend class="visuallyhidden">
             <span class="form-legend">
               {{#t}}fields.signature-error.legend{{/t}}
@@ -120,7 +133,7 @@
 
       {{#checkbox}}photograph-error-checkbox{{/checkbox}}
 
-      <fieldset id="photograph-error-group" class="panel-indent js-hidden">
+      <fieldset id="photograph-error-group" class="panel-indent js-hidden {{#errors.photograph-error}}validation-error{{/errors.photograph-error}}">
         <legend class="visuallyhidden">
             <span class="form-legend">
               {{#t}}fields.photograph-error.legend{{/t}}
@@ -132,7 +145,7 @@
 
       {{#checkbox}}damaged-error-checkbox{{/checkbox}}
 
-      <fieldset id="damaged-error-group" class="panel-indent js-hidden">
+      <fieldset id="damaged-error-group" class="panel-indent js-hidden {{#errors.damaged-error}}validation-error{{/errors.damaged-error}}">
         <legend class="visuallyhidden">
             <span class="form-legend">
               {{#t}}fields.damaged-error.legend{{/t}}
@@ -145,7 +158,7 @@
 
       {{#checkbox}}conditions-error-checkbox{{/checkbox}}
 
-      <fieldset id="conditions-error-group" class="panel-indent js-hidden">
+      <fieldset id="conditions-error-group" class="panel-indent js-hidden {{#errors.conditions-error}}validation-error{{/errors.conditions-error}}">
         <legend class="visuallyhidden">
             <span class="form-legend">
               {{#t}}fields.conditions-error.legend{{/t}}
