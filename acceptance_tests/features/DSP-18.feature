@@ -1,4 +1,4 @@
-@StepFour
+@DeliveryForm @StepFour
 Feature: DSP-18
 
 	Scenario: Go to Step Four and assert content

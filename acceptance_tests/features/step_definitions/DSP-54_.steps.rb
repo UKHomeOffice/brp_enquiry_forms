@@ -30,4 +30,8 @@ When(/^I enter the correct values into the date field$/) do
   fill_in('delivery-date-day', :with => '17')
   fill_in('delivery-date-month', :with => '08')
   fill_in('delivery-date-year', :with => '1988')
-end                                                                                                                                                                                                                                                                                                   
+end     
+
+When(/^I see the "([^"]*)" link$/) do |arg1|
+  find_link arg1
+end                                                                                                                                                                                                                                                                                            

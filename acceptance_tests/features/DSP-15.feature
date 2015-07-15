@@ -1,4 +1,4 @@
-@StepOne
+@DeliveryForm @StepOne
 Feature: DSP-15
 
 	Scenario: Go to Step One and assert content

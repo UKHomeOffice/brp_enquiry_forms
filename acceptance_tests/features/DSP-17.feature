@@ -1,4 +1,4 @@
-@StepThree
+@DeliveryForm @StepThree
 Feature: DSP-17
 
 	Scenario: Go to Step Three and assert content

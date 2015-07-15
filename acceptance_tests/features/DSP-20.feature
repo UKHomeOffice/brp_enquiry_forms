@@ -1,4 +1,4 @@
-@StepSix
+@DeliveryForm @StepSix
 Feature: DSP-20
 
 	Scenario: Go to Step Six and assert content
