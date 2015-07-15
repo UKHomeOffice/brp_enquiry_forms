@@ -3,12 +3,13 @@
 var proxyquire = require('proxyquire');
 
 var modelProto = {
-  save: sinon.stub()
+  save: sinon.stub(),
+  set: sinon.stub()
 };
 var Model = sinon.stub().returns(modelProto);
 
 var SubmitController = proxyquire('../../../controllers/check-details', {
-  '../models/submit': Model,
+  '../models/email': Model,
   '../routes/fields': {foo: {}, bar: {}}
 });
 
@@ -21,7 +22,8 @@ describe('controllers/check-details', function () {
     var req = {
       sessionModel: {
         toJSON: sinon.stub().returns(expected)
-      }
+      },
+      originalUrl: '/permit-delivery/check-details'
     };
     var res = {};
     var callback = sinon.stub();
@@ -34,6 +36,35 @@ describe('controllers/check-details', function () {
     it('saves the session data to the a model', function () {
       Model.should.have.been.calledWith(expected);
       modelProto.save.should.have.been.calledWith(callback);
+    });
+
+    it('sets a template for delivery journey', function () {
+      req.originalUrl = '/permit-delivery/check-details';
+      controller.saveValues(req, res, callback);
+
+      modelProto.set.should.have.been.calledWith('template', 'permit');
+    });
+
+    it('sets a template for error journey', function () {
+      req.originalUrl = '/permit-error/check-details';
+      controller.saveValues(req, res, callback);
+
+      modelProto.set.should.have.been.calledWith('template', 'error');
+    });
+
+    it('sets a template for lost or stolen journey', function () {
+      req.originalUrl = '/permit-lost-or-stolen/check-details';
+      controller.saveValues(req, res, callback);
+
+      modelProto.set.should.have.been.calledWith('template', 'lost-or-stolen');
+    });
+
+    it('throws an error if its not part of a recognised journey', function () {
+      req.originalUrl = '/not-recognised-journey';
+
+      (function () {
+        controller.saveValues(req, res, callback);
+      }).should.throw('no template found');
     });
 
   });

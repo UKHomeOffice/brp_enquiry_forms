@@ -16,12 +16,13 @@ module.exports = {
     host: process.env.REDIS_HOST || '127.0.0.1'
   },
   email: {
-    safeMode: true,
-    amazonAWS: {
-      accessKeyId: '',
-      secretAccessKey: ''
+    safeMode: false,
+    port: 587,
+    host: 'email-smtp.eu-west-1.amazonaws.com',
+    auth: {
+      user: 'username',
+      pass: 'password'
     },
     from: 'brp@dsp.notprod.homeoffice.gov.uk'
-
   }
 };
