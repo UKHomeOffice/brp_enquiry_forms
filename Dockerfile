@@ -1,10 +1,14 @@
 FROM vaijab/nodejs:0.12.6
 
-WORKDIR /brp_app
+RUN useradd -d /app app
+USER app
 
-COPY package.json /brp_app/package.json
+WORKDIR /app
+COPY package.json /app/package.json
+COPY assets /app/assets
 RUN npm install
-COPY . /brp_app
+COPY . /app
 
 EXPOSE 8080
-CMD /brp_app/run.sh
+CMD /app/run.sh
+
