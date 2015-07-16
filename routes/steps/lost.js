@@ -40,6 +40,20 @@ module.exports = {
     backLink: '/date-lost',
     next: '/contact-details'
   },
+  '/contact-details': {
+    controller: require('../../controllers/contact-details'),
+    fields: [
+      'email',
+      'no-email',
+      'address-street',
+      'address-town',
+      'address-county',
+      'address-postcode',
+      'phone'
+    ],
+    backLink: '/personal-details',
+    next: '/check-details'
+  },
   '/done': {
     backLink: null
   }
