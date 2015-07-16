@@ -6,7 +6,7 @@ When(/^I go to Step Five$/) do
   fill_in('delivery-date-month', :with => '08')
   fill_in('delivery-date-year', :with => '1988')
   click_button('Continue')
-  choose('address-match-yes')
+  choose('address-match-no')
   fill_in('address-street', :with => '2 Marsham Street')
   fill_in('address-town', :with => 'Westminster')
   fill_in('address-postcode', :with => 'SW1P 4DF')
