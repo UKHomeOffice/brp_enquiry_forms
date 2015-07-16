@@ -81,6 +81,18 @@
     },
     "sponsor-details-error": {
       "required": "Sponsor details is required field and must be complete"
+    },
+    "inside-uk": {
+      "required": "Are you in the UK?"
+    },
+    "country": {
+      "required": "Please tell us what country you are in"
+    },
+    "date-lost": {
+      "required": "This is a required field and must be completed",
+      "numeric": "Date must only contain numbers",
+      "future": "Date cannot be in the future",
+      "format": "Please enter a valid date as day, month and year."
     }
   },
   "fields": {
@@ -267,6 +279,32 @@
     "conditions-error": {
       "legend": "Conditions or length of stay",
       "label": "This includes wrong expiry date, leave duration, remarks on front and on the back of the card."
+    },
+    "inside-uk": {
+      "options": {
+        "yes": {
+          "label": "UK"
+        },
+        "no": {
+          "label": "Outside UK"
+        }
+      }
+    },
+    "country": {
+      "legend": "Inside the UK",
+      "label": "Which country are you in?"
+    },
+    "date-lost": {
+      "hint": "For example: 11  6  2015"
+    },
+    "date-lost-day": {
+      "label": "Day"
+    },
+    "date-lost-month": {
+      "label": "Month"
+    },
+    "date-lost-year": {
+      "label": "Year"
     }
   },
   "journey": {
@@ -364,6 +402,9 @@
         "title": "Send your submission",
         "explanation": "By sending us your details you confirm that the information you have provided is true and that you accept our terms and conditions and privacy policy.hared with other government departments."
       }
+    },
+    "inside-uk": {
+      "header": "Where are you now?"
     }
   }
 }
