@@ -14,9 +14,9 @@ And browse to `http://localhost:8080` to view the app in your browser
 
 #### Scripts
 
-Start a node daemon (restarts on changes) in development mode with debug on
+Start a node daemon (restarts on changes) in development mode with debug on (also watches js and sass for changes).
 ```bash
-$ npm start:dev
+$ npm run dev
 ```
 
 Run the unit tests
