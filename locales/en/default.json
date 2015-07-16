@@ -93,6 +93,15 @@
       "numeric": "Date must only contain numbers",
       "future": "Date cannot be in the future",
       "format": "Please enter a valid date as day, month and year."
+    },
+    "org-help": {
+      "required": "Please tell us if you've had help from an organisation"
+    },
+    "rep-name": {
+      "required": "Please tell us the full name of the representative"
+    },
+    "organisation": {
+      "required": "Please tell us the name of the organisation"
     }
   },
   "fields": {
@@ -305,6 +314,22 @@
     },
     "date-lost-year": {
       "label": "Year"
+    },
+    "org-help": {
+      "options": {
+        "yes": {
+          "label": "Yes"
+        },
+        "no": {
+          "label": "No"
+        }
+      }
+    },
+    "organisation": {
+      "label": "Organisation"
+    },
+    "rep-name": {
+      "label": "Full name"
     }
   },
   "journey": {
@@ -332,7 +357,7 @@
       "header": "Provide your personal details",
       "subheader": "Complete this section carefully as these details will help us to find your information."
     },
-    "check-details-delivery": {
+    "check-details": {
       "header": "Check your details",
       "subheader": "Check through the information that you have provided to make sure it is correct. If it is incorrect you can change it here.",
       "table": {
@@ -344,6 +369,10 @@
           "passport": "Passport",
           "email": "Email"
         }
+      },
+      "org-help": {
+        "title": "Have you had help from an organisation to fill in this form?",
+        "explanation": "This could be help from your immigration lawyer or representative, or a charity, employer, college or university."
       },
       "footer": {
         "title": "Send your submission",
@@ -359,7 +388,7 @@
       "personal-details-table": {
         "title": "Your personal and contact details",
         "headers": {
-          "fullname": "Address",
+          "fullname": "Full name",
           "date-of-birth": "Date of birth",
           "nationality": "Nationality",
           "brp-card-number": "BRP card number",

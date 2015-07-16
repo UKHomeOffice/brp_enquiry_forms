@@ -267,5 +267,33 @@ module.exports = {
   'date-lost-year': {
     validate: ['required', 'numeric'],
     label: 'fields.date-lost-year.label'
+  },
+  'org-help': {
+    validate: ['required'],
+    display: 'inline',
+    options: [{
+      value: 'yes',
+      label: 'fields.org-help.options.yes.label',
+      toggle: 'org-details-group'
+    }, {
+      value: 'no',
+      label: 'fields.org-help.options.no.label'
+    }]
+  },
+  'rep-name': {
+    validate: ['required'],
+    label: 'fields.rep-name.label',
+    dependent: {
+      field: 'org-help',
+      value: 'yes'
+    },
+  },
+  'organisation': {
+    validate: ['required'],
+    label: 'fields.organisation.label',
+    dependent: {
+      field: 'org-help',
+      value: 'yes'
+    },
   }
 };
