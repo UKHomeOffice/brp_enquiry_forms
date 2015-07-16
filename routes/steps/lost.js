@@ -7,7 +7,6 @@ module.exports = {
     next: '/inside-uk'
   },
   '/inside-uk': {
-    // controller: require('../../controllers/about-error'),
     fields: [
       'inside-uk',
       'country'
@@ -24,7 +23,22 @@ module.exports = {
       'date-lost-year',
     ],
     backLink: '/inside-uk',
-    next: '/confirmation'
+    next: '/personal-details'
+  },
+  '/personal-details': {
+    controller: require('../../controllers/personal-details'),
+    template: 'personal-details-brp.html',
+    fields: [
+      'fullname',
+      'date-of-birth',
+      'date-of-birth-day',
+      'date-of-birth-month',
+      'date-of-birth-year',
+      'nationality',
+      'brp-card'
+    ],
+    backLink: '/date-lost',
+    next: '/contact-details'
   },
   '/done': {
     backLink: null

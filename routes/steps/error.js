@@ -59,7 +59,7 @@ module.exports = {
       'date-of-birth-month',
       'date-of-birth-year',
       'nationality',
-      'passport'
+      'brp-card'
     ],
     backLink: '/same-address',
     next: '/contact-details'
