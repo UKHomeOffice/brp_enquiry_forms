@@ -1,4 +1,4 @@
 node_modules
 reports
-dist/js/bundle.js
+public/js/bundle.js
 acceptance_tests
