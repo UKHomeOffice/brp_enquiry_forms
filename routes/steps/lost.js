@@ -54,6 +54,19 @@ module.exports = {
     backLink: '/personal-details',
     next: '/check-details'
   },
+  '/check-details': {
+    fields: [
+      'org-help',
+      'rep-name',
+      'organisation'
+    ],
+    backLink: '/contact-details',
+    next: '/confirmation'
+  },
+  '/confirmation': {
+    backLink: false,
+    next: '/done'
+  },
   '/done': {
     backLink: null
   }

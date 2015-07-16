@@ -80,6 +80,11 @@ module.exports = {
   },
   '/check-details': {
     template: 'check-details-error.html',
+    fields: [
+      'org-help',
+      'rep-name',
+      'organisation'
+    ],
     backLink: '/contact-details',
     next: '/confirmation'
   },

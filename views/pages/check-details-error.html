@@ -1,5 +1,10 @@
 {{<layout}}
 {{$step}}Step 5 of 5{{/step}}
+
+{{$validationSummary}}
+  {{> partials-validation-summary}}
+{{/validationSummary}}
+
 {{$propositionHeader}}
   {{> partials-navigation}}
 {{/propositionHeader}}
@@ -154,6 +159,11 @@
           <td><a href="contact-details#email" class="button">{{#t}}buttons.change{{/t}}</a></td>
         </tr>
       </table>
+
+      <fieldset id="org-details-group">
+        {{#input-text}}rep-name{{/input-text}}
+        {{#input-text}}organisation{{/input-text}}
+      </fieldset>
 
       <h2>{{#t}}pages.check-details-error.footer.title{{/t}}</h2>
       <p>{{#t}}pages.check-details-error.footer.explanation{{/t}}</p>
