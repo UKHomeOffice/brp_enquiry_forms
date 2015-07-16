@@ -232,4 +232,40 @@ module.exports = {
     validate: ['required'],
     label: 'fields.conditions-error.label',
   },
+  'inside-uk': {
+    validate: ['required'],
+    display: 'inline',
+    options: [{
+      value: 'yes',
+      label: 'fields.inside-uk.options.yes.label',
+    }, {
+      value: 'no',
+      label: 'fields.inside-uk.options.no.label',
+      toggle: 'country-group'
+    }]
+  },
+  'country': {
+    dependent: {
+      field: 'inside-uk',
+      value: 'no'
+    },
+    validate: ['required'],
+    label: 'fields.country.label',
+  },
+  'date-lost': {
+    legend: 'fields.date-lost.legend',
+    hint: 'fields.date-lost.hint'
+  },
+  'date-lost-day': {
+    validate: ['required', 'numeric'],
+    label: 'fields.date-lost-day.label'
+  },
+  'date-lost-month': {
+    validate: ['required', 'numeric'],
+    label: 'fields.date-lost-month.label'
+  },
+  'date-lost-year': {
+    validate: ['required', 'numeric'],
+    label: 'fields.date-lost-year.label'
+  }
 };

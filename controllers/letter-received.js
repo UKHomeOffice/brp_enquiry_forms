@@ -31,9 +31,6 @@ LetterRecievedController.prototype.validateField = function validateField(key, r
   if (checkRecieved(req.form, '') && hasDateKey.call(this, key)) {
     return undefined;
   }
-  if (key === this.dateKey) {
-    return DateController.prototype.validateField.apply(this, arguments);
-  }
 
   return DateController.prototype.validateField.apply(this, arguments);
 };
