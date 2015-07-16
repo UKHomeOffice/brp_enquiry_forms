@@ -11,7 +11,9 @@ var RedisStore = require('connect-redis')(session);
 
 var config = require('./config');
 
-app.use('/public', express.static(path.resolve(__dirname, './dist')));
+if (config.env === 'development') {
+  app.use('/public', express.static(path.resolve(__dirname, './public')));
+}
 
 app.use(function setAssetPath(req, res, next) {
   res.locals.assetPath = '/public';

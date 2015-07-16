@@ -2,11 +2,11 @@
 .idea/
 
 node_modules
-dist
+public
 reports
 *.log
 .DS_Store
-dist/js/bundle.js
+public/js/bundle.js
 .yardoc
 doc
 Gemfile.lock
