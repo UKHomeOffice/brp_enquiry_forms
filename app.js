@@ -76,5 +76,8 @@ app.use(initSession);
 
 app.use(require('./routes'));
 
-app.listen(require('./config').port);
-debug('App listening on port %o', require('./config').port);
+/*eslint camelcase: 0*/
+app.listen(config.port, config.listen_host);
+/*eslint camelcase: 1*/
+
+debug('App listening on port %o', config.port);
