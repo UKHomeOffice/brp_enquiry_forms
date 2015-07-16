@@ -7,4 +7,4 @@ RUN npm install
 COPY . /brp_app
 
 EXPOSE 8080
-CMD npm start
+CMD /brp_app/run.sh
