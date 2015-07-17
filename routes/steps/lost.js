@@ -64,6 +64,7 @@ module.exports = {
     next: '/confirmation'
   },
   '/confirmation': {
+    controller: require('../../controllers/confirmation'),
     backLink: false,
     next: '/done'
   },

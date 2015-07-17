@@ -412,10 +412,26 @@
       "email": "We have sent you an email containing the information you have provided to",
       "next": {
         "title": "What happens next",
-        "para": {
-          "one": "We will now review the information you provided to find out why you have not received the biometric residence permit.",
-          "two": "We will get back to you within 5 working days. For example, if you contact us on a Monday you will hear back by the following Monday.",
-          "three": "We will then advise you what to do next."
+        "not-specified": {
+          "para": {
+            "one": "We will now review the information you provided to find out why you have not received the biometric residence permit.",
+            "two": "We will get back to you within 5 working days. For example, if you contact us on a Monday you will hear back by the following Monday.",
+            "three": "We will then advise you what to do next."
+          }
+        },
+        "inside-uk": {
+          "para": {
+            "one": "You should hear from us in the next working day, where we will advise you what to do.",
+            "two": "You may need to <a href=''>apply for a replacement</a> biometric residence permit."
+          }
+        },
+        "outside-uk": {
+          "para": {
+            "one": "You should hear from us in the next working day, where we will advise you what to do.",
+            "two": "As you are outside the UK you may need to apply for a temporary ‘replacement BRP visa’ which you can use once to re-enter the UK. A replacement BRP visa costs £72.",
+            "three": "You must apply online for a replacement BRP visa in most countries. https://www.gov.uk/apply-uk-visa.",
+            "four": "When you are back in UK you should then apply for a replacement BRP within 1 month."
+          }
         }
       }
     },
