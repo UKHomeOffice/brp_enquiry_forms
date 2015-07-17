@@ -1,4 +1,4 @@
-FROM vaijab/nodejs:0.12.6
+FROM vaijab/nodejs:0.12.7
 
 RUN useradd -d /app app
 USER app
@@ -9,6 +9,7 @@ COPY assets /app/assets
 RUN npm install
 COPY . /app
 
+USER root
 EXPOSE 8080
 CMD /app/run.sh
 
