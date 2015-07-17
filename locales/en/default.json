@@ -3,7 +3,8 @@
     "test": "Start",
     "continue": "Continue",
     "submit": "Submit",
-    "change": "Change"
+    "change": "Change",
+    "close": "Close"
   },
   "errorlist": {
     "title": "Please fix the following error(s)"
@@ -444,6 +445,13 @@
         "three": "your documents are being returned"
       },
       "date-question": "What is the date on the letter?"
+    },
+    "letter-not-received": {
+      "header": "Contact us",
+      "para": {
+        "one": "If you haven't received a letter from the Home Office saying your application to remain in the UK was successful it may mean a decision about your application to stay in the UK has not been made yet. Meaning a biometric residence permit would not have been sent out.",
+        "two": "Call the contact centre 0300 123 2241 or email them at mail@contact-centre.co.uk."
+      }
     }
   }
 }
