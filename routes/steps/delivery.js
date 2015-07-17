@@ -18,6 +18,9 @@ module.exports = {
     ],
     next: '/same-address'
   },
+  '/letter-not-received': {
+    template: 'letter-not-received',
+  },
   '/same-address': {
     controller: require('../../controllers/same-address'),
     template: 'same-address-details.html',
