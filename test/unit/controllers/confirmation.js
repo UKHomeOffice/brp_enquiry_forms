@@ -9,6 +9,23 @@ describe('controllers/confirmation', function () {
     Controller.prototype.getNextStep = sinon.stub();
   });
 
+  describe('.getValues()', function () {
+    var controller;
+    var req = {sessionModel: {reset: sinon.stub()}};
+    var res = {};
+    var callback = sinon.stub();
+
+    beforeEach(function () {
+      controller = new ConfirmationController({template: 'foo'});
+      controller.getValues(req, res, callback);
+    });
+
+    it('resets the session', function () {
+      req.sessionModel.reset.should.have.been.calledOnce;
+      callback.should.have.been.calledOnce;
+    });
+  });
+
   describe('when the user is outside the uk', function () {
 
     var req = {
