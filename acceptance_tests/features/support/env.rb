@@ -3,6 +3,7 @@ require 'capybara'
 require 'capybara/dsl'
 require 'rspec'
 require 'capybara/poltergeist'
+# require 'selenium-webdriver'
 
 require 'yaml'
 

@@ -10,14 +10,14 @@ Feature: DSP-89 - Lost or stolen - user location
 
 	Scenario: Attempting to proceed to the next step without checking any radio buttons
 		When I click "Continue"
-		Then I see the "This is a required field and must be completed" link
-		And I see "This is a required field and must be completed"
+		Then I see the "Are you in the UK?" link
+		And I see "Are you in the UK?"
 
 	Scenario: Attempting to proceed to the next step after checking Outside UK without filling the in the Country field
 		When I click the "Outside UK" radio button
 		When I click "Continue"
-		Then I see the "This is a required field and must be completed" link
-		And I see "This is a required field and must be completed"
+		Then I see the "Please tell us what country you are in" link
+		And I see "Please tell us what country you are in"
 		
 	Scenario: Attempting to proceed to the next step after checking Outside UK and filling the Country field
 		When I click the "Outside UK" radio button

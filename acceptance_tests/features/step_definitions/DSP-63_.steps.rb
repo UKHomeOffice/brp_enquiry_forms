@@ -8,15 +8,23 @@ When(/^I go to Step Six of the error form$/) do
   fill_in('address-town', :with => 'Westminster')
   fill_in('address-postcode', :with => 'SW1P 4DF')
   click_button('Continue')
+  fill_in('fullname', :with => 'Alex Murphy')
+  fill_in('date-of-birth-day', :with => '17')
+  fill_in('date-of-birth-month', :with => '08')
+  fill_in('date-of-birth-year', :with => '1988')
+  fill_in('nationality', :with => 'Chinese')
   page.status_code.should == 302
   click_button('Continue')
+  fill_in('email', :with => 'alex.murphy@uksogeti.com')
   page.status_code.should == 302
   click_button('Continue')
+  page.should have_content('Check your details')
+  choose('org-help-no')
   page.status_code.should == 302
-  click_button('Send')
+  click_button('Submit')
   page.status_code.should == 302
 end                                                                          
                                                                              
-Then(/^I am on Step Six of the error form$/) do                              
-  pending # Write code here that turns the phrase above into concrete actions
+Then(/^I am on Step Six of the error form$/) do 
+  page.should have_content('Thank you, we have received the information you have provided. We are now looking into this.')
 end                                                                          

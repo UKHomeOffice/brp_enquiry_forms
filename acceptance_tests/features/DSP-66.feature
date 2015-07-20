@@ -34,14 +34,18 @@ Feature: DSP-66 Validation for Step Three
 		Then I see the "This is a required field and must be completed" link
 		And I see "This is a required field and must be completed"
 
-	Scenario: Filling the Full name field with numbers
-		When I enter numbers into the Full name field
-		When I click Continue
-		Then I see the "This is a required field and must be completed" link
-		And I see "This is a required field and must be completed"
+	# Scenario: Filling the Full name field with numbers
+	# 	When I enter numbers into the Full name field
+	# 	And I enter a valid date of birth
+	# 	And I type fill in the nationality field with something valid
+	# 	When I click Continue
+	# 	Then I see the "This is a required field and must be completed" link
+	# 	And I see "This is a required field and must be completed"
 
 	Scenario: Selecting Continue with text values in the Date of birth fields
 		When I enter text values into the Date of birth field
+		And I enter something valid in the Full name field
+		And I type fill in the nationality field with something valid
 		And I click "Continue"
 		Then I am on Step Three
 		Then I see the "Date must only contain numbers" link
@@ -49,6 +53,8 @@ Feature: DSP-66 Validation for Step Three
 
 	Scenario: Selecting Continue with special character values in the Date of birth fields
 		When I enter special character values into the Date of birth field
+		And I enter something valid in the Full name field
+		And I type fill in the nationality field with something valid
 		And I click "Continue"
 		Then I am on Step Three
 		Then I see the "Date must only contain numbers" link

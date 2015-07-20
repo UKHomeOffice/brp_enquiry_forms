@@ -7,5 +7,4 @@ Feature: Back Button
 		When I click Back	
 		When I click Back
 		When I click Back
-		Then I am on Step One
 		And I do not see Back
