@@ -11,7 +11,7 @@ When(/^I check the "([^"]*)" checkbox$/) do |arg1|
 end    
 
 Then(/^I see "([^"]*)"$/) do |arg1|                                          
-  page.has_content? arg1
+  page.should have_content arg1
 end
 
 When(/^I enter text values into the date field$/) do
@@ -34,4 +34,10 @@ end
 
 When(/^I see the "([^"]*)" link$/) do |arg1|
   find_link arg1
-end                                                                                                                                                                                                                                                                                            
+end     
+
+When(/^I enter a future date into the date field$/) do
+  fill_in('delivery-date-day', :with => '17')
+  fill_in('delivery-date-month', :with => '08')
+  fill_in('delivery-date-year', :with => '2030')
+end                                                                                                                                                                                                                                                                                       

@@ -7,9 +7,6 @@ When(/^I go to Step Six$/) do
   fill_in('delivery-date-year', :with => '1988')
   click_button('Continue')
   choose('address-match-yes')
-  fill_in('address-street', :with => '2 Marsham Street')
-  fill_in('address-town', :with => 'Westminster')
-  fill_in('address-postcode', :with => 'SW1P 4DF')
   click_button('Continue')
   fill_in('fullname', :with => 'Alex Murphy')
   fill_in('date-of-birth-day', :with => '17')
@@ -20,6 +17,7 @@ When(/^I go to Step Six$/) do
   fill_in('email', :with => 'alex.murphy@uksogeti.com')
   click_button('Continue')
   page.should have_content('Check your details')
+  choose('org-help-no')
   click_button('Submit')
 end                                                                          
                                                                              

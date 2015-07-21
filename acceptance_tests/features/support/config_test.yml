@@ -1,3 +1,5 @@
 dev_host: 'http://localhost:8080/permit-delivery'
 
 error_host: 'http://localhost:8080/permit-error'
+
+lost_host: 'http://localhost:8080/permit-lost-or-stolen'

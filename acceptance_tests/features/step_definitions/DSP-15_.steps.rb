@@ -19,7 +19,6 @@ Then(/^I am on Step One$/) do
   page.should have_content('                  Month                       ')
   page.should have_content('                  Year                       ')
   # page.should have_content('I don't have the letter anymore') how do you assert a string with an apostrophe
-  page.should have_unchecked_field('Yes')
   page.should have_unchecked_field('No')
   page.has_css?('dated-day')
 	page.has_css?('dated-month')

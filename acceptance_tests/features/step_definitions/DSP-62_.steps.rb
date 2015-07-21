@@ -8,9 +8,13 @@ When(/^I go to Step Five of the error form$/) do
   fill_in('address-town', :with => 'Westminster')
   fill_in('address-postcode', :with => 'SW1P 4DF')
   click_button('Continue')
-  page.status_code.should == 302
+  fill_in('fullname', :with => 'Alex Murphy')
+  fill_in('date-of-birth-day', :with => '17')
+  fill_in('date-of-birth-month', :with => '08')
+  fill_in('date-of-birth-year', :with => '1988')
+  fill_in('nationality', :with => 'Chinese')
   click_button('Continue')
-  page.status_code.should == 302
+  fill_in('email', :with => 'alex.murphy@uk.sogeti.com')
   click_button('Continue')
   page.status_code.should == 302
 end                                                                          
