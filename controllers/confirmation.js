@@ -25,12 +25,17 @@ function getLocationLocal(req) {
   };
 }
 
-Controller.prototype.locals = function confirmationLocals(req, res) {
+ConfirmationController.prototype.locals = function confirmationLocals(req, res) {
   return {
     baseUrl: req.baseUrl,
     nextPage: this.getNextStep(req, res),
     location: getLocationLocal(req)
   };
+};
+
+ConfirmationController.prototype.getValues = function getValues(req, res, callback) {
+  req.sessionModel.reset();
+  callback();
 };
 
 module.exports = ConfirmationController;
