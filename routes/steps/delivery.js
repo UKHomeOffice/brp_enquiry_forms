@@ -21,6 +21,10 @@ module.exports = {
   '/letter-not-received': {
     template: 'letter-not-received',
   },
+  '/on-the-way': {
+    controller: require('../../controllers/on-the-way'),
+    template: 'on-the-way',
+  },
   '/same-address': {
     controller: require('../../controllers/same-address'),
     template: 'same-address-details.html',

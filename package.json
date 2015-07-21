@@ -40,6 +40,7 @@
     "i18n-future": "^0.1.4",
     "i18n-lookup": "^0.1.0",
     "moment": "^2.10.3",
+    "moment-business": "^2.0.0",
     "node-sass": "^3.2.0",
     "redis": "^0.12.1",
     "underscore": "^1.8.3"
