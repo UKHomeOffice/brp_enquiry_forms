@@ -9,6 +9,8 @@ var session = require('express-session');
 var redis = require('redis');
 var RedisStore = require('connect-redis')(session);
 
+require('moment-business');
+
 var config = require('./config');
 
 if (config.env === 'development') {
