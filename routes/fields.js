@@ -222,15 +222,12 @@ module.exports = {
   },
   'damaged-error': {
     validate: ['required'],
+    classNames: ['panel-indent'],
     label: 'fields.damaged-error.label',
   },
   'conditions-error-checkbox': {
     label: 'fields.conditions-error-checkbox.label',
     toggle: 'conditions-error-group'
-  },
-  'conditions-error': {
-    validate: ['required'],
-    label: 'fields.conditions-error.label',
   },
   'inside-uk': {
     validate: ['required'],

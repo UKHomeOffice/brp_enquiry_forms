@@ -32,10 +32,12 @@ module.exports = {
       'photograph-error',
       'damaged-error-checkbox',
       'damaged-error',
-      'conditions-error-checkbox',
-      'conditions-error',
+      'conditions-error-checkbox'
     ],
     next: '/same-address'
+  },
+  '/conditions-and-length': {
+    template: 'conditions-and-length'
   },
   '/same-address': {
     controller: require('../../controllers/same-address'),
