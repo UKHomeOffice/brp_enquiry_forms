@@ -20,7 +20,10 @@ function isChecked(key, req) {
   if (isDatePart(key)) {
     key = this.dateKey;
   }
-  return req.form.values[key + '-checkbox'] === 'true';
+  if (req.form.values[key + '-checkbox']) {
+    return req.form.values[key + '-checkbox'] === 'true';
+  }
+  return req.form.values[key] === 'true';
 }
 
 AboutErrorController.prototype.saveValues = function saveValues(req) {
@@ -32,6 +35,13 @@ AboutErrorController.prototype.saveValues = function saveValues(req) {
 
     req.form.values['date-of-birth-error-formatted'] = formattedDate.format('D MMMM YYYY');
   }
+
+  if (isChecked.call(this, 'conditions-error-checkbox', req)) {
+    this.options.next = '/conditions-and-length';
+  } else {
+    this.options.next = '/same-address';
+  }
+
   DateController.prototype.saveValues.apply(this, arguments);
 };
 

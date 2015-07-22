@@ -465,6 +465,12 @@
           "second": " working days, and if you still have not received your card, use this form to contact us."
         }
       }
+    },
+    "conditions-and-length": {
+      "header": "Information about leave to remain in the UK",
+      "para": {
+        "one": "As you think the conditions or length of your leave are incorrect you must apply for <a href=''>administrative review</a>, where this will be considered."
+      }
     }
   }
 }

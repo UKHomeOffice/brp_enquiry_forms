@@ -59,6 +59,13 @@ describe('controllers/about-error', function () {
       should.not.exist(req.form.values['date-of-birth-error-formatted']);
     });
 
+    it('sets next page to conditions-and-length if conditions is checked', function () {
+      req.form.values['conditions-error-checkbox'] = 'true';
+      controller.saveValues(req, res, callback);
+
+      controller.options.next.should.equal('/conditions-and-length');
+    });
+
   });
 
   describe('.validateField(keyToValidate, req)', function () {
