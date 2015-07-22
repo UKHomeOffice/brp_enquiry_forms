@@ -15,11 +15,11 @@
 
   <hr>
 
-  <p>{{#t}}pages.confirmation.email{{/t}}</p>
+  <p>{{#t}}pages.confirmation.email{{/t}} <strong>{{values.email}}</strong></p>
 
   <hr>
 
-  <h3>{{#t}}pages.confirmation.next.title{{/t}}</h3>
+  <h3>{{#t}}pages.confirmation.next.header{{/t}}</h3>
 
   {{#location.inside-uk}}
     <p>{{#t}}pages.confirmation.next.inside-uk.para.one{{/t}}</p>
@@ -29,6 +29,8 @@
   {{#location.outside-uk}}
     <p>{{#t}}pages.confirmation.next.outside-uk.para.one{{/t}}</p>
     <p>{{#t}}pages.confirmation.next.outside-uk.para.two{{/t}}</p>
+    <p>{{#t}}pages.confirmation.next.outside-uk.para.three{{/t}}</p>
+    <p>{{#t}}pages.confirmation.next.outside-uk.para.four{{/t}}</p>
   {{/location.outside-uk}}
 
   {{#location.not-specified}}
