@@ -165,13 +165,14 @@
 
       {{#radio-group}}org-help{{/radio-group}}
 
-      <fieldset id="org-details-group">
+      <fieldset id="org-details-group" class="panel-indent">
+        <p>{{#t}}pages.check-details.org-details-group.header{{/t}}</p>
         {{#input-text}}rep-name{{/input-text}}
         {{#input-text}}organisation{{/input-text}}
       </fieldset>
 
-      <h2>{{#t}}pages.check-details-error.footer.title{{/t}}</h2>
-      <p>{{#t}}pages.check-details-error.footer.explanation{{/t}}</p>
+      <h2>{{#t}}pages.check-details.footer.title{{/t}}</h2>
+      <p>{{#t}}pages.check-details.footer.explanation{{/t}}</p>
 
       {{#input-submit}}submit{{/input-submit}}
 
