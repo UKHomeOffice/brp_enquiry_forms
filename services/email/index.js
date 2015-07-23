@@ -30,7 +30,6 @@ function Emailer() {
     port: config.email.port,
     secure: false,
     auth: config.email.auth,
-    debug: true,
     ignoreTLS: false
   }));
 }
