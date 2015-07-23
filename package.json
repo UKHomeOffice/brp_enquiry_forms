@@ -23,7 +23,6 @@
   },
   "author": "HomeOffice",
   "dependencies": {
-    "aws-sdk": "^2.1.35",
     "body-parser": "^1.13.0",
     "browserify": "^10.2.4",
     "connect-redis": "^2.3.0",
@@ -41,7 +40,11 @@
     "i18n-lookup": "^0.1.0",
     "moment": "^2.10.3",
     "moment-business": "^2.0.0",
+    "mustache": "^2.1.2",
     "node-sass": "^3.2.0",
+    "nodemailer": "^1.4.0",
+    "nodemailer-smtp-transport": "^1.0.3",
+    "nodemailer-stub-transport": "^1.0.0",
     "redis": "^0.12.1",
     "underscore": "^1.8.3"
   },
