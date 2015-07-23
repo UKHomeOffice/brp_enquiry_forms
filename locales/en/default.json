@@ -147,7 +147,7 @@
       "label": "I don't have the letter anymore"
     },
     "delivery-details": {
-      "label": "If you think the courier may have had a problem delivering items to this address (for example there is no number on the door) then let us know and we will contact the courier."
+      "label": "If you think the courier may have had a problem delivering items to this address (for example there is no number on the door) then let us know and we will contact the courier. (optional)"
     },
     "address-match": {
       "options": {
@@ -342,15 +342,14 @@
     },
     "contact-details": {
       "header": "Where can we contact you to let you know about your BRP?",
-      "subheader": "We need your contact details to reply to your enquiry about why you have not received a BRP.",
       "address": {
         "title": "Please provide your address so that we can contact you by post"
       }
     },
     "same-address": {
-      "header": "Is your address the same as the one on the letter from the Office?",
+      "header": "Is your address the same as the one on the letter from the Home Office?",
       "address": {
-        "title": "Tell us your new address."
+        "title": "Tell us your new address and we will organise another delivery."
       }
     },
     "personal-details": {
@@ -362,17 +361,20 @@
       "subheader": "Check through the information that you have provided to make sure it is correct. If it is still incorrect you can change it here.",
       "table": {
         "headers": {
-          "address": "Address",
+          "address": "New address",
           "fullname": "Full name",
           "date-of-birth": "Date of birth",
           "nationality": "Nationality",
-          "passport": "Passport",
+          "passport": "Passport number",
           "email": "Email"
         }
       },
       "org-help": {
         "title": "Have you had help from an organisation to fill in this form?",
         "explanation": "This could be help from your immigration lawyer or representative, or a charity, employer, college or university."
+      },
+      "org-details-group": {
+        "header": "Please provide their details"
       },
       "footer": {
         "title": "Send us your details",
@@ -394,10 +396,6 @@
           "brp-card-number": "BRP card number",
           "email": "Email"
         }
-      },
-      "footer": {
-        "title": "Send your submission",
-        "explanation": "By sending us your details you confirm that the information you have provided is true and that you accept our terms and conditions and privacy policy.hared with other government departments."
       }
     },
     "inside-uk": {
@@ -414,7 +412,7 @@
         "header": "What happens next",
         "not-specified": {
           "para": {
-            "one": "We will now review the information you provided to find out why you have not received your BRP.",
+            "one": "We will now review the information you provided to find out why you have not received the biometric residence permit.",
             "two": "We will contact you within <strong>5 working days</strong>. We will tell you what to do when we contact you.",
             "three": "We will then advise you what to do next."
           }
@@ -436,11 +434,11 @@
       }
     },
     "letter-received": {
-      "header": "Have you received a letter from the Home Office telling you your biometrics residence permit was being delivered to you by a courier?",
+      "header": "Have you received a letter from the Home Office?",
       "subheader": "This letter may tell you:",
       "list": {
-        "one": "your biometric residence permit (BRP) is going to be delivered",
-        "two": "your application to stay in the UK was successful",
+        "one": "your application to stay in the UK was successful",
+        "two": "your biometric residence permit (BRP) is going to be delivered",
         "three": "your documents are being returned"
       },
       "date-question": "What is the date on the letter?"
@@ -448,7 +446,7 @@
     "letter-not-received": {
       "header": "Contact us",
       "para": {
-        "one": "If you haven't received a letter from the Home Office saying your application to remain in the UK was successful it may mean a decision about your application to stay in the UK has not been made yet. Meaning a biometric residence permit would not have been sent out.",
+        "one": "If you haven't received a letter from the Home Office saying your application to remain in the UK was successful it may mean a decision about your application to stay in the UK has not been made yet.",
         "two": "Call the contact centre 0300 123 2241 or email them at mail@contact-centre.co.uk."
       }
     },
