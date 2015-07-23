@@ -19,7 +19,7 @@
 
       {{#radio-group}}address-match{{/radio-group}}
 
-      <fieldset id="delivery-details-group" class="panel-indent js-hidden">
+      <fieldset id="delivery-details-group" class="panel-indent js-hidden {{#errorlist.length}}validation-error{{/errorlist.length}}">
         <legend class="visuallyhidden">
             <span class="form-legend">
               {{#t}}fields.delivery-details.legend{{/t}}
@@ -30,7 +30,7 @@
 
       </fieldset>
 
-      <fieldset id="address-match" class="panel-indent js-hidden">
+      <fieldset id="address-match" class="panel-indent js-hidden {{#errorlist.length}}validation-error{{/errorlist.length}}">
         <legend class="visuallyhidden">
             <span class="form-legend">
               {{#t}}fields.address.legend{{/t}}

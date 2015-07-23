@@ -20,68 +20,65 @@
       "required": "This is a required field and must be completed"
     },
     "address-match": {
-      "required": "This is a required field and must be completed"
+      "required": "Tell us if your address is the same as on the letter from the Home Office"
     },
     "email": {
       "required": "This is a required field and must be completed",
-      "email": "Must be a valid email address"
+      "email": "Enter your email in the correct format for example, name@email.com"
     },
     "address-street": {
-      "required": "This is a required field and must be completed"
+      "required": "Enter your new house name or number and street"
     },
     "address-town": {
-      "required": "This is a required field and must be completed"
+      "required": "Enter the Town or City"
     },
     "address-postcode": {
-      "required": "This is a required field and must be completed"
+      "required": "Enter the postcode"
     },
     "fullname": {
-      "required": "This is a required field and must be completed"
+      "required": "Enter your full name"
     },
     "date-of-birth": {
-      "required": "This is a required field and must be completed",
+      "required": "Enter your date of birth",
       "numeric": "Date must only contain numbers",
-      "future": "Date cannot be in the future",
-      "format": "Please enter a valid date as day, month and year."
+      "future": "The date is in the future",
+      "format": "Enter your date of birth in the correct format."
     },
     "nationality": {
-      "required": "This is a required field and must be completed"
+      "required": "Tell us your nationality"
     },
     "first-name-error": {
-      "required": "First name is a required field and must be complete"
+      "required": "Tell us your correct first name "
     },
     "last-name-error": {
-      "required": "Last name is a required field and must be complete"
+      "required": "Tell us your correct last name"
     },
     "date-of-birth-error": {
-      "required": "Date of birth is a required field and must be completed",
+      "required": "Enter your date of birth",
       "numeric": "Date must only contain numbers",
-      "future": "Date cannot be in the future",
-      "format": "Please enter a valid date as day, month and year."
+      "future": "The date is in the future",
+      "format": "Enter your date of birth in the correct format."
     },
     "birth-place-error": {
-      "required": "Place of birth is a required field and must be complete"
+      "required": "Tell us your correct place of birth "
     },
     "gender-error": {
-      "required": "Gender is a required field and must be complete"
+      "required": "Tell us your correct gender"
     },
     "damaged-error": {
-      "required": "Damaged is a required field and must be complete"
+      "required": "Tell us what is wrong with your BRP"
     },
     "photograph-error": {
-      "required": "Photograph is a required field and must be complete"
+      "required": "Tell us what is wrong with your photograph"
     },
     "signature-error": {
-      "required": "Signature is a required field and must be complete"
+      "required": "Tell us what is wrong with your signature"
     },
     "nationality-error": {
-      "required": "Nationality is a required field and must be complete"
-    },
-    "conditions-error": {
-      "required": "This is required field and must be complete"
+      "required": "Tell us your correct nationality"
     },
     "sponsor-details-error": {
-      "required": "Sponsor details is required field and must be complete"
+      "required": "Tell us the correct sponsor details"
     },
     "inside-uk": {
       "required": "Are you in the UK?"
@@ -96,13 +93,13 @@
       "format": "Please enter a valid date as day, month and year."
     },
     "org-help": {
-      "required": "Please tell us if you've had help from an organisation"
+      "required": "Tell us if you had help to complete this form"
     },
     "rep-name": {
-      "required": "Please tell us the full name of the representative"
+      "required": "Tell us the name of the person that helped you to complete this form"
     },
     "organisation": {
-      "required": "Please tell us the name of the organisation"
+      "required": "Tell us the name of the organisation that helped you to complete this form"
     }
   },
   "fields": {
