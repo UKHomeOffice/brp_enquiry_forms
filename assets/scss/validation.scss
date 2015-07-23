@@ -1,5 +1,8 @@
-.form-date {
+
+.form-date,
+.panel-indent.validation-error {
   .form-group.validation-error {
     border-left: none;
+    padding-left: 0;
   }
 }
