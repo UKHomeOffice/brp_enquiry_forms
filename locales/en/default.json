@@ -353,12 +353,12 @@
       }
     },
     "personal-details": {
-      "header": "What’s your name, date of birth and nationality?",
+      "header": "What are your personal details?",
       "subheader": "We need these details to find out what has happened to your BRP."
     },
     "check-details": {
       "header": "Is the information you gave us correct?",
-      "subheader": "Check through the information that you have provided to make sure it is correct. If it is still incorrect you can change it here.",
+      "subheader": "Check the information you have given us to make sure it is correct. If it is incorrect you can change it here.",
       "table": {
         "headers": {
           "address": "New address",
@@ -370,7 +370,7 @@
         }
       },
       "org-help": {
-        "title": "Have you had help from an organisation to fill in this form?",
+        "title": "Has an organisation filled in this information on your behalf?",
         "explanation": "This could be help from your immigration lawyer or representative, or a charity, employer, college or university."
       },
       "org-details-group": {
@@ -378,7 +378,7 @@
       },
       "footer": {
         "title": "Send us your details",
-        "explanation": "By sending us your details you confirm that the information you have provided is true and that you accept our <a href=''>terms and conditions</a> and <a href=''>privacy policy</a>."
+        "explanation": "By sending us your details you confirm that the information you have provided is true and that you accept our <a href=''>terms and conditions</a>."
       }
     },
     "check-details-error": {
