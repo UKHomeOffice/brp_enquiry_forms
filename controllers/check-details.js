@@ -11,9 +11,9 @@ var Submit = function Submit() {
 };
 
 var templateMap = {
-  '/permit-delivery/check-details': 'permit',
-  '/permit-error/check-details': 'error',
-  '/permit-lost-or-stolen/check-details': 'lost-or-stolen'
+  '/not-arrived/check-details': 'permit',
+  '/correct-mistakes/check-details': 'error',
+  '/lost-stolen-damaged/check-details': 'lost-or-stolen'
 };
 
 util.inherits(Submit, Controller);
