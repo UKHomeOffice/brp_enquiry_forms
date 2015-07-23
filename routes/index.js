@@ -15,8 +15,8 @@ var lostWizard = wizard(lostSteps, fields, {translate: i18n.translate.bind(i18n)
 
 app.use(mixins(i18n.translate.bind(i18n), fields));
 
-app.use('/permit-delivery/', deliveryWizard);
-app.use('/permit-error/', errorWizard);
-app.use('/permit-lost-or-stolen/', lostWizard);
+app.use('/not-arrived/', deliveryWizard);
+app.use('/correct-mistakes/', errorWizard);
+app.use('/lost-stolen-damaged/', lostWizard);
 
 module.exports = app;

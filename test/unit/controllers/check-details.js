@@ -23,7 +23,7 @@ describe('controllers/check-details', function () {
       sessionModel: {
         toJSON: sinon.stub().returns(expected)
       },
-      originalUrl: '/permit-delivery/check-details'
+      originalUrl: '/not-arrived/check-details'
     };
     var res = {};
     var callback = sinon.stub();
@@ -39,21 +39,21 @@ describe('controllers/check-details', function () {
     });
 
     it('sets a template for delivery journey', function () {
-      req.originalUrl = '/permit-delivery/check-details';
+      req.originalUrl = '/not-arrived/check-details';
       controller.saveValues(req, res, callback);
 
       modelProto.set.should.have.been.calledWith('template', 'permit');
     });
 
     it('sets a template for error journey', function () {
-      req.originalUrl = '/permit-error/check-details';
+      req.originalUrl = '/correct-mistakes/check-details';
       controller.saveValues(req, res, callback);
 
       modelProto.set.should.have.been.calledWith('template', 'error');
     });
 
     it('sets a template for lost or stolen journey', function () {
-      req.originalUrl = '/permit-lost-or-stolen/check-details';
+      req.originalUrl = '/lost-stolen-damaged/check-details';
       controller.saveValues(req, res, callback);
 
       modelProto.set.should.have.been.calledWith('template', 'lost-or-stolen');
