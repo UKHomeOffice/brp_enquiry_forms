@@ -34,8 +34,10 @@ ConfirmationController.prototype.locals = function confirmationLocals(req, res) 
 };
 
 ConfirmationController.prototype.getValues = function getValues(req, res, callback) {
+  var json = req.sessionModel.toJSON();
+  delete json.errorValues;
   req.sessionModel.reset();
-  callback();
+  callback(null, json);
 };
 
 module.exports = ConfirmationController;

@@ -11,7 +11,11 @@ describe('controllers/confirmation', function () {
 
   describe('.getValues()', function () {
     var controller;
-    var req = {sessionModel: {reset: sinon.stub()}};
+    var json = {foo: 'bar'};
+    var req = {sessionModel: {
+      reset: sinon.stub(),
+      toJSON: sinon.stub().returns(json)
+    }};
     var res = {};
     var callback = sinon.stub();
 
@@ -22,7 +26,10 @@ describe('controllers/confirmation', function () {
 
     it('resets the session', function () {
       req.sessionModel.reset.should.have.been.calledOnce;
-      callback.should.have.been.calledOnce;
+    });
+
+    it('responds with null errors and json', function () {
+      callback.should.have.been.calledWith(null, json);
     });
   });
 
