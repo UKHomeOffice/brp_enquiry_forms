@@ -27,7 +27,7 @@ module.exports = {
   },
   '/personal-details': {
     controller: require('../../controllers/personal-details'),
-    template: 'personal-details-brp.html',
+    template: 'personal-details-passport.html',
     fields: [
       'fullname',
       'date-of-birth',
@@ -35,7 +35,7 @@ module.exports = {
       'date-of-birth-month',
       'date-of-birth-year',
       'nationality',
-      'brp-card'
+      'passport'
     ],
     backLink: '/date-lost',
     next: '/contact-details'
