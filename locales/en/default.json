@@ -175,7 +175,7 @@
       "label": "Full name"
     },
     "nationality": {
-      "label": "Nationality"
+      "label": "Which country issued your passport?"
     },
     "passport": {
       "label": "Passport number (optional)"

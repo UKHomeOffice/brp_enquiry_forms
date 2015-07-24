@@ -18,22 +18,6 @@
 
     {{$form}}
 
-      {{#checkbox}}first-name-error-checkbox{{/checkbox}}
-
-      <fieldset id="first-name-error-group" class="panel-indent js-hidden {{#errors.first-name-error}}validation-error{{/errors.first-name-error}}">
-
-        <legend class="visuallyhidden">
-            <span class="form-legend">
-              {{#t}}fields.first-name-error.legend{{/t}}
-            </span>
-        </legend>
-
-        <p>{{#t}}fields.first-name-error.title{{/t}}</p>
-
-        {{#input-text}}first-name-error{{/input-text}}
-
-      </fieldset>
-
       {{#checkbox}}last-name-error-checkbox{{/checkbox}}
 
       <fieldset id="last-name-error-group" class="panel-indent js-hidden {{#errors.last-name-error}}validation-error{{/errors.last-name-error}}">
@@ -47,6 +31,22 @@
         <p>{{#t}}fields.last-name-error.title{{/t}}</p>
 
         {{#input-text}}last-name-error{{/input-text}}
+
+      </fieldset>
+
+      {{#checkbox}}first-name-error-checkbox{{/checkbox}}
+
+      <fieldset id="first-name-error-group" class="panel-indent js-hidden {{#errors.first-name-error}}validation-error{{/errors.first-name-error}}">
+
+        <legend class="visuallyhidden">
+            <span class="form-legend">
+              {{#t}}fields.first-name-error.legend{{/t}}
+            </span>
+        </legend>
+
+        <p>{{#t}}fields.first-name-error.title{{/t}}</p>
+
+        {{#input-text}}first-name-error{{/input-text}}
 
       </fieldset>
 
