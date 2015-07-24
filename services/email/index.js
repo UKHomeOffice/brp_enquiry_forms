@@ -11,13 +11,13 @@ var path = require('path');
 
 var htmlTemplates = {
   error: fs.readFileSync(path.resolve(__dirname, './templates/error_html.mus')).toString('utf8'),
-  lostOrStolen: fs.readFileSync(path.resolve(__dirname, './templates/error_html.mus')).toString('utf8'),
+  'lost-or-stolen': fs.readFileSync(path.resolve(__dirname, './templates/lost_or_stolen_html.mus')).toString('utf8'),
   delivery: fs.readFileSync(path.resolve(__dirname, './templates/error_html.mus')).toString('utf8')
 };
 
 var plaintextTemplates = {
   error: fs.readFileSync(path.resolve(__dirname, './templates/error_html.mus')).toString('utf8'),
-  lostOrStolen: fs.readFileSync(path.resolve(__dirname, './templates/error_html.mus')).toString('utf8'),
+  'lost-or-stolen': fs.readFileSync(path.resolve(__dirname, './templates/error_html.mus')).toString('utf8'),
   delivery: fs.readFileSync(path.resolve(__dirname, './templates/error_html.mus')).toString('utf8')
 };
 
@@ -50,7 +50,7 @@ Emailer.prototype.send = function send(emailConfig, callback) {
   this.transporter.sendMail({
     from: config.email.from,
     to: emailConfig.to,
-    subject: 'BRP Card',
+    subject: emailConfig.subject,
     text: Mustache.render(plaintextTemplates[emailConfig.template], templateData),
     html: Mustache.render(htmlTemplates[emailConfig.template], templateData)
   }, callback);
