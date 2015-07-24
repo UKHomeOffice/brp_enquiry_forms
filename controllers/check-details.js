@@ -12,7 +12,7 @@ var Submit = function Submit() {
 
 var serviceMap = {
   '/not-arrived/check-details': {
-    template: 'permit',
+    template: 'delivery',
     subject: 'Form submitted: Your BRP hasn\'t arrived'
   },
   '/correct-mistakes/check-details': {
