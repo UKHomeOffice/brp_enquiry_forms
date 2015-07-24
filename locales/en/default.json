@@ -469,5 +469,11 @@
         "one": "As you think the conditions or length of your leave are incorrect you must apply for <a href=''>administrative review</a>, where this will be considered."
       }
     }
+  },
+  "emails": {
+    "lost-stolen": {
+      "address": "Contact address",
+      "phone": "Phone number"
+    }
   }
 }

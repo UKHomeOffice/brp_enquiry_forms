@@ -55,6 +55,7 @@ module.exports = {
     next: '/check-details'
   },
   '/check-details': {
+    controller: require('../../controllers/check-details'),
     fields: [
       'org-help',
       'rep-name',

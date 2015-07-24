@@ -11,13 +11,13 @@ var path = require('path');
 
 var htmlTemplates = {
   error: fs.readFileSync(path.resolve(__dirname, './templates/error_html.mus')).toString('utf8'),
-  lostOrStolen: fs.readFileSync(path.resolve(__dirname, './templates/error_html.mus')).toString('utf8'),
+  'lost-or-stolen': fs.readFileSync(path.resolve(__dirname, './templates/lost_or_stolen_html.mus')).toString('utf8'),
   delivery: fs.readFileSync(path.resolve(__dirname, './templates/error_html.mus')).toString('utf8')
 };
 
 var plaintextTemplates = {
   error: fs.readFileSync(path.resolve(__dirname, './templates/error_html.mus')).toString('utf8'),
-  lostOrStolen: fs.readFileSync(path.resolve(__dirname, './templates/error_html.mus')).toString('utf8'),
+  'lost-or-stolen': fs.readFileSync(path.resolve(__dirname, './templates/error_html.mus')).toString('utf8'),
   delivery: fs.readFileSync(path.resolve(__dirname, './templates/error_html.mus')).toString('utf8')
 };
 
@@ -34,11 +34,11 @@ function Emailer() {
   }));
 }
 
-Emailer.prototype.send = function send(emailConfig, callback) {
-  debug('Emailing: ', emailConfig.to, 'Subject: ', emailConfig.subject);
+Emailer.prototype.send = function send(email, callback) {
+  debug('Emailing: ', email.to, 'Subject: ', email.subject);
 
   var templateData = {
-    data: emailConfig.dataToSend,
+    data: email.dataToSend,
     t: function t() {
       return function lookupTranslation(translate) {
         // for translations inside our mustache templates
@@ -49,10 +49,10 @@ Emailer.prototype.send = function send(emailConfig, callback) {
 
   this.transporter.sendMail({
     from: config.email.from,
-    to: emailConfig.to,
-    subject: 'BRP Card',
-    text: Mustache.render(plaintextTemplates[emailConfig.template], templateData),
-    html: Mustache.render(htmlTemplates[emailConfig.template], templateData)
+    to: email.to,
+    subject: email.subject,
+    text: Mustache.render(plaintextTemplates[email.template], templateData),
+    html: Mustache.render(htmlTemplates[email.template], templateData)
   }, callback);
 };
 
