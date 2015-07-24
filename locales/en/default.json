@@ -11,20 +11,20 @@
   },
   "validation": {
     "delivery-date": {
-      "required": "This is a required field and must be completed",
+      "required": "Enter the date of the letter from the Home Office",
       "numeric": "Date must only contain numbers",
-      "future": "Date cannot be in the future",
-      "format": "Please enter a valid date as day, month and year."
+      "future": "The date is in the future",
+      "format": "Enter the date in the correct format "
     },
     "received": {
-      "required": "This is a required field and must be completed"
+      "required": "Tell us if you have received a letter from the Home Office"
     },
     "address-match": {
       "required": "Tell us if your address is the same as on the letter from the Home Office"
     },
     "email": {
-      "required": "This is a required field and must be completed",
-      "email": "Enter your email in the correct format for example, name@email.com"
+      "required": "Enter your email address",
+      "email": "Enter your email in the correct format for example, name@domain.com"
     },
     "address-street": {
       "required": "Enter your new house name or number and street"
