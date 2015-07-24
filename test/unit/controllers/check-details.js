@@ -64,7 +64,7 @@ describe('controllers/check-details', function () {
 
       (function () {
         controller.saveValues(req, res, callback);
-      }).should.throw('no template found');
+      }).should.throw('no service found');
     });
 
   });

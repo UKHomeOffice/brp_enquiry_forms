@@ -35,7 +35,7 @@ Submit.prototype.saveValues = function saveValues(req, res, callback) {
     model.set('template', serviceMap[req.originalUrl].template);
     model.set('subject', serviceMap[req.originalUrl].subject);
   } else {
-    throw new Error('no template found');
+    throw new Error('no service found');
   }
 
   model.save(callback);

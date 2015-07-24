@@ -34,11 +34,11 @@ function Emailer() {
   }));
 }
 
-Emailer.prototype.send = function send(emailConfig, callback) {
-  debug('Emailing: ', emailConfig.to, 'Subject: ', emailConfig.subject);
+Emailer.prototype.send = function send(email, callback) {
+  debug('Emailing: ', email.to, 'Subject: ', email.subject);
 
   var templateData = {
-    data: emailConfig.dataToSend,
+    data: email.dataToSend,
     t: function t() {
       return function lookupTranslation(translate) {
         // for translations inside our mustache templates
@@ -49,10 +49,10 @@ Emailer.prototype.send = function send(emailConfig, callback) {
 
   this.transporter.sendMail({
     from: config.email.from,
-    to: emailConfig.to,
-    subject: emailConfig.subject,
-    text: Mustache.render(plaintextTemplates[emailConfig.template], templateData),
-    html: Mustache.render(htmlTemplates[emailConfig.template], templateData)
+    to: email.to,
+    subject: email.subject,
+    text: Mustache.render(plaintextTemplates[email.template], templateData),
+    html: Mustache.render(htmlTemplates[email.template], templateData)
   }, callback);
 };
 
