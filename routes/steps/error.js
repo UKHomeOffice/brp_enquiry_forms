@@ -9,6 +9,7 @@ module.exports = {
   '/about-error': {
     controller: require('../../controllers/about-error'),
     fields: [
+      'error-selection',
       'first-name-error-checkbox',
       'first-name-error',
       'last-name-error-checkbox',
