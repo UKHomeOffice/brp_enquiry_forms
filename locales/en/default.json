@@ -42,13 +42,13 @@
       "required": "Enter your date of birth",
       "numeric": "Date must only contain numbers",
       "future": "The date is in the future",
-      "format": "Enter your date of birth in the correct format."
+      "format": "Enter your date of birth in the correct format"
     },
     "nationality": {
       "required": "Tell us your nationality"
     },
     "first-name-error": {
-      "required": "Tell us your correct first name "
+      "required": "Tell us your correct first name"
     },
     "last-name-error": {
       "required": "Tell us your correct last name"
@@ -57,7 +57,7 @@
       "required": "Enter your date of birth",
       "numeric": "Date must only contain numbers",
       "future": "The date is in the future",
-      "format": "Enter your date of birth in the correct format."
+      "format": "Enter your date of birth in the correct format"
     },
     "birth-place-error": {
       "required": "Tell us your correct place of birth "
@@ -81,16 +81,16 @@
       "required": "Tell us the correct sponsor details"
     },
     "inside-uk": {
-      "required": "Are you in the UK?"
+      "required": "Tell us where you are"
     },
     "country": {
-      "required": "Please tell us what country you are in"
+      "required": "Tell us where you are"
     },
     "date-lost": {
-      "required": "This is a required field and must be completed",
+      "required": "Enter the date you realised your BRP was lost or stolen",
       "numeric": "Date must only contain numbers",
-      "future": "Date cannot be in the future",
-      "format": "Please enter a valid date as day, month and year."
+      "future": "The date is in the future",
+      "format": "Enter the date in the correct format"
     },
     "org-help": {
       "required": "Tell us if you had help to complete this form"
@@ -301,7 +301,7 @@
       "label": "Which country are you in?"
     },
     "date-lost": {
-      "hint": "For example: 11  6  2015"
+      "hint": "For example: 11 6 2015"
     },
     "date-lost-day": {
       "label": "Day"
