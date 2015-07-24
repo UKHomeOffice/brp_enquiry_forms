@@ -118,6 +118,10 @@ module.exports = {
   phone: {
     label: 'fields.phone.label'
   },
+  /* eslint no-inline-comments: 0 */
+  'error-selection': {
+    /*this is here so we can display an error message if noe error is selected */
+  },
   'first-name-error-checkbox': {
     label: 'fields.first-name-error-checkbox.label',
     toggle: 'first-name-error-group'

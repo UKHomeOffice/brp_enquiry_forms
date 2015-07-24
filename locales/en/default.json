@@ -47,6 +47,9 @@
     "nationality": {
       "required": "Tell us your nationality"
     },
+    "error-selection": {
+      "required": "Tick one or more boxes"
+    },
     "first-name-error": {
       "required": "Tell us your correct first name"
     },

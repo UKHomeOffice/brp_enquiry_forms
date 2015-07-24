@@ -3,7 +3,9 @@
 var util = require('util');
 var DateController = require('../lib/date-controller');
 var Controller = require('hmpo-form-wizard').Controller;
+var ErrorClass = require('hmpo-form-wizard').Error;
 var moment = require('moment');
+var _ = require('underscore');
 
 var AboutErrorController = function AboutErrorController() {
   this.dateKey = 'date-of-birth-error';
@@ -26,6 +28,12 @@ function isChecked(key, req) {
   return req.form.values[key] === 'true';
 }
 
+function anyChecked(req) {
+  return _.filter(_.keys(req.form.values), function filterChecked(valueKey) {
+    return isChecked.call(this, valueKey, req);
+  }.bind(this));
+}
+
 AboutErrorController.prototype.saveValues = function saveValues(req) {
   if (req.form.values['date-of-birth-error-day']) {
     var day = req.form.values['date-of-birth-error-day'];
@@ -42,10 +50,19 @@ AboutErrorController.prototype.saveValues = function saveValues(req) {
     this.options.next = '/same-address';
   }
 
-  DateController.prototype.saveValues.apply(this, arguments);
+  Controller.prototype.saveValues.apply(this, arguments);
 };
 
-AboutErrorController.prototype.validateField = function validateField(key) {
+AboutErrorController.prototype.validateField = function validateField(key, req) {
+
+  if (anyChecked.call(this, req).length === 0) {
+    return new ErrorClass('error-selection', {
+      key: 'error-selection',
+      type: 'required',
+      redirect: undefined
+    });
+  }
+
   if (isChecked.apply(this, arguments)) {
     if (isDatePart(key)) {
       return DateController.prototype.validateField.apply(this, arguments);

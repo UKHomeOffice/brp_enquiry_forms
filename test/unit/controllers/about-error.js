@@ -2,6 +2,7 @@
 
 var AboutErrorController = require('../../../controllers/about-error');
 var Controller = require('hmpo-form-wizard').Controller;
+var ErrorClass = require('hmpo-form-wizard').Error;
 
 describe('controllers/about-error', function () {
 
@@ -79,12 +80,29 @@ describe('controllers/about-error', function () {
       controller = new AboutErrorController({template: 'index'});
     });
 
-    it('returns undefined when the checkbox is not checked', function () {
+    it('returns undefined when a checkbox is not checked', function () {
       req.form.values['first-name-error-checkbox'] = '';
       req.form.values['first-name-error'] = 'Foo';
+      req.form.values['last-name-error-checkbox'] = 'true';
+
       var result = controller.validateField('first-name-error', req);
 
       should.equal(result, undefined);
+      Controller.prototype.validateField.should.not.have.been.called;
+    });
+
+    it('returns an error-selection required error if none are checked', function () {
+      req.form.values['first-name-error-checkbox'] = '';
+      req.form.values['last-name-error-checkbox'] = '';
+      req.form.values['birth-place-error-checkbox'] = '';
+      req.form.values['date-of-birth-error-checkbox'] = '';
+
+      var result = controller.validateField('first-name-error', req);
+
+      result.should.be.an.instanceof(ErrorClass);
+      result.should.have.property('key').and.equal('error-selection');
+      result.should.have.property('type').and.equal('required');
+
       Controller.prototype.validateField.should.not.have.been.called;
     });
 
