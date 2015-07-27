@@ -12,7 +12,7 @@ var path = require('path');
 var htmlTemplates = {
   error: fs.readFileSync(path.resolve(__dirname, './templates/error_html.mus')).toString('utf8'),
   'lost-or-stolen': fs.readFileSync(path.resolve(__dirname, './templates/lost_or_stolen_html.mus')).toString('utf8'),
-  delivery: fs.readFileSync(path.resolve(__dirname, './templates/error_html.mus')).toString('utf8')
+  delivery: fs.readFileSync(path.resolve(__dirname, './templates/delivery_html.mus')).toString('utf8')
 };
 
 var plaintextTemplates = {
