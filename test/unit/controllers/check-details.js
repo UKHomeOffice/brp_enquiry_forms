@@ -42,7 +42,7 @@ describe('controllers/check-details', function () {
       req.originalUrl = '/not-arrived/check-details';
       controller.saveValues(req, res, callback);
 
-      modelProto.set.should.have.been.calledWith('template', 'permit');
+      modelProto.set.should.have.been.calledWith('template', 'delivery');
     });
 
     it('sets a template for error journey', function () {
