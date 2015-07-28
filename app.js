@@ -4,6 +4,7 @@ var express = require('express');
 var app = express();
 var path = require('path');
 var debug = require('debug')('index');
+var morgan = require('morgan');
 
 var session = require('express-session');
 var redis = require('redis');
@@ -15,6 +16,9 @@ var config = require('./config');
 
 if (config.env === 'development') {
   app.use('/public', express.static(path.resolve(__dirname, './public')));
+} else {
+  // use morgan in production
+  app.use(morgan('combined'));
 }
 
 app.use(function setAssetPath(req, res, next) {
