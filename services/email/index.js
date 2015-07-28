@@ -9,16 +9,22 @@ var lookup = require('i18n-lookup')(i18n.translate.bind(i18n));
 var fs = require('fs');
 var path = require('path');
 
-var htmlTemplates = {
-  error: fs.readFileSync(path.resolve(__dirname, './templates/error_html.mus')).toString('utf8'),
-  'lost-or-stolen': fs.readFileSync(path.resolve(__dirname, './templates/lost_or_stolen_html.mus')).toString('utf8'),
-  delivery: fs.readFileSync(path.resolve(__dirname, './templates/delivery_html.mus')).toString('utf8')
+var customerHtmlTemplates = {
+  error: fs.readFileSync(
+    path.resolve(__dirname, './templates/customer/html/error.mus')).toString('utf8'),
+  'lost-or-stolen': fs.readFileSync(
+    path.resolve(__dirname, './templates/customer/html/lost_or_stolen.mus')).toString('utf8'),
+  delivery: fs.readFileSync(
+    path.resolve(__dirname, './templates/customer/html/delivery.mus')).toString('utf8')
 };
 
-var plaintextTemplates = {
-  error: fs.readFileSync(path.resolve(__dirname, './templates/error_html.mus')).toString('utf8'),
-  'lost-or-stolen': fs.readFileSync(path.resolve(__dirname, './templates/error_html.mus')).toString('utf8'),
-  delivery: fs.readFileSync(path.resolve(__dirname, './templates/error_html.mus')).toString('utf8')
+var customerPlainTextTemplates = {
+  error: fs.readFileSync(
+    path.resolve(__dirname, './templates/customer/plain/error.mus')).toString('utf8'),
+  'lost-or-stolen': fs.readFileSync(
+    path.resolve(__dirname, './templates/customer/plain/lost_or_stolen.mus')).toString('utf8'),
+  delivery: fs.readFileSync(
+    path.resolve(__dirname, './templates/customer/plain/delivery.mus')).toString('utf8')
 };
 
 var transport = config.email.safeMode ?
@@ -51,8 +57,8 @@ Emailer.prototype.send = function send(email, callback) {
     from: config.email.from,
     to: email.to,
     subject: email.subject,
-    text: Mustache.render(plaintextTemplates[email.template], templateData),
-    html: Mustache.render(htmlTemplates[email.template], templateData)
+    text: Mustache.render(customerPlainTextTemplates[email.template], templateData),
+    html: Mustache.render(customerHtmlTemplates[email.template], templateData)
   }, callback);
 };
 
