@@ -1,0 +1,93 @@
+
+{{#data}}
+  Error problem form
+
+  Personal details
+  {{#t}}pages.check-details-error.personal-details-table.headers.fullname{{/t}}
+  {{fullname}}
+
+  {{#t}}pages.check-details-error.personal-details-table.headers.date-of-birth{{/t}}
+  {{date-of-birth-day}}-{{date-of-birth-month}}-{{date-of-birth-year}}
+
+  {{#t}}pages.check-details-error.personal-details-table.headers.nationality{{/t}}
+  {{nationality}}
+
+  {{#t}}pages.check-details-error.personal-details-table.headers.brp-card-number{{/t}}
+  {{brp-card}}
+
+  Reported errors</p>
+  {{#first-name-error}}
+    {{#t}}fields.first-name-error-checkbox.label{{/t}}
+    {{first-name-error}}
+  {{/first-name-error}}
+
+  {{#last-name-error}}
+    {{#t}}fields.last-name-error-checkbox.label{{/t}}
+    {{last-name-error}}
+  {{/last-name-error}}
+
+  {{#birth-place-error}}
+    {{#t}}fields.birth-place-error-checkbox.label{{/t}}
+    {{birth-place-error}}
+  {{/birth-place-error}}
+
+  {{#date-of-birth-error-day}}
+      {{#t}}fields.date-of-birth-error-checkbox.label{{/t}}
+      {{date-of-birth-error}}
+  {{/date-of-birth-error-day}}
+
+  {{#gender-error}}
+      {{#t}}fields.gender-error-checkbox.label{{/t}}
+      {{gender-error}}
+  {{/gender-error}}
+
+  {{#sponsor-details-error}}
+      {{#t}}fields.sponsor-details-error-checkbox.label{{/t}}
+      {{sponsor-details-er
+  {{/sponsor-details-error}}
+
+  {{#nationality-error}}
+      {{#t}}fields.nationality-error-checkbox.label{{/t}}
+      {{nationality-error}}
+  {{/nationality-error}}
+
+  {{#signature-error}}
+      {{#t}}fields.signature-error-checkbox.label{{/t}}
+      {{signature-error}}
+  {{/signature-error}}
+
+  {{#photograph-error}}
+      {{#t}}fields.photograph-error-checkbox.label{{/t}}
+      {{photograph-error}}
+  {{/photograph-error}}
+
+  {{#damaged-error}}
+      {{#t}}fields.damaged-error-checkbox.label{{/t}}
+      {{damaged-error}}
+  {{/damaged-error}}
+
+  {{#conditions-error}}
+      {{#t}}fields.conditions-error-checkbox.label{{/t}}
+      {{conditions-error}}
+  {{/conditions-error}}
+
+  {{#address-match}}
+    New Address
+
+    {{#t}}pages.check-details.table.headers.address{{/t}}
+    {{address-street}},
+    {{address-town}},
+    {{#address-county}}{{address-county}},{{/address-county}}
+    {{address-postcode}}
+  {{/address-match}}
+
+  Contact details
+  {{#email}}
+    {{#t}}fields.email.label{{/t}}
+    {{email}}
+  {{/email}}
+  {{#phone}}
+    {{#t}}fields.phone.label{{/t}}
+    {{phone}}
+  {{/phone}}
+{{/data}}
