@@ -32,43 +32,43 @@
   {{/birth-place-error}}
 
   {{#date-of-birth-error-day}}
-      {{#t}}fields.date-of-birth-error-checkbox.label{{/t}}
-      {{date-of-birth-error}}
+    {{#t}}fields.date-of-birth-error-checkbox.label{{/t}}
+    {{date-of-birth-error}}
   {{/date-of-birth-error-day}}
 
   {{#gender-error}}
-      {{#t}}fields.gender-error-checkbox.label{{/t}}
-      {{gender-error}}
+    {{#t}}fields.gender-error-checkbox.label{{/t}}
+    {{gender-error}}
   {{/gender-error}}
 
   {{#sponsor-details-error}}
-      {{#t}}fields.sponsor-details-error-checkbox.label{{/t}}
-      {{sponsor-details-er
+    {{#t}}fields.sponsor-details-error-checkbox.label{{/t}}
+    {{sponsor-details-error}}
   {{/sponsor-details-error}}
 
   {{#nationality-error}}
-      {{#t}}fields.nationality-error-checkbox.label{{/t}}
-      {{nationality-error}}
+    {{#t}}fields.nationality-error-checkbox.label{{/t}}
+    {{nationality-error}}
   {{/nationality-error}}
 
   {{#signature-error}}
-      {{#t}}fields.signature-error-checkbox.label{{/t}}
-      {{signature-error}}
+    {{#t}}fields.signature-error-checkbox.label{{/t}}
+    {{signature-error}}
   {{/signature-error}}
 
   {{#photograph-error}}
-      {{#t}}fields.photograph-error-checkbox.label{{/t}}
-      {{photograph-error}}
+    {{#t}}fields.photograph-error-checkbox.label{{/t}}
+    {{photograph-error}}
   {{/photograph-error}}
 
   {{#damaged-error}}
-      {{#t}}fields.damaged-error-checkbox.label{{/t}}
-      {{damaged-error}}
+    {{#t}}fields.damaged-error-checkbox.label{{/t}}
+    {{damaged-error}}
   {{/damaged-error}}
 
   {{#conditions-error}}
-      {{#t}}fields.conditions-error-checkbox.label{{/t}}
-      {{conditions-error}}
+    {{#t}}fields.conditions-error-checkbox.label{{/t}}
+    {{conditions-error}}
   {{/conditions-error}}
 
   {{#address-match}}
