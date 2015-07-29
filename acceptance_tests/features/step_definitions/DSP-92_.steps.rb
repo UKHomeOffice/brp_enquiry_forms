@@ -21,7 +21,7 @@ end
 When(/^I enter special character values into the date lost field$/) do
   fill_in('date-lost-day', :with => '!@')
   fill_in('date-lost-month', :with => '@!')
-  fill_in('date-lost-year', :with => '!@£$')
+  fill_in('date-lost-year', :with => '****')
 end
 
 When(/^I enter a future date into the date lost field$/) do
@@ -32,5 +32,5 @@ end
 
 Then(/^I am on Step Three of the Lost\/Stolen form$/) do                                                
   page.should have_content('Step 3 of 5')                                               
-  page.should have_content('Provide your personal details')
+  page.should have_content('What are your personal details?')
 end
