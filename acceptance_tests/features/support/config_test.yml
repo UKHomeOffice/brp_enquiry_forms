@@ -1,5 +1,5 @@
-dev_host: 'http://localhost:8080/permit-delivery'
+dev_host: 'http://localhost:8080/not-arrived'
 
-error_host: 'http://localhost:8080/permit-error'
+error_host: 'http://localhost:8080/correct-mistakes'
 
-lost_host: 'http://localhost:8080/permit-lost-or-stolen'
+lost_host: 'http://localhost:8080/lost-stolen-damaged'

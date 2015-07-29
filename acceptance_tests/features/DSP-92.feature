@@ -10,8 +10,8 @@ Feature: DSP-92 Date the card became lost or stolen Personal details
 
 	Scenario: Attempting to proceed to Step Three without entering anything into the date lost fields
 		When I click "Continue"
-		Then I see the "This is a required field and must be completed" link
-		And I see "This is a required field and must be completed"
+		Then I see the "Enter the date you realised your BRP was lost or stolen" link
+		And I see "Enter the date you realised your BRP was lost or stolen"
 
 	Scenario: Selecting Continue with text values in the date lost fields
 		When I enter text values into the date lost field
@@ -28,8 +28,8 @@ Feature: DSP-92 Date the card became lost or stolen Personal details
 	Scenario: Selecting Continue with Yes and the correct values in the date lost fields
 		When I enter a future date into the date lost field
 		And I click "Continue"
-		Then I see the "Date cannot be in the future" link
-		And I see "Date cannot be in the future"
+		Then I see the "The date is in the future" link
+		And I see "The date is in the future"
 
 	Scenario: Attempting to proceed to Step Three with valid values in the lost fields
 		When I enter valid values into the date lost fields

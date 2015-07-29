@@ -2,7 +2,6 @@
 
 Feature: DSP-96 - Confirmation
 
-
 	Scenario: Go to Step Six of the Lost/Stolen form from inside the UK
 		Given that on step one I had selected that I am inside the UK
 		Then I am on the inside the UK confirmation page
