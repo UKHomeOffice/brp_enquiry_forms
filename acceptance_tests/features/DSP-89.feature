@@ -10,14 +10,14 @@ Feature: DSP-89 - Lost or stolen - user location
 
 	Scenario: Attempting to proceed to the next step without checking any radio buttons
 		When I click "Continue"
-		Then I see the "Are you in the UK?" link
-		And I see "Are you in the UK?"
+		Then I see the "Tell us where you are" link
+		And I see "Tell us where you are"
 
 	Scenario: Attempting to proceed to the next step after checking Outside UK without filling the in the Country field
 		When I click the "Outside UK" radio button
 		When I click "Continue"
-		Then I see the "Please tell us what country you are in" link
-		And I see "Please tell us what country you are in"
+		Then I see the "Tell us where you are" link
+		And I see "Tell us where you are"
 		
 	Scenario: Attempting to proceed to the next step after checking Outside UK and filling the Country field
 		When I click the "Outside UK" radio button

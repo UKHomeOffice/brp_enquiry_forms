@@ -2,6 +2,9 @@ When(/^I go to Step Four of the error form and have not entered my address detai
   visit config['error_host']
   page.status_code.should == 200
   click_button('Start')
+  page.should have_content('Step 1 of 5')
+  check('last-name-error-checkbox')
+  fill_in('last-name-error', :with => 'reasonable')
   click_button('Continue')
   choose('address-match-yes')
   click_button('Continue')

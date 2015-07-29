@@ -8,7 +8,7 @@ end
 Then(/^I am on Step One$/) do                                                
   # puts page.body
   page.should have_content('Step 1 of 5')
-  page.should have_content('Have you received a letter from the Home Office telling you your biometrics residence permit was being delivered to you by a courier?')
+  page.should have_content('Have you received a letter from the Home Office?')
   page.has_content?('This letter may tell you')
   page.should have_content('your biometric residence permit (BRP) is going to be delivered')
   page.should have_content('your application to stay in the UK was successful ')

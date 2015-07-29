@@ -21,7 +21,7 @@ When(/^I go to Step Four$/) do
 end                                                                          
                                                                              
 Then(/^I am on Step Four$/) do
-  page.should have_content('Provide your contact details')
+  page.should have_content('Where can we contact you to let you know about your BRP?')
   page.should have_content('Email address')
   page.has_css?('email')
   page.has_css?('no-email')

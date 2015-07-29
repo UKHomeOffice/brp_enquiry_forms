@@ -1,4 +1,4 @@
-@ErrorForm @UnhappyPath @StepOne
+	@ErrorForm @UnhappyPath @StepOne
 
 Feature: DSP-104 - Permit error unhappy path - conditions
 
@@ -8,6 +8,5 @@ Feature: DSP-104 - Permit error unhappy path - conditions
 	Scenario: Selecting Conditions or length of stay
 		When I check the Condtions of lenth of stay checkbox
 		And I click "Continue"
-		Then I am on the Conditons and Length of stay exit page
-		When I click "Close"
-		Then I am on the Start page
+		Then I am on the Error Conditons and Length of stay exit page
+		And I see the "Close" link
