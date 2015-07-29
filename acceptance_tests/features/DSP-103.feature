@@ -8,4 +8,5 @@ Feature: DSP-103 - Selecting "No" on Step One
 	Scenario: Selecting the No radio button on Step One
 		When I check the "No" radio button
 		And I click "Continue"
-		Then I am on the Delivery no decision page 
+		Then I am on the Delivery No Decision exit page
+		And I see the "Close" link

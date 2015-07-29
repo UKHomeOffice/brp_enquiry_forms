@@ -6,14 +6,14 @@ Feature: DSP-54 Validation for Step One
 
 	Scenario: Selecting "Continue" without doing anything else
 		When I click "Continue"
-		Then I see the "This is a required field and must be completed" link
-		And I see "This is a required field and must be completed"
+		Then I see the "Tell us if you have received a letter from the Home Office" link
+		And I see "Tell us if you have received a letter from the Home Office"
 
 	Scenario: Selecting "Continue" having checked "Yes" but without filling in the date fields or checking the "I dont have the letter" checkbox
 		When I check the "Yes" radio button
 		And I click "Continue"
-		Then I see the "This is a required field and must be completed" link
-		And I see "This is a required field and must be completed"
+		Then I see the "Enter the date of the letter from the Home Office" link
+		And I see "Enter the date of the letter from the Home Office"
 
 	Scenario: Selecting Continue with text values in the date fields
 		When I check the "Yes" radio button
@@ -39,8 +39,8 @@ Feature: DSP-54 Validation for Step One
 		When I check the "Yes" radio button
 		When I enter a future date into the date field
 		And I click "Continue"
-		Then I see the "Date cannot be in the future" link
-		And I see "Date cannot be in the future"
+		Then I see the "The date is in the future" link
+		And I see "The date is in the future"
 
 	Scenario: Selecting Continue with Yes and the "I dont have the letter" checkbox checked
 		When I check the "Yes" radio button

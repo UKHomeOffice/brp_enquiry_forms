@@ -16,14 +16,14 @@ Feature: DSP-76 Validation for Step One of the Error form
         And I see "<content>"
 
 		Examples:
-		  |error  					     |link                                                   |content                                                |
-		  |first-name-error-checkbox     |First name is a required field and must be complete    |First name is a required field and must be complete    |
-		  |last-name-error-checkbox	     |Last name is a required field and must be complete     |Last name is a required field and must be complete     |
-		  |date-of-birth-error-checkbox  |Date of birth is a required field and must be completed|Date of birth is a required field and must be completed|
-		  |birth-place-error-checkbox    |Place of birth is a required field and must be complete|Place of birth is a required field and must be complete|
-		  |gender-error-checkbox         |Gender is a required field and must be complete   	 |Gender is a required field and must be complete        |
-		  |sponsor-details-error-checkbox|Sponsor details is required field and must be complete |Sponsor details is required field and must be complete |
-		  |nationality-error-checkbox    |Nationality is a required field and must be complete   |Nationality is a required field and must be complete   |
-		  |signature-error-checkbox	     |Signature is a required field and must be complete     |Signature is a required field and must be complete     |
-		  |photograph-error-checkbox	 |Photograph is a required field and must be complete    |Photograph is a required field and must be complete    |
-		  |damaged-error-checkbox		 |Damaged is a required field and must be complete 	     |Damaged is a required field and must be complete       |
+		  |error  					     |link                                      |content                                   |
+		  |first-name-error-checkbox     |Tell us your correct first name 			|Tell us your correct first name 		   |
+		  |last-name-error-checkbox	     |Tell us your correct last name 			|Tell us your correct last name 		   |
+		  |date-of-birth-error-checkbox  |Enter your date of birth 					|Enter your date of birth 				   |
+		  |birth-place-error-checkbox    |Tell us your correct place of birth 		|Tell us your correct place of birth  	   |
+		  |gender-error-checkbox         |Tell us your correct gender 				|Tell us your correct gender 			   |
+		  |sponsor-details-error-checkbox|Tell us the correct sponsor details 		|Tell us the correct sponsor details 	   |
+		  |nationality-error-checkbox    |Tell us your correct nationality 			|Tell us your correct nationality 		   |
+		  |signature-error-checkbox	     |Tell us what is wrong with your signature |Tell us what is wrong with your signature |
+		  |photograph-error-checkbox	 |Tell us what is wrong with your photograph|Tell us what is wrong with your photograph|
+		  |damaged-error-checkbox		 |Tell us what is wrong with your BRP		|Tell us what is wrong with your BRP 	   |

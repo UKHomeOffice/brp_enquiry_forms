@@ -15,8 +15,8 @@ end
                                                                              
 Then(/^I am on Step Three$/) do
   page.should have_content('Step 3 of 5')
-  page.should have_content('Provide your personal details')
-  page.should have_content('Complete this section carefully as these details will help us to find your information.')
+  page.should have_content('What are your personal details?')
+  page.should have_content('We need these details to find out what has happened to your BRP.')
   page.should have_content('Full name')
   page.should have_content('Date of birth')
   page.should have_content('For example, 31  03  1970')
@@ -26,7 +26,7 @@ Then(/^I am on Step Three$/) do
   page.has_css?('date-of-birth-month')
   page.should have_content('Year')
   page.has_css?('date-of-birth-year')
-  page.should have_content('Nationality')
+  page.should have_content('Which country issued your passport? ')
   page.has_css?('nationality')
   page.should have_content('Passport number (optional)')
   page.has_css?('passport')                                      
