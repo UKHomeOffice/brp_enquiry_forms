@@ -54,19 +54,9 @@
               <td width="75%" style="font-family: Helvetica, Arial, sans-serif;">
                 {{#data}}
 
-                  <p style="font-size: 23px; color: #000; line-height: 1.32; margin: 0 0 20px 0;">Form submitted: Report a lost or stolen BRP</p>
+                  <p style="font-size: 23px; color: #000; line-height: 1.32; margin: 0 0 20px 0;">Delivery problem form</p>
 
-                  <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">Dear {{fullname}}</p>
-
-                  <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">You should hear from us in the <strong>next working day</strong>, where we will tell you what to do.</p>
-
-                  <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">As you are outside the UK you may need to apply for a temporary ‘replacement BRP visa’ which you can use to get back to the UK</p>
-
-                  <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">You must apply online for a <a href="https://www.gov.uk/apply-uk-visa">replacement BRP visa</a> in most countries.</p>
-
-                  <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">You will need to apply for a replacement BRP within 1 month of being back in the UK.</p>
-
-                  <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">Here is the information you have sent us:</p>
+                  <p style="font-size: 19px; font-weight: bold; color: #000; line-height: 1.32; margin: 0 0 10px 0;">Personal Details</p>
 
                   <table width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#FFFFFF" style="margin: 0 0 20px 0;">
                     <tr style="border-top: 1px solid #009390;">
@@ -81,9 +71,20 @@
                       <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.check-details-error.personal-details-table.headers.nationality{{/t}}</p></td>
                       <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{nationality}}</p></td>
                     </tr>
+                    {{#passport}}
+                      <tr style="border-top: 1px solid #009390;">
+                        <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.check-details.table.headers.passport{{/t}}</p></td>
+                        <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{passport}}</p></td>
+                      </tr>
+                    {{/passport}}
+                  </table>
+
+                  <p style="font-size: 19px; font-weight: bold; color: #000; line-height: 1.32; margin: 0 0 10px 0;">Contact Details</p>
+
+                  <table width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#FFFFFF" style="margin: 0 0 20px 0;">
                     {{#address-street}}
                       <tr style="border-top: 1px solid #009390;">
-                        <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}emails.address{{/t}}</p></td>
+                        <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.check-details.table.headers.address{{/t}}</p></td>
                         <td width="75%">
                           <p style="font-size: 16px; color: #000; margin: 10px 0;">
                             {{address-street}},
@@ -96,21 +97,19 @@
                     {{/address-street}}
                     {{#phone}}
                       <tr style="border-top: 1px solid #009390;">
-                        <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}emails.phone{{/t}}</p></td>
+                        <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}emails.lost-stolen.phone{{/t}}</p></td>
                         <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{phone}}</p></td>
                       </tr>
                     {{/phone}}
+                    {{#email}}
+                      <tr style="border-top: 1px solid #009390;">
+                        <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}fields.email.label{{/t}}</p></td>
+                        <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{email}}</p></td>
+                      </tr>
+                    {{/email}}
                   </table>
 
                 {{/data}}
-
-
-                <p style="font-size: 16px; color: #6f777b; line-height: 1.125; margin: 0 0 30px 0;">If you're unsure an email is from UKVI:</p>
-
-                <ul>
-                  <li style="font-size: 16px; color: #6f777b; line-height: 1.125; margin: 0 0 10px 0;">do not reply to it or click any links</li>
-                  <li style="font-size: 16px; color: #6f777b; line-height: 1.125; margin: 0 0 30px 0;">forward it to phishing@homeoffice.gsi.gov.uk</li>
-                </ul>
               </td>
               <td width="25%">&nbsp;</td>
             </tr>

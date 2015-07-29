@@ -31,7 +31,7 @@
   {{/address-street}}
 
   {{#phone}}
-    {{#t}}emails.lost-stolen.phone{{/t}}
+    {{#t}}emails.phone{{/t}}
     {{phone}}
   {{/phone}}
 

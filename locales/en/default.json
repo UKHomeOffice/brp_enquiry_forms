@@ -471,9 +471,11 @@
     }
   },
   "emails": {
-    "lost-stolen": {
-      "address": "Contact address",
-      "phone": "Phone number"
+    "address": "Contact address",
+    "phone": "Phone number",
+    "caseworker": {
+      "country": "Current location",
+      "date-lost": "Date realised"
     }
   }
 }

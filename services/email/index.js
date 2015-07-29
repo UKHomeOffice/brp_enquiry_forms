@@ -27,6 +27,24 @@ var customerPlainTextTemplates = {
     path.resolve(__dirname, './templates/customer/plain/delivery.mus')).toString('utf8')
 };
 
+var caseworkerHtmlTemplates = {
+  error: fs.readFileSync(
+    path.resolve(__dirname, './templates/caseworker/html/error.mus')).toString('utf8'),
+  'lost-or-stolen': fs.readFileSync(
+    path.resolve(__dirname, './templates/caseworker/html/lost_or_stolen.mus')).toString('utf8'),
+  delivery: fs.readFileSync(
+    path.resolve(__dirname, './templates/caseworker/html/delivery.mus')).toString('utf8')
+};
+
+var caseworkerPlainTextTemplates = {
+  error: fs.readFileSync(
+    path.resolve(__dirname, './templates/caseworker/plain/error.mus')).toString('utf8'),
+  'lost-or-stolen': fs.readFileSync(
+    path.resolve(__dirname, './templates/caseworker/plain/lost_or_stolen.mus')).toString('utf8'),
+  delivery: fs.readFileSync(
+    path.resolve(__dirname, './templates/caseworker/plain/delivery.mus')).toString('utf8')
+};
+
 var transport = config.email.safeMode ?
   require('nodemailer-stub-transport') : require('nodemailer-smtp-transport');
 
@@ -53,13 +71,23 @@ Emailer.prototype.send = function send(email, callback) {
     }
   };
 
+  function sendCaseworkerEmail() {
+    this.transporter.sendMail({
+      from: config.email.from,
+      to: config.email.caseworker,
+      subject: email.subject,
+      text: Mustache.render(caseworkerPlainTextTemplates[email.template], templateData),
+      html: Mustache.render(caseworkerHtmlTemplates[email.template], templateData)
+    }, callback);
+  }
+
   this.transporter.sendMail({
     from: config.email.from,
     to: email.to,
     subject: email.subject,
     text: Mustache.render(customerPlainTextTemplates[email.template], templateData),
     html: Mustache.render(customerHtmlTemplates[email.template], templateData)
-  }, callback);
+  }, sendCaseworkerEmail.bind(this));
 };
 
 module.exports = new Emailer();
