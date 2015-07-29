@@ -28,5 +28,5 @@ When(/^I go to Step Six of the error form$/) do
 end                                                                          
                                                                              
 Then(/^I am on Step Six of the error form$/) do 
-  page.should have_content('Thank you, we have received the information you have provided. We are now looking into this.')
+  page.should have_content('Thank you, we have received your information.')
 end                                                                          
