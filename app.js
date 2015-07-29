@@ -16,7 +16,9 @@ var config = require('./config');
 
 if (config.env === 'development') {
   app.use('/public', express.static(path.resolve(__dirname, './public')));
-} else {
+}
+
+if (config.env !== 'development' && config.env !== 'travis') {
   // use morgan in production
   app.use(morgan('combined'));
 }
