@@ -21,12 +21,12 @@ Given(/^that on step one I had selected that I am inside the UK$/) do
 end
 
 Then(/^I am on the inside the UK confirmation page$/) do
-  page.should have_no_content('As you are outside the UK you may need to apply for a temporary ‘replacement BRP visa’ which you can use once to re-enter the UK. A replacement BRP visa costs £72.')
+  page.should have_no_content('As you are outside the UK you may need to apply for a temporary')
 
 end
 
 Then(/^I am on the outside the UK confirmation page$/) do
-  page.should have_content('As you are outside the UK you may need to apply for a temporary ‘replacement BRP visa’ which you can use once to re-enter the UK. A replacement BRP visa costs £72.')
+  page.should have_content('As you are outside the UK you may need to apply for a temporary')
 end
 
 Given(/^that on step one I had selected that I am outside the UK$/) do                                                
