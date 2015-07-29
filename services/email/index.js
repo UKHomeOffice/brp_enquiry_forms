@@ -71,13 +71,13 @@ Emailer.prototype.send = function send(email, callback) {
     }
   };
 
-  function sendCaseworkerEmail() {
+  function sendCustomerEmail() {
     this.transporter.sendMail({
       from: config.email.from,
       to: config.email.caseworker,
       subject: email.subject,
-      text: Mustache.render(caseworkerPlainTextTemplates[email.template], templateData),
-      html: Mustache.render(caseworkerHtmlTemplates[email.template], templateData)
+      text: Mustache.render(customerPlainTextTemplates[email.template], templateData),
+      html: Mustache.render(customerHtmlTemplates[email.template], templateData)
     }, callback);
   }
 
@@ -85,9 +85,9 @@ Emailer.prototype.send = function send(email, callback) {
     from: config.email.from,
     to: email.to,
     subject: email.subject,
-    text: Mustache.render(customerPlainTextTemplates[email.template], templateData),
-    html: Mustache.render(customerHtmlTemplates[email.template], templateData)
-  }, sendCaseworkerEmail.bind(this));
+    text: Mustache.render(caseworkerPlainTextTemplates[email.template], templateData),
+    html: Mustache.render(caseworkerHtmlTemplates[email.template], templateData)
+  }, sendCustomerEmail.bind(this));
 };
 
 module.exports = new Emailer();
