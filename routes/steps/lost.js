@@ -11,7 +11,6 @@ module.exports = {
       'inside-uk',
       'country'
     ],
-    backLink: '/',
     next: '/date-lost'
   },
   '/date-lost': {
