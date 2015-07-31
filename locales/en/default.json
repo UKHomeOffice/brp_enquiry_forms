@@ -461,12 +461,6 @@
           "first": "Wait another ",
           "second": " working days, and if you still have not received your BRP, use this service to contact us."
         }
-      "header": "Change of address",
-      "para": {
-        "one": {
-          "first": "Your BRP will be delivered to the address that was on the letter from the Home Office.",
-          "second": "If your address has changed, tell us your new address"
-        },
       }
     },
     "conditions-and-length": {
