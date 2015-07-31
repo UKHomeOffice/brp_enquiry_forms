@@ -21,8 +21,8 @@ module.exports = {
     port: process.env.EMAIL_PORT || 587,
     host: process.env.EMAIL_HOST || 'email-smtp.eu-west-1.amazonaws.com',
     auth: {
-      user: process.env.AUTH_USER || 'user',
-      pass: process.env.AUTH_PASS || 'pass'
+      user: process.env.SMTP_USER || 'user',
+      pass: process.env.SMTP_PASSWORD || 'pass'
     },
     from: process.env.FROM_ADDRESS || 'brp@dsp.notprod.homeoffice.gov.uk'
   }
