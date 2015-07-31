@@ -147,7 +147,7 @@
       "label": "I don't have the letter anymore"
     },
     "delivery-details": {
-      "label": "If you think the courier may have had a problem delivering items to this address (for example there is no number on the door) then let us know and we will contact the courier. (optional)"
+      "label": "If the courier could have problems delivering to this address, for example there's no door number, then let us know and we'll contact them. (optional)"
     },
     "address-match": {
       "options": {
@@ -175,7 +175,7 @@
       "label": "Full name"
     },
     "nationality": {
-      "label": "Which country issued your passport?"
+      "label": "Country of nationality"
     },
     "passport": {
       "label": "Passport number (optional)"
@@ -347,9 +347,9 @@
       }
     },
     "same-address": {
-      "header": "Is your address the same as the one on the letter from the Home Office?",
+      "header": "Did you expect your BRP to be delivered to the same address as the one on the letter from the Home Office?",
       "address": {
-        "title": "Tell us your new address and we will organise another delivery."
+        "title": "Tell us the new address and we will organise another delivery."
       }
     },
     "personal-details": {
@@ -357,21 +357,21 @@
       "subheader": "We need these details to find out what has happened to your BRP."
     },
     "check-details": {
-      "header": "Is the information you gave us correct?",
-      "subheader": "Check the information you have given us to make sure it is correct. If it is incorrect you can change it here.",
+      "header": "Is the information you have given us correct?",
+      "subheader": "Check and make sure the information below is right. If it isn't you can change it here.",
       "table": {
         "headers": {
           "address": "New address",
           "fullname": "Full name",
           "date-of-birth": "Date of birth",
-          "nationality": "Nationality",
-          "passport": "Passport number",
+          "nationality": "Country of nationality",
+          "passport": "Passport number (optional)",
           "email": "Email"
         }
       },
       "org-help": {
         "title": "Has an organisation filled in this information on your behalf?",
-        "explanation": "This could be help from your immigration lawyer or representative, or a charity, employer, college or university."
+        "explanation": "This could be an immigration lawyer or representative, or a charity, employer, college or university."
       },
       "org-details-group": {
         "header": "Please provide their details"
@@ -412,9 +412,9 @@
         "header": "What happens next",
         "not-specified": {
           "para": {
-            "one": "We will now review the information you provided to find out why you have not received the biometric residence permit.",
-            "two": "We will contact you within <strong>5 working days</strong>. We will tell you what to do when we contact you.",
-            "three": "We will then advise you what to do next."
+            "one": "We will now review the information you have given us to find out why you have not received the BRP.",
+            "two": "We will get back to you within <strong>5 working days</strong>. For example, if you contact us on a Monday you will hear back by the following Monday.",
+            "three": "We will then tell you what to do next."
           }
         },
         "inside-uk": {
@@ -446,8 +446,8 @@
     "letter-not-received": {
       "header": "Contact us",
       "para": {
-        "one": "If you haven't received a letter from the Home Office saying your application to remain in the UK was successful it may mean a decision about your application to stay in the UK has not been made yet.",
-        "two": "Call the contact centre 0300 123 2241 or email them at mail@contact-centre.co.uk."
+        "one": "If you haven't received a letter from the Home Office about your application to remain in the UK it may mean a decision hasn't been made yet.",
+        "two": "Call the contact centre 0300 123 2241 or email them at ukbanationalityenquiries@ukba.gsi.gov.uk."
       }
     },
     "on-the-way": {
@@ -455,12 +455,18 @@
       "para": {
         "one": {
           "first": "It has only been ",
-          "second": " working days since the letter from the Home Office letter saying your application to remain in the UK was successful."
+          "second": " working days since the letter from the Home Office saying your application to remain in the UK was successful."
         },
         "two": {
           "first": "Wait another ",
-          "second": " working days, and if you still have not received your card, use this form to contact us."
+          "second": " working days, and if you still have not received your BRP, use this service to contact us."
         }
+      "header": "Change of address",
+      "para": {
+        "one": {
+          "first": "Your BRP will be delivered to the address that was on the letter from the Home Office.",
+          "second": "If your address has changed, tell us your new address"
+        },
       }
     },
     "conditions-and-length": {
