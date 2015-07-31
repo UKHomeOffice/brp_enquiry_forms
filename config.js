@@ -24,6 +24,6 @@ module.exports = {
       user: process.env.AUTH_USER || 'user',
       pass: process.env.AUTH_PASS || 'pass'
     },
-    from: process.env.EMAIL_PORT || 'brp@dsp.notprod.homeoffice.gov.uk'
+    from: process.env.FROM_ADDRESS || 'brp@dsp.notprod.homeoffice.gov.uk'
   }
 };
