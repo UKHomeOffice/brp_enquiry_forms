@@ -45,7 +45,7 @@ var caseworkerPlainTextTemplates = {
     path.resolve(__dirname, './templates/caseworker/plain/delivery.mus')).toString('utf8')
 };
 
-var transport = config.email.safeMode ?
+var transport = config.email.auth.user === '' ?
   require('nodemailer-stub-transport') : require('nodemailer-smtp-transport');
 
 function Emailer() {
