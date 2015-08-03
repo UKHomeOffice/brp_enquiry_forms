@@ -12,9 +12,8 @@
 (Will be removed from the app when the email service is created)
 
 * `CASEWORKER_EMAIL` email for caseworker. Defaults to broken 'caseworker_email_address'.
-* `SAFE_MODE` tells the email service to use smtp or an empty transport used for testing. Defaults to true.
 * `EMAIL_PORT` email port. Defaults to 587.
 * `EMAIL_HOST` smtp host. Defaults to 'email-smtp.eu-west-1.amazonaws.com'.
-* `SMTP_USER` smtp username. Defaults to 'user'.
-* `SMTP_PASSWORD` smtp password. Defaults to 'pass'.
+* `SMTP_USER` smtp username. Defaults to ''.
+* `SMTP_PASSWORD` smtp password. Defaults to ''.
 * `FROM_ADDRESS` email address to send from. Defaults to 'brp@dsp.notprod.homeoffice.gov.uk'

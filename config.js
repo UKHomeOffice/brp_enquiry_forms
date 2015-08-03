@@ -17,12 +17,11 @@ module.exports = {
   },
   email: {
     caseworker: process.env.CASEWORKER_EMAIL || 'caseworker_email_address',
-    safeMode: process.env.SAFE_MODE === false || true,
     port: process.env.EMAIL_PORT || 587,
     host: process.env.EMAIL_HOST || 'email-smtp.eu-west-1.amazonaws.com',
     auth: {
-      user: process.env.SMTP_USER || 'user',
-      pass: process.env.SMTP_PASSWORD || 'pass'
+      user: process.env.SMTP_USER || '',
+      pass: process.env.SMTP_PASSWORD || ''
     },
     from: process.env.FROM_ADDRESS || 'brp@dsp.notprod.homeoffice.gov.uk'
   }
