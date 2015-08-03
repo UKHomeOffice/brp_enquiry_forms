@@ -1,5 +1,9 @@
 {{<layout}}
 
+{{$journeyHeader}}
+  {{#t}}journeys.error.header{{/t}}
+{{/journeyHeader}}
+
 {{$propositionHeader}}
   {{> partials-navigation}}
 {{/propositionHeader}}
@@ -41,7 +45,7 @@
 
   <hr>
 
-  <a href='/' class='button'>buttons.close</a>
+  <a href='/' class='button'>{{#t}}buttons.close{{/t}}</a>
 
 {{/content}}
 

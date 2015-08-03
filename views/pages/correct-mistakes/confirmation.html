@@ -1,5 +1,9 @@
 {{<layout}}
 
+{{$journeyHeader}}
+  {{#t}}journeys.error.header{{/t}}
+{{/journeyHeader}}
+
 {{$propositionHeader}}
   {{> partials-navigation}}
 {{/propositionHeader}}
@@ -14,16 +18,20 @@
   <p>{{#t}}pages.confirmation.privacy{{/t}}</p>
 
   <hr>
+
   <p>{{#t}}pages.confirmation.email{{/t}} <strong>{{values.email}}</strong></p>
+
   <hr>
+
   <h3>{{#t}}pages.confirmation.next.header{{/t}}</h3>
-  <p>{{#t}}pages.confirmation.next.para.one{{/t}}</p>
-  <p>{{#t}}pages.confirmation.next.para.two{{/t}}</p>
-  <p>{{#t}}pages.confirmation.next.para.three{{/t}}</p>
+
+  <p>{{#t}}pages.confirmation.next.not-specified.para.one{{/t}}</p>
+  <p>{{#t}}pages.confirmation.next.not-specified.para.two{{/t}}</p>
+  <p>{{#t}}pages.confirmation.next.not-specified.para.three{{/t}}</p>
 
   <hr>
 
-  <a href='/'>Finish</a>
+  <a href='/' class='button'>{{#t}}buttons.close{{/t}}</a>
 
 {{/content}}
 
