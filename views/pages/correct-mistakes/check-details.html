@@ -1,6 +1,10 @@
 {{<layout}}
 {{$step}}Step 5 of 5{{/step}}
 
+{{$journeyHeader}}
+  {{#t}}journeys.error.header{{/t}}
+{{/journeyHeader}}
+
 {{$validationSummary}}
   {{> partials-validation-summary}}
 {{/validationSummary}}
@@ -133,31 +137,41 @@
 
       <h3>{{#t}}pages.check-details-error.personal-details-table.title{{/t}}</h3>
       <table>
+        {{#values.fullname}}
         <tr>
           <td>{{#t}}pages.check-details-error.personal-details-table.headers.fullname{{/t}}</td>
           <td>{{values.fullname}}</td>
           <td><a href="personal-details#fullname" class="button">{{#t}}buttons.change{{/t}}</a></td>
         </tr>
+        {{/values.fullname}}
+        {{#values.date-of-birth}}
         <tr>
           <td>{{#t}}pages.check-details-error.personal-details-table.headers.date-of-birth{{/t}}</td>
           <td>{{values.date-of-birth-day}}-{{values.date-of-birth-month}}-{{values.date-of-birth-year}}</td>
           <td><a href="personal-details#date-of-birth-day" class="button">{{#t}}buttons.change{{/t}}</a></td>
         </tr>
+        {{/values.date-of-birth}}
+        {{#values.nationality}}
         <tr>
           <td>{{#t}}pages.check-details-error.personal-details-table.headers.nationality{{/t}}</td>
           <td>{{values.nationality}}</td>
           <td><a href="personal-details#nationality" class="button">{{#t}}buttons.change{{/t}}</a></td>
         </tr>
+        {{/values.nationality}}
+        {{#values.brp-card}}
         <tr>
           <td>{{#t}}pages.check-details-error.personal-details-table.headers.brp-card-number{{/t}}</td>
           <td>{{values.brp-card}}</td>
           <td><a href="personal-details#brp-card" class="button">{{#t}}buttons.change{{/t}}</a></td>
         </tr>
+        {{/values.brp-card}}
+        {{#values.email}}
         <tr>
           <td>{{#t}}pages.check-details-error.personal-details-table.headers.email{{/t}}</td>
           <td>{{values.email}}</td>
           <td><a href="contact-details#email" class="button">{{#t}}buttons.change{{/t}}</a></td>
         </tr>
+        {{/values.email}}
       </table>
 
       <h2>{{#t}}pages.check-details.org-help.title{{/t}}</h2>

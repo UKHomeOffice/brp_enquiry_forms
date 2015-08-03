@@ -120,7 +120,7 @@ module.exports = {
   },
   /* eslint no-inline-comments: 0 */
   'error-selection': {
-    /*this is here so we can display an error message if noe error is selected */
+    /*this is here so we can display an error message if no error is selected */
   },
   'first-name-error-checkbox': {
     label: 'fields.first-name-error-checkbox.label',
@@ -220,13 +220,20 @@ module.exports = {
     validate: ['required'],
     label: 'fields.photograph-error.label',
   },
+  'national-insurance-error-checkbox': {
+    label: 'fields.national-insurance-error-checkbox.label',
+    toggle: 'national-insurance-error-group'
+  },
+  'national-insurance-error': {
+    validate: ['required'],
+    label: 'fields.national-insurance-error.label',
+  },
   'damaged-error-checkbox': {
     label: 'fields.damaged-error-checkbox.label',
     toggle: 'damaged-error-group'
   },
   'damaged-error': {
     validate: ['required'],
-    classNames: ['panel-indent'],
     label: 'fields.damaged-error.label',
   },
   'conditions-error-checkbox': {

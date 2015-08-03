@@ -8,6 +8,7 @@ module.exports = {
   },
   '/about-error': {
     controller: require('../../controllers/about-error'),
+    template: 'correct-mistakes/about-error.html',
     fields: [
       'error-selection',
       'first-name-error-checkbox',
@@ -31,6 +32,8 @@ module.exports = {
       'signature-error',
       'photograph-error-checkbox',
       'photograph-error',
+      'national-insurance-error-checkbox',
+      'national-insurance-error',
       'damaged-error-checkbox',
       'damaged-error',
       'conditions-error-checkbox'
@@ -38,10 +41,11 @@ module.exports = {
     next: '/same-address'
   },
   '/conditions-and-length': {
-    template: 'conditions-and-length'
+    template: 'errors/conditions-and-length.html'
   },
   '/same-address': {
     controller: require('../../controllers/same-address'),
+    template: 'correct-mistakes/same-address.html',
     fields: [
       'address-match',
       'address-street',
@@ -54,7 +58,7 @@ module.exports = {
   },
   '/personal-details': {
     controller: require('../../controllers/personal-details'),
-    template: 'personal-details-brp.html',
+    template: 'correct-mistakes/personal-details-brp.html',
     fields: [
       'fullname',
       'date-of-birth',
@@ -69,6 +73,7 @@ module.exports = {
   },
   '/contact-details': {
     controller: require('../../controllers/contact-details'),
+    template: 'correct-mistakes/contact-details.html',
     fields: [
       'email',
       'no-email',
@@ -83,7 +88,7 @@ module.exports = {
   },
   '/check-details': {
     controller: require('../../controllers/check-details'),
-    template: 'check-details-error.html',
+    template: 'correct-mistakes/check-details.html',
     fields: [
       'org-help',
       'rep-name',
@@ -94,6 +99,7 @@ module.exports = {
   },
   '/confirmation': {
     controller: require('../../controllers/confirmation'),
+    template: 'correct-mistakes/confirmation.html',
     backLink: false,
     next: '/done'
   },
