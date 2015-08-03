@@ -74,7 +74,7 @@ Emailer.prototype.send = function send(email, callback) {
   function sendCustomerEmail() {
     this.transporter.sendMail({
       from: config.email.from,
-      to: config.email.caseworker,
+      to: email.to,
       subject: email.subject,
       text: Mustache.render(customerPlainTextTemplates[email.template], templateData),
       html: Mustache.render(customerHtmlTemplates[email.template], templateData)
@@ -83,7 +83,7 @@ Emailer.prototype.send = function send(email, callback) {
 
   this.transporter.sendMail({
     from: config.email.from,
-    to: email.to,
+    to: config.email.caseworker,
     subject: email.subject,
     text: Mustache.render(caseworkerPlainTextTemplates[email.template], templateData),
     html: Mustache.render(caseworkerHtmlTemplates[email.template], templateData)
