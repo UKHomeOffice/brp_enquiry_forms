@@ -17,7 +17,7 @@ module.exports = {
   },
   email: {
     caseworker: process.env.CASEWORKER_EMAIL || 'caseworker_email_address',
-    safeMode: process.env.SAFE_MODE || true,
+    safeMode: process.env.SAFE_MODE === false || true,
     port: process.env.EMAIL_PORT || 587,
     host: process.env.EMAIL_HOST || 'email-smtp.eu-west-1.amazonaws.com',
     auth: {
