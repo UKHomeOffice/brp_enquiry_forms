@@ -1,4 +1,9 @@
 {{<layout}}
+
+{{$journeyHeader}}
+  {{#t}}journeys.error.header{{/t}}
+{{/journeyHeader}}
+
 {{$step}}Step 1 of 5{{/step}}
 
 {{$validationSummary}}
@@ -141,6 +146,18 @@
         </legend>
 
         {{#textarea}}photograph-error{{/textarea}}
+      </fieldset>
+
+      {{#checkbox}}national-insurance-error-checkbox{{/checkbox}}
+
+      <fieldset id="national-insurance-error-group" class="panel-indent js-hidden {{#errors.national-insurance-error}}validation-error{{/errors.national-insurance-error}}">
+        <legend class="visuallyhidden">
+            <span class="form-legend">
+              {{#t}}fields.national-insurance-error.legend{{/t}}
+            </span>
+        </legend>
+
+        {{#textarea}}national-insurance-error{{/textarea}}
       </fieldset>
 
       {{#checkbox}}damaged-error-checkbox{{/checkbox}}

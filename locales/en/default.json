@@ -71,6 +71,9 @@
     "damaged-error": {
       "required": "Tell us what is wrong with your BRP"
     },
+    "national-insurance-error": {
+      "required": "Tell us your correct national insurance number"
+    },
     "photograph-error": {
       "required": "Tell us what is wrong with your photograph"
     },
@@ -132,7 +135,7 @@
     },
     "date-of-birth": {
       "legend": "Date of birth",
-      "hint": "For example, 31  03  1970"
+      "hint": "For example, 31  3  1970"
     },
     "date-of-birth-day": {
       "label": "Day"
@@ -175,7 +178,7 @@
       "label": "Full name"
     },
     "nationality": {
-      "label": "Which country issued your passport?"
+      "label": "Country of nationality"
     },
     "passport": {
       "label": "Passport number (optional)"
@@ -193,19 +196,25 @@
     "phone": {
       "label": "Phone number (optional)"
     },
-    "first-name-error-checkbox": {
-      "label": "First name"
-    },
-    "first-name-error": {
-      "label": "What is your correct first name?",
-      "title": "This is the second line of name on your BRP card"
-    },
     "last-name-error-checkbox": {
       "label": "Last name"
     },
     "last-name-error": {
       "label": "What is your correct last name?",
-      "title": "This is the first line of name on your BRP card"
+      "title": "This is the first line under 'name' on your BRP."
+    },
+    "first-name-error-checkbox": {
+      "label": "First name"
+    },
+    "first-name-error": {
+      "label": "What is your correct first name?",
+      "title": "This is the second line under 'name' on your BRP."
+    },
+    "birth-place-error-checkbox": {
+      "label": "Place of birth"
+    },
+    "birth-place-error": {
+      "label": "What is your correct place of birth?"
     },
     "date-of-birth-error-checkbox": {
       "label": "Date of birth"
@@ -223,12 +232,6 @@
     "date-of-birth-error-year": {
       "label": "Year"
     },
-    "birth-place-error-checkbox": {
-      "label": "Place of birth"
-    },
-    "birth-place-error": {
-      "label": "What is your correct place of birth?"
-    },
     "gender-error-checkbox": {
       "label": "Gender"
     },
@@ -236,11 +239,11 @@
       "legend": "Gender",
       "title": "What is your correct gender?",
       "options": {
-        "female": {
-          "label": "Female"
-        },
         "male": {
           "label": "Male"
+        },
+        "female": {
+          "label": "Female"
         },
         "unspecified": {
           "label": "Unspecified"
@@ -248,12 +251,12 @@
       }
     },
     "sponsor-details-error-checkbox": {
-      "label": "Sponsor details"
+      "label": "Sponsor reference"
     },
     "sponsor-details-error": {
-      "legend": "Sponsor details",
-      "title": "This is the third line of remark on the front of your BRP card. These are details from your employer, university or college",
-      "label": "What is the correct sponsor reference?"
+      "legend": "Sponsor reference",
+      "title": "This is the third line under 'remarks' on your BRP. This is the reference number of your your employer, university or college.",
+      "label": "What is the correct sponsor reference number?"
     },
     "nationality-error-checkbox": {
       "label": "Nationality"
@@ -276,18 +279,25 @@
       "legend": "Photograph",
       "label": "What is wrong with your photograph?"
     },
+    "national-insurance-error-checkbox": {
+      "label": "National Insurance Number"
+    },
+    "national-insurance-error": {
+      "legend": "National Insurance Number",
+      "label": "What is your correct National Insurance Number?"
+    },
     "damaged-error-checkbox": {
-      "label": "Faulty and damaged"
+      "label": "Faulty or damaged"
     },
     "damaged-error": {
-      "legend": "Faulty and damaged",
-      "label": "Please describe the fault"
+      "legend": "Faulty or damaged",
+      "label": "What is wrong with your BRP?"
     },
     "conditions-error-checkbox": {
       "label": "Conditions or length of stay"
     },
     "conditions-error": {
-      "label": "This includes wrong expiry date, leave duration, remarks on front and on the back of the card."
+      "label": "This could include information about your leave duration, conditions of stay and BRP expiry date."
     },
     "inside-uk": {
       "options": {
@@ -332,8 +342,10 @@
       "label": "Full name"
     }
   },
-  "journey": {
-    "header": "My BRP has not been delivered"
+  "journeys": {
+    "error": {
+      "header": "Report a problem with your new BRP"
+    }
   },
   "pages": {
     "about-error": {
@@ -343,18 +355,18 @@
     "contact-details": {
       "header": "Where can we contact you to let you know about your BRP?",
       "address": {
-        "title": "Please provide your address so that we can contact you by post"
+        "title": "Tell us your address so that we contact you by post."
       }
     },
     "same-address": {
       "header": "Is your address the same as the one on the letter from the Home Office?",
       "address": {
-        "title": "Tell us your new address and we will organise another delivery."
+        "title": "Tell us your new address."
       }
     },
     "personal-details": {
       "header": "What are your personal details?",
-      "subheader": "We need these details to find out what has happened to your BRP."
+      "subheader": "We need these details to review the problem with your BRP."
     },
     "check-details": {
       "header": "Is the information you gave us correct?",
@@ -382,8 +394,8 @@
       }
     },
     "check-details-error": {
-      "header": "Check your details",
-      "subheader": "Check through the information that you have provided to make sure it is correct. If it is still incorrect you can change it here.",
+      "header": "Is the information you have given us correct?",
+      "subheader": "Check and make sure the information below is right. If it isn't you can change it here.",
       "corrected-details-table": {
         "title": "Corrected BRP details"
       },
@@ -412,8 +424,8 @@
         "header": "What happens next",
         "not-specified": {
           "para": {
-            "one": "We will now review the information you provided to find out why you have not received the biometric residence permit.",
-            "two": "We will contact you within <strong>5 working days</strong>. We will tell you what to do when we contact you.",
+            "one": "We will now review the information you have sent us and we will let you know if you need a new card.",
+            "two": "We will get back to you within <strong>5 working days</strong>. For example, if you contact us on a Monday you will hear back by the following Monday.",
             "three": "We will then advise you what to do next."
           }
         },

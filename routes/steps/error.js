@@ -31,6 +31,8 @@ module.exports = {
       'signature-error',
       'photograph-error-checkbox',
       'photograph-error',
+      'national-insurance-error-checkbox',
+      'national-insurance-error',
       'damaged-error-checkbox',
       'damaged-error',
       'conditions-error-checkbox'
