@@ -122,7 +122,7 @@
     "delivery-date": {
       "label": "Date",
       "legend": "Date on the letter",
-      "hint": "For example, 11  06  2015"
+      "hint": "For example, 11  6  2015"
     },
     "delivery-date-day": {
       "label": "Day"
@@ -150,7 +150,7 @@
       "label": "I don't have the letter anymore"
     },
     "delivery-details": {
-      "label": "If you think the courier may have had a problem delivering items to this address (for example there is no number on the door) then let us know and we will contact the courier. (optional)"
+      "label": "If the courier could have problems delivering to this address, for example there's no door number, then let us know and we'll contact them. (optional)"
     },
     "address-match": {
       "options": {
@@ -355,6 +355,13 @@
       "contact-details": {
         "header": "Where can we contact you to tell you what to do next?"
       }
+    },
+    "delivery": {
+      "header": "My BRP has not been delivered",
+      "personal-details": {
+        "header": "What are your personal details",
+        "subheader": "We need these details to find out what has happened to your BRP."
+      }
     }
   },
   "pages": {
@@ -369,9 +376,9 @@
       }
     },
     "same-address": {
-      "header": "Is your address the same as the one on the letter from the Home Office?",
+      "header": "Did you expect your BRP to be delivered to the same address as the one on the letter from the Home Office?",
       "address": {
-        "title": "Tell us your new address."
+        "title": "Tell us the new address and we will organise another delivery."
       }
     },
     "personal-details": {

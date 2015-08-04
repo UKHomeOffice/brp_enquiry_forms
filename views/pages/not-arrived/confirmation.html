@@ -1,0 +1,40 @@
+{{<layout}}
+
+  {{$journeyHeader}}
+    {{#t}}journeys.error.header{{/t}}
+  {{/journeyHeader}}
+
+  {{$propositionHeader}}
+    {{> partials-navigation}}
+  {{/propositionHeader}}
+
+  {{$content}}
+    <div class="alert-complete" role="alert">
+      <span class="icon icon-complete" role="presentation"></span>
+      <div class="alert-message">
+        <h1>{{#t}}pages.confirmation.header{{/t}}</h1>
+      </div>
+    </div>
+    <p>{{#t}}pages.confirmation.privacy{{/t}}</p>
+
+    <hr>
+
+    <p>{{#t}}pages.confirmation.email{{/t}} <strong>{{values.email}}</strong></p>
+
+    <hr>
+
+    <h3>{{#t}}pages.confirmation.next.header{{/t}}</h3>
+
+    {{#location.not-specified}}
+      <p>{{#t}}pages.confirmation.next.not-specified.para.one{{/t}}</p>
+      <p>{{#t}}pages.confirmation.next.not-specified.para.two{{/t}}</p>
+      <p>{{#t}}pages.confirmation.next.not-specified.para.three{{/t}}</p>
+    {{/location.not-specified}}
+
+    <hr>
+
+    <a href='/' class='button'>{{#t}}buttons.close{{/t}}</a>
+
+  {{/content}}
+
+{{/layout}}
