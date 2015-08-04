@@ -1,0 +1,64 @@
+{{<layout}}
+  {{$step}}Step 2 of 5{{/step}}
+
+  {{$journeyHeader}}
+    {{#t}}journeys.delivery.header{{/t}}
+  {{/journeyHeader}}
+
+  {{$validationSummary}}
+    {{> partials-validation-summary}}
+  {{/validationSummary}}
+
+  {{$propositionHeader}}
+    {{> partials-navigation}}
+  {{/propositionHeader}}
+
+  {{$header}}{{#t}}pages.same-address.header{{/t}}{{/header}}
+
+  {{$content}}
+
+    {{<partials-form}}
+
+      {{$form}}
+
+        {{#radio-group}}address-match{{/radio-group}}
+
+        <fieldset id="delivery-details-group" class="panel-indent js-hidden {{#errorlist.length}}validation-error{{/errorlist.length}}">
+          <legend class="visuallyhidden">
+              <span class="form-legend">
+                {{#t}}fields.delivery-details.legend{{/t}}
+              </span>
+          </legend>
+
+          {{#textarea}}delivery-details{{/textarea}}
+
+        </fieldset>
+
+        <fieldset id="address-match" class="panel-indent js-hidden {{#errorlist.length}}validation-error{{/errorlist.length}}">
+          <legend class="visuallyhidden">
+              <span class="form-legend">
+                {{#t}}fields.address.legend{{/t}}
+              </span>
+          </legend>
+
+          <p>{{#t}}pages.same-address.address.title{{/t}}</p>
+
+          {{#input-text}}address-street{{/input-text}}
+
+          {{#input-text}}address-town{{/input-text}}
+
+          {{#input-text}}address-county{{/input-text}}
+
+          {{#input-text-code}}address-postcode{{/input-text-code}}
+
+        </fieldset>
+
+        {{#input-submit}}continue{{/input-submit}}
+
+      {{/form}}
+
+    {{/partials-form}}
+
+  {{/content}}
+
+{{/layout}}

@@ -1,0 +1,21 @@
+{{<layout}}
+
+  {{$journeyHeader}}
+    {{#t}}journeys.delivery.header{{/t}}
+  {{/journeyHeader}}
+
+  {{$propositionHeader}}
+    {{> partials-navigation}}
+  {{/propositionHeader}}
+
+  {{$header}}{{#t}}pages.letter-not-received.header{{/t}}{{/header}}
+
+  {{$content}}
+
+    <p>{{#t}}pages.letter-not-received.para.one{{/t}}</p>
+    <p>{{#t}}pages.letter-not-received.para.two{{/t}}</p>
+    <a class="button" href='/'>{{#t}}buttons.close{{/t}}</a>
+
+  {{/content}}
+
+{{/layout}}

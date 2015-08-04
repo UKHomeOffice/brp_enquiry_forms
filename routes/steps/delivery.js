@@ -8,6 +8,7 @@ module.exports = {
   },
   '/letter-received': {
     controller: require('../../controllers/letter-received'),
+    template: 'not-arrived/letter-received',
     fields: [
       'received',
       'delivery-date',
@@ -19,15 +20,15 @@ module.exports = {
     next: '/same-address'
   },
   '/letter-not-received': {
-    template: 'letter-not-received',
+    template: 'not-arrived/letter-not-received',
   },
   '/on-the-way': {
     controller: require('../../controllers/on-the-way'),
-    template: 'on-the-way',
+    template: 'not-arrived/on-the-way',
   },
   '/same-address': {
     controller: require('../../controllers/same-address'),
-    template: 'same-address-details.html',
+    template: 'not-arrived/same-address-details.html',
     fields: [
       'address-match',
       'delivery-details',
@@ -41,7 +42,7 @@ module.exports = {
   },
   '/personal-details': {
     controller: require('../../controllers/personal-details'),
-    template: 'personal-details-passport.html',
+    template: 'not-arrived/personal-details.html',
     fields: [
       'fullname',
       'date-of-birth',
@@ -56,6 +57,7 @@ module.exports = {
   },
   '/contact-details': {
     controller: require('../../controllers/contact-details'),
+    template: 'not-arrived/contact-details',
     fields: [
       'email',
       'no-email',
@@ -70,6 +72,7 @@ module.exports = {
   },
   '/check-details': {
     controller: require('../../controllers/check-details'),
+    template: 'not-arrived/check-details',
     fields: [
       'org-help',
       'rep-name',
@@ -80,6 +83,7 @@ module.exports = {
   },
   '/confirmation': {
     controller: require('../../controllers/confirmation'),
+    template: 'not-arrived/confirmation',
     backLink: false,
     next: '/done'
   },

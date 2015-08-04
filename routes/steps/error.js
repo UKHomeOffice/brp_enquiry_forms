@@ -41,7 +41,7 @@ module.exports = {
     next: '/same-address'
   },
   '/conditions-and-length': {
-    template: 'errors/conditions-and-length.html'
+    template: 'correct-mistakes/conditions-and-length.html'
   },
   '/same-address': {
     controller: require('../../controllers/same-address'),
