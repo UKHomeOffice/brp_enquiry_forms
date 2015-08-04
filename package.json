@@ -38,6 +38,7 @@
     "hogan-express-strict": "^0.5.4",
     "i18n-future": "^0.1.4",
     "i18n-lookup": "^0.1.0",
+    "jquery": "^2.1.4",
     "moment": "^2.10.3",
     "moment-business": "^2.0.0",
     "morgan": "^1.6.1",
@@ -47,6 +48,7 @@
     "nodemailer-smtp-transport": "^1.0.3",
     "nodemailer-stub-transport": "^1.0.0",
     "redis": "^0.12.1",
+    "typeahead.js-browserify": "^1.0.5",
     "underscore": "^1.8.3"
   },
   "devDependencies": {
