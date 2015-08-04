@@ -1,6 +1,10 @@
 {{<layout}}
 {{$step}}Step 3 of 5{{/step}}
 
+{{$journeyHeader}}
+  {{#t}}journeys.lost.header{{/t}}
+{{/journeyHeader}}
+
 {{$validationSummary}}
   {{> partials-validation-summary}}
 {{/validationSummary}}
@@ -9,10 +13,10 @@
   {{> partials-navigation}}
 {{/propositionHeader}}
 
-{{$header}}{{#t}}pages.personal-details.header{{/t}}{{/header}}
+{{$header}}{{#t}}journeys.lost.personal-details.header{{/t}}{{/header}}
 
 {{$content}}
-  <p>{{#t}}pages.personal-details.subheader{{/t}}</p>
+  <p>{{#t}}journeys.lost.personal-details.subheader{{/t}}</p>
 
   {{<partials-form}}
 

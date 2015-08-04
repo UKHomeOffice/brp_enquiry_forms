@@ -1,0 +1,92 @@
+{{<layout}}
+{{$step}}Step 5 of 5{{/step}}
+
+  {{$journeyHeader}}
+    {{#t}}journeys.lost.header{{/t}}
+  {{/journeyHeader}}
+
+  {{$validationSummary}}
+    {{> partials-validation-summary}}
+  {{/validationSummary}}
+
+  {{$propositionHeader}}
+    {{> partials-navigation}}
+  {{/propositionHeader}}
+
+  {{$header}}{{#t}}pages.check-details.header{{/t}}{{/header}}
+
+  {{$content}}
+    <p>{{#t}}pages.check-details.subheader{{/t}}</p>
+
+    {{<partials-form}}
+
+      {{$form}}
+
+        <table>
+          {{#values.address-street}}
+            <tr>
+              <td>{{#t}}pages.check-details.table.headers.address{{/t}}</td>
+              <td>
+                {{values.address-street}},
+                {{values.address-town}},
+                {{#values.address-county}}{{values.address-county}},{{/values.address-county}}
+                {{values.address-postcode}}
+              </td>
+              <td><a href="same-address#address-street" class="button">{{#t}}buttons.change{{/t}}</a></td>
+            </tr>
+          {{/values.address-street}}
+          <tr>
+            <td>{{#t}}pages.check-details.table.headers.fullname{{/t}}</td>
+            <td>{{values.fullname}}</td>
+            <td><a href="personal-details#fullname" class="button">{{#t}}buttons.change{{/t}}</a></td>
+          </tr>
+          <tr>
+            <td>{{#t}}pages.check-details.table.headers.date-of-birth{{/t}}</td>
+            <td>{{values.date-of-birth-day}}-{{values.date-of-birth-month}}-{{values.date-of-birth-year}}</td>
+            <td><a href="personal-details#date-of-birth-day" class="button">{{#t}}buttons.change{{/t}}</a></td>
+          </tr>
+          <tr>
+            <td>{{#t}}pages.check-details.table.headers.nationality{{/t}}</td>
+            <td>{{values.nationality}}</td>
+            <td><a href="personal-details#nationality" class="button">{{#t}}buttons.change{{/t}}</a></td>
+          </tr>
+          {{#values.passport}}
+            <tr>
+              <td>{{#t}}pages.check-details.table.headers.passport{{/t}}</td>
+              <td>{{values.passport}}</td>
+              <td><a href="personal-details#passport" class="button">{{#t}}buttons.change{{/t}}</a></td>
+            </tr>
+          {{/values.passport}}
+          {{#values.email}}
+            <tr>
+              <td>{{#t}}pages.check-details.table.headers.email{{/t}}</td>
+              <td>{{values.email}}</td>
+              <td><a href="contact-details#email" class="button">{{#t}}buttons.change{{/t}}</a></td>
+            </tr>
+          {{/values.email}}
+        </table>
+
+        <h2>{{#t}}pages.check-details.org-help.title{{/t}}</h2>
+        <p>{{#t}}pages.check-details.org-help.explanation{{/t}}</p>
+
+        {{#radio-group}}org-help{{/radio-group}}
+
+        <fieldset id="org-details-group" class="panel-indent">
+          <p>{{#t}}pages.check-details.org-details-group.header{{/t}}</p>
+          {{#input-text}}rep-name{{/input-text}}
+          {{#input-text}}organisation{{/input-text}}
+        </fieldset>
+
+        <h2>{{#t}}pages.check-details.footer.title{{/t}}</h2>
+        <p>{{#t}}pages.check-details.footer.explanation{{/t}}</p>
+
+        {{#input-submit}}submit{{/input-submit}}
+
+      {{/form}}
+
+    {{/partials-form}}
+
+
+  {{/content}}
+
+{{/layout}}
