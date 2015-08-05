@@ -32,5 +32,5 @@ end
 
 Then(/^I am on Step Three of the Lost\/Stolen form$/) do                                                
   page.should have_content('Step 3 of 5')                                               
-  page.should have_content('What are your personal details?')
+  page.should have_content('What are your personal details')
 end

@@ -16,7 +16,7 @@ When(/^I go to Step Six$/) do
   click_button('Continue')
   fill_in('email', :with => 'alex.murphy@uksogeti.com')
   click_button('Continue')
-  page.should have_content('Is the information you gave us correct?')
+  page.should have_content('Is the information you have given us correct?')
   choose('org-help-no')
   click_button('Submit')
 end                                                                          

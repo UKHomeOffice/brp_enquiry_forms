@@ -21,12 +21,11 @@ When(/^I go to Step Five$/) do
   click_button('Continue')
   fill_in('email', :with => 'alex.murphy@uksogeti.com')
   click_button('Continue')
-  page.should have_content('Is the information you gave us correct?')
 end
 
 Then(/^I am on Step Five$/) do
-  page.should have_content('Is the information you gave us correct?')
-  page.should have_content('Check the information you have given us to make sure it is correct. If it is incorrect you can change it here.')
+  page.should have_content('Is the information you have given us correct?')
+  page.should have_content("Check and make sure the information below is right. If it isn't you can change it here.")
   page.should have_content('New address')
   page.should have_content('Full name')
   page.should have_content('Date of birth')
