@@ -296,12 +296,24 @@ module.exports = {
       value: 'yes'
     },
   },
-  'organisation': {
+  'org-type': {
     validate: ['required'],
-    label: 'fields.organisation.label',
     dependent: {
       field: 'org-help',
       value: 'yes'
     },
-  }
+    options: [{
+      value: 'pbs',
+      label: 'fields.org-type.options.pbs.label'
+    }, {
+      value: 'legal',
+      label: 'fields.org-type.options.legal.label'
+    }, {
+      value: 'relative',
+      label: 'fields.org-type.options.relative.label'
+    }, {
+      value: 'support',
+      label: 'fields.org-type.options.support.label'
+    }]
+  },
 };

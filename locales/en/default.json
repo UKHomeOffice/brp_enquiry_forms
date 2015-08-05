@@ -104,8 +104,8 @@
     "rep-name": {
       "required": "Tell us the name of the person that helped you to complete this form"
     },
-    "organisation": {
-      "required": "Tell us the name of the organisation that helped you to complete this form"
+    "org-type": {
+      "required": "Tell us the type of the organisation that helped you to complete this form"
     }
   },
   "fields": {
@@ -335,11 +335,24 @@
         }
       }
     },
-    "organisation": {
-      "label": "Organisation"
-    },
     "rep-name": {
       "label": "Full name"
+    },
+    "org-type": {
+      "options": {
+        "pbs": {
+          "label": "PBS sponsor"
+        },
+        "legal": {
+          "label": "Legal represntative"
+        },
+        "relative": {
+          "label": "Relative/friend"
+        },
+        "support": {
+          "label": "Support organisation"
+        }
+      }
     }
   },
   "journeys": {
@@ -403,7 +416,8 @@
         "explanation": "This could be an immigration lawyer or representative, or a charity, employer, college or university."
       },
       "org-details-group": {
-        "header": "Please provide their details"
+        "header": "Please provide their details",
+        "type": "Type of support"
       },
       "footer": {
         "title": "Send us your details",
