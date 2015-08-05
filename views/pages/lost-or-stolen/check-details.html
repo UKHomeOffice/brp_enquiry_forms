@@ -66,16 +66,7 @@
           {{/values.email}}
         </table>
 
-        <h2>{{#t}}pages.check-details.org-help.title{{/t}}</h2>
-        <p>{{#t}}pages.check-details.org-help.explanation{{/t}}</p>
-
-        {{#radio-group}}org-help{{/radio-group}}
-
-        <fieldset id="org-details-group" class="panel-indent">
-          <p>{{#t}}pages.check-details.org-details-group.header{{/t}}</p>
-          {{#input-text}}rep-name{{/input-text}}
-          {{#input-text}}organisation{{/input-text}}
-        </fieldset>
+        {{<partials-org-type}}{{/partials-org-type}}
 
         <h2>{{#t}}pages.check-details.footer.title{{/t}}</h2>
         <p>{{#t}}pages.check-details.footer.explanation{{/t}}</p>

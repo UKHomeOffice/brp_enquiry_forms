@@ -62,7 +62,7 @@ module.exports = {
     fields: [
       'org-help',
       'rep-name',
-      'organisation'
+      'org-type'
     ],
     backLink: '/contact-details',
     next: '/confirmation'
