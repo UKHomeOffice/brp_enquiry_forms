@@ -3,7 +3,7 @@
 var util = require('util');
 var _ = require('underscore');
 
-var Controller = require('hmpo-form-wizard').Controller;
+var Controller = require('../lib/base-wizard').Controller;
 var Model = require('../models/email');
 
 var Submit = function Submit() {

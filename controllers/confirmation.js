@@ -1,7 +1,7 @@
 'use strict';
 
 var util = require('util');
-var Controller = require('hmpo-form-wizard').Controller;
+var Controller = require('../lib/base-wizard').Controller;
 
 var ConfirmationController = function ConfirmationController() {
   Controller.apply(this, arguments);

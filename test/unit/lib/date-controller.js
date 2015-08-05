@@ -9,7 +9,7 @@ wizard.Controller.prototype.validateField = sinon.stub();
 var moment = require('moment');
 var proxyquire = require('proxyquire');
 var DateController = proxyquire('../../../lib/date-controller', {
-  'hmpo-form-wizard': wizard
+  '../lib/base-wizard': wizard
 });
 var ErrorClass = require('hmpo-form-wizard').Error;
 
