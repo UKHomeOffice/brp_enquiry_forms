@@ -6,7 +6,7 @@ var progressiveReveal = require('hmpo-frontend-toolkit').progressiveReveal;
 helpers.documentReady(progressiveReveal);
 
 var $ = require('jquery');
-var listOfCountries = require('../../services/countries');
+var listOfCountries = require('./countries');
 var typeahead = require('typeahead.js-browserify');
 var Bloodhound = require('typeahead.js-browserify').Bloodhound;
 
