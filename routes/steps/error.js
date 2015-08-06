@@ -43,6 +43,18 @@ module.exports = {
   '/conditions-and-length': {
     template: 'correct-mistakes/conditions-and-length.html'
   },
+  '/truncated': {
+    controller: require('../../controllers/truncated'),
+    template: 'correct-mistakes/truncated.html',
+    fields: [
+      'truncated',
+      'truncation-page'
+    ],
+    next: '/same-address'
+  },
+  '/exit-truncated': {
+    template: 'correct-mistakes/exit-truncated.html'
+  },
   '/same-address': {
     controller: require('../../controllers/same-address'),
     template: 'correct-mistakes/same-address.html',

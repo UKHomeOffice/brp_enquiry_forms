@@ -302,6 +302,16 @@
     "conditions-error": {
       "label": "This could include information about your leave duration, conditions of stay and BRP expiry date."
     },
+    "truncated": {
+      "options": {
+        "yes": {
+          "label": "Yes"
+        },
+        "no": {
+          "label": "No"
+        }
+      }
+    },
     "inside-uk": {
       "options": {
         "yes": {
@@ -511,6 +521,36 @@
       "header": "Information about leave to remain in the UK",
       "para": {
         "one": "As you think the conditions or length of your leave are incorrect you must apply for <a href=''>administrative review</a>, where this will be considered."
+      }
+    },
+    "truncated": {
+      "header": "Problems with names on your BRP",
+      "paras": {
+        "one": {
+          "parts": {
+            "one": "You typed in your",
+            "two": "as"
+          }
+        },
+        "two": {
+          "parts": {
+            "one": "Your",
+            "two": "has",
+            "three": "letters. Your BRP can only show a maximum of 30 letters, so it is shortened to this on your BRP:"
+          }
+        },
+        "three": {
+          "parts": {
+            "one": "Is this how it looks on your BRP?"
+          }
+        }
+      }
+    },
+    "exit-truncated": {
+      "paras": {
+        "one": "Your name has been shortened on your BRP, as a maximum of 30 characters can be printed on the card.",
+        "two": "This is not an error. The information is correct on your card and you will be able to use it to travel.",
+        "three": "You do not need to do anything else."
       }
     }
   },
