@@ -887,4 +887,93 @@ var countries = [{
   name: 'ZWE'
 }];
 
-module.exports = _.pluck(countries, 'value');
+var euCountries = [
+  {
+    value: 'Austria'
+  },
+  {
+    value: 'Belgium'
+  },
+  {
+    value: 'Bulgaria'
+  },
+  {
+    value: 'Croatia'
+  },
+  {
+    value: 'Republic of Cyprus'
+  },
+  {
+    value: 'Czech Republic'
+  },
+  {
+    value: 'Denmark'
+  },
+  {
+    value: 'Estonia'
+  },
+  {
+    value: 'Finland'
+  },
+  {
+    value: 'France'
+  },
+  {
+    value: 'Germany'
+  },
+  {
+    value: 'Greece'
+  },
+  {
+    value: 'Hungary'
+  },
+  {
+    value: 'Ireland'
+  },
+  {
+    value: 'Italy'
+  },
+  {
+    value: 'Latvia'
+  },
+  {
+    value: 'Lithuania'
+  },
+  {
+    value: 'Luxembourg'
+  },
+  {
+    value: 'Malta'
+  },
+  {
+    value: 'Netherlands'
+  },
+  {
+    value: 'Poland'
+  },
+  {
+    value: 'Portugal'
+  },
+  {
+    value: 'Romania'
+  },
+  {
+    value: 'Slovakia'
+  },
+  {
+    value: 'Slovenia'
+  },
+  {
+    value: 'Spain'
+  },
+  {
+    value: 'Sweden'
+  },
+  {
+    value: 'United Kingdom'
+  }
+];
+
+module.exports.nonEuCountries = _.pluck(countries, 'value');
+module.exports.euCountries = _.pluck(euCountries, 'value');
+module.exports.allCountries = [].concat(module.exports.nonEuCountries, module.exports.euCountries);
