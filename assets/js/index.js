@@ -6,23 +6,38 @@ var progressiveReveal = require('hmpo-frontend-toolkit').progressiveReveal;
 helpers.documentReady(progressiveReveal);
 
 var $ = require('jquery');
-var listOfCountries = require('./countries');
 var typeahead = require('typeahead.js-browserify');
 var Bloodhound = require('typeahead.js-browserify').Bloodhound;
 
 typeahead.loadjQueryPlugin();
 
-var countries = new Bloodhound({
+var nonEuCountries = new Bloodhound({
   datumTokenizer: Bloodhound.tokenizers.whitespace,
   queryTokenizer: Bloodhound.tokenizers.whitespace,
-  local: listOfCountries
+  local: require('./countries').nonEuCountries
 });
 
-$('#nationality').typeahead({
+var allCountries = new Bloodhound({
+  datumTokenizer: Bloodhound.tokenizers.whitespace,
+  queryTokenizer: Bloodhound.tokenizers.whitespace,
+  local: require('./countries').allCountries
+});
+
+
+$('#nationality, #nationality-error').typeahead({
   minLength: 1,
   hint: false,
   limit: 5
 }, {
-  name: 'countries',
-  source: countries
+  name: 'nonEuCountries',
+  source: nonEuCountries
+});
+
+$('#country').typeahead({
+  minLength: 1,
+  hint: false,
+  limit: 5
+}, {
+  name: 'allCountries',
+  source: allCountries
 });
