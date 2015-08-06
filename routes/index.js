@@ -5,7 +5,7 @@ var deliverySteps = require('./steps/delivery');
 var errorSteps = require('./steps/error');
 var lostSteps = require('./steps/lost');
 var fields = require('./fields');
-var wizard = require('hmpo-form-wizard');
+var wizard = require('../lib/base-wizard');
 var mixins = require('hmpo-template-mixins');
 var i18n = require('i18n-future')();
 

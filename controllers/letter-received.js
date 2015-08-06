@@ -1,7 +1,7 @@
 'use strict';
 
 var util = require('util');
-var Controller = require('hmpo-form-wizard').Controller;
+var Controller = require('../lib/base-wizard').Controller;
 var DateController = require('../lib/date-controller');
 var debug = require('debug')('controllers/letter-recieved');
 

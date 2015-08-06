@@ -2,8 +2,8 @@
 
 var util = require('util');
 var DateController = require('../lib/date-controller');
-var Controller = require('hmpo-form-wizard').Controller;
-var ErrorClass = require('hmpo-form-wizard').Error;
+var Controller = require('../lib/base-wizard').Controller;
+var ErrorClass = require('../lib/base-wizard').Error;
 var moment = require('moment');
 var _ = require('underscore');
 

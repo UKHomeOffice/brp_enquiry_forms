@@ -1,8 +1,8 @@
 'use strict';
 
 var util = require('util');
-var Controller = require('hmpo-form-wizard').Controller;
-var debug = require('debug');
+var Controller = require('../lib/base-wizard').Controller;
+var debug = require('debug')('controllers:same-address');
 
 var SameAddressController = function SameAddressController() {
   Controller.apply(this, arguments);
