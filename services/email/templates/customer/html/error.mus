@@ -19,7 +19,7 @@
           <table width="580" cellpadding="0" cellspacing="0" border="0" align="center">
             <tr>
               <td width="100%" bgcolor="#0b0c0c" valign="middle">
-                <img src="http://govuk-prototyping.herokuapp.com/hmrc-email/govuk_logotype_email.png" alt="GOV.UK" border="0">
+                <img width="152" height="31" src="cid:govuk_logotype_email" alt="GOV.UK" border="0" />
               </td>
             </tr>
           </table>
@@ -34,9 +34,9 @@
               <td width="100%" class="header" style="padding-top: 10px;" colspan="2">
                 <table width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#FFFFFF">
                   <tr>
-                    <td width="6" style="border-left: 2px solid #009390;"><img src="http://govuk-prototyping.herokuapp.com/hmrc-email/spacer.gif" alt="" width="6px" height="26px" style="display: block;" /></td>
-                    <td width="26"><img src="http://govuk-prototyping.herokuapp.com/hmrc-email/hmrc_crest_18px.png" alt="HMRC Logo" style="width: 26px; height: 26px; display:block;"></td>
-                    <td width="7"><img src="http://govuk-prototyping.herokuapp.com/hmrc-email/spacer.gif" alt="" width="7px" height="26px" style="display: block;" /></td>
+                    <td width="6" style="border-left: 2px solid #009390;"><img src="cid:spacer_image" alt="" width="6px" height="26px" style="display: block;" /></td>
+                    <td width="26" height="26"><img src="cid:ho_crest_27px" alt="Home Office Logo" style="width: 26px; height: 26px; display:block;"></td>
+                    <td width="7"><img src="cid:spacer_image" alt="" width="7px" height="26px" style="display: block;" /></td>
                     <td style="font-family: Helvetica, Arial, sans-serif;">
                       <h2 class="organisation-logo" style="font-size: 18px; line-height: 20px; font-weight: 300; margin: 0"><span>UK Visas and Immigration</span></h2>
                     </td>
