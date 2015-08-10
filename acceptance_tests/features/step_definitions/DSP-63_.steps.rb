@@ -18,7 +18,7 @@ When(/^I go to Step Six of the error form$/) do
   fill_in('nationality', :with => 'Chinese')
   page.status_code.should == 302
   click_button('Continue')
-  fill_in('email', :with => 'alexandermurphy1988@yahoo.co.uk')
+  fill_in('email', :with => 'brpapp15@gmail.com')
   page.status_code.should == 302
   click_button('Continue')
   choose('org-help-no')
