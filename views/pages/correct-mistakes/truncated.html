@@ -1,0 +1,41 @@
+{{<layout}}
+
+  {{$journeyHeader}}
+    {{#t}}journeys.error.header{{/t}}
+  {{/journeyHeader}}
+
+  {{$propositionHeader}}
+    {{> partials-navigation}}
+  {{/propositionHeader}}
+
+  {{$header}}{{#t}}pages.truncated.header{{/t}}{{/header}}
+
+  {{$content}}
+
+    <p>{{#t}}pages.truncated.paras.one.parts.one{{/t}} {{truncatedItem.pretty}} {{#t}}pages.truncated.paras.one.parts.two{{/t}}:</p>
+
+    <p><strong>{{truncatedItem.value}}</strong></p>
+
+    <p>{{#t}}pages.truncated.paras.two.parts.one{{/t}} {{truncatedItem.pretty}} {{#t}}pages.truncated.paras.two.parts.two{{/t}} {{truncatedItem.length}} {{#t}}pages.truncated.paras.two.parts.three{{/t}}</p>
+
+    <p><strong>{{truncatedItem.slice}}</strong></p>
+
+    <p>{{#t}}pages.truncated.paras.three.parts.one{{/t}}</p>
+
+    {{<partials-form}}
+
+      {{$form}}
+
+        <input type="hidden" name="truncation-page" value="{{truncatedItem.id}}">
+
+        {{#radio-group}}truncated{{/radio-group}}
+
+        {{#input-submit}}continue{{/input-submit}}
+
+      {{/form}}
+
+    {{/partials-form}}
+
+  {{/content}}
+
+{{/layout}}

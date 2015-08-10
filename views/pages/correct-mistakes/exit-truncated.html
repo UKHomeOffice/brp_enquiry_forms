@@ -1,0 +1,25 @@
+{{<layout}}
+
+  {{$journeyHeader}}
+    {{#t}}journeys.error.header{{/t}}
+  {{/journeyHeader}}
+
+  {{$propositionHeader}}
+    {{> partials-navigation}}
+  {{/propositionHeader}}
+
+  {{$header}}{{#t}}pages.truncated.header{{/t}}{{/header}}
+
+  {{$content}}
+
+    <p>{{#t}}pages.exit-truncated.paras.one{{/t}}</p>
+
+    <p>{{#t}}pages.exit-truncated.paras.two{{/t}}</p>
+
+    <p>{{#t}}pages.exit-truncated.paras.three{{/t}}</p>
+
+    <a href='/' class='button'>{{#t}}buttons.close{{/t}}</a>
+
+  {{/content}}
+
+{{/layout}}

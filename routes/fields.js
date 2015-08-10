@@ -239,6 +239,20 @@ module.exports = {
     label: 'fields.conditions-error-checkbox.label',
     toggle: 'conditions-error-group'
   },
+  'truncated': {
+    validate: ['required'],
+    display: 'inline',
+    options: [{
+      value: 'yes',
+      label: 'fields.truncated.options.yes.label'
+    }, {
+      value: 'no',
+      label: 'fields.truncated.options.no.label'
+    }]
+  },
+  'truncation-page': {
+    type: 'hidden'
+  },
   'inside-uk': {
     validate: ['required'],
     display: 'inline',

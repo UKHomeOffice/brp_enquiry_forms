@@ -174,4 +174,26 @@ describe('lib/date-controller', function () {
     });
   });
 
+  describe('format', function () {
+    var req = {
+      form: {
+        values: {}
+      }
+    };
+    beforeEach(function () {
+      controller = new DateController({template: 'index'});
+      controller.dateKey = 'date';
+    });
+
+    it('formats the date property to GDS style date', function () {
+      req.form.values['date-day'] = '01';
+      req.form.values['date-month'] = '11';
+      req.form.values['date-year'] = '1982';
+
+      controller.format(req);
+
+      req.form.values['date-formatted'].should.equal('1 December 1982');
+    });
+  });
+
 });

@@ -1,8 +1,9 @@
 'use strict';
 
 var AboutErrorController = require('../../../controllers/about-error');
-var Controller = require('hmpo-form-wizard').Controller;
-var ErrorClass = require('hmpo-form-wizard').Error;
+var DateController = require('../../../lib/date-controller');
+var Controller = require('../../../lib/base-controller');
+var ErrorClass = require('../../../lib/base-error');
 
 describe('controllers/about-error', function () {
 
@@ -18,6 +19,9 @@ describe('controllers/about-error', function () {
         form: {
           values: {
           }
+        },
+        sessionModel: {
+          set: sinon.stub()
         }
       };
       res = {};
@@ -34,37 +38,41 @@ describe('controllers/about-error', function () {
       Controller.prototype.saveValues.should.have.been.calledWith(req, res, callback);
     });
 
-    it('adds a new formatted date property to the session when the user enters a date', function () {
-      req.form.values['date-of-birth-error-day'] = '01';
-      req.form.values['date-of-birth-error-month'] = '11';
-      req.form.values['date-of-birth-error-year'] = '1982';
-
+    it('calls Date#format', function () {
+      DateController.prototype.format = sinon.stub();
       controller.saveValues(req, res, callback);
 
-      req.form.values['date-of-birth-error-formatted'].should.be.a('string');
+      DateController.prototype.format.should.have.been.calledWith(req);
     });
 
-    it('formats the date property to GDS style date', function () {
-      req.form.values['date-of-birth-error-day'] = '01';
-      req.form.values['date-of-birth-error-month'] = '11';
-      req.form.values['date-of-birth-error-year'] = '1982';
-
-      controller.saveValues(req, res, callback);
-
-      req.form.values['date-of-birth-error-formatted'].should.equal('1 December 1982');
-    });
-
-    it('does not add a formatted date property if user hasnt entered a date', function () {
-      controller.saveValues(req, res, callback);
-
-      should.not.exist(req.form.values['date-of-birth-error-formatted']);
-    });
-
-    it('sets next page to conditions-and-length if conditions is checked', function () {
+    it('redirects to "/conditions-and-length" if conditions is checked', function () {
       req.form.values['conditions-error-checkbox'] = 'true';
       controller.saveValues(req, res, callback);
 
       controller.options.next.should.equal('/conditions-and-length');
+      Controller.prototype.saveValues.should.have.been.calledWith(req, res, callback);
+    });
+
+    it('redirects to "/truncated" if user entered first name is more than 30 characters', function () {
+      req.form.values['first-name-error-checkbox'] = 'true';
+      req.form.values['first-name-error'] = 'foobarbazfoobarbazfoobarbazfoobarbaz';
+
+      controller.saveValues(req, res, callback);
+
+      controller.options.next.should.equal('/truncated');
+      req.sessionModel.set.should.have.been.calledWith('truncated-items', [{id: 'first-name-error'}]);
+      Controller.prototype.saveValues.should.have.been.calledWith(req, res, callback);
+    });
+
+    it('redirects to "/truncated" if user entered last name is more than 30 characters', function () {
+      req.form.values['last-name-error-checkbox'] = 'true';
+      req.form.values['last-name-error'] = 'foobarbazfoobarbazfoobarbazfoobarbaz';
+
+      controller.saveValues(req, res, callback);
+
+      controller.options.next.should.equal('/truncated');
+      req.sessionModel.set.should.have.been.calledWith('truncated-items', [{id: 'last-name-error'}]);
+      Controller.prototype.saveValues.should.have.been.calledWith(req, res, callback);
     });
 
   });
