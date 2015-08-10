@@ -45,6 +45,7 @@ module.exports = {
   },
   '/truncated': {
     controller: require('../../controllers/truncated'),
+    prereqs: ['/about-error'],
     template: 'correct-mistakes/truncated.html',
     fields: [
       'truncated',
@@ -53,6 +54,7 @@ module.exports = {
     next: '/same-address'
   },
   '/exit-truncated': {
+    controller: require('../../controllers/exit-truncated'),
     template: 'correct-mistakes/exit-truncated.html'
   },
   '/same-address': {
