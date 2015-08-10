@@ -49,7 +49,7 @@ When(/^I proceed to Step Five$/) do
 end                                                                          
                                                                              
 Then(/^I see all the values I have entered in the previous steps$/) do
-  page.should have_content('Is the information you gave us correct?')
+  page.should have_content('Is the information you have given us correct?')
   page.should have_content('Outwood Ln, Coulsdon, Surrey, CR5 3NP')
   page.should have_content('Alex Murphy')
   page.should have_content('17-08-1988')

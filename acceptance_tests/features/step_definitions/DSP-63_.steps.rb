@@ -4,7 +4,7 @@ When(/^I go to Step Six of the error form$/) do
   click_button('Start')
   page.should have_content('Step 1 of 5')
   check('last-name-error-checkbox')
-  fill_in('last-name-error', :with => 'reasonable')
+  fill_in('last-name-error', :with => 'Reasonable')
   click_button('Continue')
   choose('address-match-no')
   fill_in('address-street', :with => '2 Marsham Street')
@@ -18,7 +18,7 @@ When(/^I go to Step Six of the error form$/) do
   fill_in('nationality', :with => 'Chinese')
   page.status_code.should == 302
   click_button('Continue')
-  fill_in('email', :with => 'alex.murphy@uksogeti.com')
+  fill_in('email', :with => 'brpapp15@gmail.com')
   page.status_code.should == 302
   click_button('Continue')
   choose('org-help-no')

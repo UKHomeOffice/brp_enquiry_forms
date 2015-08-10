@@ -3,3 +3,9 @@ dev_host: 'http://localhost:8080/not-arrived'
 error_host: 'http://localhost:8080/correct-mistakes'
 
 lost_host: 'http://localhost:8080/lost-stolen-damaged'
+
+devnotprod_host: 'https://brp-dev.notprod.homeoffice.gov.uk/not-arrived'
+
+errornotprod_host: 'https://brp-dev.notprod.homeoffice.gov.uk/correct-mistakes'
+
+lostnotprod_host: 'https://brp-dev.notprod.homeoffice.gov.uk/lost-stolen-damaged'
