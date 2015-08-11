@@ -31,7 +31,7 @@ describe('controllers/about-error', function () {
       controller = new AboutErrorController({template: 'index'});
     });
 
-    it('calls the parent controller', function () {
+    it('calls the parent controller saveValues', function () {
       controller.saveValues(req, res, callback);
 
       Controller.prototype.saveValues.should.have.been.calledOnce;

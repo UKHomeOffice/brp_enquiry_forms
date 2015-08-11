@@ -1,6 +1,6 @@
 'use strict';
 
-var Controller = require('hmpo-form-wizard').Controller;
+var Controller = require('../../../lib/base-controller');
 var ContactDetailsController = require('../../../controllers/contact-details');
 
 describe('controllers/contact-details', function () {

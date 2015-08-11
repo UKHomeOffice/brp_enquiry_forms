@@ -1,7 +1,7 @@
 'use strict';
 
 var util = require('util');
-var Controller = require('../lib/base-wizard').Controller;
+var Controller = require('../lib/base-controller');
 
 var Start = function Start() {
   Controller.apply(this, arguments);
