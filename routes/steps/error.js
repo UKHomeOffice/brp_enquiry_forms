@@ -41,6 +41,7 @@ module.exports = {
     next: '/same-address'
   },
   '/conditions-and-length': {
+    prereqs: ['/about-error'],
     template: 'correct-mistakes/conditions-and-length.html'
   },
   '/truncated': {
@@ -54,7 +55,7 @@ module.exports = {
     next: '/same-address'
   },
   '/exit-truncated': {
-    controller: require('../../controllers/exit-truncated'),
+    prereqs: ['/truncated'],
     template: 'correct-mistakes/exit-truncated.html'
   },
   '/same-address': {
