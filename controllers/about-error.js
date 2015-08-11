@@ -2,8 +2,8 @@
 
 var util = require('util');
 var DateController = require('../lib/date-controller');
-var Controller = require('../lib/base-wizard').Controller;
-var ErrorClass = require('../lib/base-wizard').Error;
+var Controller = require('../lib/base-controller');
+var ErrorClass = require('../lib/base-error');
 var _ = require('underscore');
 
 var AboutErrorController = function AboutErrorController() {

@@ -1,6 +1,6 @@
 'use strict';
 
-var Controller = require('hmpo-form-wizard').Controller;
+var Controller = require('../../../lib/base-controller');
 var DateController = require('../../../lib/date-controller');
 var LetterReceivedController = require('../../../controllers/letter-received');
 var moment = require('moment');

@@ -1,17 +1,15 @@
 'use strict';
 
-var wizard = {
-  Controller: sinon.stub()
-};
-
-wizard.Controller.prototype.validateField = sinon.stub();
+var Controller = sinon.stub();
+Controller.prototype = {};
+Controller.prototype.validateField = sinon.stub();
 
 var moment = require('moment');
 var proxyquire = require('proxyquire');
 var DateController = proxyquire('../../../lib/date-controller', {
-  '../lib/base-wizard': wizard
+  '../lib/base-controller': Controller
 });
-var ErrorClass = require('hmpo-form-wizard').Error;
+var ErrorClass = require('../../../lib/base-error');
 
 describe('lib/date-controller', function () {
 
@@ -24,8 +22,8 @@ describe('lib/date-controller', function () {
   });
 
   describe('instantiated', function () {
-    it('calls wizard Controller with the arguments', function () {
-      wizard.Controller.should.have.been.calledWith(args);
+    it('calls Controller with the arguments', function () {
+      Controller.should.have.been.called;
     });
   });
 
@@ -112,7 +110,7 @@ describe('lib/date-controller', function () {
 
     describe('when the key is not a date', function () {
       it('calls the parent class validateField', function () {
-        wizard.Controller.prototype.validateField.returns('parent controller');
+        Controller.prototype.validateField.returns('parent controller');
 
         controller.validateField('first-name', req).should.equal('parent controller');
       });
