@@ -8,7 +8,7 @@ var morgan = require('morgan');
 
 var session = require('express-session');
 var redis = require('redis');
-var RedisStore = require('connect-redis')(session);
+var RedisStore = require('connect-redis-crypto')(session);
 
 require('moment-business');
 
@@ -53,7 +53,8 @@ client.on('error', function clientErrorHandler(e) {
 
 var redisStore = new RedisStore({
   client: client,
-  ttl: config.session.ttl
+  ttl: config.session.ttl,
+  secret: config.session.secret
 });
 
 function secureCookies(req, res, next) {

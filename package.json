@@ -25,7 +25,7 @@
   "dependencies": {
     "body-parser": "^1.13.0",
     "browserify": "^10.2.4",
-    "connect-redis": "^2.3.0",
+    "connect-redis-crypto": "^2.1.0",
     "cookie-parser": "^1.3.5",
     "express": "^4.12.4",
     "express-partial-templates": "^0.1.0",
