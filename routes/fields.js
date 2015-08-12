@@ -52,10 +52,11 @@ module.exports = {
     options: [{
       value: 'yes',
       label: 'fields.address-match.options.yes.label',
+      toggle: 'delivery-details-fieldset'
     }, {
       value: 'no',
       label: 'fields.address-match.options.no.label',
-      toggle: 'new-address-group'
+      toggle: 'new-adddress-fieldset'
     }]
   },
   'address-street': {
