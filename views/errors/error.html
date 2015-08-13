@@ -1,0 +1,15 @@
+{{<layout}}
+
+{{$header}}
+    {{content.title}}
+{{/header}}
+
+{{$content}}
+    <p>{{content.message}}</p>
+    <a href="{{index}}" class="button" role="button">Start again</a>
+    {{#showStack}}
+      {{err.stack}}
+    {{/showStack}}
+{{/content}}
+
+{{/layout}}

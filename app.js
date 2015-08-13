@@ -87,6 +87,8 @@ app.use(initSession);
 
 app.use(require('./routes'));
 
+app.use(require('./errors/'));
+
 /*eslint camelcase: 0*/
 app.listen(config.port, config.listen_host);
 /*eslint camelcase: 1*/
