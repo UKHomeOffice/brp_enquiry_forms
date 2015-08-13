@@ -56,7 +56,7 @@ module.exports = {
     }, {
       value: 'no',
       label: 'fields.address-match.options.no.label',
-      toggle: 'new-adddress-fieldset'
+      toggle: 'new-address-fieldset'
     }]
   },
   'address-street': {
