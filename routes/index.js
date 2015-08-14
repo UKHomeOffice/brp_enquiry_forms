@@ -29,5 +29,8 @@ app.use('/lost-stolen-damaged/', wizard(lostSteps, fields, {
 app.use('/cookies', function cookies(req, res) {
   res.render('cookies');
 });
+app.use('/terms', function cookies(req, res) {
+  res.render('terms');
+});
 
 module.exports = app;
