@@ -14,7 +14,9 @@
     {{<partials-validation-list}}
         {{$validation-list}}
             {{#errorlist}}
-                <li><a href="#{{key}}-group">{{ message }}</a></li>
+                {{#message}}
+                  <li><a href="#{{key}}-group">{{ message }}</a></li>
+                {{/message}}
             {{/errorlist}}
         {{/validation-list}}
     {{/partials-validation-list}}
