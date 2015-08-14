@@ -370,7 +370,10 @@
   },
   "journeys": {
     "error": {
-      "header": "Report a problem with your new BRP"
+      "header": "Report a problem with your new BRP",
+      "same-address": {
+        "header": "Is your address still the same as the one your BRP was sent to?"
+      }
     },
     "lost": {
       "header": "Report a lost or stolen BRP",
@@ -387,6 +390,9 @@
       "personal-details": {
         "header": "What are your personal details?",
         "subheader": "We need these details to find out what has happened to your BRP."
+      },
+      "same-address": {
+        "header": "Is your address still the same as the one on the letter from the Home Office?"
       }
     }
   },
