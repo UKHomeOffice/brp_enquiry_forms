@@ -1,0 +1,37 @@
+{{#data}}
+  You have reported your BRP as lost or stolen
+
+  Dear {{fullname}}
+
+  You should hear from us in the next working day. We will tell you if you need to apply for a replacement BRP.
+
+  Here is the information you have sent us:
+
+  {{#t}}pages.check-details-error.personal-details-table.headers.fullname{{/t}}
+  {{fullname}}
+
+  {{#t}}pages.check-details-error.personal-details-table.headers.date-of-birth{{/t}}
+  {{date-of-birth-day}}-{{date-of-birth-month}}-{{date-of-birth-year}}
+
+  {{#t}}pages.check-details-error.personal-details-table.headers.nationality{{/t}}
+  {{nationality}}
+
+  {{#address-street}}
+    {{#t}}emails.lost-stolen.address{{/t}}
+    {{address-street}},
+    {{address-town}},
+    {{#address-county}}{{address-county}},{{/address-county}}
+    {{address-postcode}}
+  {{/address-street}}
+
+  {{#phone}}
+    {{#t}}emails.phone{{/t}}
+    {{phone}}
+  {{/phone}}
+
+{{/data}}
+
+
+If you're unsure an email is from UKVI:
+ * do not reply to it or click any links
+ * forward it to phishing@homeoffice.gsi.gov.uk

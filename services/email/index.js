@@ -12,8 +12,10 @@ var path = require('path');
 var customerHtmlTemplates = {
   error: fs.readFileSync(
     path.resolve(__dirname, './templates/customer/html/error.mus')).toString('utf8'),
-  'lost-or-stolen': fs.readFileSync(
-    path.resolve(__dirname, './templates/customer/html/lost_or_stolen.mus')).toString('utf8'),
+  'lost-or-stolen-uk': fs.readFileSync(
+    path.resolve(__dirname, './templates/customer/html/lost_or_stolen_uk.mus')).toString('utf8'),
+  'lost-or-stolen-abroad': fs.readFileSync(
+    path.resolve(__dirname, './templates/customer/html/lost_or_stolen_abroad.mus')).toString('utf8'),
   delivery: fs.readFileSync(
     path.resolve(__dirname, './templates/customer/html/delivery.mus')).toString('utf8')
 };
@@ -21,8 +23,10 @@ var customerHtmlTemplates = {
 var customerPlainTextTemplates = {
   error: fs.readFileSync(
     path.resolve(__dirname, './templates/customer/plain/error.mus')).toString('utf8'),
-  'lost-or-stolen': fs.readFileSync(
-    path.resolve(__dirname, './templates/customer/plain/lost_or_stolen.mus')).toString('utf8'),
+  'lost-or-stolen-uk': fs.readFileSync(
+    path.resolve(__dirname, './templates/customer/plain/lost_or_stolen_uk.mus')).toString('utf8'),
+  'lost-or-stolen-abroad': fs.readFileSync(
+    path.resolve(__dirname, './templates/customer/plain/lost_or_stolen_abroad.mus')).toString('utf8'),
   delivery: fs.readFileSync(
     path.resolve(__dirname, './templates/customer/plain/delivery.mus')).toString('utf8')
 };
@@ -30,7 +34,9 @@ var customerPlainTextTemplates = {
 var caseworkerHtmlTemplates = {
   error: fs.readFileSync(
     path.resolve(__dirname, './templates/caseworker/html/error.mus')).toString('utf8'),
-  'lost-or-stolen': fs.readFileSync(
+  'lost-or-stolen-uk': fs.readFileSync(
+    path.resolve(__dirname, './templates/caseworker/html/lost_or_stolen.mus')).toString('utf8'),
+  'lost-or-stolen-abroad': fs.readFileSync(
     path.resolve(__dirname, './templates/caseworker/html/lost_or_stolen.mus')).toString('utf8'),
   delivery: fs.readFileSync(
     path.resolve(__dirname, './templates/caseworker/html/delivery.mus')).toString('utf8')
@@ -39,7 +45,9 @@ var caseworkerHtmlTemplates = {
 var caseworkerPlainTextTemplates = {
   error: fs.readFileSync(
     path.resolve(__dirname, './templates/caseworker/plain/error.mus')).toString('utf8'),
-  'lost-or-stolen': fs.readFileSync(
+  'lost-or-stolen-uk': fs.readFileSync(
+    path.resolve(__dirname, './templates/caseworker/plain/lost_or_stolen.mus')).toString('utf8'),
+  'lost-or-stolen-abroad': fs.readFileSync(
     path.resolve(__dirname, './templates/caseworker/plain/lost_or_stolen.mus')).toString('utf8'),
   delivery: fs.readFileSync(
     path.resolve(__dirname, './templates/caseworker/plain/delivery.mus')).toString('utf8')
