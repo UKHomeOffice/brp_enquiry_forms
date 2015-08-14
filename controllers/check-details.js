@@ -11,17 +11,24 @@ var Submit = function Submit() {
 };
 
 var serviceMap = {
-  '/not-arrived/check-details': {
-    template: 'delivery',
-    subject: 'Form submitted: Your BRP hasn\'t arrived'
+  '/not-arrived/check-details': function notArrived() {
+    return {
+      template: 'delivery',
+      subject: 'Form submitted: Your BRP hasn\'t arrived'
+    };
   },
-  '/correct-mistakes/check-details': {
-    template: 'error',
-    subject: 'Form submitted: Report a problem with your new BRP'
+  '/correct-mistakes/check-details': function correctMistakes() {
+    return {
+      template: 'error',
+      subject: 'Form submitted: Report a problem with your new BRP'
+    };
   },
-  '/lost-stolen-damaged/check-details': {
-    template: 'lost-or-stolen',
-    subject: 'Form submitted: Report a lost or stolen BRP'
+  '/lost-stolen-damaged/check-details': function lostStolenDamaged(data) {
+    var suffix = (data['inside-uk'] === 'yes') ? '-uk' : '-abroad';
+    return {
+      template: 'lost-or-stolen' + suffix,
+      subject: 'Form submitted: Report a lost or stolen BRP'
+    };
   }
 };
 
@@ -30,10 +37,11 @@ util.inherits(Submit, Controller);
 Submit.prototype.saveValues = function saveValues(req, res, callback) {
   var data = _.pick(req.sessionModel.toJSON(), _.identity);
   var model = new Model(data);
+  var service = serviceMap[req.originalUrl] && serviceMap[req.originalUrl](data);
 
-  if (serviceMap[req.originalUrl]) {
-    model.set('template', serviceMap[req.originalUrl].template);
-    model.set('subject', serviceMap[req.originalUrl].subject);
+  if (service) {
+    model.set('template', service.template);
+    model.set('subject', service.subject);
   } else {
     throw new Error('no service found');
   }

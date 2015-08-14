@@ -54,17 +54,11 @@
               <td width="75%" style="font-family: Helvetica, Arial, sans-serif;">
                 {{#data}}
 
-                  <p style="font-size: 23px; color: #000; line-height: 1.32; margin: 0 0 20px 0;">Form submitted: Report a lost or stolen BRP</p>
+                  <p style="font-size: 23px; color: #000; line-height: 1.32; margin: 0 0 20px 0;">You have reported your BRP as lost or stolen</p>
 
                   <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">Dear {{fullname}}</p>
 
-                  <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">You should hear from us in the <strong>next working day</strong>, where we will tell you what to do.</p>
-
-                  <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">As you are outside the UK you may need to apply for a temporary ‘replacement BRP visa’ which you can use to get back to the UK</p>
-
-                  <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">You must apply online for a <a href="https://www.gov.uk/apply-uk-visa">replacement BRP visa</a> in most countries.</p>
-
-                  <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">You will need to apply for a replacement BRP within 1 month of being back in the UK.</p>
+                  <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">You should hear from us in the <strong>next working day</strong>. We will tell you if you need to apply for a replacement BRP.</p>
 
                   <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">Here is the information you have sent us:</p>
 

@@ -52,11 +52,20 @@ describe('controllers/check-details', function () {
       modelProto.set.should.have.been.calledWith('template', 'error');
     });
 
-    it('sets a template for lost or stolen journey', function () {
+    it('sets a template for lost or stolen inside uk journey', function () {
       req.originalUrl = '/lost-stolen-damaged/check-details';
+      req.sessionModel.toJSON.returns({'inside-uk': 'yes'});
       controller.saveValues(req, res, callback);
 
-      modelProto.set.should.have.been.calledWith('template', 'lost-or-stolen');
+      modelProto.set.should.have.been.calledWith('template', 'lost-or-stolen-uk');
+    });
+
+    it('sets a template for lost or stolen outside uk journey', function () {
+      req.originalUrl = '/lost-stolen-damaged/check-details';
+      req.sessionModel.toJSON.returns({'inside-uk': 'no'});
+      controller.saveValues(req, res, callback);
+
+      modelProto.set.should.have.been.calledWith('template', 'lost-or-stolen-abroad');
     });
 
     it('throws an error if its not part of a recognised journey', function () {
