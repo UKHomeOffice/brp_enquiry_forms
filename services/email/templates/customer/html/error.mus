@@ -82,10 +82,12 @@
                       <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.check-details-error.personal-details-table.headers.nationality{{/t}}</p></td>
                       <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{nationality}}</p></td>
                     </tr>
+                    {{#brp-card}}
                     <tr style="border-top: 1px solid #009390;">
                       <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.check-details-error.personal-details-table.headers.brp-card-number{{/t}}</p></td>
                       <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{brp-card}}</p></td>
                     </tr>
+                    {{/brp-card}}
                   </table>
 
                   <p style="font-size: 19px; font-weight: bold; color: #000; line-height: 1.32; margin: 0 0 10px 0;">Reported errors</p>
@@ -114,7 +116,7 @@
                     {{#date-of-birth-error-day}}
                       <tr style="border-top: 1px solid #009390;">
                         <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}fields.date-of-birth-error-checkbox.label{{/t}}</p></td>
-                        <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{date-of-birth-e</rror-formatted}}</td>
+                        <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{date-of-birth-error-formatted}}</p></td>
                       </tr>
                     {{/date-of-birth-error-day}}
 
@@ -128,7 +130,7 @@
                     {{#sponsor-details-error}}
                       <tr style="border-top: 1px solid #009390;">
                         <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}fields.sponsor-details-error-checkbox.label{{/t}}</p></td>
-                        <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{sponsor-details-er</ror}}</td>
+                        <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{sponsor-details-error}}</p></td>
                       </tr>
                     {{/sponsor-details-error}}
 
@@ -167,7 +169,7 @@
                       </tr>
                     {{/conditions-error}}
                   </table>
-                  {{#address-match}}
+                  {{#address-street}}
                     <p style="font-size: 19px; font-weight: bold; color: #000; line-height: 1.32; margin: 0 0 10px 0;">New Address</p>
                     <table width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#FFFFFF" style="margin: 0 0 20px 0;">
                       <tr style="border-top: 1px solid #009390;">
@@ -182,7 +184,7 @@
                         </td>
                       </tr>
                     </table>
-                  {{/address-match}}
+                  {{/address-street}}
 
                   <p style="font-size: 19px; font-weight: bold; color: #000; line-height: 1.32; margin: 0 0 10px 0;">Contact details</p>
                   <table width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#FFFFFF" style="margin: 0 0 20px 0;">

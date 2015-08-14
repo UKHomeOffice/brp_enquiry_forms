@@ -42,14 +42,14 @@
     {{birth-place-error}}
   {{/birth-place-error}}
 
-  {{#date-of-birth-error-day}}
+  {{#date-of-birth-error-formatted}}
     {{#t}}fields.date-of-birth-error-checkbox.label{{/t}}
     {{date-of-birth-error-formatted}}
-  {{/date-of-birth-error-day}}
+  {{/date-of-birth-error-formatted}}
 
   {{#gender-error}}
-      {{#t}}fields.gender-error-checkbox.label{{/t}}
-      {{gender-error}}
+    {{#t}}fields.gender-error-checkbox.label{{/t}}
+    {{gender-error}}
   {{/gender-error}}
 
   {{#sponsor-details-error}}
