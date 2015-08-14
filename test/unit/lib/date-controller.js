@@ -190,7 +190,7 @@ describe('lib/date-controller', function () {
 
       controller.format(req);
 
-      req.form.values['date-formatted'].should.equal('1 December 1982');
+      req.form.values['date-formatted'].should.equal('1 November 1982');
     });
   });
 
