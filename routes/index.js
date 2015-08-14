@@ -9,23 +9,21 @@ var wizard = require('hmpo-form-wizard');
 var mixins = require('hmpo-template-mixins');
 var i18n = require('i18n-future')();
 
-var deliveryWizard = wizard(deliverySteps, fields, {
-  translate: i18n.translate.bind(i18n),
-  controller: require('../lib/base-controller')
-});
-var errorWizard = wizard(errorSteps, fields, {
-  translate: i18n.translate.bind(i18n),
-  controller: require('../lib/base-controller')
-});
-var lostWizard = wizard(lostSteps, fields, {
-  translate: i18n.translate.bind(i18n),
-  controller: require('../lib/base-controller')
-});
-
 app.use(mixins(i18n.translate.bind(i18n), fields));
 
-app.use('/not-arrived/', deliveryWizard);
-app.use('/correct-mistakes/', errorWizard);
-app.use('/lost-stolen-damaged/', lostWizard);
+app.use('/not-arrived/', wizard(deliverySteps, fields, {
+  translate: i18n.translate.bind(i18n),
+  controller: require('../lib/base-controller')
+}));
+
+app.use('/correct-mistakes/', wizard(errorSteps, fields, {
+  translate: i18n.translate.bind(i18n),
+  controller: require('../lib/base-controller')
+}));
+
+app.use('/lost-stolen-damaged/', wizard(lostSteps, fields, {
+  translate: i18n.translate.bind(i18n),
+  controller: require('../lib/base-controller')
+}));
 
 module.exports = app;
