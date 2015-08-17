@@ -118,6 +118,22 @@ describe('base-controller', function () {
 
       });
 
+      describe('when there\'s no next step but clearSession is false', function () {
+
+        beforeEach(function () {
+          controller = new Controller({template: 'foo'});
+          controller.options = {
+            clearSession: false
+          };
+          controller.getValues(req, res, callback);
+        });
+
+        it('resets the session', function () {
+          req.sessionModel.reset.should.not.have.been.calledOnce;
+        });
+
+      });
+
       describe('when clearSession is set', function () {
 
         beforeEach(function () {

@@ -3,17 +3,17 @@
 var util = require('util');
 var Controller = require('../lib/base-controller');
 
-var OnTheWay = function OnTheWayController() {
+var OnTheWayController = function OnTheWayController() {
   Controller.apply(this, arguments);
 };
 
-util.inherits(OnTheWay, Controller);
+util.inherits(OnTheWayController, Controller);
 
 function weekDayRange(req) {
   return req.sessionModel.get('week-day-range');
 }
 
-OnTheWay.prototype.locals = function onTheWayLocals(req, res) {
+OnTheWayController.prototype.locals = function onTheWayLocals(req, res) {
   return {
     baseUrl: req.baseUrl,
     nextPage: this.getNextStep(req, res),
@@ -21,4 +21,4 @@ OnTheWay.prototype.locals = function onTheWayLocals(req, res) {
   };
 };
 
-module.exports = OnTheWay;
+module.exports = OnTheWayController;

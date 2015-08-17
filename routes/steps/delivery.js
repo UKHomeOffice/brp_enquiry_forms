@@ -24,7 +24,9 @@ module.exports = {
   },
   '/on-the-way': {
     controller: require('../../controllers/on-the-way'),
+    prereqs: ['/letter-received'],
     template: 'not-arrived/on-the-way',
+    clearSession: false
   },
   '/same-address': {
     controller: require('../../controllers/same-address'),
