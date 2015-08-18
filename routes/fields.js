@@ -12,7 +12,7 @@ module.exports = {
   },
   received: {
     validate: ['required'],
-    display: 'inline',
+    display: 'inline form-group',
     options: [{
       value: 'yes',
       label: 'fields.received.options.yes.label',
