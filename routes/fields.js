@@ -12,7 +12,7 @@ module.exports = {
   },
   received: {
     validate: ['required'],
-    display: 'inline form-group',
+    className: 'inline form-group',
     options: [{
       value: 'yes',
       label: 'fields.received.options.yes.label',
@@ -48,7 +48,7 @@ module.exports = {
   },
   'address-match': {
     validate: ['required'],
-    display: 'inline',
+    className: 'inline',
     options: [{
       value: 'yes',
       label: 'fields.address-match.options.yes.label',
@@ -111,7 +111,7 @@ module.exports = {
     label: 'fields.email.label'
   },
   'no-email': {
-    display: 'inline',
+    className: 'inline',
     label: 'fields.no-email.label',
     toggle: 'address-group'
   },
@@ -175,8 +175,7 @@ module.exports = {
   },
   'gender-error': {
     validate: ['required'],
-    display: 'block',
-    className: 'panel-indent',
+    className: 'panel-indent block',
     options: [{
       value: 'female',
       label: 'fields.gender-error.options.female.label'
@@ -242,7 +241,7 @@ module.exports = {
   },
   'truncated': {
     validate: ['required'],
-    display: 'inline',
+    className: 'inline',
     options: [{
       value: 'yes',
       label: 'fields.truncated.options.yes.label'
@@ -256,7 +255,7 @@ module.exports = {
   },
   'inside-uk': {
     validate: ['required'],
-    display: 'inline',
+    className: 'inline',
     options: [{
       value: 'yes',
       label: 'fields.inside-uk.options.yes.label',
@@ -292,7 +291,7 @@ module.exports = {
   },
   'org-help': {
     validate: ['required'],
-    display: 'inline',
+    className: 'inline',
     options: [{
       value: 'yes',
       label: 'fields.org-help.options.yes.label',
