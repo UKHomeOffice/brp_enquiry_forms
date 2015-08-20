@@ -12,7 +12,7 @@ module.exports = {
   },
   received: {
     validate: ['required'],
-    className: 'inline form-group',
+    className: ['inline', 'form-group'],
     options: [{
       value: 'yes',
       label: 'fields.received.options.yes.label',
@@ -48,7 +48,7 @@ module.exports = {
   },
   'address-match': {
     validate: ['required'],
-    className: 'inline',
+    className: ['inline', 'form-group'],
     options: [{
       value: 'yes',
       label: 'fields.address-match.options.yes.label',
@@ -255,7 +255,7 @@ module.exports = {
   },
   'inside-uk': {
     validate: ['required'],
-    className: 'inline',
+    className: ['inline', 'form-group'],
     options: [{
       value: 'yes',
       label: 'fields.inside-uk.options.yes.label',
