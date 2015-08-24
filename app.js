@@ -4,13 +4,14 @@ var express = require('express');
 var app = express();
 var path = require('path');
 var logger = require('./lib/logger');
+var churchill = require('churchill');
 var session = require('express-session');
 var redis = require('redis');
 var RedisStore = require('connect-redis-crypto')(session);
-
+var config = require('./config');
 require('moment-business');
 
-var config = require('./config');
+app.use(churchill(logger));
 
 if (config.env === 'development') {
   app.use('/public', express.static(path.resolve(__dirname, './public')));
