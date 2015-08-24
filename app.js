@@ -3,24 +3,18 @@
 var express = require('express');
 var app = express();
 var path = require('path');
-var debug = require('debug')('index');
-var morgan = require('morgan');
-
+var logger = require('./lib/logger');
+var churchill = require('churchill');
 var session = require('express-session');
 var redis = require('redis');
 var RedisStore = require('connect-redis-crypto')(session);
-
+var config = require('./config');
 require('moment-business');
 
-var config = require('./config');
+app.use(churchill(logger));
 
 if (config.env === 'development') {
   app.use('/public', express.static(path.resolve(__dirname, './public')));
-}
-
-if (config.env !== 'development' && config.env !== 'travis') {
-  // use morgan in production
-  app.use(morgan('combined'));
 }
 
 app.use(function setAssetPath(req, res, next) {
@@ -93,4 +87,4 @@ app.use(require('./errors/'));
 app.listen(config.port, config.listen_host);
 /*eslint camelcase: 1*/
 
-debug('App listening on port %o', config.port);
+logger.info('App listening on port', config.port);
