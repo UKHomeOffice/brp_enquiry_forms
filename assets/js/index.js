@@ -2,8 +2,10 @@
 
 var helpers = require('hmpo-frontend-toolkit').helpers;
 var progressiveReveal = require('hmpo-frontend-toolkit').progressiveReveal;
+var formFocus = require('hmpo-frontend-toolkit').formFocus;
 
 helpers.documentReady(progressiveReveal);
+helpers.documentReady(formFocus);
 
 var $ = require('jquery');
 var typeahead = require('typeahead.js-browserify');
