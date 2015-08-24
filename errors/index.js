@@ -2,6 +2,7 @@
 
 var i18n = require('i18n-future')();
 var config = require('../config');
+var logger = require('../lib/logger');
 
 /*eslint no-unused-vars: 0*/
 module.exports = function errorHandler(err, req, res, next) {
@@ -18,6 +19,8 @@ module.exports = function errorHandler(err, req, res, next) {
   content.message = content.message || i18n.translate('errors.default.message');
 
   res.statusCode = err.status || 500;
+
+  logger.error(err.message || err.error, err);
 
   res.render(err.template, {
     error: err,

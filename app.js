@@ -3,8 +3,7 @@
 var express = require('express');
 var app = express();
 var path = require('path');
-var debug = require('debug')('index');
-
+var logger = require('./lib/logger');
 var session = require('express-session');
 var redis = require('redis');
 var RedisStore = require('connect-redis-crypto')(session);
@@ -87,4 +86,4 @@ app.use(require('./errors/'));
 app.listen(config.port, config.listen_host);
 /*eslint camelcase: 1*/
 
-debug('App listening on port %o', config.port);
+logger.info('App listening on port', config.port);
