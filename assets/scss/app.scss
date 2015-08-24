@@ -8,7 +8,7 @@ $path: "../img/";
 
 
 .phase-banner {
-  @include phase-banner();
+  @include phase-banner(beta);
 }
 
 #step {
