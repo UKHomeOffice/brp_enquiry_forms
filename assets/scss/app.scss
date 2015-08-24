@@ -68,14 +68,12 @@ h1 {
 }
 
 //custom form styling
-
 .form-control {
   padding: 0.5em;
-}
 
-.form-date {
-  border-left: none;
-  padding-left: 0;
+  @include media(desktop) {
+    width: 65%;
+  }
 }
 
 .form-group {
@@ -84,9 +82,13 @@ h1 {
 
 // GOVUK Elements `.form-date` overrides
 .form-date {
+    border-left: none;
+    padding-left: 0;
+
     label {
         @include core-19();
     }
+
     .form-group {
         input {
             &[id$="-year"] {
@@ -94,4 +96,8 @@ h1 {
             }
         }
     }
+}
+
+#delivery-details {
+  width: 100%;
 }
