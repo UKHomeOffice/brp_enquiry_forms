@@ -23,18 +23,7 @@
       {{$form}}
 
         <table>
-          {{#values.contact-address-street}}
-            <tr>
-              <td>{{#t}}pages.check-details.table.headers.contact-address{{/t}}</td>
-              <td>
-                {{values.contact-address-street}},
-                {{values.contact-address-town}},
-                {{#values.contact-address-county}}{{values.contact-address-county}},{{/values.contact-address-county}}
-                {{values.contact-address-postcode}}
-              </td>
-              <td><a href="contact-details#contact-address-street" class="button">{{#t}}buttons.change{{/t}}</a></td>
-            </tr>
-          {{/values.contact-address-street}}
+
           <tr>
             <td>{{#t}}pages.check-details.table.headers.fullname{{/t}}</td>
             <td>{{values.fullname}}</td>
@@ -50,6 +39,20 @@
             <td>{{values.nationality}}</td>
             <td><a href="personal-details#nationality" class="button">{{#t}}buttons.change{{/t}}</a></td>
           </tr>
+          {{#values.no-email}}
+          {{#values.contact-address-street}}
+            <tr>
+              <td>{{#t}}pages.check-details.table.headers.contact-address{{/t}}</td>
+              <td>
+                {{values.contact-address-street}},
+                {{values.contact-address-town}},
+                {{#values.contact-address-county}}{{values.contact-address-county}},{{/values.contact-address-county}}
+                {{values.contact-address-postcode}}
+              </td>
+              <td><a href="contact-details#contact-address-street" class="button">{{#t}}buttons.change{{/t}}</a></td>
+            </tr>
+          {{/values.contact-address-street}}
+          {{/values.no-email}}
           {{#values.passport}}
             <tr>
               <td>{{#t}}pages.check-details.table.headers.passport{{/t}}</td>
