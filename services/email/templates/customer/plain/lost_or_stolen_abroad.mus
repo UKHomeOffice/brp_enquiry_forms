@@ -20,13 +20,13 @@
   {{#t}}pages.check-details-error.personal-details-table.headers.nationality{{/t}}
   {{nationality}}
 
-  {{#address-street}}
-    {{#t}}emails.lost-stolen.address{{/t}}
-    {{address-street}},
-    {{address-town}},
-    {{#address-county}}{{address-county}},{{/address-county}}
-    {{address-postcode}}
-  {{/address-street}}
+  {{#contact-address-street}}
+    {{#t}}emails.address{{/t}}
+    {{contact-address-street}},
+    {{contact-address-town}},
+    {{#contact-address-county}}{{contact-address-county}},{{/contact-address-county}}
+    {{contact-address-postcode}}
+  {{/contact-address-street}}
 
   {{#phone}}
     {{#t}}emails.phone{{/t}}

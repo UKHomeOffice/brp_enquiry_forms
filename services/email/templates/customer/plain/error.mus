@@ -23,8 +23,18 @@
   {{#t}}pages.check-details-error.personal-details-table.headers.nationality{{/t}}</p></td>
   {{nationality}}
 
-  {{#t}}pages.check-details-error.personal-details-table.headers.brp-card-number{{/t}}</p></td>
-  {{brp-card}}
+  {{#brp-card}}
+    {{#t}}pages.check-details-error.personal-details-table.headers.brp-card-number{{/t}}
+    {{brp-card}}
+  {{/brp-card}}
+
+  {{#address-street}}
+    {{#t}}pages.check-details.table.headers.address{{/t}}
+    {{address-street}},
+    {{address-town}},
+    {{#address-county}}{{address-county}},{{/address-county}}
+    {{address-postcode}}
+  {{/address-street}}
 
   Reported errors
   {{#first-name-error}}
@@ -82,24 +92,26 @@
     {{conditions-error}}
   {{/conditions-error}}
 
-  {{#address-match}}
-    New Address
-    {{#t}}pages.check-details.table.headers.address{{/t}}
-    {{address-street}},
-    {{address-town}},
-    {{#address-county}}{{address-county}},{{/address-county}}
-    {{address-postcode}}
-  {{/address-match}}
-
   Contact details
+
+  {{#contact-address-street}}
+    {{#t}}emails.address{{/t}}
+    {{contact-address-street}},
+    {{contact-address-town}},
+    {{#contact-address-county}}{{contact-address-county}},{{/contact-address-county}}
+    {{contact-address-postcode}}
+  {{/contact-address-street}}
+
   {{#email}}
     {{#t}}fields.email.label{{/t}}
     {{email}}
   {{/email}}
+
   {{#phone}}
     {{#t}}fields.phone.label{{/t}}
     {{phone}}
   {{/phone}}
+
 {{/data}}
 
 If you're unsure an email is from UKVI:

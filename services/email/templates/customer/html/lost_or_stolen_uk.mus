@@ -75,19 +75,19 @@
                       <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.check-details-error.personal-details-table.headers.nationality{{/t}}</p></td>
                       <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{nationality}}</p></td>
                     </tr>
-                    {{#address-street}}
+                    {{#contact-address-street}}
                       <tr style="border-top: 1px solid #009390;">
-                        <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}emails.address{{/t}}</p></td>
+                        <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.check-details.table.headers.contact-address{{/t}}</p></td>
                         <td width="75%">
                           <p style="font-size: 16px; color: #000; margin: 10px 0;">
-                            {{address-street}},
-                            {{address-town}},
-                            {{#address-county}}{{address-county}},{{/address-county}}
-                            {{address-postcode}}
+                            {{contact-address-street}},
+                            {{contact-address-town}},
+                            {{#contact-address-county}}{{contact-address-county}},{{/contact-address-county}}
+                            {{contact-address-postcode}}
                           </p>
                         </td>
                       </tr>
-                    {{/address-street}}
+                    {{/contact-address-street}}
                     {{#phone}}
                       <tr style="border-top: 1px solid #009390;">
                         <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}emails.phone{{/t}}</p></td>
