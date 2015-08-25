@@ -76,6 +76,19 @@
                       <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{brp-card}}</p></td>
                     </tr>
                     {{/brp-card}}
+                    {{#address-street}}
+                      <tr style="border-top: 1px solid #009390;">
+                        <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.check-details.table.headers.address{{/t}}</p></td>
+                        <td width="75%">
+                          <p style="font-size: 16px; color: #000; margin: 10px 0;">
+                            {{address-street}},
+                            {{address-town}},
+                            {{#address-county}}{{address-county}},{{/address-county}}
+                            {{address-postcode}}
+                          </p>
+                        </td>
+                      </tr>
+                    {{/address-street}}
                   </table>
 
                   <p style="font-size: 19px; font-weight: bold; color: #000; line-height: 1.32; margin: 0 0 10px 0;">Reported errors</p>
@@ -158,25 +171,21 @@
                     {{/conditions-error}}
                   </table>
 
-                  {{#address-street}}
-                    <p style="font-size: 19px; font-weight: bold; color: #000; line-height: 1.32; margin: 0 0 10px 0;">New Address</p>
-                    <table width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#FFFFFF" style="margin: 0 0 20px 0;">
+                  <p style="font-size: 19px; font-weight: bold; color: #000; line-height: 1.32; margin: 0 0 10px 0;">Contact details</p>
+                  <table width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#FFFFFF" style="margin: 0 0 20px 0;">
+                    {{#contact-address-street}}
                       <tr style="border-top: 1px solid #009390;">
-                        <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.check-details.table.headers.address{{/t}}</p></td>
+                        <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.check-details.table.headers.contact-address{{/t}}</p></td>
                         <td width="75%">
                           <p style="font-size: 16px; color: #000; margin: 10px 0;">
-                            {{address-street}},
-                            {{address-town}},
-                            {{#address-county}}{{address-county}},{{/address-county}}
-                            {{address-postcode}}
+                            {{contact-address-street}},
+                            {{contact-address-town}},
+                            {{#contact-address-county}}{{contact-address-county}},{{/contact-address-county}}
+                            {{contact-address-postcode}}
                           </p>
                         </td>
                       </tr>
-                    </table>
-                  {{/address-street}}
-
-                  <p style="font-size: 19px; font-weight: bold; color: #000; line-height: 1.32; margin: 0 0 10px 0;">Contact details</p>
-                  <table width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#FFFFFF" style="margin: 0 0 20px 0;">
+                    {{/contact-address-street}}
                     {{#email}}
                       <tr style="border-top: 1px solid #009390;">
                         <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}fields.email.label{{/t}}</p></td>

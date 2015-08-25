@@ -13,12 +13,14 @@
 
   {{#address-street}}
     {{#t}}pages.check-details.table.headers.address{{/t}}
-    {{address-street}}, {{address-town}}, {{#address-county}}{{address-county}},{{/address-county}} {{address-postcode}}
+    {{address-street}},
+    {{address-town}},
+    {{#address-county}}{{address-county}},{{/address-county}}
+    {{address-postcode}}
   {{/address-street}}
 
   {{#t}}pages.check-details-error.personal-details-table.headers.fullname{{/t}}
   {{fullname}}
-
 
   {{#t}}pages.check-details-error.personal-details-table.headers.date-of-birth{{/t}}
   {{date-of-birth-day}}-{{date-of-birth-month}}-{{date-of-birth-year}}
@@ -30,14 +32,25 @@
     {{#t}}pages.check-details.table.headers.passport{{/t}}
     {{passport}}
   {{/passport}}
+
+  {{#contact-address-street}}
+    {{#t}}pages.check-details.table.headers.address{{/t}}
+    {{contact-address-street}},
+    {{contact-address-town}},
+    {{#contact-address-county}}{{contact-address-county}},{{/contact-address-county}}
+    {{contact-address-postcode}}
+  {{/contact-address-street}}
+
   {{#email}}
     {{#t}}fields.email.label{{/t}}
     {{email}}
   {{/email}}
+
   {{#phone}}
     {{#t}}emails.phone{{/t}}
     {{phone}}
   {{/phone}}
+
 {{/data}}
 
 If you're unsure an email is from UKVI:

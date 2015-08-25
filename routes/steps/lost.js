@@ -47,10 +47,10 @@ module.exports = {
     fields: [
       'email',
       'no-email',
-      'address-street',
-      'address-town',
-      'address-county',
-      'address-postcode',
+      'contact-address-street',
+      'contact-address-town',
+      'contact-address-county',
+      'contact-address-postcode',
       'phone'
     ],
     backLink: '/personal-details',

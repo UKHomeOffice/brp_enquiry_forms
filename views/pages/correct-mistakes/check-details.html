@@ -158,6 +158,32 @@
           <td><a href="personal-details#nationality" class="button">{{#t}}buttons.change{{/t}}</a></td>
         </tr>
         {{/values.nationality}}
+        {{#values.no-email}}
+        {{#values.contact-address-street}}
+          <tr>
+            <td>{{#t}}pages.check-details.table.headers.contact-address{{/t}}</td>
+            <td>
+              {{values.contact-address-street}},
+              {{values.contact-address-town}},
+              {{#values.contact-address-county}}{{values.contact-address-county}},{{/values.contact-address-county}}
+              {{values.contact-address-postcode}}
+            </td>
+            <td><a href="contact-details#contact-address-street" class="button">{{#t}}buttons.change{{/t}}</a></td>
+          </tr>
+        {{/values.contact-address-street}}
+        {{/values.no-email}}
+        {{#values.address-street}}
+          <tr>
+            <td>{{#t}}pages.check-details.table.headers.address{{/t}}</td>
+            <td>
+              {{values.address-street}},
+              {{values.address-town}},
+              {{#values.address-county}}{{values.address-county}},{{/values.address-county}}
+              {{values.address-postcode}}
+            </td>
+            <td><a href="same-address#address-street" class="button">{{#t}}buttons.change{{/t}}</a></td>
+          </tr>
+        {{/values.address-street}}
         {{#values.brp-card}}
         <tr>
           <td>{{#t}}pages.check-details-error.personal-details-table.headers.brp-card-number{{/t}}</td>
@@ -172,6 +198,7 @@
           <td><a href="contact-details#email" class="button">{{#t}}buttons.change{{/t}}</a></td>
         </tr>
         {{/values.email}}
+
       </table>
 
       {{<partials-org-type}}{{/partials-org-type}}

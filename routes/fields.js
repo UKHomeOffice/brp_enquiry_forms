@@ -74,6 +74,21 @@ module.exports = {
     validate: ['required'],
     label: 'fields.address-postcode.label'
   },
+  'contact-address-street': {
+    validate: ['required'],
+    label: 'fields.address-street.label'
+  },
+  'contact-address-town': {
+    validate: ['required'],
+    label: 'fields.address-town.label'
+  },
+  'contact-address-county': {
+    label: 'fields.address-county.label'
+  },
+  'contact-address-postcode': {
+    validate: ['required'],
+    label: 'fields.address-postcode.label'
+  },
   fullname: {
     validate: ['required'],
     label: 'fields.fullname.label'

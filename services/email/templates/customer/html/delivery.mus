@@ -104,6 +104,19 @@
                         <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{email}}</p></td>
                       </tr>
                     {{/email}}
+                    {{#contact-address-street}}
+                      <tr style="border-top: 1px solid #009390;">
+                        <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.check-details.table.headers.contact-address{{/t}}</p></td>
+                        <td width="75%">
+                          <p style="font-size: 16px; color: #000; margin: 10px 0;">
+                            {{contact-address-street}},
+                            {{contact-address-town}},
+                            {{#contact-address-county}}{{contact-address-county}},{{/contact-address-county}}
+                            {{contact-address-postcode}}
+                          </p>
+                        </td>
+                      </tr>
+                    {{/contact-address-street}}
                     {{#phone}}
                       <tr style="border-top: 1px solid #009390;">
                         <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}emails.phone{{/t}}</p></td>

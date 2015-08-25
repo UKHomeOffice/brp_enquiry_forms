@@ -21,19 +21,19 @@
   {{nationality}}
 
   {{#brp-card}}
-      {{#t}}pages.check-details-error.personal-details-table.headers.brp-card-number{{/t}}
-      {{brp-card}}
+    {{#t}}pages.check-details-error.personal-details-table.headers.brp-card-number{{/t}}
+    {{brp-card}}
   {{/brp-card}}
 
   Contact details
 
-  {{#address-street}}
+  {{#contact-address-street}}
     {{#t}}emails.address{{/t}}
-    {{address-street}},
-    {{address-town}},
-    {{#address-county}}{{address-county}},{{/address-county}}
-    {{address-postcode}}
-  {{/address-street}}
+    {{contact-address-street}},
+    {{contact-address-town}},
+    {{#contact-address-county}}{{contact-address-county}},{{/contact-address-county}}
+    {{contact-address-postcode}}
+  {{/contact-address-street}}
 
   {{#phone}}
     {{#t}}emails.phone{{/t}}
