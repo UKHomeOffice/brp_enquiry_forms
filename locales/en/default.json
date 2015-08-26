@@ -92,6 +92,9 @@
     "inside-uk": {
       "required": "Tell us where you are"
     },
+    "location-applied": {
+      "required": "Tell us where you made your application from"
+    },
     "country": {
       "required": "Tell us where you are"
     },
@@ -322,6 +325,16 @@
         }
       }
     },
+    "location-applied": {
+      "options": {
+        "yes": {
+          "label": "UK"
+        },
+        "no": {
+          "label": "Outside UK"
+        }
+      }
+    },
     "country": {
       "legend": "Inside the UK",
       "label": "Which country are you in?"
@@ -373,6 +386,10 @@
       "header": "Report a problem with your new BRP",
       "same-address": {
         "header": "Is your address still the same as the one your BRP was sent to?"
+      },
+      "location-applied": {
+        "header": "Where did you make your application?",
+        "subheader": "Tell us if the application was made in the UK or overseas"
       }
     },
     "lost": {
