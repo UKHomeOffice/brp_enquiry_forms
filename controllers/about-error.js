@@ -66,21 +66,21 @@ function anyChecked(req) {
   }.bind(this));
 }
 
-AboutErrorController.prototype.saveValues = function saveValues(req) {
-
+AboutErrorController.prototype.setNextPage = function setNextPage(req) {
   var truncatedItems = getTruncatedItems(req);
-
-  DateController.prototype.format.call(this, req);
 
   if (isChecked.call(this, 'conditions-error-checkbox', req) && req.sessionModel.get('location-applied') === 'yes') {
     this.options.next = '/conditions-and-length';
   } else if (truncatedItems) {
     this.options.next = '/truncated';
     req.sessionModel.set('truncated-items', truncatedItems);
-  } else {
-    this.options.next = '/same-address';
+  } else if (this.referrer && this.referrer.indexOf('/check-details') !== -1) {
+    this.options.next = '/check-details';
   }
+};
 
+AboutErrorController.prototype.saveValues = function saveValues(req) {
+  DateController.prototype.format.call(this, req);
   Controller.prototype.saveValues.apply(this, arguments);
 };
 
