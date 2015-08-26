@@ -4,6 +4,13 @@ module.exports = {
   '/': {
     controller: require('../../controllers/start'),
     template: 'index',
+    next: '/location-applied'
+  },
+  '/location-applied': {
+    template: 'correct-mistakes/location-applied.html',
+    fields: [
+      'location-applied'
+    ],
     next: '/about-error'
   },
   '/about-error': {
@@ -38,6 +45,7 @@ module.exports = {
       'damaged-error',
       'conditions-error-checkbox'
     ],
+    backLink: '/location-applied',
     next: '/same-address'
   },
   '/conditions-and-length': {

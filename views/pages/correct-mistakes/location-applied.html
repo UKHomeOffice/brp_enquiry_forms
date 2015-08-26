@@ -1,0 +1,34 @@
+{{<layout}}
+
+{{$journeyHeader}}
+  {{#t}}journeys.error.header{{/t}}
+{{/journeyHeader}}
+
+{{$step}}Step 1 of 6{{/step}}
+
+{{$validationSummary}}
+  {{> partials-validation-summary}}
+{{/validationSummary}}
+
+{{$propositionHeader}}
+  {{> partials-navigation}}
+{{/propositionHeader}}
+
+  {{$header}}{{#t}}journeys.error.location-applied.header{{/t}}{{/header}}
+
+  {{$content}}
+
+    <p>{{#t}}journeys.error.location-applied.subheader{{/t}}</p>
+    {{<partials-form}}
+
+      {{$form}}
+        {{#radio-group}}location-applied{{/radio-group}}
+
+        {{#input-submit}}continue{{/input-submit}}
+      {{/form}}
+
+    {{/partials-form}}
+
+  {{/content}}
+
+{{/layout}}
