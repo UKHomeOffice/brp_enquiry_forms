@@ -254,6 +254,10 @@ module.exports = {
     label: 'fields.conditions-error-checkbox.label',
     toggle: 'conditions-error-group'
   },
+  'conditions-error': {
+    validate: ['required'],
+    label: 'fields.conditions-error.label'
+  },
   'truncated': {
     validate: ['required'],
     className: 'inline',

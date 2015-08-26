@@ -175,11 +175,16 @@
 
       {{#checkbox}}conditions-error-checkbox{{/checkbox}}
 
-      <div id="conditions-error-group" class="panel-indent js-hidden">
+       <fieldset id="conditions-error-group" class="panel-indent js-hidden {{#errors.conditions-error}}validation-error{{/errors.conditions-error}}">
+        <legend class="visuallyhidden">
+            <span class="form-legend">
+              {{#t}}fields.conditions-error.legend{{/t}}
+            </span>
+        </legend>
 
-        <p>{{#t}}fields.conditions-error.label{{/t}}</p>
+        {{#textarea}}conditions-error{{/textarea}}
 
-      </div>
+      </fieldset>
 
       {{#input-submit}}continue{{/input-submit}}
 

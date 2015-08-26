@@ -72,7 +72,7 @@ AboutErrorController.prototype.saveValues = function saveValues(req) {
 
   DateController.prototype.format.call(this, req);
 
-  if (isChecked.call(this, 'conditions-error-checkbox', req)) {
+  if (isChecked.call(this, 'conditions-error-checkbox', req) && req.sessionModel.get('location-applied') === 'yes') {
     this.options.next = '/conditions-and-length';
   } else if (truncatedItems) {
     this.options.next = '/truncated';

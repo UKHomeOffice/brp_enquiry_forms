@@ -21,7 +21,8 @@ describe('controllers/about-error', function () {
           }
         },
         sessionModel: {
-          set: sinon.stub()
+          set: sinon.stub(),
+          get: sinon.stub()
         }
       };
       res = {};
@@ -45,8 +46,9 @@ describe('controllers/about-error', function () {
       DateController.prototype.format.should.have.been.calledWith(req);
     });
 
-    it('redirects to "/conditions-and-length" if conditions is checked', function () {
+    it('redirects to "/conditions-and-length" if conditions is checked and applied in UK', function () {
       req.form.values['conditions-error-checkbox'] = 'true';
+      req.sessionModel.get.withArgs('location-applied').returns('yes');
       controller.saveValues(req, res, callback);
 
       controller.options.next.should.equal('/conditions-and-length');
