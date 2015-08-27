@@ -53,13 +53,13 @@
             </tr>
           {{/values.contact-address-street}}
           {{/values.no-email}}
-          {{#values.passport}}
+          {{#values.brp-card}}
             <tr>
-              <td>{{#t}}pages.check-details.table.headers.passport{{/t}}</td>
-              <td>{{values.passport}}</td>
-              <td><a href="personal-details#passport" class="button">{{#t}}buttons.change{{/t}}</a></td>
+              <td>{{#t}}pages.check-details-error.personal-details-table.headers.brp-card-number{{/t}}</td>
+              <td>{{values.brp-card}}</td>
+              <td><a href="personal-details#brp-card" class="button">{{#t}}buttons.change{{/t}}</a></td>
             </tr>
-          {{/values.passport}}
+          {{/values.brp-card}}
           {{#values.email}}
             <tr>
               <td>{{#t}}pages.check-details.table.headers.email{{/t}}</td>
@@ -67,6 +67,13 @@
               <td><a href="contact-details#email" class="button">{{#t}}buttons.change{{/t}}</a></td>
             </tr>
           {{/values.email}}
+          {{#values.phone}}
+            <tr>
+              <td>{{#t}}pages.check-details.table.headers.phone{{/t}}</td>
+              <td>{{values.phone}}</td>
+              <td><a href="contact-details#phone" class="button">{{#t}}buttons.change{{/t}}</a></td>
+            </tr>
+          {{/values.phone}}
         </table>
 
         {{<partials-org-type}}{{/partials-org-type}}

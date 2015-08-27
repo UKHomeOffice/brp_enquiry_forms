@@ -448,7 +448,8 @@
           "date-of-birth": "Date of birth",
           "nationality": "Nationality",
           "passport": "Passport number",
-          "email": "Email"
+          "email": "Email",
+          "phone": "Phone number"
         }
       },
       "org-help": {
@@ -477,7 +478,8 @@
           "date-of-birth": "Date of birth",
           "nationality": "Nationality",
           "brp-card-number": "BRP card number",
-          "email": "Email"
+          "email": "Email",
+          "phone": "Phone number"
         }
       }
     },
