@@ -144,6 +144,10 @@ module.exports = {
   'first-name-error': {
     validate: ['required'],
     label: 'fields.first-name-error.label',
+    dependent: {
+      field: 'first-name-error-checkbox',
+      value: 'true'
+    }
   },
   'last-name-error-checkbox': {
     label: 'fields.last-name-error-checkbox.label',
@@ -151,7 +155,11 @@ module.exports = {
   },
   'last-name-error': {
     validate: ['required'],
-    label: 'fields.last-name-error.label'
+    label: 'fields.last-name-error.label',
+    dependent: {
+      field: 'last-name-error-checkbox',
+      value: 'true'
+    }
   },
   'date-of-birth-error-checkbox': {
     label: 'fields.date-of-birth-error-checkbox.label',
@@ -182,7 +190,11 @@ module.exports = {
   },
   'birth-place-error': {
     validate: ['required'],
-    label: 'fields.birth-place-error.label'
+    label: 'fields.birth-place-error.label',
+    dependent: {
+      field: 'birth-place-error-checkbox',
+      value: 'true'
+    }
   },
   'gender-error-checkbox': {
     label: 'fields.gender-error-checkbox.label',
@@ -191,6 +203,10 @@ module.exports = {
   'gender-error': {
     validate: ['required'],
     className: 'panel-indent block',
+    dependent: {
+      field: 'gender-error-checkbox',
+      value: 'true'
+    },
     options: [{
       value: 'female',
       label: 'fields.gender-error.options.female.label'
@@ -209,6 +225,10 @@ module.exports = {
   'sponsor-details-error': {
     validate: ['required'],
     label: 'fields.sponsor-details-error.label',
+    dependent: {
+      field: 'sponsor-details-error-checkbox',
+      value: 'true'
+    }
   },
   'nationality-error-checkbox': {
     label: 'fields.nationality-error-checkbox.label',
@@ -217,6 +237,10 @@ module.exports = {
   'nationality-error': {
     validate: ['required'],
     label: 'fields.nationality-error.label',
+    dependent: {
+      field: 'nationality-error-checkbox',
+      value: 'true'
+    }
   },
   'signature-error-checkbox': {
     label: 'fields.signature-error-checkbox.label',
@@ -225,6 +249,10 @@ module.exports = {
   'signature-error': {
     validate: ['required'],
     label: 'fields.signature-error.label',
+    dependent: {
+      field: 'signature-error-checkbox',
+      value: 'true'
+    }
   },
   'photograph-error-checkbox': {
     label: 'fields.photograph-error-checkbox.label',
@@ -233,6 +261,10 @@ module.exports = {
   'photograph-error': {
     validate: ['required'],
     label: 'fields.photograph-error.label',
+    dependent: {
+      field: 'photograph-error-checkbox',
+      value: 'true'
+    }
   },
   'national-insurance-error-checkbox': {
     label: 'fields.national-insurance-error-checkbox.label',
@@ -241,6 +273,10 @@ module.exports = {
   'national-insurance-error': {
     validate: ['required'],
     label: 'fields.national-insurance-error.label',
+    dependent: {
+      field: 'national-insurance-error-checkbox',
+      value: 'true'
+    }
   },
   'damaged-error-checkbox': {
     label: 'fields.damaged-error-checkbox.label',
@@ -249,6 +285,10 @@ module.exports = {
   'damaged-error': {
     validate: ['required'],
     label: 'fields.damaged-error.label',
+    dependent: {
+      field: 'damaged-error-checkbox',
+      value: 'true'
+    }
   },
   'conditions-error-checkbox': {
     label: 'fields.conditions-error-checkbox.label',
@@ -256,7 +296,11 @@ module.exports = {
   },
   'conditions-error': {
     validate: ['required'],
-    label: 'fields.conditions-error.label'
+    label: 'fields.conditions-error.label',
+    dependent: {
+      field: 'conditions-error-checkbox',
+      value: 'true'
+    }
   },
   'truncated': {
     validate: ['required'],

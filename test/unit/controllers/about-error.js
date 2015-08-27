@@ -145,18 +145,8 @@ describe('controllers/about-error', function () {
     beforeEach(function () {
       req = {form: {values: {}}};
       Controller.prototype.validateField = sinon.stub();
+      DateController.prototype.validateField = sinon.stub();
       controller = new AboutErrorController({template: 'index'});
-    });
-
-    it('returns undefined when a checkbox is not checked', function () {
-      req.form.values['first-name-error-checkbox'] = '';
-      req.form.values['first-name-error'] = 'Foo';
-      req.form.values['last-name-error-checkbox'] = 'true';
-
-      var result = controller.validateField('first-name-error', req);
-
-      should.equal(result, undefined);
-      Controller.prototype.validateField.should.not.have.been.called;
     });
 
     it('returns an error-selection required error if none are checked', function () {
@@ -174,18 +164,26 @@ describe('controllers/about-error', function () {
       Controller.prototype.validateField.should.not.have.been.called;
     });
 
-    it('calls Controller#validateField when the checkbox is checked', function () {
-      req.form.values['first-name-error-checkbox'] = 'true';
-      controller.validateField('first-name-error', req);
+    describe('when the key is a date and is checked', function () {
 
-      Controller.prototype.validateField.should.have.been.calledWithExactly('first-name-error', req);
+      it('calls valdateField on the DateController', function () {
+        req.form.values['date-of-birth-error-checkbox'] = 'true';
+        controller.validateField('date-of-birth-day-error', req);
+
+        DateController.prototype.validateField.should.have.been.calledWithExactly('date-of-birth-day-error', req);
+      });
+
     });
 
-    it('calls DateController#validateField when the date checkbox is checked', function () {
-      req.form.values['date-of-birth-error-checkbox'] = 'true';
-      controller.validateField('date-of-birth-day-error', req);
+    describe('when the key is not a date', function () {
 
-      Controller.prototype.validateField.should.have.been.calledWithExactly('date-of-birth-day-error', req);
+      it('calls validateField on the Controller', function () {
+        req.form.values.foo = 'true';
+        controller.validateField('foo', req);
+
+        Controller.prototype.validateField.should.have.been.calledWithExactly('foo', req);
+      });
+
     });
 
   });
