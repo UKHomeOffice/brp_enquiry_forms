@@ -43,7 +43,8 @@ module.exports = {
       'national-insurance-error',
       'damaged-error-checkbox',
       'damaged-error',
-      'conditions-error-checkbox'
+      'conditions-error-checkbox',
+      'conditions-error'
     ],
     backLink: '/location-applied',
     next: '/same-address'

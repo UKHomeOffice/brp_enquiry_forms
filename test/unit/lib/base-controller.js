@@ -73,6 +73,7 @@ describe('base-controller', function () {
 
       beforeEach(function () {
         HMPOWizard.Controller.prototype.getValues = sinon.stub();
+        Controller.prototype.getErrors = sinon.stub();
         req = {
           sessionModel: {
             reset: sinon.stub()
@@ -98,11 +99,6 @@ describe('base-controller', function () {
           req.sessionModel.reset.should.not.have.been.called;
         });
 
-        it('gets the referer header', function () {
-          req.header.should.have.been.calledOnce
-            .and.always.have.been.calledWith('Referer');
-        });
-
       });
 
       describe('when there\'s no next step', function () {
@@ -115,11 +111,6 @@ describe('base-controller', function () {
 
         it('resets the session', function () {
           req.sessionModel.reset.should.have.been.calledOnce;
-        });
-
-        it('gets the referer header', function () {
-          req.header.should.have.been.calledOnce
-            .and.always.have.been.calledWith('Referer');
         });
 
       });
@@ -138,11 +129,6 @@ describe('base-controller', function () {
           req.sessionModel.reset.should.not.have.been.calledOnce;
         });
 
-        it('gets the referer header', function () {
-          req.header.should.have.been.calledOnce
-            .and.always.have.been.calledWith('Referer');
-        });
-
       });
 
       describe('when clearSession is set', function () {
@@ -159,15 +145,28 @@ describe('base-controller', function () {
           req.sessionModel.reset.should.have.been.calledOnce;
         });
 
-        it('gets the referer header', function () {
-          req.header
-            .should.have.been.calledOnce
-            .and.always.have.been.calledWith('Referer');
-        });
-
       });
 
-      it('calls the parent controller getValues', function () {
+      it('gets the referer header if there are no errors', function () {
+        controller = new Controller({template: 'foo'});
+        controller.options = {};
+        controller.getValues(req, res, callback);
+
+        req.header.should.have.been.calledOnce
+          .and.always.have.been.calledWith('Referer');
+      });
+
+      it('does not get the referer header if there are errors', function () {
+        controller = new Controller({template: 'foo'});
+        controller.options = {};
+        controller.getValues(req, res, callback);
+        Controller.prototype.getErrors = sinon.stub().returns({error: true});
+
+        req.header.should.have.been.calledOnce
+          .and.always.have.been.calledWith('Referer');
+      });
+
+      it('always calls the parent controller getValues', function () {
         controller = new Controller({template: 'foo'});
         controller.options = {};
         controller.getValues(req, res, callback);
@@ -182,24 +181,49 @@ describe('base-controller', function () {
       var req = {};
       var callback = function () {};
 
+      beforeEach(function () {
+        HMPOWizard.Controller.prototype.saveValues = sinon.stub();
+        Controller.prototype.setNextPage = sinon.stub();
+        controller = new Controller({template: 'foo'});
+      });
+
+      it('always calls the setNextPage', function () {
+        controller.saveValues(req, res, callback);
+
+        controller.setNextPage
+          .should.always.have.been.calledWithExactly(req);
+      });
+
+      it('always calls the parent controller saveValues', function () {
+        controller.saveValues(req, res, callback);
+
+        HMPOWizard.Controller.prototype.saveValues
+          .should.always.have.been.calledWithExactly(req, res, callback);
+      });
+
+    });
+
+    describe('.setNextPage()', function () {
+      var res = {};
+      var req = {};
+      var callback = function () {};
+
+      beforeEach(function () {
+        controller = new Controller({template: 'foo'});
+      });
+
       describe('when previous GET request originated from /check-details', function () {
 
         beforeEach(function () {
-          HMPOWizard.Controller.prototype.saveValues = sinon.stub();
           controller = new Controller({template: 'foo'});
-          controller.options = {};
+          controller.options = {next: '/next-page'};
           controller.referrer = 'http://hostname/check-details';
-
-          controller.saveValues(req, res, callback);
         });
 
         it('redirects to /check-details', function () {
-          controller.options.next.should.equal('/check-details');
-        });
+          controller.setNextPage(req, res, callback);
 
-        it('calls the parent controller saveValues', function () {
-          HMPOWizard.Controller.prototype.saveValues
-            .should.always.have.been.calledWithExactly(req, res, callback);
+          controller.options.next.should.equal('/check-details');
         });
 
       });
@@ -207,21 +231,23 @@ describe('base-controller', function () {
       describe('when previous GET request did not originate from /check-details', function () {
 
         beforeEach(function () {
-          HMPOWizard.Controller.prototype.saveValues = sinon.stub();
           controller = new Controller({template: 'foo', next: '/next-page'});
           controller.options = {};
           controller.referrer = 'http://hostname/somewhere-else';
-
-          controller.saveValues(req, res, callback);
         });
 
-        it('redirects to the configured next value', function () {
+        it('redirects to the optional next value if set', function () {
+          controller.options = {next: '/next-optional-page'};
+          controller.setNextPage(req, res, callback);
+
+          controller.options.next.should.equal('/next-optional-page');
+        });
+
+        it('redirects to the next value if not optional next value', function () {
+          controller.options = {};
+          controller.setNextPage(req, res, callback);
+
           controller.options.next.should.equal('/next-page');
-        });
-
-        it('calls the parent controller saveValues', function () {
-          HMPOWizard.Controller.prototype.saveValues
-            .should.always.have.been.calledWithExactly(req, res, callback);
         });
 
       });

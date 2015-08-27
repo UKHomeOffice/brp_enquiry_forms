@@ -74,6 +74,9 @@
     "damaged-error": {
       "required": "Tell us what is wrong with your BRP"
     },
+    "conditions-error": {
+      "required": "Tell us about the problem"
+    },
     "national-insurance-error": {
       "required": "Tell us your correct national insurance number"
     },
@@ -303,7 +306,7 @@
       "label": "Conditions or length of stay"
     },
     "conditions-error": {
-      "label": "This could include information about your leave duration, conditions of stay and BRP expiry date."
+      "label": "Please describe the problem"
     },
     "truncated": {
       "options": {

@@ -21,7 +21,8 @@ describe('controllers/about-error', function () {
           }
         },
         sessionModel: {
-          set: sinon.stub()
+          set: sinon.stub(),
+          get: sinon.stub()
         }
       };
       res = {};
@@ -31,48 +32,94 @@ describe('controllers/about-error', function () {
       controller = new AboutErrorController({template: 'index'});
     });
 
-    it('calls the parent controller saveValues', function () {
+    it('always calls the parent controller saveValues with the arguments', function () {
       controller.saveValues(req, res, callback);
 
-      Controller.prototype.saveValues.should.have.been.calledOnce;
-      Controller.prototype.saveValues.should.have.been.calledWith(req, res, callback);
+      Controller.prototype.saveValues.should.have.been.calledOnce
+        .and.always.have.been.calledWithExactly(req, res, callback);
     });
 
-    it('calls Date#format', function () {
+    it('always calls DateController#format with the request object', function () {
       DateController.prototype.format = sinon.stub();
       controller.saveValues(req, res, callback);
 
-      DateController.prototype.format.should.have.been.calledWith(req);
+      DateController.prototype.format
+        .should.always.have.been.calledWithExactly(req);
     });
 
-    it('redirects to "/conditions-and-length" if conditions is checked', function () {
+  });
+
+  describe('.setNextPage()', function () {
+
+    var controller;
+    var req;
+    var res;
+    var callback;
+
+    beforeEach(function () {
+      req = {
+        form: {
+          values: {
+          }
+        },
+        sessionModel: {
+          set: sinon.stub(),
+          get: sinon.stub()
+        }
+      };
+      res = {};
+      callback = sinon.stub();
+
+      controller = new AboutErrorController({template: 'index'});
+    });
+
+    it('redirects to "/conditions-and-length" if and user applied in UK and conditions and length', function () {
       req.form.values['conditions-error-checkbox'] = 'true';
-      controller.saveValues(req, res, callback);
+      req.sessionModel.get.withArgs('location-applied').returns('yes');
+      controller.setNextPage(req, res, callback);
 
       controller.options.next.should.equal('/conditions-and-length');
-      Controller.prototype.saveValues.should.have.been.calledWith(req, res, callback);
     });
 
-    it('redirects to "/truncated" if user entered first name is more than 30 characters', function () {
+    it('redirects to "/truncated" if first name is more than 30 characters', function () {
       req.form.values['first-name-error-checkbox'] = 'true';
       req.form.values['first-name-error'] = 'foobarbazfoobarbazfoobarbazfoobarbaz';
-
-      controller.saveValues(req, res, callback);
+      controller.setNextPage(req, res, callback);
 
       controller.options.next.should.equal('/truncated');
       req.sessionModel.set.should.have.been.calledWith('truncated-items', [{id: 'first-name-error'}]);
-      Controller.prototype.saveValues.should.have.been.calledWith(req, res, callback);
     });
 
-    it('redirects to "/truncated" if user entered last name is more than 30 characters', function () {
+    it('redirects to "/truncated" if last name is more than 30 characters', function () {
       req.form.values['last-name-error-checkbox'] = 'true';
       req.form.values['last-name-error'] = 'foobarbazfoobarbazfoobarbazfoobarbaz';
-
-      controller.saveValues(req, res, callback);
+      controller.setNextPage(req, res, callback);
 
       controller.options.next.should.equal('/truncated');
       req.sessionModel.set.should.have.been.calledWith('truncated-items', [{id: 'last-name-error'}]);
-      Controller.prototype.saveValues.should.have.been.calledWith(req, res, callback);
+    });
+
+    it('redirects to "/truncated" birth place is more than 16 characters', function () {
+      req.form.values['birth-place-error-checkbox'] = 'true';
+      req.form.values['birth-place-error'] = 'foobarbazfoobarba';
+      controller.setNextPage(req, res, callback);
+
+      controller.options.next.should.equal('/truncated');
+      req.sessionModel.set.should.have.been.calledWith('truncated-items', [{id: 'birth-place-error'}]);
+    });
+
+    it('redirects to "/check-details" if originated from the check details page', function () {
+      controller.referrer = 'http://hostname/check-details';
+      controller.setNextPage(req, res, callback);
+
+      controller.options.next.should.equal('/check-details');
+    });
+
+    it('redirects to user configured next value by default', function () {
+      controller.options = {next: '/next'};
+      controller.setNextPage(req, res, callback);
+
+      controller.options.next.should.equal('/next');
     });
 
   });
