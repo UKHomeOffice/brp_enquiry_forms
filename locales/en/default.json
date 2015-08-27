@@ -38,6 +38,15 @@
     "address-postcode": {
       "required": "Enter the postcode"
     },
+    "contact-address-street": {
+      "required": "Enter your new house name or number and street"
+    },
+    "contact-address-town": {
+      "required": "Enter the Town or City"
+    },
+    "contact-address-postcode": {
+      "required": "Enter the postcode"
+    },
     "fullname": {
       "required": "Enter your full name"
     },
