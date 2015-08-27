@@ -79,9 +79,23 @@ AboutErrorController.prototype.setNextPage = function setNextPage(req) {
   }
 };
 
-AboutErrorController.prototype.saveValues = function saveValues(req) {
+AboutErrorController.prototype.saveValues = function saveValues(req, res, callback) {
   DateController.prototype.format.call(this, req);
-  Controller.prototype.saveValues.apply(this, arguments);
+
+  var formData = _.clone(req.form.values);
+  var diff;
+
+  req.form.values = _.pick(formData, function pickCheckedData(value, key) {
+    return isChecked.call(this, key, req);
+  }.bind(this));
+
+  diff = _.filter(_.keys(formData), function filterDiff(key) {
+    return !_.has(req.form.values, key);
+  });
+
+  req.sessionModel.unset(diff);
+
+  Controller.prototype.saveValues.call(this, req, res, callback);
 };
 
 AboutErrorController.prototype.validateField = function validateField(key, req) {

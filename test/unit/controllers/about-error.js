@@ -22,7 +22,8 @@ describe('controllers/about-error', function () {
         },
         sessionModel: {
           set: sinon.stub(),
-          get: sinon.stub()
+          get: sinon.stub(),
+          unset: sinon.stub()
         }
       };
       res = {};
@@ -30,6 +31,18 @@ describe('controllers/about-error', function () {
 
       Controller.prototype.saveValues = sinon.stub();
       controller = new AboutErrorController({template: 'index'});
+    });
+
+    it('removes values that are not checked and have unchecked counterparts', function () {
+      req.form.values = {
+        'foo-checkbox': '',
+        foo: 'bar',
+        'baz-checkbox': 'true',
+        baz: 'foo'
+      };
+      controller.saveValues(req, res, callback);
+
+      req.sessionModel.unset.should.have.been.calledWithExactly(['foo-checkbox', 'foo']);
     });
 
     it('always calls the parent controller saveValues with the arguments', function () {
