@@ -61,18 +61,34 @@ module.exports = {
   },
   'address-street': {
     validate: ['required'],
-    label: 'fields.address-street.label'
+    label: 'fields.address-street.label',
+    dependent: {
+      value: 'no',
+      field: 'address-match',
+    }
   },
   'address-town': {
     validate: ['required'],
-    label: 'fields.address-town.label'
+    label: 'fields.address-town.label',
+    dependent: {
+      value: 'no',
+      field: 'address-match',
+    }
   },
   'address-county': {
-    label: 'fields.address-county.label'
+    label: 'fields.address-county.label',
+    dependent: {
+      value: 'no',
+      field: 'address-match',
+    }
   },
   'address-postcode': {
     validate: ['required'],
-    label: 'fields.address-postcode.label'
+    label: 'fields.address-postcode.label',
+    dependent: {
+      value: 'no',
+      field: 'address-match',
+    }
   },
   'contact-address-street': {
     validate: ['required'],

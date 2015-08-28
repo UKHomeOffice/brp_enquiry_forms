@@ -29,7 +29,6 @@ module.exports = {
     clearSession: false
   },
   '/same-address': {
-    controller: require('../../controllers/same-address'),
     template: 'not-arrived/same-address-details.html',
     fields: [
       'address-match',
