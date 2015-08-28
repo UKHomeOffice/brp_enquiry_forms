@@ -47,7 +47,7 @@ module.exports = {
       'conditions-error'
     ],
     backLink: '/location-applied',
-    next: '/same-address'
+    next: '/uk-address'
   },
   '/conditions-and-length': {
     prereqs: ['/about-error'],
@@ -61,21 +61,20 @@ module.exports = {
       'truncated',
       'truncation-page'
     ],
-    next: '/same-address'
+    next: '/uk-address'
   },
   '/exit-truncated': {
     prereqs: ['/truncated'],
     template: 'correct-mistakes/exit-truncated.html'
   },
-  '/same-address': {
-    controller: require('../../controllers/same-address'),
-    template: 'correct-mistakes/same-address.html',
+  '/uk-address': {
+    template: 'correct-mistakes/uk-address.html',
     fields: [
-      'address-match',
-      'address-street',
-      'address-town',
-      'address-county',
-      'address-postcode'
+      'uk-address-radio',
+      'uk-address-street',
+      'uk-address-town',
+      'uk-address-county',
+      'uk-address-postcode'
     ],
     backLink: '/about-error',
     next: '/personal-details'
@@ -92,7 +91,7 @@ module.exports = {
       'nationality',
       'brp-card'
     ],
-    backLink: '/same-address',
+    backLink: '/uk-address',
     next: '/contact-details'
   },
   '/contact-details': {

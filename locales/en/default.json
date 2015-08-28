@@ -30,7 +30,7 @@
       "email": "Enter your email in the correct format for example, name@domain.com"
     },
     "address-street": {
-      "required": "Enter your new house name or number and street"
+      "required": "Enter your house name or number and street"
     },
     "address-town": {
       "required": "Enter the Town or City"
@@ -39,12 +39,21 @@
       "required": "Enter the postcode"
     },
     "contact-address-street": {
-      "required": "Enter your new house name or number and street"
+      "required": "Enter your house name or number and street"
     },
     "contact-address-town": {
       "required": "Enter the Town or City"
     },
     "contact-address-postcode": {
+      "required": "Enter the postcode"
+    },
+    "uk-address-street": {
+      "required": "Enter your house name or number and street"
+    },
+    "uk-address-town": {
+      "required": "Enter the Town or City"
+    },
+    "uk-address-postcode": {
       "required": "Enter the postcode"
     },
     "fullname": {
@@ -179,6 +188,19 @@
           "label": "No"
         }
       }
+    },
+    "uk-address-radio": {
+      "options": {
+        "yes": {
+          "label": "Yes"
+        },
+        "no": {
+          "label": "No"
+        }
+      }
+    },
+    "address": {
+      "legend": "Address"
     },
     "address-street": {
       "label": "House name or number and street"
@@ -434,6 +456,12 @@
       "header": "Where can we contact you to let you know about your BRP?",
       "address": {
         "title": "Tell us your address so that we can contact you by post."
+      }
+    },
+    "uk-address": {
+      "header": "Do you have an UK address where we can send the card?",
+      "address": {
+        "title": "If needed, we will send a correct BRP to this address."
       }
     },
     "same-address": {
