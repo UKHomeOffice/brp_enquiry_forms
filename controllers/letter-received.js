@@ -36,10 +36,6 @@ function isWithin(value, days) {
   }
 }
 
-function hasDateKey(key) {
-  return key.indexOf(this.dateKey) !== -1;
-}
-
 function weekDayRange(req) {
   var value = getValue(req, 'delivery-date');
   var weekDaysSince;
@@ -74,12 +70,6 @@ LetterRecievedController.prototype.validateField = function validateField(key, r
   debug('Validating field %s', key);
 
   if (req.form.values['no-letter'] === 'true') {
-    return undefined;
-  }
-  if (checkReceived(req, 'no')) {
-    return undefined;
-  }
-  if (checkReceived(req, '') && hasDateKey.call(this, key)) {
     return undefined;
   }
 
