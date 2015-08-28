@@ -108,13 +108,14 @@ AboutErrorController.prototype.validateField = function validateField(key, req) 
     });
   }
 
-  if (isChecked.apply(this, arguments)) {
-    if (isDatePart(key)) {
+  if (isDatePart(key)) {
+    // fields[key].dependent is not available for dates
+    if (isChecked.apply(this, arguments)) {
       return DateController.prototype.validateField.apply(this, arguments);
     }
+  } else {
     return Controller.prototype.validateField.apply(this, arguments);
   }
-  return undefined;
 };
 
 module.exports = AboutErrorController;
