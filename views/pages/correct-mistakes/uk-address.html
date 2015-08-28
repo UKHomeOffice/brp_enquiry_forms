@@ -13,7 +13,7 @@
   {{> partials-navigation}}
 {{/propositionHeader}}
 
-{{$header}}{{#t}}journeys.error.same-address.header{{/t}}{{/header}}
+{{$header}}{{#t}}pages.uk-address.header{{/t}}{{/header}}
 
 {{$content}}
 
@@ -21,24 +21,24 @@
 
     {{$form}}
 
-      {{#radio-group}}address-match{{/radio-group}}
+      <p>{{#t}}pages.uk-address.address.title{{/t}}</p>
 
-      <fieldset id="new-address-fieldset" class="panel-indent js-hidden {{#errorlist.length}}validation-error{{/errorlist.length}}">
+      {{#radio-group}}uk-address-radio{{/radio-group}}
+
+      <fieldset id="uk-address-fieldset" class="panel-indent js-hidden {{#errorlist.length}}validation-error{{/errorlist.length}}">
         <legend class="visuallyhidden">
             <span class="form-legend">
               {{#t}}fields.address.legend{{/t}}
             </span>
         </legend>
 
-        <p>{{#t}}pages.same-address.address.title{{/t}}</p>
+        {{#input-text}}uk-address-street{{/input-text}}
 
-        {{#input-text}}address-street{{/input-text}}
+        {{#input-text}}uk-address-town{{/input-text}}
 
-        {{#input-text}}address-town{{/input-text}}
+        {{#input-text}}uk-address-county{{/input-text}}
 
-        {{#input-text}}address-county{{/input-text}}
-
-        {{#input-text-code}}address-postcode{{/input-text-code}}
+        {{#input-text-code}}uk-address-postcode{{/input-text-code}}
 
       </fieldset>
 

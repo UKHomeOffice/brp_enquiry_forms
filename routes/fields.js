@@ -24,19 +24,35 @@ module.exports = {
   },
   'delivery-date': {
     legend: 'fields.delivery-date.legend',
-    hint: 'fields.dalivery-date.hint'
+    hint: 'fields.dalivery-date.hint',
+    dependent: {
+      value: 'yes',
+      field: 'received',
+    }
   },
   'delivery-date-day': {
     validate: ['required', 'numeric'],
     label: 'fields.delivery-date-day.label',
+    dependent: {
+      value: 'yes',
+      field: 'received',
+    }
   },
   'delivery-date-month': {
     validate: ['required', 'numeric'],
-    label: 'fields.delivery-date-month.label'
+    label: 'fields.delivery-date-month.label',
+    dependent: {
+      value: 'yes',
+      field: 'received',
+    }
   },
   'delivery-date-year': {
     validate: ['required', 'numeric'],
-    label: 'fields.delivery-date-year.label'
+    label: 'fields.delivery-date-year.label',
+    dependent: {
+      value: 'yes',
+      field: 'received',
+    }
   },
   'no-letter': {
     label: 'fields.no-letter.label',
@@ -61,33 +77,104 @@ module.exports = {
   },
   'address-street': {
     validate: ['required'],
-    label: 'fields.address-street.label'
+    label: 'fields.address-street.label',
+    dependent: {
+      value: 'no',
+      field: 'address-match',
+    }
   },
   'address-town': {
     validate: ['required'],
-    label: 'fields.address-town.label'
+    label: 'fields.address-town.label',
+    dependent: {
+      value: 'no',
+      field: 'address-match',
+    }
   },
   'address-county': {
-    label: 'fields.address-county.label'
+    label: 'fields.address-county.label',
+    dependent: {
+      value: 'no',
+      field: 'address-match',
+    }
   },
   'address-postcode': {
     validate: ['required'],
-    label: 'fields.address-postcode.label'
+    label: 'fields.address-postcode.label',
+    dependent: {
+      value: 'no',
+      field: 'address-match',
+    }
   },
   'contact-address-street': {
     validate: ['required'],
-    label: 'fields.address-street.label'
+    label: 'fields.address-street.label',
+    dependent: {
+      value: 'true',
+      field: 'no-email'
+    }
   },
   'contact-address-town': {
     validate: ['required'],
-    label: 'fields.address-town.label'
+    label: 'fields.address-town.label',
+    dependent: {
+      value: 'true',
+      field: 'no-email'
+    }
   },
   'contact-address-county': {
-    label: 'fields.address-county.label'
+    label: 'fields.address-county.label',
   },
   'contact-address-postcode': {
     validate: ['required'],
-    label: 'fields.address-postcode.label'
+    label: 'fields.address-postcode.label',
+    dependent: {
+      value: 'true',
+      field: 'no-email'
+    }
+  },
+  'uk-address-radio': {
+    validate: ['required'],
+    className: ['inline', 'form-group'],
+    options: [{
+      value: 'yes',
+      label: 'fields.uk-address-radio.options.yes.label',
+      toggle: 'uk-address-fieldset'
+    }, {
+      value: 'no',
+      label: 'fields.uk-address-radio.options.no.label'
+    }]
+  },
+  'uk-address-street': {
+    validate: ['required'],
+    label: 'fields.address-street.label',
+    dependent: {
+      value: 'yes',
+      field: 'uk-address-radio',
+    }
+  },
+  'uk-address-town': {
+    validate: ['required'],
+    label: 'fields.address-town.label',
+    dependent: {
+      value: 'yes',
+      field: 'uk-address-radio',
+    }
+  },
+  'uk-address-county': {
+    label: 'fields.address-county.label',
+    dependent: {
+      value: 'yes',
+      field: 'uk-address-radio',
+    }
+  },
+  'uk-address-postcode': {
+    validate: ['required'],
+    label: 'fields.address-postcode.label',
+    dependent: {
+      value: 'yes',
+      field: 'uk-address-radio',
+    }
   },
   fullname: {
     validate: ['required'],
@@ -123,7 +210,11 @@ module.exports = {
   email: {
     validate: ['required', 'email'],
     type: 'email',
-    label: 'fields.email.label'
+    label: 'fields.email.label',
+    dependent: {
+      value: '',
+      field: 'no-email'
+    }
   },
   'no-email': {
     className: 'inline',

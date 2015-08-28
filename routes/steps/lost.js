@@ -42,7 +42,6 @@ module.exports = {
     next: '/contact-details'
   },
   '/contact-details': {
-    controller: require('../../controllers/contact-details'),
     template: 'lost-or-stolen/contact-details.html',
     fields: [
       'email',
