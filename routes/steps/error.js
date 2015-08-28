@@ -95,7 +95,6 @@ module.exports = {
     next: '/contact-details'
   },
   '/contact-details': {
-    controller: require('../../controllers/contact-details'),
     template: 'correct-mistakes/contact-details.html',
     fields: [
       'email',

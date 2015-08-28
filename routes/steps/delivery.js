@@ -57,7 +57,6 @@ module.exports = {
     next: '/contact-details'
   },
   '/contact-details': {
-    controller: require('../../controllers/contact-details'),
     template: 'not-arrived/contact-details',
     fields: [
       'email',
