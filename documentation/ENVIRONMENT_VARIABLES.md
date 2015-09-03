@@ -11,7 +11,9 @@
 ### Email service environment variables
 (Will be removed from the app when the email service is created)
 
-* `CASEWORKER_EMAIL` email for caseworker. Defaults to broken 'caseworker_email_address'.
+* `CASEWORKER_ERROR_EMAIL` caseworker email for the correct-mistakes journey. Defaults to broken 'caseworker_email_address'.
+* `CASEWORKER_LOSTSTOLEN_EMAIL` caseworker email for the lost-stolen journey. Defaults to broken 'caseworker_email_address'.
+* `CASEWORKER_DELIVERY_EMAIL` caseworker email for the not-arrived journey. Defaults to broken 'caseworker_email_address'.
 * `EMAIL_PORT` email port. Defaults to 587.
 * `EMAIL_HOST` smtp host. Defaults to 'email-smtp.eu-west-1.amazonaws.com'.
 * `SMTP_USER` smtp username. Defaults to ''.
