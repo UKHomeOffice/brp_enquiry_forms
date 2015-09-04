@@ -1,5 +1,7 @@
 # BRP Application project for nodejs
 
+[![Docker Repository on Quay.io](https://quay.io/repository/ukhomeofficedigital/brpapp/status "Docker Repository on Quay.io")](https://quay.io/repository/ukhomeofficedigital/brpapp)
+
 ### Quick start
 
 ```bash
