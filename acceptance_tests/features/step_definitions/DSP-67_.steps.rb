@@ -31,4 +31,16 @@ end
                                                                              
 When(/^I fill the Phone number field with text$/) do
   fill_in('phone', :with => 'vghvmvmg')
-end                                                                          
+end
+
+When(/^I fill in the first contact address field$/) do
+  fill_in('contact-address-street', :with => '2 Marsham Street')
+end
+
+When(/^I fill in the second contact address field$/) do
+  fill_in('contact-address-town', :with => 'Westminster')
+end
+
+When(/^I fill in the contact postcode field$/) do
+  fill_in('contact-address-postcode', :with => 'SW1P 4DF')
+end
