@@ -9,4 +9,4 @@ cache:
   directories:
     - node_modules
 
-script: "npm run test:ci && npm run sass; NODE_ENV='travis' npm start& npm run test:acceptance"
+script: "npm run test:ci && npm run sass; NODE_ENV='ci' npm start& npm run test:acceptance"
