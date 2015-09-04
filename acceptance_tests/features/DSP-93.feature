@@ -9,7 +9,7 @@ Feature: DSP-93 - Personal details
 		When I click Continue
 		Then I see the "Enter your full name" link in the "/html/body/main/div[2]/div/div/ul/li[1]/a" xpath
 		Then I see the "Enter your date of birth" link in the "/html/body/main/div[2]/div/div/ul/li[2]/a" xpath 
-		Then I see the "Tell us your nationality" link in the "/html/body/main/div[2]/div/div/ul/li[6]/a" xpath 
+		Then I see the "Tell us your nationality" link in the "/html/body/main/div[2]/div/div/ul/li[3]/a" xpath 
 		Then I see the "Enter your full name" link in the "/html/body/main/div[2]/div/form/div[1]/label/span[1]" xpath
 		Then I see the "Enter your date of birth" link in the "/html/body/main/div[2]/div/form/fieldset/span" xpath 
 		Then I see the "Tell us your nationality" link in the "/html/body/main/div[2]/div/form/div[2]/label/span[1]" xpath 

@@ -12,24 +12,24 @@ Feature: DSP-94 - Contact details
 
 	Scenario: Attempting to proceed to Step Five without filling in the first address field
 		When I check the I do not have an email address checkbox
-		And I fill in the second address field
-		And I fill in the postcode field
+		And I fill in the second contact address field
+		And I fill in the contact postcode field
 		When I click Continue
 		Then I see the "Enter your new house name or number and street" link
 		And I see "Enter your new house name or number and street"
 
 	Scenario: Attempting to proceed to Step Five without filling in the second address field
 		When I check the I do not have an email address checkbox
-		And I fill in the first address field
-		And I fill in the postcode field
+		And I fill in the first contact address field
+		And I fill in the contact postcode field
 		When I click Continue
 		Then I see the "Enter the Town or City" link
 		And I see "Enter the Town or City"
 
 	Scenario: Attempting to proceed to Step Five without filling in the postcode field
 		When I check the I do not have an email address checkbox
-		And I fill in the first address field
-		And I fill in the second address field
+		And I fill in the first contact address field
+		And I fill in the second contact address field
 		When I click Continue
 		Then I see the "Enter the postcode" link
 		And I see "Enter the postcode"

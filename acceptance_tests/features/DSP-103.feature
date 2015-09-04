@@ -1,5 +1,4 @@
 @DeliveryForm @UnhappyPath @StepOne
-
 Feature: DSP-103 - Selecting "No" on Step One
 
 	Background: 

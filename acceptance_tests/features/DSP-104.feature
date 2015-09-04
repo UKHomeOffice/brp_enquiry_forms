@@ -1,5 +1,4 @@
-	@ErrorForm @UnhappyPath @StepOne
-
+@ErrorForm @UnhappyPath @StepOne
 Feature: DSP-104 - Permit error unhappy path - conditions
 
 	Background:
