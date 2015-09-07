@@ -79,30 +79,35 @@ Emailer.prototype.send = function send(email, callback) {
 
   function sendCustomerEmail() {
     logger.info('Emailing customer: ', email.subject);
-    this.transporter.sendMail({
-      from: config.email.from,
-      to: email.to,
-      subject: email.subject,
-      text: Mustache.render(customerPlainTextTemplates[email.template], templateData),
-      html: Mustache.render(customerHtmlTemplates[email.template], templateData),
-      attachments: [
-        {
-          filename: 'govuk_logotype_email.png',
-          path: path.resolve(__dirname, './images/govuk_logotype_email.png'),
-          cid: 'govuk_logotype_email'
-        },
-        {
-          filename: 'ho_crest_27px.png',
-          path: path.resolve(__dirname, './images/ho_crest_27px.png'),
-          cid: 'ho_crest_27px'
-        },
-        {
-          filename: 'spacer.gif',
-          path: path.resolve(__dirname, './images/spacer.gif'),
-          cid: 'spacer_image'
-        }
-      ]
-    }, callback);
+
+    if (email.to) {
+      this.transporter.sendMail({
+        from: config.email.from,
+        to: email.to,
+        subject: email.subject,
+        text: Mustache.render(customerPlainTextTemplates[email.template], templateData),
+        html: Mustache.render(customerHtmlTemplates[email.template], templateData),
+        attachments: [
+          {
+            filename: 'govuk_logotype_email.png',
+            path: path.resolve(__dirname, './images/govuk_logotype_email.png'),
+            cid: 'govuk_logotype_email'
+          },
+          {
+            filename: 'ho_crest_27px.png',
+            path: path.resolve(__dirname, './images/ho_crest_27px.png'),
+            cid: 'ho_crest_27px'
+          },
+          {
+            filename: 'spacer.gif',
+            path: path.resolve(__dirname, './images/spacer.gif'),
+            cid: 'spacer_image'
+          }
+        ]
+      }, callback);
+    } else {
+      callback();
+    }
   }
 
   logger.info('Emailing caseworker: ', email.subject);
