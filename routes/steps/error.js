@@ -115,10 +115,6 @@ module.exports = {
   '/confirmation': {
     controller: require('../../controllers/confirmation'),
     template: 'correct-mistakes/confirmation.html',
-    backLink: false,
-    next: '/done'
-  },
-  '/done': {
-    backLink: null
+    backLink: false
   }
 };
