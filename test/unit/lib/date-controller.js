@@ -100,6 +100,65 @@ describe('lib/date-controller', function () {
 
     });
 
+    describe('when the date is not required', function () {
+
+      describe('required error', function () {
+
+        it('does not return an error when the field is undefined', function () {
+          req.form.values.date = undefined;
+
+          should.equal(controller.validateField('date', req, false), undefined);
+        });
+
+        it('does not return an error when the field is an empty string', function () {
+          req.form.values.date = '';
+
+          should.equal(controller.validateField('date', req, false), undefined);
+        });
+
+      });
+
+      describe('numeric error', function () {
+
+        it('returns an error class when the field is not numeric', function () {
+          req.form.values.date = 'ab-cd-efgh';
+          var numericCheck = controller.validateField('date', req, false);
+
+          numericCheck.should.be.an.instanceof(ErrorClass);
+          numericCheck.should.have.property('key').and.equal('date');
+          numericCheck.should.have.property('type').and.equal('numeric');
+        });
+
+      });
+
+      describe('format error', function () {
+
+        it('returns an error class when the field is incorrectly formatted', function () {
+          req.form.values.date = '01-13-1982';
+          var formatCheck = controller.validateField('date', req, false);
+
+          formatCheck.should.be.an.instanceof(ErrorClass);
+          formatCheck.should.have.property('key').and.equal('date');
+          formatCheck.should.have.property('type').and.equal('format');
+        });
+
+      });
+
+      describe('future error', function () {
+
+        it('returns an error class when the field is in the future', function () {
+          req.form.values.date = moment().add(1, 'day').format('DD-MM-YYYY');
+          var formatCheck = controller.validateField('date', req, false);
+
+          formatCheck.should.be.an.instanceof(ErrorClass);
+          formatCheck.should.have.property('key').and.equal('date');
+          formatCheck.should.have.property('type').and.equal('future');
+        });
+
+      });
+
+    });
+
     describe('valid field', function () {
       it('returns undefined', function () {
         req.form.values.date = '01-01-2015';

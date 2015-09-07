@@ -22,6 +22,9 @@
     "received": {
       "required": "Tell us if you have received a letter from the Home Office"
     },
+    "where-radio": {
+      "required": "Tell us where you were asked to collect your BRP from"
+    },
     "address-match": {
       "required": "Tell us if your address is the same as on the letter from the Home Office"
     },
@@ -60,6 +63,12 @@
       "required": "Enter your full name"
     },
     "date-of-birth": {
+      "required": "Enter your date of birth",
+      "numeric": "Date must only contain numbers",
+      "future": "The date is in the future",
+      "format": "Enter your date of birth in the correct format"
+    },
+    "collection-date": {
       "required": "Enter your date of birth",
       "numeric": "Date must only contain numbers",
       "future": "The date is in the future",
@@ -159,6 +168,30 @@
     },
     "delivery-date-year": {
       "label": "Year"
+    },
+    "collection-date": {
+      "label": "Date",
+      "legend": "Date on the letter",
+      "hint": "For example, 11  6  2015"
+    },
+    "collection-date-day": {
+      "label": "Day"
+    },
+    "collection-date-month": {
+      "label": "Month"
+    },
+    "collection-date-year": {
+      "label": "Year"
+    },
+    "where-radio": {
+      "options": {
+        "post-office": {
+          "label": "Post office"
+        },
+        "sponsor": {
+          "label": "Sponsor"
+        }
+      }
     },
     "date-of-birth": {
       "legend": "Date of birth",
@@ -445,9 +478,17 @@
       "same-address": {
         "header": "Is your address still the same as the one on the letter from the Home Office?"
       }
+    },
+    "collection": {
+      "header": "Collection problem"
     }
   },
   "pages": {
+    "where": {
+      "header": "From where were you asked to collect your BRP?",
+      "description": "This could have been from a Post Office or a sponsor, such as your legal representative, employer, university or school.",
+      "date-question": "When did you try to collect your BRP? (optional)"
+    },
     "about-error": {
       "header": "What’s the problem with your BRP?",
       "subheader": "You can select one or more problems"

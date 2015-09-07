@@ -54,6 +54,33 @@ module.exports = {
       field: 'received',
     }
   },
+  'where-radio': {
+    validate: ['required'],
+    className: ['inline', 'form-group'],
+    options: [{
+      value: 'post-office',
+      label: 'fields.where-radio.options.post-office.label'
+    }, {
+      value: 'sponsor',
+      label: 'fields.where-radio.options.sponsor.label'
+    }]
+  },
+  'collection-date': {
+    legend: 'fields.collection-date.legend',
+    hint: 'fields.dalivery-date.hint'
+  },
+  'collection-date-day': {
+    validate: ['numeric'],
+    label: 'fields.collection-date-day.label'
+  },
+  'collection-date-month': {
+    validate: ['numeric'],
+    label: 'fields.collection-date-month.label'
+  },
+  'collection-date-year': {
+    validate: ['numeric'],
+    label: 'fields.collection-date-year.label'
+  },
   'no-letter': {
     label: 'fields.no-letter.label',
     className: 'form-checkbox'
