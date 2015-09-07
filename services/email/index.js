@@ -1,6 +1,6 @@
 'use strict';
 
-var debug = require('debug')('services/email');
+var logger = require('../../lib/logger');
 var nodemailer = require('nodemailer');
 var config = require('../../config');
 var i18n = require('i18n-future')();
@@ -67,8 +67,6 @@ function Emailer() {
 }
 
 Emailer.prototype.send = function send(email, callback) {
-  debug('Emailing: ', email.to, 'Subject: ', email.subject);
-
   var templateData = {
     data: email.dataToSend,
     t: function t() {
@@ -80,6 +78,7 @@ Emailer.prototype.send = function send(email, callback) {
   };
 
   function sendCustomerEmail() {
+    logger.info('Emailing customer: ', email.subject);
     this.transporter.sendMail({
       from: config.email.from,
       to: email.to,
@@ -106,6 +105,7 @@ Emailer.prototype.send = function send(email, callback) {
     }, callback);
   }
 
+  logger.info('Emailing caseworker: ', email.subject);
   this.transporter.sendMail({
     from: config.email.from,
     to: config.email.caseworker[email.template],
