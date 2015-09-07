@@ -1,6 +1,6 @@
 'use strict';
 
-var debug = require('debug')('services/email');
+var logger = require('../../lib/logger');
 var nodemailer = require('nodemailer');
 var config = require('../../config');
 var i18n = require('i18n-future')();
@@ -67,8 +67,6 @@ function Emailer() {
 }
 
 Emailer.prototype.send = function send(email, callback) {
-  debug('Emailing: ', email.to, 'Subject: ', email.subject);
-
   var templateData = {
     data: email.dataToSend,
     t: function t() {
@@ -80,32 +78,39 @@ Emailer.prototype.send = function send(email, callback) {
   };
 
   function sendCustomerEmail() {
-    this.transporter.sendMail({
-      from: config.email.from,
-      to: email.to,
-      subject: email.subject,
-      text: Mustache.render(customerPlainTextTemplates[email.template], templateData),
-      html: Mustache.render(customerHtmlTemplates[email.template], templateData),
-      attachments: [
-        {
-          filename: 'govuk_logotype_email.png',
-          path: path.resolve(__dirname, './images/govuk_logotype_email.png'),
-          cid: 'govuk_logotype_email'
-        },
-        {
-          filename: 'ho_crest_27px.png',
-          path: path.resolve(__dirname, './images/ho_crest_27px.png'),
-          cid: 'ho_crest_27px'
-        },
-        {
-          filename: 'spacer.gif',
-          path: path.resolve(__dirname, './images/spacer.gif'),
-          cid: 'spacer_image'
-        }
-      ]
-    }, callback);
+    logger.info('Emailing customer: ', email.subject);
+
+    if (email.to) {
+      this.transporter.sendMail({
+        from: config.email.from,
+        to: email.to,
+        subject: email.subject,
+        text: Mustache.render(customerPlainTextTemplates[email.template], templateData),
+        html: Mustache.render(customerHtmlTemplates[email.template], templateData),
+        attachments: [
+          {
+            filename: 'govuk_logotype_email.png',
+            path: path.resolve(__dirname, './images/govuk_logotype_email.png'),
+            cid: 'govuk_logotype_email'
+          },
+          {
+            filename: 'ho_crest_27px.png',
+            path: path.resolve(__dirname, './images/ho_crest_27px.png'),
+            cid: 'ho_crest_27px'
+          },
+          {
+            filename: 'spacer.gif',
+            path: path.resolve(__dirname, './images/spacer.gif'),
+            cid: 'spacer_image'
+          }
+        ]
+      }, callback);
+    } else {
+      callback();
+    }
   }
 
+  logger.info('Emailing caseworker: ', email.subject);
   this.transporter.sendMail({
     from: config.email.from,
     to: config.email.caseworker[email.template],
