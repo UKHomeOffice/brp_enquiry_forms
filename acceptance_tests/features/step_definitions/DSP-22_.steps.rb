@@ -16,14 +16,14 @@ When(/^I proceed to Step Four$/) do
 end
 
 Then(/^I see all the values I entered in Step Two$/) do
-  page.has_select?('my_select_box', :options =>['address-street'])
-	find_field('address-street').value.should == 'Outwood Ln'
-	page.has_select?('my_select_box', :options =>['address-town'])
-	find_field('address-town').value.should == 'Coulsdon'
-	page.has_select?('my_select_box', :options =>['address-county'])
-	find_field('address-county').value.should == 'Surrey'
-	page.has_select?('my_select_box', :options =>['address-postcode'])
-	find_field('address-postcode').value.should == 'CR5 3NP'
+  page.has_select?('my_select_box', :options =>['contact-address-street'])
+	find_field('contact-address-street').value.should == 'Outwood Ln'
+	page.has_select?('my_select_box', :options =>['contact-address-town'])
+	find_field('contact-address-town').value.should == 'Coulsdon'
+	page.has_select?('my_select_box', :options =>['contact-address-county'])
+	find_field('contact-address-county').value.should == 'Surrey'
+	page.has_select?('my_select_box', :options =>['contact-address-postcode'])
+	find_field('contact-address-postcode').value.should == 'CR5 3NP'
 end
 
 When(/^I proceed to Step Three$/) do
