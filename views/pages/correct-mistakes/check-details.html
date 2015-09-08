@@ -23,7 +23,7 @@
     {{$form}}
 
       <h3>{{#t}}pages.check-details-error.corrected-details-table.title{{/t}}</h3>
-      <table>
+      <table id="check-details">
         {{#values.first-name-error}}
           <tr>
             <td>{{#t}}fields.first-name-error-checkbox.label{{/t}}</td>
@@ -136,7 +136,7 @@
       </table>
 
       <h3>{{#t}}pages.check-details-error.personal-details-table.title{{/t}}</h3>
-      <table>
+      <table id="personal-details">
         {{#values.fullname}}
         <tr>
           <td>{{#t}}pages.check-details-error.personal-details-table.headers.fullname{{/t}}</td>
