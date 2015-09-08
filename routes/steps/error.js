@@ -2,11 +2,6 @@
 
 module.exports = {
   '/': {
-    controller: require('../../controllers/start'),
-    template: 'index',
-    next: '/about-error'
-  },
-  '/about-error': {
     controller: require('../../controllers/about-error'),
     template: 'correct-mistakes/about-error.html',
     fields: [
@@ -41,12 +36,12 @@ module.exports = {
     next: '/same-address'
   },
   '/conditions-and-length': {
-    prereqs: ['/about-error'],
+    prereqs: ['/'],
     template: 'correct-mistakes/conditions-and-length.html'
   },
   '/truncated': {
     controller: require('../../controllers/truncated'),
-    prereqs: ['/about-error'],
+    prereqs: ['/'],
     template: 'correct-mistakes/truncated.html',
     fields: [
       'truncated',
@@ -68,7 +63,7 @@ module.exports = {
       'address-county',
       'address-postcode'
     ],
-    backLink: '/about-error',
+    backLink: '/',
     next: '/personal-details'
   },
   '/personal-details': {
