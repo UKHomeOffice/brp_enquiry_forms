@@ -101,3 +101,25 @@ h1 {
 #delivery-details {
   width: 100%;
 }
+
+
+#check-details, #personal-details {
+  width: 100%;
+
+  td:nth-child(1) {
+    width: 20%;
+  }
+  td:nth-child(2) {
+    width: 60%;
+  }
+  td:nth-child(3) {
+    text-align: right;
+    padding-right: 0;
+  }
+
+  .button {
+    margin: 0;
+    background: #dde0e1;
+    color: #000;
+  }
+}
