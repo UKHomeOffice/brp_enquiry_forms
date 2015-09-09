@@ -2,11 +2,6 @@
 
 module.exports = {
   '/': {
-    controller: require('../../controllers/start'),
-    template: 'index',
-    next: '/letter-received'
-  },
-  '/letter-received': {
     controller: require('../../controllers/letter-received'),
     template: 'not-arrived/letter-received',
     fields: [
@@ -24,7 +19,7 @@ module.exports = {
   },
   '/on-the-way': {
     controller: require('../../controllers/on-the-way'),
-    prereqs: ['/letter-received'],
+    prereqs: ['/'],
     template: 'not-arrived/on-the-way',
     clearSession: false
   },
@@ -38,7 +33,7 @@ module.exports = {
       'address-county',
       'address-postcode'
     ],
-    backLink: '/letter-received',
+    backLink: '/',
     next: '/personal-details'
   },
   '/personal-details': {
@@ -84,10 +79,6 @@ module.exports = {
   '/confirmation': {
     controller: require('../../controllers/confirmation'),
     template: 'not-arrived/confirmation',
-    backLink: false,
-    next: '/done'
-  },
-  '/done': {
-    backLink: null
+    backLink: false
   }
 };

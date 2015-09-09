@@ -16,7 +16,12 @@ module.exports = {
     host: process.env.REDIS_HOST || '127.0.0.1'
   },
   email: {
-    caseworker: process.env.CASEWORKER_EMAIL || 'caseworker_email_address',
+    caseworker: {
+      error: process.env.CASEWORKER_ERROR_EMAIL || 'caseworker_email_address',
+      'lost-or-stolen-uk': process.env.CASEWORKER_LOSTSTOLEN_EMAIL || 'caseworker_email_address',
+      'lost-or-stolen-abroad': process.env.CASEWORKER_LOSTSTOLEN_EMAIL || 'caseworker_email_address',
+      delivery: process.env.CASEWORKER_DELIVERY_EMAIL || 'caseworker_email_address'
+    },
     port: process.env.EMAIL_PORT || 587,
     host: process.env.EMAIL_HOST || 'email-smtp.eu-west-1.amazonaws.com',
     auth: {

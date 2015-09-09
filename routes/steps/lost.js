@@ -2,11 +2,6 @@
 
 module.exports = {
   '/': {
-    controller: require('../../controllers/start'),
-    template: 'index',
-    next: '/inside-uk'
-  },
-  '/inside-uk': {
     template: 'lost-or-stolen/inside-uk.html',
     fields: [
       'inside-uk',
@@ -23,7 +18,7 @@ module.exports = {
       'date-lost-month',
       'date-lost-year',
     ],
-    backLink: '/inside-uk',
+    backLink: '/',
     next: '/personal-details'
   },
   '/personal-details': {
@@ -69,10 +64,6 @@ module.exports = {
   '/confirmation': {
     controller: require('../../controllers/confirmation'),
     template: 'lost-or-stolen/confirmation.html',
-    backLink: false,
-    next: '/done'
-  },
-  '/done': {
-    backLink: null
+    backLink: false
   }
 };

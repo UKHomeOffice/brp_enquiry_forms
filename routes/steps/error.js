@@ -2,11 +2,6 @@
 
 module.exports = {
   '/': {
-    controller: require('../../controllers/start'),
-    template: 'index',
-    next: '/location-applied'
-  },
-  '/location-applied': {
     template: 'correct-mistakes/location-applied.html',
     fields: [
       'location-applied'
@@ -46,16 +41,16 @@ module.exports = {
       'conditions-error-checkbox',
       'conditions-error'
     ],
-    backLink: '/location-applied',
+    backLink: '/',
     next: '/uk-address'
   },
   '/conditions-and-length': {
-    prereqs: ['/about-error'],
+    prereqs: ['/'],
     template: 'correct-mistakes/conditions-and-length.html'
   },
   '/truncated': {
     controller: require('../../controllers/truncated'),
-    prereqs: ['/about-error'],
+    prereqs: ['/'],
     template: 'correct-mistakes/truncated.html',
     fields: [
       'truncated',
@@ -76,7 +71,7 @@ module.exports = {
       'uk-address-county',
       'uk-address-postcode'
     ],
-    backLink: '/about-error',
+    backLink: '/',
     next: '/personal-details'
   },
   '/personal-details': {
@@ -122,10 +117,6 @@ module.exports = {
   '/confirmation': {
     controller: require('../../controllers/confirmation'),
     template: 'correct-mistakes/confirmation.html',
-    backLink: false,
-    next: '/done'
-  },
-  '/done': {
-    backLink: null
+    backLink: false
   }
 };

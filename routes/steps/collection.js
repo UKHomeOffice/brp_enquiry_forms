@@ -2,11 +2,6 @@
 
 module.exports = {
   '/': {
-    controller: require('../../controllers/start'),
-    template: 'index',
-    next: '/where'
-  },
-  '/where': {
     controller: require('../../controllers/collection-from'),
     template: 'collection/where',
     fields: [
