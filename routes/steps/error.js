@@ -10,7 +10,7 @@ module.exports = {
   },
   '/about-error': {
     controller: require('../../controllers/about-error'),
-    tempplate: 'correct-mistakes/about-error.html',
+    template: 'correct-mistakes/about-error.html',
     fields: [
       'error-selection',
       'first-name-error-checkbox',
