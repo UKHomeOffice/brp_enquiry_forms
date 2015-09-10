@@ -3,7 +3,6 @@
 var util = require('util');
 var Controller = require('../lib/base-controller');
 var DateController = require('../lib/date-controller');
-var debug = require('debug')('controllers/letter-recieved');
 
 var moment = require('moment');
 var dateFormat = 'DD-MM-YYYY';
@@ -67,9 +66,11 @@ LetterRecievedController.prototype.saveValues = function saveValues(req) {
 };
 
 LetterRecievedController.prototype.validateField = function validateField(key, req) {
-  debug('Validating field %s', key);
-
   if (req.form.values['no-letter'] === 'true') {
+    return undefined;
+  }
+
+  if (checkReceived(req, 'no')) {
     return undefined;
   }
 
