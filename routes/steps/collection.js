@@ -2,10 +2,10 @@
 
 module.exports = {
   '/': {
-    controller: require('../../controllers/collection-from'),
+    controller: require('../../controllers/collection-where'),
     template: 'collection/where',
     fields: [
-      'where-radio',
+      'collection-where-radio',
       'collection-date',
       'collection-date-day',
       'collection-date-month',
@@ -14,6 +14,7 @@ module.exports = {
     next: '/reasons'
   },
   '/reasons': {
+    controller: require('../../controllers/collection-reason'),
     template: 'collection/reasons',
     fields: [
       'reason-radio',
