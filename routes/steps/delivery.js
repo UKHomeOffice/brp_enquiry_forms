@@ -20,8 +20,7 @@ module.exports = {
   '/on-the-way': {
     controller: require('../../controllers/on-the-way'),
     prereqs: ['/'],
-    template: 'not-arrived/on-the-way',
-    clearSession: false
+    template: 'not-arrived/on-the-way'
   },
   '/same-address': {
     template: 'not-arrived/same-address-details.html',
