@@ -1,0 +1,267 @@
+{{<layout}}
+
+{{$journeyHeader}}
+  {{#t}}journeys.collection.header{{/t}}
+{{/journeyHeader}}
+
+{{$step}}Step 2 of 7{{/step}}
+
+{{$validationSummary}}
+  {{> partials-validation-summary}}
+{{/validationSummary}}
+
+{{$propositionHeader}}
+  {{> partials-navigation}}
+{{/propositionHeader}}
+
+{{$header}}{{#t}}pages.reasons.header{{/t}}{{/header}}
+
+  {{$content}}
+    <p>{{#t}}pages.reasons.subheader{{/t}}</p>
+
+    {{<partials-form}}
+
+      {{$form}}
+        <fieldset>
+          <legend class="visuallyhidden">
+            <span class="form-legend">{{#t}}fields.reason-radio.options.under-age.legend{{/t}}</span>
+          </legend>
+
+          <label class="block-label" for="reason-radio-under-age">
+            <input
+              type="radio"
+              name="reason-radio"
+              id="reason-radio-under-age"
+              value="under-age"
+              aria-required="true"
+              data-toggle="reason-under-age-desc"
+              {{#errors.reason-under-age}} checked="checked"{{/errors.reason-under-age}}
+              {{#values.reason-under-age}} checked="checked"{{/values.reason-under-age}}
+              {{#errors.reason-under-age}} aria-describedby="reason-under-age-error" aria-invalid="true"{{/errors.reason-under-age}}
+            >
+            <span>{{#t}}fields.reason-radio.options.under-age.label{{/t}}</span>
+          </label>
+
+          <div id="reason-under-age-desc" class="panel-indent js-hidden {{#errors.reason-under-age}}validation-error{{/errors.reason-under-age}}">
+            {{#input-text}}reason-under-age{{/input-text}}
+          </div>
+
+        </fieldset>
+
+        <fieldset>
+          <legend class="visuallyhidden">
+            <span class="form-legend">
+              {{#t}}fields.reason-radio.options.non-identity.legend{{/t}}
+            </span>
+          </legend>
+
+          <label class="block-label" for="reason-radio-non-identity">
+            <input
+              type="radio"
+              name="reason-radio"
+              id="reason-radio-non-identity"
+              value="non-identity"
+              aria-required="true"
+              data-toggle="reason-non-identity-desc"
+              {{#errors.reason-non-identity}} checked="checked"{{/errors.reason-non-identity}}
+              {{#errors.reason-non-identity}} aria-describedby="reason-non-identity-error" aria-invalid="true"{{/errors.reason-non-identity}}
+            >
+            <span>{{#t}}fields.reason-radio.options.non-identity.label{{/t}}</span>
+          </label>
+
+          <div id="reason-non-identity-desc" class="panel-indent js-hidden {{#errors.reason-non-identity}}validation-error{{/errors.reason-non-identity}}">
+            {{#input-text}}reason-non-identity{{/input-text}}
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend class="visuallyhidden">
+            <span class="form-legend">
+              {{#t}}fields.reason-radio.options.others-identity.legend{{/t}}
+            </span>
+          </legend>
+
+          <label class="block-label" for="reason-radio-others-identity">
+            <input
+              type="radio"
+              name="reason-radio"
+              id="reason-radio-others-identity"
+              value="others-identity"
+              aria-required="true"
+              data-toggle="reason-others-identity-desc"
+              {{#errors.reason-others-identity}} checked="checked"{{/errors.reason-others-identity}}
+              {{#errors.reason-others-identity}} aria-describedby="reason-others-identity-error" aria-invalid="true"{{/errors.reason-others-identity}}
+            >
+            <span>{{#t}}fields.reason-radio.options.others-identity.label{{/t}}</span>
+          </label>
+
+          <div id="reason-others-identity-desc" class="panel-indent js-hidden {{#errors.reason-others-identity}}validation-error{{/errors.reason-others-identity}}">
+            {{#input-text}}reason-others-identity{{/input-text}}
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend class="visuallyhidden">
+            <span class="form-legend">
+              {{#t}}fields.reason-radio.options.others-auth.legend{{/t}}
+            </span>
+          </legend>
+
+          <label class="block-label" for="reason-radio-others-auth">
+            <input
+              type="radio"
+              name="reason-radio"
+              id="reason-radio-others-auth"
+              value="others-auth"
+              aria-required="true"
+              data-toggle="reason-others-auth-desc"
+              {{#errors.reason-others-auth}} checked="checked"{{/errors.reason-others-auth}}
+              {{#errors.reason-others-auth}} aria-describedby="reason-others-auth-error" aria-invalid="true"{{/errors.reason-others-auth}}
+            >
+            <span>{{#t}}fields.reason-radio.options.others-auth.label{{/t}}</span>
+          </label>
+
+          <div id="reason-others-auth-desc" class="panel-indent js-hidden {{#errors.reason-others-auth}}validation-error{{/errors.reason-others-auth}}">
+            {{#input-text}}reason-others-auth{{/input-text}}
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend class="visuallyhidden">
+            <span class="form-legend">
+              {{#t}}fields.reason-radio.options.passport-family.legend{{/t}}
+            </span>
+          </legend>
+
+          <label class="block-label" for="reason-radio-passport-family">
+            <input
+              type="radio"
+              name="reason-radio"
+              id="reason-radio-passport-family"
+              value="passport-family"
+              aria-required="true"
+              data-toggle="reason-passport-family-desc"
+              {{#errors.reason-passport-family}} checked="checked"{{/errors.reason-passport-family}}
+              {{#errors.reason-passport-family}} aria-describedby="reason-passport-family-error" aria-invalid="true"{{/errors.reason-passport-family}}
+            >
+            <span>{{#t}}fields.reason-radio.options.passport-family.label{{/t}}</span>
+          </label>
+
+          <div id="reason-passport-family-desc" class="panel-indent js-hidden {{#errors.reason-passport-family}}validation-error{{/errors.reason-passport-family}}">
+            {{#input-text}}reason-passport-family{{/input-text}}
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend class="visuallyhidden">
+            <span class="form-legend">
+              {{#t}}fields.reason-radio.options.passport-lost.legend{{/t}}
+            </span>
+          </legend>
+
+          <label class="block-label" for="reason-radio-passport-lost">
+            <input
+              type="radio"
+              name="reason-radio"
+              id="reason-radio-passport-lost"
+              value="passport-lost"
+              aria-required="true"
+              data-toggle="reason-passport-lost-desc"
+              {{#errors.reason-passport-lost}} checked="checked"{{/errors.reason-passport-lost}}
+              {{#errors.reason-passport-lost}} aria-describedby="reason-passport-lost-error" aria-invalid="true"{{/errors.reason-passport-lost}}
+            >
+            <span>{{#t}}fields.reason-radio.options.passport-lost.label{{/t}}</span>
+          </label>
+
+          <div id="reason-passport-lost-desc" class="panel-indent js-hidden {{#errors.reason-passport-lost}}validation-error{{/errors.reason-passport-lost}}">
+            {{#input-text}}reason-passport-lost{{/input-text}}
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend class="visuallyhidden">
+            <span class="form-legend">
+              {{#t}}fields.reason-radio.options.passport-stamp.legend{{/t}}
+            </span>
+          </legend>
+
+          <label class="block-label" for="reason-radio-passport-stamp">
+            <input
+              type="radio"
+              name="reason-radio"
+              id="reason-radio-passport-stamp"
+              value="passport-stamp"
+              aria-required="true"
+              data-toggle="reason-passport-stamp-desc"
+              {{#errors.reason-passport-stamp}} checked="checked"{{/errors.reason-passport-stamp}}
+              {{#errors.reason-passport-stamp}} aria-describedby="reason-passport-stamp-error" aria-invalid="true"{{/errors.reason-passport-stamp}}
+            >
+            <span>{{#t}}fields.reason-radio.options.passport-stamp.label{{/t}}</span>
+          </label>
+
+          <div id="reason-passport-stamp-desc" class="panel-indent js-hidden {{#errors.reason-passport-stamp}}validation-error{{/errors.reason-passport-stamp}}">
+            {{#input-text}}reason-passport-stamp{{/input-text}}
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend class="visuallyhidden">
+            <span class="form-legend">
+              {{#t}}fields.reason-radio.options.no-brp.legend{{/t}}
+            </span>
+          </legend>
+
+          <label class="block-label" for="reason-radio-no-brp">
+            <input
+              type="radio"
+              name="reason-radio"
+              id="reason-radio-no-brp"
+              value="no-brp"
+              aria-required="true"
+              data-toggle="reason-no-brp-desc"
+              {{#errors.reason-no-brp}} checked="checked"{{/errors.reason-no-brp}}
+              {{#errors.reason-no-brp}} aria-describedby="reason-no-brp-error" aria-invalid="true"{{/errors.reason-no-brp}}
+            >
+            <span>{{#t}}fields.reason-radio.options.no-brp.label{{/t}}</span>
+          </label>
+
+          <div id="reason-no-brp-desc" class="panel-indent js-hidden {{#errors.reason-no-brp}}validation-error{{/errors.reason-no-brp}}">
+            {{#input-text}}reason-no-brp{{/input-text}}
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend class="visuallyhidden">
+            <span class="form-legend">
+              {{#t}}fields.reason-radio.options.other.legend{{/t}}
+            </span>
+          </legend>
+
+          <label class="block-label" for="reason-radio-other">
+            <input
+              type="radio"
+              name="reason-radio"
+              id="reason-radio-other"
+              value="other"
+              aria-required="true"
+              data-toggle="reason-other-desc"
+              {{#errors.reason-other}} checked="checked"{{/errors.reason-other}}
+              {{#errors.reason-other}} aria-describedby="reason-other-error" aria-invalid="true"{{/errors.reason-other}}
+            >
+            <span>{{#t}}fields.reason-radio.options.other.label{{/t}}</span>
+          </label>
+
+          <div id="reason-other-desc" class="panel-indent js-hidden {{#errors.reason-other}}validation-error{{/errors.reason-other}}">
+            {{#input-text}}reason-other{{/input-text}}
+          </div>
+        </fieldset>
+
+        {{#input-submit}}continue{{/input-submit}}
+
+      {{/form}}
+
+    {{/partials-form}}
+
+  {{/content}}
+
+{{/layout}}
