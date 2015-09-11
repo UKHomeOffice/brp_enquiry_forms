@@ -25,7 +25,7 @@
     "received": {
       "required": "Tell us if you have received a letter from the Home Office"
     },
-    "where-radio": {
+    "collection-where-radio": {
       "required": "Tell us where you were asked to collect your BRP from"
     },
     "reason-radio": {
@@ -189,7 +189,7 @@
     "collection-date-year": {
       "label": "Year"
     },
-    "where-radio": {
+    "collection-where-radio": {
       "options": {
         "post-office": {
           "label": "Post office"

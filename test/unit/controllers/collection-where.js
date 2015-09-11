@@ -2,11 +2,11 @@
 
 var proxyquire = require('proxyquire');
 var DateController = sinon.stub();
-var CollectionFromController = proxyquire('../../../controllers/collection-from', {
+var CollectionWhereController = proxyquire('../../../controllers/collection-where', {
   '../lib/date-controller': DateController
 });
 
-describe('controllers/collection-from', function () {
+describe('controllers/collection-where', function () {
 
   describe('instantiated', function () {
 
@@ -14,7 +14,7 @@ describe('controllers/collection-from', function () {
     var args = {template: 'index'};
 
     beforeEach(function () {
-      controller = new CollectionFromController(args);
+      controller = new CollectionWhereController(args);
     });
 
     it('has a dateKey equal to date-of-birth', function () {
@@ -37,7 +37,7 @@ describe('controllers/collection-from', function () {
 
     beforeEach(function () {
       DateController.prototype.validateField = sinon.stub();
-      controller = new CollectionFromController(args);
+      controller = new CollectionWhereController(args);
     });
 
     it('calls validateField on the DateController with key, request and false', function () {

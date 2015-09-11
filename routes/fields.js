@@ -54,15 +54,15 @@ module.exports = {
       field: 'received',
     }
   },
-  'where-radio': {
+  'collection-where-radio': {
     validate: ['required'],
     className: ['inline', 'form-group'],
     options: [{
       value: 'post-office',
-      label: 'fields.where-radio.options.post-office.label'
+      label: 'fields.collection-where-radio.options.post-office.label'
     }, {
       value: 'sponsor',
-      label: 'fields.where-radio.options.sponsor.label'
+      label: 'fields.collection-where-radio.options.sponsor.label'
     }]
   },
   'collection-date': {
