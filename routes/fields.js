@@ -456,7 +456,7 @@ module.exports = {
       label: 'fields.reason-radio.non-identity.label',
       toggle: 'reason-non-identity-group',
     }, {
-      value: 'others-identty',
+      value: 'others-identity',
       label: 'fields.reason-radio.others-identity.label',
       toggle: 'reason-others-identity-group',
     }, {
