@@ -80,6 +80,21 @@
       "future": "The date is in the future",
       "format": "Enter your date of birth in the correct format"
     },
+    "nominated-date": {
+      "required": "Enter the nominees date of birth",
+      "numeric": "Date must only contain numbers",
+      "future": "The date is in the future",
+      "format": "Enter the nominees date of birth in the correct format"
+    },
+    "nominated-fullname": {
+      "required": "Tell us the nominees full name"
+    },
+    "nominated-nationality": {
+      "required": "Tell us the nominees nationality"
+    },
+    "nominated-id-number": {
+      "required": "Tell us the nominees identity document number"
+    },
     "nationality": {
       "required": "Tell us your nationality"
     },
@@ -265,6 +280,29 @@
     },
     "reason-other": {
       "label": "Please describe the problem (optional)"
+    },
+    "nominated-fullname": {
+      "label": "Full name"
+    },
+    "nominated-nationality": {
+      "label": "Country of nationality"
+    },
+    "nominated-id-number": {
+      "label": "Identity document number"
+    },
+    "nominated-date": {
+      "label": "Date",
+      "legend": "Date of birth",
+      "hint": "For example, 11  6  2015"
+    },
+    "nominated-date-day": {
+      "label": "Day"
+    },
+    "nominated-date-month": {
+      "label": "Month"
+    },
+    "nominated-date-year": {
+      "label": "Year"
     },
     "date-of-birth": {
       "legend": "Date of birth",
@@ -560,6 +598,10 @@
     "reasons": {
       "header": "Why couldn't you collect your BRP?",
       "subheader": "Tell us the reason why you were unable to collect the BRP."
+    },
+    "nominated": {
+      "header": "Who was supposed to collect your BRP on your behalf?",
+      "description": "Provide details of the person who tried to collect the BRP on your behalf"
     },
     "where": {
       "header": "From where were you asked to collect your BRP?",
