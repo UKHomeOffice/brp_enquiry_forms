@@ -43,6 +43,18 @@ module.exports = {
       'nominated-nationality',
       'nominated-id-number'
     ],
+    next: '/uk-address',
+    backLink: '/reasons'
+  },
+  '/uk-address': {
+    template: 'collection/uk-address',
+    fields: [
+      'uk-address-radio',
+      'uk-address-street',
+      'uk-address-town',
+      'uk-address-county',
+      'uk-address-postcode'
+    ],
     next: '/confirmation',
     backLink: '/reasons'
   },
