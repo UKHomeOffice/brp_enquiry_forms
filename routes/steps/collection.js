@@ -55,8 +55,23 @@ module.exports = {
       'uk-address-county',
       'uk-address-postcode'
     ],
-    next: '/confirmation',
+    next: '/personal-details',
     backLink: '/reasons'
+  },
+  '/personal-details': {
+    controller: require('../../controllers/personal-details'),
+    template: 'collection/personal-details.html',
+    fields: [
+      'fullname',
+      'date-of-birth',
+      'date-of-birth-day',
+      'date-of-birth-month',
+      'date-of-birth-year',
+      'nationality',
+      'passport'
+    ],
+    backLink: '/uk-address',
+    next: '/confirmation'
   },
   '/confirmation': {
     controller: require('../../controllers/confirmation'),
