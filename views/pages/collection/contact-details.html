@@ -1,0 +1,57 @@
+{{<layout}}
+{{$step}}Step 6 of 7{{/step}}
+
+{{$journeyHeader}}
+  {{#t}}journeys.collection.header{{/t}}
+{{/journeyHeader}}
+
+{{$validationSummary}}
+  {{> partials-validation-summary}}
+{{/validationSummary}}
+
+{{$propositionHeader}}
+  {{> partials-navigation}}
+{{/propositionHeader}}
+
+{{$header}}{{#t}}pages.contact-details.header{{/t}}{{/header}}
+
+{{$content}}
+
+  {{<partials-form}}
+
+    {{$form}}
+
+      {{#input-text}}email{{/input-text}}
+
+      {{#checkbox}}no-email{{/checkbox}}
+
+      <fieldset id="address-group" class="panel-indent js-hidden">
+        <legend class="visuallyhidden">
+            <span class="form-legend">
+              {{#t}}fields.address.legend{{/t}}
+            </span>
+        </legend>
+
+        <p>{{#t}}pages.contact-details.address.title{{/t}}</p>
+
+        {{#input-text}}contact-address-street{{/input-text}}
+
+        {{#input-text}}contact-address-town{{/input-text}}
+
+        {{#input-text}}contact-address-county{{/input-text}}
+
+        {{#input-text-code}}contact-address-postcode{{/input-text-code}}
+
+      </fieldset>
+
+      {{#input-phone}}phone{{/input-phone}}
+
+      {{#input-submit}}continue{{/input-submit}}
+
+    {{/form}}
+
+  {{/partials-form}}
+
+{{/content}}
+
+{{/layout}}

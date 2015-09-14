@@ -71,6 +71,20 @@ module.exports = {
       'passport'
     ],
     backLink: '/uk-address',
+    next: '/contact-details'
+  },
+  '/contact-details': {
+    template: 'collection/contact-details',
+    fields: [
+      'email',
+      'no-email',
+      'contact-address-street',
+      'contact-address-town',
+      'contact-address-county',
+      'contact-address-postcode',
+      'phone'
+    ],
+    backLink: '/personal-details',
     next: '/confirmation'
   },
   '/confirmation': {
