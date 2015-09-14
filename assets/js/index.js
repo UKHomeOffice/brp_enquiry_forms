@@ -26,7 +26,7 @@ var allCountries = new Bloodhound({
 });
 
 
-$('#nationality, #nationality-error').typeahead({
+$('#nationality, #nationality-error, #nominated-nationality').typeahead({
   minLength: 1,
   hint: false,
   limit: 5
