@@ -591,7 +591,11 @@
       }
     },
     "collection": {
-      "header": "Collection problem"
+      "header": "Collection problem",
+      "personal-details": {
+        "header": "What are your personal details?",
+        "subheader": "We need these details to review the problem."
+      }
     }
   },
   "pages": {
