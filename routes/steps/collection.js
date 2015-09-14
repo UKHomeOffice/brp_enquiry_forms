@@ -28,8 +28,23 @@ module.exports = {
       'reason-no-brp',
       'reason-other'
     ],
-    next: '/confirmation',
+    next: '/nominated-person',
     backLink: '/'
+  },
+  '/nominated-person': {
+    controller: require('../../controllers/nominated-person'),
+    template: 'collection/nominated',
+    fields: [
+      'nominated-fullname',
+      'nominated-date',
+      'nominated-date-day',
+      'nominated-date-month',
+      'nominated-date-year',
+      'nominated-nationality',
+      'nominated-id-number'
+    ],
+    next: '/confirmation',
+    backLink: '/reasons'
   },
   '/confirmation': {
     controller: require('../../controllers/confirmation'),
