@@ -42,12 +42,12 @@ describe('controllers/collection-reason', function () {
     });
 
     it('returns "post-office" when selected', function () {
-      req.form.values['collection-where-radio'] = 'post-office';
+      req.form.values['collection-where-radio'] = 'Post office';
       controller.locals(req, res).should.have.property('collectionWhere').and.deep.equal({'post-office': true});
     });
 
     it('returns "sponsor" when selected', function () {
-      req.form.values['collection-where-radio'] = 'sponsor';
+      req.form.values['collection-where-radio'] = 'Sponsor';
       controller.locals(req, res).should.have.property('collectionWhere').and.deep.equal({'sponsor': true});
     });
 

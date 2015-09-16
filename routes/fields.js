@@ -31,7 +31,7 @@ module.exports = {
     }
   },
   'delivery-date-day': {
-
+    validate: ['required', 'numeric'],
     label: 'fields.delivery-date-day.label',
     dependent: {
       value: 'yes',
@@ -58,10 +58,10 @@ module.exports = {
     validate: ['required'],
     className: ['inline', 'form-group'],
     options: [{
-      value: 'post-office',
+      value: 'Post office',
       label: 'fields.collection-where-radio.options.post-office.label'
     }, {
-      value: 'sponsor',
+      value: 'Sponsor',
       label: 'fields.collection-where-radio.options.sponsor.label'
     }]
   },

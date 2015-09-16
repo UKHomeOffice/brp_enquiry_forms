@@ -1,20 +1,19 @@
 {{<layout}}
+  {{$step}}Step 2 of 6{{/step}}
 
-{{$journeyHeader}}
-  {{#t}}journeys.collection.header{{/t}}
-{{/journeyHeader}}
+  {{$journeyHeader}}
+    {{#t}}journeys.collection.header{{/t}}
+  {{/journeyHeader}}
 
-{{$step}}Step 2 of 7{{/step}}
+  {{$validationSummary}}
+    {{> partials-validation-summary}}
+  {{/validationSummary}}
 
-{{$validationSummary}}
-  {{> partials-validation-summary}}
-{{/validationSummary}}
+  {{$propositionHeader}}
+    {{> partials-navigation}}
+  {{/propositionHeader}}
 
-{{$propositionHeader}}
-  {{> partials-navigation}}
-{{/propositionHeader}}
-
-{{$header}}{{#t}}pages.reasons.header{{/t}}{{/header}}
+  {{$header}}{{#t}}pages.reasons.header{{/t}}{{/header}}
 
   {{$content}}
     <p>{{#t}}pages.reasons.subheader{{/t}}</p>
@@ -24,6 +23,7 @@
       {{$form}}
 
         {{#collectionWhere.post-office}}
+
         <fieldset>
           <legend class="visuallyhidden">
             <span class="form-legend">{{#t}}fields.reason-radio.options.under-age.legend{{/t}}</span>

@@ -11,12 +11,12 @@ var CollectionReason = function CollectionReason() {
 util.inherits(CollectionReason, Controller);
 
 function getWhereValue(req) {
-  if (req.form.values['collection-where-radio'] === 'post-office') {
+  if (req.form.values['collection-where-radio'] === 'Post office') {
     return {
       'post-office': true
     };
   }
-  if (req.form.values['collection-where-radio'] === 'sponsor') {
+  if (req.form.values['collection-where-radio'] === 'Sponsor') {
     return {
       'sponsor': true
     };
@@ -25,7 +25,6 @@ function getWhereValue(req) {
 
 CollectionReason.prototype.locals = function ccollectionReasonLocals(req, res) {
   var locals = Controller.prototype.locals.apply(this, arguments);
-
   return _.extend({}, locals, {
     baseUrl: req.baseUrl,
     nextPage: this.getNextStep(req, res),

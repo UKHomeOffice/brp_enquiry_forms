@@ -27,6 +27,7 @@
     {{<partials-form}}
 
       {{$form}}
+
         {{#radio-group}}received{{/radio-group}}
 
         <fieldset id="delivery-date-group" class="panel-indent {{#errors.delivery-date}}validation-error{{/errors.delivery-date}}">
@@ -54,6 +55,7 @@
         </fieldset>
 
         {{#input-submit}}continue{{/input-submit}}
+
       {{/form}}
 
     {{/partials-form}}
