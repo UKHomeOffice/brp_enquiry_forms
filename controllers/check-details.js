@@ -29,6 +29,12 @@ var serviceMap = {
       template: 'lost-or-stolen' + suffix,
       subject: 'Form submitted: Report a lost or stolen BRP'
     };
+  },
+  '/collection/check-details': function collection() {
+    return {
+      template: 'collection',
+      subject: 'Form submitted: Report a collection problem'
+    };
   }
 };
 

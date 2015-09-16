@@ -16,6 +16,7 @@ describe('base-controller', function () {
 
     beforeEach(function () {
       HMPOWizard.Controller = sinon.stub();
+      HMPOWizard.Controller.prototype.locals = sinon.stub().returns({foo: 'bar'});
       Controller = proxyquire('../../../lib/base-controller', {
         'hmpo-form-wizard': HMPOWizard
       });
@@ -47,6 +48,11 @@ describe('base-controller', function () {
         controller = new Controller({
           template: 'foo'
         });
+      });
+
+      it('always extends from parent locals', function () {
+        controller.getErrors = sinon.stub().returns({foo: true});
+        controller.locals(req, res).should.have.property('foo').and.always.equal('bar');
       });
 
       it('returns errorLength.single if there is one error', function () {

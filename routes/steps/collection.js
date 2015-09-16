@@ -43,18 +43,6 @@ module.exports = {
       'nominated-nationality',
       'nominated-id-number'
     ],
-    next: '/uk-address',
-    backLink: '/reasons'
-  },
-  '/uk-address': {
-    template: 'collection/uk-address',
-    fields: [
-      'uk-address-radio',
-      'uk-address-street',
-      'uk-address-town',
-      'uk-address-county',
-      'uk-address-postcode'
-    ],
     next: '/personal-details',
     backLink: '/reasons'
   },
@@ -70,7 +58,7 @@ module.exports = {
       'nationality',
       'passport'
     ],
-    backLink: '/uk-address',
+    backLink: '/nominated-person',
     next: '/contact-details'
   },
   '/contact-details': {
@@ -85,6 +73,17 @@ module.exports = {
       'phone'
     ],
     backLink: '/personal-details',
+    next: '/check-details'
+  },
+  '/check-details': {
+    controller: require('../../controllers/collection-check-details'),
+    template: 'collection/check-details.html',
+    fields: [
+      'org-help',
+      'rep-name',
+      'organisation'
+    ],
+    backLink: '/contact-details',
     next: '/confirmation'
   },
   '/confirmation': {
