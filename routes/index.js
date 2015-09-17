@@ -5,6 +5,7 @@ var deliverySteps = require('./steps/delivery');
 var errorSteps = require('./steps/error');
 var lostSteps = require('./steps/lost');
 var collectionSteps = require('./steps/collection');
+var someoneElseSteps = require('./steps/someone-else');
 var fields = require('./fields');
 var wizard = require('hmpo-form-wizard');
 var mixins = require('hmpo-template-mixins');
@@ -23,6 +24,8 @@ app.use('/correct-mistakes/', wizard(errorSteps, fields, options));
 app.use('/lost-stolen-damaged/', wizard(lostSteps, fields, options));
 
 app.use('/collection/', wizard(collectionSteps, fields, options));
+
+app.use('/someone-else/', wizard(someoneElseSteps, fields, options));
 
 app.use('/cookies', function cookies(req, res) {
   res.render('cookies');
