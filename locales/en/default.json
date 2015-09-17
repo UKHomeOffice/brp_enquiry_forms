@@ -95,6 +95,36 @@
     "nominated-id-number": {
       "required": "Tell us the nominees identity document number"
     },
+    "someone-else-date": {
+      "required": "Enter the nominees date of birth",
+      "numeric": "Date must only contain numbers",
+      "future": "The date is in the future",
+      "format": "Enter the nominees date of birth in the correct format"
+    },
+    "someone-else-fullname": {
+      "required": "Tell us the nominees full name"
+    },
+    "someone-else-nationality": {
+      "required": "Tell us the nominees nationality"
+    },
+    "someone-else-id-number": {
+      "required": "Tell us the nominees identity document number"
+    },
+    "change-person-date": {
+      "required": "Enter the nominees date of birth",
+      "numeric": "Date must only contain numbers",
+      "future": "The date is in the future",
+      "format": "Enter the nominees date of birth in the correct format"
+    },
+    "change-person-fullname": {
+      "required": "Tell us the nominees full name"
+    },
+    "change-person-nationality": {
+      "required": "Tell us the nominees nationality"
+    },
+    "change-person-id-number": {
+      "required": "Tell us the nominees identity document number"
+    },
     "nationality": {
       "required": "Tell us your nationality"
     },
@@ -213,6 +243,63 @@
           "label": "Sponsor"
         }
       }
+    },
+    "arrange-collection-radio": {
+      "options": {
+        "someone-else": {
+          "label": "Allow someone else to collect my BRP"
+        },
+        "change-person": {
+          "label": "Change the person I requested to collect my BRP"
+        },
+        "cancel-request": {
+          "label": "Cancel request for someone else to collect my BRP"
+        }
+      }
+    },
+    "someone-else-fullname": {
+      "label": "Full name"
+    },
+    "someone-else-date": {
+      "legend": "Date of birth",
+      "hint": "For example, 31  3  1970"
+    },
+    "someone-else-date-day": {
+      "label": "Day"
+    },
+    "someone-else-date-month": {
+      "label": "Month"
+    },
+    "someone-else-date-year": {
+      "label": "Year"
+    },
+    "someone-else-nationality": {
+      "label":  "Country of nationality"
+    },
+    "someone-else-id-number": {
+      "label": "Identity document number <br/>(This could be UK/EU driving licence, passport or BRP)"
+    },
+    "change-person-fullname": {
+      "label": "Full name"
+    },
+    "change-person-date": {
+      "legend": "Date of birth",
+      "hint": "For example, 31  3  1970"
+    },
+    "change-person-date-day": {
+      "label": "Day"
+    },
+    "change-person-date-month": {
+      "label": "Month"
+    },
+    "change-person-date-year": {
+      "label": "Year"
+    },
+    "change-person-nationality": {
+      "label":  "Country of nationality"
+    },
+    "change-person-id-number": {
+      "label": "Identity document number <br/>(This could be UK/EU driving licence, passport or BRP)"
     },
     "reason-radio": {
       "options": {
@@ -636,6 +723,10 @@
     }
   },
   "pages": {
+    "arrange-collection": {
+      "header": "What would you like to arrange?",
+      "subheader": "Tell us what would you like to do today with this form."
+    },
     "reasons": {
       "header": "Why couldn't you collect your BRP?",
       "subheader": "Tell us the reason why you were unable to collect the BRP."
@@ -818,6 +909,14 @@
         "one": "Your name has been shortened on your BRP, as a maximum of 30 characters can be printed on the card.",
         "two": "This is not an error. The information is correct on your card and you will be able to use it to travel.",
         "three": "You do not need to do anything else."
+      }
+    },
+    "someone-else": {
+      "someone-else-group": {
+        "title": "Provide details of <strong>the person who you want to collect your BRP</strong> on your behalf"
+      },
+      "change-person-group": {
+        "title": "Provide details of the new person you want to collect your BRP on your behalf"
       }
     }
   },

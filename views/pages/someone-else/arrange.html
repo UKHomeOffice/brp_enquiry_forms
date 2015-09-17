@@ -1,0 +1,97 @@
+{{<layout}}
+  {{$step}}Step 1 of 5{{/step}}
+
+  {{$journeyHeader}}
+    {{#t}}journeys.delivery.header{{/t}}
+  {{/journeyHeader}}
+
+  {{$validationSummary}}
+    {{> partials-validation-summary}}
+  {{/validationSummary}}
+
+  {{$propositionHeader}}
+    {{> partials-navigation}}
+  {{/propositionHeader}}
+
+  {{$header}}{{#t}}pages.arrange-collection.header{{/t}}{{/header}}
+
+  {{$content}}
+    <p>{{#t}}pages.arrange-collection.subheader{{/t}}</p>
+
+    {{<partials-form}}
+
+      {{$form}}
+        {{#radio-group}}arrange-collection-radio{{/radio-group}}
+
+        <div id="someone-else-group" class="panel-indent">
+          <p>{{#t}}pages.someone-else.someone-else-group.title{{/t}}</p>
+
+          {{#input-text}}someone-else-fullname{{/input-text}}
+
+          <fieldset id="someone-else-date-group" class="{{#errors.someone-else-date}}validation-error{{/errors.someone-else-date}}">
+
+            <legend class=visuallyhidden>
+              <span class="form-label-bold">{{#t}}fields.someone-else-date.legend{{/t}}</span>
+            </legend>
+
+            <div class="form-group form-date">
+              {{#t}}fields.someone-else-date.legend{{/t}}
+              {{#errors.someone-else-date}}
+                <span id="nominated-date-error" class="error-message">
+                  {{errors.someone-else-date.message}}
+                </span>
+              {{/errors.someone-else-date}}
+              <p id="nominated-date-hint" class="form-hint">
+                {{#t}}fields.nominated-date.hint{{/t}}
+              </p>
+              {{#input-date}}someone-else-date{{/input-date}}
+            </div>
+
+          </fieldset>
+
+          {{#input-text}}someone-else-nationality{{/input-text}}
+
+          {{#input-text}}someone-else-id-number{{/input-text}}
+
+        </div>
+
+        <div id="change-person-group" class="panel-indent">
+          <p>{{#t}}pages.someone-else.change-person-group.title{{/t}}</p>
+
+          {{#input-text}}change-person-fullname{{/input-text}}
+
+          <fieldset id="change-person-date-group" class="{{#errors.change-person-date}}validation-error{{/errors.change-person-date}}">
+
+            <legend class=visuallyhidden>
+              <span class="form-label-bold">{{#t}}fields.change-person-date.legend{{/t}}</span>
+            </legend>
+
+            <div class="form-group form-date">
+              {{#t}}fields.change-person-date.legend{{/t}}
+              {{#errors.change-person-date}}
+                <span id="nominated-date-error" class="error-message">
+                  {{errors.change-person-date.message}}
+                </span>
+              {{/errors.change-person-date}}
+              <p id="nominated-date-hint" class="form-hint">
+                {{#t}}fields.nominated-date.hint{{/t}}
+              </p>
+              {{#input-date}}change-person-date{{/input-date}}
+            </div>
+
+          </fieldset>
+
+          {{#input-text}}change-person-nationality{{/input-text}}
+
+          {{#input-text}}change-person-id-number{{/input-text}}
+
+        </div>
+
+        {{#input-submit}}continue{{/input-submit}}
+      {{/form}}
+
+    {{/partials-form}}
+
+  {{/content}}
+
+{{/layout}}
