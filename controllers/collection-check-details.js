@@ -52,8 +52,10 @@ function getReason(req) {
   }
 }
 
-CollectionCheckDetails.prototype.locals = function CollectionCheckDetailsLocals(req, res) {
+CollectionCheckDetails.prototype.locals = function collectionCheckDetailsLocals(req, res) {
   var locals = CheckDetails.prototype.locals.apply(this, arguments);
+  req.sessionModel.set(getReason(req));
+
   return _.extend({}, locals, {
     baseUrl: req.baseUrl,
     nextPage: this.getNextStep(req, res),

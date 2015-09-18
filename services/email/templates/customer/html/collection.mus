@@ -54,42 +54,88 @@
               <td width="75%" style="font-family: Helvetica, Arial, sans-serif;">
                 {{#data}}
 
-                  <p style="font-size: 23px; color: #000; line-height: 1.32; margin: 0 0 20px 0;">Form submitted: Your BRP hasn't arrived</p>
+                  <p style="font-size: 23px; color: #000; line-height: 1.32; margin: 0 0 20px 0;">{{#t}}emails.journeys.collection.header{{/t}}</p>
 
-                  <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">Dear {{fullname}}</p>
-
-                  <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">We will now review the information you have given us to find out why you have not received the biometric residence permit.</p>
-
-                  <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">We will get back to you within <strong>5 working days</strong>. For example, if you contact us on a Monday you will hear back by the following Monday.</p>
-
-                  <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">We will then tell you what to do next</p>
-
-                  <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">Here is the information you have sent us:</p>
+                  <!-- PROBLEM DETAILS TABLE -->
+                  <p style="font-size: 19px; font-weight: bold; color: #000; line-height: 1.32; margin: 0 0 10px 0;">{{#t}}journeys.collection.pages.check-details.tables.problem-details.title{{/t}}</p>
 
                   <table width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#FFFFFF" style="margin: 0 0 20px 0;">
-                    {{#address-street}}
-                      <tr style="border-top: 1px solid #009390;">
-                        <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.check-details.table.headers.address{{/t}}</p></td>
-                        <td width="75%">
-                          <p style="font-size: 16px; color: #000; margin: 10px 0;">
-                            {{address-street}},
-                            {{address-town}},
-                            {{#address-county}}{{address-county}},{{/address-county}}
-                            {{address-postcode}}
-                          </p>
-                        </td>
-                      </tr>
-                    {{/address-street}}
                     <tr style="border-top: 1px solid #009390;">
-                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.check-details-error.personal-details-table.headers.fullname{{/t}}</p></td>
+                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}journeys.collection.pages.check-details.tables.problem-details.where-radio.label{{/t}}</p></td>
+                      <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{collection-where-radio}}</p></td>
+                    </tr>
+                    <tr style="border-top: 1px solid #009390;">
+                      <td colspan="2"width="100%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{#collection-date}}{{collection-date-formatted}}{{/collection-date}}</p></td>
+                    </tr>
+                    {{#t}}journeys.collection.pages.check-details.tables.problem-details.reason.label{{/t}}
+                    <tr style="border-top: 1px solid #009390;">
+                      <td colspan="2" width="100%">
+                        <p style="font-size: 16px; color: #000; margin: 10px 0;">
+                          {{#under-age}}{{#t}}fields.reason-radio.options.under-age.label{{/t}}{{/under-age}}
+                          {{#non-identity}}{{#t}}fields.reason-radio.options.non-identity.label{{/t}}{{/non-identity}}
+                          {{#others-identity}}{{#t}}fields.reason-radio.options.others-identity.label{{/t}}{{/others-identity}}
+                          {{#others-auth}}{{#t}}fields.reason-radio.options.others-auth.label{{/t}}{{/others-auth}}
+                          {{#passport-family}}{{#t}}fields.reason-radio.options.passport-family.label{{/t}}{{/passport-family}}
+                          {{#passport-lost}}{{#t}}fields.reason-radio.options.passport-lost.label{{/t}}{{/passport-lost}}
+                          {{#passport-stamp}}{{#t}}fields.reason-radio.options.passport-stamp.label{{/t}}{{/passport-stamp}}
+                          {{#no-brp}}{{#t}}fields.reason-radio.options.no-brp.label{{/t}}{{/no-brp}}
+                          {{#other}}{{#t}}fields.reason-radio.options.other.label{{/t}}{{/other}}
+                        </p>
+                      </td>
+                    </tr>
+                    <tr style="border-top: 1px solid #009390;">
+                      <td colspan="2" width="100%">
+                        <p style="font-size: 16px; color: #000; margin: 10px 0;">
+                          {{#reason-under-age}}{{reason-under-age}}{{/reason-under-age}}
+                          {{#reason-non-identity}}{{reason-non-identity}}{{/reason-non-identity}}
+                          {{#reason-others-identity}}{{reason-others-identity}}{{/reason-others-identity}}
+                          {{#reason-others-auth}}{{reason-others-auth}}{{/reason-others-auth}}
+                          {{#reason-passport-family}}{{reason-passport-family}}{{/reason-passport-family}}
+                          {{#reason-passport-lost}}{{reason-passport-lost}}{{/reason-passport-lost}}
+                          {{#reason-passport-stamp}}{{reason-passport-stamp}}{{/reason-passport-stamp}}
+                          {{#reason-no-brp}}{{reason-no-brp}}{{/reason-no-brp}}
+                          {{#reason-other}}{{reason-other}}{{/reason-other}}
+                        </p>
+                      </td>
+                    </tr>
+                  </table>
+
+                  <!-- OTHER PERSONS DETAILS TABLE -->
+                  <p style="font-size: 19px; font-weight: bold; color: #000; line-height: 1.32; margin: 0 0 10px 0;">{{#t}}journeys.collection.pages.check-details.tables.others-details.title{{/t}}</p>
+
+                  <table width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#FFFFFF" style="margin: 0 0 20px 0;">
+                    <tr style="border-top: 1px solid #009390;">
+                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}journeys.collection.pages.check-details.tables.others-details.fullname{{/t}}</p></td>
+                      <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{nominated-fullname}}</p></td>
+                    </tr>
+                    <tr style="border-top: 1px solid #009390;">
+                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}journeys.collection.pages.check-details.tables.others-details.date-of-birth{{/t}}</p></td>
+                      <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{nominated-date-formatted}}</p></td>
+                    </tr>
+                    <tr style="border-top: 1px solid #009390;">
+                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}journeys.collection.pages.check-details.tables.others-details.nationality{{/t}}</p></td>
+                      <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{nominated-nationality}}</p></td>
+                    </tr>
+                    <tr style="border-top: 1px solid #009390;">
+                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}journeys.collection.pages.check-details.tables.others-details.id-number{{/t}}</p></td>
+                      <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{nominated-id-number}}</p></td>
+                    </tr>
+                  </table>
+
+                  <!-- PERSONAL DETAILS TABLE -->
+                  <p style="font-size: 19px; font-weight: bold; color: #000; line-height: 1.32; margin: 0 0 10px 0;">{{#t}}journeys.collection.pages.check-details.tables.personal-details.title{{/t}}</p>
+
+                  <table width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#FFFFFF" style="margin: 0 0 20px 0;">
+                    <tr style="border-top: 1px solid #009390;">
+                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.check-details.table.headers.fullname{{/t}}</p></td>
                       <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{fullname}}</p></td>
                     </tr>
                     <tr style="border-top: 1px solid #009390;">
-                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.check-details-error.personal-details-table.headers.date-of-birth{{/t}}</p></td>
-                      <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{date-of-birth-day}}-{{date-of-birth-month}}-{{date-of-birth-year}}</p></td>
+                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.check-details.table.headers.date-of-birth{{/t}}</p></td>
+                      <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{#date-of-birth-formatted}}{{date-of-birth-formatted}}{{/date-of-birth-formatted}}</p></td>
                     </tr>
                     <tr style="border-top: 1px solid #009390;">
-                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.check-details-error.personal-details-table.headers.nationality{{/t}}</p></td>
+                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.check-details.table.headers.nationality{{/t}}</p></td>
                       <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{nationality}}</p></td>
                     </tr>
                     {{#passport}}
@@ -100,10 +146,17 @@
                     {{/passport}}
                     {{#email}}
                       <tr style="border-top: 1px solid #009390;">
-                        <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}fields.email.label{{/t}}</p></td>
+                        <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.check-details.table.headers.email{{/t}}</p></td>
                         <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{email}}</p></td>
                       </tr>
                     {{/email}}
+                    {{#phone}}
+                      <tr style="border-top: 1px solid #009390;">
+                        <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.check-details.table.headers.phone{{/t}}</p></td>
+                        <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{phone}}</p></td>
+                      </tr>
+                    {{/phone}}
+                    {{^email}}
                     {{#contact-address-street}}
                       <tr style="border-top: 1px solid #009390;">
                         <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.check-details.table.headers.contact-address{{/t}}</p></td>
@@ -117,12 +170,7 @@
                         </td>
                       </tr>
                     {{/contact-address-street}}
-                    {{#phone}}
-                      <tr style="border-top: 1px solid #009390;">
-                        <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}emails.phone{{/t}}</p></td>
-                        <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{phone}}</p></td>
-                      </tr>
-                    {{/phone}}
+                    {{/email}}
                   </table>
 
                 {{/data}}

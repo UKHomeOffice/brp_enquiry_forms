@@ -777,7 +777,7 @@
           "date-of-birth": "Date of birth",
           "nationality": "Nationality",
           "passport": "Passport number",
-          "email": "Email",
+          "email": "Email address",
           "phone": "Phone number"
         }
       },
@@ -791,7 +791,7 @@
       },
       "footer": {
         "title": "Send us your details",
-        "explanation": "By sending us your details you confirm that the information you have provided is true and that you accept our <a href=''>terms and conditions</a>."
+        "explanation": "By sending us your details you confirm that the information you have provided is true and that you accept our <a href='/terms-and-conditions'>terms and conditions</a>."
       }
     },
     "check-details-error": {
@@ -807,8 +807,9 @@
           "date-of-birth": "Date of birth",
           "nationality": "Nationality",
           "brp-card-number": "BRP card number",
-          "email": "Email",
-          "phone": "Phone number"
+          "email": "Email address",
+          "phone": "Phone number",
+          "passport": "Passport number"
         }
       }
     },
@@ -820,7 +821,6 @@
     },
     "confirmation": {
       "header": "Thank you, we have received your information.",
-      "privacy": "We keep your personal data secure according to our <a href=''>privacy policy.</a>",
       "email": "We have sent you an email containing the information you have provided to",
       "next": {
         "header": "What happens next",
@@ -921,11 +921,17 @@
     }
   },
   "emails": {
+    "you-sent": "Here is the information you have sent us",
     "address": "Contact address",
     "phone": "Phone number",
     "caseworker": {
       "country": "Current location",
       "date-lost": "Date realised"
+    },
+    "journeys": {
+      "collection": {
+        "header": "Collection problem form"
+      }
     }
   },
   "errors": {

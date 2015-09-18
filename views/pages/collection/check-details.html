@@ -73,6 +73,7 @@
               {{#reason.other}}
                 {{#t}}fields.reason-radio.options.other.label{{/t}}
               {{/reason.other}}
+              <br />
               <span>
                 {{#values.reason-under-age}}
                   {{values.reason-under-age}}
@@ -177,7 +178,7 @@
           {{/values.date-of-birth}}
           {{#values.nationality}}
           <tr>
-            <td>{{#t}}pages.check-details-error.personal-details-table.headers.nationality{{/t}}</td>
+            <td>{{#t}}pages.check-details.table.headers.nationality{{/t}}</td>
             <td>{{values.nationality}}</td>
             <td><a href="personal-details#nationality" class="button">{{#t}}buttons.change{{/t}}</a></td>
           </tr>
@@ -196,28 +197,16 @@
             </tr>
           {{/values.contact-address-street}}
           {{/values.no-email}}
-          {{#values.address-street}}
-            <tr>
-              <td>{{#t}}pages.check-details.table.headers.address{{/t}}</td>
-              <td>
-                {{values.address-street}},
-                {{values.address-town}},
-                {{#values.address-county}}{{values.address-county}},{{/values.address-county}}
-                {{values.address-postcode}}
-              </td>
-              <td><a href="same-address#address-street" class="button">{{#t}}buttons.change{{/t}}</a></td>
-            </tr>
-          {{/values.address-street}}
           {{#values.passport}}
           <tr>
-            <td>{{#t}}pages.check-details-error.personal-details-table.headers.passport{{/t}}</td>
+            <td>{{#t}}pages.check-details.table.headers.passport{{/t}}</td>
             <td>{{values.passport}}</td>
             <td><a href="personal-details#passport" class="button">{{#t}}buttons.change{{/t}}</a></td>
           </tr>
           {{/values.passport}}
           {{#values.email}}
           <tr>
-            <td>{{#t}}pages.check-details-error.personal-details-table.headers.email{{/t}}</td>
+            <td>{{#t}}pages.check-details.table.headers.email{{/t}}</td>
             <td>{{values.email}}</td>
             <td><a href="contact-details#email" class="button">{{#t}}buttons.change{{/t}}</a></td>
           </tr>
