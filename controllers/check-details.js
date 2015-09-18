@@ -10,6 +10,8 @@ var Submit = function Submit() {
   Controller.apply(this, arguments);
 };
 
+util.inherits(Submit, Controller);
+
 var serviceMap = {
   '/not-arrived/check-details': function notArrived() {
     return {
@@ -38,21 +40,23 @@ var serviceMap = {
   }
 };
 
-util.inherits(Submit, Controller);
-
 Submit.prototype.saveValues = function saveValues(req, res, callback) {
-  var data = _.pick(req.sessionModel.toJSON(), _.identity);
-  var model = new Model(data);
-  var service = serviceMap[req.originalUrl] && serviceMap[req.originalUrl](data);
 
-  if (service) {
-    model.set('template', service.template);
-    model.set('subject', service.subject);
-  } else {
-    throw new Error('no service found');
-  }
+  Controller.prototype.saveValues.call(this, req, res, function saveModel() {
+    var data = _.pick(req.sessionModel.toJSON(), _.identity);
+    var model = new Model(data);
+    var service = serviceMap[req.originalUrl] && serviceMap[req.originalUrl](data);
 
-  model.save(callback);
+    if (service) {
+      model.set('template', service.template);
+      model.set('subject', service.subject);
+    } else {
+      throw new Error('no service found');
+    }
+
+    model.save(callback);
+  });
+
 };
 
 module.exports = Submit;

@@ -6,11 +6,15 @@ var modelProto = {
   save: sinon.stub(),
   set: sinon.stub()
 };
-var Model = sinon.stub().returns(modelProto);
+var Model = sinon.stub();
+Model.prototype = modelProto;
+var ParentController = sinon.stub();
+ParentController.prototype.saveValues = sinon.stub().callsArg(2);
 
 var SubmitController = proxyquire('../../../controllers/check-details', {
   '../models/email': Model,
-  '../routes/fields': {foo: {}, bar: {}}
+  '../routes/fields': {foo: {}, bar: {}},
+  '../lib/base-controller': ParentController
 });
 
 describe('controllers/check-details', function () {
@@ -35,7 +39,7 @@ describe('controllers/check-details', function () {
 
     it('saves the session data to the a model', function () {
       Model.should.have.been.calledWith(expected);
-      modelProto.save.should.have.been.calledWith(callback);
+      Model.prototype.save.should.have.been.called;
     });
 
     it('sets a template for delivery journey', function () {

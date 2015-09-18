@@ -51,6 +51,10 @@
     {{phone}}
   {{/phone}}
 
+  {{#org-help}}
+  Help from a {{org-type}} called {{rep-name}}
+  {{/org-help}}
+
 {{/data}}
 
 If you're unsure an email is from UKVI:
