@@ -49,8 +49,22 @@ module.exports = {
       'passport'
     ],
     prereqs: ['/'],
-    next: '/confirmation',
+    next: '/contact-details',
     backLink: '/reason'
+  },
+  '/contact-details': {
+    template: 'someone-else/contact-details',
+    fields: [
+      'email',
+      'no-email',
+      'contact-address-street',
+      'contact-address-town',
+      'contact-address-county',
+      'contact-address-postcode',
+      'phone'
+    ],
+    backLink: '/personal-details',
+    next: '/check-details'
   },
   '/confirmation': {
     controller: require('../../controllers/confirmation'),
