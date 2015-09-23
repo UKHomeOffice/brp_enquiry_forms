@@ -32,6 +32,10 @@ module.exports = {
     next: '/personal-details',
     backLink: '/'
   },
+  '/exit-not-eligible': {
+    template: 'someone-else/exit-not-eligible',
+    prereqs: ['/']
+  },
   '/personal-details': {
     controller: require('../../controllers/personal-details'),
     template: 'someone-else/personal-details',
