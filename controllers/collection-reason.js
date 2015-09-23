@@ -10,58 +10,35 @@ var CollectionReason = function CollectionReason() {
 
 util.inherits(CollectionReason, Controller);
 
-function getWhereValue(req) {
-  if (req.form.values['collection-where-radio'] === 'Post office') {
-    return {
-      'post-office': true
-    };
-  }
-  if (req.form.values['collection-where-radio'] === 'Sponsor') {
-    return {
-      'sponsor': true
-    };
+function getPlace(req) {
+  var places = [
+    'Post office',
+    'Sponsor'
+  ];
+  var place = {};
+
+  if (_.includes(places, req.form.values['collection-where-radio'])) {
+    place[req.form.values['collection-where-radio'].replace(/\s+/g, '-').toLowerCase()] = true;
+    return place;
   }
 }
 
 function getReason(req) {
-  if (req.form.values['reason-radio'] === 'under-age') {
-    return {
-      'under-age': true
-    };
-  }
-  if (req.form.values['reason-radio'] === 'non-identity') {
-    return {
-      'non-identity': true
-    };
-  }
-  if (req.form.values['reason-radio'] === 'others-identity') {
-    return {
-      'others-identity': true
-    };
-  }if (req.form.values['reason-radio'] === 'others-auth') {
-    return {
-      'others-auth': true
-    };
-  }if (req.form.values['reason-radio'] === 'passport-family') {
-    return {
-      'passport-family': true
-    };
-  }if (req.form.values['reason-radio'] === 'passport-lost') {
-    return {
-      'passport-lost': true
-    };
-  }if (req.form.values['reason-radio'] === 'passport-stamp') {
-    return {
-      'passport-stamp': true
-    };
-  }if (req.form.values['reason-radio'] === 'no-brp') {
-    return {
-      'no-brp': true
-    };
-  }if (req.form.values['reason-radio'] === 'other') {
-    return {
-      'other': true
-    };
+  var reasons = [
+    'under-age',
+    'non-identity',
+    'others-identity',
+    'others-auth',
+    'passport-family',
+    'passport-lost',
+    'passport-stamp',
+    'no-brp',
+    'other'
+  ];
+  var reason = {};
+  if (_.includes(reasons, req.form.values['reason-radio'])) {
+    reason[req.form.values['reason-radio']] = true;
+    return reason;
   }
 }
 
@@ -70,7 +47,7 @@ CollectionReason.prototype.locals = function ccollectionReasonLocals(req, res) {
   return _.extend({}, locals, {
     baseUrl: req.baseUrl,
     nextPage: this.getNextStep(req, res),
-    where: getWhereValue(req),
+    where: getPlace(req),
     reason: getReason(req)
   });
 };

@@ -37,18 +37,22 @@ describe('controllers/collection-reason', function () {
       controller = new CollectionReasonController(args);
     });
 
-    it('returns extends the parents\' locals', function () {
+    it('extends form the parent controller', function () {
       controller.locals(req, res).should.have.property('foo').and.equal('bar');
     });
 
-    it('returns "post-office" when selected', function () {
+    it('returns a value indicating where the permit should have been collected from"', function () {
       req.form.values['collection-where-radio'] = 'Post office';
       controller.locals(req, res).should.have.property('where').and.deep.equal({'post-office': true});
-    });
-
-    it('returns "sponsor" when selected', function () {
       req.form.values['collection-where-radio'] = 'Sponsor';
       controller.locals(req, res).should.have.property('where').and.deep.equal({'sponsor': true});
+    });
+
+    it('returns a reason indicating why the permit was no collected', function () {
+      req.form.values['reason-radio'] = 'under-age';
+      controller.locals(req, res).should.have.property('reason').and.deep.equal({'under-age': true});
+      req.form.values['reason-radio'] = 'other';
+      controller.locals(req, res).should.have.property('reason').and.deep.equal({'other': true});
     });
 
   });
