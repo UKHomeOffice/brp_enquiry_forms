@@ -24,10 +24,10 @@ module.exports = {
     next: '/reason'
   },
   '/reason': {
-    // controller: require('../../controllers/someone-else-reason'),
-    template: 'someone-else/reasons',
+    controller: require('../../controllers/reason'),
+    template: 'someone-else/reason',
     fields: [
-      'reason-radio'
+      'someone-else-reason-radio'
     ],
     next: '/personal-details',
     backLink: '/'
@@ -44,8 +44,9 @@ module.exports = {
       'nationality',
       'passport'
     ],
-    backLink: '/reason',
-    next: '/confirmation'
+    prereqs: ['/'],
+    next: '/confirmation',
+    backLink: '/reason'
   },
   '/confirmation': {
     controller: require('../../controllers/confirmation'),
