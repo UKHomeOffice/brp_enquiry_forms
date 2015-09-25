@@ -242,13 +242,6 @@ describe('base-controller', function () {
           controller.referrer = 'http://hostname/somewhere-else';
         });
 
-        it('redirects to the optional next value if set', function () {
-          controller.options = {next: '/next-optional-page'};
-          controller.setNextPage(req, res, callback);
-
-          controller.options.next.should.equal('/next-optional-page');
-        });
-
         it('redirects to the next value if not optional next value', function () {
           controller.options = {};
           controller.setNextPage(req, res, callback);

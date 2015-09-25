@@ -22,8 +22,7 @@
 
       {{$form}}
 
-        {{#collectionWhere.post-office}}
-
+        {{#where.post-office}}
         <fieldset>
           <legend class="visuallyhidden">
             <span class="form-legend">{{#t}}fields.reason-radio.options.under-age.legend{{/t}}</span>
@@ -38,7 +37,7 @@
               aria-required="true"
               data-toggle="reason-under-age-desc"
               {{#errors.reason-under-age}} checked="checked"{{/errors.reason-under-age}}
-              {{#values.reason-under-age}} checked="checked"{{/values.reason-under-age}}
+              {{#reason.under-age}} checked="checked"{{/reason.under-age}}
               {{#errors.reason-under-age}} aria-describedby="reason-under-age-error" aria-invalid="true"{{/errors.reason-under-age}}
             >
             <span>{{#t}}fields.reason-radio.options.under-age.label{{/t}}</span>
@@ -49,7 +48,7 @@
           </div>
 
         </fieldset>
-        {{/collectionWhere.post-office}}
+        {{/where.post-office}}
 
         <fieldset>
           <legend class="visuallyhidden">
@@ -67,6 +66,7 @@
               aria-required="true"
               data-toggle="reason-non-identity-desc"
               {{#errors.reason-non-identity}} checked="checked"{{/errors.reason-non-identity}}
+              {{#reason.non-identity}} checked="checked"{{/reason.non-identity}}
               {{#errors.reason-non-identity}} aria-describedby="reason-non-identity-error" aria-invalid="true"{{/errors.reason-non-identity}}
             >
             <span>{{#t}}fields.reason-radio.options.non-identity.label{{/t}}</span>
@@ -77,7 +77,7 @@
           </div>
         </fieldset>
 
-        {{#collectionWhere.post-office}}
+        {{#where.post-office}}
         <fieldset>
           <legend class="visuallyhidden">
             <span class="form-legend">
@@ -94,6 +94,7 @@
               aria-required="true"
               data-toggle="reason-others-identity-desc"
               {{#errors.reason-others-identity}} checked="checked"{{/errors.reason-others-identity}}
+              {{#reason.others-identity}} checked="checked"{{/reason.others-identity}}
               {{#errors.reason-others-identity}} aria-describedby="reason-others-identity-error" aria-invalid="true"{{/errors.reason-others-identity}}
             >
             <span>{{#t}}fields.reason-radio.options.others-identity.label{{/t}}</span>
@@ -103,9 +104,9 @@
             {{#input-text}}reason-others-identity{{/input-text}}
           </div>
         </fieldset>
-        {{/collectionWhere.post-office}}
+        {{/where.post-office}}
 
-        {{#collectionWhere.post-office}}
+        {{#where.post-office}}
         <fieldset>
           <legend class="visuallyhidden">
             <span class="form-legend">
@@ -122,6 +123,7 @@
               aria-required="true"
               data-toggle="reason-others-auth-desc"
               {{#errors.reason-others-auth}} checked="checked"{{/errors.reason-others-auth}}
+              {{#reason.others-auth}} checked="checked"{{/reason.others-auth}}
               {{#errors.reason-others-auth}} aria-describedby="reason-others-auth-error" aria-invalid="true"{{/errors.reason-others-auth}}
             >
             <span>{{#t}}fields.reason-radio.options.others-auth.label{{/t}}</span>
@@ -131,9 +133,9 @@
             {{#input-text}}reason-others-auth{{/input-text}}
           </div>
         </fieldset>
-        {{/collectionWhere.post-office}}
+        {{/where.post-office}}
 
-        {{#collectionWhere.post-office}}
+        {{#where.post-office}}
         <fieldset>
           <legend class="visuallyhidden">
             <span class="form-legend">
@@ -150,6 +152,7 @@
               aria-required="true"
               data-toggle="reason-passport-family-desc"
               {{#errors.reason-passport-family}} checked="checked"{{/errors.reason-passport-family}}
+              {{#reason.passport-family}} checked="checked"{{/reason.passport-family}}
               {{#errors.reason-passport-family}} aria-describedby="reason-passport-family-error" aria-invalid="true"{{/errors.reason-passport-family}}
             >
             <span>{{#t}}fields.reason-radio.options.passport-family.label{{/t}}</span>
@@ -159,7 +162,7 @@
             {{#input-text}}reason-passport-family{{/input-text}}
           </div>
         </fieldset>
-        {{/collectionWhere.post-office}}
+        {{/where.post-office}}
 
         <fieldset>
           <legend class="visuallyhidden">
@@ -177,6 +180,7 @@
               aria-required="true"
               data-toggle="reason-passport-lost-desc"
               {{#errors.reason-passport-lost}} checked="checked"{{/errors.reason-passport-lost}}
+              {{#reason.passport-lost}} checked="checked"{{/reason.passport-lost}}
               {{#errors.reason-passport-lost}} aria-describedby="reason-passport-lost-error" aria-invalid="true"{{/errors.reason-passport-lost}}
             >
             <span>{{#t}}fields.reason-radio.options.passport-lost.label{{/t}}</span>
@@ -203,6 +207,7 @@
               aria-required="true"
               data-toggle="reason-passport-stamp-desc"
               {{#errors.reason-passport-stamp}} checked="checked"{{/errors.reason-passport-stamp}}
+              {{#reason.passport-stamp}} checked="checked"{{/reason.passport-stamp}}
               {{#errors.reason-passport-stamp}} aria-describedby="reason-passport-stamp-error" aria-invalid="true"{{/errors.reason-passport-stamp}}
             >
             <span>{{#t}}fields.reason-radio.options.passport-stamp.label{{/t}}</span>
@@ -229,6 +234,7 @@
               aria-required="true"
               data-toggle="reason-no-brp-desc"
               {{#errors.reason-no-brp}} checked="checked"{{/errors.reason-no-brp}}
+              {{#reason.no-brp}} checked="checked"{{/reason.no-brp}}
               {{#errors.reason-no-brp}} aria-describedby="reason-no-brp-error" aria-invalid="true"{{/errors.reason-no-brp}}
             >
             <span>{{#t}}fields.reason-radio.options.no-brp.label{{/t}}</span>
@@ -255,6 +261,7 @@
               aria-required="true"
               data-toggle="reason-other-desc"
               {{#errors.reason-other}} checked="checked"{{/errors.reason-other}}
+              {{#reason.other}} checked="checked"{{/reason.other}}
               {{#errors.reason-other}} aria-describedby="reason-other-error" aria-invalid="true"{{/errors.reason-other}}
             >
             <span>{{#t}}fields.reason-radio.options.other.label{{/t}}</span>

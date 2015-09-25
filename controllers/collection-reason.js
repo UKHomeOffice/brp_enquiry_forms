@@ -10,16 +10,35 @@ var CollectionReason = function CollectionReason() {
 
 util.inherits(CollectionReason, Controller);
 
-function getWhereValue(req) {
-  if (req.form.values['collection-where-radio'] === 'Post office') {
-    return {
-      'post-office': true
-    };
+function getPlace(req) {
+  var places = [
+    'Post office',
+    'Sponsor'
+  ];
+  var place = {};
+
+  if (_.includes(places, req.form.values['collection-where-radio'])) {
+    place[req.form.values['collection-where-radio'].replace(/\s+/g, '-').toLowerCase()] = true;
+    return place;
   }
-  if (req.form.values['collection-where-radio'] === 'Sponsor') {
-    return {
-      'sponsor': true
-    };
+}
+
+function getReason(req) {
+  var reasons = [
+    'under-age',
+    'non-identity',
+    'others-identity',
+    'others-auth',
+    'passport-family',
+    'passport-lost',
+    'passport-stamp',
+    'no-brp',
+    'other'
+  ];
+  var reason = {};
+  if (_.includes(reasons, req.form.values['reason-radio'])) {
+    reason[req.form.values['reason-radio']] = true;
+    return reason;
   }
 }
 
@@ -28,7 +47,8 @@ CollectionReason.prototype.locals = function ccollectionReasonLocals(req, res) {
   return _.extend({}, locals, {
     baseUrl: req.baseUrl,
     nextPage: this.getNextStep(req, res),
-    collectionWhere: getWhereValue(req)
+    where: getPlace(req),
+    reason: getReason(req)
   });
 };
 

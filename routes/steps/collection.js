@@ -11,6 +11,7 @@ module.exports = {
       'collection-date-month',
       'collection-date-year',
     ],
+    allowOrigin: '/check-details',
     next: '/reasons'
   },
   '/reasons': {

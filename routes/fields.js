@@ -618,31 +618,67 @@ module.exports = {
     }]
   },
   'reason-under-age': {
-    label: 'fields.reason-under-age.label'
+    label: 'fields.reason-under-age.label',
+    dependent: {
+      value: 'under-age',
+      field: 'reason-radio'
+    }
   },
   'reason-non-identity': {
-    label: 'fields.reason-non-identity.label'
+    label: 'fields.reason-non-identity.label',
+    dependent: {
+      value: 'non-identity',
+      field: 'reason-radio'
+    }
   },
   'reason-others-identity': {
-    label: 'fields.reason-others-identity.label'
+    label: 'fields.reason-others-identity.label',
+    dependent: {
+      value: 'others-identity',
+      field: 'reason-radio'
+    }
   },
   'reason-others-auth': {
-    label: 'fields.reason-others-auth.label'
+    label: 'fields.reason-others-auth.label',
+    dependent: {
+      value: 'others-auth',
+      field: 'reason-radio'
+    }
   },
   'reason-passport-family': {
-    label: 'fields.reason-passport-family.label'
+    label: 'fields.reason-passport-family.label',
+    dependent: {
+      value: 'passport-family',
+      field: 'reason-radio'
+    }
   },
   'reason-passport-lost': {
-    label: 'fields.reason-passport-lost.label'
+    label: 'fields.reason-passport-lost.label',
+    dependent: {
+      value: 'passport-lost',
+      field: 'reason-radio'
+    }
   },
   'reason-passport-stamp': {
-    label: 'fields.reason-passport-stamp.label'
+    label: 'fields.reason-passport-stamp.label',
+    dependent: {
+      value: 'passport-stamp',
+      field: 'reason-radio'
+    }
   },
   'reason-no-brp': {
-    label: 'fields.reason-no-brp.label'
+    label: 'fields.reason-no-brp.label',
+    dependent: {
+      value: 'no-brp',
+      field: 'reason-radio'
+    }
   },
   'reason-other': {
-    label: 'fields.reason-other.label'
+    label: 'fields.reason-other.label',
+    dependent: {
+      value: 'other',
+      field: 'reason-radio'
+    }
   },
   'truncated': {
     validate: ['required'],
