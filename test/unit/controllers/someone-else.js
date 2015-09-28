@@ -40,7 +40,7 @@ describe('controllers/someone-else', function () {
       req.form.values['arrange-collection-radio'] = 'cancel-request';
       controller.process(req);
 
-      should.equal(controller.dateKey, undefined);
+      should.equal(controller.dateKey, '');
     });
 
     it('calls date controller', function () {

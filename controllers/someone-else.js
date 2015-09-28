@@ -21,6 +21,7 @@ SomeoneElseController.prototype.process = function process(req) {
   }
 
   if (req.form.values['arrange-collection-radio'] === 'cancel-request') {
+    this.dateKey = '';
     this.options.next = '/personal-details';
   }
 
@@ -38,7 +39,6 @@ SomeoneElseController.prototype.validateField = function validateField(key, req)
   }
 
   return DateController.prototype.validateField.call(this, key, req, required);
-
 };
 
 module.exports = SomeoneElseController;

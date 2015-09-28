@@ -66,6 +66,17 @@ module.exports = {
     backLink: '/personal-details',
     next: '/check-details'
   },
+  '/check-details': {
+    controller: require('../../controllers/someone-else-check-details'),
+    template: 'someone-else/check-details',
+    fields: [
+      'org-help',
+      'rep-name',
+      'org-type'
+    ],
+    backLink: '/contact-details',
+    next: '/confirmation'
+  },
   '/confirmation': {
     controller: require('../../controllers/confirmation'),
     template: 'someone-else/confirmation',

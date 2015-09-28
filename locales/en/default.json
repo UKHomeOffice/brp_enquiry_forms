@@ -952,6 +952,27 @@
         "two": "you’re under 18 and can’t collect your BRP with your parent or guardian",
         "three": "you're a getaway refugee"
       }
+    },
+    "someone-else-check-details": {
+      "header": "Is the information you have given us correct?",
+      "subheader": "Check and make sure the information below is right. If it isn't you can change it here.",
+      "tables": {
+        "other-person": {
+          "title": "Other persons details",
+          "fullname": "Full name",
+          "date-of-birth": "Date of birth",
+          "nationality": "Nationality",
+          "email": "Email",
+          "phone": "Phone",
+          "id-number": "Identity document number"
+        },
+        "personal-details": {
+          "title": "Your contact & personal details"
+        }
+      }
+    },
+    "someone-else-confirmation": {
+      "paragraph": "We will now review the information you have given. Once we've done this, we will send you a letter saying that your nominated person can collect your BRP from the Post Office. Please do not send them to collect the BRP without the letter."
     }
   },
   "emails": {
@@ -966,6 +987,9 @@
       "collection": {
         "header": "Collection problem form"
       }
+    },
+    "someone-else": {
+      "header": "Someone else collecting"
     }
   },
   "errors": {

@@ -21,7 +21,8 @@ module.exports = {
       'lost-or-stolen-uk': process.env.CASEWORKER_LOSTSTOLEN_EMAIL || 'caseworker_email_address',
       'lost-or-stolen-abroad': process.env.CASEWORKER_LOSTSTOLEN_EMAIL || 'caseworker_email_address',
       delivery: process.env.CASEWORKER_DELIVERY_EMAIL || 'caseworker_email_address',
-      collection: process.env.CASEWORKER_COLLECTION_EMAIL || 'caseworker_email_address'
+      collection: process.env.CASEWORKER_COLLECTION_EMAIL || 'caseworker_email_address',
+      'someone-else': process.env.CASEWORKER_SOMEONEELSE_EMAIL || 'someoneelse_email_address@gmail.com'
     },
     port: process.env.EMAIL_PORT || 587,
     host: process.env.EMAIL_HOST || 'email-smtp.eu-west-1.amazonaws.com',
