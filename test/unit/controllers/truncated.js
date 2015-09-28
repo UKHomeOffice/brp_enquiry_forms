@@ -65,7 +65,7 @@ describe('controllers/truncated', function () {
       };
       controller.saveValues(req, res, callback);
 
-      controller.options.next.should.equal('/same-address');
+      controller.options.next.should.equal('/uk-address');
     });
     it('redirects to the truncate page if any item has not been selected', function () {
       req.form.values = {

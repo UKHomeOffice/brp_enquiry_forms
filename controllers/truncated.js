@@ -71,7 +71,7 @@ TruncatedController.prototype.saveValues = function saveValues(req) {
   }
 
   if (identity(req, false, 'no') === true) {
-    this.options.next = '/same-address';
+    this.options.next = '/uk-address';
   }
 
   if (identity(req, false, undefined) === true) {
