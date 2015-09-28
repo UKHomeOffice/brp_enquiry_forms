@@ -18,7 +18,7 @@
     "style": "jscs **/*.js --config=./.jscsrc.json",
     "quality": "plato -r -x 'node_modules|reports|test' -d reports/plato .",
     "sass": "./node_modules/node-sass/bin/node-sass ./assets/scss/app.scss ./public/css/app.css --include-path ./node_modules",
-    "create:public": "mkdir -p ./public/{js,css,images};",
+    "create:public": "mkdir -p ./public/js ./public/css ./public/images",
     "postinstall": "npm run create:public; npm run sass; npm run browserify; npm run copy:images"
   },
   "author": "HomeOffice",
