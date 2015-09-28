@@ -68,6 +68,11 @@
     {{signature-error}}
   {{/signature-error}}
 
+  {{#national-insurance-error}}
+    {{#t}}fields.national-insurance-error-checkbox.label{{/t}}
+    {{national-insurance-error}}
+  {{/national-insurance-error}}
+
   {{#photograph-error}}
     {{#t}}fields.photograph-error-checkbox.label{{/t}}
     {{photograph-error}}

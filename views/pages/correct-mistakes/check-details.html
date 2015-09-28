@@ -114,6 +114,16 @@
           </tr>
         {{/values.photograph-error}}
 
+        {{#values.national-insurance-error}}
+          <tr>
+            <td>{{#t}}fields.national-insurance-error-checkbox.label{{/t}}</td>
+            <td>
+              {{values.national-insurance-error}}
+            </td>
+            <td><a href="about-error#national-insurance-error" class="button">{{#t}}buttons.change{{/t}}</a></td>
+          </tr>
+        {{/values.national-insurance-error}}
+
         {{#values.damaged-error}}
           <tr>
             <td>{{#t}}fields.damaged-error-checkbox.label{{/t}}</td>
