@@ -234,23 +234,6 @@ describe('base-controller', function () {
 
       });
 
-      describe('when previous GET request did not originate from /check-details', function () {
-
-        beforeEach(function () {
-          controller = new Controller({template: 'foo', next: '/next-page'});
-          controller.options = {};
-          controller.referrer = 'http://hostname/somewhere-else';
-        });
-
-        it('redirects to the next value if not optional next value', function () {
-          controller.options = {};
-          controller.setNextPage(req, res, callback);
-
-          controller.options.next.should.equal('/next-page');
-        });
-
-      });
-
     });
 
   });

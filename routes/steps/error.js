@@ -71,7 +71,7 @@ module.exports = {
       'uk-address-county',
       'uk-address-postcode'
     ],
-    backLink: '/',
+    backLink: '/about-error',
     next: '/personal-details'
   },
   '/personal-details': {
