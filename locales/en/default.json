@@ -742,6 +742,9 @@
           }
         }
       }
+    },
+    "someone-else": {
+      "header": "Someone else collecting"
     }
   },
   "pages": {
