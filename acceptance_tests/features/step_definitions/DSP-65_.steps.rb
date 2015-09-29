@@ -17,7 +17,3 @@ end
 When(/^I fill in the postcode field with special characters$/) do
   fill_in('address-postcode', :with => '!&^')
 end                                                                       
-
-Then(/^I see the "([^"]*)" link in the "([^"]*)" xpath$/) do |arg1, arg2|
-  expect(page).to have_xpath arg2, text: arg1
-end
