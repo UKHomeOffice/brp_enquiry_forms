@@ -1,0 +1,27 @@
+{{<layout}}
+
+  {{$journeyHeader}}
+    {{#t}}journeys.someone-else.header{{/t}}
+  {{/journeyHeader}}
+
+  {{$propositionHeader}}
+    {{> partials-navigation}}
+  {{/propositionHeader}}
+
+  {{$header}}{{#t}}pages.exit-not-eligible.header{{/t}}{{/header}}
+
+  {{$content}}
+
+    <p>{{#t}}pages.exit-not-eligible.subheader{{/t}}</p>
+
+    <ul class="list-bullet">
+      <li>{{#t}}pages.exit-not-eligible.list.one{{/t}}</li>
+      <li>{{#t}}pages.exit-not-eligible.list.two{{/t}}</li>
+      <li>{{#t}}pages.exit-not-eligible.list.three{{/t}}</li>
+    </ul>
+
+    <a class="button" href='{{baseUrl}}'>{{#t}}buttons.close{{/t}}</a>
+
+  {{/content}}
+
+{{/layout}}

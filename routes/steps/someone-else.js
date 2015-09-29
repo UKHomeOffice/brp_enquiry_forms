@@ -24,13 +24,17 @@ module.exports = {
     next: '/reason'
   },
   '/reason': {
-    // controller: require('../../controllers/someone-else-reason'),
-    template: 'someone-else/reasons',
+    controller: require('../../controllers/reason'),
+    template: 'someone-else/reason',
     fields: [
-      'reason-radio'
+      'someone-else-reason-radio'
     ],
     next: '/personal-details',
     backLink: '/'
+  },
+  '/exit-not-eligible': {
+    template: 'someone-else/exit-not-eligible',
+    prereqs: ['/']
   },
   '/personal-details': {
     controller: require('../../controllers/personal-details'),
@@ -44,7 +48,33 @@ module.exports = {
       'nationality',
       'passport'
     ],
-    backLink: '/reason',
+    prereqs: ['/'],
+    next: '/contact-details',
+    backLink: '/reason'
+  },
+  '/contact-details': {
+    template: 'someone-else/contact-details',
+    fields: [
+      'email',
+      'no-email',
+      'contact-address-street',
+      'contact-address-town',
+      'contact-address-county',
+      'contact-address-postcode',
+      'phone'
+    ],
+    backLink: '/personal-details',
+    next: '/check-details'
+  },
+  '/check-details': {
+    controller: require('../../controllers/someone-else-check-details'),
+    template: 'someone-else/check-details',
+    fields: [
+      'org-help',
+      'rep-name',
+      'org-type'
+    ],
+    backLink: '/contact-details',
     next: '/confirmation'
   },
   '/confirmation': {

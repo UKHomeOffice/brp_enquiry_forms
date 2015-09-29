@@ -153,6 +153,26 @@ module.exports = {
       field: 'arrange-collection-radio',
     }
   },
+  'someone-else-reason-radio': {
+    validate: ['required'],
+    options: [{
+      value: 'incapable',
+      label: 'fields.someone-else-reason-radio.options.incapable.label',
+      toggle: 'incapable-details',
+    }, {
+      value: 'refugee',
+      label: 'fields.someone-else-reason-radio.options.refugee.label'
+    }, {
+      value: 'under-age',
+      label: 'fields.someone-else-reason-radio.options.under-age.label'
+    }, {
+      value: 'other',
+      label: 'fields.someone-else-reason-radio.options.other.label'
+    }]
+  },
+  'incapable-details': {
+    label: 'fields.incapable-details.label'
+  },
   'change-person-fullname': {
     validate: ['required'],
     label: 'fields.change-person-fullname.label',

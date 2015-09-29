@@ -110,6 +110,9 @@
     "someone-else-id-number": {
       "required": "Tell us the nominees identity document number"
     },
+    "someone-else-reason-radio": {
+      "required": "Select a reason why you couldn't collect your BRP"
+    },
     "change-person-date": {
       "required": "Enter the nominees date of birth",
       "numeric": "Date must only contain numbers",
@@ -279,6 +282,25 @@
     "someone-else-id-number": {
       "label": "Identity document number <br/>(This could be UK/EU driving licence, passport or BRP)"
     },
+    "someone-else-reason-radio": {
+      "options": {
+        "incapable": {
+          "label": "I am physically or mentally incapable"
+        },
+        "refugee": {
+          "label": "I am a Gataway refugee"
+        },
+        "under-age": {
+          "label": "I am under 18"
+        },
+        "other": {
+          "label": "None of the above"
+        }
+      }
+    },
+    "incapable-details": {
+      "label": "Please describe the problem"
+    },
     "change-person-fullname": {
       "label": "Full name"
     },
@@ -380,7 +402,7 @@
     "nominated-date": {
       "label": "Date",
       "legend": "Date of birth",
-      "hint": "For example, 11  6  2015"
+      "hint": "For example, 31  3  1970"
     },
     "nominated-date-day": {
       "label": "Day"
@@ -720,6 +742,9 @@
           }
         }
       }
+    },
+    "someone-else": {
+      "header": "Someone else collecting"
     }
   },
   "pages": {
@@ -918,6 +943,39 @@
       "change-person-group": {
         "title": "Provide details of the new person you want to collect your BRP on your behalf"
       }
+    },
+    "someone-else-reason": {
+      "header": "Why do you need someone else to collect your biometric card?"
+    },
+    "exit-not-eligible": {
+      "header": "You cannot use this service",
+      "subheader": "You can only nominate someone else to collect your BRP if:",
+      "list": {
+        "one": "you have a serious illness or disability that prevents you from collecting it",
+        "two": "you’re under 18 and can’t collect your BRP with your parent or guardian",
+        "three": "you're a getaway refugee"
+      }
+    },
+    "someone-else-check-details": {
+      "header": "Is the information you have given us correct?",
+      "subheader": "Check and make sure the information below is right. If it isn't you can change it here.",
+      "tables": {
+        "other-person": {
+          "title": "Other persons details",
+          "fullname": "Full name",
+          "date-of-birth": "Date of birth",
+          "nationality": "Nationality",
+          "email": "Email",
+          "phone": "Phone",
+          "id-number": "Identity document number"
+        },
+        "personal-details": {
+          "title": "Your contact & personal details"
+        }
+      }
+    },
+    "someone-else-confirmation": {
+      "paragraph": "We will now review the information you have given. Once we've done this, we will send you a letter saying that your nominated person can collect your BRP from the Post Office. Please do not send them to collect the BRP without the letter."
     }
   },
   "emails": {
@@ -932,6 +990,9 @@
       "collection": {
         "header": "Collection problem form"
       }
+    },
+    "someone-else": {
+      "header": "Someone else collecting"
     }
   },
   "errors": {

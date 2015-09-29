@@ -1,0 +1,41 @@
+{{<layout}}
+
+{{$journeyHeader}}
+  {{#t}}journeys.someone-else.header{{/t}}
+{{/journeyHeader}}
+
+{{$step}}Step 2 of 5{{/step}}
+
+{{$validationSummary}}
+  {{> partials-validation-summary}}
+{{/validationSummary}}
+
+{{$propositionHeader}}
+  {{> partials-navigation}}
+{{/propositionHeader}}
+
+{{$header}}{{#t}}pages.someone-else-reason.header{{/t}}{{/header}}
+
+  {{$content}}
+
+    {{<partials-form}}
+
+      {{$form}}
+
+        {{#radio-group}}someone-else-reason-radio{{/radio-group}}
+
+        <fieldset id="incapable-details" class="panel-indent js-hidden">
+
+          {{#textarea}}incapable-details{{/textarea}}
+
+        </fieldset>
+
+        {{#input-submit}}continue{{/input-submit}}
+
+      {{/form}}
+
+    {{/partials-form}}
+
+  {{/content}}
+
+{{/layout}}

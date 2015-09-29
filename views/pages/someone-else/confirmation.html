@@ -1,7 +1,7 @@
 {{<layout}}
 
   {{$journeyHeader}}
-    {{#t}}journeys.error.header{{/t}}
+    {{#t}}journeys.someone-else.header{{/t}}
   {{/journeyHeader}}
 
   {{$propositionHeader}}
@@ -22,13 +22,15 @@
 
     <h3>{{#t}}pages.confirmation.next.header{{/t}}</h3>
 
-    <p>{{#t}}pages.someone-else-confirmation.paragraph{{/t}}</p>
-    <p>{{#t}}pages.confirmation.next.not-specified.para.two{{/t}}</p>
-    <p>{{#t}}pages.confirmation.next.not-specified.para.three{{/t}}</p>
+    {{#location.not-specified}}
+      <p>{{#t}}pages.confirmation.next.not-specified.para.one{{/t}}</p>
+      <p>{{#t}}pages.confirmation.next.not-specified.para.two{{/t}}</p>
+      <p>{{#t}}pages.confirmation.next.not-specified.para.three{{/t}}</p>
+    {{/location.not-specified}}
 
     <hr>
 
-    <a href='{{baseUrl}}' class='button'>{{#t}}buttons.close{{/t}}</a>
+    <a href='#user-satisfaction-url' class='button'>{{#t}}buttons.close{{/t}}</a>
 
   {{/content}}
 

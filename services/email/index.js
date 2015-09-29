@@ -19,7 +19,9 @@ var customerHtmlTemplates = {
   delivery: fs.readFileSync(
     path.resolve(__dirname, './templates/customer/html/delivery.mus')).toString('utf8'),
   collection: fs.readFileSync(
-    path.resolve(__dirname, './templates/customer/html/collection.mus')).toString('utf8')
+    path.resolve(__dirname, './templates/customer/html/collection.mus')).toString('utf8'),
+  'someone-else': fs.readFileSync(
+    path.resolve(__dirname, './templates/customer/html/someone-else.mus')).toString('utf8')
 };
 
 var customerPlainTextTemplates = {
@@ -32,7 +34,9 @@ var customerPlainTextTemplates = {
   delivery: fs.readFileSync(
     path.resolve(__dirname, './templates/customer/plain/delivery.mus')).toString('utf8'),
   collection: fs.readFileSync(
-    path.resolve(__dirname, './templates/customer/plain/collection.mus')).toString('utf8')
+    path.resolve(__dirname, './templates/customer/plain/collection.mus')).toString('utf8'),
+  'someone-else': fs.readFileSync(
+    path.resolve(__dirname, './templates/customer/plain/someone-else.mus')).toString('utf8')
 };
 
 var caseworkerHtmlTemplates = {
@@ -45,7 +49,9 @@ var caseworkerHtmlTemplates = {
   delivery: fs.readFileSync(
     path.resolve(__dirname, './templates/caseworker/html/delivery.mus')).toString('utf8'),
   collection: fs.readFileSync(
-    path.resolve(__dirname, './templates/caseworker/html/collection.mus')).toString('utf8')
+    path.resolve(__dirname, './templates/caseworker/html/collection.mus')).toString('utf8'),
+  'someone-else': fs.readFileSync(
+    path.resolve(__dirname, './templates/caseworker/html/someone-else.mus')).toString('utf8')
 };
 
 var caseworkerPlainTextTemplates = {
@@ -58,7 +64,9 @@ var caseworkerPlainTextTemplates = {
   delivery: fs.readFileSync(
     path.resolve(__dirname, './templates/caseworker/plain/delivery.mus')).toString('utf8'),
   collection: fs.readFileSync(
-    path.resolve(__dirname, './templates/caseworker/plain/collection.mus')).toString('utf8')
+    path.resolve(__dirname, './templates/caseworker/plain/collection.mus')).toString('utf8'),
+  'someone-else': fs.readFileSync(
+    path.resolve(__dirname, './templates/caseworker/plain/someone-else.mus')).toString('utf8')
 };
 
 var transport = config.email.auth.user === '' ?
