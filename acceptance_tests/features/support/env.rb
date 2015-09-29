@@ -2,6 +2,7 @@ require 'rubygems'
 require 'capybara'
 require 'capybara/dsl'
 require 'rspec'
+require 'show_me_the_cookies'
 require 'capybara/poltergeist'
 # require 'selenium-webdriver'
 
@@ -21,6 +22,8 @@ end
 
 World(Capybara::DSL, Helpers)
 
+World(ShowMeTheCookies)
+
 def config
   config_file = "#{File.dirname(__FILE__)}/config_test.yml"
   if  ENV['CONFIG_FILE']
@@ -35,6 +38,7 @@ def rest
 end
 
 RSpec.configure do |config|
+  # config.include ShowMeTheCookies, :type => :feature
   config.run_all_when_everything_filtered = true
   config.filter_run :focus
 

@@ -4,8 +4,18 @@ error_host: 'http://localhost:8080/correct-mistakes'
 
 lost_host: 'http://localhost:8080/lost-stolen-damaged'
 
+collection_host: 'http://localhost:8080/collection'
+
+someone_host: 'http://localhost:8080/someone-else'
+
 devnotprod_host: 'https://brp-dev.notprod.homeoffice.gov.uk/not-arrived'
 
 errornotprod_host: 'https://brp-dev.notprod.homeoffice.gov.uk/correct-mistakes'
 
 lostnotprod_host: 'https://brp-dev.notprod.homeoffice.gov.uk/lost-stolen-damaged'
+
+livedelivery_host: 'https://www.biometric-residence-permit.service.gov.uk/not-arrived'
+
+liveerror_host: 'https://www.biometric-residence-permit.service.gov.uk/correct-mistakes/'
+
+livelost_host: 'https://www.biometric-residence-permit.service.gov.uk/lost-stolen-damaged'

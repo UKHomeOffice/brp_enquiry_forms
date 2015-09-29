@@ -1,20 +1,4 @@
-When(/^I click "([^"]*)"$/) do |arg1|                                        
-  click_button arg1
-end 
-
-When(/^I check the "([^"]*)" radio button$/) do |arg1|
-  choose arg1
-end
-
-When(/^I check the "([^"]*)" checkbox$/) do |arg1|                           
-  check arg1
-end    
-
-Then(/^I see "([^"]*)"$/) do |arg1|                                          
-  page.should have_content arg1
-end
-
-When(/^I enter text values into the date field$/) do
+ When(/^I enter text values into the date field$/) do
   fill_in('delivery-date-day', :with => 'Te')
   fill_in('delivery-date-month', :with => 'Te')
   fill_in('delivery-date-year', :with => 'Text')
@@ -40,4 +24,9 @@ When(/^I enter a future date into the date field$/) do
   fill_in('delivery-date-day', :with => '17')
   fill_in('delivery-date-month', :with => '08')
   fill_in('delivery-date-year', :with => '2030')
-end                                                                                                                                                                                                                                                                                       
+end
+
+Then(/^I see "([^"]*)"$/) do |arg1|                                          
+  page.should have_content arg1
+  delete_cookie('hmbrp.sid')
+end                                                                                                                                                                                                                                                                                      

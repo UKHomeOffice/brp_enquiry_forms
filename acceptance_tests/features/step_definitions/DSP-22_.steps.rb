@@ -45,7 +45,6 @@ end
                                                                              
 When(/^I proceed to Step Five$/) do
   click_button('Continue')                                                
-  # puts page.body
 end                                                                          
                                                                              
 Then(/^I see all the values I have entered in the previous steps$/) do
