@@ -2,7 +2,7 @@
   "buttons": {
     "test": "Start",
     "continue": "Continue",
-    "submit": "Submit",
+    "submit": "send",
     "change": "Change",
     "close": "Close"
   },
