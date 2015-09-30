@@ -14,8 +14,8 @@ When(/^I go to Step Five of the lost stolen damaged form$/) do
   fill_in('nationality', :with => 'China')
   fill_in('brp-card', :with => '1234567890')
   click_button('Continue')
-  fill_in('email', :with => 'alex.murphy@uk.sogeti.com')
-  fill_in('phone', :with => '07751719872')
+  fill_in('email', :with => 'zero@forconduct.cr')
+  fill_in('phone', :with => '077517171223')
   click_button('Continue')	
 end
 

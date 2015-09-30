@@ -25,3 +25,6 @@ Feature: Validation for Step 02 of the Error Form
 		  |photograph-error-checkbox	 |Tell us what is wrong with your photograph|Tell us what is wrong with your photograph|
 		  |damaged-error-checkbox		 |Tell us what is wrong with your BRP		|Tell us what is wrong with your BRP 	   |
 		  |conditions-error-checkbox     |Tell us about the problem                 |Tell us about the problem                 |
+
+	Scenario: Go to Step Six and clear the cookies
+		When I delete the "hmbrp.sid" cookie

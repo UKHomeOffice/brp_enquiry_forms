@@ -1,4 +1,4 @@
-@LostStolenDamaged @ChangingFormDetails
+@LostStolenDamaged @ChangeDetails
 Feature: Changing Delivery Form details
 
 	Scenario Outline: Changing the values from Step 03 of the Lost Stolen Damaged form 
