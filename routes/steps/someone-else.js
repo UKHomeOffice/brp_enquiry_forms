@@ -33,8 +33,7 @@ module.exports = {
     fields: [
       'someone-else-reason-radio'
     ],
-    next: '/personal-details',
-    backLink: '/arrange'
+    next: '/personal-details'
   },
   '/exit-not-eligible': {
     template: 'someone-else/exit-not-eligible',
@@ -52,8 +51,7 @@ module.exports = {
       'nationality',
       'passport'
     ],
-    next: '/contact-details',
-    backLink: '/reason'
+    next: '/contact-details'
   },
   '/personal-details-no-reason': {
     controller: require('../../controllers/personal-details'),
@@ -82,7 +80,6 @@ module.exports = {
       'contact-address-postcode',
       'phone'
     ],
-    backLink: '/personal-details',
     next: '/check-details'
   },
   '/check-details': {
@@ -93,7 +90,6 @@ module.exports = {
       'rep-name',
       'org-type'
     ],
-    backLink: '/contact-details',
     next: '/confirmation'
   },
   '/confirmation': {
