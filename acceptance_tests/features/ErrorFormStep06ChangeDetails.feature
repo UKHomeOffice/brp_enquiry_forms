@@ -1,4 +1,4 @@
-@ErrorForm @ChangingFormDetails
+@ErrorForm @ChangeDetails
 Feature: Changing Error Form details
 
 	Scenario Outline: Changing the values from Step 02 of the Error form
@@ -48,7 +48,7 @@ Feature: Changing Error Form details
 		When I change the value in the Email field
 		And I change the value in the Phone field  
 		And I click "Continue"
-		Then I can see the changed email address and phone number from step four of the error form
+		Then I can see the changed email address and phone number from Step Five of the error form
 
 		Examples:
 			|xpath													  	 |

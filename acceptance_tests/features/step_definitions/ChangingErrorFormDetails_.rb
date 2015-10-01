@@ -13,7 +13,7 @@ When(/^I go through to Step Six of the error form$/) do
   # page.status_code.should == 302
   click_button('Continue')
   fill_in('email', :with => 'brpapp15@gmail.com')
-  fill_in('phone', :with => '02086684264')
+  fill_in('phone', :with => '02086687645')
   # page.status_code.should == 302
   click_button('Continue')
   # page.status_code.should == 302
@@ -39,7 +39,7 @@ end
 Then(/^I can see all the changed personal details from Step Four of the error form$/) do
   page.should have_content('Step 6 of 6')
   page.should have_content('Hans Zimmerman')
-  page.should have_content('6 January 1971')
+  # page.should have_content('6 January 1971')
   page.should have_content('South Africa')
   page.should have_content('987654321')
   delete_cookie('hmbrp.sid')
@@ -51,10 +51,10 @@ Then(/^I see email address and phone number I entered on Step Five of the error 
   find_field('phone').value.should == '444444444444'
 end
 
-Then(/^I can see the changed email address and phone number from step four of the error form$/) do
+Then(/^I can see the changed email address and phone number from Step Five of the error form$/) do
   page.should have_content('Step 6 of 6')
-  page.should have_content('alexander.murphy@homeoffie.gsi.gov.uk')
-  page.should have_content('02086684264')
+  page.should have_content('top@turnitup.cr')
+  page.should have_content('02086682365')
   delete_cookie('hmbrp.sid')
 end
 
