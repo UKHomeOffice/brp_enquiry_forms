@@ -1,8 +1,8 @@
-@CollectionForm @StepSix @Validation
-Feature: Validation for Step 06 of the Collection Form
+@SomeoneElseForm @StepFive @Validation
+Feature: Validation for Step 05 of the Someone Else Form
 
-	Background:
-		When I go to Step Six of the collection form
+	Background: 
+		When I go to Step Five of the someone else form
 
 	Scenario: Attempting to proceed to Step 06 of the Delivery Form without selecting a radio button
 		When I click send

@@ -1,5 +1,5 @@
 @LostStolenDamaged @ChangeDetails
-Feature: Changing Delivery Form details
+Feature: Changing Lost Stolen Damaged Form details
 
 	Scenario Outline: Changing the values from Step 03 of the Lost Stolen Damaged form 
 		When I go to Step Five of the lost stolen damaged form

@@ -16,4 +16,8 @@ end
 
 Then(/^I delete the "([^"]*)" cookie$/) do |arg1|
   delete_cookie arg1 
-end                                                                        
+end 
+
+When(/^I expire the cookies$/) do
+  expire_cookies
+end                                                                       

@@ -1,5 +1,5 @@
-When(/^I click Submit$/) do                                                     
-  click_button ('Submit')
+When(/^I click send$/) do                                                     
+  click_button ('send')
 end                                                                           
                                                                                                                                                                                                                                
 When(/^I enter something in the Organisation field$/) do                      

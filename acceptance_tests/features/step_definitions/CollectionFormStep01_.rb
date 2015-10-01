@@ -17,3 +17,8 @@ Then(/^I am on Step One of the collection form$/) do
   find_button('Continue')
   delete_cookie('hmbrp.sid')
 end
+
+When(/^I enter a partial date into the collection date fields$/) do
+  fill_in('collection-date-month', :with => '04')
+  fill_in('collection-date-year', :with => '1974')
+end

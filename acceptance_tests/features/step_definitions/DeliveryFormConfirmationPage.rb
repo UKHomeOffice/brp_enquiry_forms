@@ -18,7 +18,7 @@ When(/^I go to the Confirmation page of the delivery form$/) do
   click_button('Continue')
   page.should have_content('Is the information you have given us correct?')
   choose('org-help-no')
-  click_button('Submit')
+  click_button('send')
 end                                                                          
                                                                              
 Then(/^I am on Confirmation page of the delivery form$/) do
