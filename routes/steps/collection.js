@@ -2,6 +2,10 @@
 
 module.exports = {
   '/': {
+    controller: require('../../controllers/start'),
+    redirectTo: '/where'
+  },
+  '/where': {
     controller: require('../../controllers/collection-where'),
     template: 'collection/where',
     fields: [
@@ -30,7 +34,7 @@ module.exports = {
       'reason-other'
     ],
     next: '/nominated-person',
-    backLink: '/'
+    backLink: '/where'
   },
   '/nominated-person': {
     controller: require('../../controllers/nominated-person'),

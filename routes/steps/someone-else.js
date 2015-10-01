@@ -2,6 +2,10 @@
 
 module.exports = {
   '/': {
+    controller: require('../../controllers/start'),
+    redirectTo: '/arrange'
+  },
+  '/arrange': {
     controller: require('../../controllers/someone-else'),
     template: 'someone-else/arrange',
     fields: [
@@ -30,7 +34,7 @@ module.exports = {
       'someone-else-reason-radio'
     ],
     next: '/personal-details',
-    backLink: '/'
+    backLink: '/arrange'
   },
   '/exit-not-eligible': {
     template: 'someone-else/exit-not-eligible',

@@ -2,6 +2,10 @@
 
 module.exports = {
   '/': {
+    controller: require('../../controllers/start'),
+    redirectTo: '/location'
+  },
+  '/location': {
     template: 'correct-mistakes/location-applied.html',
     fields: [
       'location-applied'
@@ -41,7 +45,7 @@ module.exports = {
       'conditions-error-checkbox',
       'conditions-error'
     ],
-    backLink: '/',
+    backLink: '/location',
     next: '/uk-address'
   },
   '/conditions-and-length': {
