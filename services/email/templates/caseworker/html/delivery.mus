@@ -90,6 +90,16 @@
                         </td>
                       </tr>
                     {{/address-street}}
+                    {{#org-help}}
+                      <tr style="border-top: 1px solid #009390;">
+                        <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">Help from ({{org-type}})</p></td>
+                        <td width="75%">
+                          <p style="font-size: 16px; color: #000; margin: 10px 0;">
+                            {{rep-name}}
+                          </p>
+                        </td>
+                      </tr>
+                    {{/org-help}}
                   </table>
 
                   <p style="font-size: 19px; font-weight: bold; color: #000; line-height: 1.32; margin: 0 0 10px 0;">Contact Details</p>
