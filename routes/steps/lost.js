@@ -2,6 +2,10 @@
 
 module.exports = {
   '/': {
+    controller: require('../../controllers/start'),
+    redirectTo: '/inside-uk'
+  },
+  '/inside-uk': {
     template: 'lost-or-stolen/inside-uk.html',
     fields: [
       'inside-uk',
@@ -18,7 +22,7 @@ module.exports = {
       'date-lost-month',
       'date-lost-year',
     ],
-    backLink: '/',
+    backLink: '/inside-uk',
     next: '/personal-details'
   },
   '/personal-details': {

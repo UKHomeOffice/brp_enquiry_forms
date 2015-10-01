@@ -2,6 +2,10 @@
 
 module.exports = {
   '/': {
+    controller: require('../../controllers/start'),
+    redirectTo: '/letter-received'
+  },
+  '/letter-received': {
     controller: require('../../controllers/letter-received'),
     template: 'not-arrived/letter-received',
     fields: [
@@ -32,7 +36,7 @@ module.exports = {
       'address-county',
       'address-postcode'
     ],
-    backLink: '/',
+    backLink: '/letter-received',
     next: '/personal-details'
   },
   '/personal-details': {
