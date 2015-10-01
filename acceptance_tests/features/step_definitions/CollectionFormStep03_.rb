@@ -13,7 +13,7 @@ Then(/^I am on Step Three of the collection form$/) do
   page.should have_content('Full name')
   find_field('nominated-fullname')
   page.should have_content('Date of birth')
-  page.should have_content('For example, 11 6 2015')
+  page.should have_content('For example, 31 3 1970')
   page.should have_content('Day')
   find_field('nominated-date-day')
   page.should have_content('Month')

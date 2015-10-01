@@ -21,7 +21,7 @@ When(/^I go to the Confirmation page of the collection form$/) do
   fill_in('phone', :with => '077517198545')
   click_button('Continue')
   choose('org-help-no')
-  click_button('Submit')
+  click_button('send')
 end
 
 Then(/^I am on Confirmation page of the collection form$/) do

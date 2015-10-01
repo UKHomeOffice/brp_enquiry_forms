@@ -27,4 +27,4 @@ Feature: Validation for Step 02 of the Error Form
 		  |conditions-error-checkbox     |Tell us about the problem                 |Tell us about the problem                 |
 
 	Scenario: Go to Step Six and clear the cookies
-		When I delete the "hmbrp.sid" cookie
+		When I expire the cookies
