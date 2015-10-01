@@ -127,6 +127,16 @@
                       </tr>
                     {{/contact-address-street}}
                     {{/email}}
+                    {{#org-help}}
+                      <tr style="border-top: 1px solid #009390;">
+                        <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">Help from ({{org-type}})</p></td>
+                        <td width="75%">
+                          <p style="font-size: 16px; color: #000; margin: 10px 0;">
+                            {{rep-name}}
+                          </p>
+                        </td>
+                      </tr>
+                    {{/org-help}}
                   </table>
 
                 {{/data}}
