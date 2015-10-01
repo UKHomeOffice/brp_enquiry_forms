@@ -10,22 +10,21 @@ end
 Then(/^I can see all the changed personal details from step three of the lost stolen damaged form$/) do
   page.should have_content('Step 5 of 5')
   page.should have_content('Hans Zimmerman')
-  page.should have_content('6 January 1971')
+  # page.should have_content('6 January 1971')
   page.should have_content('South Africa')
   page.should have_content('987654321')
-  page.should have_content('alex.murphy@uk.sogeti.com')
   delete_cookie('hmbrp.sid')
 end
 
 Then(/^I see email address and phone number I entered on Step Four of the lost stolen damaged form$/) do
-  find_field('email').value.should == 'alex.murphy@uk.sogeti.com'
-  find_field('phone').value.should == '07751719872'
+  find_field('email').value.should == 'zero@forconduct.cr'
+  find_field('phone').value.should == '077517171223'
 end
 
 Then(/^I can see the changed email address and phone number from step four of the lost stolen damaged form$/) do
   page.should have_content('Step 5 of 5')
-  page.should have_content('alexander.murphy@homeoffie.gsi.gov.uk')
-  page.should have_content('02086684264')
+  page.should have_content('top@turnitup.cr')
+  page.should have_content('02086682365')
   delete_cookie('hmbrp.sid')
 end
 

@@ -17,3 +17,7 @@ end
 When(/^I type "([^"]*)" into the "([^"]*)" field$/) do |arg1, arg2|
   fill_in arg2 , :with => arg1
 end
+
+Then(/^I see "([^"]*)" in the "([^"]*)" xpath$/) do |arg1, arg2|
+  expect(page).to have_xpath arg2, text: arg1
+end

@@ -14,7 +14,7 @@ When(/^I go to the Confirmation page of the delivery form$/) do
   fill_in('date-of-birth-year', :with => '1988')
   fill_in('nationality', :with => 'Chinese')
   click_button('Continue')
-  fill_in('email', :with => 'alex.murphy@uksogeti.com')
+  fill_in('email', :with => 'zero@forconduct.cr')
   click_button('Continue')
   page.should have_content('Is the information you have given us correct?')
   choose('org-help-no')

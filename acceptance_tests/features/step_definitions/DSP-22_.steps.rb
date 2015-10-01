@@ -40,7 +40,7 @@ When(/^I fill in all the fields$/) do
 end                                                                          
                                                                              
 When(/^I add an email address$/) do                                        
-  fill_in('email', :with => 'alex.murphy@uk.sogeti.com')
+  fill_in('email', :with => 'bts@bullerproof.cr')
 end                                                                          
                                                                              
 When(/^I proceed to Step Five$/) do
@@ -54,7 +54,7 @@ Then(/^I see all the values I have entered in the previous steps$/) do
   page.should have_content('17-08-1988')
   page.should have_content('Chinese')
   page.should have_content('10000111111001010101')
-  page.should have_content('alex.murphy@uk.sogeti.com')
+  page.should have_content('bts@bullerproof.cr')
 end
 
 When(/^I click Continue$/) do

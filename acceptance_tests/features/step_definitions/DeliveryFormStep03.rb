@@ -1,6 +1,5 @@
 When(/^I go to Step Three of the delivery form$/) do                                            
   visit config['dev_host']
-
   choose('received-yes')
   fill_in('delivery-date-day', :with => '17')
   fill_in('delivery-date-month', :with => '08')

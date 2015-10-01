@@ -18,8 +18,8 @@ When(/^I go to Step Five of the delivery form$/) do
   fill_in('nationality', :with => 'China')
   fill_in('passport', :with => '123456789')
   click_button('Continue')
-  fill_in('email', :with => 'alex.murphy@uksogeti.com')
-  fill_in('phone', :with => '07751719872')
+  fill_in('email', :with => 'zero@forconduct.cr')
+  fill_in('phone', :with => '07751710987')
   click_button('Continue')
 end
 

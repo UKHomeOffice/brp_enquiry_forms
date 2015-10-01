@@ -3,7 +3,7 @@ When(/^I check the I do not have an email address checkbox$/) do
 end                                                                          
                                                                              
 When(/^I enter an email address without an @$/) do
-  fill_in('email', :with => 'alex.murphyuksogeti.com')
+  fill_in('email', :with => 'btsbullerproof.cr')
 end                                                                          
                                                                              
 When(/^I fill the Phone number field with special characters$/) do
