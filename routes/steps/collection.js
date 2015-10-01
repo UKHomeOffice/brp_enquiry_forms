@@ -3,7 +3,7 @@
 module.exports = {
   '/': {
     controller: require('../../controllers/start'),
-    redirectTo: '/where'
+    next: '/where'
   },
   '/where': {
     controller: require('../../controllers/collection-where'),

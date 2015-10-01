@@ -9,13 +9,9 @@ var StartController = function StartController() {
 
 util.inherits(StartController, Controller);
 
-StartController.prototype.getValues = function getValues(req, res, callback) {
+StartController.prototype.getValues = function getValues(req) {
   req.sessionModel.reset();
-  callback();
-};
-
-StartController.prototype.render = function render(req, res) {
-  res.redirect(req.baseUrl + this.options.redirectTo);
+  Controller.prototype.successHandler.apply(this, arguments);
 };
 
 module.exports = StartController;

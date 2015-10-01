@@ -3,7 +3,7 @@
 module.exports = {
   '/': {
     controller: require('../../controllers/start'),
-    redirectTo: '/inside-uk'
+    next: '/inside-uk'
   },
   '/inside-uk': {
     template: 'lost-or-stolen/inside-uk.html',

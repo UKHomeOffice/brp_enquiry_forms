@@ -3,7 +3,7 @@
 module.exports = {
   '/': {
     controller: require('../../controllers/start'),
-    redirectTo: '/letter-received'
+    next: '/letter-received'
   },
   '/letter-received': {
     controller: require('../../controllers/letter-received'),

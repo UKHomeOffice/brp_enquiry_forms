@@ -3,7 +3,7 @@
 module.exports = {
   '/': {
     controller: require('../../controllers/start'),
-    redirectTo: '/location'
+    next: '/location'
   },
   '/location': {
     template: 'correct-mistakes/location-applied.html',
