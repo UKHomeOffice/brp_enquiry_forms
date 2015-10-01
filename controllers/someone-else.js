@@ -12,17 +12,20 @@ util.inherits(SomeoneElseController, DateController);
 SomeoneElseController.prototype.process = function process(req) {
   if (req.form.values['arrange-collection-radio'] === 'someone-else') {
     this.dateKey = 'someone-else-date';
+    delete req.form.values['no-reason'];
     this.options.next = '/reason';
   }
 
   if (req.form.values['arrange-collection-radio'] === 'change-person') {
     this.dateKey = 'change-person-date';
-    this.options.next = '/personal-details';
+    req.form.values['no-reason'] = true;
+    this.options.next = '/personal-details-no-reason';
   }
 
   if (req.form.values['arrange-collection-radio'] === 'cancel-request') {
     this.dateKey = '';
-    this.options.next = '/personal-details';
+    req.form.values['no-reason'] = true;
+    this.options.next = '/personal-details-no-reason';
   }
 
   DateController.prototype.process.apply(this, arguments);

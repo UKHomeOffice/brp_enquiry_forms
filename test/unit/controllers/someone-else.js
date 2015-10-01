@@ -7,40 +7,74 @@ describe('controllers/someone-else', function () {
 
   var controller;
   var key = '';
-  var req = {
-    form: {
-      values: {
-        'arrange-collection-radio': ''
-      }
-    }
-  };
+  var req;
 
   describe('process', function () {
 
     beforeEach(function () {
+      req = {
+        form: {
+          values: {
+            'arrange-collection-radio': ''
+          }
+        }
+      };
       controller = new SomeoneElseController({template: 'index'});
       DateController.prototype.process = sinon.stub();
     });
 
-    it('uses the someone-else-date key when someone-else is selected', function () {
-      req.form.values['arrange-collection-radio'] = 'someone-else';
-      controller.process(req);
+    describe('someone-else selected', function () {
+      beforeEach(function () {
+        req.form.values['arrange-collection-radio'] = 'someone-else';
+        controller.process(req);
+      });
 
-      controller.dateKey.should.equal('someone-else-date');
+      it('sets the correct date-key', function () {
+        controller.dateKey.should.equal('someone-else-date');
+      });
+
+      it('sets the correct options.next', function () {
+        controller.options.next.should.equal('/reason');
+      });
     });
 
-    it('uses the change-person-date key when change-person is selected', function () {
-      req.form.values['arrange-collection-radio'] = 'change-person';
-      controller.process(req);
+    describe('change-person selected', function () {
+      beforeEach(function () {
+        req.form.values['arrange-collection-radio'] = 'change-person';
+        controller.process(req);
+      });
 
-      controller.dateKey.should.equal('change-person-date');
+      it('sets the correct date-key', function () {
+        controller.dateKey.should.equal('change-person-date');
+      });
+
+      it('sets the correct options.next', function () {
+        controller.options.next.should.equal('/personal-details-no-reason');
+      });
+
+      it('adds a no-reason flag to the session', function () {
+        req.form.values['no-reason'].should.equal(true);
+      });
     });
 
-    it('doesnt use a dateKey if cancel-request is selected', function () {
-      req.form.values['arrange-collection-radio'] = 'cancel-request';
-      controller.process(req);
 
-      should.equal(controller.dateKey, '');
+    describe('cancel-request selected', function () {
+      beforeEach(function () {
+        req.form.values['arrange-collection-radio'] = 'cancel-request';
+        controller.process(req);
+      });
+
+      it('sets the correct options.next', function () {
+        controller.options.next.should.equal('/personal-details-no-reason');
+      });
+
+      it('doesnt use a dateKey', function () {
+        should.equal(controller.dateKey, '');
+      });
+
+      it('adds a no-reason flag to the session', function () {
+        req.form.values['no-reason'].should.equal(true);
+      });
     });
 
     it('calls date controller', function () {

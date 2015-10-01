@@ -52,9 +52,24 @@ module.exports = {
       'nationality',
       'passport'
     ],
-    prereqs: ['/'],
     next: '/contact-details',
     backLink: '/reason'
+  },
+  '/personal-details-no-reason': {
+    controller: require('../../controllers/personal-details'),
+    template: 'someone-else/personal-details',
+    fields: [
+      'fullname',
+      'date-of-birth',
+      'date-of-birth-day',
+      'date-of-birth-month',
+      'date-of-birth-year',
+      'nationality',
+      'passport'
+    ],
+    prereqs: ['/arrange'],
+    next: '/contact-details',
+    backLink: '/arrange'
   },
   '/contact-details': {
     template: 'someone-else/contact-details',
