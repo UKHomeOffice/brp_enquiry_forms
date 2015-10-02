@@ -12,7 +12,8 @@ var mixins = require('hmpo-template-mixins');
 var i18n = require('i18n-future')();
 var options = {
   translate: i18n.translate.bind(i18n),
-  controller: require('../lib/base-controller')
+  controller: require('../lib/base-controller'),
+  params: '/:action?'
 };
 
 app.use(mixins(i18n.translate.bind(i18n), fields));

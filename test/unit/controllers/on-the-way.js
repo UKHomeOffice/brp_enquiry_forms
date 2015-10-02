@@ -1,5 +1,6 @@
 'use strict';
 
+var BaseController = require('../../../lib/base-controller');
 var OnTheWayController = require('../../../controllers/on-the-way');
 
 describe('controllers/on-the-way', function () {
@@ -18,6 +19,7 @@ describe('controllers/on-the-way', function () {
     var res = {};
 
     beforeEach(function () {
+      BaseController.prototype.getNextStep = sinon.stub();
       controller = new OnTheWayController({template: 'index'});
       req.sessionModel.get = sinon.stub().withArgs('week-day-range').returns(weekDayRange);
     });

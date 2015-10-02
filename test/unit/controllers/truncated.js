@@ -1,9 +1,12 @@
 'use strict';
 
-var ParentController = require('../../../lib/base-controller');
+var BaseController = require('../../../lib/base-controller');
 var Controller = require('../../../controllers/truncated');
 
 describe('controllers/truncated', function () {
+  beforeEach(function () {
+    BaseController.prototype.getNextPage = sinon.stub();
+  });
   describe('.saveValues()', function () {
     var controller;
     var req;
@@ -21,13 +24,13 @@ describe('controllers/truncated', function () {
           get: sinon.stub().withArgs('truncated-items').returns(truncatedItems)
         }
       };
-      ParentController.prototype.saveValues = sinon.stub();
+      BaseController.prototype.saveValues = sinon.stub();
       controller = new Controller({template: 'index'});
     });
 
     it('always calls saveValues on the parent controller with exact arguments', function () {
       controller.saveValues(req, res, callback);
-      ParentController.prototype.saveValues.should.always.have.been.calledWithExactly(req, res, callback);
+      BaseController.prototype.saveValues.should.always.have.been.calledWithExactly(req, res, callback);
     });
     it('updates the truncated-items', function () {
       req.form.values = {
@@ -97,7 +100,7 @@ describe('controllers/truncated', function () {
           get: sinon.stub().withArgs('truncated-items').returns(truncatedItems)
         }
       };
-      ParentController.prototype.saveValues = sinon.stub();
+      BaseController.prototype.saveValues = sinon.stub();
       controller = new Controller({template: 'index'});
     });
     it('includes a truncatedItem entity', function () {

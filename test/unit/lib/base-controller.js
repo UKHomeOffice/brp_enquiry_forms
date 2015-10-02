@@ -2,7 +2,7 @@
 
 var proxyquire = require('proxyquire');
 
-describe('base-controller', function () {
+describe('lib/base-controller', function () {
 
   var HMPOWizard;
   var Controller;
@@ -24,7 +24,6 @@ describe('base-controller', function () {
 
     it('calls the parent constructor', function () {
       controller = new Controller({template: 'foo'});
-
       HMPOWizard.Controller.should.have.been.called;
     });
 
@@ -41,7 +40,9 @@ describe('base-controller', function () {
 
     describe('.locals()', function () {
 
-      var req = {};
+      var req = {
+        params: {}
+      };
       var res = {};
 
       beforeEach(function () {
@@ -73,7 +74,9 @@ describe('base-controller', function () {
     });
 
     describe('.getValues()', function () {
-      var req;
+      var req = {
+        params: {}
+      };
       var res = {};
       var callback;
 
@@ -182,56 +185,50 @@ describe('base-controller', function () {
 
     });
 
-    describe('.saveValues()', function () {
-      var res = {};
+    describe('.getNextStep()', function () {
       var req = {};
-      var callback = function () {};
 
       beforeEach(function () {
-        HMPOWizard.Controller.prototype.saveValues = sinon.stub();
-        Controller.prototype.setNextPage = sinon.stub();
+        HMPOWizard.Controller.prototype.getNextStep = sinon.stub().returns('/');
+        req.params = {};
+        req.baseUrl = '';
         controller = new Controller({template: 'foo'});
+        controller.options = {};
       });
 
-      it('always calls the setNextPage', function () {
-        controller.saveValues(req, res, callback);
-
-        controller.setNextPage
-          .should.always.have.been.calledWithExactly(req);
+      describe('when the action is "edit"', function () {
+        it('appends "edit" to the path', function () {
+          controller.options.continueOnEdit = true;
+          req.params.action = 'edit';
+          controller.getNextStep(req).should.contain('/edit');
+        });
       });
 
-      it('always calls the parent controller saveValues', function () {
-        controller.saveValues(req, res, callback);
-
-        HMPOWizard.Controller.prototype.saveValues
-          .should.always.have.been.calledWithExactly(req, res, callback);
+      describe('when the action is "edit" and continueOnEdit option is falsey', function () {
+        it('appends "check-details" to the path', function () {
+          controller.options.continueOnEdit = false;
+          req.params.action = 'edit';
+          controller.getNextStep(req).should.contain('/check-details');
+        });
       });
 
     });
 
-    describe('.setNextPage()', function () {
-      var res = {};
+    describe('.getErrorStep()', function () {
       var req = {};
-      var callback = function () {};
+      var err = {};
 
       beforeEach(function () {
+        HMPOWizard.Controller.prototype.getErrorStep = sinon.stub().returns('/');
+        req.params = {};
         controller = new Controller({template: 'foo'});
       });
 
-      describe('when previous GET request originated from /check-details', function () {
-
-        beforeEach(function () {
-          controller = new Controller({template: 'foo'});
-          controller.options = {next: '/next-page'};
-          controller.referrer = 'http://hostname/check-details';
+      describe('when the action is "edit" and the parent redirect is not edit', function () {
+        it('appends "edit" to the path', function () {
+          req.params.action = 'edit';
+          controller.getErrorStep(err, req).should.contain('/edit');
         });
-
-        it('redirects to /check-details', function () {
-          controller.setNextPage(req, res, callback);
-
-          controller.options.next.should.equal('/check-details');
-        });
-
       });
 
     });

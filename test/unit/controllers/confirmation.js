@@ -1,18 +1,19 @@
 'use strict';
 
-var Controller = require('hmpo-form-wizard').Controller;
+var BaseController = require('../../../lib/base-controller');
 var ConfirmationController = require('../../../controllers/confirmation');
 
 describe('controllers/confirmation', function () {
 
   beforeEach(function () {
-    Controller.prototype.getNextStep = sinon.stub();
+    BaseController.prototype.getNextStep = sinon.stub();
   });
 
   describe('.getValues()', function () {
     var controller;
     var json = {foo: 'bar'};
-    var req = {sessionModel: {
+    var req = {
+      sessionModel: {
       reset: sinon.stub(),
       toJSON: sinon.stub().returns(json)
     }};

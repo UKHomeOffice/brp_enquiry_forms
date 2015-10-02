@@ -14,6 +14,7 @@ describe('controllers/start', function () {
 
     beforeEach(function () {
       req = {
+        params: {},
         form: {
           values: {
           }
