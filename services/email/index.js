@@ -4,7 +4,7 @@ var logger = require('../../lib/logger');
 var nodemailer = require('nodemailer');
 var config = require('../../config');
 var i18n = require('i18n-future')();
-var Mustache = require('mustache');
+var Hogan = require('hogan.js');
 var lookup = require('i18n-lookup')(i18n.translate.bind(i18n));
 var fs = require('fs');
 var path = require('path');
@@ -88,7 +88,7 @@ Emailer.prototype.send = function send(email, callback) {
     t: function t() {
       return function lookupTranslation(translate) {
         // for translations inside our mustache templates
-        return lookup(translate);
+        return lookup(Hogan.compile(translate).render(email.dataToSend));
       };
     }
   };
@@ -101,8 +101,8 @@ Emailer.prototype.send = function send(email, callback) {
         from: config.email.from,
         to: email.to,
         subject: email.subject,
-        text: Mustache.render(customerPlainTextTemplates[email.template], templateData),
-        html: Mustache.render(customerHtmlTemplates[email.template], templateData),
+        text: Hogan.compile(customerPlainTextTemplates[email.template]).render(templateData),
+        html: Hogan.compile(customerHtmlTemplates[email.template]).render(templateData),
         attachments: [
           {
             filename: 'govuk_logotype_email.png',
@@ -131,8 +131,8 @@ Emailer.prototype.send = function send(email, callback) {
     from: config.email.from,
     to: config.email.caseworker[email.template],
     subject: email.subject,
-    text: Mustache.render(caseworkerPlainTextTemplates[email.template], templateData),
-    html: Mustache.render(caseworkerHtmlTemplates[email.template], templateData),
+    text: Hogan.compile(caseworkerPlainTextTemplates[email.template]).render(templateData),
+    html: Hogan.compile(caseworkerHtmlTemplates[email.template]).render(templateData),
     attachments: [
       {
         filename: 'govuk_logotype_email.png',
