@@ -36,6 +36,10 @@ describe('controllers/someone-else', function () {
       it('sets the correct options.next', function () {
         controller.options.next.should.equal('/reason');
       });
+
+      it('adds a nominating flag to the session', function () {
+        req.form.values.nominating.should.equal('Nominate');
+      });
     });
 
     describe('change-person selected', function () {
@@ -54,6 +58,10 @@ describe('controllers/someone-else', function () {
 
       it('adds a no-reason flag to the session', function () {
         req.form.values['no-reason'].should.equal(true);
+      });
+
+      it('adds a nominating flag to the session', function () {
+        req.form.values.nominating.should.equal('Change');
       });
     });
 
@@ -74,6 +82,10 @@ describe('controllers/someone-else', function () {
 
       it('adds a no-reason flag to the session', function () {
         req.form.values['no-reason'].should.equal(true);
+      });
+
+      it('adds a nominating flag to the session', function () {
+        req.form.values.nominating.should.equal('Cancel');
       });
     });
 
