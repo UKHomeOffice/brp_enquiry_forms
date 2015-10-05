@@ -1,5 +1,5 @@
 {{#data}}
-  Delivery problem form
+  {{#t}}emails.no-arrived.header{{/t}}
 
   Personal Details
 

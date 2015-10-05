@@ -1,6 +1,6 @@
 {{#data}}
 
-  {{#t}}emails.journeys.collection.header{{/t}}
+  {{#t}}emails.collection.header{{/t}}
 
   {{#t}}journeys.collection.pages.check-details.tables.problem-details.title{{/t}}
 

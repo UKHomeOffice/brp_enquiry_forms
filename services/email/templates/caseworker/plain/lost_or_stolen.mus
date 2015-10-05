@@ -1,7 +1,7 @@
 {{#data}}
   Lost/stolen form
 
-  Lost/stolen details
+  {{#t}}emails.lost-stolen.header{{/t}}
 
   {{#t}}emails.caseworker.country{{/t}}
   {{country}}

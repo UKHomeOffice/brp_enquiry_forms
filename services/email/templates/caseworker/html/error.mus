@@ -54,7 +54,7 @@
               <td width="75%" style="font-family: Helvetica, Arial, sans-serif;">
                 {{#data}}
 
-                  <p style="font-size: 23px; color: #000; line-height: 1.32; margin: 0 0 20px 0;">Error problem form</p>
+                  <p style="font-size: 23px; color: #000; line-height: 1.32; margin: 0 0 20px 0;">{{#t}}emails.correct-mistakes.header{{/t}}</p>
 
                   <p style="font-size: 19px; font-weight: bold; color: #000; line-height: 1.32; margin: 0 0 10px 0;">Personal details</p>
                   <table width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#FFFFFF" style="margin: 0 0 20px 0;">

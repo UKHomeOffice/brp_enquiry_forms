@@ -986,13 +986,20 @@
       "country": "Current location",
       "date-lost": "Date realised"
     },
-    "journeys": {
-      "collection": {
-        "header": "Collection problem form"
-      }
+    "collection": {
+      "header": "Collection problem form"
     },
     "someone-else": {
       "header": "Someone else collecting"
+    },
+    "not-arrived": {
+      "header": "You have reported that your BRP hasn't arrived",
+    },
+    "correct-mistakes": {
+      "header": "You have reported problems with your BRP"
+    },
+    "lost-stolen": {
+      "header": "You have reported your BRP as lost or stolen"
     }
   },
   "errors": {
