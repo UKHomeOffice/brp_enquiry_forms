@@ -31,7 +31,8 @@ module.exports = {
     controller: require('../../controllers/reason'),
     template: 'someone-else/reason',
     fields: [
-      'someone-else-reason-radio'
+      'someone-else-reason-radio',
+      'incapable-details'
     ],
     next: '/personal-details'
   },

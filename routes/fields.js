@@ -171,7 +171,12 @@ module.exports = {
     }]
   },
   'incapable-details': {
-    label: 'fields.incapable-details.label'
+    validate: ['required'],
+    label: 'fields.incapable-details.label',
+    dependent: {
+      value: 'incapable',
+      field: 'someone-else-reason-radio',
+    }
   },
   'change-person-fullname': {
     validate: ['required'],
