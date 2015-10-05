@@ -1,6 +1,6 @@
 {{#data}}
 
-  {{#t}}emails.journeys.collection.header{{/t}}
+  {{#t}}emails.someone-else.header{{/t}}
 
   {{#t}}pages.someone-else-check-details.tables.other-person.title{{/t}}
 

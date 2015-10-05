@@ -1,6 +1,6 @@
 
 {{#data}}
-  Error problem form
+  {{#t}}emails.correct-mistakes.header{{/t}}
 
   Personal details
 

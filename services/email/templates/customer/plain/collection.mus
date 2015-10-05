@@ -1,5 +1,5 @@
 {{#data}}
-  {{#t}}emails.journeys.collection.header{{/t}}
+  {{#t}}emails.collection.header{{/t}}
 
   Dear {{fullname}}
 
