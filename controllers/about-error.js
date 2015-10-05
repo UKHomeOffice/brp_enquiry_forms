@@ -66,17 +66,19 @@ function anyChecked(req) {
   }.bind(this));
 }
 
-AboutErrorController.prototype.setNextPage = function setNextPage(req) {
+AboutErrorController.prototype.getNextStep = function getNextStep(req) {
+  var next = Controller.prototype.getNextStep.apply(this, arguments);
   var truncatedItems = getTruncatedItems(req);
 
   if (isChecked.call(this, 'conditions-error-checkbox', req) && req.sessionModel.get('location-applied') === 'yes') {
-    this.options.next = '/conditions-and-length';
+    next = req.baseUrl + '/conditions-and-length';
   } else if (truncatedItems) {
-    this.options.next = '/truncated';
+    next = req.baseUrl + '/truncated';
     req.sessionModel.set('truncated-items', truncatedItems);
   } else if (this.referrer && this.referrer.indexOf('/check-details') !== -1) {
-    this.options.next = '/check-details';
+    next = req.baseUrl + '/check-details';
   }
+  return next;
 };
 
 AboutErrorController.prototype.saveValues = function saveValues(req, res, callback) {
