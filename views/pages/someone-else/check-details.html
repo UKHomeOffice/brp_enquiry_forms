@@ -34,28 +34,28 @@
             <tr>
               <td>{{#t}}journeys.collection.pages.check-details.tables.others-details.fullname{{/t}}</td>
               <td>{{values.someone-else-fullname}}</td>
-              <td><a href="/someone-else/arrange#someone-else-fullname" class="button">{{#t}}buttons.change{{/t}}</a></td>
+              <td><a href="/someone-else/arrange/edit#someone-else-fullname" class="button">{{#t}}buttons.change{{/t}}</a></td>
             </tr>
             {{/values.someone-else-fullname}}
             {{#values.someone-else-date}}
             <tr>
               <td>{{#t}}journeys.collection.pages.check-details.tables.others-details.date-of-birth{{/t}}</td>
               <td>{{values.someone-else-date-formatted}}</td>
-              <td><a href="/someone-else/arrange#someone-else-date-day" class="button">{{#t}}buttons.change{{/t}}</a></td>
+              <td><a href="/someone-else/arrange/edit#someone-else-date-day" class="button">{{#t}}buttons.change{{/t}}</a></td>
             </tr>
             {{/values.someone-else-date}}
             {{#values.someone-else-nationality}}
             <tr>
               <td>{{#t}}journeys.collection.pages.check-details.tables.others-details.nationality{{/t}}</td>
               <td>{{values.someone-else-nationality}}</td>
-              <td><a href="/someone-else/arrange#someone-else-nationality" class="button">{{#t}}buttons.change{{/t}}</a></td>
+              <td><a href="/someone-else/arrange/edit#someone-else-nationality" class="button">{{#t}}buttons.change{{/t}}</a></td>
             </tr>
             {{/values.someone-else-nationality}}
             {{#values.someone-else-id-number}}
             <tr>
               <td>{{#t}}journeys.collection.pages.check-details.tables.others-details.id-number{{/t}}</td>
               <td>{{values.someone-else-id-number}}</td>
-              <td><a href="/someone-else/arrange#someone-else-id-number" class="button">{{#t}}buttons.change{{/t}}</a></td>
+              <td><a href="/someone-else/arrange/edit#someone-else-id-number" class="button">{{#t}}buttons.change{{/t}}</a></td>
             </tr>
             {{/values.someone-else-id-number}}
           </tbody>
@@ -74,28 +74,28 @@
             <tr>
               <td>{{#t}}journeys.collection.pages.check-details.tables.others-details.fullname{{/t}}</td>
               <td>{{values.change-person-fullname}}</td>
-              <td><a href="/someone-else/arrange#change-person-fullname" class="button">{{#t}}buttons.change{{/t}}</a></td>
+              <td><a href="/someone-else/arrange/edit#change-person-fullname" class="button">{{#t}}buttons.change{{/t}}</a></td>
             </tr>
             {{/values.change-person-fullname}}
             {{#values.change-person-date}}
             <tr>
               <td>{{#t}}journeys.collection.pages.check-details.tables.others-details.date-of-birth{{/t}}</td>
               <td>{{values.change-person-date-formatted}}</td>
-              <td><a href="/someone-else/arrange#change-person-date-day" class="button">{{#t}}buttons.change{{/t}}</a></td>
+              <td><a href="/someone-else/arrange/edit#change-person-date-day" class="button">{{#t}}buttons.change{{/t}}</a></td>
             </tr>
             {{/values.change-person-date}}
             {{#values.change-person-nationality}}
             <tr>
               <td>{{#t}}journeys.collection.pages.check-details.tables.others-details.nationality{{/t}}</td>
               <td>{{values.change-person-nationality}}</td>
-              <td><a href="/someone-else/arrange#change-person-nationality" class="button">{{#t}}buttons.change{{/t}}</a></td>
+              <td><a href="/someone-else/arrange/edit#change-person-nationality" class="button">{{#t}}buttons.change{{/t}}</a></td>
             </tr>
             {{/values.change-person-nationality}}
             {{#values.change-person-id-number}}
             <tr>
               <td>{{#t}}journeys.collection.pages.check-details.tables.others-details.id-number{{/t}}</td>
               <td>{{values.change-person-id-number}}</td>
-              <td><a href="/someone-else/arrange#change-person-id-number" class="button">{{#t}}buttons.change{{/t}}</a></td>
+              <td><a href="/someone-else/arrange/edit#change-person-id-number" class="button">{{#t}}buttons.change{{/t}}</a></td>
             </tr>
             {{/values.change-person-id-number}}
           </tbody>
@@ -113,21 +113,21 @@
           <tr>
             <td>{{#t}}pages.check-details-error.personal-details-table.headers.fullname{{/t}}</td>
             <td>{{values.fullname}}</td>
-            <td><a href="personal-details#fullname" class="button">{{#t}}buttons.change{{/t}}</a></td>
+            <td><a href="personal-details/edit#fullname" class="button">{{#t}}buttons.change{{/t}}</a></td>
           </tr>
           {{/values.fullname}}
           {{#values.date-of-birth}}
           <tr>
             <td>{{#t}}pages.check-details-error.personal-details-table.headers.date-of-birth{{/t}}</td>
             <td>{{values.date-of-birth-formatted}}</td>
-            <td><a href="personal-details#date-of-birth-day" class="button">{{#t}}buttons.change{{/t}}</a></td>
+            <td><a href="personal-details/edit#date-of-birth-day" class="button">{{#t}}buttons.change{{/t}}</a></td>
           </tr>
           {{/values.date-of-birth}}
           {{#values.nationality}}
           <tr>
             <td>{{#t}}pages.check-details.table.headers.nationality{{/t}}</td>
             <td>{{values.nationality}}</td>
-            <td><a href="personal-details#nationality" class="button">{{#t}}buttons.change{{/t}}</a></td>
+            <td><a href="personal-details/edit#nationality" class="button">{{#t}}buttons.change{{/t}}</a></td>
           </tr>
           {{/values.nationality}}
           {{#values.no-email}}
@@ -140,7 +140,7 @@
                 {{#values.contact-address-county}}{{values.contact-address-county}},{{/values.contact-address-county}}
                 {{values.contact-address-postcode}}
               </td>
-              <td><a href="contact-details#contact-address-street" class="button">{{#t}}buttons.change{{/t}}</a></td>
+              <td><a href="contact-details/edit§§§§#contact-address-street" class="button">{{#t}}buttons.change{{/t}}</a></td>
             </tr>
           {{/values.contact-address-street}}
           {{/values.no-email}}
@@ -148,21 +148,21 @@
           <tr>
             <td>{{#t}}pages.check-details.table.headers.passport{{/t}}</td>
             <td>{{values.passport}}</td>
-            <td><a href="personal-details#passport" class="button">{{#t}}buttons.change{{/t}}</a></td>
+            <td><a href="personal-details/edit#passport" class="button">{{#t}}buttons.change{{/t}}</a></td>
           </tr>
           {{/values.passport}}
           {{#values.email}}
           <tr>
             <td>{{#t}}pages.check-details.table.headers.email{{/t}}</td>
             <td>{{values.email}}</td>
-            <td><a href="contact-details#email" class="button">{{#t}}buttons.change{{/t}}</a></td>
+            <td><a href="contact-details/edit§§§§#email" class="button">{{#t}}buttons.change{{/t}}</a></td>
           </tr>
           {{/values.email}}
           {{#values.phone}}
             <tr>
               <td>{{#t}}pages.check-details.table.headers.phone{{/t}}</td>
               <td>{{values.phone}}</td>
-              <td><a href="contact-details#phone" class="button">{{#t}}buttons.change{{/t}}</a></td>
+              <td><a href="contact-details/edit§§§§#phone" class="button">{{#t}}buttons.change{{/t}}</a></td>
             </tr>
           {{/values.phone}}
         </tbody>
