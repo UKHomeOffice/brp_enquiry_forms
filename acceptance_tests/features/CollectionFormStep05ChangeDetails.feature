@@ -7,7 +7,7 @@ Feature: Changing Delivery Form details
 		Then I see the details I entered on Step One of the collection form
 		When I check the "Sponsor" radio button
 		And I change the values in the Date of Collection fields
-		And I proceed back to Step Six of the collection form
+		And I click "Continue"
 		Then I can see all the changed personal details from Step One of the collection form
 
 	Scenario Outline: Changing the values from Step 02 of the collection form 
@@ -43,7 +43,7 @@ Feature: Changing Delivery Form details
 		|/html/body/main/div[2]/div/form/table[2]/tbody/tr[1]/td[3]/a|
 		|/html/body/main/div[2]/div/form/table[2]/tbody/tr[2]/td[3]/a|
 		|/html/body/main/div[2]/div/form/table[2]/tbody/tr[3]/td[3]/a|
-		|/html/body/main/div[2]/div/form/table[2]/tbody/tr[3]/td[3]/a|
+		|/html/body/main/div[2]/div/form/table[2]/tbody/tr[4]/td[3]/a|
 
 	Scenario Outline: Changing the values from Step 04 of the collection form 
 		When I go to Step Six of the collection form
@@ -61,7 +61,6 @@ Feature: Changing Delivery Form details
 			|/html/body/main/div[2]/div/form/table[3]/tbody/tr[1]/td[3]/a|
 			|/html/body/main/div[2]/div/form/table[3]/tbody/tr[2]/td[3]/a|
 			|/html/body/main/div[2]/div/form/table[3]/tbody/tr[3]/td[3]/a|
-			|/html/body/main/div[2]/div/form/table[3]/tbody/tr[4]/td[3]/a|
 
 	Scenario Outline: Changing the email value from Step 05 of the collection form 
 		When I go to Step Six of the collection form
@@ -74,8 +73,8 @@ Feature: Changing Delivery Form details
 
 		Examples:
 			|xpath													 	 |
+			|/html/body/main/div[2]/div/form/table[3]/tbody/tr[4]/td[3]/a|
 			|/html/body/main/div[2]/div/form/table[3]/tbody/tr[5]/td[3]/a|
-			|/html/body/main/div[2]/div/form/table[3]/tbody/tr[6]/td[3]/a|
 
 	Scenario: Go to Step Six and clear the cookies
 		When I go to Step Six of the collection form

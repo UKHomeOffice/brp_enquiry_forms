@@ -21,4 +21,5 @@ end
 When(/^I enter a partial date into the collection date fields$/) do
   fill_in('collection-date-month', :with => '04')
   fill_in('collection-date-year', :with => '1974')
+  click_button('Continue')
 end
