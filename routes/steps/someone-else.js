@@ -68,7 +68,7 @@ module.exports = {
     ],
     prereqs: ['/arrange'],
     next: '/contact-details',
-    backLink: '/arrange'
+    backLink: 'arrange'
   },
   '/contact-details': {
     template: 'someone-else/contact-details',
