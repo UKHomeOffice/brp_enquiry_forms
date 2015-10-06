@@ -108,8 +108,8 @@
     {{phone}}
   {{/phone}}
 
-  {{#org-help}}
+  {{#org-type}}
   Help from a {{org-type}} called {{rep-name}}
-  {{/org-help}}
+  {{/org-type}}
 
 {{/data}}

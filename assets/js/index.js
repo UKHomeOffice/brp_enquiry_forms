@@ -26,7 +26,7 @@ var allCountries = new Bloodhound({
 });
 
 
-$('#nationality, #nationality-error, #nominated-nationality, #someone-else-nationality, #change-person-nationality')
+$('#nationality, #nationality-error, #nominated-nationality')
 .typeahead({
   minLength: 1,
   hint: false,
@@ -36,7 +36,7 @@ $('#nationality, #nationality-error, #nominated-nationality, #someone-else-natio
   source: nonEuCountries
 });
 
-$('#country').typeahead({
+$('#country, #someone-else-nationality, #change-person-nationality').typeahead({
   minLength: 1,
   hint: false,
   limit: 5

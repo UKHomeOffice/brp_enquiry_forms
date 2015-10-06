@@ -31,10 +31,10 @@ module.exports = {
     controller: require('../../controllers/reason'),
     template: 'someone-else/reason',
     fields: [
-      'someone-else-reason-radio'
+      'someone-else-reason-radio',
+      'incapable-details'
     ],
-    next: '/personal-details',
-    backLink: '/arrange'
+    next: '/personal-details'
   },
   '/exit-not-eligible': {
     template: 'someone-else/exit-not-eligible',
@@ -52,9 +52,23 @@ module.exports = {
       'nationality',
       'passport'
     ],
-    prereqs: ['/'],
+    next: '/contact-details'
+  },
+  '/personal-details-no-reason': {
+    controller: require('../../controllers/personal-details'),
+    template: 'someone-else/personal-details',
+    fields: [
+      'fullname',
+      'date-of-birth',
+      'date-of-birth-day',
+      'date-of-birth-month',
+      'date-of-birth-year',
+      'nationality',
+      'passport'
+    ],
+    prereqs: ['/arrange'],
     next: '/contact-details',
-    backLink: '/reason'
+    backLink: 'arrange'
   },
   '/contact-details': {
     template: 'someone-else/contact-details',
@@ -67,7 +81,6 @@ module.exports = {
       'contact-address-postcode',
       'phone'
     ],
-    backLink: '/personal-details',
     next: '/check-details'
   },
   '/check-details': {
@@ -78,7 +91,6 @@ module.exports = {
       'rep-name',
       'org-type'
     ],
-    backLink: '/contact-details',
     next: '/confirmation'
   },
   '/confirmation': {

@@ -56,27 +56,7 @@
 
                   <p style="font-size: 23px; color: #000; line-height: 1.32; margin: 0 0 20px 0;">{{#t}}emails.someone-else.header{{/t}}</p>
 
-                  <!-- OTHER PERSONS DETAILS TABLE -->
-                  <p style="font-size: 19px; font-weight: bold; color: #000; line-height: 1.32; margin: 0 0 10px 0;">{{#t}}pages.someone-else-check-details.tables.other-person.title{{/t}}</p>
-
-                  <table width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#FFFFFF" style="margin: 0 0 20px 0;">
-                    <tr style="border-top: 1px solid #009390;">
-                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.someone-else-check-details.tables.other-person.fullname{{/t}}</p></td>
-                      <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{changed-person-fullname}}</p></td>
-                    </tr>
-                    <tr style="border-top: 1px solid #009390;">
-                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.someone-else-check-details.tables.other-person.date-of-birth{{/t}}</p></td>
-                      <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{changed-person-date-formatted}}</p></td>
-                    </tr>
-                    <tr style="border-top: 1px solid #009390;">
-                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.someone-else-check-details.tables.other-person.nationality{{/t}}</p></td>
-                      <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{changed-person-nationality}}</p></td>
-                    </tr>
-                    <tr style="border-top: 1px solid #009390;">
-                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.someone-else-check-details.tables.other-person.id-number{{/t}}</p></td>
-                      <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{changed-person-id-number}}</p></td>
-                    </tr>
-                  </table>
+                  <p style="font-size: 23px; color: #000; line-height: 1.32; margin: 0 0 20px 0;">{{#t}}emails.someone-else.caseworker.nominating{{/t}} ({{nominating}})</p>
 
                   <!-- PERSONAL DETAILS TABLE -->
                   <p style="font-size: 19px; font-weight: bold; color: #000; line-height: 1.32; margin: 0 0 10px 0;">{{#t}}pages.someone-else-check-details.tables.personal-details.title{{/t}}</p>
@@ -127,7 +107,22 @@
                       </tr>
                     {{/contact-address-street}}
                     {{/email}}
-                    {{#org-help}}
+                    {{#someone-else-reason-radio}}
+                      <tr style="border-top: 1px solid #009390;">
+                        <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}emails.someone-else.tables.personal-details.reason{{/t}}</p></td>
+                        <td width="75%">
+                          <p style="font-size: 16px; color: #000; margin: 10px 0;">
+                            {{#t}}fields.someone-else-reason-radio.options.{{someone-else-reason-radio}}.label{{/t}}
+                          </p>
+                          {{#incapable-details}}
+                          <p style="font-size: 16px; color: #000; margin: 10px 0;">
+                            {{incapable-details}}
+                          </p>
+                          {{/incapable-details}}
+                        </td>
+                      </tr>
+                    {{/someone-else-reason-radio}}
+                    {{#org-type}}
                       <tr style="border-top: 1px solid #009390;">
                         <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">Help from ({{org-type}})</p></td>
                         <td width="75%">
@@ -136,7 +131,29 @@
                           </p>
                         </td>
                       </tr>
-                    {{/org-help}}
+                    {{/org-type}}
+                  </table>
+
+                  <!-- OTHER PERSONS DETAILS TABLE -->
+                  <p style="font-size: 19px; font-weight: bold; color: #000; line-height: 1.32; margin: 0 0 10px 0;">{{#t}}pages.someone-else-check-details.tables.other-person.title{{/t}}</p>
+
+                  <table width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#FFFFFF" style="margin: 0 0 20px 0;">
+                    <tr style="border-top: 1px solid #009390;">
+                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.someone-else-check-details.tables.other-person.fullname{{/t}}</p></td>
+                      <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{changed-person-fullname}}</p></td>
+                    </tr>
+                    <tr style="border-top: 1px solid #009390;">
+                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.someone-else-check-details.tables.other-person.date-of-birth{{/t}}</p></td>
+                      <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{changed-person-date-formatted}}</p></td>
+                    </tr>
+                    <tr style="border-top: 1px solid #009390;">
+                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.someone-else-check-details.tables.other-person.nationality{{/t}}</p></td>
+                      <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{changed-person-nationality}}</p></td>
+                    </tr>
+                    <tr style="border-top: 1px solid #009390;">
+                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.someone-else-check-details.tables.other-person.id-number{{/t}}</p></td>
+                      <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{changed-person-id-number}}</p></td>
+                    </tr>
                   </table>
 
                 {{/data}}
