@@ -18,7 +18,7 @@ end
 
 Then(/^I see the changes I made in Step one of the Someone Else form$/) do
   page.should have_content('Mister Reasonable')
-  page.should have_content('02 March 1972')
+  page.should have_content('2 March 1972')
   page.should have_content('South Africa')
   page.should have_content('0987654321')
 end
