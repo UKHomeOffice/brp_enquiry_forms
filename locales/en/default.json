@@ -196,6 +196,12 @@
     },
     "org-type": {
       "required": "Tell us the type of the organisation that helped you to complete this form"
+    },
+    "arrange-collection-radio": {
+      "required": "Tell us what you would like to do"
+    },
+    "incapable-details": {
+      "required": "Tell us about the problem"
     }
   },
   "fields": {
