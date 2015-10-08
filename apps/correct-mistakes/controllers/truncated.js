@@ -1,7 +1,7 @@
 'use strict';
 
 var util = require('util');
-var Controller = require('../lib/base-controller');
+var Controller = require('../../../lib/base-controller');
 
 var TruncatedController = function TruncatedController() {
   Controller.apply(this, arguments);
