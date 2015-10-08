@@ -1,7 +1,7 @@
 'use strict';
 
-var BaseController = require('../../../lib/base-controller');
-var Controller = require('../../../controllers/truncated');
+var BaseController = require('../../../../../lib/base-controller');
+var Controller = require('../../../../../apps/correct-mistakes/controllers/truncated');
 
 describe('controllers/truncated', function () {
   beforeEach(function () {

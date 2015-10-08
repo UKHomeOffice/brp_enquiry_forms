@@ -26,13 +26,12 @@ app.use(function setAssetPath(req, res, next) {
 
 require('hmpo-govuk-template').setup(app);
 app.set('view engine', 'html');
-app.engine('html', require('hogan-express-strict'));
-app.set('views', path.resolve(__dirname, './views'));
+app.enable('view cache');
 app.use(require('express-partial-templates')(app));
+app.engine('html', require('hogan-express-strict'));
 
 app.use(require('body-parser').urlencoded({extended: true}));
 app.use(require('body-parser').json());
-
 app.use(function setBaseUrl(req, res, next) {
   res.locals.baseUrl = req.baseUrl;
   next();
@@ -81,7 +80,9 @@ app.use(require('cookie-parser')(config.session.secret));
 app.use(secureCookies);
 app.use(initSession);
 
-app.use(require('./routes'));
+app.use(require('./apps/correct-mistakes/'));
+
+app.use(require('./routes/'));
 
 app.use(require('./errors/'));
 
