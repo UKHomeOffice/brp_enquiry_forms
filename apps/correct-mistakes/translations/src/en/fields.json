@@ -1,0 +1,470 @@
+{
+  "received": {
+    "options": {
+      "yes": {
+        "label": "Yes"
+      },
+      "no": {
+        "label": "No"
+      }
+    }
+  },
+  "delivery-date": {
+    "label": "Date",
+    "legend": "Date on the letter",
+    "hint": "For example, 11  6  2015"
+  },
+  "delivery-date-day": {
+    "label": "Day"
+  },
+  "delivery-date-month": {
+    "label": "Month"
+  },
+  "delivery-date-year": {
+    "label": "Year"
+  },
+  "collection-date": {
+    "label": "Date",
+    "legend": "Date on the letter",
+    "hint": "For example, 11  6  2015"
+  },
+  "collection-date-day": {
+    "label": "Day"
+  },
+  "collection-date-month": {
+    "label": "Month"
+  },
+  "collection-date-year": {
+    "label": "Year"
+  },
+  "collection-where-radio": {
+    "options": {
+      "post-office": {
+        "label": "Post office"
+      },
+      "sponsor": {
+        "label": "Sponsor"
+      }
+    }
+  },
+  "arrange-collection-radio": {
+    "options": {
+      "someone-else": {
+        "label": "Allow someone else to collect my BRP"
+      },
+      "change-person": {
+        "label": "Change the person I requested to collect my BRP"
+      },
+      "cancel-request": {
+        "label": "Cancel request for someone else to collect my BRP"
+      }
+    }
+  },
+  "someone-else-fullname": {
+    "label": "Full name"
+  },
+  "someone-else-date": {
+    "legend": "Date of birth",
+    "hint": "For example, 31  3  1970"
+  },
+  "someone-else-date-day": {
+    "label": "Day"
+  },
+  "someone-else-date-month": {
+    "label": "Month"
+  },
+  "someone-else-date-year": {
+    "label": "Year"
+  },
+  "someone-else-nationality": {
+    "label":  "Country of nationality"
+  },
+  "someone-else-id-number": {
+    "label": "Identity document number <br/>(This could be UK/EU driving licence, passport or BRP)"
+  },
+  "someone-else-reason-radio": {
+    "options": {
+      "incapable": {
+        "label": "I am physically or mentally incapable"
+      },
+      "refugee": {
+        "label": "I am a Gataway refugee"
+      },
+      "under-age": {
+        "label": "I am under 18"
+      },
+      "other": {
+        "label": "None of the above"
+      }
+    }
+  },
+  "incapable-details": {
+    "label": "Please describe the problem"
+  },
+  "change-person-fullname": {
+    "label": "Full name"
+  },
+  "change-person-date": {
+    "legend": "Date of birth",
+    "hint": "For example, 31  3  1970"
+  },
+  "change-person-date-day": {
+    "label": "Day"
+  },
+  "change-person-date-month": {
+    "label": "Month"
+  },
+  "change-person-date-year": {
+    "label": "Year"
+  },
+  "change-person-nationality": {
+    "label":  "Country of nationality"
+  },
+  "change-person-id-number": {
+    "label": "Identity document number <br/>(This could be UK/EU driving licence, passport or BRP)"
+  },
+  "reason-radio": {
+    "options": {
+      "under-age": {
+        "legend": "I am under 18 and attempted collection without my Responsible Adult",
+        "label": "I am under 18 and attempted collection without my Responsible Adult"
+      },
+      "non-identity": {
+        "legend": "My identity could not be confirmed",
+        "label": "My identity could not be confirmed"
+      },
+      "others-identity": {
+        "legend": "The identity of someone collecting on my behalf could not be confirmed",
+        "label": "The identity of someone collecting on my behalf could not be confirmed"
+      },
+      "others-auth": {
+        "legend": "The Home Office did not authorise someone else to collect on my behalf",
+        "label": "The Home Office did not authorise someone else to collect on my behalf"
+      },
+      "passport-family": {
+        "legend": "The vingette in my passport is not linked to my family",
+        "label": "The vingette in my passport is not linked to my family"
+      },
+      "passport-lost": {
+        "legend": "I have lost my passport",
+        "label": "I have lost my passport"
+      },
+      "passport-stamp": {
+        "legend": "My passport does not contain a valid entry stamp",
+        "label": "My passport does not contain a valid entry stamp"
+      },
+      "no-brp": {
+        "legend": "My BRP was not there",
+        "label": "My BRP was not there"
+      },
+      "other": {
+        "legend": "Other",
+        "label": "Other"
+      }
+    }
+  },
+  "reason-under-age": {
+    "label": "Please describe the problem (optional)"
+  },
+  "reason-non-identity": {
+    "label": "Please describe the problem (optional)"
+  },
+  "reason-others-identity": {
+    "label": "Please describe the problem (optional)"
+  },
+  "reason-others-auth": {
+    "label": "Please describe the problem (optional)"
+  },
+  "reason-passport-family": {
+    "label": "Please describe the problem (optional)"
+  },
+  "reason-passport-lost": {
+    "label": "Please describe the problem (optional)"
+  },
+  "reason-passport-stamp": {
+    "label": "Please describe the problem (optional)"
+  },
+  "reason-no-brp": {
+    "label": "Please describe the problem (optional)"
+  },
+  "reason-other": {
+    "label": "Please describe the problem (optional)"
+  },
+  "nominated-fullname": {
+    "label": "Full name"
+  },
+  "nominated-nationality": {
+    "label": "Country of nationality"
+  },
+  "nominated-id-number": {
+    "label": "Identity document number"
+  },
+  "nominated-date": {
+    "label": "Date",
+    "legend": "Date of birth",
+    "hint": "For example, 31  3  1970"
+  },
+  "nominated-date-day": {
+    "label": "Day"
+  },
+  "nominated-date-month": {
+    "label": "Month"
+  },
+  "nominated-date-year": {
+    "label": "Year"
+  },
+  "date-of-birth": {
+    "legend": "Date of birth",
+    "hint": "For example, 31  3  1970"
+  },
+  "date-of-birth-day": {
+    "label": "Day"
+  },
+  "date-of-birth-month": {
+    "label": "Month"
+  },
+  "date-of-birth-year": {
+    "label": "Year"
+  },
+  "no-letter": {
+    "label": "I don't have the letter anymore"
+  },
+  "delivery-details": {
+    "label": "If the courier could have problems delivering to this address, for example there's no door number, then let us know and we'll contact them. (optional)"
+  },
+  "address-match": {
+    "options": {
+      "yes": {
+        "label": "Yes"
+      },
+      "no": {
+        "label": "No"
+      }
+    }
+  },
+  "uk-address-radio": {
+    "options": {
+      "yes": {
+        "label": "Yes"
+      },
+      "no": {
+        "label": "No"
+      }
+    }
+  },
+  "address": {
+    "legend": "Address"
+  },
+  "address-street": {
+    "label": "House name or number and street"
+  },
+  "address-town": {
+    "label": "Town/City"
+  },
+  "address-county": {
+    "label": "County (optional)"
+  },
+  "address-postcode": {
+    "label": "Postcode"
+  },
+  "fullname": {
+    "label": "Full name"
+  },
+  "nationality": {
+    "label": "Country of nationality"
+  },
+  "passport": {
+    "label": "Passport number (optional)"
+  },
+  "brp-card": {
+    "label": "BRP card number  (optional)",
+    "hint": "For example, AB12345CD"
+  },
+  "email": {
+    "label": "Email address"
+  },
+  "no-email": {
+    "label": "I do not have an email address"
+  },
+  "phone": {
+    "label": "Phone number (optional)"
+  },
+  "last-name-error-checkbox": {
+    "label": "Last name"
+  },
+  "last-name-error": {
+    "label": "What is your correct last name?",
+    "title": "This is the first line under 'name' on your BRP."
+  },
+  "first-name-error-checkbox": {
+    "label": "First name"
+  },
+  "first-name-error": {
+    "label": "What is your correct first name?",
+    "title": "This is the second line under 'name' on your BRP."
+  },
+  "birth-place-error-checkbox": {
+    "label": "Place of birth"
+  },
+  "birth-place-error": {
+    "label": "What is your correct place of birth?"
+  },
+  "date-of-birth-error-checkbox": {
+    "label": "Date of birth"
+  },
+  "date-of-birth-error": {
+    "label": "What is your correct date of birth?",
+    "hint": "For example: 31  3  1970"
+  },
+  "date-of-birth-error-day": {
+    "label": "Day"
+  },
+  "date-of-birth-error-month": {
+    "label": "Month"
+  },
+  "date-of-birth-error-year": {
+    "label": "Year"
+  },
+  "gender-error-checkbox": {
+    "label": "Gender"
+  },
+  "gender-error": {
+    "legend": "Gender",
+    "title": "What is your correct gender?",
+    "options": {
+      "male": {
+        "label": "Male"
+      },
+      "female": {
+        "label": "Female"
+      },
+      "unspecified": {
+        "label": "Unspecified"
+      }
+    }
+  },
+  "sponsor-details-error-checkbox": {
+    "label": "Sponsor reference"
+  },
+  "sponsor-details-error": {
+    "legend": "Sponsor reference",
+    "title": "This is the third line under 'remarks' on your BRP. This is the reference number of your your employer, university or college.",
+    "label": "What is the correct sponsor reference number?"
+  },
+  "nationality-error-checkbox": {
+    "label": "Nationality"
+  },
+  "nationality-error": {
+    "legend": "Nationality",
+    "label": "What is your correct nationality?"
+  },
+  "signature-error-checkbox": {
+    "label": "Signature"
+  },
+  "signature-error": {
+    "legend": "Signature",
+    "label": "What is wrong with your signature?"
+  },
+  "photograph-error-checkbox": {
+    "label": "Photograph"
+  },
+  "photograph-error": {
+    "legend": "Photograph",
+    "label": "What is wrong with your photograph?"
+  },
+  "national-insurance-error-checkbox": {
+    "label": "National Insurance Number"
+  },
+  "national-insurance-error": {
+    "legend": "National Insurance Number",
+    "label": "What is your correct National Insurance Number?"
+  },
+  "damaged-error-checkbox": {
+    "label": "Faulty or damaged"
+  },
+  "damaged-error": {
+    "legend": "Faulty or damaged",
+    "label": "What is wrong with your BRP?"
+  },
+  "conditions-error-checkbox": {
+    "label": "Conditions or length of stay"
+  },
+  "conditions-error": {
+    "label": "Please describe the problem"
+  },
+  "truncated": {
+    "options": {
+      "yes": {
+        "label": "Yes"
+      },
+      "no": {
+        "label": "No"
+      }
+    }
+  },
+  "inside-uk": {
+    "options": {
+      "yes": {
+        "label": "UK"
+      },
+      "no": {
+        "label": "Outside UK"
+      }
+    }
+  },
+  "location-applied": {
+    "options": {
+      "yes": {
+        "label": "UK"
+      },
+      "no": {
+        "label": "Outside UK"
+      }
+    }
+  },
+  "country": {
+    "legend": "Inside the UK",
+    "label": "Which country are you in?"
+  },
+  "date-lost": {
+    "hint": "For example: 11 6 2015"
+  },
+  "date-lost-day": {
+    "label": "Day"
+  },
+  "date-lost-month": {
+    "label": "Month"
+  },
+  "date-lost-year": {
+    "label": "Year"
+  },
+  "org-help": {
+    "options": {
+      "yes": {
+        "label": "Yes"
+      },
+      "no": {
+        "label": "No"
+      }
+    }
+  },
+  "rep-name": {
+    "label": "Full name"
+  },
+  "org-type": {
+    "options": {
+      "pbs": {
+        "label": "PBS sponsor"
+      },
+      "legal": {
+        "label": "Legal represntative"
+      },
+      "relative": {
+        "label": "Relative/friend"
+      },
+      "support": {
+        "label": "Support organisation"
+      }
+    }
+  }
+}
