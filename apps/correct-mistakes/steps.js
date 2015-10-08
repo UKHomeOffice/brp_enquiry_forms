@@ -2,19 +2,19 @@
 
 module.exports = {
   '/': {
-    controller: require('../../controllers/start'),
+    controller: require('../common/controllers/start'),
     next: '/location'
   },
   '/location': {
-    template: 'correct-mistakes/location-applied.html',
+    template: 'location-applied.html',
     fields: [
       'location-applied'
     ],
     next: '/about-error'
   },
   '/about-error': {
-    controller: require('../../controllers/about-error'),
-    template: 'correct-mistakes/about-error.html',
+    controller: require('./controllers/about-error'),
+    template: 'about-error.html',
     fields: [
       'error-selection',
       'first-name-error-checkbox',
@@ -45,17 +45,17 @@ module.exports = {
       'conditions-error-checkbox',
       'conditions-error'
     ],
-    backLink: '/location',
+    backLink: 'location',
     next: '/uk-address'
   },
   '/conditions-and-length': {
     prereqs: ['/'],
-    template: 'correct-mistakes/conditions-and-length.html'
+    template: 'conditions-and-length.html'
   },
   '/truncated': {
-    controller: require('../../controllers/truncated'),
+    controller: require('./controllers/truncated'),
     prereqs: ['/'],
-    template: 'correct-mistakes/truncated.html',
+    template: 'truncated.html',
     fields: [
       'truncated',
       'truncation-page'
@@ -64,10 +64,10 @@ module.exports = {
   },
   '/exit-truncated': {
     prereqs: ['/truncated'],
-    template: 'correct-mistakes/exit-truncated.html'
+    template: 'exit-truncated.html'
   },
   '/uk-address': {
-    template: 'correct-mistakes/uk-address.html',
+    template: 'uk-address.html',
     fields: [
       'uk-address-radio',
       'uk-address-street',
@@ -75,12 +75,12 @@ module.exports = {
       'uk-address-county',
       'uk-address-postcode'
     ],
-    backLink: '/about-error',
+    backLink: 'about-error',
     next: '/personal-details'
   },
   '/personal-details': {
-    controller: require('../../controllers/personal-details'),
-    template: 'correct-mistakes/personal-details-brp.html',
+    controller: require('../common/controllers/personal-details'),
+    template: 'personal-details-brp.html',
     fields: [
       'fullname',
       'date-of-birth',
@@ -90,11 +90,11 @@ module.exports = {
       'nationality',
       'brp-card'
     ],
-    backLink: '/uk-address',
+    backLink: 'uk-address',
     next: '/contact-details'
   },
   '/contact-details': {
-    template: 'correct-mistakes/contact-details.html',
+    template: 'contact-details.html',
     fields: [
       'email',
       'no-email',
@@ -104,23 +104,23 @@ module.exports = {
       'contact-address-postcode',
       'phone'
     ],
-    backLink: '/personal-details',
-    next: '/check-details'
+    backLink: 'personal-details',
+    next: '/confirm'
   },
-  '/check-details': {
-    controller: require('../../controllers/check-details'),
-    template: 'correct-mistakes/check-details.html',
+  '/confirm': {
+    controller: require('../common/controllers/confirm'),
+    template: 'confirm.html',
     fields: [
       'org-help',
       'rep-name',
       'org-type'
     ],
-    backLink: '/contact-details',
+    backLink: 'contact-details',
     next: '/confirmation'
   },
   '/confirmation': {
-    controller: require('../../controllers/confirmation'),
-    template: 'correct-mistakes/confirmation.html',
+    controller: require('../common/controllers/confirmation'),
+    template: 'confirmation.html',
     backLink: false
   }
 };

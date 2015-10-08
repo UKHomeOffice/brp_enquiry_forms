@@ -2,7 +2,6 @@
 
 var app = require('express').Router();
 var deliverySteps = require('./steps/delivery');
-var errorSteps = require('./steps/error');
 var lostSteps = require('./steps/lost');
 var collectionSteps = require('./steps/collection');
 var someoneElseSteps = require('./steps/someone-else');
@@ -19,8 +18,6 @@ var options = {
 app.use(mixins(i18n.translate.bind(i18n), fields));
 
 app.use('/not-arrived/', wizard(deliverySteps, fields, options));
-
-app.use('/correct-mistakes/', wizard(errorSteps, fields, options));
 
 app.use('/lost-stolen-damaged/', wizard(lostSteps, fields, options));
 

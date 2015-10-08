@@ -205,10 +205,10 @@ describe('lib/base-controller', function () {
       });
 
       describe('when the action is "edit" and continueOnEdit option is falsey', function () {
-        it('appends "check-details" to the path', function () {
+        it('appends "confirm" to the path', function () {
           controller.options.continueOnEdit = false;
           req.params.action = 'edit';
-          controller.getNextStep(req).should.contain('/check-details');
+          controller.getNextStep(req).should.contain('/confirm');
         });
       });
 
