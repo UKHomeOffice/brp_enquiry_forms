@@ -4,7 +4,7 @@ The tests follow the standard principles of feature files and step definitions.
 
 A lot of the step definitons are reused across the feature files as the forms themselves share a lot of the same fields and pages.
 
-Going further than this there is also a file of parameterised step definitons that pass in values from the feature files themselves, these are located in `step_definitions/ParameterisedStepDefinitons_.rb`
+There is also a file of parameterised step definitons that pass in values from the feature files themselves, these are located in `step_definitions/ParameterisedStepDefinitons_.rb`
 
 ##Installation:
 
@@ -42,7 +42,7 @@ npm run test:acceptance
 
 Using YARD-Cucumber you can generate documentation on the features, tags and step definitions used in these tests
 
-###Run
+###Run:
 Running the following from outside the acceptance_tests folder generates the documentation
 ```
 yardoc 'features/**/*.rb' '**/*.feature'
