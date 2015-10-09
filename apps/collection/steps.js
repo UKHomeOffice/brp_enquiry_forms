@@ -2,12 +2,12 @@
 
 module.exports = {
   '/': {
-    controller: require('../../controllers/start'),
+    controller: require('../common/controllers/start'),
     next: '/where'
   },
   '/where': {
-    controller: require('../../controllers/collection-where'),
-    template: 'collection/where',
+    controller: require('./controllers/where'),
+    template: 'where',
     fields: [
       'collection-where-radio',
       'collection-date',
@@ -15,12 +15,11 @@ module.exports = {
       'collection-date-month',
       'collection-date-year',
     ],
-    allowOrigin: '/check-details',
     next: '/reasons'
   },
   '/reasons': {
-    controller: require('../../controllers/collection-reason'),
-    template: 'collection/reasons',
+    controller: require('./controllers/reason'),
+    template: 'reasons',
     fields: [
       'reason-radio',
       'reason-under-age',
@@ -34,11 +33,11 @@ module.exports = {
       'reason-other'
     ],
     next: '/nominated-person',
-    backLink: '/where'
+    backLink: 'where'
   },
   '/nominated-person': {
-    controller: require('../../controllers/nominated-person'),
-    template: 'collection/nominated',
+    controller: require('./controllers/nominee'),
+    template: 'nominated',
     fields: [
       'nominated-fullname',
       'nominated-date',
@@ -49,11 +48,11 @@ module.exports = {
       'nominated-id-number'
     ],
     next: '/personal-details',
-    backLink: '/reasons'
+    backLink: 'reasons'
   },
   '/personal-details': {
-    controller: require('../../controllers/personal-details'),
-    template: 'collection/personal-details.html',
+    controller: require('../common/controllers/personal-details'),
+    template: 'personal-details.html',
     fields: [
       'fullname',
       'date-of-birth',
@@ -63,11 +62,11 @@ module.exports = {
       'nationality',
       'passport'
     ],
-    backLink: '/nominated-person',
+    backLink: 'nominated-person',
     next: '/contact-details'
   },
   '/contact-details': {
-    template: 'collection/contact-details',
+    template: 'contact-details',
     fields: [
       'email',
       'no-email',
@@ -77,27 +76,24 @@ module.exports = {
       'contact-address-postcode',
       'phone'
     ],
-    backLink: '/personal-details',
-    next: '/check-details'
+    backLink: 'personal-details',
+    next: '/confirm'
   },
-  '/check-details': {
-    controller: require('../../controllers/collection-check-details'),
-    template: 'collection/check-details.html',
+  '/confirm': {
+    controller: require('./controllers/confirm'),
+    template: 'confirm.html',
     fields: [
       'org-help',
       'rep-name',
       'org-type'
     ],
-    backLink: '/contact-details',
+    backLink: 'contact-details',
     next: '/confirmation'
   },
   '/confirmation': {
-    controller: require('../../controllers/confirmation'),
-    template: 'collection/confirmation',
+    controller: require('../common/controllers/confirmation'),
+    template: 'confirmation',
     backLink: false,
-    next: '/done'
-  },
-  '/done': {
-    backLink: null
+    clearSession: true
   }
 };

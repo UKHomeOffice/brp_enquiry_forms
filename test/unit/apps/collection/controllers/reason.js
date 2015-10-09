@@ -4,11 +4,11 @@ var proxyquire = require('proxyquire');
 var Controller = sinon.stub();
 Controller.prototype.locals = sinon.stub().returns({foo: 'bar'});
 Controller.prototype.getNextStep = sinon.stub();
-var CollectionReasonController = proxyquire('../../../controllers/collection-reason', {
-  '../lib/base-controller': Controller
+var CollectionReasonController = proxyquire('../../../../../apps/collection/controllers/reason', {
+  '../../../lib/base-controller': Controller
 });
 
-describe('controllers/collection-reason', function () {
+describe('app/scollection/controllers/collection-reason', function () {
 
   describe('instantiated', function () {
 

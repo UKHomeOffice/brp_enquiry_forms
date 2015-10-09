@@ -3,7 +3,7 @@
 var BaseController = require('../../../../../lib/base-controller');
 var Controller = require('../../../../../apps/correct-mistakes/controllers/truncated');
 
-describe('controllers/truncated', function () {
+describe('apps/correct-mistakes/controllers/truncated', function () {
   beforeEach(function () {
     BaseController.prototype.getNextPage = sinon.stub();
   });

@@ -5,7 +5,7 @@ var DateController = require('../../../../../lib/date-controller');
 var Controller = require('../../../../../lib/base-controller');
 var ErrorClass = require('../../../../../lib/base-error');
 
-describe('controllers/about-error', function () {
+describe('apps/correct-mistakes/controllers/about-error', function () {
 
   describe('.saveValues()', function () {
 
