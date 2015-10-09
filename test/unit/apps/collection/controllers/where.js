@@ -2,11 +2,11 @@
 
 var proxyquire = require('proxyquire');
 var DateController = sinon.stub();
-var CollectionWhereController = proxyquire('../../../controllers/collection-where', {
-  '../lib/date-controller': DateController
+var CollectionWhereController = proxyquire('../../../../../apps/collection/controllers/where', {
+  '../../../lib/date-controller': DateController
 });
 
-describe('controllers/collection-where', function () {
+describe('apps/collection/controllers/where', function () {
 
   describe('instantiated', function () {
 
@@ -25,7 +25,6 @@ describe('controllers/collection-where', function () {
       DateController.should.have.been.calledWith(args);
     });
   });
-
 
   describe('validateField', function () {
 
