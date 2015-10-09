@@ -32,7 +32,7 @@ var serviceMap = {
       subject: 'Form submitted: Report a lost or stolen BRP'
     };
   },
-  '/collection/check-details': function collection() {
+  '/collection/confirm': function collection() {
     return {
       template: 'collection',
       subject: 'Form submitted: Report a collection problem'

@@ -81,6 +81,7 @@ app.use(secureCookies);
 app.use(initSession);
 
 app.use(require('./apps/correct-mistakes/'));
+app.use(require('./apps/collection/'));
 
 app.use(require('./routes/'));
 

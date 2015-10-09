@@ -1,7 +1,7 @@
 'use strict';
 
 var util = require('util');
-var DateController = require('../lib/date-controller');
+var DateController = require('../../../lib/date-controller');
 
 var NominatedPersonController = function NominatedPersonController() {
   this.dateKey = 'nominated-date';

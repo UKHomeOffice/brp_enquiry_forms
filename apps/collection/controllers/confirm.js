@@ -1,7 +1,7 @@
 'use strict';
 
 var util = require('util');
-var CheckDetails = require('./check-details');
+var CheckDetails = require('../../common/controllers/confirm');
 var _ = require('underscore');
 
 var CollectionCheckDetails = function CollectionCheckDetails() {

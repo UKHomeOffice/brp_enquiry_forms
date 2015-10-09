@@ -6,7 +6,7 @@ module.exports = {
     next: '/location'
   },
   '/location': {
-    template: 'location-applied.html',
+    template: 'location-applied',
     fields: [
       'location-applied'
     ],
@@ -14,7 +14,7 @@ module.exports = {
   },
   '/about-error': {
     controller: require('./controllers/about-error'),
-    template: 'about-error.html',
+    template: 'about-error',
     fields: [
       'error-selection',
       'first-name-error-checkbox',
@@ -50,12 +50,12 @@ module.exports = {
   },
   '/conditions-and-length': {
     prereqs: ['/'],
-    template: 'conditions-and-length.html'
+    template: 'conditions-and-length'
   },
   '/truncated': {
     controller: require('./controllers/truncated'),
     prereqs: ['/'],
-    template: 'truncated.html',
+    template: 'truncated',
     fields: [
       'truncated',
       'truncation-page'
@@ -64,10 +64,10 @@ module.exports = {
   },
   '/exit-truncated': {
     prereqs: ['/truncated'],
-    template: 'exit-truncated.html'
+    template: 'exit-truncated'
   },
   '/uk-address': {
-    template: 'uk-address.html',
+    template: 'uk-address',
     fields: [
       'uk-address-radio',
       'uk-address-street',
@@ -80,7 +80,7 @@ module.exports = {
   },
   '/personal-details': {
     controller: require('../common/controllers/personal-details'),
-    template: 'personal-details-brp.html',
+    template: 'personal-details-brp',
     fields: [
       'fullname',
       'date-of-birth',
@@ -94,7 +94,7 @@ module.exports = {
     next: '/contact-details'
   },
   '/contact-details': {
-    template: 'contact-details.html',
+    template: 'contact-details',
     fields: [
       'email',
       'no-email',
@@ -109,7 +109,7 @@ module.exports = {
   },
   '/confirm': {
     controller: require('../common/controllers/confirm'),
-    template: 'confirm.html',
+    template: 'confirm',
     fields: [
       'org-help',
       'rep-name',
@@ -120,7 +120,8 @@ module.exports = {
   },
   '/confirmation': {
     controller: require('../common/controllers/confirmation'),
-    template: 'confirmation.html',
-    backLink: false
+    template: 'confirmation',
+    backLink: false,
+    clearSession: true
   }
 };

@@ -2,7 +2,7 @@
 
 var util = require('util');
 var _ = require('underscore');
-var Controller = require('../lib/base-controller');
+var Controller = require('../../../lib/base-controller');
 
 var CollectionReason = function CollectionReason() {
   Controller.apply(this, arguments);
