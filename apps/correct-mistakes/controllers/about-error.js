@@ -2,7 +2,7 @@
 
 var util = require('util');
 var DateController = require('../../../lib/date-controller');
-var Controller = require('../../../lib/base-controller');
+var BaseController = require('../../../lib/base-controller');
 var ErrorClass = require('../../../lib/base-error');
 var _ = require('underscore');
 
@@ -67,7 +67,7 @@ function anyChecked(req) {
 }
 
 AboutErrorController.prototype.getNextStep = function getNextStep(req) {
-  var next = Controller.prototype.getNextStep.apply(this, arguments);
+  var next = BaseController.prototype.getNextStep.apply(this, arguments);
   var truncatedItems = getTruncatedItems(req);
 
   if (isChecked.call(this, 'conditions-error-checkbox', req) && req.sessionModel.get('location-applied') === 'yes') {
@@ -97,7 +97,7 @@ AboutErrorController.prototype.saveValues = function saveValues(req, res, callba
 
   req.sessionModel.unset(diff);
 
-  Controller.prototype.saveValues.call(this, req, res, callback);
+  BaseController.prototype.saveValues.call(this, req, res, callback);
 };
 
 AboutErrorController.prototype.validateField = function validateField(key, req) {
@@ -116,7 +116,7 @@ AboutErrorController.prototype.validateField = function validateField(key, req) 
       return DateController.prototype.validateField.apply(this, arguments);
     }
   } else {
-    return Controller.prototype.validateField.apply(this, arguments);
+    return BaseController.prototype.validateField.apply(this, arguments);
   }
 };
 

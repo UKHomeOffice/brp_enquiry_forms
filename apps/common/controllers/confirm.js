@@ -3,14 +3,14 @@
 var util = require('util');
 var _ = require('underscore');
 
-var Controller = require('../../../lib/base-controller');
+var BaseController = require('../../../lib/base-controller');
 var Model = require('../../../models/email');
 
-var Submit = function Submit() {
-  Controller.apply(this, arguments);
+var ConfirmController = function ConfirmController() {
+  BaseController.apply(this, arguments);
 };
 
-util.inherits(Submit, Controller);
+util.inherits(ConfirmController, BaseController);
 
 var serviceMap = {
   '/not-arrived/check-details': function notArrived() {
@@ -40,9 +40,9 @@ var serviceMap = {
   }
 };
 
-Submit.prototype.saveValues = function saveValues(req, res, callback) {
+ConfirmController.prototype.saveValues = function saveValues(req, res, callback) {
 
-  Controller.prototype.saveValues.call(this, req, res, function saveModel() {
+  BaseController.prototype.saveValues.call(this, req, res, function saveModel() {
     var data = _.pick(req.sessionModel.toJSON(), _.identity);
     var model = new Model(data);
     var service = serviceMap[req.originalUrl] && serviceMap[req.originalUrl](data);
@@ -59,4 +59,4 @@ Submit.prototype.saveValues = function saveValues(req, res, callback) {
 
 };
 
-module.exports = Submit;
+module.exports = ConfirmController;

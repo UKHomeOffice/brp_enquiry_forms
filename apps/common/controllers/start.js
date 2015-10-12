@@ -1,17 +1,17 @@
 'use strict';
 
 var util = require('util');
-var Controller = require('../../../lib/base-controller');
+var BaseController = require('../../../lib/base-controller');
 
 var StartController = function StartController() {
-  Controller.apply(this, arguments);
+  BaseController.apply(this, arguments);
 };
 
-util.inherits(StartController, Controller);
+util.inherits(StartController, BaseController);
 
 StartController.prototype.getValues = function getValues(req) {
   req.sessionModel.reset();
-  Controller.prototype.successHandler.apply(this, arguments);
+  BaseController.prototype.successHandler.apply(this, arguments);
 };
 
 module.exports = StartController;

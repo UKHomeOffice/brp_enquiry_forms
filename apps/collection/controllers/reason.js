@@ -2,13 +2,13 @@
 
 var util = require('util');
 var _ = require('underscore');
-var Controller = require('../../../lib/base-controller');
+var BaseController = require('../../../lib/base-controller');
 
-var CollectionReason = function CollectionReason() {
-  Controller.apply(this, arguments);
+var ReasonController = function ReasonController() {
+  BaseController.apply(this, arguments);
 };
 
-util.inherits(CollectionReason, Controller);
+util.inherits(ReasonController, BaseController);
 
 function getPlace(req) {
   var places = [
@@ -42,8 +42,8 @@ function getReason(req) {
   }
 }
 
-CollectionReason.prototype.locals = function ccollectionReasonLocals(req, res) {
-  var locals = Controller.prototype.locals.apply(this, arguments);
+ReasonController.prototype.locals = function ccollectionReasonLocals(req, res) {
+  var locals = BaseController.prototype.locals.apply(this, arguments);
   return _.extend({}, locals, {
     baseUrl: req.baseUrl,
     nextPage: this.getNextStep(req, res),
@@ -52,4 +52,4 @@ CollectionReason.prototype.locals = function ccollectionReasonLocals(req, res) {
   });
 };
 
-module.exports = CollectionReason;
+module.exports = ReasonController;

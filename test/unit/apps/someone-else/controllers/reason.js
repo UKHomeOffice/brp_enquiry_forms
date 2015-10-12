@@ -1,9 +1,9 @@
 'use strict';
 
-var ReasonController = require('../../../controllers/reason');
-var BaseController = require('../../../lib/base-controller');
+var ReasonController = require('../../../../../apps/someone-else/controllers/reason');
+var BaseController = require('../../../../../lib/base-controller');
 
-describe('controllers/reason', function () {
+describe('apps/someone-else/controllers/reason', function () {
 
   var controller;
   var req = {
