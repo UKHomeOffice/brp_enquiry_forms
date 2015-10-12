@@ -1,15 +1,15 @@
 'use strict';
 
 var util = require('util');
-var DateController = require('../lib/date-controller');
+var DateController = require('../../../lib/date-controller');
 
-var SomeoneElseController = function SomeoneElseController() {
+var ArrangeController = function ArrangeController() {
   DateController.apply(this, arguments);
 };
 
-util.inherits(SomeoneElseController, DateController);
+util.inherits(ArrangeController, DateController);
 
-SomeoneElseController.prototype.process = function process(req) {
+ArrangeController.prototype.process = function process(req) {
   if (req.form.values['arrange-collection-radio'] === 'someone-else') {
     this.dateKey = 'someone-else-date';
     delete req.form.values['no-reason'];
@@ -34,7 +34,7 @@ SomeoneElseController.prototype.process = function process(req) {
   DateController.prototype.process.apply(this, arguments);
 };
 
-SomeoneElseController.prototype.validateField = function validateField(key, req) {
+ArrangeController.prototype.validateField = function validateField(key, req) {
   var required = false;
 
   if (key.indexOf('someone-else') !== -1 && this.dateKey === 'someone-else-date') {
@@ -47,4 +47,4 @@ SomeoneElseController.prototype.validateField = function validateField(key, req)
   return DateController.prototype.validateField.call(this, key, req, required);
 };
 
-module.exports = SomeoneElseController;
+module.exports = ArrangeController;

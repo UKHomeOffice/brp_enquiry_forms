@@ -16,7 +16,9 @@
       </div>
     </div>
 
+    {{#values.email}}
     <p>{{#t}}pages.confirmation.email{{/t}} <strong>{{values.email}}</strong></p>
+    {{/values.email}}
 
     <hr>
 
@@ -30,7 +32,7 @@
 
     <hr>
 
-    <a href='#user-satisfaction-url' class='button'>{{#t}}buttons.close{{/t}}</a>
+    <a href='{{baseUrl}}' class='button'>{{#t}}buttons.close{{/t}}</a>
 
   {{/content}}
 

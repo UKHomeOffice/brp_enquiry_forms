@@ -1,14 +1,14 @@
 'use strict';
 
 var util = require('util');
-var CheckDetails = require('../../common/controllers/confirm');
+var ParentController = require('../../common/controllers/confirm');
 var _ = require('underscore');
 
-var CollectionCheckDetails = function CollectionCheckDetails() {
-  CheckDetails.apply(this, arguments);
+var ConfirmController = function ConfirmController() {
+  ParentController.apply(this, arguments);
 };
 
-util.inherits(CollectionCheckDetails, CheckDetails);
+util.inherits(ConfirmController, ParentController);
 
 function getReason(req) {
   var reasons = [
@@ -30,8 +30,8 @@ function getReason(req) {
   }
 }
 
-CollectionCheckDetails.prototype.locals = function collectionCheckDetailsLocals(req, res) {
-  var locals = CheckDetails.prototype.locals.apply(this, arguments);
+ConfirmController.prototype.locals = function confirmLocals(req, res) {
+  var locals = ParentController.prototype.locals.apply(this, arguments);
   req.sessionModel.set(getReason(req));
 
   return _.extend({}, locals, {
@@ -41,4 +41,4 @@ CollectionCheckDetails.prototype.locals = function collectionCheckDetailsLocals(
   });
 };
 
-module.exports = CollectionCheckDetails;
+module.exports = ConfirmController;

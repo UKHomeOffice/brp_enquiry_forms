@@ -2,12 +2,12 @@
 
 module.exports = {
   '/': {
-    controller: require('../../controllers/start'),
+    controller: require('../common/controllers/start'),
     next: '/arrange'
   },
   '/arrange': {
-    controller: require('../../controllers/someone-else'),
-    template: 'someone-else/arrange',
+    controller: require('./controllers/arrange'),
+    template: 'arrange',
     fields: [
       'arrange-collection-radio',
       'someone-else-fullname',
@@ -28,8 +28,8 @@ module.exports = {
     next: '/reason'
   },
   '/reason': {
-    controller: require('../../controllers/reason'),
-    template: 'someone-else/reason',
+    controller: require('./controllers/reason'),
+    template: 'reason',
     fields: [
       'someone-else-reason-radio',
       'incapable-details'
@@ -37,12 +37,12 @@ module.exports = {
     next: '/personal-details'
   },
   '/exit-not-eligible': {
-    template: 'someone-else/exit-not-eligible',
+    template: 'exit-not-eligible',
     prereqs: ['/']
   },
   '/personal-details': {
-    controller: require('../../controllers/personal-details'),
-    template: 'someone-else/personal-details',
+    controller: require('../common/controllers/personal-details'),
+    template: 'personal-details',
     fields: [
       'fullname',
       'date-of-birth',
@@ -55,8 +55,8 @@ module.exports = {
     next: '/contact-details'
   },
   '/personal-details-no-reason': {
-    controller: require('../../controllers/personal-details'),
-    template: 'someone-else/personal-details',
+    controller: require('../common/controllers/personal-details'),
+    template: 'personal-details',
     fields: [
       'fullname',
       'date-of-birth',
@@ -71,7 +71,7 @@ module.exports = {
     backLink: 'arrange'
   },
   '/contact-details': {
-    template: 'someone-else/contact-details',
+    template: 'contact-details',
     fields: [
       'email',
       'no-email',
@@ -81,11 +81,11 @@ module.exports = {
       'contact-address-postcode',
       'phone'
     ],
-    next: '/check-details'
+    next: '/confirm'
   },
-  '/check-details': {
-    controller: require('../../controllers/someone-else-check-details'),
-    template: 'someone-else/check-details',
+  '/confirm': {
+    controller: require('./controllers/confirm'),
+    template: 'confirm',
     fields: [
       'org-help',
       'rep-name',
@@ -94,12 +94,9 @@ module.exports = {
     next: '/confirmation'
   },
   '/confirmation': {
-    controller: require('../../controllers/confirmation'),
-    template: 'someone-else/confirmation',
+    controller: require('../common/controllers/confirmation'),
+    template: 'confirmation',
     backLink: false,
-    next: '/done'
-  },
-  '/done': {
-    backLink: null
+    clearSession: true
   }
 };
