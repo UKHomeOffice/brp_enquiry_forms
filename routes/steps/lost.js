@@ -54,9 +54,9 @@ module.exports = {
     backLink: '/personal-details',
     next: '/check-details'
   },
-  '/check-details': {
+  '/confirm': {
     controller: require('../../controllers/check-details'),
-    template: 'lost-or-stolen/check-details.html',
+    template: 'lost-or-stolen/confirm.html',
     fields: [
       'org-help',
       'rep-name',

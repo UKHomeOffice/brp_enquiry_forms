@@ -1,8 +1,7 @@
 'use strict';
 
 var util = require('util');
-var Controller = require('../lib/base-controller');
-var DateController = require('../lib/date-controller');
+var DateController = require('../../../lib/date-controller');
 
 var moment = require('moment');
 var dateFormat = 'DD-MM-YYYY';
@@ -62,7 +61,7 @@ LetterRecievedController.prototype.saveValues = function saveValues(req) {
     this.options.next = '/same-address';
   }
 
-  return Controller.prototype.saveValues.apply(this, arguments);
+  return DateController.prototype.saveValues.apply(this, arguments);
 };
 
 LetterRecievedController.prototype.validateField = function validateField(key, req) {

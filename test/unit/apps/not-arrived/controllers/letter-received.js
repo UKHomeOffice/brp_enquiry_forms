@@ -1,8 +1,8 @@
 'use strict';
 
-var Controller = require('../../../lib/base-controller');
-var DateController = require('../../../lib/date-controller');
-var LetterReceivedController = require('../../../controllers/letter-received');
+var Controller = require('../../../../../lib/base-controller');
+var DateController = require('../../../../../lib/date-controller');
+var LetterReceivedController = require('../../../../../apps/not-arrived/controllers/letter-received');
 var moment = require('moment');
 
 describe('controllers/letter-received', function () {

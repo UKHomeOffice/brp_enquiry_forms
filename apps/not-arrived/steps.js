@@ -2,12 +2,12 @@
 
 module.exports = {
   '/': {
-    controller: require('../../controllers/start'),
+    controller: require('../common/controllers/start'),
     next: '/letter-received'
   },
   '/letter-received': {
-    controller: require('../../controllers/letter-received'),
-    template: 'not-arrived/letter-received',
+    controller: require('./controllers/letter-received'),
+    template: 'letter-received',
     fields: [
       'received',
       'delivery-date',
@@ -19,15 +19,15 @@ module.exports = {
     next: '/same-address'
   },
   '/letter-not-received': {
-    template: 'not-arrived/letter-not-received',
+    template: 'letter-not-received',
   },
   '/on-the-way': {
-    controller: require('../../controllers/on-the-way'),
+    controller: require('./controllers/on-the-way'),
     prereqs: ['/'],
-    template: 'not-arrived/on-the-way'
+    template: 'on-the-way'
   },
   '/same-address': {
-    template: 'not-arrived/same-address-details.html',
+    template: 'same-address-details.html',
     fields: [
       'address-match',
       'delivery-details',
@@ -36,12 +36,12 @@ module.exports = {
       'address-county',
       'address-postcode'
     ],
-    backLink: '/letter-received',
+    backLink: 'letter-received',
     next: '/personal-details'
   },
   '/personal-details': {
-    controller: require('../../controllers/personal-details'),
-    template: 'not-arrived/personal-details.html',
+    controller: require('../common/controllers/personal-details'),
+    template: 'personal-details.html',
     fields: [
       'fullname',
       'date-of-birth',
@@ -51,11 +51,11 @@ module.exports = {
       'nationality',
       'passport'
     ],
-    backLink: '/same-address',
+    backLink: 'same-address',
     next: '/contact-details'
   },
   '/contact-details': {
-    template: 'not-arrived/contact-details',
+    template: 'contact-details',
     fields: [
       'email',
       'no-email',
@@ -65,23 +65,23 @@ module.exports = {
       'contact-address-postcode',
       'phone'
     ],
-    backLink: '/personal-details',
-    next: '/check-details'
+    backLink: 'personal-details',
+    next: '/confirm'
   },
-  '/check-details': {
-    controller: require('../../controllers/check-details'),
-    template: 'not-arrived/check-details',
+  '/confirm': {
+    controller: require('../common/controllers/confirm'),
+    template: 'confirm',
     fields: [
       'org-help',
       'rep-name',
       'org-type'
     ],
-    backLink: '/contact-details',
+    backLink: 'contact-details',
     next: '/confirmation'
   },
   '/confirmation': {
-    controller: require('../../controllers/confirmation'),
-    template: 'not-arrived/confirmation',
+    controller: require('../common/controllers/confirmation'),
+    template: 'confirmation',
     backLink: false
   }
 };

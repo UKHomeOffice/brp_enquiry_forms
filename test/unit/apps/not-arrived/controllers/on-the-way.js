@@ -1,7 +1,7 @@
 'use strict';
 
-var BaseController = require('../../../lib/base-controller');
-var OnTheWayController = require('../../../controllers/on-the-way');
+var BaseController = require('../../../../../lib/base-controller');
+var OnTheWayController = require('../../../../../apps/not-arrived/controllers/on-the-way');
 
 describe('controllers/on-the-way', function () {
 

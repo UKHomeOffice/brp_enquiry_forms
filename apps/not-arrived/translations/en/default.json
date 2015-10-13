@@ -1,0 +1,1037 @@
+{
+  "buttons": {
+    "test": "Start",
+    "continue": "Continue",
+    "submit": "send",
+    "change": "Change",
+    "close": "Close"
+  },
+  "errorlist": {
+    "title": {
+      "single": "Please fix the following error",
+      "multiple": "Please fix the following errors"
+    }
+  },
+  "validation": {
+    "uk-address-radio": {
+      "required": "Tell us if you have a UK address"
+    },
+    "delivery-date": {
+      "required": "Enter the date of the letter from the Home Office",
+      "numeric": "Date must only contain numbers",
+      "future": "The date is in the future",
+      "format": "Enter the date in the correct format "
+    },
+    "received": {
+      "required": "Tell us if you have received a letter from the Home Office"
+    },
+    "collection-where-radio": {
+      "required": "Tell us where you were asked to collect your BRP from"
+    },
+    "reason-radio": {
+      "required": "Select a reason why you couldn't collect your BRP"
+    },
+    "address-match": {
+      "required": "Tell us if your address is the same as on the letter from the Home Office"
+    },
+    "email": {
+      "required": "Enter your email address",
+      "email": "Enter your email in the correct format for example, name@domain.com"
+    },
+    "address-street": {
+      "required": "Enter your house name or number and street"
+    },
+    "address-town": {
+      "required": "Enter the Town or City"
+    },
+    "address-postcode": {
+      "required": "Enter the postcode"
+    },
+    "contact-address-street": {
+      "required": "Enter your house name or number and street"
+    },
+    "contact-address-town": {
+      "required": "Enter the Town or City"
+    },
+    "contact-address-postcode": {
+      "required": "Enter the postcode"
+    },
+    "uk-address-street": {
+      "required": "Enter your house name or number and street"
+    },
+    "uk-address-town": {
+      "required": "Enter the Town or City"
+    },
+    "uk-address-postcode": {
+      "required": "Enter the postcode"
+    },
+    "fullname": {
+      "required": "Enter your full name"
+    },
+    "date-of-birth": {
+      "required": "Enter your date of birth",
+      "numeric": "Date must only contain numbers",
+      "future": "The date is in the future",
+      "format": "Enter your date of birth in the correct format"
+    },
+    "collection-date": {
+      "required": "Enter the collection date",
+      "numeric": "Date must only contain numbers",
+      "future": "The date is in the future",
+      "format": "Enter the collection date in the correct format"
+    },
+    "nominated-date": {
+      "required": "Enter the nominees date of birth",
+      "numeric": "Date must only contain numbers",
+      "future": "The date is in the future",
+      "format": "Enter the nominees date of birth in the correct format"
+    },
+    "nominated-fullname": {
+      "required": "Tell us the nominees full name"
+    },
+    "nominated-nationality": {
+      "required": "Tell us the nominees nationality"
+    },
+    "nominated-id-number": {
+      "required": "Tell us the nominees identity document number"
+    },
+    "someone-else-date": {
+      "required": "Enter the nominees date of birth",
+      "numeric": "Date must only contain numbers",
+      "future": "The date is in the future",
+      "format": "Enter the nominees date of birth in the correct format"
+    },
+    "someone-else-fullname": {
+      "required": "Tell us the nominees full name"
+    },
+    "someone-else-nationality": {
+      "required": "Tell us the nominees nationality"
+    },
+    "someone-else-id-number": {
+      "required": "Tell us the nominees identity document number"
+    },
+    "someone-else-reason-radio": {
+      "required": "Select a reason why you couldn't collect your BRP"
+    },
+    "change-person-date": {
+      "required": "Enter the nominees date of birth",
+      "numeric": "Date must only contain numbers",
+      "future": "The date is in the future",
+      "format": "Enter the nominees date of birth in the correct format"
+    },
+    "change-person-fullname": {
+      "required": "Tell us the nominees full name"
+    },
+    "change-person-nationality": {
+      "required": "Tell us the nominees nationality"
+    },
+    "change-person-id-number": {
+      "required": "Tell us the nominees identity document number"
+    },
+    "nationality": {
+      "required": "Tell us your nationality"
+    },
+    "error-selection": {
+      "required": "Tick one or more boxes"
+    },
+    "first-name-error": {
+      "required": "Tell us your correct first name"
+    },
+    "last-name-error": {
+      "required": "Tell us your correct last name"
+    },
+    "date-of-birth-error": {
+      "required": "Enter your date of birth",
+      "numeric": "Date must only contain numbers",
+      "future": "The date is in the future",
+      "format": "Enter your date of birth in the correct format"
+    },
+    "birth-place-error": {
+      "required": "Tell us your correct place of birth "
+    },
+    "gender-error": {
+      "required": "Tell us your correct gender"
+    },
+    "damaged-error": {
+      "required": "Tell us what is wrong with your BRP"
+    },
+    "conditions-error": {
+      "required": "Tell us about the problem"
+    },
+    "national-insurance-error": {
+      "required": "Tell us your correct national insurance number"
+    },
+    "photograph-error": {
+      "required": "Tell us what is wrong with your photograph"
+    },
+    "signature-error": {
+      "required": "Tell us what is wrong with your signature"
+    },
+    "nationality-error": {
+      "required": "Tell us your correct nationality"
+    },
+    "sponsor-details-error": {
+      "required": "Tell us the correct sponsor details"
+    },
+    "inside-uk": {
+      "required": "Tell us where you are"
+    },
+    "location-applied": {
+      "required": "Tell us where you made your application from"
+    },
+    "country": {
+      "required": "Tell us where you are"
+    },
+    "date-lost": {
+      "required": "Enter the date you realised your BRP was lost or stolen",
+      "numeric": "Date must only contain numbers",
+      "future": "The date is in the future",
+      "format": "Enter the date in the correct format"
+    },
+    "org-help": {
+      "required": "Tell us if you had help to complete this form"
+    },
+    "rep-name": {
+      "required": "Tell us the name of the person that helped you to complete this form"
+    },
+    "org-type": {
+      "required": "Tell us the type of the organisation that helped you to complete this form"
+    },
+    "arrange-collection-radio": {
+      "required": "Tell us what you would like to do"
+    },
+    "incapable-details": {
+      "required": "Tell us about the problem"
+    }
+  },
+  "fields": {
+    "received": {
+      "options": {
+        "yes": {
+          "label": "Yes"
+        },
+        "no": {
+          "label": "No"
+        }
+      }
+    },
+    "delivery-date": {
+      "label": "Date",
+      "legend": "Date on the letter",
+      "hint": "For example, 11  6  2015"
+    },
+    "delivery-date-day": {
+      "label": "Day"
+    },
+    "delivery-date-month": {
+      "label": "Month"
+    },
+    "delivery-date-year": {
+      "label": "Year"
+    },
+    "collection-date": {
+      "label": "Date",
+      "legend": "Date on the letter",
+      "hint": "For example, 11  6  2015"
+    },
+    "collection-date-day": {
+      "label": "Day"
+    },
+    "collection-date-month": {
+      "label": "Month"
+    },
+    "collection-date-year": {
+      "label": "Year"
+    },
+    "collection-where-radio": {
+      "options": {
+        "post-office": {
+          "label": "Post office"
+        },
+        "sponsor": {
+          "label": "Sponsor"
+        }
+      }
+    },
+    "arrange-collection-radio": {
+      "options": {
+        "someone-else": {
+          "label": "Allow someone else to collect my BRP"
+        },
+        "change-person": {
+          "label": "Change the person I requested to collect my BRP"
+        },
+        "cancel-request": {
+          "label": "Cancel request for someone else to collect my BRP"
+        }
+      }
+    },
+    "someone-else-fullname": {
+      "label": "Full name"
+    },
+    "someone-else-date": {
+      "legend": "Date of birth",
+      "hint": "For example, 31  3  1970"
+    },
+    "someone-else-date-day": {
+      "label": "Day"
+    },
+    "someone-else-date-month": {
+      "label": "Month"
+    },
+    "someone-else-date-year": {
+      "label": "Year"
+    },
+    "someone-else-nationality": {
+      "label":  "Country of nationality"
+    },
+    "someone-else-id-number": {
+      "label": "Identity document number <br/>(This could be UK/EU driving licence, passport or BRP)"
+    },
+    "someone-else-reason-radio": {
+      "options": {
+        "incapable": {
+          "label": "I am physically or mentally incapable"
+        },
+        "refugee": {
+          "label": "I am a Gataway refugee"
+        },
+        "under-age": {
+          "label": "I am under 18"
+        },
+        "other": {
+          "label": "None of the above"
+        }
+      }
+    },
+    "incapable-details": {
+      "label": "Please describe the problem"
+    },
+    "change-person-fullname": {
+      "label": "Full name"
+    },
+    "change-person-date": {
+      "legend": "Date of birth",
+      "hint": "For example, 31  3  1970"
+    },
+    "change-person-date-day": {
+      "label": "Day"
+    },
+    "change-person-date-month": {
+      "label": "Month"
+    },
+    "change-person-date-year": {
+      "label": "Year"
+    },
+    "change-person-nationality": {
+      "label":  "Country of nationality"
+    },
+    "change-person-id-number": {
+      "label": "Identity document number <br/>(This could be UK/EU driving licence, passport or BRP)"
+    },
+    "reason-radio": {
+      "options": {
+        "under-age": {
+          "legend": "I am under 18 and attempted collection without my Responsible Adult",
+          "label": "I am under 18 and attempted collection without my Responsible Adult"
+        },
+        "non-identity": {
+          "legend": "My identity could not be confirmed",
+          "label": "My identity could not be confirmed"
+        },
+        "others-identity": {
+          "legend": "The identity of someone collecting on my behalf could not be confirmed",
+          "label": "The identity of someone collecting on my behalf could not be confirmed"
+        },
+        "others-auth": {
+          "legend": "The Home Office did not authorise someone else to collect on my behalf",
+          "label": "The Home Office did not authorise someone else to collect on my behalf"
+        },
+        "passport-family": {
+          "legend": "The vingette in my passport is not linked to my family",
+          "label": "The vingette in my passport is not linked to my family"
+        },
+        "passport-lost": {
+          "legend": "I have lost my passport",
+          "label": "I have lost my passport"
+        },
+        "passport-stamp": {
+          "legend": "My passport does not contain a valid entry stamp",
+          "label": "My passport does not contain a valid entry stamp"
+        },
+        "no-brp": {
+          "legend": "My BRP was not there",
+          "label": "My BRP was not there"
+        },
+        "other": {
+          "legend": "Other",
+          "label": "Other"
+        }
+      }
+    },
+    "reason-under-age": {
+      "label": "Please describe the problem (optional)"
+    },
+    "reason-non-identity": {
+      "label": "Please describe the problem (optional)"
+    },
+    "reason-others-identity": {
+      "label": "Please describe the problem (optional)"
+    },
+    "reason-others-auth": {
+      "label": "Please describe the problem (optional)"
+    },
+    "reason-passport-family": {
+      "label": "Please describe the problem (optional)"
+    },
+    "reason-passport-lost": {
+      "label": "Please describe the problem (optional)"
+    },
+    "reason-passport-stamp": {
+      "label": "Please describe the problem (optional)"
+    },
+    "reason-no-brp": {
+      "label": "Please describe the problem (optional)"
+    },
+    "reason-other": {
+      "label": "Please describe the problem (optional)"
+    },
+    "nominated-fullname": {
+      "label": "Full name"
+    },
+    "nominated-nationality": {
+      "label": "Country of nationality"
+    },
+    "nominated-id-number": {
+      "label": "Identity document number"
+    },
+    "nominated-date": {
+      "label": "Date",
+      "legend": "Date of birth",
+      "hint": "For example, 31  3  1970"
+    },
+    "nominated-date-day": {
+      "label": "Day"
+    },
+    "nominated-date-month": {
+      "label": "Month"
+    },
+    "nominated-date-year": {
+      "label": "Year"
+    },
+    "date-of-birth": {
+      "legend": "Date of birth",
+      "hint": "For example, 31  3  1970"
+    },
+    "date-of-birth-day": {
+      "label": "Day"
+    },
+    "date-of-birth-month": {
+      "label": "Month"
+    },
+    "date-of-birth-year": {
+      "label": "Year"
+    },
+    "no-letter": {
+      "label": "I don't have the letter anymore"
+    },
+    "delivery-details": {
+      "label": "If the courier could have problems delivering to this address, for example there's no door number, then let us know and we'll contact them. (optional)"
+    },
+    "address-match": {
+      "options": {
+        "yes": {
+          "label": "Yes"
+        },
+        "no": {
+          "label": "No"
+        }
+      }
+    },
+    "uk-address-radio": {
+      "options": {
+        "yes": {
+          "label": "Yes"
+        },
+        "no": {
+          "label": "No"
+        }
+      }
+    },
+    "address": {
+      "legend": "Address"
+    },
+    "address-street": {
+      "label": "House name or number and street"
+    },
+    "address-town": {
+      "label": "Town/City"
+    },
+    "address-county": {
+      "label": "County (optional)"
+    },
+    "address-postcode": {
+      "label": "Postcode"
+    },
+    "fullname": {
+      "label": "Full name"
+    },
+    "nationality": {
+      "label": "Country of nationality"
+    },
+    "passport": {
+      "label": "Passport number (optional)"
+    },
+    "brp-card": {
+      "label": "BRP card number  (optional)",
+      "hint": "For example, AB12345CD"
+    },
+    "email": {
+      "label": "Email address"
+    },
+    "no-email": {
+      "label": "I do not have an email address"
+    },
+    "phone": {
+      "label": "Phone number (optional)"
+    },
+    "last-name-error-checkbox": {
+      "label": "Last name"
+    },
+    "last-name-error": {
+      "label": "What is your correct last name?",
+      "title": "This is the first line under 'name' on your BRP."
+    },
+    "first-name-error-checkbox": {
+      "label": "First name"
+    },
+    "first-name-error": {
+      "label": "What is your correct first name?",
+      "title": "This is the second line under 'name' on your BRP."
+    },
+    "birth-place-error-checkbox": {
+      "label": "Place of birth"
+    },
+    "birth-place-error": {
+      "label": "What is your correct place of birth?"
+    },
+    "date-of-birth-error-checkbox": {
+      "label": "Date of birth"
+    },
+    "date-of-birth-error": {
+      "label": "What is your correct date of birth?",
+      "hint": "For example: 31  3  1970"
+    },
+    "date-of-birth-error-day": {
+      "label": "Day"
+    },
+    "date-of-birth-error-month": {
+      "label": "Month"
+    },
+    "date-of-birth-error-year": {
+      "label": "Year"
+    },
+    "gender-error-checkbox": {
+      "label": "Gender"
+    },
+    "gender-error": {
+      "legend": "Gender",
+      "title": "What is your correct gender?",
+      "options": {
+        "male": {
+          "label": "Male"
+        },
+        "female": {
+          "label": "Female"
+        },
+        "unspecified": {
+          "label": "Unspecified"
+        }
+      }
+    },
+    "sponsor-details-error-checkbox": {
+      "label": "Sponsor reference"
+    },
+    "sponsor-details-error": {
+      "legend": "Sponsor reference",
+      "title": "This is the third line under 'remarks' on your BRP. This is the reference number of your your employer, university or college.",
+      "label": "What is the correct sponsor reference number?"
+    },
+    "nationality-error-checkbox": {
+      "label": "Nationality"
+    },
+    "nationality-error": {
+      "legend": "Nationality",
+      "label": "What is your correct nationality?"
+    },
+    "signature-error-checkbox": {
+      "label": "Signature"
+    },
+    "signature-error": {
+      "legend": "Signature",
+      "label": "What is wrong with your signature?"
+    },
+    "photograph-error-checkbox": {
+      "label": "Photograph"
+    },
+    "photograph-error": {
+      "legend": "Photograph",
+      "label": "What is wrong with your photograph?"
+    },
+    "national-insurance-error-checkbox": {
+      "label": "National Insurance Number"
+    },
+    "national-insurance-error": {
+      "legend": "National Insurance Number",
+      "label": "What is your correct National Insurance Number?"
+    },
+    "damaged-error-checkbox": {
+      "label": "Faulty or damaged"
+    },
+    "damaged-error": {
+      "legend": "Faulty or damaged",
+      "label": "What is wrong with your BRP?"
+    },
+    "conditions-error-checkbox": {
+      "label": "Conditions or length of stay"
+    },
+    "conditions-error": {
+      "label": "Please describe the problem"
+    },
+    "truncated": {
+      "options": {
+        "yes": {
+          "label": "Yes"
+        },
+        "no": {
+          "label": "No"
+        }
+      }
+    },
+    "inside-uk": {
+      "options": {
+        "yes": {
+          "label": "UK"
+        },
+        "no": {
+          "label": "Outside UK"
+        }
+      }
+    },
+    "location-applied": {
+      "options": {
+        "yes": {
+          "label": "UK"
+        },
+        "no": {
+          "label": "Outside UK"
+        }
+      }
+    },
+    "country": {
+      "legend": "Inside the UK",
+      "label": "Which country are you in?"
+    },
+    "date-lost": {
+      "hint": "For example: 11 6 2015"
+    },
+    "date-lost-day": {
+      "label": "Day"
+    },
+    "date-lost-month": {
+      "label": "Month"
+    },
+    "date-lost-year": {
+      "label": "Year"
+    },
+    "org-help": {
+      "options": {
+        "yes": {
+          "label": "Yes"
+        },
+        "no": {
+          "label": "No"
+        }
+      }
+    },
+    "rep-name": {
+      "label": "Full name"
+    },
+    "org-type": {
+      "options": {
+        "pbs": {
+          "label": "PBS sponsor"
+        },
+        "legal": {
+          "label": "Legal represntative"
+        },
+        "relative": {
+          "label": "Relative/friend"
+        },
+        "support": {
+          "label": "Support organisation"
+        }
+      }
+    }
+  },
+  "journeys": {
+    "error": {
+      "header": "Report a problem with your new BRP",
+      "same-address": {
+        "header": "Is your address still the same as the one your BRP was sent to?"
+      },
+      "location-applied": {
+        "header": "Where did you make your application?",
+        "subheader": "Tell us if the application was made in the UK or overseas"
+      }
+    },
+    "lost": {
+      "header": "Report a lost or stolen BRP",
+      "personal-details": {
+        "header": "What are your personal details?",
+        "subheader": "We need these details to cancel your lost or stolen BRP."
+      },
+      "contact-details": {
+        "header": "Where can we contact you to tell you what to do next?"
+      }
+    },
+    "delivery": {
+      "header": "My BRP has not been delivered",
+      "personal-details": {
+        "header": "What are your personal details?",
+        "subheader": "We need these details to find out what has happened to your BRP."
+      },
+      "same-address": {
+        "header": "Is your address still the same as the one on the letter from the Home Office?"
+      }
+    },
+    "collection": {
+      "header": "Collection problem",
+      "pages": {
+        "personal-details": {
+          "header": "What are your personal details?",
+          "subheader": "We need these details to review the problem."
+        },
+        "check-details": {
+          "header": "Is the information you have given us correct?",
+          "subheader": "Check and make sure the information below is right. If it isn't you can change it here.",
+          "tables": {
+            "problem-details": {
+              "title": "Problem details",
+              "where-radio": {
+                "label": "Attendance"
+              },
+              "reason": {
+                "label": "Reason",
+                "under-age": "Under age"
+              }
+            },
+            "others-details": {
+              "title": "Other persons details",
+              "fullname": "Full name",
+              "date-of-birth": "Date of birth",
+              "nationality": "Nationality",
+              "email": "Email",
+              "phone": "Phone",
+              "id-number": "Identity document number"
+            },
+            "personal-details": {
+              "title": "Your contact & personal details"
+            }
+          }
+        },
+        "confirmation": {
+          "next": {
+            "paragraphs": {
+              "one": "We will now review the information you have given us to find out why there was a problem with your BRP collection."
+            }
+          }
+        }
+      }
+    },
+    "someone-else": {
+      "header": "Someone else collecting"
+    }
+  },
+  "pages": {
+    "arrange-collection": {
+      "header": "What would you like to arrange?",
+      "subheader": "Tell us what would you like to do today with this form."
+    },
+    "reasons": {
+      "header": "Why couldn't you collect your BRP?",
+      "subheader": "Tell us the reason why you were unable to collect the BRP."
+    },
+    "nominated": {
+      "header": "Who was supposed to collect your BRP on your behalf?",
+      "description": "Provide details of the person who tried to collect the BRP on your behalf"
+    },
+    "where": {
+      "header": "From where were you asked to collect your BRP?",
+      "description": "This could have been from a Post Office or a sponsor, such as your legal representative, employer, university or school.",
+      "date-question": "When did you try to collect your BRP? (optional)"
+    },
+    "about-error": {
+      "header": "What’s the problem with your BRP?",
+      "subheader": "You can select one or more problems"
+    },
+    "contact-details": {
+      "header": "Where can we contact you to let you know about your BRP?",
+      "address": {
+        "title": "Tell us your address so that we can contact you by post."
+      }
+    },
+    "uk-address": {
+      "header": "Do you have an UK address where we can send the card?",
+      "address": {
+        "title": "If needed, we will send a correct BRP to this address."
+      }
+    },
+    "same-address": {
+      "header": "Did you expect your BRP to be delivered to the same address as the one on the letter from the Home Office?",
+      "address": {
+        "title": "Tell us the new address and we will organise another delivery."
+      }
+    },
+    "personal-details": {
+      "header": "What are your personal details?",
+      "subheader": "We need these details to review the problem with your BRP."
+    },
+    "check-details": {
+      "header": "Is the information you have given us correct?",
+      "subheader": "Check and make sure the information below is right. If it isn't you can change it here.",
+      "table": {
+        "head": {
+          "delivery-details": "Delivery details",
+          "personal-details": "Personal details",
+          "contact-details": "Contact details"
+        },
+        "headers": {
+          "contact-address": "Contact address",
+          "address": "New address",
+          "fullname": "Full name",
+          "date-of-birth": "Date of birth",
+          "nationality": "Nationality",
+          "passport": "Passport number",
+          "email": "Email address",
+          "phone": "Phone number",
+          "delivery-date": "Delivery date",
+          "no-letter": "You do not have the delivery letter",
+          "delivery-details": "Delivery details"
+        }
+      },
+      "org-help": {
+        "title": "Has an organisation filled in this information on your behalf?",
+        "explanation": "This could be an immigration lawyer or representative, or a charity, employer, college or university."
+      },
+      "org-details-group": {
+        "header": "Please provide their details",
+        "type": "Type of support"
+      },
+      "footer": {
+        "title": "Send us your details",
+        "explanation": "By sending us your details you confirm that the information you have provided is true and that you accept our <a href='/terms-and-conditions'>terms and conditions</a>."
+      }
+    },
+    "check-details-error": {
+      "header": "Is the information you have given us correct?",
+      "subheader": "Check and make sure the information below is right. If it isn't you can change it here.",
+      "corrected-details-table": {
+        "title": "Corrected BRP details"
+      },
+      "personal-details-table": {
+        "title": "Your personal and contact details",
+        "headers": {
+          "fullname": "Full name",
+          "date-of-birth": "Date of birth",
+          "nationality": "Nationality",
+          "brp-card-number": "BRP card number",
+          "email": "Email address",
+          "phone": "Phone number",
+          "passport": "Passport number"
+        }
+      }
+    },
+    "inside-uk": {
+      "header": "Where are you now?"
+    },
+    "date-lost": {
+      "header": "When did you realise you no longer had your BRP?"
+    },
+    "confirmation": {
+      "header": "Thank you, we have received your information.",
+      "email": "We have sent you an email containing the information you have provided to",
+      "next": {
+        "header": "What happens next",
+        "not-specified": {
+          "para": {
+            "one": "We will now review the information you have sent us and we will let you know if you need a new card.",
+            "two": "We will get back to you within <strong>5 working days</strong>. For example, if you contact us on a Monday you will hear back by the following Monday.",
+            "three": "We will then advise you what to do next."
+          }
+        },
+        "inside-uk": {
+          "para": {
+            "one": "You should hear from us in the <strong>next working day</strong>, We will tell you if you need to apply for a replacement BRP."
+          }
+        },
+        "outside-uk": {
+          "para": {
+            "one": "We will contact you in the <strong>next working day</strong> to tell you what to do.",
+            "two": "As you are outside the UK, you may need to apply for a temporary visa to get back to the UK.",
+            "three": "We will tell you if you need to apply for a temporary visa when we contact you."
+          }
+        }
+      }
+    },
+    "letter-received": {
+      "header": "Have you received a letter from the Home Office?",
+      "subheader": "This letter may tell you:",
+      "list": {
+        "one": "your application to stay in the UK was successful",
+        "two": "your biometric residence permit (BRP) is going to be delivered",
+        "three": "your documents are being returned"
+      },
+      "date-question": "What is the date on the letter?"
+    },
+    "letter-not-received": {
+      "header": "Contact us",
+      "para": {
+        "one": "If you haven't received a letter from the Home Office about your application to remain in the UK it may mean a decision hasn't been made yet.",
+        "two": "Call the contact centre 0300 123 2241."
+      }
+    },
+    "on-the-way": {
+      "header": "Your biometric residence permit should be on the way",
+      "para": {
+        "one": {
+          "first": "It has only been ",
+          "second": " working days since the letter from the Home Office letter saying your application to remain in the UK was successful."
+        },
+        "two": {
+          "first": "Wait another ",
+          "second": " working days, and if you still have not received your card, use this form to contact us."
+        }
+      }
+    },
+    "conditions-and-length": {
+      "header": "Information about leave to remain in the UK",
+      "para": {
+        "one": "As you think the conditions or length of your leave are incorrect you must apply for <a href='https://www.gov.uk/ask-for-a-visa-administrative-review/if-youre-in-the-uk'>administrative review</a>, where this will be considered."
+      }
+    },
+    "truncated": {
+      "header": "Problems with names on your BRP",
+      "paras": {
+        "one": {
+          "parts": {
+            "one": "You typed in your",
+            "two": "as"
+          }
+        },
+        "two": {
+          "parts": {
+            "one": "Your",
+            "two": "has",
+            "three": "letters. Your BRP can only show a maximum of 30 letters, so it is shortened to this on your BRP:"
+          }
+        },
+        "three": {
+          "parts": {
+            "one": "Is this how it looks on your BRP?"
+          }
+        }
+      }
+    },
+    "exit-truncated": {
+      "paras": {
+        "one": "Your name has been shortened on your BRP, as a maximum of 30 characters can be printed on the card.",
+        "two": "This is not an error. The information is correct on your card and you will be able to use it to travel.",
+        "three": "You do not need to do anything else."
+      }
+    },
+    "someone-else": {
+      "someone-else-group": {
+        "title": "Provide details of <strong>the person who you want to collect your BRP</strong> on your behalf"
+      },
+      "change-person-group": {
+        "title": "Provide details of the new person you want to collect your BRP on your behalf"
+      }
+    },
+    "someone-else-reason": {
+      "header": "Why do you need someone else to collect your biometric card?"
+    },
+    "exit-not-eligible": {
+      "header": "You cannot use this service",
+      "subheader": "You can only nominate someone else to collect your BRP if:",
+      "list": {
+        "one": "you have a serious illness or disability that prevents you from collecting it",
+        "two": "you’re under 18 and can’t collect your BRP with your parent or guardian",
+        "three": "you're a getaway refugee"
+      }
+    },
+    "someone-else-check-details": {
+      "header": "Is the information you have given us correct?",
+      "subheader": "Check and make sure the information below is right. If it isn't you can change it here.",
+      "tables": {
+        "other-person": {
+          "title": "Other persons details",
+          "fullname": "Full name",
+          "date-of-birth": "Date of birth",
+          "nationality": "Nationality",
+          "email": "Email",
+          "phone": "Phone",
+          "id-number": "Identity document number"
+        },
+        "personal-details": {
+          "title": "Your contact & personal details"
+        }
+      }
+    },
+    "someone-else-confirmation": {
+      "paragraph": "We will now review the information you have given. Once we've done this, we will send you a letter saying that your nominated person can collect your BRP from the Post Office. Please do not send them to collect the BRP without the letter."
+    }
+  },
+  "emails": {
+    "you-sent": "Here is the information you have sent us",
+    "address": "Contact address",
+    "phone": "Phone number",
+    "caseworker": {
+      "country": "Current location",
+      "date-lost": "Date realised"
+    },
+    "collection": {
+      "header": "Collection problem form"
+    },
+    "not-arrived": {
+      "header": "You have reported that your BRP hasn't arrived"
+    },
+    "correct-mistakes": {
+      "header": "You have reported problems with your BRP"
+    },
+    "lost-stolen": {
+      "header": "You have reported your BRP as lost or stolen"
+    },
+    "someone-else": {
+      "header": "Someone else collecting",
+      "caseworker": {
+        "nominating": "Nominating third party"
+      },
+      "tables": {
+        "personal-details": {
+          "reason": "Reason"
+        }
+      }
+    }
+  },
+  "errors": {
+    "default": {
+      "title": "Sorry, something went wrong",
+      "message": "A server exception occurred. Please try again."
+    },
+    "session": {
+      "title": "Sorry, you'll have to start again",
+      "message": "You haven't entered any details for 20 minutes, so we have cleared your information to keep it secure."
+    }
+  }
+}
