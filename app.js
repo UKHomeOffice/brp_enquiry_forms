@@ -83,6 +83,7 @@ app.use(initSession);
 app.use(require('./apps/correct-mistakes/'));
 app.use(require('./apps/collection/'));
 app.use(require('./apps/someone-else/'));
+app.use(require('./apps/not-arrived/'));
 
 app.use(require('./routes/'));
 app.use(require('./errors/'));

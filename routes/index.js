@@ -1,7 +1,6 @@
 'use strict';
 
 var app = require('express').Router();
-var deliverySteps = require('./steps/delivery');
 var lostSteps = require('./steps/lost');
 var fields = require('./fields');
 var wizard = require('hmpo-form-wizard');
@@ -14,8 +13,6 @@ var options = {
 };
 
 app.use(mixins(i18n.translate.bind(i18n), fields));
-
-app.use('/not-arrived/', wizard(deliverySteps, fields, options));
 
 app.use('/lost-stolen-damaged/', wizard(lostSteps, fields, options));
 

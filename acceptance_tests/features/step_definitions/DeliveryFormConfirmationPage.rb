@@ -1,4 +1,4 @@
-When(/^I go to the Confirmation page of the delivery form$/) do                                          
+When(/^I go to the Confirmation page of the delivery form$/) do
   visit config['dev_host']
 
   choose('received-yes')
@@ -19,9 +19,9 @@ When(/^I go to the Confirmation page of the delivery form$/) do
   page.should have_content('Is the information you have given us correct?')
   choose('org-help-no')
   click_button('send')
-end                                                                          
-                                                                             
+end
+
 Then(/^I am on Confirmation page of the delivery form$/) do
   page.should have_content('Thank you, we have received your information.')
   delete_cookie('hmbrp.sid')
-end                                                                          
+end

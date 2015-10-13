@@ -13,7 +13,7 @@ var ConfirmController = function ConfirmController() {
 util.inherits(ConfirmController, BaseController);
 
 var serviceMap = {
-  '/not-arrived/check-details': function notArrived() {
+  '/not-arrived/confirm': function notArrived() {
     return {
       template: 'delivery',
       subject: 'Form submitted: Your BRP hasn\'t arrived'
