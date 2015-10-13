@@ -3,18 +3,18 @@
 var util = require('util');
 var _ = require('underscore');
 
-var Controller = require('../lib/base-controller');
-var Model = require('../models/email');
+var BaseController = require('../../../lib/base-controller');
+var EmailModel = require('../../../models/email');
 
-var Submit = function Submit() {
-  Controller.apply(this, arguments);
+var ConfirmController = function ConfirmController() {
+  BaseController.apply(this, arguments);
 };
 
-util.inherits(Submit, Controller);
+util.inherits(ConfirmController, BaseController);
 
-Submit.prototype.saveValues = function saveValues(req, res, callback) {
+ConfirmController.prototype.saveValues = function saveValues(req, res, callback) {
 
-  Controller.prototype.saveValues.call(this, req, res, function saveModel() {
+  BaseController.prototype.saveValues.call(this, req, res, function saveModel() {
     var data = _.pick(req.sessionModel.toJSON(), _.identity);
     var keys = _.keys(data);
 
@@ -26,7 +26,7 @@ Submit.prototype.saveValues = function saveValues(req, res, callback) {
       }
     });
 
-    var model = new Model(data);
+    var model = new EmailModel(data);
 
     model.set('template', 'someone-else');
     model.set('subject', 'Form submitted: Report someone else collecting your BRP');
@@ -36,4 +36,4 @@ Submit.prototype.saveValues = function saveValues(req, res, callback) {
 
 };
 
-module.exports = Submit;
+module.exports = ConfirmController;

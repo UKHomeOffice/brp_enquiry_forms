@@ -1,9 +1,9 @@
 'use strict';
 
-var SomeoneElseController = require('../../../controllers/someone-else');
-var DateController = require('../../../lib/date-controller');
+var ArrangeController = require('../../../../../apps/someone-else/controllers/arrange');
+var DateController = require('../../../../../lib/date-controller');
 
-describe('controllers/someone-else', function () {
+describe('apps/someone-else/controllers/arrange', function () {
 
   var controller;
   var key = '';
@@ -19,7 +19,7 @@ describe('controllers/someone-else', function () {
           }
         }
       };
-      controller = new SomeoneElseController({template: 'index'});
+      controller = new ArrangeController({template: 'index'});
       DateController.prototype.process = sinon.stub();
     });
 
@@ -99,7 +99,7 @@ describe('controllers/someone-else', function () {
 
   describe('validateField', function () {
     beforeEach(function () {
-      controller = new SomeoneElseController({template: 'index'});
+      controller = new ArrangeController({template: 'index'});
       controller.dateKey = undefined;
       DateController.prototype.validateField = sinon.stub();
     });

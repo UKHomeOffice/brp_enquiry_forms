@@ -1,13 +1,13 @@
 'use strict';
 
 var util = require('util');
-var Controller = require('../../../lib/base-controller');
+var BaseController = require('../../../lib/base-controller');
 
 var TruncatedController = function TruncatedController() {
-  Controller.apply(this, arguments);
+  BaseController.apply(this, arguments);
 };
 
-util.inherits(TruncatedController, Controller);
+util.inherits(TruncatedController, BaseController);
 
 function prettyName(value) {
   return value.replace(/-/g, ' ').replace('error', '');
@@ -78,7 +78,7 @@ TruncatedController.prototype.saveValues = function saveValues(req) {
     this.options.next = '/truncated';
   }
 
-  Controller.prototype.saveValues.apply(this, arguments);
+  BaseController.prototype.saveValues.apply(this, arguments);
 };
 
 module.exports = TruncatedController;

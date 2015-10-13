@@ -1,13 +1,13 @@
 'use strict';
 
 var util = require('util');
-var Controller = require('../../../lib/base-controller');
+var BaseController = require('../../../lib/base-controller');
 
 var ConfirmationController = function ConfirmationController() {
-  Controller.apply(this, arguments);
+  BaseController.apply(this, arguments);
 };
 
-util.inherits(ConfirmationController, Controller);
+util.inherits(ConfirmationController, BaseController);
 
 function getLocationLocal(req) {
   if (req.form.values['inside-uk'] === 'yes') {
