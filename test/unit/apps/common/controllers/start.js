@@ -1,9 +1,9 @@
 'use strict';
 
-var StartController = require('../../../controllers/start');
-var Controller = require('../../../lib/base-controller');
+var StartController = require('../../../../../apps/common/controllers/start');
+var Controller = require('../../../../../lib/base-controller');
 
-describe('controllers/start', function () {
+describe('apps/common/controllers/start', function () {
 
   describe('.getValues()', function () {
 

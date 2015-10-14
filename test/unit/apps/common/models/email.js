@@ -5,12 +5,12 @@ var emailService = {
   send: sinon.stub()
 };
 
-describe('models/email', function () {
+describe('apps/common/models/email', function () {
 
   describe('instantiated', function () {
     var Model = sinon.stub();
-    var EmailModel = proxyquire('../../../models/email', {
-      '../services/email': emailService,
+    var EmailModel = proxyquire('../../../../../apps/common/models/email', {
+      '../../../services/email': emailService,
       'hmpo-model': Model
     });
 
@@ -29,8 +29,8 @@ describe('models/email', function () {
 
     var model;
     var callback;
-    var EmailModel = proxyquire('../../../models/email', {
-      '../services/email': emailService
+    var EmailModel = proxyquire('../../../../../apps/common/models/email', {
+      '../../../services/email': emailService
     });
 
     beforeEach(function () {
