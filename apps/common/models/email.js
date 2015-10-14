@@ -1,7 +1,7 @@
 'use strict';
 
 var util = require('util');
-var emailService = require('../services/email');
+var emailService = require('../../../services/email');
 var Model = require('hmpo-model');
 var _ = require('underscore');
 

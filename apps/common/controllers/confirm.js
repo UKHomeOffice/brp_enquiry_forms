@@ -4,7 +4,7 @@ var util = require('util');
 var _ = require('underscore');
 
 var BaseController = require('../../../lib/base-controller');
-var Model = require('../../../models/email');
+var Model = require('../models/email');
 
 var ConfirmController = function ConfirmController() {
   BaseController.apply(this, arguments);

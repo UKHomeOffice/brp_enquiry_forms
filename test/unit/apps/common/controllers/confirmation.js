@@ -1,9 +1,9 @@
 'use strict';
 
-var BaseController = require('../../../lib/base-controller');
-var ConfirmationController = require('../../../controllers/confirmation');
+var BaseController = require('../../../../../lib/base-controller');
+var ConfirmationController = require('../../../../../apps/common/controllers/confirmation');
 
-describe('controllers/confirmation', function () {
+describe('apps/common/controllers/confirmation', function () {
 
   beforeEach(function () {
     BaseController.prototype.getNextStep = sinon.stub();
