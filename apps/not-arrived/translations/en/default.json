@@ -817,7 +817,8 @@
           "phone": "Phone number",
           "delivery-date": "Delivery date",
           "no-letter": "You do not have the delivery letter",
-          "delivery-details": "Delivery details"
+          "delivery-details": "Delivery details",
+          "delivery-address": "Delivery address"
         }
       },
       "org-help": {
