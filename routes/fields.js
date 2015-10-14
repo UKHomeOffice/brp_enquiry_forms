@@ -244,18 +244,6 @@ module.exports = {
       field: 'reason-radio'
     }
   },
-  'inside-uk': {
-    validate: ['required'],
-    className: ['inline', 'form-group'],
-    options: [{
-      value: 'yes',
-      label: 'fields.inside-uk.options.yes.label',
-    }, {
-      value: 'no',
-      label: 'fields.inside-uk.options.no.label',
-      toggle: 'country-group'
-    }]
-  },
   'location-applied': {
     validate: ['required'],
     className: ['inline', 'form-group'],
@@ -266,30 +254,6 @@ module.exports = {
       value: 'no',
       label: 'fields.location-applied.options.no.label'
     }]
-  },
-  'country': {
-    dependent: {
-      field: 'inside-uk',
-      value: 'no'
-    },
-    validate: ['required'],
-    label: 'fields.country.label',
-  },
-  'date-lost': {
-    legend: 'fields.date-lost.legend',
-    hint: 'fields.date-lost.hint'
-  },
-  'date-lost-day': {
-    validate: ['required', 'numeric'],
-    label: 'fields.date-lost-day.label'
-  },
-  'date-lost-month': {
-    validate: ['required', 'numeric'],
-    label: 'fields.date-lost-month.label'
-  },
-  'date-lost-year': {
-    validate: ['required', 'numeric'],
-    label: 'fields.date-lost-year.label'
   },
   'org-help': {
     validate: ['required'],

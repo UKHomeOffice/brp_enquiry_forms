@@ -2,11 +2,11 @@
 
 module.exports = {
   '/': {
-    controller: require('../../controllers/start'),
+    controller: require('../common/controllers/start'),
     next: '/inside-uk'
   },
   '/inside-uk': {
-    template: 'lost-or-stolen/inside-uk.html',
+    template: 'inside-uk.html',
     fields: [
       'inside-uk',
       'country'
@@ -14,20 +14,20 @@ module.exports = {
     next: '/date-lost'
   },
   '/date-lost': {
-    controller: require('../../controllers/date-lost'),
-    template: 'lost-or-stolen/date-lost.html',
+    controller: require('./controllers/date-lost'),
+    template: 'date-lost.html',
     fields: [
       'date-lost',
       'date-lost-day',
       'date-lost-month',
       'date-lost-year',
     ],
-    backLink: '/inside-uk',
+    backLink: 'inside-uk',
     next: '/personal-details'
   },
   '/personal-details': {
-    controller: require('../../controllers/personal-details'),
-    template: 'lost-or-stolen/personal-details.html',
+    controller: require('../common/controllers/personal-details'),
+    template: 'personal-details.html',
     fields: [
       'fullname',
       'date-of-birth',
@@ -37,11 +37,11 @@ module.exports = {
       'nationality',
       'brp-card'
     ],
-    backLink: '/date-lost',
+    backLink: 'date-lost',
     next: '/contact-details'
   },
   '/contact-details': {
-    template: 'lost-or-stolen/contact-details.html',
+    template: 'contact-details.html',
     fields: [
       'email',
       'no-email',
@@ -51,23 +51,23 @@ module.exports = {
       'contact-address-postcode',
       'phone'
     ],
-    backLink: '/personal-details',
-    next: '/check-details'
+    backLink: 'personal-details',
+    next: '/confirm'
   },
   '/confirm': {
-    controller: require('../../controllers/check-details'),
-    template: 'lost-or-stolen/confirm.html',
+    controller: require('../common/controllers/confirm'),
+    template: 'confirm.html',
     fields: [
       'org-help',
       'rep-name',
       'org-type'
     ],
-    backLink: '/contact-details',
+    backLink: 'contact-details',
     next: '/confirmation'
   },
   '/confirmation': {
-    controller: require('../../controllers/confirmation'),
-    template: 'lost-or-stolen/confirmation.html',
+    controller: require('../common/controllers/confirmation'),
+    template: 'confirmation.html',
     backLink: false
   }
 };
