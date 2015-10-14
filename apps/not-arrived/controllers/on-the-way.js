@@ -1,13 +1,13 @@
 'use strict';
 
 var util = require('util');
-var Controller = require('../lib/base-controller');
+var BaseController = require('../../../lib/base-controller');
 
 var OnTheWayController = function OnTheWayController() {
-  Controller.apply(this, arguments);
+  BaseController.apply(this, arguments);
 };
 
-util.inherits(OnTheWayController, Controller);
+util.inherits(OnTheWayController, BaseController);
 
 function weekDayRange(req) {
   return req.sessionModel.get('week-day-range');
