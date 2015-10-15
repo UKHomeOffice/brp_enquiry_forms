@@ -1,7 +1,6 @@
 {
-  "test": "Start",
   "continue": "Continue",
-  "submit": "send",
+  "submit": "Submit",
   "change": "Change",
   "close": "Close"
 }
