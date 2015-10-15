@@ -8,16 +8,16 @@ var modelProto = {
 };
 var Model = sinon.stub();
 Model.prototype = modelProto;
-var ParentController = sinon.stub();
-ParentController.prototype.saveValues = sinon.stub().callsArg(2);
+var BaseController = sinon.stub();
+BaseController.prototype.saveValues = sinon.stub().callsArg(2);
 
-var SubmitController = proxyquire('../../../controllers/check-details', {
+var ConfirmController = proxyquire('../../../../../apps/common/controllers/confirm', {
+  '../../../lib/base-controller': BaseController,
   '../models/email': Model,
-  '../routes/fields': {foo: {}, bar: {}},
-  '../lib/base-controller': ParentController
+  '../routes/fields': {foo: {}, bar: {}}
 });
 
-describe('controllers/check-details', function () {
+describe('apps/common/controllers/confirm', function () {
 
   describe('.saveValues()', function () {
 
@@ -27,13 +27,13 @@ describe('controllers/check-details', function () {
       sessionModel: {
         toJSON: sinon.stub().returns(expected)
       },
-      originalUrl: '/not-arrived/check-details'
+      originalUrl: '/not-arrived/confirm'
     };
     var res = {};
     var callback = sinon.stub();
 
     beforeEach(function () {
-      controller = new SubmitController({template: 'index'});
+      controller = new ConfirmController({template: 'index'});
       controller.saveValues(req, res, callback);
     });
 
@@ -43,21 +43,21 @@ describe('controllers/check-details', function () {
     });
 
     it('sets a template for delivery journey', function () {
-      req.originalUrl = '/not-arrived/check-details';
+      req.originalUrl = '/not-arrived/confirm';
       controller.saveValues(req, res, callback);
 
       modelProto.set.should.have.been.calledWith('template', 'delivery');
     });
 
     it('sets a template for error journey', function () {
-      req.originalUrl = '/correct-mistakes/check-details';
+      req.originalUrl = '/correct-mistakes/confirm';
       controller.saveValues(req, res, callback);
 
       modelProto.set.should.have.been.calledWith('template', 'error');
     });
 
     it('sets a template for lost or stolen inside uk journey', function () {
-      req.originalUrl = '/lost-stolen-damaged/check-details';
+      req.originalUrl = '/lost-stolen-damaged/confirm';
       req.sessionModel.toJSON.returns({'inside-uk': 'yes'});
       controller.saveValues(req, res, callback);
 
@@ -65,7 +65,7 @@ describe('controllers/check-details', function () {
     });
 
     it('sets a template for lost or stolen outside uk journey', function () {
-      req.originalUrl = '/lost-stolen-damaged/check-details';
+      req.originalUrl = '/lost-stolen-damaged/confirm';
       req.sessionModel.toJSON.returns({'inside-uk': 'no'});
       controller.saveValues(req, res, callback);
 
@@ -73,7 +73,7 @@ describe('controllers/check-details', function () {
     });
 
     it('throws an error if its not part of a recognised journey', function () {
-      req.originalUrl = '/not-recognised-journey';
+      req.originalUrl = '/unrecognised-journey';
 
       (function () {
         controller.saveValues(req, res, callback);

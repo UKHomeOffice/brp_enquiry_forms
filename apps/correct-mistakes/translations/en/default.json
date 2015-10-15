@@ -809,7 +809,8 @@
           "nationality": "Nationality",
           "passport": "Passport number",
           "email": "Email address",
-          "phone": "Phone number"
+          "phone": "Phone number",
+          "delivery-details": "Delivery details"
         }
       },
       "org-help": {

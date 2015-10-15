@@ -2,17 +2,17 @@
 
 var DateController = sinon.stub();
 var proxyquire = require('proxyquire');
-var PersonalDetailController = proxyquire('../../../controllers/personal-details', {
-  '../lib/date-controller': DateController
+var PersonalDetailsController = proxyquire('../../../../../apps/common/controllers/personal-details', {
+  '../../../lib/date-controller': DateController
 });
 
-describe('controllers/personal-details', function () {
+describe('apps/common/controllers/personal-details', function () {
 
   var controller;
   var args = {template: 'index'};
 
   beforeEach(function () {
-    controller = new PersonalDetailController(args);
+    controller = new PersonalDetailsController(args);
   });
 
   it('has a dateKey equal to date-of-birth', function () {
