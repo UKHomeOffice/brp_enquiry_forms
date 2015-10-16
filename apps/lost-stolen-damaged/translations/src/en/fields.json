@@ -1,0 +1,100 @@
+{
+  "date-of-birth": {
+    "legend": "Date of birth",
+    "hint": "For example, 31  3  1970"
+  },
+  "date-of-birth-day": {
+    "label": "Day"
+  },
+  "date-of-birth-month": {
+    "label": "Month"
+  },
+  "date-of-birth-year": {
+    "label": "Year"
+  },
+  "address": {
+    "legend": "Address"
+  },
+  "address-street": {
+    "label": "House name or number and street"
+  },
+  "address-town": {
+    "label": "Town/City"
+  },
+  "address-county": {
+    "label": "County (optional)"
+  },
+  "address-postcode": {
+    "label": "Postcode"
+  },
+  "fullname": {
+    "label": "Full name"
+  },
+  "nationality": {
+    "label": "Country of nationality"
+  },
+  "brp-card": {
+    "label": "BRP card number  (optional)",
+    "hint": "For example, AB12345CD"
+  },
+  "email": {
+    "label": "Email address"
+  },
+  "no-email": {
+    "label": "I do not have an email address"
+  },
+  "phone": {
+    "label": "Phone number (optional)"
+  },
+  "inside-uk": {
+    "options": {
+      "yes": {
+        "label": "UK"
+      },
+      "no": {
+        "label": "Outside UK"
+      }
+    }
+  },
+  "date-lost": {
+    "hint": "For example: 11 6 2015"
+  },
+  "date-lost-day": {
+    "label": "Day"
+  },
+  "date-lost-month": {
+    "label": "Month"
+  },
+  "date-lost-year": {
+    "label": "Year"
+  },
+  "org-help": {
+    "options": {
+      "yes": {
+        "label": "Yes"
+      },
+      "no": {
+        "label": "No"
+      }
+    }
+  },
+  "rep-name": {
+    "label": "Full name"
+  },
+  "org-type": {
+    "options": {
+      "pbs": {
+        "label": "PBS sponsor"
+      },
+      "legal": {
+        "label": "Legal represntative"
+      },
+      "relative": {
+        "label": "Relative/friend"
+      },
+      "support": {
+        "label": "Support organisation"
+      }
+    }
+  }
+}
