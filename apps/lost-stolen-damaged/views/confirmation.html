@@ -16,7 +16,9 @@
     </div>
   </div>
 
-  <p>{{#t}}pages.confirmation.email{{/t}} <strong>{{values.email}}</strong></p>
+  {{#values.email}}
+    <p>{{#t}}pages.confirmation.email{{/t}} <strong>{{values.email}}</strong></p>
+  {{/values.email}}
 
   <hr>
 
