@@ -5,7 +5,7 @@ module.exports = {
     value: 'buttons.continue'
   },
   submit: {
-    value: 'buttons.submit'
+    value: 'buttons.send'
   },
   change: {
     value: 'buttons.change'
