@@ -1,0 +1,121 @@
+{
+  "delivery-date": {
+    "label": "Date",
+    "legend": "Date on the letter",
+    "hint": "For example, 11  6  2015"
+  },
+  "delivery-date-day": {
+    "label": "Day"
+  },
+  "delivery-date-month": {
+    "label": "Month"
+  },
+  "delivery-date-year": {
+    "label": "Year"
+  },
+  "received": {
+    "options": {
+      "yes": {
+        "label": "Yes"
+      },
+      "no": {
+        "label": "No"
+      }
+    }
+  },
+  "no-letter": {
+    "label": "I don't have the letter anymore"
+  },
+  "delivery-details": {
+    "label": "If the courier could have problems delivering to this address, for example there's no door number, then let us know and we'll contact them. (optional)"
+  },
+  "date-of-birth": {
+    "legend": "Date of birth",
+    "hint": "For example, 31  3  1970"
+  },
+  "date-of-birth-day": {
+    "label": "Day"
+  },
+  "date-of-birth-month": {
+    "label": "Month"
+  },
+  "date-of-birth-year": {
+    "label": "Year"
+  },
+  "address-match": {
+    "options": {
+      "yes": {
+        "label": "Yes"
+      },
+      "no": {
+        "label": "No"
+      }
+    }
+  },
+  "address": {
+    "legend": "Address"
+  },
+  "address-street": {
+    "label": "House name or number and street"
+  },
+  "address-town": {
+    "label": "Town/City"
+  },
+  "address-county": {
+    "label": "County (optional)"
+  },
+  "address-postcode": {
+    "label": "Postcode"
+  },
+  "fullname": {
+    "label": "Full name"
+  },
+  "nationality": {
+    "label": "Country of nationality"
+  },
+  "passport": {
+    "label": "Passport number (optional)"
+  },
+  "brp-card": {
+    "label": "BRP card number  (optional)",
+    "hint": "For example, AB12345CD"
+  },
+  "email": {
+    "label": "Email address"
+  },
+  "no-email": {
+    "label": "I do not have an email address"
+  },
+  "phone": {
+    "label": "Phone number (optional)"
+  },
+  "org-help": {
+    "options": {
+      "yes": {
+        "label": "Yes"
+      },
+      "no": {
+        "label": "No"
+      }
+    }
+  },
+  "rep-name": {
+    "label": "Full name"
+  },
+  "org-type": {
+    "options": {
+      "pbs": {
+        "label": "PBS sponsor"
+      },
+      "legal": {
+        "label": "Legal represntative"
+      },
+      "relative": {
+        "label": "Relative/friend"
+      },
+      "support": {
+        "label": "Support organisation"
+      }
+    }
+  }
+}
