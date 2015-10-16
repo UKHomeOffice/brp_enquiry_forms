@@ -10,4 +10,4 @@ public/js/bundle.js
 .yardoc
 doc
 Gemfile.lock
-apps/**/translations/src/**/*.json
+apps/**/translations/**/default.json

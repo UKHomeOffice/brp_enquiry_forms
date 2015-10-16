@@ -1,25 +1,4 @@
 {
-  "arrange-collection": {
-    "header": "What would you like to arrange?",
-    "subheader": "Tell us what would you like to do today with this form."
-  },
-  "reasons": {
-    "header": "Why couldn't you collect your BRP?",
-    "subheader": "Tell us the reason why you were unable to collect the BRP."
-  },
-  "nominated": {
-    "header": "Who was supposed to collect your BRP on your behalf?",
-    "description": "Provide details of the person who tried to collect the BRP on your behalf"
-  },
-  "where": {
-    "header": "From where were you asked to collect your BRP?",
-    "description": "This could have been from a Post Office or a sponsor, such as your legal representative, employer, university or school.",
-    "date-question": "When did you try to collect your BRP? (optional)"
-  },
-  "about-error": {
-    "header": "What’s the problem with your BRP?",
-    "subheader": "You can select one or more problems"
-  },
   "contact-details": {
     "header": "Where can we contact you to let you know about your BRP?",
     "address": {
@@ -30,12 +9,6 @@
     "header": "Do you have an UK address where we can send the card?",
     "address": {
       "title": "If needed, we will send a correct BRP to this address."
-    }
-  },
-  "same-address": {
-    "header": "Did you expect your BRP to be delivered to the same address as the one on the letter from the Home Office?",
-    "address": {
-      "title": "Tell us the new address and we will organise another delivery."
     }
   },
   "personal-details": {
@@ -70,25 +43,6 @@
       "explanation": "By sending us your details you confirm that the information you have provided is true and that you accept our <a href='/terms-and-conditions'>terms and conditions</a>."
     }
   },
-  "check-details-error": {
-    "header": "Is the information you have given us correct?",
-    "subheader": "Check and make sure the information below is right. If it isn't you can change it here.",
-    "corrected-details-table": {
-      "title": "Corrected BRP details"
-    },
-    "personal-details-table": {
-      "title": "Your personal and contact details",
-      "headers": {
-        "fullname": "Full name",
-        "date-of-birth": "Date of birth",
-        "nationality": "Nationality",
-        "brp-card-number": "BRP card number",
-        "email": "Email address",
-        "phone": "Phone number",
-        "passport": "Passport number"
-      }
-    }
-  },
   "inside-uk": {
     "header": "Where are you now?"
   },
@@ -120,112 +74,5 @@
         }
       }
     }
-  },
-  "letter-received": {
-    "header": "Have you received a letter from the Home Office?",
-    "subheader": "This letter may tell you:",
-    "list": {
-      "one": "your application to stay in the UK was successful",
-      "two": "your biometric residence permit (BRP) is going to be delivered",
-      "three": "your documents are being returned"
-    },
-    "date-question": "What is the date on the letter?"
-  },
-  "letter-not-received": {
-    "header": "Contact us",
-    "para": {
-      "one": "If you haven't received a letter from the Home Office about your application to remain in the UK it may mean a decision hasn't been made yet.",
-      "two": "Call the contact centre 0300 123 2241."
-    }
-  },
-  "on-the-way": {
-    "header": "Your biometric residence permit should be on the way",
-    "para": {
-      "one": {
-        "first": "It has only been ",
-        "second": " working days since the letter from the Home Office letter saying your application to remain in the UK was successful."
-      },
-      "two": {
-        "first": "Wait another ",
-        "second": " working days, and if you still have not received your card, use this form to contact us."
-      }
-    }
-  },
-  "conditions-and-length": {
-    "header": "Information about leave to remain in the UK",
-    "para": {
-      "one": "As you think the conditions or length of your leave are incorrect you must apply for <a href='https://www.gov.uk/ask-for-a-visa-administrative-review/if-youre-in-the-uk'>administrative review</a>, where this will be considered."
-    }
-  },
-  "truncated": {
-    "header": "Problems with names on your BRP",
-    "paras": {
-      "one": {
-        "parts": {
-          "one": "You typed in your",
-          "two": "as"
-        }
-      },
-      "two": {
-        "parts": {
-          "one": "Your",
-          "two": "has",
-          "three": "letters. Your BRP can only show a maximum of 30 letters, so it is shortened to this on your BRP:"
-        }
-      },
-      "three": {
-        "parts": {
-          "one": "Is this how it looks on your BRP?"
-        }
-      }
-    }
-  },
-  "exit-truncated": {
-    "paras": {
-      "one": "Your name has been shortened on your BRP, as a maximum of 30 characters can be printed on the card.",
-      "two": "This is not an error. The information is correct on your card and you will be able to use it to travel.",
-      "three": "You do not need to do anything else."
-    }
-  },
-  "someone-else": {
-    "someone-else-group": {
-      "title": "Provide details of <strong>the person who you want to collect your BRP</strong> on your behalf"
-    },
-    "change-person-group": {
-      "title": "Provide details of the new person you want to collect your BRP on your behalf"
-    }
-  },
-  "someone-else-reason": {
-    "header": "Why do you need someone else to collect your biometric card?"
-  },
-  "exit-not-eligible": {
-    "header": "You cannot use this service",
-    "subheader": "You can only nominate someone else to collect your BRP if:",
-    "list": {
-      "one": "you have a serious illness or disability that prevents you from collecting it",
-      "two": "you’re under 18 and can’t collect your BRP with your parent or guardian",
-      "three": "you're a getaway refugee"
-    }
-  },
-  "someone-else-check-details": {
-    "header": "Is the information you have given us correct?",
-    "subheader": "Check and make sure the information below is right. If it isn't you can change it here.",
-    "tables": {
-      "other-person": {
-        "title": "Other persons details",
-        "fullname": "Full name",
-        "date-of-birth": "Date of birth",
-        "nationality": "Nationality",
-        "email": "Email",
-        "phone": "Phone",
-        "id-number": "Identity document number"
-      },
-      "personal-details": {
-        "title": "Your contact & personal details"
-      }
-    }
-  },
-  "someone-else-confirmation": {
-    "paragraph": "We will now review the information you have given. Once we've done this, we will send you a letter saying that your nominated person can collect your BRP from the Post Office. Please do not send them to collect the BRP without the letter."
   }
 }
