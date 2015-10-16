@@ -1,8 +1,7 @@
 {
   "buttons": {
-    "test": "Start",
     "continue": "Continue",
-    "submit": "send",
+    "send": "Send",
     "change": "Change",
     "close": "Close"
   },
