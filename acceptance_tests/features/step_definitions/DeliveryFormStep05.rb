@@ -1,4 +1,4 @@
-When(/^I go to Step Five of the delivery form$/) do                                           
+When(/^I go to Step Five of the delivery form$/) do
   visit config['dev_host']
   choose('received-yes')
   fill_in('delivery-date-day', :with => '17')
@@ -28,6 +28,6 @@ Then(/^I am on Step Five of the delivery form$/) do
   page.should have_content("Check and make sure the information below is right. If it isn't you can change it here.")
   page.should have_content('Send us your details')
   page.should have_content('By sending us your details you confirm that the information you have provided is true and that you accept our terms and conditions.')
-  find_button('send')
-  delete_cookie('hmbrp.sid')                            
-end     
+  find_button('Send')
+  delete_cookie('hmbrp.sid')
+end
