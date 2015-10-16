@@ -1,4 +1,8 @@
 {
+  "country": {
+    "legend": "Inside the UK",
+    "label": "Which country are you in?"
+  },
   "date-of-birth": {
     "legend": "Date of birth",
     "hint": "For example, 31  3  1970"
