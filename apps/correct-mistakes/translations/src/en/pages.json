@@ -1,0 +1,132 @@
+{
+  "about-error": {
+    "header": "What’s the problem with your BRP?",
+    "subheader": "You can select one or more problems"
+  },
+  "contact-details": {
+    "header": "Where can we contact you to let you know about your BRP?",
+    "address": {
+      "title": "Tell us your address so that we can contact you by post."
+    }
+  },
+  "uk-address": {
+    "header": "Do you have an UK address where we can send the card?",
+    "address": {
+      "title": "If needed, we will send a correct BRP to this address."
+    }
+  },
+  "personal-details": {
+    "header": "What are your personal details?",
+    "subheader": "We need these details to review the problem with your BRP."
+  },
+  "check-details": {
+    "header": "Is the information you have given us correct?",
+    "subheader": "Check and make sure the information below is right. If it isn't you can change it here.",
+    "table": {
+      "headers": {
+        "contact-address": "Contact address",
+        "address": "New address",
+        "fullname": "Full name",
+        "date-of-birth": "Date of birth",
+        "nationality": "Nationality",
+        "passport": "Passport number",
+        "email": "Email address",
+        "phone": "Phone number",
+        "delivery-details": "Delivery address"
+      }
+    },
+    "org-help": {
+      "title": "Has an organisation filled in this information on your behalf?",
+      "explanation": "This could be an immigration lawyer or representative, or a charity, employer, college or university."
+    },
+    "org-details-group": {
+      "header": "Please provide their details",
+      "type": "Type of support"
+    },
+    "footer": {
+      "title": "Send us your details",
+      "explanation": "By sending us your details you confirm that the information you have provided is true and that you accept our <a href='/terms-and-conditions'>terms and conditions</a>."
+    }
+  },
+  "check-details-error": {
+    "header": "Is the information you have given us correct?",
+    "subheader": "Check and make sure the information below is right. If it isn't you can change it here.",
+    "corrected-details-table": {
+      "title": "Corrected BRP details"
+    },
+    "personal-details-table": {
+      "title": "Your personal and contact details",
+      "headers": {
+        "fullname": "Full name",
+        "date-of-birth": "Date of birth",
+        "nationality": "Nationality",
+        "brp-card-number": "BRP card number",
+        "email": "Email address",
+        "phone": "Phone number",
+        "passport": "Passport number"
+      }
+    }
+  },
+  "confirmation": {
+    "header": "Thank you, we have received your information.",
+    "email": "We have sent you an email containing the information you have provided to",
+    "next": {
+      "header": "What happens next",
+      "not-specified": {
+        "para": {
+          "one": "We will now review the information you have sent us and we will let you know if you need a new card.",
+          "two": "We will get back to you within <strong>5 working days</strong>. For example, if you contact us on a Monday you will hear back by the following Monday.",
+          "three": "We will then advise you what to do next."
+        }
+      },
+      "inside-uk": {
+        "para": {
+          "one": "You should hear from us in the <strong>next working day</strong>, We will tell you if you need to apply for a replacement BRP."
+        }
+      },
+      "outside-uk": {
+        "para": {
+          "one": "We will contact you in the <strong>next working day</strong> to tell you what to do.",
+          "two": "As you are outside the UK, you may need to apply for a temporary visa to get back to the UK.",
+          "three": "We will tell you if you need to apply for a temporary visa when we contact you."
+        }
+      }
+    }
+  },
+  "conditions-and-length": {
+    "header": "Information about leave to remain in the UK",
+    "para": {
+      "one": "As you think the conditions or length of your leave are incorrect you must apply for <a href='https://www.gov.uk/ask-for-a-visa-administrative-review/if-youre-in-the-uk'>administrative review</a>, where this will be considered."
+    }
+  },
+  "truncated": {
+    "header": "Problems with names on your BRP",
+    "paras": {
+      "one": {
+        "parts": {
+          "one": "You typed in your",
+          "two": "as"
+        }
+      },
+      "two": {
+        "parts": {
+          "one": "Your",
+          "two": "has",
+          "three": "letters. Your BRP can only show a maximum of 30 letters, so it is shortened to this on your BRP:"
+        }
+      },
+      "three": {
+        "parts": {
+          "one": "Is this how it looks on your BRP?"
+        }
+      }
+    }
+  },
+  "exit-truncated": {
+    "paras": {
+      "one": "Your name has been shortened on your BRP, as a maximum of 30 characters can be printed on the card.",
+      "two": "This is not an error. The information is correct on your card and you will be able to use it to travel.",
+      "three": "You do not need to do anything else."
+    }
+  }
+}

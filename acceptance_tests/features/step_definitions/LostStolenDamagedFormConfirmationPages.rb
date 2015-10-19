@@ -1,4 +1,4 @@
-Given(/^that on step one I had selected that I am inside the UK$/) do                                                
+Given(/^that on step one I had selected that I am inside the UK$/) do
   visit config['lost_host']
   # page.status_code.should == 200
   choose('inside-uk-yes')
@@ -16,7 +16,7 @@ Given(/^that on step one I had selected that I am inside the UK$/) do
   fill_in('email', :with => 'brpapp15@gmail.com')
   click_button('Continue')
   choose('org-help-no')
-  click_button('send')
+  click_button('Send')
 end
 
 Then(/^I am on the inside the UK confirmation page$/) do
@@ -28,7 +28,7 @@ Then(/^I am on the outside the UK confirmation page$/) do
   page.should have_content('As you are outside the UK, you may need to apply for a temporary visa to get back to the UK.')
 end
 
-Given(/^that on step one I had selected that I am outside the UK$/) do                                                
+Given(/^that on step one I had selected that I am outside the UK$/) do
   visit config['lost_host']
   # page.status_code.should == 200
   choose('inside-uk-no')
@@ -47,5 +47,5 @@ Given(/^that on step one I had selected that I am outside the UK$/) do
   fill_in('email', :with => 'brpapp15@gmail.com')
   click_button('Continue')
   choose('org-help-no')
-  click_button('send') 
+  click_button('Send')
 end

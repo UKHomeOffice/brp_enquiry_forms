@@ -1,0 +1,12 @@
+{
+  "error": {
+    "header": "Report a problem with your new BRP",
+    "same-address": {
+      "header": "Is your address still the same as the one your BRP was sent to?"
+    },
+    "location-applied": {
+      "header": "Where did you make your application?",
+      "subheader": "Tell us if the application was made in the UK or overseas"
+    }
+  }
+}
