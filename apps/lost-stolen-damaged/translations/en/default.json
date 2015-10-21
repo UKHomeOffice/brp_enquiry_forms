@@ -1,6 +1,6 @@
 {"buttons": {
   "continue": "Continue",
-  "submit": "send",
+  "send": "Send",
   "change": "Change",
   "close": "Close"
 }
@@ -177,7 +177,8 @@
         "nationality": "Nationality",
         "passport": "Passport number",
         "email": "Email address",
-        "phone": "Phone number"
+        "phone": "Phone number",
+        "brp-card-number": "BRP card number"
       }
     },
     "org-help": {

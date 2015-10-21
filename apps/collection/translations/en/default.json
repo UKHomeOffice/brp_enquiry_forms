@@ -74,7 +74,7 @@
       "format": "Enter your date of birth in the correct format"
     },
     "collection-date": {
-      "required": "Enter the colleciton date",
+      "required": "Enter the collection date",
       "numeric": "Date must only contain numbers",
       "future": "The date is in the future",
       "format": "Enter the collection date in the correct format"
