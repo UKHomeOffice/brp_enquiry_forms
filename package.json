@@ -32,7 +32,7 @@
     "express": "^4.12.4",
     "express-partial-templates": "^0.1.0",
     "express-session": "^1.11.3",
-    "hmpo-form-wizard": "^3.1.1",
+    "hmpo-form-wizard": "git+https://github.com/UKHomeOffice/passports-form-wizard.git#5e5a6b077c0449dbc5aacd9ebf610f6fa4427d2c",
     "hmpo-frontend-toolkit": "^1.2.1",
     "hmpo-govuk-template": "0.0.3",
     "hmpo-model": "^0.1.2",

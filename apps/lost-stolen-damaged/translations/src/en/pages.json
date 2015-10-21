@@ -1,0 +1,79 @@
+{
+  "contact-details": {
+    "header": "Where can we contact you to let you know about your BRP?",
+    "address": {
+      "title": "Tell us your address so that we can contact you by post."
+    }
+  },
+  "uk-address": {
+    "header": "Do you have an UK address where we can send the card?",
+    "address": {
+      "title": "If needed, we will send a correct BRP to this address."
+    }
+  },
+  "personal-details": {
+    "header": "What are your personal details?",
+    "subheader": "We need these details to review the problem with your BRP."
+  },
+  "check-details": {
+    "header": "Is the information you have given us correct?",
+    "subheader": "Check and make sure the information below is right. If it isn't you can change it here.",
+    "table": {
+      "headers": {
+        "contact-address": "Contact address",
+        "address": "New address",
+        "fullname": "Full name",
+        "date-of-birth": "Date of birth",
+        "nationality": "Nationality",
+        "passport": "Passport number",
+        "email": "Email address",
+        "phone": "Phone number",
+        "brp-card-number": "BRP card number"
+      }
+    },
+    "org-help": {
+      "title": "Has an organisation filled in this information on your behalf?",
+      "explanation": "This could be an immigration lawyer or representative, or a charity, employer, college or university."
+    },
+    "org-details-group": {
+      "header": "Please provide their details",
+      "type": "Type of support"
+    },
+    "footer": {
+      "title": "Send us your details",
+      "explanation": "By sending us your details you confirm that the information you have provided is true and that you accept our <a href='/terms-and-conditions'>terms and conditions</a>."
+    }
+  },
+  "inside-uk": {
+    "header": "Where are you now?"
+  },
+  "date-lost": {
+    "header": "When did you realise you no longer had your BRP?"
+  },
+  "confirmation": {
+    "header": "Thank you, we have received your information.",
+    "email": "We have sent you an email containing the information you have provided to",
+    "next": {
+      "header": "What happens next",
+      "not-specified": {
+        "para": {
+          "one": "We will now review the information you have sent us and we will let you know if you need a new card.",
+          "two": "We will get back to you within <strong>5 working days</strong>. For example, if you contact us on a Monday you will hear back by the following Monday.",
+          "three": "We will then advise you what to do next."
+        }
+      },
+      "inside-uk": {
+        "para": {
+          "one": "You should hear from us in the <strong>next working day</strong>, We will tell you if you need to apply for a replacement BRP."
+        }
+      },
+      "outside-uk": {
+        "para": {
+          "one": "We will contact you in the <strong>next working day</strong> to tell you what to do.",
+          "two": "As you are outside the UK, you may need to apply for a temporary visa to get back to the UK.",
+          "three": "We will tell you if you need to apply for a temporary visa when we contact you."
+        }
+      }
+    }
+  }
+}

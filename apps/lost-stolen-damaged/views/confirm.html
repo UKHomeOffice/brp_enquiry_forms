@@ -22,7 +22,7 @@
 
       {{$form}}
 
-        <table id="personal-details">
+        <table id="personal-details" class="table-details">
 
           <tr>
             <td>{{#t}}pages.check-details.table.headers.fullname{{/t}}</td>
@@ -55,7 +55,7 @@
           {{/values.no-email}}
           {{#values.brp-card}}
             <tr>
-              <td>{{#t}}pages.check-details-error.personal-details-table.headers.brp-card-number{{/t}}</td>
+              <td>{{#t}}pages.check-details.table.headers.brp-card-number{{/t}}</td>
               <td>{{values.brp-card}}</td>
               <td><a href="personal-details/edit#brp-card" class="button">{{#t}}buttons.change{{/t}}</a></td>
             </tr>
