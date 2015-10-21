@@ -353,6 +353,15 @@
   },
   "org-type": {
     "required": "Tell us the type of the organisation that helped you to complete this form"
+  },
+  "received": {
+    "required": "Tell us if you have received a letter from the Home Office"
+  },
+  "delivery-date": {
+    "required": "Enter the date of the letter from the Home Office",
+    "numeric": "Date must only contain numbers",
+    "future": "The date is in the future",
+    "format": "Enter the date in the correct format "
   }
 }
 }
