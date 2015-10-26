@@ -24,7 +24,7 @@ app.use(function setAssetPath(req, res, next) {
   next();
 });
 
-require('hmpo-govuk-template').setup(app);
+require('hof').template.setup(app);
 app.set('view engine', 'html');
 app.enable('view cache');
 app.use(require('express-partial-templates')(app));
