@@ -37,6 +37,7 @@
     "hmpo-govuk-template": "0.0.3",
     "hmpo-model": "^0.1.2",
     "hmpo-template-mixins": "^1.1.0",
+    "hof": "0.0.1",
     "hogan-express-strict": "^0.5.4",
     "hogan.js": "^3.0.2",
     "i18n-future": "^0.1.4",
