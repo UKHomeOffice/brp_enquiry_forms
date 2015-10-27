@@ -1,0 +1,12 @@
+{
+  "you-sent": "Here is the information you have sent us",
+  "address": "Contact address",
+  "phone": "Phone number",
+  "caseworker": {
+    "country": "Current location",
+    "date-lost": "Date realised"
+  },
+  "not-arrived": {
+    "header": "You have reported that your BRP hasn't arrived"
+  }
+}

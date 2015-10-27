@@ -39,6 +39,6 @@ Then(/^I am on Step Six of the collection form$/) do
   page.should have_content('Send us your details')
   page.should have_content('By sending us your details you confirm that the information you have provided is true and that you accept our')
   find_link('terms and conditions').visible?
-  find_button('send')
-  delete_cookie('hmbrp.sid') 
+  find_button('Send')
+  delete_cookie('hmbrp.sid')
 end

@@ -19,7 +19,8 @@
     "quality": "plato -r -x 'node_modules|reports|test' -d reports/plato .",
     "sass": "./node_modules/node-sass/bin/node-sass ./assets/scss/app.scss ./public/css/app.css --include-path ./node_modules",
     "create:public": "mkdir -p ./public/js ./public/css ./public/images",
-    "postinstall": "npm run create:public; npm run sass; npm run browserify; npm run copy:images"
+    "hof-transpile": "hof-transpiler ./apps/**/translations/src --shared ./apps/common/translations/src",
+    "postinstall": "npm run create:public; npm run sass; npm run browserify; npm run copy:images; npm run hof-transpile"
   },
   "author": "HomeOffice",
   "dependencies": {
@@ -31,11 +32,12 @@
     "express": "^4.12.4",
     "express-partial-templates": "^0.1.0",
     "express-session": "^1.11.3",
-    "hmpo-form-wizard": "^3.1.1",
+    "hmpo-form-wizard": "git+https://github.com/UKHomeOffice/passports-form-wizard.git#5e5a6b077c0449dbc5aacd9ebf610f6fa4427d2c",
     "hmpo-frontend-toolkit": "^1.2.1",
     "hmpo-govuk-template": "0.0.3",
     "hmpo-model": "^0.1.2",
     "hmpo-template-mixins": "^1.1.0",
+    "hof": "0.0.1",
     "hogan-express-strict": "^0.5.4",
     "hogan.js": "^3.0.2",
     "i18n-future": "^0.1.4",
@@ -59,6 +61,7 @@
     "eslint-plugin-filenames": "^0.1.1",
     "eslint-plugin-mocha": "^0.2.2",
     "eslint-plugin-one-variable-per-var": "0.0.3",
+    "hof-transpiler": "0.0.4",
     "jscs": "^1.13.1",
     "mocha": "^2.2.5",
     "mocha-junit-reporter": "^1.4.0",

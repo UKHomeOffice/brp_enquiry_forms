@@ -1,0 +1,155 @@
+{
+  "arrange-collection-radio": {
+    "options": {
+      "someone-else": {
+        "label": "Allow someone else to collect my BRP"
+      },
+      "change-person": {
+        "label": "Change the person I requested to collect my BRP"
+      },
+      "cancel-request": {
+        "label": "Cancel request for someone else to collect my BRP"
+      }
+    }
+  },
+  "someone-else-fullname": {
+    "label": "Full name"
+  },
+  "someone-else-date": {
+    "legend": "Date of birth",
+    "hint": "For example, 31  3  1970"
+  },
+  "someone-else-date-day": {
+    "label": "Day"
+  },
+  "someone-else-date-month": {
+    "label": "Month"
+  },
+  "someone-else-date-year": {
+    "label": "Year"
+  },
+  "someone-else-nationality": {
+    "label":  "Country of nationality"
+  },
+  "someone-else-id-number": {
+    "label": "Identity document number <br/>(This could be UK/EU driving licence, passport or BRP)"
+  },
+  "someone-else-reason-radio": {
+    "options": {
+      "incapable": {
+        "label": "I am physically or mentally incapable"
+      },
+      "refugee": {
+        "label": "I am a Gataway refugee"
+      },
+      "under-age": {
+        "label": "I am under 18"
+      },
+      "other": {
+        "label": "None of the above"
+      }
+    }
+  },
+  "incapable-details": {
+    "label": "Please describe the problem"
+  },
+  "change-person-fullname": {
+    "label": "Full name"
+  },
+  "change-person-date": {
+    "legend": "Date of birth",
+    "hint": "For example, 31  3  1970"
+  },
+  "change-person-date-day": {
+    "label": "Day"
+  },
+  "change-person-date-month": {
+    "label": "Month"
+  },
+  "change-person-date-year": {
+    "label": "Year"
+  },
+  "change-person-nationality": {
+    "label":  "Country of nationality"
+  },
+  "change-person-id-number": {
+    "label": "Identity document number <br/>(This could be UK/EU driving licence, passport or BRP)"
+  },
+  "nominated-date": {
+    "label": "Date",
+    "legend": "Date of birth",
+    "hint": "For example, 31  3  1970"
+  },
+  "date-of-birth": {
+    "legend": "Date of birth",
+    "hint": "For example, 31  3  1970"
+  },
+  "date-of-birth-day": {
+    "label": "Day"
+  },
+  "date-of-birth-month": {
+    "label": "Month"
+  },
+  "date-of-birth-year": {
+    "label": "Year"
+  },
+  "address-street": {
+    "label": "House name or number and street"
+  },
+  "address-town": {
+    "label": "Town/City"
+  },
+  "address-county": {
+    "label": "County (optional)"
+  },
+  "address-postcode": {
+    "label": "Postcode"
+  },
+  "fullname": {
+    "label": "Full name"
+  },
+  "nationality": {
+    "label": "Country of nationality"
+  },
+  "passport": {
+    "label": "Passport number (optional)"
+  },
+  "email": {
+    "label": "Email address"
+  },
+  "no-email": {
+    "label": "I do not have an email address"
+  },
+  "phone": {
+    "label": "Phone number (optional)"
+  },
+  "org-help": {
+    "options": {
+      "yes": {
+        "label": "Yes"
+      },
+      "no": {
+        "label": "No"
+      }
+    }
+  },
+  "rep-name": {
+    "label": "Full name"
+  },
+  "org-type": {
+    "options": {
+      "pbs": {
+        "label": "PBS sponsor"
+      },
+      "legal": {
+        "label": "Legal represntative"
+      },
+      "relative": {
+        "label": "Relative/friend"
+      },
+      "support": {
+        "label": "Support organisation"
+      }
+    }
+  }
+}

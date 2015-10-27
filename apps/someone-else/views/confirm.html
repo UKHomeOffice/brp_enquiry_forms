@@ -1,0 +1,185 @@
+{{<layout}}
+{{$step}}Step 5 of 5{{/step}}
+
+{{$journeyHeader}}
+  {{#t}}journeys.someone-else.header{{/t}}
+{{/journeyHeader}}
+
+{{$validationSummary}}
+  {{> partials-validation-summary}}
+{{/validationSummary}}
+
+{{$propositionHeader}}
+  {{> partials-navigation}}
+{{/propositionHeader}}
+
+{{$header}}{{#t}}pages.someone-else-check-details.header{{/t}}{{/header}}
+
+{{$content}}
+  <p>{{#t}}pages.someone-else-check-details.subheader{{/t}}</p>
+
+  {{<partials-form}}
+
+    {{$form}}
+
+      {{#values.someone-else-fullname}}
+        <table id="others-details" class="table-details">
+          <thead>
+            <tr>
+              <th colspan="3"><h3>{{#t}}pages.someone-else-check-details.tables.other-person.title{{/t}}</h3></th>
+            </tr>
+          </thead>
+          <tbody>
+            {{#values.someone-else-fullname}}
+            <tr>
+              <td>{{#t}}pages.check-details.table.headers.fullname{{/t}}</td>
+              <td>{{values.someone-else-fullname}}</td>
+              <td><a href="/someone-else/arrange/edit#someone-else-fullname" class="button">{{#t}}buttons.change{{/t}}</a></td>
+            </tr>
+            {{/values.someone-else-fullname}}
+            {{#values.someone-else-date}}
+            <tr>
+              <td>{{#t}}pages.check-details.table.headers.date-of-birth{{/t}}</td>
+              <td>{{values.someone-else-date-formatted}}</td>
+              <td><a href="/someone-else/arrange/edit#someone-else-date-day" class="button">{{#t}}buttons.change{{/t}}</a></td>
+            </tr>
+            {{/values.someone-else-date}}
+            {{#values.someone-else-nationality}}
+            <tr>
+              <td>{{#t}}pages.check-details.table.headers.nationality{{/t}}</td>
+              <td>{{values.someone-else-nationality}}</td>
+              <td><a href="/someone-else/arrange/edit#someone-else-nationality" class="button">{{#t}}buttons.change{{/t}}</a></td>
+            </tr>
+            {{/values.someone-else-nationality}}
+            {{#values.someone-else-id-number}}
+            <tr>
+              <td>{{#t}}pages.check-details.table.headers.id-number{{/t}}</td>
+              <td>{{values.someone-else-id-number}}</td>
+              <td><a href="/someone-else/arrange/edit#someone-else-id-number" class="button">{{#t}}buttons.change{{/t}}</a></td>
+            </tr>
+            {{/values.someone-else-id-number}}
+          </tbody>
+        </table>
+      {{/values.someone-else-fullname}}
+
+      {{#values.change-person-fullname}}
+        <table id="change-details" class="table-details">
+          <thead>
+            <tr>
+              <th colspan="3"><h3>{{#t}}pages.someone-else-check-details.tables.other-person.title{{/t}}</h3></th>
+            </tr>
+          </thead>
+          <tbody>
+            {{#values.change-person-fullname}}
+            <tr>
+              <td>{{#t}}pages.check-details.table.headers.fullname{{/t}}</td>
+              <td>{{values.change-person-fullname}}</td>
+              <td><a href="/someone-else/arrange/edit#change-person-fullname" class="button">{{#t}}buttons.change{{/t}}</a></td>
+            </tr>
+            {{/values.change-person-fullname}}
+            {{#values.change-person-date}}
+            <tr>
+              <td>{{#t}}pages.check-details.table.headers.date-of-birth{{/t}}</td>
+              <td>{{values.change-person-date-formatted}}</td>
+              <td><a href="/someone-else/arrange/edit#change-person-date-day" class="button">{{#t}}buttons.change{{/t}}</a></td>
+            </tr>
+            {{/values.change-person-date}}
+            {{#values.change-person-nationality}}
+            <tr>
+              <td>{{#t}}pages.check-details.table.headers.nationality{{/t}}</td>
+              <td>{{values.change-person-nationality}}</td>
+              <td><a href="/someone-else/arrange/edit#change-person-nationality" class="button">{{#t}}buttons.change{{/t}}</a></td>
+            </tr>
+            {{/values.change-person-nationality}}
+            {{#values.change-person-id-number}}
+            <tr>
+              <td>{{#t}}pages.check-details.table.headers.id-number{{/t}}</td>
+              <td>{{values.change-person-id-number}}</td>
+              <td><a href="/someone-else/arrange/edit#change-person-id-number" class="button">{{#t}}buttons.change{{/t}}</a></td>
+            </tr>
+            {{/values.change-person-id-number}}
+          </tbody>
+        </table>
+      {{/values.change-person-fullname}}
+
+      <table id="personal-details" class="table-details">
+        <thead>
+          <tr>
+            <th colspan="3"><h3>{{#t}}pages.someone-else-check-details.tables.personal-details.title{{/t}}</h3></th>
+          </tr>
+        </thead>
+        <tbody>
+          {{#values.fullname}}
+          <tr>
+            <td>{{#t}}pages.check-details.table.headers.fullname{{/t}}</td>
+            <td>{{values.fullname}}</td>
+            <td><a href="personal-details{{#values.no-reason}}-no-reason{{/values.no-reason}}/edit#fullname" class="button">{{#t}}buttons.change{{/t}}</a></td>
+          </tr>
+          {{/values.fullname}}
+          {{#values.date-of-birth}}
+          <tr>
+            <td>{{#t}}pages.check-details.table.headers.date-of-birth{{/t}}</td>
+            <td>{{values.date-of-birth-formatted}}</td>
+            <td><a href="personal-details{{#values.no-reason}}-no-reason{{/values.no-reason}}/edit#date-of-birth-day" class="button">{{#t}}buttons.change{{/t}}</a></td>
+          </tr>
+          {{/values.date-of-birth}}
+          {{#values.nationality}}
+          <tr>
+            <td>{{#t}}pages.check-details.table.headers.nationality{{/t}}</td>
+            <td>{{values.nationality}}</td>
+            <td><a href="personal-details/edit#nationality" class="button">{{#t}}buttons.change{{/t}}</a></td>
+          </tr>
+          {{/values.nationality}}
+          {{#values.no-email}}
+          {{#values.contact-address-street}}
+            <tr>
+              <td>{{#t}}pages.check-details.table.headers.contact-address{{/t}}</td>
+              <td>
+                {{values.contact-address-street}},
+                {{values.contact-address-town}},
+                {{#values.contact-address-county}}{{values.contact-address-county}},{{/values.contact-address-county}}
+                {{values.contact-address-postcode}}
+              </td>
+              <td><a href="contact-details/edit#contact-address-street" class="button">{{#t}}buttons.change{{/t}}</a></td>
+            </tr>
+          {{/values.contact-address-street}}
+          {{/values.no-email}}
+          {{#values.passport}}
+          <tr>
+            <td>{{#t}}pages.check-details.table.headers.passport{{/t}}</td>
+            <td>{{values.passport}}</td>
+            <td><a href="personal-details{{#values.no-reason}}-no-reason{{/values.no-reason}}/edit#passport" class="button">{{#t}}buttons.change{{/t}}</a></td>
+          </tr>
+          {{/values.passport}}
+          {{#values.email}}
+          <tr>
+            <td>{{#t}}pages.check-details.table.headers.email{{/t}}</td>
+            <td>{{values.email}}</td>
+            <td><a href="contact-details/edit#email" class="button">{{#t}}buttons.change{{/t}}</a></td>
+          </tr>
+          {{/values.email}}
+          {{#values.phone}}
+            <tr>
+              <td>{{#t}}pages.check-details.table.headers.phone{{/t}}</td>
+              <td>{{values.phone}}</td>
+              <td><a href="contact-details/edit#phone" class="button">{{#t}}buttons.change{{/t}}</a></td>
+            </tr>
+          {{/values.phone}}
+        </tbody>
+      </table>
+
+      {{<partials-org-type}}{{/partials-org-type}}
+
+      <h2>{{#t}}pages.check-details.footer.title{{/t}}</h2>
+      <p>{{#t}}pages.check-details.footer.explanation{{/t}}</p>
+
+      {{#input-submit}}send{{/input-submit}}
+
+    {{/form}}
+
+  {{/partials-form}}
+
+
+{{/content}}
+
+{{/layout}}

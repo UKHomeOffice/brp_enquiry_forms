@@ -24,15 +24,14 @@ app.use(function setAssetPath(req, res, next) {
   next();
 });
 
-require('hmpo-govuk-template').setup(app);
+require('hof').template.setup(app);
 app.set('view engine', 'html');
-app.engine('html', require('hogan-express-strict'));
-app.set('views', path.resolve(__dirname, './views'));
+app.enable('view cache');
 app.use(require('express-partial-templates')(app));
+app.engine('html', require('hogan-express-strict'));
 
 app.use(require('body-parser').urlencoded({extended: true}));
 app.use(require('body-parser').json());
-
 app.use(function setBaseUrl(req, res, next) {
   res.locals.baseUrl = req.baseUrl;
   next();
@@ -81,12 +80,26 @@ app.use(require('cookie-parser')(config.session.secret));
 app.use(secureCookies);
 app.use(initSession);
 
-app.use(require('./routes'));
+// apps
+app.use(require('./apps/correct-mistakes/'));
+app.use(require('./apps/collection/'));
+app.use(require('./apps/someone-else/'));
+app.use(require('./apps/not-arrived/'));
+app.use(require('./apps/lost-stolen-damaged/'));
 
+// boring stuff
+app.get('/cookies', function renderCookies(req, res) {
+  res.render('cookies');
+});
+app.get('/terms-and-conditions', function renderTerms(req, res) {
+  res.render('terms');
+});
+
+// errors
 app.use(require('./errors/'));
+
 
 /*eslint camelcase: 0*/
 app.listen(config.port, config.listen_host);
 /*eslint camelcase: 1*/
-
 logger.info('App listening on port', config.port);

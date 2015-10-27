@@ -1,6 +1,9 @@
 'use strict';
-
-var i18n = require('i18n-future')();
+var path = require('path');
+var hof = require('hof');
+var i18n = hof.i18n({
+  path: path.resolve(__dirname, '../apps/common/translations/__lng__/__ns__.json')
+});
 var config = require('../config');
 var logger = require('../lib/logger');
 

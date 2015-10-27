@@ -1,0 +1,214 @@
+{
+  "date-of-birth": {
+    "legend": "Date of birth",
+    "hint": "For example, 31  3  1970"
+  },
+  "date-of-birth-day": {
+    "label": "Day"
+  },
+  "date-of-birth-month": {
+    "label": "Month"
+  },
+  "date-of-birth-year": {
+    "label": "Year"
+  },
+  "uk-address-radio": {
+    "options": {
+      "yes": {
+        "label": "Yes"
+      },
+      "no": {
+        "label": "No"
+      }
+    }
+  },
+  "address": {
+    "legend": "Address"
+  },
+  "address-street": {
+    "label": "House name or number and street"
+  },
+  "address-town": {
+    "label": "Town/City"
+  },
+  "address-county": {
+    "label": "County (optional)"
+  },
+  "address-postcode": {
+    "label": "Postcode"
+  },
+  "fullname": {
+    "label": "Full name"
+  },
+  "nationality": {
+    "label": "Country of nationality"
+  },
+  "passport": {
+    "label": "Passport number (optional)"
+  },
+  "brp-card": {
+    "label": "BRP card number  (optional)",
+    "hint": "For example, AB12345CD"
+  },
+  "email": {
+    "label": "Email address"
+  },
+  "no-email": {
+    "label": "I do not have an email address"
+  },
+  "phone": {
+    "label": "Phone number (optional)"
+  },
+  "last-name-error-checkbox": {
+    "label": "Last name"
+  },
+  "last-name-error": {
+    "label": "What is your correct last name?",
+    "title": "This is the first line under 'name' on your BRP."
+  },
+  "first-name-error-checkbox": {
+    "label": "First name"
+  },
+  "first-name-error": {
+    "label": "What is your correct first name?",
+    "title": "This is the second line under 'name' on your BRP."
+  },
+  "birth-place-error-checkbox": {
+    "label": "Place of birth"
+  },
+  "birth-place-error": {
+    "label": "What is your correct place of birth?"
+  },
+  "date-of-birth-error-checkbox": {
+    "label": "Date of birth"
+  },
+  "date-of-birth-error": {
+    "label": "What is your correct date of birth?",
+    "hint": "For example: 31  3  1970"
+  },
+  "date-of-birth-error-day": {
+    "label": "Day"
+  },
+  "date-of-birth-error-month": {
+    "label": "Month"
+  },
+  "date-of-birth-error-year": {
+    "label": "Year"
+  },
+  "gender-error-checkbox": {
+    "label": "Gender"
+  },
+  "gender-error": {
+    "legend": "Gender",
+    "title": "What is your correct gender?",
+    "options": {
+      "male": {
+        "label": "Male"
+      },
+      "female": {
+        "label": "Female"
+      },
+      "unspecified": {
+        "label": "Unspecified"
+      }
+    }
+  },
+  "sponsor-details-error-checkbox": {
+    "label": "Sponsor reference"
+  },
+  "sponsor-details-error": {
+    "legend": "Sponsor reference",
+    "title": "This is the third line under 'remarks' on your BRP. This is the reference number of your your employer, university or college.",
+    "label": "What is the correct sponsor reference number?"
+  },
+  "nationality-error-checkbox": {
+    "label": "Nationality"
+  },
+  "nationality-error": {
+    "legend": "Nationality",
+    "label": "What is your correct nationality?"
+  },
+  "signature-error-checkbox": {
+    "label": "Signature"
+  },
+  "signature-error": {
+    "legend": "Signature",
+    "label": "What is wrong with your signature?"
+  },
+  "photograph-error-checkbox": {
+    "label": "Photograph"
+  },
+  "photograph-error": {
+    "legend": "Photograph",
+    "label": "What is wrong with your photograph?"
+  },
+  "national-insurance-error-checkbox": {
+    "label": "National Insurance Number"
+  },
+  "national-insurance-error": {
+    "legend": "National Insurance Number",
+    "label": "What is your correct National Insurance Number?"
+  },
+  "damaged-error-checkbox": {
+    "label": "Faulty or damaged"
+  },
+  "damaged-error": {
+    "legend": "Faulty or damaged",
+    "label": "What is wrong with your BRP?"
+  },
+  "conditions-error-checkbox": {
+    "label": "Conditions or length of stay"
+  },
+  "conditions-error": {
+    "label": "Please describe the problem"
+  },
+  "truncated": {
+    "options": {
+      "yes": {
+        "label": "Yes"
+      },
+      "no": {
+        "label": "No"
+      }
+    }
+  },
+  "location-applied": {
+    "options": {
+      "yes": {
+        "label": "UK"
+      },
+      "no": {
+        "label": "Outside UK"
+      }
+    }
+  },
+  "org-help": {
+    "options": {
+      "yes": {
+        "label": "Yes"
+      },
+      "no": {
+        "label": "No"
+      }
+    }
+  },
+  "rep-name": {
+    "label": "Full name"
+  },
+  "org-type": {
+    "options": {
+      "pbs": {
+        "label": "PBS sponsor"
+      },
+      "legal": {
+        "label": "Legal represntative"
+      },
+      "relative": {
+        "label": "Relative/friend"
+      },
+      "support": {
+        "label": "Support organisation"
+      }
+    }
+  }
+}
