@@ -4,6 +4,7 @@
 
 ## Quick start
 
+Install the dependencies and build the project resources
 ```bash
 $ npm install
 ```
@@ -13,7 +14,7 @@ Initiate the server in development mode (Express is used to serve the static res
 $ npm run dev
 ```
 
-**Select one of the following journeys to see the applcation in action**
+Then select one of the following journeys to see the applcation in action
 
 - [Collection](http://localhost:8080/collection)
 - [Someone else](http://localhost:8080/someone-else)
@@ -21,6 +22,7 @@ $ npm run dev
 - [Correct mistakes](http://localhost:8080/correct-mistakes)
 - [Lost, damaged or stolen](http://localhost:8080/lost-damaged-stolen)
 
+See the [development documentation](./documentation/DEVELOPMENT.MD) for a complete description of the application and how to maintain and support BRP.
 
 
 ## NPM scripts
@@ -42,7 +44,7 @@ Run the unit tests
 $ npm run test
 ```
 
-Run the EcmaScript (ES) linter.  Rules are deinfed in [.eslintrc](./.eslintrc)
+Run the EcmaScript (ES) linter.  Rules are defined in [.eslintrc](./.eslintrc)
 ```bash
 $ npm run lint
 ```
