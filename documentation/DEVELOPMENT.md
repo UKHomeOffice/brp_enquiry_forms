@@ -12,6 +12,10 @@ For instances when this document does not provide enough support, we suggest tha
 
 A complete list of the dependencies on which this application depends is found in [package.json](./package.json)
 
-## Sub-apps and their components
+## Settings and configuration
 
-#### [Fields, configuration and options](./development/fields.md)
+#### [Application settings](./development/APP_SETTINGS.md)
+
+## Building blocks
+
+#### [Field configuration and options](./development/FIELDS.md)
