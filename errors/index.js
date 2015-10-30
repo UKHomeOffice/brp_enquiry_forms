@@ -17,7 +17,7 @@ module.exports = function errorHandler(err, req, res, next) {
     content.message = i18n.translate('errors.session.message');
   }
 
-  err.template = 'errors/error';
+  err.template = 'error';
   content.title = content.title || i18n.translate('errors.default.title');
   content.message = content.message || i18n.translate('errors.default.message');
 

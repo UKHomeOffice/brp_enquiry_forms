@@ -26,12 +26,14 @@ app.use(function setAssetPath(req, res, next) {
 
 require('hof').template.setup(app);
 app.set('view engine', 'html');
+app.set('views', path.resolve(__dirname, './apps/common/views'));
 app.enable('view cache');
 app.use(require('express-partial-templates')(app));
 app.engine('html', require('hogan-express-strict'));
 
 app.use(require('body-parser').urlencoded({extended: true}));
 app.use(require('body-parser').json());
+
 app.use(function setBaseUrl(req, res, next) {
   res.locals.baseUrl = req.baseUrl;
   next();
@@ -87,7 +89,6 @@ app.use(require('./apps/someone-else/'));
 app.use(require('./apps/not-arrived/'));
 app.use(require('./apps/lost-stolen-damaged/'));
 
-// boring stuff
 app.get('/cookies', function renderCookies(req, res) {
   res.render('cookies');
 });
