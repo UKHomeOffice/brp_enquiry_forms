@@ -1,8 +1,13 @@
 'use strict';
 
-var helpers = require('hmpo-frontend-toolkit').helpers;
-var progressiveReveal = require('hmpo-frontend-toolkit').progressiveReveal;
-var formFocus = require('hmpo-frontend-toolkit').formFocus;
+// In package.json: hof points to toolkit
+// "browser": {
+//    "hof": "hmpo-frontend-toolkit"
+//  }
+var toolkit = require('hof');
+var helpers = toolkit.helpers;
+var progressiveReveal = toolkit.progressiveReveal;
+var formFocus = toolkit.formFocus;
 
 helpers.documentReady(progressiveReveal);
 helpers.documentReady(formFocus);
