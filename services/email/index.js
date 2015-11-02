@@ -3,9 +3,10 @@
 var logger = require('../../lib/logger');
 var nodemailer = require('nodemailer');
 var config = require('../../config');
-var i18n = require('i18n-future')();
+var hof = require('hof');
+var i18n = hof.i18n();
 var Hogan = require('hogan.js');
-var lookup = require('i18n-lookup')(i18n.translate.bind(i18n));
+var lookup = hof.i18nLookup(i18n.translate.bind(i18n));
 var fs = require('fs');
 var path = require('path');
 

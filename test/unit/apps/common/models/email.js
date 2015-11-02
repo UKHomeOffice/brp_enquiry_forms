@@ -8,10 +8,12 @@ var emailService = {
 describe('apps/common/models/email', function () {
 
   describe('instantiated', function () {
-    var Model = sinon.stub();
+    var hof = {
+      Model: sinon.stub()
+    };
     var EmailModel = proxyquire('../../../../../apps/common/models/email', {
       '../../../services/email': emailService,
-      'hmpo-model': Model
+      'hof': hof
     });
 
     it('calls hmpo-model Model with the arguments', function () {
@@ -21,7 +23,7 @@ describe('apps/common/models/email', function () {
       /*eslint no-unused-vars: 0*/
       var model = new EmailModel(emailData);
       /*eslint no-unused-vars: 1*/
-      Model.should.have.been.calledWith(emailData);
+      hof.Model.should.have.been.calledWith(emailData);
     });
   });
 
