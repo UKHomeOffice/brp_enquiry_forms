@@ -3,10 +3,9 @@
 var logger = require('../../lib/logger');
 var nodemailer = require('nodemailer');
 var config = require('../../config');
-var hof = require('hof');
-var i18n = hof.i18n();
+var i18n = require('hof').i18n;
 var Hogan = require('hogan.js');
-var lookup = hof.i18nLookup(i18n.translate.bind(i18n));
+var i18nLookup = require('hof').i18nLookup;
 var fs = require('fs');
 var path = require('path');
 
@@ -70,6 +69,15 @@ var caseworkerPlainTextTemplates = {
     path.resolve(__dirname, './templates/caseworker/plain/someone-else.mus')).toString('utf8')
 };
 
+var translationLocation = {
+  error: 'correct-mistakes',
+  'lost-or-stolen-uk': 'lost-stolen-damaged',
+  'lost-or-stolen-abroad': 'lost-stolen-damaged',
+  delivery: 'not-arrived',
+  collection: 'collection',
+  'someone-else': 'someone-else'
+}
+
 var transport = config.email.auth.user === '' ?
   require('nodemailer-stub-transport') : require('nodemailer-smtp-transport');
 
@@ -84,6 +92,10 @@ function Emailer() {
 }
 
 Emailer.prototype.send = function send(email, callback) {
+  var locali18n = i18n({
+    path: path.resolve(__dirname, '../../apps/', './' + translationLocation[email.template] ,'./translations/__lng__/__ns__.json')
+  });
+  var lookup = i18nLookup(locali18n.translate.bind(locali18n));
   var templateData = {
     data: email.dataToSend,
     t: function t() {
