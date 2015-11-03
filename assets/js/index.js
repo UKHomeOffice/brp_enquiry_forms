@@ -1,10 +1,6 @@
 'use strict';
 
-// In package.json: hof points to toolkit
-// "browser": {
-//    "hof": "hmpo-frontend-toolkit"
-//  }
-var toolkit = require('hof');
+var toolkit = require('hof').toolkit;
 var helpers = toolkit.helpers;
 var progressiveReveal = toolkit.progressiveReveal;
 var formFocus = toolkit.formFocus;
