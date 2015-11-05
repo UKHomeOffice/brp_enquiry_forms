@@ -11,6 +11,10 @@ module.exports = {
   },
   'someone-else-reason-radio': {
     validate: ['required'],
+    legend: {
+      className: 'visuallyhidden',
+      value: ''
+    },
     options: [{
       value: 'incapable',
       label: 'fields.someone-else-reason-radio.options.incapable.label',

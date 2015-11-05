@@ -4,6 +4,10 @@ module.exports = {
   received: {
     validate: ['required'],
     className: ['inline', 'form-group'],
+    legend: {
+      className: 'visuallyhidden',
+      value: ''
+    },
     options: [{
       value: 'yes',
       label: 'fields.received.options.yes.label',

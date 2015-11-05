@@ -4,6 +4,10 @@ module.exports = {
   'uk-address-radio': {
     validate: ['required'],
     className: ['inline', 'form-group'],
+    legend: {
+      className: 'visuallyhidden',
+      value: ''
+    },
     options: [{
       value: 'yes',
       label: 'fields.uk-address-radio.options.yes.label',

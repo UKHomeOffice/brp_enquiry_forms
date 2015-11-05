@@ -4,6 +4,10 @@ module.exports = {
   'arrange-collection-radio': {
     validate: ['required'],
     className: ['inline', 'form-group'],
+    legend: {
+      className: 'visuallyhidden',
+      value: ''
+    },
     options: [{
       value: 'someone-else',
       label: 'fields.arrange-collection-radio.options.someone-else.label',

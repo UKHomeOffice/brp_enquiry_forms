@@ -4,6 +4,10 @@ module.exports = {
   'address-match': {
     validate: ['required'],
     className: ['inline', 'form-group'],
+    legend: {
+      className: 'visuallyhidden',
+      value: ''
+    },
     options: [{
       value: 'yes',
       label: 'fields.address-match.options.yes.label',
