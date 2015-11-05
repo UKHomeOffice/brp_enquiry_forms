@@ -4,6 +4,10 @@ module.exports = {
   'org-help': {
     validate: ['required'],
     className: 'inline',
+    legend: {
+      className: 'visuallyhidden',
+      value: ''
+    },
     options: [{
       value: 'yes',
       label: 'fields.org-help.options.yes.label',
@@ -26,6 +30,10 @@ module.exports = {
     dependent: {
       field: 'org-help',
       value: 'yes'
+    },
+    legend: {
+      className: 'visuallyhidden',
+      value: ''
     },
     options: [{
       value: 'pbs',

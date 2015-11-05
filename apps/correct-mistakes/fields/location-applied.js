@@ -3,6 +3,10 @@
 module.exports = {
  'location-applied': {
     validate: ['required'],
+    legend: {
+      className: 'visuallyhidden',
+      value: ''
+    },
     className: ['inline', 'form-group'],
     options: [{
       value: 'yes',

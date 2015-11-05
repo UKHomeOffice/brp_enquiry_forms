@@ -38,6 +38,7 @@ module.exports = {
   },
   '/exit-not-eligible': {
     template: 'exit-not-eligible',
+    clearSession: true,
     prereqs: ['/']
   },
   '/personal-details': {

@@ -13,7 +13,9 @@ var i18n = i18nFuture({
   path: path.resolve(__dirname, './translations/__lng__/__ns__.json')
 });
 
-router.use(mixins(i18n.translate.bind(i18n), fields));
+router.use(mixins(fields, {
+  translate: i18n.translate.bind(i18n)
+}));
 
 router.use('/someone-else/', wizard(require('./steps'), fields, {
   controller: require('../../lib/base-controller'),

@@ -76,7 +76,7 @@ var translationLocation = {
   delivery: 'not-arrived',
   collection: 'collection',
   'someone-else': 'someone-else'
-}
+};
 
 var transport = config.email.auth.user === '' ?
   require('nodemailer-stub-transport') : require('nodemailer-smtp-transport');
@@ -94,11 +94,11 @@ function Emailer() {
 Emailer.prototype.send = function send(email, callback) {
   var locali18n = i18n({
     path: path.resolve(
-      __dirname, '../../apps/', './' + translationLocation[email.template] ,'./translations/__lng__/__ns__.json'
+      __dirname, '../../apps/', './' + translationLocation[email.template], './translations/__lng__/__ns__.json'
     )
   });
 
-  locali18n.on('ready', function locali18nLoaded () {
+  locali18n.on('ready', function locali18nLoaded() {
     var lookup = i18nLookup(locali18n.translate.bind(locali18n));
     var templateData = {
       data: email.dataToSend,

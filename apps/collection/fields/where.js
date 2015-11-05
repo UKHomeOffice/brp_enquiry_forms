@@ -4,6 +4,10 @@ module.exports = {
   'collection-where-radio': {
     validate: ['required'],
     className: ['inline', 'form-group'],
+    legend: {
+      className: 'visuallyhidden',
+      value: ''
+    },
     options: [{
       value: 'Post office',
       label: 'fields.collection-where-radio.options.post-office.label'
