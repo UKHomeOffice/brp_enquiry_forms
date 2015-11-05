@@ -28,11 +28,11 @@ describe('apps/someone-else/controllers/reason', function () {
       controller.options.next.should.equal('/exit-not-eligible');
     });
 
-    it('sets next to undefined if reason is anything else', function () {
+    it('sets next to personal-details if reason is anything else', function () {
       req.form.values['someone-else-reason-radio'] = 'any-other-answer';
       controller.saveValues(req);
 
-      should.equal(controller.options.next, undefined);
+      controller.options.next.should.equal('/personal-details');
     });
 
     it('calls the base controller saveValues', function () {
