@@ -9,7 +9,7 @@ module.exports = {
   listen_host: process.env.LISTEN_HOST || '0.0.0.0',
   session: {
     secret: process.env.SESSION_SECRET || 'howdoesyourgardengrow',
-    ttl: process.env.SESSION_TTL || 1200 /* 20 mins */
+    ttl: process.env.SESSION_TTL || 1800 /* 30 mins timeout */
   },
   redis: {
     port: process.env.REDIS_PORT || 6379,
