@@ -29,8 +29,8 @@
   {{nationality}}
 
   {{#passport}}
-    {{#t}}pages.check-details.table.headers.passport{{/t}}
-    {{passport}}
+  {{#t}}pages.check-details.table.headers.passport{{/t}}
+  XXXXXXXXX
   {{/passport}}
 
   {{#contact-address-street}}
