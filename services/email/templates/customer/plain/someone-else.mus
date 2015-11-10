@@ -47,7 +47,7 @@
 
   {{#passport}}
   {{#t}}pages.check-details.table.headers.passport{{/t}}
-  {{passport}}
+  XXXXXXXXX
   {{/passport}}
 
   {{#phone}}
