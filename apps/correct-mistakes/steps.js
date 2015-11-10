@@ -14,7 +14,6 @@ module.exports = {
   },
   '/about-error': {
     controller: require('./controllers/about-error'),
-    template: 'about-error',
     fields: [
       'error-selection',
       'first-name-error-checkbox',
@@ -49,13 +48,11 @@ module.exports = {
     next: '/uk-address'
   },
   '/conditions-and-length': {
-    prereqs: ['/'],
-    template: 'conditions-and-length'
+    prereqs: ['/']
   },
   '/truncated': {
     controller: require('./controllers/truncated'),
     prereqs: ['/'],
-    template: 'truncated',
     fields: [
       'truncated',
       'truncation-page'
@@ -63,11 +60,9 @@ module.exports = {
     next: '/uk-address'
   },
   '/exit-truncated': {
-    prereqs: ['/truncated'],
-    template: 'exit-truncated'
+    prereqs: ['/truncated']
   },
   '/uk-address': {
-    template: 'uk-address',
     fields: [
       'uk-address-radio',
       'uk-address-street',
@@ -94,7 +89,6 @@ module.exports = {
     next: '/contact-details'
   },
   '/contact-details': {
-    template: 'contact-details',
     fields: [
       'email',
       'no-email',
@@ -109,7 +103,6 @@ module.exports = {
   },
   '/confirm': {
     controller: require('../common/controllers/confirm'),
-    template: 'confirm',
     fields: [
       'org-help',
       'rep-name',
@@ -120,7 +113,6 @@ module.exports = {
   },
   '/confirmation': {
     controller: require('../common/controllers/confirmation'),
-    template: 'confirmation',
     backLink: false,
     clearSession: true
   }

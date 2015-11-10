@@ -7,7 +7,6 @@ module.exports = {
   },
   '/letter-received': {
     controller: require('./controllers/letter-received'),
-    template: 'letter-received',
     fields: [
       'received',
       'delivery-date',
@@ -19,12 +18,10 @@ module.exports = {
     next: '/same-address'
   },
   '/letter-not-received': {
-    template: 'letter-not-received',
   },
   '/on-the-way': {
     controller: require('./controllers/on-the-way'),
-    prereqs: ['/'],
-    template: 'on-the-way'
+    prereqs: ['/']
   },
   '/same-address': {
     template: 'same-address-details.html',
@@ -41,7 +38,6 @@ module.exports = {
   },
   '/personal-details': {
     controller: require('../common/controllers/personal-details'),
-    template: 'personal-details.html',
     fields: [
       'fullname',
       'date-of-birth',
@@ -55,7 +51,6 @@ module.exports = {
     next: '/contact-details'
   },
   '/contact-details': {
-    template: 'contact-details',
     fields: [
       'email',
       'no-email',
@@ -70,7 +65,6 @@ module.exports = {
   },
   '/confirm': {
     controller: require('../common/controllers/confirm'),
-    template: 'confirm',
     fields: [
       'org-help',
       'rep-name',
@@ -81,7 +75,6 @@ module.exports = {
   },
   '/confirmation': {
     controller: require('../common/controllers/confirmation'),
-    template: 'confirmation',
     backLink: false
   }
 };
