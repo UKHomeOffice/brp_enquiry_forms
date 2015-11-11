@@ -6,7 +6,7 @@ module.exports = {
     className: ['inline', 'form-group'],
     legend: {
       className: 'visuallyhidden',
-      value: ''
+      value: 'journeys.delivery.same-address.header'
     },
     options: [{
       value: 'yes',

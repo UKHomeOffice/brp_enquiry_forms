@@ -5,7 +5,7 @@ module.exports = {
     validate: ['required'],
     legend: {
       className: 'visuallyhidden',
-      value: ''
+      value: 'Where did you make your application'
     },
     className: ['inline', 'form-group'],
     options: [{

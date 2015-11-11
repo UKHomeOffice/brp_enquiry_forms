@@ -5,7 +5,7 @@ module.exports = {
     validate: ['required'],
     legend: {
       className: 'visuallyhidden',
-      value: ''
+      value: 'pages.inside-uk.header'
     },
     className: ['inline', 'form-group'],
     options: [{
@@ -21,6 +21,10 @@ module.exports = {
     dependent: {
       field: 'inside-uk',
       value: 'no'
+    },
+    legend: {
+      className: 'visuallyhidden',
+      value: 'fields.country.label'
     },
     validate: ['required'],
     label: 'fields.country.label'

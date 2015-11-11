@@ -6,7 +6,7 @@ module.exports = {
     className: ['inline', 'form-group'],
     legend: {
       className: 'visuallyhidden',
-      value: ''
+      value: 'pages.letter-received.header'
     },
     options: [{
       value: 'yes',
