@@ -52,10 +52,6 @@
     "org-details-group": {
       "header": "Please provide their details",
       "type": "Type of support"
-    },
-    "footer": {
-      "title": "Send us your details",
-      "explanation": "By sending us your details you confirm that the information you have provided is true and that you accept our <a href='/terms-and-conditions'>terms and conditions</a>."
     }
   },
   "someone-else-check-details": {
