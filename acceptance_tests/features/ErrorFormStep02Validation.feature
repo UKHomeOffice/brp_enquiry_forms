@@ -14,16 +14,16 @@ Feature: Validation for Step 02 of the Error Form
 
 		Examples:
 		  |error  					     |link                                      |content                                   |
-		  |first-name-error-checkbox     |Tell us your correct first name 			|Tell us your correct first name 		   |
-		  |last-name-error-checkbox	     |Tell us your correct last name 			|Tell us your correct last name 		   |
-		  |date-of-birth-error-checkbox  |Enter your date of birth 					|Enter your date of birth 				   |
-		  |birth-place-error-checkbox    |Tell us your correct place of birth 		|Tell us your correct place of birth  	   |
-		  |gender-error-checkbox         |Tell us your correct gender 				|Tell us your correct gender 			   |
-		  |sponsor-details-error-checkbox|Tell us the correct sponsor details 		|Tell us the correct sponsor details 	   |
-		  |nationality-error-checkbox    |Tell us your correct nationality 			|Tell us your correct nationality 		   |
-		  |signature-error-checkbox	     |Tell us what is wrong with your signature |Tell us what is wrong with your signature |
-		  |photograph-error-checkbox	 |Tell us what is wrong with your photograph|Tell us what is wrong with your photograph|
-		  |damaged-error-checkbox		 |Tell us what is wrong with your BRP		|Tell us what is wrong with your BRP 	   |
+		  |first-name-error-checkbox     |What is your correct first name? 			|What is your correct first name? 		   |
+		  |last-name-error-checkbox	     |What is your correct last name? 			|What is your correct last name? 		   |
+		  |date-of-birth-error-checkbox  |What is your date of birth? 				|What is your date of birth? 				   |
+		  |birth-place-error-checkbox    |What is your correct place of birth? 		|What is your correct place of birth?  	   |
+		  |gender-error-checkbox         |What is your correct gender? 				|What is your correct gender? 			   |
+		  |sponsor-details-error-checkbox|What are the correct sponsor details? 	|What are the correct sponsor details? 	   |
+		  |nationality-error-checkbox    |What it your correct nationality? 		|What is your correct nationality? 		   |
+		  |signature-error-checkbox	     |What is wrong with your signature? 		|What is wrong with your signature? |
+		  |photograph-error-checkbox	 |What is wrong with your photograph?		|What is wrong with your photograph?|
+		  |damaged-error-checkbox		 |What is wrong with your BRP?				|What is wrong with your BRP? 	   |
 		  |conditions-error-checkbox     |Tell us about the problem                 |Tell us about the problem                 |
 
 	Scenario: Go to Step Six and clear the cookies

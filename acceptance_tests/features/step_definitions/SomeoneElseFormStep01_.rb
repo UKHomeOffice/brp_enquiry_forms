@@ -5,7 +5,7 @@ end
 Then(/^I am on Step One of the somone else form$/) do
   page.should have_content('Step 1 of 5')
   page.should have_content('What would you like to arrange?')
-  page.should have_content('Tell us what would you like to do today with this form.')
+  page.should have_content('Tell us what you would like to do with this service.')
   page.should have_content('Allow someone else to collect my BRP')
   find_by_id('arrange-collection-radio-someone-else')
   page.should have_content('Change the person I requested to collect my BRP')

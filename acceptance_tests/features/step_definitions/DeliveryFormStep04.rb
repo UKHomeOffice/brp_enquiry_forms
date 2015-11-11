@@ -25,7 +25,7 @@ Then(/^I am on Step Four of the delivery form$/) do
   find_by_id('email')
   find_by_id('no-email')
   page.should have_content('I do not have an email address')
-  # page.should have_content('Please provide your address so that we contact you by post')
+  # page.should have_content('Provide your address so that we contact you by post')
   # page.should have_content('House name or number and street')
   # find_by_id('address-street')
   # page.should have_content('Town/City')

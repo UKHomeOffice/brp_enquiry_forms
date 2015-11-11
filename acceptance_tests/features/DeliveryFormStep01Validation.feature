@@ -6,8 +6,8 @@ Feature: Validation for Step 01 of the Delivery Form
 
 	Scenario: Selecting "Continue" without doing anything else
 		When I click "Continue"
-		Then I see the "Tell us if you have received a letter from the Home Office" link
-		And I see "Tell us if you have received a letter from the Home Office"
+		Then I see the "Have you received a letter from the Home Office?" link
+		And I see "Have you received a letter from the Home Office?"
 
 	Scenario: Selecting "Continue" having checked "Yes" but without filling in the date fields or checking the "I dont have the letter" checkbox
 		When I check the "Yes" radio button

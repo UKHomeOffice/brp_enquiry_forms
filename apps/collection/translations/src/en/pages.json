@@ -9,22 +9,22 @@
     },
     "where": {
       "header": "From where were you asked to collect your BRP?",
-      "description": "This could have been from a Post Office or a sponsor, such as your legal representative, employer, university or school.",
+      "description": "This could have been from a Post Office branch or a sponsor, such as your legal representative, employer, university or school.",
       "date-question": "When did you try to collect your BRP? (optional)"
     },
     "contact-details": {
-      "header": "Where can we contact you to let you know about your BRP?",
+      "header": "How should we contact you about your BRP?",
       "address": {
-        "title": "Tell us your address so that we can contact you by post."
+        "title": "Tell us your address so we can contact you by post."
       }
     },
     "personal-details": {
       "header": "What are your personal details?",
-      "subheader": "We need these details to review the problem with your BRP."
+      "subheader": "We need these details to process your request."
     },
     "check-details": {
       "header": "Is the information you have given us correct?",
-      "subheader": "Check and make sure the information below is right. If it isn't you can change it here.",
+      "subheader": "If any information is incorrect, you can change it here.",
       "table": {
         "headers": {
           "contact-address": "Contact address",
@@ -44,7 +44,7 @@
         "explanation": "This could be an immigration lawyer or representative, or a charity, employer, college or university."
       },
       "org-details-group": {
-        "header": "Please provide their details",
+        "header": "Provide their details",
         "type": "Type of support"
       },
       "footer": {
@@ -78,9 +78,8 @@
         "header": "What happens next",
         "not-specified": {
           "para": {
-            "one": "We will now review the information you have sent us and we will let you know if you need a new card.",
-            "two": "We will get back to you within <strong>5 working days</strong>. For example, if you contact us on a Monday you will hear back by the following Monday.",
-            "three": "We will then advise you what to do next."
+            "one": "We will review the information you have sent us and we will let you know if you need a new card.",
+            "two": "We will respond within <strong>5 working days</strong> and tell you what you will need to do next."
           }
         },
         "inside-uk": {
@@ -98,6 +97,6 @@
       }
     },
     "someone-else-confirmation": {
-      "paragraph": "We will now review the information you have given. Once we've done this, we will send you a letter saying that your nominated person can collect your BRP from the Post Office. Please do not send them to collect the BRP without the letter."
+      "paragraph": "We will review the information you have given. Once we've done this, we will send you a letter saying that your nominated person can collect your BRP from the Post Office. Do not send them to collect the BRP without the letter."
     }
   }

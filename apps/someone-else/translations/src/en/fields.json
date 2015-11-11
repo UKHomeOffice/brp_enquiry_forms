@@ -2,13 +2,13 @@
   "arrange-collection-radio": {
     "options": {
       "someone-else": {
-        "label": "Allow someone else to collect my BRP"
+        "label": "Nominate someone else to collect my BRP"
       },
       "change-person": {
-        "label": "Change the person I requested to collect my BRP"
+        "label": "Change the person I nominated to collect my BRP"
       },
       "cancel-request": {
-        "label": "Cancel request for someone else to collect my BRP"
+        "label": "Cancel the request for my nominated person to collect my BRP"
       }
     }
   },
@@ -40,7 +40,7 @@
         "label": "I am physically or mentally incapable"
       },
       "refugee": {
-        "label": "I am a Gataway refugee"
+        "label": "I am a Gateway refugee"
       },
       "under-age": {
         "label": "I am under 18"
@@ -51,7 +51,7 @@
     }
   },
   "incapable-details": {
-    "label": "Please describe the problem"
+    "label": "Describe your disability"
   },
   "change-person-fullname": {
     "label": "Full name"

@@ -6,8 +6,8 @@ Feature: Validation for Step 02 of the Delivery Form
 
 	Scenario: Attempting to proceed to Step 03 of the Delivery Form without doing anything
 		When I click Continue
-		Then I see the "Tell us if your address is the same as on the letter from the Home Office" link
-		And I see "Tell us if your address is the same as on the letter from the Home Office"
+		Then I see the "Is your address the same as on the letter from the Home Office?" link
+		And I see "Is your address the same as on the letter from the Home Office?"
 
 	Scenario: Attempting to proceed to Step 03 of the Delivery Form have selecting the No radio button having not completed the address fields
 		When I check the "No" radio button

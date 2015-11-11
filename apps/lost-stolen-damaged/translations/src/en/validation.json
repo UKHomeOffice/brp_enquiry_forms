@@ -22,7 +22,7 @@
     "format": "Enter your date of birth in the correct format"
   },
   "nationality": {
-    "required": "Tell us your nationality"
+    "required": "What is your nationality"
   },
   "inside-uk": {
     "required": "Tell us where you are"
@@ -37,12 +37,12 @@
     "format": "Enter the date in the correct format"
   },
   "org-help": {
-    "required": "Tell us if you had help to complete this form"
+    "required": "Did someone help you complete this form?"
   },
   "rep-name": {
-    "required": "Tell us the name of the person that helped you to complete this form"
+    "required": "What is the name of the person who helped you complete this form?"
   },
   "org-type": {
-    "required": "Tell us the type of the organisation that helped you to complete this form"
+    "required": "What type of organisation helped you complete this form?"
   }
 }

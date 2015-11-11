@@ -80,7 +80,7 @@
       "explanation": "This could be an immigration lawyer or representative, or a charity, employer, college or university."
     },
     "org-details-group": {
-      "header": "Please provide their details",
+      "header": "Provide their details",
       "type": "Type of support"
     }
   },
@@ -113,7 +113,7 @@
       "header": "What happens next",
       "not-specified": {
         "para": {
-          "one": "We will now review the information you have sent us and we will let you know if you need a new card.",
+          "one": "We will review the information you have sent us and we will let you know if you need a new card.",
           "two": "We will get back to you within <strong>5 working days</strong>. For example, if you contact us on a Monday you will hear back by the following Monday.",
           "three": "We will then advise you what to do next."
         }

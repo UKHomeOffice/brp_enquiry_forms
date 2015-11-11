@@ -1,6 +1,6 @@
 {
   "collection-where-radio": {
-    "required": "Tell us where you were asked to collect your BRP from"
+    "required": "Where were you were asked to collect your BRP from?"
   },
   "reason-radio": {
     "required": "Select a reason why you couldn't collect your BRP"
@@ -43,30 +43,30 @@
     "format": "Enter the collection date in the correct format"
   },
   "nominated-date": {
-    "required": "Enter the nominees date of birth",
+    "required": "What is the nominee's date of birth?",
     "numeric": "Date must only contain numbers",
     "future": "The date is in the future",
-    "format": "Enter the nominees date of birth in the correct format"
+    "format": "Enter the nominee's date of birth in the correct format"
   },
   "nominated-fullname": {
-    "required": "Tell us the nominees full name"
+    "required": "What is the nominee's full name?"
   },
   "nominated-nationality": {
-    "required": "Tell us the nominees nationality"
+    "required": "What is the nominee's nationality?"
   },
   "nominated-id-number": {
-    "required": "Tell us the nominees identity document number"
+    "required": "What is the nominee's identity document number?"
   },
   "nationality": {
-    "required": "Tell us your nationality"
+    "required": "What is your nationality?"
   },
   "org-help": {
-    "required": "Tell us if you had help to complete this form"
+    "required": "Did you have help completing this form?"
   },
   "rep-name": {
-    "required": "Tell us the name of the person that helped you to complete this form"
+    "required": "What is the name of the person who helped you complete this form?"
   },
   "org-type": {
-    "required": "Tell us the type of the organisation that helped you to complete this form"
+    "required": "What type of organisation helped you complete this form?"
   }
 }

@@ -24,5 +24,5 @@ Then(/^I am on Step Two of the somone else form$/) do
 end
 
 Then(/^I see the related content$/) do
-  page.should have_content('Please describe the problem')
+  page.should have_content('Describe the problem')
 end

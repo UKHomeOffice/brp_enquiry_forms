@@ -1,6 +1,6 @@
 {
   "uk-address-radio": {
-    "required": "Tell us if you have a UK address"
+    "required": "Do you have a UK address?"
   },
   "email": {
     "required": "Enter your email address",
@@ -43,31 +43,31 @@
     "format": "Enter your date of birth in the correct format"
   },
   "change-person-date": {
-    "required": "Enter the nominees date of birth",
+    "required": "What is the nominee's date of birth?",
     "numeric": "Date must only contain numbers",
     "future": "The date is in the future",
-    "format": "Enter the nominees date of birth in the correct format"
+    "format": "Enter the nominee's date of birth in the correct format"
   },
   "change-person-fullname": {
-    "required": "Tell us the nominees full name"
+    "required": "What is the nominee's full name?"
   },
   "change-person-nationality": {
-    "required": "Tell us the nominees nationality"
+    "required": "What is the nominee's nationality?"
   },
   "change-person-id-number": {
-    "required": "Tell us the nominees identity document number"
+    "required": "What is the nominee's identity document number?"
   },
   "nationality": {
-    "required": "Tell us your nationality"
+    "required": "What is your nationality?"
   },
   "error-selection": {
     "required": "Tick one or more boxes"
   },
   "first-name-error": {
-    "required": "Tell us your correct first name"
+    "required": "What is your correct first name?"
   },
   "last-name-error": {
-    "required": "Tell us your correct last name"
+    "required": "What is your correct last name?"
   },
   "date-of-birth-error": {
     "required": "Enter your date of birth",
@@ -76,48 +76,48 @@
     "format": "Enter your date of birth in the correct format"
   },
   "birth-place-error": {
-    "required": "Tell us your correct place of birth "
+    "required": "What is your correct place of birth?"
   },
   "gender-error": {
-    "required": "Tell us your correct gender"
+    "required": "What is your correct gender?"
   },
   "damaged-error": {
-    "required": "Tell us what is wrong with your BRP"
+    "required": "What is wrong with your BRP"
   },
   "conditions-error": {
     "required": "Tell us about the problem"
   },
   "national-insurance-error": {
-    "required": "Tell us your correct national insurance number"
+    "required": "What is your correct National Insurance number?"
   },
   "photograph-error": {
-    "required": "Tell us what is wrong with your photograph"
+    "required": "What is wrong with your photograph?"
   },
   "signature-error": {
-    "required": "Tell us what is wrong with your signature"
+    "required": "What is wrong with your signature?"
   },
   "nationality-error": {
-    "required": "Tell us your correct nationality"
+    "required": "What is your correct nationality?"
   },
   "sponsor-details-error": {
-    "required": "Tell us the correct sponsor details"
+    "required": "What are the correct sponsor details?"
   },
   "inside-uk": {
     "required": "Tell us where you are"
   },
   "location-applied": {
-    "required": "Tell us where you made your application from"
+    "required": "Where did you make your application from?"
   },
   "country": {
     "required": "Tell us where you are"
   },
   "org-help": {
-    "required": "Tell us if you had help to complete this form"
+    "required": "Did you have help completing this form?"
   },
   "rep-name": {
-    "required": "Tell us the name of the person that helped you to complete this form"
+    "required": "What is the name of the person who helped you complete this form?"
   },
   "org-type": {
-    "required": "Tell us the type of the organisation that helped you to complete this form"
+    "required": "What type of organisation helped you complete this form?"
   }
 }

@@ -34,8 +34,8 @@
           "label": "My identity could not be confirmed"
         },
         "others-identity": {
-          "legend": "The identity of someone collecting on my behalf could not be confirmed",
-          "label": "The identity of someone collecting on my behalf could not be confirmed"
+          "legend": "The person collecting the card on my behalf was not identified as the person I nominated",
+          "label": "The person collecting the card on my behalf was not identified as the person I nominated"
         },
         "others-auth": {
           "legend": "The Home Office did not authorise someone else to collect on my behalf",
@@ -46,42 +46,42 @@
           "label": "The vingette in my passport is not linked to my family"
         },
         "passport-lost": {
-          "legend": "I have lost my passport",
-          "label": "I have lost my passport"
+          "legend": "I have lost my passport or travel documents",
+          "label": "I have lost my passport or travel documents"
         },
         "passport-stamp": {
           "legend": "My passport does not contain a valid entry stamp",
           "label": "My passport does not contain a valid entry stamp"
         },
         "no-brp": {
-          "legend": "My BRP was not there",
-          "label": "My BRP was not there"
+          "legend": "My BRP was not at the Post Office",
+          "label": "My BRP was not at the Post Office"
         }
       }
     },
     "reason-under-age": {
-      "label": "Please describe the problem (optional)"
+      "label": "Describe the problem (optional)"
     },
     "reason-non-identity": {
-      "label": "Please describe the problem (optional)"
+      "label": "Describe the problem (optional)"
     },
     "reason-others-identity": {
-      "label": "Please describe the problem (optional)"
+      "label": "Describe the problem (optional)"
     },
     "reason-others-auth": {
-      "label": "Please describe the problem (optional)"
+      "label": "Describe the problem (optional)"
     },
     "reason-passport-family": {
-      "label": "Please describe the problem (optional)"
+      "label": "Describe the problem (optional)"
     },
     "reason-passport-lost": {
-      "label": "Please describe the problem (optional)"
+      "label": "Describe the problem (optional)"
     },
     "reason-passport-stamp": {
-      "label": "Please describe the problem (optional)"
+      "label": "Describe the problem (optional)"
     },
     "reason-no-brp": {
-      "label": "Please describe the problem (optional)"
+      "label": "Describe the problem (optional)"
     },
     "nominated-fullname": {
       "label": "Full name"

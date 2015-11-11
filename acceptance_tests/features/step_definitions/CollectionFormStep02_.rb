@@ -7,7 +7,7 @@ end
 Then(/^I am on Step Two \- PO of the collection form$/) do
   page.should have_content('Step 2 of 6')
   page.should have_content("Why couldn't you collect your BRP?")
-  page.should have_content('Tell us the reason why you were unable to collect the BRP.')
+  page.should have_content('Why were you unable to collect the BRP?')
   page.should have_content('I am under 18 and attempted collection without my Responsible Adult')
   find_by_id('reason-radio-under-age')
   page.should have_content('My identity could not be confirmed')
