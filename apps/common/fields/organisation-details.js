@@ -6,7 +6,7 @@ module.exports = {
     className: 'inline',
     legend: {
       className: 'visuallyhidden',
-      value: ''
+      value: 'pages.check-details.org-help.title'
     },
     options: [{
       value: 'yes',
@@ -33,7 +33,7 @@ module.exports = {
     },
     legend: {
       className: 'visuallyhidden',
-      value: ''
+      value: 'pages.check-details.org-details-group.type'
     },
     options: [{
       value: 'pbs',
