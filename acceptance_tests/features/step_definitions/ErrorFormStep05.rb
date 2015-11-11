@@ -1,5 +1,5 @@
 When(/^I go to Step Five of the error form$/) do                               
-  visit config['error_host']
+  visit config['correct_mistakes_host']
   page.should have_content('Step 1 of 6')
   choose('UK')
   click_button('Continue')

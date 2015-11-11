@@ -1,5 +1,5 @@
 When(/^I go to the Confirmation page of the error form$/) do
-  visit config['error_host']
+  visit config['correct_mistakes_host']
   # page.status_code.should == 200
   page.should have_content('Step 1 of 6')
   choose('UK')

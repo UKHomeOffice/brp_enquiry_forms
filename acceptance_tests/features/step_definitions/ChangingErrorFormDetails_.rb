@@ -59,7 +59,7 @@ Then(/^I can see the changed email address and phone number from Step Five of th
 end
 
 Given(/^I have provided a contact address and I am on Step Five of the error form$/) do                     
-  visit config['error_host']
+  visit config['correct_mistakes_host']
   page.should have_content('Step 1 of 6')
   choose('UK')
   click_button('Continue')

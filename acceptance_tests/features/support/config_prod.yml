@@ -1,0 +1,11 @@
+
+
+not_arrived_host: 'https://www.biometric-residence-permit.service.gov.uk/not-arrived'
+
+correct_mistakes_host: 'https://www.biometric-residence-permit.service.gov.uk/correct-mistakes/'
+
+lost_stolen_host: 'https://www.biometric-residence-permit.service.gov.uk/lost-stolen-damaged'
+
+# collection_host: 'https://www.biometric-residence-permit.service.gov.uk/collection'
+
+# someone_host: 'https://www.biometric-residence-permit.service.gov.uk/someone-else'

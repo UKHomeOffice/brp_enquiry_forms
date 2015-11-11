@@ -1,5 +1,5 @@
 Given(/^that on step one I had selected that I am inside the UK$/) do
-  visit config['lost_host']
+  visit config['lost_stolen_host']
   # page.status_code.should == 200
   choose('inside-uk-yes')
   click_button('Continue')
@@ -29,7 +29,7 @@ Then(/^I am on the outside the UK confirmation page$/) do
 end
 
 Given(/^that on step one I had selected that I am outside the UK$/) do
-  visit config['lost_host']
+  visit config['lost_stolen_host']
   # page.status_code.should == 200
   choose('inside-uk-no')
   fill_in('country', :with =>'China')

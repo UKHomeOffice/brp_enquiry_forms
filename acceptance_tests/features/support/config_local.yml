@@ -1,0 +1,16 @@
+# local:
+#     :url: https://staging.somewhere.com
+
+# devnotprod:
+#     :url: https://production.somewhere
+
+
+not_arrived_host: 'http://localhost:8080/not-arrived'
+
+correct_mistakes_host: 'http://localhost:8080/correct-mistakes'
+
+lost_stolen_host: 'http://localhost:8080/lost-stolen-damaged'
+
+collection_host: 'http://localhost:8080/collection'
+
+someone_host: 'http://localhost:8080/someone-else'

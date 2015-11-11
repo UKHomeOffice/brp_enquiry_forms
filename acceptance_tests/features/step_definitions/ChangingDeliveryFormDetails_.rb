@@ -59,7 +59,7 @@ Then(/^I can see the changed email address and phone number from step four of th
 end
 
 Given(/^I have provided a contact address and I am on Step Five of the delivery form$/) do                                           
-  visit config['dev_host']
+  visit config['not_arrived_host']
   choose('received-yes')
   fill_in('delivery-date-day', :with => '17')
   fill_in('delivery-date-month', :with => '08')
