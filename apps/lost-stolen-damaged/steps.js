@@ -6,7 +6,6 @@ module.exports = {
     next: '/inside-uk'
   },
   '/inside-uk': {
-    template: 'inside-uk.html',
     fields: [
       'inside-uk',
       'country'
@@ -15,7 +14,6 @@ module.exports = {
   },
   '/date-lost': {
     controller: require('./controllers/date-lost'),
-    template: 'date-lost.html',
     fields: [
       'date-lost',
       'date-lost-day',
@@ -27,7 +25,6 @@ module.exports = {
   },
   '/personal-details': {
     controller: require('../common/controllers/personal-details'),
-    template: 'personal-details.html',
     fields: [
       'fullname',
       'date-of-birth',
@@ -41,7 +38,6 @@ module.exports = {
     next: '/contact-details'
   },
   '/contact-details': {
-    template: 'contact-details.html',
     fields: [
       'email',
       'no-email',
@@ -56,7 +52,6 @@ module.exports = {
   },
   '/confirm': {
     controller: require('../common/controllers/confirm'),
-    template: 'confirm.html',
     fields: [
       'org-help',
       'rep-name',
@@ -67,7 +62,6 @@ module.exports = {
   },
   '/confirmation': {
     controller: require('../common/controllers/confirmation'),
-    template: 'confirmation.html',
     backLink: false
   }
 };

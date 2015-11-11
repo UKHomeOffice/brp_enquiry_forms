@@ -7,7 +7,6 @@ module.exports = {
   },
   '/arrange': {
     controller: require('./controllers/arrange'),
-    template: 'arrange',
     fields: [
       'arrange-collection-radio',
       'someone-else-fullname',
@@ -29,7 +28,6 @@ module.exports = {
   },
   '/reason': {
     controller: require('./controllers/reason'),
-    template: 'reason',
     fields: [
       'someone-else-reason-radio',
       'incapable-details'
@@ -37,13 +35,11 @@ module.exports = {
     next: '/personal-details'
   },
   '/exit-not-eligible': {
-    template: 'exit-not-eligible',
     clearSession: true,
     prereqs: ['/']
   },
   '/personal-details': {
     controller: require('../common/controllers/personal-details'),
-    template: 'personal-details',
     fields: [
       'fullname',
       'date-of-birth',
@@ -72,7 +68,6 @@ module.exports = {
     backLink: 'arrange'
   },
   '/contact-details': {
-    template: 'contact-details',
     fields: [
       'email',
       'no-email',
@@ -86,7 +81,6 @@ module.exports = {
   },
   '/confirm': {
     controller: require('./controllers/confirm'),
-    template: 'confirm',
     fields: [
       'org-help',
       'rep-name',
@@ -96,7 +90,6 @@ module.exports = {
   },
   '/confirmation': {
     controller: require('../common/controllers/confirmation'),
-    template: 'confirmation',
     backLink: false,
     clearSession: true
   }

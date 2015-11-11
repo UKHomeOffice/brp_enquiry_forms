@@ -7,7 +7,6 @@ module.exports = {
   },
   '/where': {
     controller: require('./controllers/where'),
-    template: 'where',
     fields: [
       'collection-where-radio',
       'collection-date',
@@ -19,7 +18,6 @@ module.exports = {
   },
   '/reasons': {
     controller: require('./controllers/reason'),
-    template: 'reasons',
     fields: [
       'reason-radio',
       'reason-under-age',
@@ -52,7 +50,6 @@ module.exports = {
   },
   '/personal-details': {
     controller: require('../common/controllers/personal-details'),
-    template: 'personal-details.html',
     fields: [
       'fullname',
       'date-of-birth',
@@ -66,7 +63,6 @@ module.exports = {
     next: '/contact-details'
   },
   '/contact-details': {
-    template: 'contact-details',
     fields: [
       'email',
       'no-email',
@@ -81,7 +77,6 @@ module.exports = {
   },
   '/confirm': {
     controller: require('./controllers/confirm'),
-    template: 'confirm.html',
     fields: [
       'org-help',
       'rep-name',
@@ -92,7 +87,6 @@ module.exports = {
   },
   '/confirmation': {
     controller: require('../common/controllers/confirmation'),
-    template: 'confirmation',
     backLink: false,
     clearSession: true
   }
