@@ -16,7 +16,7 @@ end
 Then(/^I am on Step Four of the collection form$/) do
   page.should have_content('Step 4 of 6')
   page.should have_content('What are your personal details?')
-  page.should have_content('We need these details to review the problem.')
+  page.should have_content('We need these details to process your request.')
   page.should have_content('Full name')
   find_field('fullname')
   page.should have_content('Date of birth')

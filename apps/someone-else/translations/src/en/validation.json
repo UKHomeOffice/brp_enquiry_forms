@@ -37,7 +37,7 @@
     "format": "Enter the nominee's date of birth in the correct format"
   },
   "someone-else-date": {
-    "required": "What is nominee's date of birth?",
+    "required": "What is the nominee's date of birth?",
     "numeric": "Date must only contain numbers",
     "future": "The date is in the future",
     "format": "Enter the nominee's date of birth in the correct format"

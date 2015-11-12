@@ -82,7 +82,7 @@
     "required": "What is your correct gender?"
   },
   "damaged-error": {
-    "required": "What is wrong with your BRP"
+    "required": "What is wrong with your BRP?"
   },
   "conditions-error": {
     "required": "Tell us about the problem"

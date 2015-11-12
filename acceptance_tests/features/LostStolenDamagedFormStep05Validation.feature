@@ -6,8 +6,8 @@ Feature: Validation for Step 05 of the Lost Stolen Damaged Form
 
 	Scenario: Attempting to proceed to Step 06 of the Lost Stolen Damaged Form without selecting a radio button
 		When I click Send
-		Then I see the "Did you have help completing this form?" link
-		And I see "Did you have help completing this form?"
+		Then I see the "Did someone help you complete this form?" link
+		And I see "Did someone help you complete this form?"
 
 	Scenario: Attempting to proceed to Step 06 of the Lost Stolen Damaged Form with Yes selected and only Organisation completed
 		When I check the "Yes" radio button

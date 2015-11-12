@@ -6,7 +6,7 @@ Feature: Validation for Step 03 of the Collection Form
 
 	Scenario: Selecting "Continue" without filling in the required fields
 		When I click "Continue"
-		Then I see the "EWhat is the nominee's full name?" link in the "/html/body/main/div[2]/div/div/ul/li[1]/a" xpath
+		Then I see the "What is the nominee's full name?" link in the "/html/body/main/div[2]/div/div/ul/li[1]/a" xpath
 		Then I see the "What is the nominee's date of birth?" link in the "/html/body/main/div[2]/div/div/ul/li[2]/a" xpath
 		Then I see the "What is the nominee's nationality?" link in the "/html/body/main/div[2]/div/div/ul/li[3]/a" xpath
 		Then I see the "What is the nominee's identity document number?" link in the "/html/body/main/div[2]/div/div/ul/li[4]/a" xpath

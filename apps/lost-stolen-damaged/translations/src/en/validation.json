@@ -22,7 +22,7 @@
     "format": "Enter your date of birth in the correct format"
   },
   "nationality": {
-    "required": "What is your nationality"
+    "required": "What is your nationality?"
   },
   "inside-uk": {
     "required": "Tell us where you are"

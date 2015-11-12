@@ -21,7 +21,7 @@ end
 
 Then(/^I am on Step Five of the collection form$/) do
   page.should have_content('Step 5 of 6')
-  page.should have_content('Where can we contact you to let you know about your BRP?')
+  page.should have_content('How should we contact you about your BRP?')
   page.should have_content('Email address')
   find_by_id('email')
   find_by_id('no-email')

@@ -1,6 +1,6 @@
 {
   "collection-where-radio": {
-    "required": "Where were you were asked to collect your BRP from?"
+    "required": "Where were you asked to collect your BRP from?"
   },
   "reason-radio": {
     "required": "Select a reason why you couldn't collect your BRP"

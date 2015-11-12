@@ -24,7 +24,7 @@ end
 
 Then(/^I am on Step Five of the somone else form$/) do
   page.should have_content('Is the information you have given us correct?')
-  page.should have_content("Check and make sure the information below is right. If it isn't you can change it here.")
+  page.should have_content("If any information is incorrect, you can change it here.")
   page.should have_content('Send us your details')
   page.should have_content('By sending us your details you confirm that the information you have provided is true and that you accept our terms and conditions.')
   find_button('Send')
