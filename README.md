@@ -20,7 +20,7 @@ Then select one of the following journeys to see the applcation in action
 - [Someone else](http://localhost:8080/someone-else)
 - [Not arrived](http://localhost:8080/not-arrived)
 - [Correct mistakes](http://localhost:8080/correct-mistakes)
-- [Lost, damaged or stolen](http://localhost:8080/lost-damaged-stolen)
+- [Lost, damaged or stolen](http://localhost:8080/lost-stolen-damaged)
 
 See the [development documentation](./documentation/DEVELOPMENT.MD) for a complete description of the application and how to maintain and support BRP.
 
