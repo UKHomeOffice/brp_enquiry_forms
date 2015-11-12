@@ -38,11 +38,6 @@ module.exports = {
       value: 'no-brp',
       label: 'fields.reason-radio.reason-no-brp.label',
       toggle: 'reason-reason-no-brp-group',
-    },
-    {
-      value: 'other',
-      label: 'fields.reason-radio.reason-other.label',
-      toggle: 'reason-reason-other-group',
     }]
   },
   'reason-under-age': {
@@ -98,13 +93,6 @@ module.exports = {
     label: 'fields.reason-no-brp.label',
     dependent: {
       value: 'no-brp',
-      field: 'reason-radio'
-    }
-  },
-  'reason-other': {
-    label: 'fields.reason-other.label',
-    dependent: {
-      value: 'other',
       field: 'reason-radio'
     }
   }

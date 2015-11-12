@@ -24,8 +24,6 @@ Then(/^I am on Step Two \- PO of the collection form$/) do
   find_by_id('reason-radio-passport-stamp')
   page.should have_content('My BRP was not there')
   find_by_id('reason-radio-no-brp')
-  page.should have_content('Other')
-  find_by_id('reason-radio-other')
   find_button('Continue')
   delete_cookie('hmbrp.sid')
 end
@@ -48,8 +46,6 @@ Then(/^I am on Step Two \- Sponsor of the collection form$/) do
   find_by_id('reason-radio-passport-stamp')
   page.should have_content('My BRP was not there')
   find_by_id('reason-radio-no-brp')
-  page.should have_content('Other')
-  find_by_id('reason-radio-other')
   find_button('Continue')
   delete_cookie('hmbrp.sid')
 end

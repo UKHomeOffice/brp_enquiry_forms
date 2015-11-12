@@ -51,8 +51,6 @@ describe('app/scollection/controllers/collection-reason', function () {
     it('returns a reason indicating why the permit was no collected', function () {
       req.form.values['reason-radio'] = 'under-age';
       controller.locals(req, res).should.have.property('reason').and.deep.equal({'under-age': true});
-      req.form.values['reason-radio'] = 'other';
-      controller.locals(req, res).should.have.property('reason').and.deep.equal({'other': true});
     });
 
   });

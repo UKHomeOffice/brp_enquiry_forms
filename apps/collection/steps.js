@@ -27,8 +27,7 @@ module.exports = {
       'reason-passport-family',
       'reason-passport-lost',
       'reason-passport-stamp',
-      'reason-no-brp',
-      'reason-other'
+      'reason-no-brp'
     ],
     next: '/nominated-person',
     backLink: 'where'

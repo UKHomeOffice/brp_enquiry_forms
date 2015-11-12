@@ -32,8 +32,7 @@ function getReason(req) {
     'passport-family',
     'passport-lost',
     'passport-stamp',
-    'no-brp',
-    'other'
+    'no-brp'
   ];
   var reason = {};
   if (_.includes(reasons, req.form.values['reason-radio'])) {
@@ -42,7 +41,7 @@ function getReason(req) {
   }
 }
 
-ReasonController.prototype.locals = function ccollectionReasonLocals(req, res) {
+ReasonController.prototype.locals = function collectionReasonLocals(req, res) {
   var locals = BaseController.prototype.locals.apply(this, arguments);
   return _.extend({}, locals, {
     baseUrl: req.baseUrl,

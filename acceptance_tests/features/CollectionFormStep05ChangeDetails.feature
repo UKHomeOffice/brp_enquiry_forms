@@ -28,7 +28,6 @@ Feature: Changing Delivery Form details
 			|reason-radio-passport-lost  |reason-passport-lost      |8989					 |I have lost my passport 												|
 			|reason-radio-passport-stamp |reason-passport-stamp     |3434					 |My passport does not contain a valid entry stamp 						|
 			|reason-radio-no-brp		 |reason-no-brp		        |5656					 |My BRP was not there 													|
-			|reason-radio-other 		 |reason-other 		        |7778					 |Other 																|
 
 	Scenario Outline: Changing the values from Step 03 of the collection form 
 		When I go to Step Six of the collection form

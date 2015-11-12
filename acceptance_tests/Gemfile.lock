@@ -73,6 +73,3 @@ DEPENDENCIES
   rspec
   show_me_the_cookies
   yard-cucumber
-
-BUNDLED WITH
-   1.10.5
