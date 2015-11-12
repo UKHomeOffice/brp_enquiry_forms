@@ -252,21 +252,6 @@
             </span>
           </legend>
 
-          <label class="block-label" for="reason-radio-other">
-            <input
-              type="radio"
-              name="reason-radio"
-              id="reason-radio-other"
-              value="other"
-              aria-required="true"
-              data-toggle="reason-other-desc"
-              {{#errors.reason-other}} checked="checked"{{/errors.reason-other}}
-              {{#reason.other}} checked="checked"{{/reason.other}}
-              {{#errors.reason-other}} aria-describedby="reason-other-error" aria-invalid="true"{{/errors.reason-other}}
-            >
-            <span>{{#t}}fields.reason-radio.options.other.label{{/t}}</span>
-          </label>
-
           <div id="reason-other-desc" class="panel-indent js-hidden {{#errors.reason-other}}validation-error{{/errors.reason-other}}">
             {{#input-text}}reason-other{{/input-text}}
           </div>

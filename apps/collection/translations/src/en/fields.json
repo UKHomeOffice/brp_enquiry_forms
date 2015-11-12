@@ -56,10 +56,6 @@
         "no-brp": {
           "legend": "My BRP was not there",
           "label": "My BRP was not there"
-        },
-        "other": {
-          "legend": "Other",
-          "label": "Other"
         }
       }
     },
@@ -85,9 +81,6 @@
       "label": "Please describe the problem (optional)"
     },
     "reason-no-brp": {
-      "label": "Please describe the problem (optional)"
-    },
-    "reason-other": {
       "label": "Please describe the problem (optional)"
     },
     "nominated-fullname": {
