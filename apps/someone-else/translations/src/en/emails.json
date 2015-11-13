@@ -9,7 +9,7 @@
   "someone-else": {
     "header": "Someone else collecting",
     "caseworker": {
-      "nominating": "Nominating third party"
+      "nominating": "Changing nominated collector"
     },
     "tables": {
       "personal-details": {

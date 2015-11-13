@@ -5,7 +5,7 @@ end
 Then(/^I am on Step One of the collection form$/) do
   page.should have_content('Step 1 of 6')
   page.should have_content('From where were you asked to collect your BRP?')
-  page.should have_content('This could have been from a Post Office or a sponsor, such as your legal representative, employer, university or school.')
+  page.should have_content('This could have been from a Post Office branch or a sponsor, such as your legal representative, employer, university or school.')
   page.should have_content('When did you try to collect your BRP? (optional)')
   page.should have_content('For example, 11 6 2015')
   page.should have_content('Day')

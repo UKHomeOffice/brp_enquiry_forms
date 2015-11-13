@@ -8,11 +8,11 @@ Feature: Validation for Step 04 of the Error Form
 		When I click Continue
 		Then I am on Step Four of the error form
 		Then I see the "Enter your full name" link in the "/html/body/main/div[2]/div/div/ul/li[1]/a" xpath
-		Then I see the "Enter your date of birth" link in the "/html/body/main/div[2]/div/div/ul/li[2]/a" xpath 
-		Then I see the "Tell us your nationality" link in the "/html/body/main/div[2]/div/div/ul/li[3]/a" xpath 
+		Then I see the "Enter your date of birth" link in the "/html/body/main/div[2]/div/div/ul/li[2]/a" xpath
+		Then I see the "What is your nationality?" link in the "/html/body/main/div[2]/div/div/ul/li[3]/a" xpath
 		Then I see the "Enter your full name" link in the "/html/body/main/div[2]/div/form/div[1]/label/span[1]" xpath
-		Then I see the "Enter your date of birth" link in the "/html/body/main/div[2]/div/form/fieldset/span" xpath 
-		Then I see the "Tell us your nationality" link in the "/html/body/main/div[2]/div/form/div[2]/label/span[1]" xpath 
+		Then I see the "Enter your date of birth" link in the "/html/body/main/div[2]/div/form/fieldset/span" xpath
+		Then I see the "What is your nationality" link in the "/html/body/main/div[2]/div/form/div[2]/label/span[1]" xpath
 
 	Scenario: Attempting to proceed to Step 05 the Error Form without entering something in the name field
 		When I enter a valid date of birth
@@ -35,8 +35,8 @@ Feature: Validation for Step 04 of the Error Form
 		When I enter a valid date of birth
 		When I click Continue
 		Then I am on Step Four of the error form
-		Then I see the "Tell us your nationality" link
-		And I see "Tell us your nationality"
+		Then I see the "What is your nationality?" link
+		And I see "What is your nationality"
 
 	Scenario: Attempting to proceed to Step 05 the Error Form with text values in the Date of birth fields
 		When I enter text values into the Date of birth field

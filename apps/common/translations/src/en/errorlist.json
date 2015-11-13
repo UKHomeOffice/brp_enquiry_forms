@@ -1,6 +1,6 @@
 {
   "title": {
-    "single": "Please fix the following error",
-    "multiple": "Please fix the following errors"
+    "single": "Fix the following error",
+    "multiple": "Fix the following errors"
   }
 }

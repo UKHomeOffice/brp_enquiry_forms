@@ -34,22 +34,22 @@
     "format": "Enter your date of birth in the correct format"
   },
   "nationality": {
-    "required": "Tell us your nationality"
+    "required": "What is your nationality?"
   },
   "country": {
     "required": "Tell us where you are"
   },
   "org-help": {
-    "required": "Tell us if you had help to complete this form"
+    "required": "Did you have help completing this form?"
   },
   "rep-name": {
-    "required": "Tell us the name of the person that helped you to complete this form"
+    "required": "What is the name of the person who helped you complete this form?"
   },
   "org-type": {
-    "required": "Tell us the type of the organisation that helped you to complete this form"
+    "required": "What type of organisation helped you complete this form?"
   },
   "received": {
-    "required": "Tell us if you have received a letter from the Home Office"
+    "required": "Have you received a letter from the Home Office?"
   },
   "delivery-date": {
     "required": "Enter the date of the letter from the Home Office",

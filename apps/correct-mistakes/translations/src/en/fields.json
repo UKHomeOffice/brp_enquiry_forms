@@ -118,7 +118,7 @@
   },
   "sponsor-details-error": {
     "legend": "Sponsor reference",
-    "title": "This is the third line under 'remarks' on your BRP. This is the reference number of your your employer, university or college.",
+    "title": "This is the third line under 'remarks' on your BRP. This is the reference number of your employer, university or college.",
     "label": "What is the correct sponsor reference number?"
   },
   "nationality-error-checkbox": {
@@ -143,24 +143,24 @@
     "label": "What is wrong with your photograph?"
   },
   "national-insurance-error-checkbox": {
-    "label": "National Insurance Number"
+    "label": "National Insurance number"
   },
   "national-insurance-error": {
     "legend": "National Insurance Number",
-    "label": "What is your correct National Insurance Number?"
+    "label": "What is your correct National Insurance number?"
   },
   "damaged-error-checkbox": {
-    "label": "Faulty or damaged"
+    "label": "Faulty or damaged BRP card"
   },
   "damaged-error": {
-    "legend": "Faulty or damaged",
-    "label": "What is wrong with your BRP?"
+    "legend": "Faulty or damaged BRP card",
+    "label": "Describe the problem"
   },
   "conditions-error-checkbox": {
     "label": "Conditions or length of stay"
   },
   "conditions-error": {
-    "label": "Please describe the problem"
+    "label": "Describe the problem"
   },
   "truncated": {
     "options": {

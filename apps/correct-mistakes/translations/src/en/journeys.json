@@ -5,8 +5,8 @@
       "header": "Is your address still the same as the one your BRP was sent to?"
     },
     "location-applied": {
-      "header": "Where did you make your application?",
-      "subheader": "Tell us if the application was made in the UK or overseas"
+      "header": "Where did you apply for your visa?",
+      "subheader": "Was the application made from in the UK or from outside the UK?"
     }
   }
 }

@@ -1,18 +1,18 @@
 {
   "about-error": {
     "header": "What’s the problem with your BRP?",
-    "subheader": "You can select one or more problems"
+    "subheader": "You can select more than one problem."
   },
   "contact-details": {
     "header": "Where can we contact you to let you know about your BRP?",
     "address": {
-      "title": "Tell us your address so that we can contact you by post."
+      "title": "Tell us your address so we can contact you by post."
     }
   },
   "uk-address": {
-    "header": "Do you have an UK address where we can send the card?",
+    "header": "Do you have a UK address where we can send a replacement BRP?",
     "address": {
-      "title": "If needed, we will send a correct BRP to this address."
+      "title": "If you need a replacement BRP, we will post it to your UK address. If you don't have a UK address, we will deliver it to a Post Office for collection."
     }
   },
   "personal-details": {
@@ -21,7 +21,7 @@
   },
   "check-details": {
     "header": "Is the information you have given us correct?",
-    "subheader": "Check and make sure the information below is right. If it isn't you can change it here.",
+    "subheader": "If any information is incorrect, you can change it here.",
     "table": {
       "headers": {
         "contact-address": "Contact address",
@@ -40,18 +40,18 @@
       "explanation": "This could be an immigration lawyer or representative, or a charity, employer, college or university."
     },
     "org-details-group": {
-      "header": "Please provide their details",
+      "header": "Provide their details",
       "type": "Type of support"
     }
   },
   "check-details-error": {
     "header": "Is the information you have given us correct?",
-    "subheader": "Check and make sure the information below is right. If it isn't you can change it here.",
+    "subheader": "If any information is incorrect, you can change it here.",
     "corrected-details-table": {
       "title": "Corrected BRP details"
     },
     "personal-details-table": {
-      "title": "Your personal and contact details",
+      "title": "Your details",
       "headers": {
         "fullname": "Full name",
         "date-of-birth": "Date of birth",
@@ -70,8 +70,8 @@
       "header": "What happens next",
       "not-specified": {
         "para": {
-          "one": "We will now review the information you have sent us and we will let you know if you need a new card.",
-          "two": "We will get back to you within <strong>5 working days</strong>. For example, if you contact us on a Monday you will hear back by the following Monday.",
+          "one": "We will review the information you have provided and let you know whether or not you need a replacement BRP.",
+          "two": "We will respond within <strong>5 working days</strong> and tell you what you need to do next.",
           "three": "We will then advise you what to do next."
         }
       },
@@ -96,7 +96,7 @@
     }
   },
   "truncated": {
-    "header": "Problems with names on your BRP",
+    "header": "Long names on BRPs",
     "paras": {
       "one": {
         "parts": {
@@ -120,8 +120,8 @@
   },
   "exit-truncated": {
     "paras": {
-      "one": "Your name has been shortened on your BRP, as a maximum of 30 characters can be printed on the card.",
-      "two": "This is not an error. The information is correct on your card and you will be able to use it to travel.",
+      "one": "Due to limitations, we can only print the first 30 characters of your name on your BRP.",
+      "two": "This is not an error and you will be able to use your BRP.",
       "three": "You do not need to do anything else."
     }
   }

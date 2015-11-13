@@ -1,7 +1,7 @@
 @CollectionForm @ChangeDetails
 Feature: Changing Delivery Form details
 
-	Scenario: Changing the values from Step 01 of the collection form 
+	Scenario: Changing the values from Step 01 of the collection form
 		When I go to Step Six of the collection form
 		And I click the Change link for Step One of the collection form
 		Then I see the details I entered on Step One of the collection form
@@ -10,7 +10,7 @@ Feature: Changing Delivery Form details
 		And I click "Continue"
 		Then I can see all the changed personal details from Step One of the collection form
 
-	Scenario Outline: Changing the values from Step 02 of the collection form 
+	Scenario Outline: Changing the values from Step 02 of the collection form
 		When I go to Step Six of the collection form
 		And I click the Change link for Step Two of the collection form
 		Then I see the details I entered on the Step Two - PO of the collection form
@@ -22,20 +22,20 @@ Feature: Changing Delivery Form details
 		Examples:
 			|another reason radio button |fields 				    |another collection value|another reason    													|
 			|reason-radio-non-identity	 |reason-non-identity	    |1234					 |My identity could not be confirmed 									|
-			|reason-radio-others-identity|reason-others-identity    |5678					 |The identity of someone collecting on my behalf could not be confirmed|
+			|reason-radio-others-identity|reason-others-identity    |5678					 |The person collecting the card on my behalf was not identified as the person I nominated|
 			|reason-radio-others-auth	 |reason-others-auth	    |1212					 |The Home Office did not authorise someone else to collect on my behalf|
 			|reason-radio-passport-family|reason-passport-family    |3131					 |The vingette in my passport is not linked to my family 				|
 			|reason-radio-passport-lost  |reason-passport-lost      |8989					 |I have lost my passport 												|
 			|reason-radio-passport-stamp |reason-passport-stamp     |3434					 |My passport does not contain a valid entry stamp 						|
-			|reason-radio-no-brp		 |reason-no-brp		        |5656					 |My BRP was not there 													|
+			|reason-radio-no-brp		 |reason-no-brp		        |5656					 |My BRP was not at the Post Office 													|
 
-	Scenario Outline: Changing the values from Step 03 of the collection form 
+	Scenario Outline: Changing the values from Step 03 of the collection form
 		When I go to Step Six of the collection form
 		And I click the "Change" link in the "<xpath>"
 		Then I see the details I entered on the Step Three of the collection form
 		And I change the details entered in Step Three of the collection form
 		And I click "Continue"
-		Then I see all the changes I made on Step 3 of the collection form 
+		Then I see all the changes I made on Step 3 of the collection form
 
 	Examples:
 		|xpath 														 |
@@ -44,7 +44,7 @@ Feature: Changing Delivery Form details
 		|/html/body/main/div[2]/div/form/table[2]/tbody/tr[3]/td[3]/a|
 		|/html/body/main/div[2]/div/form/table[2]/tbody/tr[4]/td[3]/a|
 
-	Scenario Outline: Changing the values from Step 04 of the collection form 
+	Scenario Outline: Changing the values from Step 04 of the collection form
 		When I go to Step Six of the collection form
 		And I click the "Change" link in the "<xpath>"
 		Then I see the personal details I entered on Step Four of the collection form
@@ -61,12 +61,12 @@ Feature: Changing Delivery Form details
 			|/html/body/main/div[2]/div/form/table[3]/tbody/tr[2]/td[3]/a|
 			|/html/body/main/div[2]/div/form/table[3]/tbody/tr[3]/td[3]/a|
 
-	Scenario Outline: Changing the email value from Step 05 of the collection form 
+	Scenario Outline: Changing the email value from Step 05 of the collection form
 		When I go to Step Six of the collection form
 		And I click the "Change" link in the "<xpath>"
 		Then I see email address and phone number I entered on Step Five of the collection form
 		When I change the value in the Email field
-		And I change the value in the Phone field  
+		And I change the value in the Phone field
 		And I click "Continue"
 		Then I can see the changed email address and phone number from Step Five of the collection form
 

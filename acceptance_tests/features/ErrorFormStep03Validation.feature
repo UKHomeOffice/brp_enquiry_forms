@@ -6,8 +6,8 @@ Feature: Validation for Step 03 of the Error Form
 
 	Scenario: Attempting to proceed to Step 04 of the Error Form without doing anything
 		When I click Continue
-		Then I see the "Tell us if you have a UK address" link
-		And I see "Tell us if you have a UK address"
+		Then I see the "Do you have a UK address?" link
+		And I see "Do you have a UK address?"
 
 	Scenario: Attempting to proceed to Step 04 of the Error Form have selecting the Yes radio button having not completed the address fields
 		When I check the "Yes" radio button

@@ -1,4 +1,4 @@
-When(/^I go to Step Two of the someone else form$/) do 
+When(/^I go to Step Two of the someone else form$/) do
   visit config['someone_host']
   choose('arrange-collection-radio-someone-else')
   fill_in('someone-else-fullname', :with => 'Alex Murphy')
@@ -15,7 +15,7 @@ Then(/^I am on Step Two of the somone else form$/) do
   page.should have_content('Why do you need someone else to collect your biometric card?')
   page.should have_content('I am physically or mentally incapable')
   find_by_id('someone-else-reason-radio-incapable')
-  page.should have_content('I am a Gataway refugee')
+  page.should have_content('I am a Gateway refugee')
   find_by_id('someone-else-reason-radio-refugee')
   page.should have_content('I am under 18')
   find_by_id('someone-else-reason-radio-under-age')
@@ -24,5 +24,5 @@ Then(/^I am on Step Two of the somone else form$/) do
 end
 
 Then(/^I see the related content$/) do
-  page.should have_content('Please describe the problem')
+  page.should have_content('Describe your disability')
 end

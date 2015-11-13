@@ -4,16 +4,16 @@
     "pages": {
       "personal-details": {
         "header": "What are your personal details?",
-        "subheader": "We need these details to review the problem."
+        "subheader": "We need these details to process your request."
       },
       "check-details": {
         "header": "Is the information you have given us correct?",
-        "subheader": "Check and make sure the information below is right. If it isn't you can change it here.",
+        "subheader": "If any information is incorrect, you can change it here.",
         "tables": {
           "problem-details": {
             "title": "Problem details",
             "where-radio": {
-              "label": "Attendance"
+              "label": "Attempted collection"
             },
             "reason": {
               "label": "Reason",
@@ -21,7 +21,7 @@
             }
           },
           "others-details": {
-            "title": "Other persons details",
+            "title": "Details of the person who attempted to collect your BRP",
             "fullname": "Full name",
             "date-of-birth": "Date of birth",
             "nationality": "Nationality",
@@ -30,14 +30,14 @@
             "id-number": "Identity document number"
           },
           "personal-details": {
-            "title": "Your contact & personal details"
+            "title": "Your details"
           }
         }
       },
       "confirmation": {
         "next": {
           "paragraphs": {
-            "one": "We will now review the information you have given us to find out why there was a problem with your BRP collection."
+            "one": "We will review the information you have given us to find out why there was a problem with your BRP collection."
           }
         }
       }
