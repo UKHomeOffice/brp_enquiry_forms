@@ -26,7 +26,7 @@ bundle install
 
 Run with
 ```
-cucumber
+cucumber -r features
 ```
 or to run specific features:
 ```

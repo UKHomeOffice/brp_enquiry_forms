@@ -14,6 +14,8 @@ errornotprod_host: 'https://brp-dev.notprod.homeoffice.gov.uk/correct-mistakes'
 
 lostnotprod_host: 'https://brp-dev.notprod.homeoffice.gov.uk/lost-stolen-damaged'
 
+collectionnotprod_host: 'https://brp-dev.notprod.homeoffice.gov.uk/collection'
+
 livedelivery_host: 'https://www.biometric-residence-permit.service.gov.uk/not-arrived'
 
 liveerror_host: 'https://www.biometric-residence-permit.service.gov.uk/correct-mistakes/'
