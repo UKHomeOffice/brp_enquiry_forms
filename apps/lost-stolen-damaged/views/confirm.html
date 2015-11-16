@@ -13,7 +13,17 @@
     {{> partials-navigation}}
   {{/propositionHeader}}
 
-  {{$header}}{{#t}}pages.check-details.header{{/t}}{{/header}}
+  {{$title}}
+    {{#t}}pages.check-details.header{{/t}}
+  {{/title}}
+  
+  {{$header}}
+    {{<partials-page-header}}
+      {{$page-header}}
+        {{#t}}pages.check-details.header{{/t}}
+      {{/page-header}}
+    {{/partials-page-header}}
+  {{/header}}
 
   {{$content}}
     <p>{{#t}}pages.check-details.subheader{{/t}}</p>

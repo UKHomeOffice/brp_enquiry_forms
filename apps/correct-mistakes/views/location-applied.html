@@ -14,7 +14,17 @@
   {{> partials-navigation}}
 {{/propositionHeader}}
 
-  {{$header}}{{#t}}journeys.error.location-applied.header{{/t}}{{/header}}
+  {{$title}}
+    {{#t}}journeys.error.location-applied.header{{/t}}
+  {{/title}}
+  
+  {{$header}}
+    {{<partials-page-header}}
+      {{$page-header}}
+        {{#t}}journeys.error.location-applied.header{{/t}}
+      {{/page-header}}
+    {{/partials-page-header}}
+  {{/header}}
 
   {{$content}}
 

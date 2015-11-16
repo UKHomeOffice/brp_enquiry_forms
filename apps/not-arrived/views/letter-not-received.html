@@ -8,7 +8,18 @@
     {{> partials-navigation}}
   {{/propositionHeader}}
 
-  {{$header}}{{#t}}pages.letter-not-received.header{{/t}}{{/header}}
+
+  {{$title}}
+    {{#t}}pages.letter-not-received.header{{/t}}
+  {{/title}}
+
+  {{$header}}
+    {{<partials-page-header}}
+      {{$page-header}}
+        {{#t}}pages.letter-not-received.header{{/t}}
+      {{/page-header}}
+    {{/partials-page-header}}
+  {{/header}}
 
   {{$content}}
 

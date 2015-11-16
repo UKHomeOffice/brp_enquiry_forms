@@ -1,7 +1,15 @@
 {{<layout}}
 
+{{$title}}
+  {{content.title}}
+{{/title}}
+
 {{$header}}
-    {{content.title}}
+  {{<partials-page-header}}
+    {{$page-header}}
+      {{content.title}}
+    {{/page-header}}
+  {{/partials-page-header}}
 {{/header}}
 
 {{$content}}

@@ -14,7 +14,17 @@
   {{> partials-navigation}}
 {{/propositionHeader}}
 
-{{$header}}{{#t}}pages.about-error.header{{/t}}{{/header}}
+{{$title}}
+  {{#t}}pages.about-error.header{{/t}}
+{{/title}}
+
+{{$header}}
+  {{<partials-page-header}}
+    {{$page-header}}
+      {{#t}}pages.about-error.header{{/t}}
+    {{/page-header}}
+  {{/partials-page-header}}
+{{/header}}
 
 {{$content}}
   <p>{{#t}}pages.about-error.subheader{{/t}}</p>
