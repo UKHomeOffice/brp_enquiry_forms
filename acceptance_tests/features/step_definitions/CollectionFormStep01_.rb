@@ -1,5 +1,5 @@
 When(/^I go to Step One of the collection form$/) do
-  visit config['collection_host']
+  visit config['collectionnotprod_host']
 end
 
 Then(/^I am on Step One of the collection form$/) do
