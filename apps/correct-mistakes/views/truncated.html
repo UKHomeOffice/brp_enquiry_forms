@@ -8,7 +8,17 @@
     {{> partials-navigation}}
   {{/propositionHeader}}
 
-  {{$header}}{{#t}}pages.truncated.header{{/t}}{{/header}}
+  {{$title}}
+    {{#t}}pages.truncated.header{{/t}}
+  {{/title}}
+  
+  {{$header}}
+    {{<partials-page-header}}
+      {{$page-header}}
+        {{#t}}pages.truncated.header{{/t}}
+      {{/page-header}}
+    {{/partials-page-header}}
+  {{/header}}
 
   {{$content}}
 

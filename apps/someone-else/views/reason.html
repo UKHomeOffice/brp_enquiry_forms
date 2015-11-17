@@ -14,7 +14,17 @@
   {{> partials-navigation}}
 {{/propositionHeader}}
 
-{{$header}}{{#t}}pages.someone-else-reason.header{{/t}}{{/header}}
+{{$title}}
+  {{#t}}pages.someone-else-reason.header{{/t}}
+{{/title}}
+
+{{$header}}
+  {{<partials-page-header}}
+    {{$page-header}}
+      {{#t}}pages.someone-else-reason.header{{/t}}
+    {{/page-header}}
+  {{/partials-page-header}}
+{{/header}}
 
   {{$content}}
 
