@@ -21,7 +21,7 @@ describe('lib/field-default-attributes', function () {
       fields = {
         'some-field-name': {
         }
-      }
+      };
     });
 
     it('adds defaults if not available on the field', function () {
