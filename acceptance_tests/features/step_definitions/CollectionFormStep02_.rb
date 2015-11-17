@@ -20,8 +20,6 @@ Then(/^I am on Step Two \- PO of the collection form$/) do
   find_by_id('reason-radio-passport-family')
   page.should have_content('I have lost my passport')
   find_by_id('reason-radio-passport-lost')
-  page.should have_content('My passport does not contain a valid entry stamp')
-  find_by_id('reason-radio-passport-stamp')
   page.should have_content('My BRP was not at the Post Office')
   find_by_id('reason-radio-no-brp')
   find_button('Continue')

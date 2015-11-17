@@ -30,11 +30,6 @@ module.exports = {
       toggle: 'reason-reason-passport-lost-group',
     },
     {
-      value: 'passport-stamp',
-      label: 'fields.reason-radio.reason-passport-stamp.label',
-      toggle: 'reason-reason-passport-stamp-group',
-    },
-    {
       value: 'no-brp',
       label: 'fields.reason-radio.reason-no-brp.label',
       toggle: 'reason-reason-no-brp-group',
@@ -79,13 +74,6 @@ module.exports = {
     label: 'fields.reason-passport-lost.label',
     dependent: {
       value: 'passport-lost',
-      field: 'reason-radio'
-    }
-  },
-  'reason-passport-stamp': {
-    label: 'fields.reason-passport-stamp.label',
-    dependent: {
-      value: 'passport-stamp',
       field: 'reason-radio'
     }
   },
