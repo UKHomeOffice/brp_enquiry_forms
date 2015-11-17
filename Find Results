@@ -1,0 +1,44 @@
+Searching 18683 files for "vignette"
+
+/Users/benstevens/Documents/Code/brp_app/acceptance_tests/features/CollectionFormStep05ChangeDetails.feature:
+   25  			|reason-radio-others-identity|reason-others-identity    |5678					 |The person collecting the card on my behalf was not identified as the person I nominated|
+   26  			|reason-radio-others-auth	 |reason-others-auth	    |1212					 |The Home Office did not authorise someone else to collect on my behalf|
+   27: 			|reason-radio-passport-family|reason-passport-family    |3131					 |The vignette in my passport is not linked to my family 				|
+   28  			|reason-radio-passport-lost  |reason-passport-lost      |8989					 |I have lost my passport 												|
+   29  			|reason-radio-passport-stamp |reason-passport-stamp     |3434					 |My passport does not contain a valid entry stamp 						|
+
+/Users/benstevens/Documents/Code/brp_app/acceptance_tests/features/step_definitions/CollectionFormStep02_.rb:
+   17    page.should have_content('The Home Office did not authorise someone else to collect on my behalf')
+   18    find_by_id('reason-radio-others-auth')
+   19:   page.should have_content('The vignette in my passport is not linked to my family')
+   20    find_by_id('reason-radio-passport-family')
+   21    page.should have_content('I have lost my passport')
+
+/Users/benstevens/Documents/Code/brp_app/apps/collection/translations/en/default.json:
+   56  				},
+   57  				"passport-family": {
+   58: 					"legend": "The vignette in my passport is not linked to my family",
+   59: 					"label": "The vignette in my passport is not linked to my family"
+   60  				},
+   61  				"passport-lost": {
+
+/Users/benstevens/Documents/Code/brp_app/apps/collection/translations/src/en/fields.json:
+   43          },
+   44          "passport-family": {
+   45:           "legend": "The vignette in my passport is not linked to my family",
+   46:           "label": "The vignette in my passport is not linked to my family"
+   47          },
+   48          "passport-lost": {
+
+~/Documents/Code/brp_app/node_modules/browserify/node_modules/browserify-zlib/test/fixtures/person.jpg:
+    <binary>
+
+~/Documents/Code/brp_app/node_modules/hmpo-frontend-toolkit/node_modules/browserify/node_modules/browserify-zlib/test/fixtures/person.jpg:
+    <binary>
+
+10 matches across 6 files
+
+
+Searching 18683 files for "vingette"
+
+0 matches

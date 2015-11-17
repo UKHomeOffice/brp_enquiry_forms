@@ -39,7 +39,7 @@
   },
   "brp-card": {
     "label": "BRP card number  (optional)",
-    "hint": "For example, AB12345CD"
+    "hint": "For example, ZR1000452"
   },
   "email": {
     "label": "Email address"
