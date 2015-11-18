@@ -1,4 +1,4 @@
-@SomeoneElseForm @ConfirmationPage
+@SomeoneElseForm @ConfirmationPage @NotLive
 Feature: Confirmation Page of the Someone Else Form
 
 	Scenario: Go to the Confirmation Page of the Someone Else Form and assert content

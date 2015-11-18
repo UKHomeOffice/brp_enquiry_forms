@@ -1,4 +1,4 @@
-@CollectionForm @StepThree @Validation
+@CollectionForm @StepThree @Validation @NotLive
 Feature: Validation for Step 03 of the Collection Form
 
 	Background:

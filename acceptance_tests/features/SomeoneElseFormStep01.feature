@@ -1,4 +1,4 @@
-@SomeoneElseForm @StepOne
+@SomeoneElseForm @StepOne @NotLive
 Feature: Step 01 of the Someone Else Form
 
 	Scenario: Go to Step 01 and assert content

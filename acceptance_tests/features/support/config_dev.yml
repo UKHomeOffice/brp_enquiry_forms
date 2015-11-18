@@ -1,3 +1,8 @@
+
+environment: 'dev'
+
+submit: true
+
 not_arrived_host: 'https://brp-dev.notprod.homeoffice.gov.uk/not-arrived'
 
 correct_mistakes_host: 'https://brp-dev.notprod.homeoffice.gov.uk/correct-mistakes'

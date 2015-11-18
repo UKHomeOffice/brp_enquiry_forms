@@ -1,4 +1,4 @@
-@CollectionForm @ConfirmationPage
+@CollectionForm @ConfirmationPage @NotLive
 Feature: Confirmation Page of the Collection Form
 
 	Scenario: Go to the Confirmation Page of the Collection Form and assert content

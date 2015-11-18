@@ -16,7 +16,13 @@ Given(/^that on step one I had selected that I am inside the UK$/) do
   fill_in('email', :with => 'brpapp15@gmail.com')
   click_button('Continue')
   choose('org-help-no')
-  click_button('Send')
+
+  # Submit the form (on Local and Dev only)
+  if config['environment'] != 'prod' && config['submit'] == true
+      puts 'Special actions whilst in Local or DEV'
+      click_button('Send')
+  end
+
 end
 
 Then(/^I am on the inside the UK confirmation page$/) do
@@ -47,5 +53,11 @@ Given(/^that on step one I had selected that I am outside the UK$/) do
   fill_in('email', :with => 'brpapp15@gmail.com')
   click_button('Continue')
   choose('org-help-no')
-  click_button('Send')
+  
+  # Submit the form (on Local and Dev only)
+  if config['environment'] != 'prod' && config['submit'] == true
+      puts 'Special actions whilst in Local or DEV'
+      click_button('Send')
+  end
+
 end

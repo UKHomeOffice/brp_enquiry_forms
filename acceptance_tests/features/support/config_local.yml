@@ -4,6 +4,9 @@
 # devnotprod:
 #     :url: https://production.somewhere
 
+environment: 'local'
+
+submit: true
 
 not_arrived_host: 'http://localhost:8080/not-arrived'
 

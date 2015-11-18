@@ -1,4 +1,4 @@
-@CollectionForm @StepOne
+@CollectionForm @StepOne @NotLive
 Feature: Step 01 of the Collection Form
 
 	Scenario: Go to Step 01 and assert content

@@ -1,4 +1,4 @@
-@CollectionForm @StepSix
+@CollectionForm @StepSix @NotLive
 Feature: Step 06 of the Collection Form
 
 	Scenario: Go to Step 06 and assert content

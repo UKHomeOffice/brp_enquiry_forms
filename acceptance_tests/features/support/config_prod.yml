@@ -1,4 +1,6 @@
+environment: 'prod'
 
+submit: false
 
 not_arrived_host: 'https://www.biometric-residence-permit.service.gov.uk/not-arrived'
 
