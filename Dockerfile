@@ -8,6 +8,7 @@ COPY package.json /app/package.json
 COPY assets /app/assets
 RUN npm install
 COPY . /app
+RUN npm run hof-transpile
 
 USER root
 EXPOSE 8080
