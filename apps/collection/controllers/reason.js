@@ -31,7 +31,6 @@ function getReason(req) {
     'others-auth',
     'passport-family',
     'passport-lost',
-    'passport-stamp',
     'no-brp'
   ];
   var reason = {};

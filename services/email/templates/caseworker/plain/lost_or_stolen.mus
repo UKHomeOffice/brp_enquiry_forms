@@ -9,7 +9,7 @@
   {{#t}}emails.caseworker.date-lost{{/t}}
   {{date-lost}}
 
-  Personal details
+  BRP applicant's details
 
   {{#t}}pages.check-details-error.personal-details-table.headers.fullname{{/t}}
   {{fullname}}

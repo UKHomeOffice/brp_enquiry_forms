@@ -26,7 +26,6 @@ Feature: Changing Delivery Form details
 			|reason-radio-others-auth	 |reason-others-auth	    |1212					 |The Home Office did not authorise someone else to collect on my behalf|
 			|reason-radio-passport-family|reason-passport-family    |3131					 |The vignette in my passport is not linked to my family 				|
 			|reason-radio-passport-lost  |reason-passport-lost      |8989					 |I have lost my passport 												|
-			|reason-radio-passport-stamp |reason-passport-stamp     |3434					 |My passport does not contain a valid entry stamp 						|
 			|reason-radio-no-brp		 |reason-no-brp		        |5656					 |My BRP was not at the Post Office 													|
 
 	Scenario Outline: Changing the values from Step 03 of the collection form

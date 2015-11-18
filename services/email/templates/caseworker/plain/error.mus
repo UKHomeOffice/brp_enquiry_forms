@@ -2,7 +2,7 @@
 {{#data}}
   {{#t}}emails.correct-mistakes.header{{/t}}
 
-  Personal details
+  BRP applicant's details
 
   {{#t}}pages.check-details-error.personal-details-table.headers.fullname{{/t}}
   {{fullname}}

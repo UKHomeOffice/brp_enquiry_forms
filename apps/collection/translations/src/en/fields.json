@@ -49,10 +49,6 @@
           "legend": "I have lost my passport or travel documents",
           "label": "I have lost my passport or travel documents"
         },
-        "passport-stamp": {
-          "legend": "My passport does not contain a valid entry stamp",
-          "label": "My passport does not contain a valid entry stamp"
-        },
         "no-brp": {
           "legend": "My BRP was not at the Post Office",
           "label": "My BRP was not at the Post Office"

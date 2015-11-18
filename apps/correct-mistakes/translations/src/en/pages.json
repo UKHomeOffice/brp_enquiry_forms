@@ -116,7 +116,8 @@
           "one": "Is this how it looks on your BRP?"
         }
       }
-    }
+    },
+    "reason-no": "Continue using this service. At the end you can check the spelling of your name, and we shall send you a replacement BRP"
   },
   "exit-truncated": {
     "paras": {

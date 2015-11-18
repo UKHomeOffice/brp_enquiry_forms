@@ -1,7 +1,6 @@
 {
     "reasons": {
-      "header": "Why couldn't you collect your BRP?",
-      "subheader": "Tell us the reason why you were unable to collect the BRP."
+      "header": "Why couldn't you collect your BRP?"
     },
     "nominated": {
       "header": "Who was supposed to collect your BRP on your behalf?",

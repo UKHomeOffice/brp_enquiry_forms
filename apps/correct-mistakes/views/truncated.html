@@ -11,7 +11,7 @@
   {{$title}}
     {{#t}}pages.truncated.header{{/t}}
   {{/title}}
-  
+
   {{$header}}
     {{<partials-page-header}}
       {{$page-header}}
@@ -39,6 +39,10 @@
         <input type="hidden" name="truncation-page" value="{{truncatedItem.id}}">
 
         {{#radio-group}}truncated{{/radio-group}}
+
+        <div id="truncated-reason-no" class="panel-indent js-hidden">
+          <p>{{#t}}pages.truncated.reason-no{{/t}}</p>
+        </div>
 
         {{#input-submit}}continue{{/input-submit}}
 

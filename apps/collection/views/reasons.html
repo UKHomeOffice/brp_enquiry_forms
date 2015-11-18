@@ -16,7 +16,7 @@
   {{$title}}
     {{#t}}pages.reasons.header{{/t}}
   {{/title}}
-  
+
   {{$header}}
     {{<partials-page-header}}
       {{$page-header}}
@@ -26,8 +26,6 @@
   {{/header}}
 
   {{$content}}
-    <p>{{#t}}pages.reasons.subheader{{/t}}</p>
-
     {{<partials-form}}
 
       {{$form}}
@@ -198,33 +196,6 @@
 
           <div id="reason-passport-lost-desc" class="panel-indent js-hidden {{#errors.reason-passport-lost}}validation-error{{/errors.reason-passport-lost}}">
             {{#input-text}}reason-passport-lost{{/input-text}}
-          </div>
-        </fieldset>
-
-        <fieldset>
-          <legend class="visuallyhidden">
-            <span class="form-legend">
-              {{#t}}fields.reason-radio.options.passport-stamp.legend{{/t}}
-            </span>
-          </legend>
-
-          <label class="block-label" for="reason-radio-passport-stamp">
-            <input
-              type="radio"
-              name="reason-radio"
-              id="reason-radio-passport-stamp"
-              value="passport-stamp"
-              aria-required="true"
-              data-toggle="reason-passport-stamp-desc"
-              {{#errors.reason-passport-stamp}} checked="checked"{{/errors.reason-passport-stamp}}
-              {{#reason.passport-stamp}} checked="checked"{{/reason.passport-stamp}}
-              {{#errors.reason-passport-stamp}} aria-describedby="reason-passport-stamp-error" aria-invalid="true"{{/errors.reason-passport-stamp}}
-            >
-            <span>{{#t}}fields.reason-radio.options.passport-stamp.label{{/t}}</span>
-          </label>
-
-          <div id="reason-passport-stamp-desc" class="panel-indent js-hidden {{#errors.reason-passport-stamp}}validation-error{{/errors.reason-passport-stamp}}">
-            {{#input-text}}reason-passport-stamp{{/input-text}}
           </div>
         </fieldset>
 
