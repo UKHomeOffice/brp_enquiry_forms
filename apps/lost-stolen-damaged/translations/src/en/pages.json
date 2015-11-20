@@ -33,7 +33,7 @@
     },
     "org-help": {
       "title": "Has an organisation filled in this information on your behalf?",
-      "explanation": "This could be an immigration lawyer or representative, or a charity, employer, college or university."
+      "explanation": "This could be a friend, family member, immigartion lawyer or representative, a charity worker, an employer or a college or university official."
     },
     "org-details-group": {
       "header": "Provide their details",
@@ -54,7 +54,7 @@
       "not-specified": {
         "para": {
           "one": "We will review the information you have sent us and we will let you know if you need a new card.",
-          "two": "We will get back to you within <strong>5 working days</strong>. For example, if you contact us on a Monday you will hear back by the following Monday.",
+          "two": "We will respond as soon as we can. During busy times, this may take up to 5 working days.",
           "three": "We will then advise you what to do next."
         }
       },

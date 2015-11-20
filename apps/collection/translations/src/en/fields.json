@@ -16,7 +16,7 @@
     "collection-where-radio": {
       "options": {
         "post-office": {
-          "label": "Post office"
+          "label": "Post Office"
         },
         "sponsor": {
           "label": "Sponsor"
@@ -42,8 +42,8 @@
           "label": "The Home Office did not authorise someone else to collect on my behalf"
         },
         "passport-family": {
-          "legend": "The vignette in my passport is not linked to my family",
-          "label": "The vignette in my passport is not linked to my family"
+          "legend": "The vignette (sticker) in my passport is not linked to my family",
+          "label": "The vignette (sticker) in my passport is not linked to my family"
         },
         "passport-lost": {
           "legend": "I have lost my passport or travel documents",

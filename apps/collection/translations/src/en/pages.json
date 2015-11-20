@@ -9,7 +9,7 @@
     "where": {
       "header": "From where were you asked to collect your BRP?",
       "description": "This could have been from a Post Office branch or a sponsor, such as your legal representative, employer, university or school.",
-      "date-question": "When did you try to collect your BRP? (optional)"
+      "date-question": "If you have attempted to collect your BRP, when was it? (optional)"
     },
     "contact-details": {
       "header": "How should we contact you about your BRP?",
@@ -40,7 +40,7 @@
       },
       "org-help": {
         "title": "Has an organisation filled in this information on your behalf?",
-        "explanation": "This could be an immigration lawyer or representative, or a charity, employer, college or university."
+        "explanation": "This could be a friend, family member, immigartion lawyer or representative, a charity worker, an employer or a college or university official."
       },
       "org-details-group": {
         "header": "Provide their details",
@@ -78,7 +78,7 @@
         "not-specified": {
           "para": {
             "one": "We will review the information you have sent us and we will let you know if you need a new card.",
-            "two": "We will respond within <strong>5 working days</strong> and tell you what you will need to do next."
+            "two": "We will respond as soon as we can and tell you what you need to do next. During busy times, this may take up to 5 working days."
           }
         },
         "inside-uk": {

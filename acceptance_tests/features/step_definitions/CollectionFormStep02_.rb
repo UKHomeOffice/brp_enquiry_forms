@@ -1,6 +1,6 @@
 When(/^I go to Step Two \- PO of the collection form$/) do
   visit config['collection_host']
-  choose('collection-where-radio-Post office')
+  choose('collection-where-radio-Post Office')
   click_button('Continue')
 end
 
