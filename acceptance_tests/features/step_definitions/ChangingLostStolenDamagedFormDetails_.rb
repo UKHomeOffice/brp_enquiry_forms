@@ -29,7 +29,7 @@ Then(/^I can see the changed email address and phone number from step four of th
 end
 
 Given(/^I have provided a contact address and I am on Step Five of the lost stolen damaged form$/) do                                           
-  visit config['lost_host']
+  visit config['lost_stolen_host']
   choose('UK')
   click_button('Continue')
   fill_in('date-lost-day', :with => '17')

@@ -1,4 +1,4 @@
-@SomeoneElseForm @StepOne @Validation
+@SomeoneElseForm @StepOne @Validation @NotLive
 Feature: Validation for Step 01 of the Someone Else Form
 
 	Scenario: Attempt to proceed to Step 02 after selecting the Allow someone else to collect my BRP radio button but not filling in the fields

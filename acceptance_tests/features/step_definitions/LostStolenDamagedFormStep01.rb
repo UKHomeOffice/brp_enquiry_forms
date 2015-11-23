@@ -1,5 +1,5 @@
 When(/^I go to Step One of the lost stolen damaged form$/) do                                             
-  visit config['lost_host']
+  visit config['lost_stolen_host']
   # page.status_code.should == 200
 end
 

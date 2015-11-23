@@ -1,5 +1,5 @@
 When(/^I go to Step One of the delivery form$/) do
-  visit config['dev_host']
+  visit config['not_arrived_host']
 end                                                                   
                                                                              
 Then(/^I am on Step One of the delivery form$/) do                                              

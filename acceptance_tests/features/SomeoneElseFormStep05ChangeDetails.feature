@@ -1,4 +1,4 @@
-@SomeoneElseForm @ChangeDetails
+@SomeoneElseForm @ChangeDetails @NotLive
 Feature: Changing Someone Else Form details
 
 	Scenario Outline: Changing the values from Step 01 of the Someone Else form 

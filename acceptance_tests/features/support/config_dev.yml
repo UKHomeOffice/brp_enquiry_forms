@@ -1,0 +1,14 @@
+
+environment: 'dev'
+
+submit: true
+
+not_arrived_host: 'https://brp-dev.notprod.homeoffice.gov.uk/not-arrived'
+
+correct_mistakes_host: 'https://brp-dev.notprod.homeoffice.gov.uk/correct-mistakes'
+
+lost_stolen_host: 'https://brp-dev.notprod.homeoffice.gov.uk/lost-stolen-damaged'
+
+collection_host: 'https://brp-dev.notprod.homeoffice.gov.uk/collection'
+
+someone_host: 'https://brp-dev.notprod.homeoffice.gov.uk/someone-else'

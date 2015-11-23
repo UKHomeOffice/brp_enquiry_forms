@@ -1,5 +1,5 @@
 When(/^I go to the Confirmation page of the delivery form$/) do
-  visit config['dev_host']
+  visit config['not_arrived_host']
 
   choose('received-yes')
   fill_in('delivery-date-day', :with => '17')
@@ -18,7 +18,13 @@ When(/^I go to the Confirmation page of the delivery form$/) do
   click_button('Continue')
   page.should have_content('Is the information you have given us correct?')
   choose('org-help-no')
-  click_button('Send')
+  
+  # Submit the form (on Local and Dev only)
+  if config['environment'] != 'prod' && config['submit'] == true
+      puts 'Special actions whilst in Local or DEV'
+      click_button('Send')
+  end
+
 end
 
 Then(/^I am on Confirmation page of the delivery form$/) do

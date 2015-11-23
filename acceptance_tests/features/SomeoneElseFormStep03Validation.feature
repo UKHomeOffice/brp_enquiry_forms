@@ -1,4 +1,4 @@
-@SomeoneElseForm @StepThree @Validation
+@SomeoneElseForm @StepThree @Validation @NotLive
 Feature: Validation for Step 03 of the Someone Else Form
 
 	Background:

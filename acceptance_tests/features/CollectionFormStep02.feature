@@ -1,4 +1,4 @@
-@CollectionForm @StepTwo
+@CollectionForm @StepTwo @NotLive
 Feature: Step 02 of the Collection Form
 
 	Scenario: Go to Step 02 - PO and assert content

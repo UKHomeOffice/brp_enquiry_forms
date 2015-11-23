@@ -25,7 +25,7 @@ World(Capybara::DSL, Helpers)
 World(ShowMeTheCookies)
 
 def config
-  config_file = "#{File.dirname(__FILE__)}/config_test.yml"
+  config_file = "#{File.dirname(__FILE__)}/config_local.yml"
   if  ENV['CONFIG_FILE']
     config_file = "#{File.dirname(__FILE__)}/" + ENV['CONFIG_FILE']
   end

@@ -1,4 +1,4 @@
-@CollectionForm @ChangeDetails
+@CollectionForm @ChangeDetails @NotLive
 Feature: Changing Delivery Form details
 
 	Scenario: Changing the values from Step 01 of the collection form

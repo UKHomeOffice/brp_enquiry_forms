@@ -1,4 +1,4 @@
-@CollectionForm @StepTwo @Validation
+@CollectionForm @StepTwo @Validation @NotLive
 Feature: Validation for Step 02 of the Collection Form
 
 	Scenario: Selecting "Continue" without doing anything else on the Post Office page

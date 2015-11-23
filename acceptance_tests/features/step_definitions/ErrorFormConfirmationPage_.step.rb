@@ -1,5 +1,5 @@
 When(/^I go to the Confirmation page of the error form$/) do
-  visit config['error_host']
+  visit config['correct_mistakes_host']
   # page.status_code.should == 200
   page.should have_content('Step 1 of 6')
   choose('UK')
@@ -24,7 +24,13 @@ When(/^I go to the Confirmation page of the error form$/) do
   click_button('Continue')
   # page.status_code.should == 302
   choose('org-help-no')
-  click_button('Send')
+  
+  # Submit the form (on Local and Dev only)
+  if config['environment'] != 'prod' && config['submit'] == true
+      puts 'Special actions whilst in Local or DEV'
+      click_button('Send')
+  end
+
 end
 
 Then(/^I am on Confirmation page of the error form$/) do
@@ -78,5 +84,11 @@ Then(/^I go through the rest of the steps$/) do
   click_button('Continue')
   # page.status_code.should == 302
   choose('org-help-no')
-  click_button('Send')
+  
+  # Submit the form (on Local and Dev only)
+  if config['environment'] != 'prod' && config['submit'] == true
+      puts 'Special actions whilst in Local or DEV'
+      click_button('Send')
+  end
+
 end
