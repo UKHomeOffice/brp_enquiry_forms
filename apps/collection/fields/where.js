@@ -9,7 +9,7 @@ module.exports = {
       value: 'pages.where.header'
     },
     options: [{
-      value: 'Post office',
+      value: 'Post Office',
       label: 'fields.collection-where-radio.options.post-office.label',
       toggle: 'collection-date-group'
     }, {
