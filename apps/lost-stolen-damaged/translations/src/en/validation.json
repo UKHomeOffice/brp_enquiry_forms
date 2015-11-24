@@ -31,7 +31,7 @@
     "required": "Tell us where you are"
   },
   "date-lost": {
-    "required": "Enter the date you realised your BRP was lost or stolen",
+    "required": "When did you lose or have your BRP stolen?",
     "numeric": "Date must only contain numbers",
     "future": "The date is in the future",
     "format": "Enter the date in the correct format"

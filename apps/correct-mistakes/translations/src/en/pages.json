@@ -37,7 +37,7 @@
     },
     "org-help": {
       "title": "Has an organisation filled in this information on your behalf?",
-      "explanation": "This could be an immigration lawyer or representative, or a charity, employer, college or university."
+      "explanation": "This could be a friend, family member, immigartion lawyer or representative, a charity worker, an employer or a college or university official."
     },
     "org-details-group": {
       "header": "Provide their details",
@@ -71,7 +71,7 @@
       "not-specified": {
         "para": {
           "one": "We will review the information you have provided and let you know whether or not you need a replacement BRP.",
-          "two": "We will respond within <strong>5 working days</strong> and tell you what you need to do next.",
+          "two": "We will respond as soon as we can. During busy times, this may take up to 5 working days.",
           "three": "We will then advise you what to do next."
         }
       },

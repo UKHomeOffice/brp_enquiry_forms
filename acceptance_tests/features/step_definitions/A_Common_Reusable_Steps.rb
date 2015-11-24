@@ -1,5 +1,5 @@
-# 
-# => DSP-22_.steps   
+#
+# => DSP-22_.steps
 #
 
 When(/^I fill in all the address fields$/) do
@@ -32,25 +32,25 @@ end
 
 When(/^I proceed to Step Three$/) do
   click_button('Continue')
-end                                                                          
-                                                                             
-When(/^I fill in all the fields$/) do                                        
+end
+
+When(/^I fill in all the fields$/) do
   fill_in('fullname', :with => 'Alex Murphy')
   fill_in('date-of-birth-day', :with => '17')
   fill_in('date-of-birth-month', :with => '08')
   fill_in('date-of-birth-year', :with => '1988')
   fill_in('nationality', :with => 'Chinese')
   fill_in('passport', :with => '10000111111001010101')
-end                                                                          
-                                                                             
-When(/^I add an email address$/) do                                        
+end
+
+When(/^I add an email address$/) do
   fill_in('email', :with => 'bts@bullerproof.cr')
-end                                                                          
-                                                                             
+end
+
 When(/^I proceed to Step Five$/) do
-  click_button('Continue')                                                
-end                                                                          
-                                                                             
+  click_button('Continue')
+end
+
 Then(/^I see all the values I have entered in the previous steps$/) do
   page.should have_content('Is the information you have given us correct?')
   page.should have_content('Outwood Ln, Coulsdon, Surrey, CR5 3NP')
@@ -63,32 +63,32 @@ end
 
 When(/^I click Continue$/) do
   click_button('Continue')
-end       
+end
 
 #
 # => DSP-54_.steps
-# 
+#
  When(/^I enter text values into the date field$/) do
   fill_in('delivery-date-day', :with => 'Te')
   fill_in('delivery-date-month', :with => 'Te')
   fill_in('delivery-date-year', :with => 'Text')
-end                                                                          
-                                                                             
+end
+
 When(/^I enter special character values into the date field$/) do
   fill_in('delivery-date-day', :with => '!"')
   fill_in('delivery-date-month', :with => '&*')
   fill_in('delivery-date-year', :with => '%^&*')
-end                                                                          
-                                                                             
+end
+
 When(/^I enter the correct values into the date field$/) do
   fill_in('delivery-date-day', :with => '17')
   fill_in('delivery-date-month', :with => '08')
   fill_in('delivery-date-year', :with => '1988')
-end     
+end
 
 When(/^I see the "([^"]*)" link$/) do |arg1|
   find_link arg1
-end     
+end
 
 When(/^I enter a future date into the date field$/) do
   fill_in('delivery-date-day', :with => '17')
@@ -96,15 +96,15 @@ When(/^I enter a future date into the date field$/) do
   fill_in('delivery-date-year', :with => '2030')
 end
 
-Then(/^I see "([^"]*)"$/) do |arg1|                                          
+Then(/^I see "([^"]*)"$/) do |arg1|
   page.should have_content arg1
   delete_cookie('hmbrp.sid')
-end            
+end
 
 #
 # => DSP-61_.steps
 #
-# TO BE DONE   
+# TO BE DONE
 
 #
 # => DSP-65_.steps
@@ -127,7 +127,7 @@ end
 
 When(/^I fill in the postcode field with special characters$/) do
   fill_in('address-postcode', :with => '!&^')
-end   
+end
 
 #
 # => DSP-66_.steps
@@ -136,35 +136,35 @@ When(/^I enter a valid date of birth$/) do
   fill_in('date-of-birth-day', :with => '17')
   fill_in('date-of-birth-month', :with => '08')
   fill_in('date-of-birth-year', :with => '1988')
-end                                                                          
-                                                                             
+end
+
 When(/^I type fill in the nationality field with something valid$/) do
   fill_in('nationality', :with => 'Mongolian')
-end                                                                       
-                                                                             
+end
+
 When(/^I enter something valid in the Full name field$/) do
   fill_in('fullname', :with => 'Alex Murphy')
-end                                                                          
-                                                                             
+end
+
 When(/^I enter numbers into the Full name field$/) do
   fill_in('fullname', :with => '1234567890')
-end                                                                          
-                                                                             
+end
+
 When(/^I enter special character values into the Passport number field$/) do
   fill_in('passport', :with => ')*^&&%&*')
-end                                                                          
-                                                                             
+end
+
 When(/^I enter text values into the Date of birth field$/) do
   fill_in('date-of-birth-day', :with => 'ad')
   fill_in('date-of-birth-month', :with => 'bc')
   fill_in('date-of-birth-year', :with => 'ao')
-end                                                                          
-                                                                             
+end
+
 When(/^I enter special character values into the Date of birth field$/) do
   fill_in('date-of-birth-day', :with => '^&')
   fill_in('date-of-birth-month', :with => '&^')
   fill_in('date-of-birth-year', :with => '^&^&')
-end 
+end
 
 #
 # => DSP-67_.steps
