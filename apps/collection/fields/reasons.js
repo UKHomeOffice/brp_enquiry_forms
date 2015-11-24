@@ -31,8 +31,7 @@ module.exports = {
     },
     {
       value: 'no-brp',
-      label: 'fields.reason-radio.reason-no-brp.label',
-      toggle: 'reason-reason-no-brp-group',
+      label: 'fields.reason-radio.reason-no-brp.label'
     }]
   },
   'reason-under-age': {
@@ -74,13 +73,6 @@ module.exports = {
     label: 'fields.reason-passport-lost.label',
     dependent: {
       value: 'passport-lost',
-      field: 'reason-radio'
-    }
-  },
-  'reason-no-brp': {
-    label: 'fields.reason-no-brp.label',
-    dependent: {
-      value: 'no-brp',
       field: 'reason-radio'
     }
   }

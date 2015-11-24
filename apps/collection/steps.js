@@ -26,8 +26,7 @@ module.exports = {
       'reason-others-auth',
       'reason-passport-family',
       'reason-passport-lost',
-      'reason-passport-stamp',
-      'reason-no-brp'
+      'reason-passport-stamp'
     ],
     next: '/nominated-person',
     backLink: 'where'
