@@ -39,9 +39,6 @@
       "incapable": {
         "label": "I am physically or mentally incapable"
       },
-      "refugee": {
-        "label": "I am a Gateway refugee"
-      },
       "under-age": {
         "label": "I am under 18"
       },

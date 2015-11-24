@@ -20,9 +20,6 @@ module.exports = {
       label: 'fields.someone-else-reason-radio.options.incapable.label',
       toggle: 'incapable-details',
     }, {
-      value: 'refugee',
-      label: 'fields.someone-else-reason-radio.options.refugee.label'
-    }, {
       value: 'under-age',
       label: 'fields.someone-else-reason-radio.options.under-age.label'
     }, {
