@@ -12,7 +12,7 @@ util.inherits(ReasonController, BaseController);
 
 function getPlace(req) {
   var places = [
-    'Post office',
+    'Post Office',
     'Sponsor'
   ];
   var place = {};

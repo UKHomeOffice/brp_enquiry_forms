@@ -15,7 +15,7 @@ Then(/^I am on Step Two \- PO of the collection form$/) do
   find_by_id('reason-radio-others-identity')
   page.should have_content('The Home Office did not authorise someone else to collect on my behalf')
   find_by_id('reason-radio-others-auth')
-  page.should have_content('The vignette in my passport is not linked to my family')
+  page.should have_content('The vignette (sticker) in my passport is not linked to my family')
   find_by_id('reason-radio-passport-family')
   page.should have_content('I have lost my passport or travel documents')
   find_by_id('reason-radio-passport-lost')

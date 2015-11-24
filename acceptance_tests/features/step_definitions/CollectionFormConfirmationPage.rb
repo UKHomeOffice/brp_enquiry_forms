@@ -21,7 +21,7 @@ When(/^I go to the Confirmation page of the collection form$/) do
   fill_in('phone', :with => '077517198545')
   click_button('Continue')
   choose('org-help-no')
-  
+
   # Submit the form (on Local and Dev only)
   if config['environment'] != 'prod' && config['submit'] == true
       puts 'Special actions whilst in Local or DEV'
