@@ -76,7 +76,7 @@
       }
     },
     "org-help": {
-      "title": "Has an organisation filled in this information on your behalf?",
+      "title": "Has someone helped you fill in this form?",
       "explanation": "This could be a friend, family member, immigartion lawyer or representative, a charity worker, an employer or a college or university official."
     },
     "org-details-group": {

@@ -79,10 +79,10 @@
     "required": "What is the name of the person who helped you complete this form?"
   },
   "org-type": {
-    "required": "What type of organisation helped you to complete this form?"
+    "required": "Who has helped you fill in this form?"
   },
   "arrange-collection-radio": {
-    "required": "Tell us what you would like to do"
+    "required": "Choose one option"
   },
   "incapable-details": {
     "required": "Tell us about the problem"
