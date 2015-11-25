@@ -12,6 +12,7 @@ util.inherits(ConfirmController, ParentController);
 
 function getReason(req) {
   var reasons = [
+    'which-post-office',
     'under-age',
     'non-identity',
     'others-identity',

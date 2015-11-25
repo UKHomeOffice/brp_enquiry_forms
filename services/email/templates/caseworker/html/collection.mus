@@ -71,6 +71,7 @@
                     <tr style="border-top: 1px solid #009390;">
                       <td colspan="2" width="100%">
                         <p style="font-size: 16px; color: #000; margin: 10px 0;">
+                          {{#which-post-office}}{{#t}}fields.reason-radio.options.which-post-office.label{{/t}}{{/which-post-office}}
                           {{#under-age}}{{#t}}fields.reason-radio.options.under-age.label{{/t}}{{/under-age}}
                           {{#non-identity}}{{#t}}fields.reason-radio.options.non-identity.label{{/t}}{{/non-identity}}
                           {{#others-identity}}{{#t}}fields.reason-radio.options.others-identity.label{{/t}}{{/others-identity}}
@@ -85,6 +86,7 @@
                     <tr style="border-top: 1px solid #009390;">
                       <td colspan="2" width="100%">
                         <p style="font-size: 16px; color: #000; margin: 10px 0;">
+                          {{#reason-which-post-office}}{{reason-which-post-office}}{{/reason-which-post-office}}
                           {{#reason-under-age}}{{reason-under-age}}{{/reason-under-age}}
                           {{#reason-non-identity}}{{reason-non-identity}}{{/reason-non-identity}}
                           {{#reason-others-identity}}{{reason-others-identity}}{{/reason-others-identity}}

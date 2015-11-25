@@ -4,6 +4,10 @@ module.exports = {
   'reason-radio': {
     validate: ['required'],
     options: [{
+      value: 'which-post-office',
+      label: 'fields.reason-radio.which-post-office.label',
+      toggle: 'reason-which-post-office-group',
+    }, {
       value: 'under-age',
       label: 'fields.reason-radio.under-age.label',
       toggle: 'reason-under-age-group',

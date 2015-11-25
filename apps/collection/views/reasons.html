@@ -33,6 +33,34 @@
         {{#where.post-office}}
         <fieldset>
           <legend class="visuallyhidden">
+            <span class="form-legend">{{#t}}fields.reason-radio.options.which-post-office.legend{{/t}}</span>
+          </legend>
+
+          <label class="block-label" for="reason-radio-which-post-office">
+            <input
+              type="radio"
+              name="reason-radio"
+              id="reason-radio-which-post-office"
+              value="which-post-office"
+              aria-required="true"
+              data-toggle="reason-which-post-office-desc"
+              {{#errors.reason-which-post-office}} checked="checked"{{/errors.reason-which-post-office}}
+              {{#reason.which-post-office}} checked="checked"{{/reason.which-post-office}}
+              {{#errors.reason-which-post-office}} aria-describedby="reason-which-post-office-error" aria-invalid="true"{{/errors.reason-which-post-office}}
+            >
+            <span>{{#t}}fields.reason-radio.options.which-post-office.label{{/t}}</span>
+          </label>
+
+          <div id="reason-which-post-office-desc" class="panel-indent js-hidden {{#errors.reason-which-post-office}}validation-error{{/errors.reason-which-post-office}}">
+            {{#input-text}}reason-which-post-office{{/input-text}}
+          </div>
+
+        </fieldset>
+        {{/where.post-office}}
+
+        {{#where.post-office}}
+        <fieldset>
+          <legend class="visuallyhidden">
             <span class="form-legend">{{#t}}fields.reason-radio.options.under-age.legend{{/t}}</span>
           </legend>
 
