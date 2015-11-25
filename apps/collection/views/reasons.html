@@ -213,17 +213,10 @@
               id="reason-radio-no-brp"
               value="no-brp"
               aria-required="true"
-              data-toggle="reason-no-brp-desc"
-              {{#errors.reason-no-brp}} checked="checked"{{/errors.reason-no-brp}}
               {{#reason.no-brp}} checked="checked"{{/reason.no-brp}}
-              {{#errors.reason-no-brp}} aria-describedby="reason-no-brp-error" aria-invalid="true"{{/errors.reason-no-brp}}
             >
             <span>{{#t}}fields.reason-radio.options.no-brp.label{{/t}}</span>
           </label>
-
-          <div id="reason-no-brp-desc" class="panel-indent js-hidden {{#errors.reason-no-brp}}validation-error{{/errors.reason-no-brp}}">
-            {{#input-text}}reason-no-brp{{/input-text}}
-          </div>
         </fieldset>
 
         <fieldset>

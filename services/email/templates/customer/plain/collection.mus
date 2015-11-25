@@ -33,7 +33,6 @@
   {{#reason-others-auth}}{{reason-others-auth}}{{/reason-others-auth}}
   {{#reason-passport-family}}{{reason-passport-family}}{{/reason-passport-family}}
   {{#reason-passport-lost}}{{reason-passport-lost}}{{/reason-passport-lost}}
-  {{#reason-no-brp}}{{reason-no-brp}}{{/reason-no-brp}}
   {{#reason-other}}{{reason-other}}{{/reason-other}}
 
   {{#t}}journeys.collection.pages.check-details.tables.others-details.title{{/t}}

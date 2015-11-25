@@ -76,9 +76,6 @@
     "reason-passport-stamp": {
       "label": "Describe the problem (optional)"
     },
-    "reason-no-brp": {
-      "label": "Describe the problem (optional)"
-    },
     "nominated-fullname": {
       "label": "Full name"
     },
