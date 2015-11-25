@@ -10,10 +10,12 @@ module.exports = {
     },
     options: [{
       value: 'Post Office',
-      label: 'fields.collection-where-radio.options.post-office.label'
+      label: 'fields.collection-where-radio.options.post-office.label',
+      toggle: 'collection-date-group'
     }, {
       value: 'Sponsor',
-      label: 'fields.collection-where-radio.options.sponsor.label'
+      label: 'fields.collection-where-radio.options.sponsor.label',
+      toggle: 'collection-date-group'
     }]
   },
   'collection-date': {

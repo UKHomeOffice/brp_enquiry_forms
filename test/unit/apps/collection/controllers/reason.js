@@ -42,7 +42,7 @@ describe('app/scollection/controllers/collection-reason', function () {
     });
 
     it('returns a value indicating where the permit should have been collected from"', function () {
-      req.form.values['collection-where-radio'] = 'Post office';
+      req.form.values['collection-where-radio'] = 'Post Office';
       controller.locals(req, res).should.have.property('where').and.deep.equal({'post-office': true});
       req.form.values['collection-where-radio'] = 'Sponsor';
       controller.locals(req, res).should.have.property('where').and.deep.equal({'sponsor': true});

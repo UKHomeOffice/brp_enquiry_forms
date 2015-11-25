@@ -1,5 +1,6 @@
 When(/^I go to Step Six of the collection form$/) do
   visit config['collection_host']
+
   choose('collection-where-radio-Post Office')
   fill_in('collection-date-day', :with => '03')
   fill_in('collection-date-month', :with => '04')
