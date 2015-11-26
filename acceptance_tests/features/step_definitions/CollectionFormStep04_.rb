@@ -2,7 +2,7 @@ When(/^I go to Step Four of the collection form$/) do
   visit config['collection_host']
   choose('collection-where-radio-Post Office')
   click_button('Continue')
-  choose('reason-radio-under-age')
+  choose('reason-radio-others-identity')
   click_button('Continue')
   fill_in('nominated-fullname', :with => 'Mister Resonable')
   fill_in('nominated-date-day', :with => '17')

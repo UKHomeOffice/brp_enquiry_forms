@@ -1,8 +1,16 @@
-When(/^I go to Step Three of the collection form$/) do
+When(/^I go to Step Two of the collection form$/) do
   visit config['collection_host']
   choose('collection-where-radio-Post Office')
   click_button('Continue')
-  choose('reason-radio-under-age')
+end
+
+Then(/^I am on Step Two of the collection form$/) do
+  page.should have_content('Step 2 of 6')
+  find_field('reason-radio-others-identity')
+end
+
+Then(/^I select reason-radio-others-identity$/) do
+  choose('reason-radio-others-identity')
   click_button('Continue')
 end
 
