@@ -5,7 +5,11 @@ var Controller = sinon.stub();
 Controller.prototype.locals = sinon.stub().returns({foo: 'bar'});
 Controller.prototype.getNextStep = sinon.stub();
 var CollectionReasonController = proxyquire('../../../../../apps/collection/controllers/reason', {
-  '../../../lib/base-controller': Controller
+  'hof': {
+    controllers: {
+      base: Controller
+    }
+  }
 });
 
 describe('apps/collection/controllers/collection-reason', function () {
