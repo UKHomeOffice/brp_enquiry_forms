@@ -24,7 +24,7 @@ When(/^I go to the Confirmation page of the error form$/) do
   click_button('Continue')
   # page.status_code.should == 302
   choose('org-help-no')
-  
+
   # Submit the form (on Local and Dev only)
   if config['environment'] != 'prod' && config['submit'] == true
       puts 'Special actions whilst in Local or DEV'
@@ -38,7 +38,7 @@ Then(/^I am on Confirmation page of the error form$/) do
   # page.should have_content('We keep your personal data secure according to our')
   # find_link('privacy policy.').visible?
   # page.should have_content('What happens next')
-  # page.should have_content('We will review the information you have sent us and we will let you know if you need a new card.')
+  # page.should have_content('We will review the information you have provided to find out why there was a problem with your BRP collection.')
   # page.should have_content('We will get back to you within ')
   # page.should have_content('5 working days')
   # page.should have_content('. For example, if you contact us on a Monday you will hear back by the following Monday.')
@@ -84,7 +84,7 @@ Then(/^I go through the rest of the steps$/) do
   click_button('Continue')
   # page.status_code.should == 302
   choose('org-help-no')
-  
+
   # Submit the form (on Local and Dev only)
   if config['environment'] != 'prod' && config['submit'] == true
       puts 'Special actions whilst in Local or DEV'

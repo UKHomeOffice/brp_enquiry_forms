@@ -39,7 +39,7 @@
         }
       },
       "org-help": {
-        "title": "Has an organisation filled in this information on your behalf?",
+        "title": "Has someone helped you fill in this form?",
         "explanation": "This could be a friend, family member, immigartion lawyer or representative, a charity worker, an employer or a college or university official."
       },
       "org-details-group": {
@@ -77,7 +77,7 @@
         "header": "What happens next",
         "not-specified": {
           "para": {
-            "one": "We will review the information you have sent us and we will let you know if you need a new card.",
+            "one": "We will review the information you have provided to find out why there was a problem with your BRP collection.",
             "two": "We will respond as soon as we can and tell you what you need to do next. During busy times, this may take up to 5 working days."
           }
         },

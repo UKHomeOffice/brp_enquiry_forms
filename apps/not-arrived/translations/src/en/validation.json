@@ -46,7 +46,7 @@
     "required": "What is the name of the person who helped you complete this form?"
   },
   "org-type": {
-    "required": "What type of organisation helped you complete this form?"
+    "required": "Who has helped you fill in this form?"
   },
   "received": {
     "required": "Have you received a letter from the Home Office?"
