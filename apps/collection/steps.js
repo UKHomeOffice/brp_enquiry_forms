@@ -29,8 +29,15 @@ module.exports = {
       'reason-passport-lost',
       'reason-passport-stamp'
     ],
-    next: '/nominated-person',
-    backLink: 'where'
+    next: '/personal-details',
+    backLink: 'where',
+    forks: [{
+      target: '/nominated-person',
+      condition: {
+        field: 'reason-radio',
+        value: 'others-identity'
+      }
+    }]
   },
   '/nominated-person': {
     controller: require('./controllers/nominee'),
@@ -58,7 +65,6 @@ module.exports = {
       'nationality',
       'passport'
     ],
-    backLink: 'nominated-person',
     next: '/contact-details'
   },
   '/contact-details': {

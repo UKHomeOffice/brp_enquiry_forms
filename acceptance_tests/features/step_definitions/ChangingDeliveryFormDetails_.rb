@@ -58,7 +58,7 @@ Then(/^I can see the changed email address and phone number from step four of th
   delete_cookie('hmbrp.sid')
 end
 
-Given(/^I have provided a contact address and I am on Step Five of the delivery form$/) do                                           
+Given(/^I have provided a contact address and I am on Step Five of the delivery form$/) do
   visit config['not_arrived_host']
   choose('received-yes')
   fill_in('delivery-date-day', :with => '17')

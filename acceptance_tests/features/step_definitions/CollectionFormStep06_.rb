@@ -9,13 +9,38 @@ When(/^I go to Step Six of the collection form$/) do
   choose('reason-radio-under-age')
   fill_in('reason-under-age', :with => 'Born too late')
   click_button('Continue')
-  fill_in('nominated-fullname', :with => 'Mister Resonable')
-  fill_in('nominated-date-day', :with => '17')
-  fill_in('nominated-date-month', :with => '08')
-  fill_in('nominated-date-year', :with => '1988')
-  fill_in('nominated-nationality', :with => 'China')
-  fill_in('nominated-id-number', :with => '1234567890')
+
+  fill_in('fullname', :with => 'Topp Dogg')
+  fill_in('date-of-birth-day', :with => '17')
+  fill_in('date-of-birth-month', :with => '08')
+  fill_in('date-of-birth-year', :with => '1988')
+  fill_in('nationality', :with => 'Chinese')
   click_button('Continue')
+  fill_in('email', :with => 'bts@bullerproof.co.za')
+  fill_in('phone', :with => '07751719873')
+  click_button('Continue')
+end
+
+When(/^I go to Step Six of the collection form for reason-radio-others-identity$/) do
+  visit config['collection_host']
+
+  choose('collection-where-radio-Post Office')
+  fill_in('collection-date-day', :with => '03')
+  fill_in('collection-date-month', :with => '04')
+  fill_in('collection-date-year', :with => '1974')
+  click_button('Continue')
+  choose('reason-radio-others-identity')
+  fill_in('reason-others-identity', :with => 'The person did not have any ID')
+  click_button('Continue')
+
+  fill_in('nominated-fullname', :with => 'Other CollectingPerson')
+  fill_in('nominated-date-day', :with => '01')
+  fill_in('nominated-date-month', :with => '11')
+  fill_in('nominated-date-year', :with => '1977')
+  fill_in('nominated-nationality', :with => 'Chinese')
+  fill_in('nominated-id-number', :with => 'MYIDNUMBER')
+  click_button('Continue')
+
   fill_in('fullname', :with => 'Topp Dogg')
   fill_in('date-of-birth-day', :with => '17')
   fill_in('date-of-birth-month', :with => '08')

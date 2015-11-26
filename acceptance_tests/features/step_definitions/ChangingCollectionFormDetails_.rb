@@ -12,7 +12,7 @@ end
 
 When(/^I proceed back to Step Six of the collection form$/) do
   click_button('Continue')
-  choose('reason-radio-non-identity')
+  choose('reason-radio-others-identity')
   click_button('Continue')
   fill_in('nominated-fullname', :with => 'Mister Resonable')
   fill_in('nominated-date-day', :with => '17')
@@ -64,12 +64,12 @@ Then(/^I can see "([^"]*)" and "([^"]*)" on Step Six on the collection form$/) d
 end
 
 Then(/^I see the details I entered on the Step Three of the collection form$/) do
-  find_field('nominated-fullname').value.should == 'Mister Resonable'
-  find_field('nominated-date-day').value.should == '17'
-  find_field('nominated-date-month').value.should == '08'
-  find_field('nominated-date-year').value.should == '1988'
-  find_field('nominated-nationality').value.should == 'China'
-  find_field('nominated-id-number').value.should == '1234567890'
+  find_field('nominated-fullname').value.should == 'Other CollectingPerson'
+  find_field('nominated-date-day').value.should == '01'
+  find_field('nominated-date-month').value.should == '11'
+  find_field('nominated-date-year').value.should == '1977'
+  find_field('nominated-nationality').value.should == 'Chinese'
+  find_field('nominated-id-number').value.should == 'MYIDNUMBER'
 end
 
 Then(/^I change the details entered in Step Three of the collection form$/) do

@@ -18,7 +18,7 @@ When(/^I go to the Confirmation page of the delivery form$/) do
   click_button('Continue')
   page.should have_content('Is the information you have given us correct?')
   choose('org-help-no')
-  
+
   # Submit the form (on Local and Dev only)
   if config['environment'] != 'prod' && config['submit'] == true
       puts 'Special actions whilst in Local or DEV'

@@ -2,7 +2,7 @@
 
 var util = require('util');
 var _ = require('underscore');
-var BaseController = require('../../../lib/base-controller');
+var BaseController = require('hof').controllers.base;
 
 var ReasonController = function ReasonController() {
   BaseController.apply(this, arguments);
