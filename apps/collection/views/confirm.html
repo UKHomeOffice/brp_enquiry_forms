@@ -48,6 +48,10 @@
           <tr>
             <td>{{#t}}journeys.collection.pages.check-details.tables.problem-details.reason.label{{/t}}</td>
             <td>
+              {{#reason.which-post-office}}
+                {{#t}}fields.reason-radio.options.which-post-office.label{{/t}}
+              {{/reason.which-post-office}}
+
               {{#reason.under-age}}
                 {{#t}}fields.reason-radio.options.under-age.label{{/t}}
               {{/reason.under-age}}
@@ -81,6 +85,10 @@
               {{/reason.other}}
               <br />
               <span>
+                {{#values.reason-which-post-office}}
+                  {{values.reason-which-post-office}}
+                {{/values.reason-which-post-office}}
+
                 {{#values.reason-under-age}}
                   {{values.reason-under-age}}
                 {{/values.reason-under-age}}

@@ -18,6 +18,7 @@
   {{/collection-date}}
 
   {{#t}}journeys.collection.pages.check-details.tables.problem-details.reason.label{{/t}}
+  {{#which-post-office}}{{#t}}fields.reason-radio.options.which-post-office.label{{/t}}{{/which-post-office}}
   {{#under-age}}{{#t}}fields.reason-radio.options.under-age.label{{/t}}{{/under-age}}
   {{#non-identity}}{{#t}}fields.reason-radio.options.non-identity.label{{/t}}{{/non-identity}}
   {{#others-identity}}{{#t}}fields.reason-radio.options.others-identity.label{{/t}}{{/others-identity}}
@@ -27,6 +28,7 @@
   {{#no-brp}}{{#t}}fields.reason-radio.options.no-brp.label{{/t}}{{/no-brp}}
   {{#other}}{{#t}}fields.reason-radio.options.other.label{{/t}}{{/other}}
 
+  {{#reason-which-post-office}}{{reason-which-post-office}}{{/reason-which-post-office}}
   {{#reason-under-age}}{{reason-under-age}}{{/reason-under-age}}
   {{#reason-non-identity}}{{reason-non-identity}}{{/reason-non-identity}}
   {{#reason-others-identity}}{{reason-others-identity}}{{/reason-others-identity}}

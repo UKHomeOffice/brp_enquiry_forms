@@ -8,7 +8,7 @@ var CollectionReasonController = proxyquire('../../../../../apps/collection/cont
   '../../../lib/base-controller': Controller
 });
 
-describe('app/scollection/controllers/collection-reason', function () {
+describe('apps/collection/controllers/collection-reason', function () {
 
   describe('instantiated', function () {
 

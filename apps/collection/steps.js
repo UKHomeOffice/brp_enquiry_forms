@@ -20,6 +20,7 @@ module.exports = {
     controller: require('./controllers/reason'),
     fields: [
       'reason-radio',
+      'reason-which-post-office',
       'reason-under-age',
       'reason-non-identity',
       'reason-others-identity',
