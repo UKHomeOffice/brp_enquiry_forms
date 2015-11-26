@@ -33,7 +33,7 @@ Then(/^I am on Step Six of the collection form$/) do
   page.should have_content("If any information is incorrect, you can change it here.")
   page.should have_content('Send us your details')
   page.should have_content('By sending us your details you confirm that the information you have provided is true and that you accept our terms and conditions.')
-  page.should have_content('Has an organisation filled in this information on your behalf?')
+  page.should have_content('Has someone helped you fill in this form?')
   page.should have_content('This could be a friend, family member, immigartion lawyer or representative, a charity worker, an employer or a college or university official.')
   find_by_id('org-help-yes')
   find_by_id('org-help-no')
