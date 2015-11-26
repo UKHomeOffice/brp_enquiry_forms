@@ -18,7 +18,8 @@ module.exports = {
       toggle: 'change-person-group'
     }, {
       value: 'cancel-request',
-      label: 'fields.arrange-collection-radio.options.cancel-request.label'
+      label: 'fields.arrange-collection-radio.options.cancel-request.label',
+      toggle: 'cancel-request-message'
     }]
   },
   'someone-else-fullname': {

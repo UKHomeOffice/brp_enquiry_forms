@@ -1,7 +1,8 @@
 {
   "arrange-collection": {
     "header": "What would you like to do?",
-    "subheader": "Tell us what would you like to do."
+    "subheader": "Tell us what would you like to do.",
+    "cancel-request-message": "You do not need to cancel your request for a nominated person to collect your BRP. If you are still unable to collect your BRP yourself, you can nominate a new person to collect it for you."
   },
   "someone-else": {
     "someone-else-group": {
