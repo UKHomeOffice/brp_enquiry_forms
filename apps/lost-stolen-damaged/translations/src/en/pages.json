@@ -1,8 +1,8 @@
 {
   "contact-details": {
-    "header": "Where can we contact you to let you know about your BRP?",
+    "header": "How should we contact you to let you know about your BRP?",
     "address": {
-      "title": "Tell us your address so that we can contact you by post."
+      "title": "What address should we contact you at?"
     }
   },
   "uk-address": {
