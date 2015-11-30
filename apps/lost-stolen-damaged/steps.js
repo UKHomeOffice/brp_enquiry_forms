@@ -38,6 +38,7 @@ module.exports = {
     next: '/contact-details'
   },
   '/contact-details': {
+    controller: require('./controllers/contact-details'),
     fields: [
       'email',
       'no-email',
