@@ -1,4 +1,4 @@
-When(/^I go to Step Four of the lost stolen damaged form$/) do                                                
+When(/^I go to Step Four of the lost stolen damaged form$/) do
   visit config['lost_stolen_host']
   # page.status_code.should == 200
 
@@ -13,10 +13,10 @@ When(/^I go to Step Four of the lost stolen damaged form$/) do
   fill_in('date-of-birth-month', :with => '08')
   fill_in('date-of-birth-year', :with => '1988')
   fill_in('nationality', :with => 'Chinese')
-  click_button('Continue')	
+  click_button('Continue')
 end
 
 Then(/^I am on Step Four of the lost stolen damaged form$/) do
-  page.should have_content('Step 4 of 5')                  
-  page.should have_content('Where can we contact you to tell you what to do next?')
+  page.should have_content('Step 4 of 5')
+  page.should have_content('How should we contact you to tell you what to do next?')
 end
