@@ -16,6 +16,7 @@ When(/^I proceed to Step Four$/) do
   fill_in('date-of-birth-month', :with => '08')
   fill_in('date-of-birth-year', :with => '1988')
   fill_in('nationality', :with => 'Chinese')
+  fill_in('brp-card', :with => 'ZR1000452')
   click_button('Continue')
 end
 
@@ -41,6 +42,7 @@ When(/^I fill in all the fields$/) do
   fill_in('date-of-birth-year', :with => '1988')
   fill_in('nationality', :with => 'Chinese')
   fill_in('passport', :with => '10000111111001010101')
+  fill_in('brp-card', :with => 'ZR1000452')
 end
 
 When(/^I add an email address$/) do
@@ -144,6 +146,10 @@ end
 
 When(/^I enter something valid in the Full name field$/) do
   fill_in('fullname', :with => 'Alex Murphy')
+end
+
+When(/^I enter something valid in the BRP card number field$/) do
+  fill_in('brp-card', :with => 'ZR1000452')
 end
 
 When(/^I enter numbers into the Full name field$/) do

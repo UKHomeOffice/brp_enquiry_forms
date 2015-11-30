@@ -47,7 +47,7 @@
     "label": "Passport number (optional)"
   },
   "brp-card": {
-    "label": "BRP card number  (optional)",
+    "label": "BRP card number",
     "hint": "For example, ZR1000452"
   },
   "email": {

@@ -17,10 +17,11 @@ When(/^I go to Step Five of the error form$/) do
   fill_in('date-of-birth-month', :with => '08')
   fill_in('date-of-birth-year', :with => '1988')
   fill_in('nationality', :with => 'Chinese')
+  fill_in('brp-card', :with => 'ZR1000452')
   click_button('Continue')
 end                                                                          
                                                                              
 Then(/^I am on Step Five of the error form$/) do
   page.should have_content('Step 5 of 6')
   delete_cookie('hmbrp.sid')
-end                                                                          
+end

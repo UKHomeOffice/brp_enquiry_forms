@@ -1,4 +1,4 @@
-When(/^I go to Step Six of the error form$/) do                              
+When(/^I go to Step Six of the error form$/) do
   visit config['correct_mistakes_host']
   page.should have_content('Step 1 of 6')
   choose('UK')
@@ -25,9 +25,9 @@ When(/^I go to Step Six of the error form$/) do
   # page.status_code.should == 302
   click_button('Continue')
   # page.status_code.should == 302
-end                                                                          
-                                                                             
-Then(/^I am on Step Six of the error form$/) do 
+end
+
+Then(/^I am on Step Six of the error form$/) do
   page.should have_content('Step 6 of 6')
   delete_cookie('hmbrp.sid')
-end                                                                          
+end
