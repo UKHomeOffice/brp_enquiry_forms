@@ -8,9 +8,7 @@ When(/^I go to Step Six of the error form$/) do
   fill_in('last-name-error', :with => 'Reasonable')
   click_button('Continue')
   choose('uk-address-radio-yes')
-  fill_in('uk-address-street', :with => '2 Marsham Street')
-  fill_in('uk-address-town', :with => 'Westminster')
-  fill_in('uk-address-postcode', :with => 'SW1P 4DF')
+  complete_address_fields_with_prefix "uk-"
   click_button('Continue')
   fill_in('fullname', :with => 'Alex Murphy')
   fill_in('date-of-birth-day', :with => '17')

@@ -14,8 +14,8 @@ Feature: Validation for Step 04 of the Lost Stolen Damaged Form
 		And I fill in the second contact address field
 		And I fill in the contact postcode field
 		When I click Continue
-		Then I see the "Enter your house name or number and street" link
-		And I see "Enter your house name or number and street"
+		Then I see the "Enter your street" link
+		And I see "Enter your street"
 
 	Scenario: Attempting to proceed to Step 05 of the Lost Stolen Damaged Form without filling in the second address field
 		When I check the I do not have an email address checkbox
