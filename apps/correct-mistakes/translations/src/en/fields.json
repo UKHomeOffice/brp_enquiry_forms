@@ -162,6 +162,12 @@
   "conditions-error": {
     "label": "Describe the problem"
   },
+  "letter-error-checkbox": {
+    "label": "Enrollment letter"
+  },
+  "letter-error": {
+    "label": "Describe the problem"
+  },
   "truncated": {
     "options": {
       "yes": {

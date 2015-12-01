@@ -90,6 +90,9 @@
   "conditions-error": {
     "required": "Tell us about the problem"
   },
+  "letter-error": {
+    "required": "Tell us about the problem"
+  },
   "national-insurance-error": {
     "required": "What is your correct National Insurance number?"
   },
