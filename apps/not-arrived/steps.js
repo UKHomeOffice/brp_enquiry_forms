@@ -28,6 +28,7 @@ module.exports = {
     fields: [
       'address-match',
       'delivery-details',
+      'address-house-number',
       'address-street',
       'address-town',
       'address-county',
@@ -54,6 +55,7 @@ module.exports = {
     fields: [
       'email',
       'no-email',
+      'contact-address-house-number',
       'contact-address-street',
       'contact-address-town',
       'contact-address-county',
