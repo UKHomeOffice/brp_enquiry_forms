@@ -6,26 +6,11 @@
     "required": "Enter your email address",
     "email": "Enter your email in the correct format for example, name@domain.com"
   },
-  "address-street": {
-    "required": "Enter your house name or number and street"
-  },
-  "address-town": {
-    "required": "Enter the Town or City"
-  },
-  "address-postcode": {
-    "required": "Enter the postcode"
-  },
-  "contact-address-street": {
-    "required": "Enter your house name or number and street"
-  },
-  "contact-address-town": {
-    "required": "Enter the Town or City"
-  },
-  "contact-address-postcode": {
-    "required": "Enter the postcode"
+  "uk-address-house-number": {
+    "required": "Enter your house name or number"
   },
   "uk-address-street": {
-    "required": "Enter your house name or number and street"
+    "required": "Enter your street"
   },
   "uk-address-town": {
     "required": "Enter the Town or City"

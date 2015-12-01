@@ -17,9 +17,17 @@ module.exports = {
       label: 'fields.uk-address-radio.options.no.label'
     }]
   },
+  'uk-address-house-number': {
+    validate: ['required'],
+    label: 'common-fields.address-house-number.label',
+    dependent: {
+      value: 'yes',
+      field: 'uk-address-radio',
+    }
+  },
   'uk-address-street': {
     validate: ['required'],
-    label: 'fields.address-street.label',
+    label: 'common-fields.address-street.label',
     dependent: {
       value: 'yes',
       field: 'uk-address-radio',
@@ -27,14 +35,14 @@ module.exports = {
   },
   'uk-address-town': {
     validate: ['required'],
-    label: 'fields.address-town.label',
+    label: 'common-fields.address-town.label',
     dependent: {
       value: 'yes',
       field: 'uk-address-radio',
     }
   },
   'uk-address-county': {
-    label: 'fields.address-county.label',
+    label: 'common-fields.address-county.label',
     dependent: {
       value: 'yes',
       field: 'uk-address-radio',
@@ -42,7 +50,7 @@ module.exports = {
   },
   'uk-address-postcode': {
     validate: ['required'],
-    label: 'fields.address-postcode.label',
+    label: 'common-fields.address-postcode.label',
     dependent: {
       value: 'yes',
       field: 'uk-address-radio',
