@@ -97,7 +97,7 @@ describe('apps/correct-mistakes/controllers/about-error', function () {
       });
     });
 
-    describe('when collection location is UK and letter was checked', function () {
+    describe('when collection location is UK and enrolment letter was checked', function () {
       beforeEach(function () {
         req.form.values['letter-error-checkbox'] = 'true';
         req.sessionModel.get.withArgs('location-applied').returns('yes');
