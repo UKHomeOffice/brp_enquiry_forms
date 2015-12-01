@@ -173,5 +173,17 @@ module.exports = {
       field: 'conditions-error-checkbox',
       value: 'true'
     }
+  },
+  'letter-error-checkbox': {
+    label: 'fields.letter-error-checkbox.label',
+    toggle: 'letter-error-container'
+  },
+  'letter-error': {
+    validate: ['required'],
+    label: 'fields.letter-error.label',
+    dependent: {
+      field: 'letter-error-checkbox',
+      value: 'true'
+    }
   }
 };

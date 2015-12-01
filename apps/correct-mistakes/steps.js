@@ -42,12 +42,17 @@ module.exports = {
       'damaged-error-checkbox',
       'damaged-error',
       'conditions-error-checkbox',
-      'conditions-error'
+      'conditions-error',
+      'letter-error-checkbox',
+      'letter-error'
     ],
     backLink: 'location',
     next: '/uk-address'
   },
   '/conditions-and-length': {
+    prereqs: ['/']
+  },
+  '/enrolment-letter': {
     prereqs: ['/']
   },
   '/truncated': {

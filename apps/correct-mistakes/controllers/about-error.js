@@ -72,6 +72,8 @@ AboutErrorController.prototype.getNextStep = function getNextStep(req) {
 
   if (isChecked.call(this, 'conditions-error-checkbox', req) && req.sessionModel.get('location-applied') === 'yes') {
     next = req.baseUrl + '/conditions-and-length';
+  } else if (isChecked.call(this, 'letter-error-checkbox', req) && req.sessionModel.get('location-applied') === 'yes') {
+    next = req.baseUrl + '/enrolment-letter';
   } else if (truncatedItems) {
     next = req.baseUrl + '/truncated';
     req.sessionModel.set('truncated-items', truncatedItems);

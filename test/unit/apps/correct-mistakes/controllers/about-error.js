@@ -97,6 +97,16 @@ describe('apps/correct-mistakes/controllers/about-error', function () {
       });
     });
 
+    describe('when collection location is UK and letter was checked', function () {
+      beforeEach(function () {
+        req.form.values['letter-error-checkbox'] = 'true';
+        req.sessionModel.get.withArgs('location-applied').returns('yes');
+      });
+      it('returns baseUrl and "/enrolment-letter"', function () {
+        controller.getNextStep(req, res, callback).should.equal('/foo/enrolment-letter');
+      });
+    });
+
     describe('when entered first name is more than 30 characters', function () {
       beforeEach(function () {
         req.form.values['first-name-error-checkbox'] = 'true';

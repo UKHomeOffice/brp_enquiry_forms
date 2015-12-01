@@ -95,6 +95,12 @@
       "one": "As you think the conditions or length of your leave are incorrect you must apply for <a href='https://www.gov.uk/ask-for-a-visa-administrative-review/if-youre-in-the-uk'>administrative review</a>, where this will be considered."
     }
   },
+  "enrolment-letter": {
+    "header": "Enrolment letter problems",
+    "para": {
+      "one": "As you have not received a BRP yet and have a problem with your enrolment, please follow our Enrolment letter process to enquire about your problem."
+    }
+  },
   "truncated": {
     "header": "Long names on BRPs",
     "paras": {

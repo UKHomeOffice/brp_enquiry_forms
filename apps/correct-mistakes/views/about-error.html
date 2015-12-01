@@ -103,6 +103,11 @@
         {{#textarea}}conditions-error{{/textarea}}
       </div>
 
+      {{#checkbox}}letter-error-checkbox{{/checkbox}}
+      <div id="letter-error-container" class="panel-indent js-hidden {{#errors.letter-error}}validation-error{{/errors.letter-error}}">
+        {{#textarea}}letter-error{{/textarea}}
+      </div>
+
       {{#input-submit}}continue{{/input-submit}}
 
 
