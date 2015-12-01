@@ -1,0 +1,26 @@
+{
+  "address-house-number": {
+    "required": "Enter your house name or number"
+  },
+  "address-street": {
+    "required": "Enter your street"
+  },
+  "address-town": {
+    "required": "Enter the Town or City"
+  },
+  "address-postcode": {
+    "required": "Enter the postcode"
+  },
+  "contact-address-house-number": {
+    "required": "Enter your house name or number"
+  },
+  "contact-address-street": {
+    "required": "Enter your street"
+  },
+  "contact-address-town": {
+    "required": "Enter the Town or City"
+  },
+  "contact-address-postcode": {
+    "required": "Enter the postcode"
+  }
+}
