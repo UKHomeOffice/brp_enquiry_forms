@@ -17,13 +17,13 @@ typeahead.loadjQueryPlugin();
 var nonEuCountries = new Bloodhound({
   datumTokenizer: Bloodhound.tokenizers.whitespace,
   queryTokenizer: Bloodhound.tokenizers.whitespace,
-  local: require('./countries').nonEuCountries
+  local: require('../countries').nonEuCountries
 });
 
 var allCountries = new Bloodhound({
   datumTokenizer: Bloodhound.tokenizers.whitespace,
   queryTokenizer: Bloodhound.tokenizers.whitespace,
-  local: require('./countries').allCountries
+  local: require('../countries').allCountries
 });
 
 
