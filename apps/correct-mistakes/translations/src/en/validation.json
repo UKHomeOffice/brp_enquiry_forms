@@ -60,6 +60,9 @@
   "nationality": {
     "required": "What is your nationality?"
   },
+  "brp-card": {
+    "required": "What is your BRP card number?"
+  },
   "error-selection": {
     "required": "Tick one or more boxes"
   },

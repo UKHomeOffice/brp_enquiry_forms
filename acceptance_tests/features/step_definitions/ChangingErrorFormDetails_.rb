@@ -10,6 +10,7 @@ When(/^I go through to Step Six of the error form$/) do
   fill_in('date-of-birth-month', :with => '08')
   fill_in('date-of-birth-year', :with => '1988')
   fill_in('nationality', :with => 'Chinese')
+  fill_in('brp-card', :with => 'ZR1000452')
   # page.status_code.should == 302
   click_button('Continue')
   fill_in('email', :with => 'brpapp15@gmail.com')
