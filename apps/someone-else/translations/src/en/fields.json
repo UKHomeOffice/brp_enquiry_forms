@@ -90,18 +90,6 @@
   "date-of-birth-year": {
     "label": "Year"
   },
-  "address-street": {
-    "label": "House name or number and street"
-  },
-  "address-town": {
-    "label": "Town/City"
-  },
-  "address-county": {
-    "label": "County (optional)"
-  },
-  "address-postcode": {
-    "label": "Postcode"
-  },
   "fullname": {
     "label": "Full name"
   },
