@@ -54,12 +54,12 @@
             <tr>
               <td>{{#t}}pages.check-details.table.headers.contact-address{{/t}}</td>
               <td>
-                {{values.contact-address-street}},
+                {{values.contact-address-house-number}} {{values.contact-address-street}},
                 {{values.contact-address-town}},
                 {{#values.contact-address-county}}{{values.contact-address-county}},{{/values.contact-address-county}}
                 {{values.contact-address-postcode}}
               </td>
-              <td><a href="contact-details/edit#contact-address-street" class="button">{{#t}}buttons.change{{/t}}</a></td>
+              <td><a href="contact-details/edit#address-group" class="button">{{#t}}buttons.change{{/t}}</a></td>
             </tr>
           {{/values.contact-address-street}}
           {{/values.no-email}}
