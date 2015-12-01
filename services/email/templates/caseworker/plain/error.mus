@@ -88,6 +88,11 @@
     {{conditions-error}}
   {{/conditions-error}}
 
+  {{#letter-error}}
+    {{#t}}fields.letter-error-checkbox.label{{/t}}
+    {{letter-error}}
+  {{/letter-error}}
+
   Contact details
 
   {{#contact-address-street}}
