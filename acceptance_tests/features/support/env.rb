@@ -8,8 +8,27 @@ require 'capybara/poltergeist'
 
 require 'yaml'
 
-Capybara.run_server = false
-Capybara.default_driver = :poltergeist
+if ENV['IN_BROWSER']
+  # On demand: non-headless tests via Selenium/WebDriver
+  # To run the scenarios in browser (default: Firefox), use the following command line:
+  # IN_BROWSER=true bundle exec cucumber
+  # or (to have a pause of 1 second between each step):
+  # IN_BROWSER=true PAUSE=1 bundle exec cucumber
+  Capybara.default_driver = :selenium
+
+  Capybara.register_driver :selenium do |app|
+    require 'selenium/webdriver'
+    profile = Selenium::WebDriver::Firefox::Profile.new
+    profile['browser.helperApps.alwaysAsk.force'] = false
+    profile['browser.cache.disk.enable'] = false
+    profile['browser.cache.memory.enable'] = false
+    Capybara::Selenium::Driver.new(app, :browser => :firefox, :profile => profile)
+  end
+else
+  Capybara.run_server = false
+  Capybara.default_driver = :poltergeist
+end
+
 Capybara.default_selector = :css
 
 module Helpers
