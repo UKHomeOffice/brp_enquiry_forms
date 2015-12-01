@@ -22,9 +22,17 @@ module.exports = {
     legend: 'fields.delivery-details.legend',
     label: 'fields.delivery-details.label'
   },
+  'address-house-number': {
+    validate: ['required'],
+    label: 'common-fields.address-house-number.label',
+    dependent: {
+      value: 'no',
+      field: 'address-match',
+    }
+  },
   'address-street': {
     validate: ['required'],
-    label: 'fields.address-street.label',
+    label: 'common-fields.address-street.label',
     dependent: {
       value: 'no',
       field: 'address-match',
@@ -32,14 +40,14 @@ module.exports = {
   },
   'address-town': {
     validate: ['required'],
-    label: 'fields.address-town.label',
+    label: 'common-fields.address-town.label',
     dependent: {
       value: 'no',
       field: 'address-match',
     }
   },
   'address-county': {
-    label: 'fields.address-county.label',
+    label: 'common-fields.address-county.label',
     dependent: {
       value: 'no',
       field: 'address-match',
@@ -47,7 +55,7 @@ module.exports = {
   },
   'address-postcode': {
     validate: ['required'],
-    label: 'fields.address-postcode.label',
+    label: 'common-fields.address-postcode.label',
     dependent: {
       value: 'no',
       field: 'address-match',
