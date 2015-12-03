@@ -13,13 +13,15 @@
     "format": "Enter your date of birth in the correct format"
   },
   "nationality": {
-    "required": "What is your nationality?"
+    "required": "What is your nationality?",
+    "equal": "Please pick a nationality from the list"
   },
   "inside-uk": {
     "required": "Tell us where you are"
   },
   "country": {
-    "required": "Tell us where you are"
+    "required": "Tell us where you are",
+    "equal": "Please select a country from the list"
   },
   "date-lost": {
     "required": "When did you lose or have your BRP stolen?",

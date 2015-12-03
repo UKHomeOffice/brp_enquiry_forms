@@ -28,7 +28,8 @@
     "required": "What is the nominee's full name?"
   },
   "someone-else-nationality": {
-    "required": "What is the nominee's nationality?"
+    "required": "What is the nominee's nationality?",
+    "equal": "Please pick a nationality from the list"
   },
   "someone-else-id-number": {
     "required": "What is the nominee's identity document number?"
@@ -46,13 +47,15 @@
     "required": "What is the nominee's full name?"
   },
   "change-person-nationality": {
-    "required": "What is the nominee's nationality?"
+    "required": "What is the nominee's nationality?",
+    "equal": "Please pick a nationality from the list"
   },
   "change-person-id-number": {
     "required": "What is the nominee's identity document number?"
   },
   "nationality": {
-    "required": "What is your nationality?"
+    "required": "What is your nationality?",
+    "equal": "Please pick a nationality from the list"
   },
   "org-help": {
     "required": "Did you have help completing this form?"
