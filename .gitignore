@@ -11,3 +11,4 @@ public/js/bundle.js
 doc
 Gemfile.lock
 apps/**/translations/en
+dump.rdb

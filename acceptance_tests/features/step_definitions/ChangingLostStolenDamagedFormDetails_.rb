@@ -44,17 +44,14 @@ Given(/^I have provided a contact address and I am on Step Five of the lost stol
   fill_in('brp-card', :with => '123456789')
   click_button('Continue')
   check('no-email')
-  fill_in('contact-address-street', :with => '2 Marsham Street')
-  fill_in('contact-address-town', :with => 'Westminster')
-  fill_in('contact-address-county', :with => 'West Sussex')
-  fill_in('contact-address-postcode', :with => 'SW1P 4DF')
+  complete_address_fields_with_prefix "contact-"
   click_button('Continue')
 end
 
 Then(/^I see the contact address I entered on Step Four of the lost stolen damaged form$/) do
-  find_field('contact-address-street').value.should == '2 Marsham Street'
+  find_field('contact-address-house-number').value.should == '2'
+  find_field('contact-address-street').value.should == 'Marsham Street'
   find_field('contact-address-town').value.should == 'Westminster'
-  find_field('contact-address-county').value.should == 'West Sussex'
   find_field('contact-address-postcode').value.should == 'SW1P 4DF'
 end
 

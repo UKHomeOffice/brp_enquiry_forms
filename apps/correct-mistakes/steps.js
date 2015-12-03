@@ -70,6 +70,7 @@ module.exports = {
   '/uk-address': {
     fields: [
       'uk-address-radio',
+      'uk-address-house-number',
       'uk-address-street',
       'uk-address-town',
       'uk-address-county',
@@ -97,6 +98,7 @@ module.exports = {
     fields: [
       'email',
       'no-email',
+      'contact-address-house-number',
       'contact-address-street',
       'contact-address-town',
       'contact-address-county',

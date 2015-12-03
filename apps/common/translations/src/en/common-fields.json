@@ -1,0 +1,20 @@
+{
+  "address": {
+    "legend": "Address"
+  },
+  "address-house-number": {
+    "label": "House name or number"
+  },
+  "address-street": {
+    "label": "Street"
+  },
+  "address-town": {
+    "label": "Town/City"
+  },
+  "address-county": {
+    "label": "County (optional)"
+  },
+  "address-postcode": {
+    "label": "Postcode"
+  }
+}

@@ -122,21 +122,6 @@
     "delivery-details": {
       "label": "If the courier could have problems delivering to this address, for example there's no door number, then let us know and we'll contact them. (optional)"
     },
-    "address": {
-      "legend": "Address"
-    },
-    "address-street": {
-      "label": "House name or number and street"
-    },
-    "address-town": {
-      "label": "Town/City"
-    },
-    "address-county": {
-      "label": "County (optional)"
-    },
-    "address-postcode": {
-      "label": "Postcode"
-    },
     "fullname": {
       "label": "Full name"
     },

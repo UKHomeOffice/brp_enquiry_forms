@@ -71,6 +71,7 @@ module.exports = {
     fields: [
       'email',
       'no-email',
+      'contact-address-house-number',
       'contact-address-street',
       'contact-address-town',
       'contact-address-county',

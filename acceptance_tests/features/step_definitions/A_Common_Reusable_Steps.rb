@@ -111,16 +111,22 @@ end
 #
 # => DSP-65_.steps
 #
-When(/^I fill in the first address field$/) do
-  fill_in('address-street', :with => '2 Marsham Street')
+
+
+When(/^I fill in all the address details$/) do
+  complete_address_fields
+end
+
+When(/^I fill in the address street field$/) do
+  complete_street_field
 end
 
 When(/^I fill in the second address field$/) do
-  fill_in('address-town', :with => 'Westminster')
+  complete_town_field
 end
 
 When(/^I fill in the postcode field$/) do
-  fill_in('address-postcode', :with => 'SW1P 4DF')
+  complete_postcode_field
 end
 
 When(/^fill in the postcode field with numbers$/) do
@@ -192,15 +198,15 @@ When(/^I fill the Phone number field with text$/) do
 end
 
 When(/^I fill in the first contact address field$/) do
-  fill_in('contact-address-street', :with => '2 Marsham Street')
+  complete_street_field_with_prefix "contact-"
 end
 
 When(/^I fill in the second contact address field$/) do
-  fill_in('contact-address-town', :with => 'Westminster')
+  complete_town_field_with_prefix "contact-"
 end
 
 When(/^I fill in the contact postcode field$/) do
-  fill_in('contact-address-postcode', :with => 'SW1P 4DF')
+  complete_postcode_field_with_prefix "contact-"
 end
 
 #
