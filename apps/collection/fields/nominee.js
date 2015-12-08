@@ -5,7 +5,9 @@ module.exports = {
     validate: ['required']
   },
   'nominated-nationality': {
-    validate: ['required']
+    validate: ['required'],
+    className: ['typeahead', 'js-hidden'],
+    options: [''].concat(require('../../../assets/countries').nonEuCountries)
   },
   'nominated-id-number': {
     validate: ['required']

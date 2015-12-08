@@ -5,7 +5,7 @@ When(/^I go to Step Three of the someone else form$/) do
   fill_in('someone-else-date-day', :with => '01')
   fill_in('someone-else-date-month', :with => '02')
   fill_in('someone-else-date-year', :with => '1971')
-  fill_in('someone-else-nationality', :with => 'Chinese')
+  fill_in('someone-else-nationality', :with => 'China')
   fill_in('someone-else-id-number', :with => '1234567890')
   click_button('Continue')
   choose('someone-else-reason-radio-under-age')
@@ -29,5 +29,5 @@ Then(/^I am on Step Three of the somone else form$/) do
   find_by_id('nationality')
   page.should have_content('Passport number (optional)')
   find_by_id('passport')
-  delete_cookie('hmbrp.sid') 
+  delete_cookie('hmbrp.sid')
 end

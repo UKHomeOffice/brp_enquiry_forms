@@ -23,6 +23,8 @@ module.exports = {
   },
   nationality: {
     validate: ['required'],
+    className: ['typeahead', 'js-hidden'],
+    options: [''].concat(require('../../../assets/countries').nonEuCountries),
     label: 'fields.nationality.label'
   },
   passport: {

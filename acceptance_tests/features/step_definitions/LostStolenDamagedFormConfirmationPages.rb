@@ -11,7 +11,7 @@ Given(/^that on step one I had selected that I am inside the UK$/) do
   fill_in('date-of-birth-day', :with => '17')
   fill_in('date-of-birth-month', :with => '08')
   fill_in('date-of-birth-year', :with => '1988')
-  fill_in('nationality', :with => 'Chinese')
+  fill_in('nationality', :with => 'China')
   click_button('Continue')
   fill_in('email', :with => 'brpapp15@gmail.com')
   click_button('Continue')
@@ -48,12 +48,12 @@ Given(/^that on step one I had selected that I am outside the UK$/) do
   fill_in('date-of-birth-day', :with => '17')
   fill_in('date-of-birth-month', :with => '08')
   fill_in('date-of-birth-year', :with => '1988')
-  fill_in('nationality', :with => 'Chinese')
+  fill_in('nationality', :with => 'China')
   click_button('Continue')
   fill_in('email', :with => 'brpapp15@gmail.com')
   click_button('Continue')
   choose('org-help-no')
-  
+
   # Submit the form (on Local and Dev only)
   if config['environment'] != 'prod' && config['submit'] == true
       puts 'Special actions whilst in Local or DEV'

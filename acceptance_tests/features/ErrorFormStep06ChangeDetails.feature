@@ -17,7 +17,7 @@ Feature: Changing Error Form details
 		|last-name-error-checkbox	        |last-name-error         |Resonable									    |something2   |
 		|birth-place-error-checkbox         |birth-place-error       |Pyongyang	                                    |something3   |
 		|sponsor-details-error-checkbox     |sponsor-details-error   |1234567890                                    |something4   |
-		|nationality-error-checkbox         |nationality-error       |Korea, North (Democratic People's Republic of)|something5   |
+		|nationality-error-checkbox         |nationality-error       |Korea, North (Democratic People's Republic of)|Korea, South (Republic of Korea)|
 		|signature-error-checkbox	        |signature-error         |Its not mine 								    |something6   |
 	# 	# |national-insurance-error-checkbox  |national-insurance-error|1234567890                                    |something7   |
 		|photograph-error-checkbox	        |photograph-error        |Its not me                                    |something8   |
