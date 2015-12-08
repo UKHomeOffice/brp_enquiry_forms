@@ -114,7 +114,7 @@
   {{/phone}}
 
   {{#org-type}}
-  Help from a {{org-type}} called {{rep-name}} {{#rep-email}}<{{rep-email}}>{{/rep-email}}
+  Help from a {{#t}}fields.org-type.options[{{org-type}}].label{{/t}} called {{rep-name}} {{#rep-email}}<{{rep-email}}>{{/rep-email}}
   {{/org-type}}
 
 {{/data}}
