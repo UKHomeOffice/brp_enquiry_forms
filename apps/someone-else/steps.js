@@ -85,6 +85,7 @@ module.exports = {
     fields: [
       'org-help',
       'rep-name',
+      'rep-email',
       'org-type'
     ],
     next: '/confirmation'

@@ -189,6 +189,10 @@ When(/^I enter an email address without an @$/) do
   fill_in('email', :with => 'btsbullerproof.cr')
 end
 
+When(/^I enter a representative email address without an @$/) do
+  fill_in('rep-email', :with => 'btsbullerproof.cr')
+end
+
 When(/^I fill the Phone number field with special characters$/) do
   fill_in('phone', :with => '^&^&^&^&')
 end
