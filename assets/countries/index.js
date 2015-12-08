@@ -19,7 +19,7 @@ var countries = [{
   name: 'DZA'
 },
 {
-  value: 'American Samoa ',
+  value: 'American Samoa',
   name: 'ASM'
 },
 {
@@ -27,11 +27,11 @@ var countries = [{
   name: 'AND'
 },
 {
-  value: 'Angola ',
+  value: 'Angola',
   name: 'AGO'
 },
 {
-  value: 'Anguilla ',
+  value: 'Anguilla',
   name: 'AIA'
 },
 {
@@ -55,7 +55,7 @@ var countries = [{
   name: 'AUS'
 },
 {
-  value: 'Azerbaijan ',
+  value: 'Azerbaijan',
   name: 'AZE'
 },
 {
@@ -67,11 +67,11 @@ var countries = [{
   name: 'BHR'
 },
 {
-  value: 'Bangladesh ',
+  value: 'Bangladesh',
   name: 'BGD'
 },
 {
-  value: 'Barbados ',
+  value: 'Barbados',
   name: 'BRB'
 },
 {
@@ -79,7 +79,7 @@ var countries = [{
   name: 'BLR'
 },
 {
-  value: 'Belize ',
+  value: 'Belize',
   name: 'BLZ'
 },
 {
@@ -91,7 +91,7 @@ var countries = [{
   name: 'BMU'
 },
 {
-  value: 'Bhutan ',
+  value: 'Bhutan',
   name: 'BTN'
 },
 {
@@ -103,19 +103,19 @@ var countries = [{
   name: 'BES'
 },
 {
-  value: 'Bosnia and Herzegovina ',
+  value: 'Bosnia and Herzegovina',
   name: 'BIH'
 },
 {
-  value: 'Botswana ',
+  value: 'Botswana',
   name: 'BWA'
 },
 {
-  value: 'Brazil ',
+  value: 'Brazil',
   name: 'BRA'
 },
 {
-  value: 'British Indian Ocean Territory ',
+  value: 'British Indian Ocean Territory',
   name: 'IOT'
 },
 {
@@ -123,7 +123,7 @@ var countries = [{
   name: 'BRN'
 },
 {
-  value: 'Burkina Faso ',
+  value: 'Burkina Faso',
   name: 'BFA'
 },
 {
@@ -131,31 +131,31 @@ var countries = [{
   name: 'BDI'
 },
 {
-  value: 'Cambodia ',
+  value: 'Cambodia',
   name: 'KHM'
 },
 {
-  value: 'Cameroon ',
+  value: 'Cameroon',
   name: 'CMR'
 },
 {
-  value: 'Canada ',
+  value: 'Canada',
   name: 'CAN'
 },
 {
-  value: 'Cape Verde ',
+  value: 'Cape Verde',
   name: 'CPV'
 },
 {
-  value: 'Cayman Islands ',
+  value: 'Cayman Islands',
   name: 'CYM'
 },
 {
-  value: 'Central African Republic ',
+  value: 'Central African Republic',
   name: 'CAF'
 },
 {
-  value: 'Chad ',
+  value: 'Chad',
   name: 'TCD'
 },
 {
@@ -167,7 +167,7 @@ var countries = [{
   name: 'CHN'
 },
 {
-  value: 'Christmas Island ',
+  value: 'Christmas Island',
   name: 'CXR'
 },
 {
@@ -175,7 +175,7 @@ var countries = [{
   name: 'CCK'
 },
 {
-  value: 'Colombia ',
+  value: 'Colombia',
   name: 'COL'
 },
 {
@@ -191,15 +191,15 @@ var countries = [{
   name: 'COD'
 },
 {
-  value: 'Cook Islands ',
+  value: 'Cook Islands',
   name: 'COK'
 },
 {
-  value: 'Costa Rica ',
+  value: 'Costa Rica',
   name: 'CRI'
 },
 {
-  value: 'Cuba ',
+  value: 'Cuba',
   name: 'CUB'
 },
 {
@@ -207,23 +207,23 @@ var countries = [{
   name: 'CUW'
 },
 {
-  value: 'Cyprus ',
+  value: 'Cyprus',
   name: 'CYP'
 },
 {
-  value: 'Cyprus, northern ',
+  value: 'Cyprus, northern',
   name: 'XXT'
 },
 {
-  value: 'Djibouti ',
+  value: 'Djibouti',
   name: 'DJI'
 },
 {
-  value: 'Dominica ',
+  value: 'Dominica',
   name: 'DMA'
 },
 {
-  value: 'Dominican Republic ',
+  value: 'Dominican Republic',
   name: 'DOM'
 },
 {
@@ -247,11 +247,11 @@ var countries = [{
   name: 'ERI'
 },
 {
-  value: 'Ethiopia ',
+  value: 'Ethiopia',
   name: 'ETH'
 },
 {
-  value: 'Falkland Islands ',
+  value: 'Falkland Islands',
   name: 'FLK'
 },
 {
@@ -259,7 +259,7 @@ var countries = [{
   name: 'FRO'
 },
 {
-  value: 'Fiji ',
+  value: 'Fiji',
   name: 'FJI'
 },
 {
@@ -267,7 +267,7 @@ var countries = [{
   name: 'GUF'
 },
 {
-  value: 'French Polynesia ',
+  value: 'French Polynesia',
   name: 'PYF'
 },
 {
@@ -279,7 +279,7 @@ var countries = [{
   name: 'GAB'
 },
 {
-  value: 'Gambia ',
+  value: 'Gambia',
   name: 'GMB'
 },
 {
@@ -303,11 +303,11 @@ var countries = [{
   name: 'GRD'
 },
 {
-  value: 'Guadeloupe ',
+  value: 'Guadeloupe',
   name: 'GLP'
 },
 {
-  value: 'Guam ',
+  value: 'Guam',
   name: 'GUM'
 },
 {
@@ -315,11 +315,11 @@ var countries = [{
   name: 'GTM'
 },
 {
-  value: 'Guernsey ',
+  value: 'Guernsey',
   name: 'GGY'
 },
 {
-  value: 'Guinea ',
+  value: 'Guinea',
   name: 'GIN'
 },
 {
@@ -327,7 +327,7 @@ var countries = [{
   name: 'GNB'
 },
 {
-  value: 'Guyana ',
+  value: 'Guyana',
   name: 'GUY'
 },
 {
@@ -339,11 +339,11 @@ var countries = [{
   name: 'VAT'
 },
 {
-  value: 'Honduras ',
+  value: 'Honduras',
   name: 'HND'
 },
 {
-  value: 'Hong Kong Special Administrative Region of China ',
+  value: 'Hong Kong Special Administrative Region of China',
   name: 'HKG'
 },
 {
@@ -359,15 +359,15 @@ var countries = [{
   name: 'IDN'
 },
 {
-  value: 'Iran ',
+  value: 'Iran',
   name: 'IRN'
 },
 {
-  value: 'Iraq ',
+  value: 'Iraq',
   name: 'IRQ'
 },
 {
-  value: 'Israel ',
+  value: 'Israel',
   name: 'ISR'
 },
 {
@@ -383,15 +383,15 @@ var countries = [{
   name: 'JPN'
 },
 {
-  value: 'Jersey ',
+  value: 'Jersey',
   name: 'JEY'
 },
 {
-  value: 'Jordan ',
+  value: 'Jordan',
   name: 'JOR'
 },
 {
-  value: 'Kazakhstan ',
+  value: 'Kazakhstan',
   name: 'KAZ'
 },
 {
@@ -399,31 +399,31 @@ var countries = [{
   name: 'KEN'
 },
 {
-  value: 'Kiribati ',
+  value: 'Kiribati',
   name: 'KIR'
 },
 {
-  value: 'Korea, North (Democratic People\'s Republic of) ',
+  value: 'Korea, North (Democratic People\'s Republic of)',
   name: 'PRK'
 },
 {
-  value: 'Korea, South (Republic of Korea) ',
+  value: 'Korea, South (Republic of Korea)',
   name: 'KOR'
 },
 {
-  value: 'Kosovo ',
+  value: 'Kosovo',
   name: 'XXK'
 },
 {
-  value: 'Kuwait ',
+  value: 'Kuwait',
   name: 'KWT'
 },
 {
-  value: 'Kyrgyzstan ',
+  value: 'Kyrgyzstan',
   name: 'KGZ'
 },
 {
-  value: 'Laos ',
+  value: 'Laos',
   name: 'LAO'
 },
 {
@@ -451,39 +451,39 @@ var countries = [{
   name: 'MAC'
 },
 {
-  value: 'Macedonia, The Former Yugoslav Republic Of ',
+  value: 'Macedonia, The Former Yugoslav Republic Of',
   name: 'MKD'
 },
 {
-  value: 'Madagascar ',
+  value: 'Madagascar',
   name: 'MDG'
 },
 {
-  value: 'Malawi ',
+  value: 'Malawi',
   name: 'MWI'
 },
 {
-  value: 'Malaysia ',
+  value: 'Malaysia',
   name: 'MYS'
 },
 {
-  value: 'Maldives ',
+  value: 'Maldives',
   name: 'MDV'
 },
 {
-  value: 'Mali ',
+  value: 'Mali',
   name: 'MLI'
 },
 {
-  value: 'Marshall Islands ',
+  value: 'Marshall Islands',
   name: 'MHL'
 },
 {
-  value: 'Martinique ',
+  value: 'Martinique',
   name: 'MTQ'
 },
 {
-  value: 'Mauritania ',
+  value: 'Mauritania',
   name: 'MRT'
 },
 {
@@ -495,31 +495,31 @@ var countries = [{
   name: 'MYT'
 },
 {
-  value: 'Mexico ',
+  value: 'Mexico',
   name: 'MEX'
 },
 {
-  value: 'Micronesia (Federated States of) ',
+  value: 'Micronesia (Federated States of)',
   name: 'FSM'
 },
 {
-  value: 'Moldova, Republic of ',
+  value: 'Moldova, Republic of',
   name: 'MDA'
 },
 {
-  value: 'Monaco ',
+  value: 'Monaco',
   name: 'MCO'
 },
 {
-  value: 'Mongolia ',
+  value: 'Mongolia',
   name: 'MNG'
 },
 {
-  value: 'Montenegro ',
+  value: 'Montenegro',
   name: 'MNE'
 },
 {
-  value: 'Montserrat ',
+  value: 'Montserrat',
   name: 'MSR'
 },
 {
@@ -527,11 +527,11 @@ var countries = [{
   name: 'MAR'
 },
 {
-  value: 'Mozambique ',
+  value: 'Mozambique',
   name: 'MOZ'
 },
 {
-  value: 'Burma(Myanmar) ',
+  value: 'Burma(Myanmar)',
   name: 'MMR'
 },
 {
@@ -567,27 +567,27 @@ var countries = [{
   name: 'NGA'
 },
 {
-  value: 'Niue ',
+  value: 'Niue',
   name: 'NIU'
 },
 {
-  value: 'Norfolk Island ',
+  value: 'Norfolk Island',
   name: 'NFK'
 },
 {
-  value: 'Northern Mariana Islands ',
+  value: 'Northern Mariana Islands',
   name: 'MNP'
 },
 {
-  value: 'Norway ',
+  value: 'Norway',
   name: 'NOR'
 },
 {
-  value: 'Oman ',
+  value: 'Oman',
   name: 'OMN'
 },
 {
-  value: 'Pakistan ',
+  value: 'Pakistan',
   name: 'PAK'
 },
 {
@@ -595,23 +595,23 @@ var countries = [{
   name: 'PLW'
 },
 {
-  value: 'Palestinian Territory Occupied ',
+  value: 'Palestinian Territory Occupied',
   name: 'PSE'
 },
 {
-  value: 'Panama ',
+  value: 'Panama',
   name: 'PAN'
 },
 {
-  value: 'Papua New Guinea ',
+  value: 'Papua New Guinea',
   name: 'PNG'
 },
 {
-  value: 'Paraguay ',
+  value: 'Paraguay',
   name: 'PRY'
 },
 {
-  value: 'Peru ',
+  value: 'Peru',
   name: 'PER'
 },
 {
@@ -619,7 +619,7 @@ var countries = [{
   name: 'PHL'
 },
 {
-  value: 'Pitcairn ',
+  value: 'Pitcairn',
   name: 'PCN'
 },
 {
@@ -635,19 +635,19 @@ var countries = [{
   name: 'REU'
 },
 {
-  value: 'Russian Federation ',
+  value: 'Russian Federation',
   name: 'RUS'
 },
 {
-  value: 'Rwanda ',
+  value: 'Rwanda',
   name: 'RWA'
 },
 {
-  value: 'Saint Barthelemy ',
+  value: 'Saint Barthelemy',
   name: 'BLM'
 },
 {
-  value: 'Saint Helena, Ascension and Tristan da Cunha ',
+  value: 'Saint Helena, Ascension and Tristan da Cunha',
   name: 'SHN'
 },
 {
@@ -659,7 +659,7 @@ var countries = [{
   name: 'LCA'
 },
 {
-  value: 'Saint Martin ',
+  value: 'Saint Martin',
   name: 'MAF'
 },
 {
@@ -667,7 +667,7 @@ var countries = [{
   name: 'SPM'
 },
 {
-  value: 'Saint Vincent and the Grenadines ',
+  value: 'Saint Vincent and the Grenadines',
   name: 'VCT'
 },
 {
@@ -675,7 +675,7 @@ var countries = [{
   name: 'WSM'
 },
 {
-  value: 'San Marino ',
+  value: 'San Marino',
   name: 'SMR'
 },
 {
@@ -683,7 +683,7 @@ var countries = [{
   name: 'STP'
 },
 {
-  value: 'Saudi Arabia ',
+  value: 'Saudi Arabia',
   name: 'SAU'
 },
 {
@@ -691,15 +691,15 @@ var countries = [{
   name: 'SEN'
 },
 {
-  value: 'Serbia ',
+  value: 'Serbia',
   name: 'SRB'
 },
 {
-  value: 'Seychelles ',
+  value: 'Seychelles',
   name: 'SYC'
 },
 {
-  value: 'Sierra Leone ',
+  value: 'Sierra Leone',
   name: 'SLE'
 },
 {
@@ -719,11 +719,11 @@ var countries = [{
   name: 'SOM'
 },
 {
-  value: 'South Africa ',
+  value: 'South Africa',
   name: 'ZAF'
 },
 {
-  value: 'South Georgia and the South Sandwich Islands ',
+  value: 'South Georgia and the South Sandwich Islands',
   name: 'SGS'
 },
 {
@@ -739,11 +739,11 @@ var countries = [{
   name: 'SDN'
 },
 {
-  value: 'Suriname ',
+  value: 'Suriname',
   name: 'SUR'
 },
 {
-  value: 'Svalbard and Jan Mayen Islands ',
+  value: 'Svalbard and Jan Mayen Islands',
   name: 'SJM'
 },
 {
@@ -755,19 +755,19 @@ var countries = [{
   name: 'SYR'
 },
 {
-  value: 'Taiwan ',
+  value: 'Taiwan',
   name: 'TWN'
 },
 {
-  value: 'Tajikistan ',
+  value: 'Tajikistan',
   name: 'TJK'
 },
 {
-  value: 'Tanzania ',
+  value: 'Tanzania',
   name: 'TZA'
 },
 {
-  value: 'Thailand ',
+  value: 'Thailand',
   name: 'THA'
 },
 {
@@ -775,7 +775,7 @@ var countries = [{
   name: 'TLS'
 },
 {
-  value: 'Togo ',
+  value: 'Togo',
   name: 'TGO'
 },
 {
@@ -795,23 +795,23 @@ var countries = [{
   name: 'TUN'
 },
 {
-  value: 'Turkey ',
+  value: 'Turkey',
   name: 'TUR'
 },
 {
-  value: 'Turkmenistan ',
+  value: 'Turkmenistan',
   name: 'TKM'
 },
 {
-  value: 'Turks and Caicos Islands ',
+  value: 'Turks and Caicos Islands',
   name: 'TCA'
 },
 {
-  value: 'Tuvalu ',
+  value: 'Tuvalu',
   name: 'TUV'
 },
 {
-  value: 'Uganda ',
+  value: 'Uganda',
   name: 'UGA'
 },
 {
@@ -819,11 +819,11 @@ var countries = [{
   name: 'UKR'
 },
 {
-  value: 'United Arab Emirates ',
+  value: 'United Arab Emirates',
   name: 'ARE'
 },
 {
-  value: 'United Nations ',
+  value: 'United Nations',
   name: 'UNO'
 },
 {
@@ -831,11 +831,11 @@ var countries = [{
   name: 'UNA'
 },
 {
-  value: 'United States Minor Outlying Islands ',
+  value: 'United States Minor Outlying Islands',
   name: 'UMI'
 },
 {
-  value: 'United States of America ',
+  value: 'United States of America',
   name: 'USA'
 },
 {
@@ -843,7 +843,7 @@ var countries = [{
   name: 'URY'
 },
 {
-  value: 'Uzbekistan ',
+  value: 'Uzbekistan',
   name: 'UZB'
 },
 {
@@ -863,7 +863,7 @@ var countries = [{
   name: 'VGB'
 },
 {
-  value: 'Virgin Islands, U.S. ',
+  value: 'Virgin Islands, U.S.',
   name: 'VIR'
 },
 {
@@ -871,7 +871,7 @@ var countries = [{
   name: 'WLF'
 },
 {
-  value: 'Western Sahara ',
+  value: 'Western Sahara',
   name: 'ESH'
 },
 {
@@ -879,7 +879,7 @@ var countries = [{
   name: 'YEM'
 },
 {
-  value: 'Zambia ',
+  value: 'Zambia',
   name: 'ZMB'
 },
 {

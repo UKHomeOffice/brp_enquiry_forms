@@ -64,7 +64,9 @@ module.exports = {
   },
   'someone-else-nationality': {
     validate: ['required'],
-    label: 'fields.someone-else-nationality.label',
+    className: ['typeahead', 'js-hidden'],
+    options: [''].concat(require('../../../assets/countries').allCountries),
+    type: 'typeahead',
     dependent: {
       value: 'someone-else',
       field: 'arrange-collection-radio',
@@ -120,6 +122,8 @@ module.exports = {
   },
   'change-person-nationality': {
     validate: ['required'],
+    className: ['typeahead', 'js-hidden'],
+    options: [''].concat(require('../../../assets/countries').allCountries),
     label: 'fields.change-person-nationality.label',
     dependent: {
       value: 'change-person',

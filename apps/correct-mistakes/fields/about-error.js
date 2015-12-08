@@ -112,7 +112,9 @@ module.exports = {
     dependent: {
       field: 'nationality-error-checkbox',
       value: 'true'
-    }
+    },
+    className: ['typeahead', 'js-hidden'],
+    options: [''].concat(require('../../../assets/countries').nonEuCountries)
   },
   'signature-error-checkbox': {
     label: 'fields.signature-error-checkbox.label',

@@ -7,7 +7,7 @@ When(/^I go through to Step Six of the error form$/) do
   fill_in('date-of-birth-day', :with => '17')
   fill_in('date-of-birth-month', :with => '08')
   fill_in('date-of-birth-year', :with => '1988')
-  fill_in('nationality', :with => 'Chinese')
+  fill_in('nationality', :with => 'China')
   fill_in('brp-card', :with => 'ZR1000452')
   # page.status_code.should == 302
   click_button('Continue')
@@ -57,7 +57,7 @@ Then(/^I can see the changed email address and phone number from Step Five of th
   delete_cookie('hmbrp.sid')
 end
 
-Given(/^I have provided a contact address and I am on Step Five of the error form$/) do                     
+Given(/^I have provided a contact address and I am on Step Five of the error form$/) do
   visit config['correct_mistakes_host']
   page.should have_content('Step 1 of 6')
   choose('UK')
@@ -73,7 +73,7 @@ Given(/^I have provided a contact address and I am on Step Five of the error for
   fill_in('date-of-birth-day', :with => '17')
   fill_in('date-of-birth-month', :with => '08')
   fill_in('date-of-birth-year', :with => '1988')
-  fill_in('nationality', :with => 'Chinese')
+  fill_in('nationality', :with => 'China')
   fill_in('brp-card', :with => '1234567890')
   # page.status_code.should == 302
   click_button('Continue')

@@ -18,6 +18,8 @@ module.exports = {
     }]
   },
   country: {
+    className: ['typeahead', 'js-hidden'],
+    options: [''].concat(require('../../../assets/countries').allCountries),
     dependent: {
       field: 'inside-uk',
       value: 'no'

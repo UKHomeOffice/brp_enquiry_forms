@@ -16,7 +16,8 @@
     "format": "Enter your date of birth in the correct format"
   },
   "nationality": {
-    "required": "What is your nationality?"
+    "required": "What is your nationality?",
+    "equal": "Please pick a nationality from the list"
   },
   "country": {
     "required": "Tell us where you are"

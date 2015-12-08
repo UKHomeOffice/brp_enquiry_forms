@@ -1,4 +1,4 @@
-When(/^I go to Step Four of the delivery form$/) do                                              
+When(/^I go to Step Four of the delivery form$/) do
   visit config['not_arrived_host']
   choose('received-yes')
   fill_in('delivery-date-day', :with => '17')
@@ -15,11 +15,11 @@ When(/^I go to Step Four of the delivery form$/) do
   fill_in('date-of-birth-day', :with => '17')
   fill_in('date-of-birth-month', :with => '08')
   fill_in('date-of-birth-year', :with => '1988')
-  fill_in('nationality', :with => 'Chinese')
-  click_button('Continue')                                                
+  fill_in('nationality', :with => 'China')
+  click_button('Continue')
   # puts page.body
-end                                                                          
-                                                                             
+end
+
 Then(/^I am on Step Four of the delivery form$/) do
   page.should have_content('Where can we contact you to let you know about your BRP?')
   page.should have_content('Email address')
@@ -38,5 +38,5 @@ Then(/^I am on Step Four of the delivery form$/) do
   # page.should have_content('Phone number (optional)')
   find_by_id('phone')
   find_button('Continue').click
-  delete_cookie('hmbrp.sid')                             
-end                                                                          
+  delete_cookie('hmbrp.sid')
+end

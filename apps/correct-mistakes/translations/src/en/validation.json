@@ -43,7 +43,8 @@
     "required": "What is the nominee's identity document number?"
   },
   "nationality": {
-    "required": "What is your nationality?"
+    "required": "What is your nationality?",
+    "equal": "Please pick a nationality from the list"
   },
   "brp-card": {
     "required": "What is your BRP card number?"
@@ -88,7 +89,8 @@
     "required": "What is wrong with your signature?"
   },
   "nationality-error": {
-    "required": "What is your correct nationality?"
+    "required": "What is your correct nationality?",
+    "equal": "Please pick a nationality from the list"
   },
   "sponsor-details-error": {
     "required": "What are the correct sponsor details?"

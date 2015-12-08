@@ -5,7 +5,7 @@ When(/^I go to the Confirmation page of the someone else form$/) do
   fill_in('someone-else-date-day', :with => '01')
   fill_in('someone-else-date-month', :with => '02')
   fill_in('someone-else-date-year', :with => '1971')
-  fill_in('someone-else-nationality', :with => 'Chinese')
+  fill_in('someone-else-nationality', :with => 'China')
   fill_in('someone-else-id-number', :with => '1234567890')
   click_button('Continue')
   choose('someone-else-reason-radio-under-age')
@@ -14,14 +14,14 @@ When(/^I go to the Confirmation page of the someone else form$/) do
   fill_in('date-of-birth-day', :with => '17')
   fill_in('date-of-birth-month', :with => '08')
   fill_in('date-of-birth-year', :with => '1988')
-  fill_in('nationality', :with => 'Chinese')
+  fill_in('nationality', :with => 'China')
   click_button('Continue')
   fill_in('email', :with => 'zero@forconduct.cr')
   fill_in('phone', :with => '07751710987')
   click_button('Continue')
   page.should have_content('Is the information you have given us correct?')
   choose('org-help-no')
-  
+
   # Submit the form (on Local and Dev only)
   if config['environment'] != 'prod' && config['submit'] == true
       puts 'Special actions whilst in Local or DEV'

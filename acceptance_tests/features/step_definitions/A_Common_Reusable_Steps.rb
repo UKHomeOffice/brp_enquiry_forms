@@ -15,7 +15,7 @@ When(/^I proceed to Step Four$/) do
   fill_in('date-of-birth-day', :with => '17')
   fill_in('date-of-birth-month', :with => '08')
   fill_in('date-of-birth-year', :with => '1988')
-  fill_in('nationality', :with => 'Chinese')
+  fill_in('nationality', :with => 'China')
   fill_in('brp-card', :with => 'ZR1000452')
   click_button('Continue')
 end
@@ -40,7 +40,7 @@ When(/^I fill in all the fields$/) do
   fill_in('date-of-birth-day', :with => '17')
   fill_in('date-of-birth-month', :with => '08')
   fill_in('date-of-birth-year', :with => '1988')
-  fill_in('nationality', :with => 'Chinese')
+  fill_in('nationality', :with => 'China')
   fill_in('passport', :with => '10000111111001010101')
   fill_in('brp-card', :with => 'ZR1000452')
 end
@@ -58,7 +58,7 @@ Then(/^I see all the values I have entered in the previous steps$/) do
   page.should have_content('Outwood Ln, Coulsdon, Surrey, CR5 3NP')
   page.should have_content('Alex Murphy')
   page.should have_content('17-08-1988')
-  page.should have_content('Chinese')
+  page.should have_content('China')
   page.should have_content('10000111111001010101')
   page.should have_content('bts@bullerproof.cr')
 end

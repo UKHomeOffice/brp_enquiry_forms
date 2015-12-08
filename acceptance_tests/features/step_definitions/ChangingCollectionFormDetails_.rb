@@ -25,7 +25,7 @@ When(/^I proceed back to Step Six of the collection form$/) do
   fill_in('date-of-birth-day', :with => '17')
   fill_in('date-of-birth-month', :with => '08')
   fill_in('date-of-birth-year', :with => '1988')
-  fill_in('nationality', :with => 'Chinese')
+  fill_in('nationality', :with => 'China')
   click_button('Continue')
   fill_in('email', :with => 'blockb@veryverygood.cr')
   fill_in('phone', :with => '077517194758')
@@ -68,7 +68,7 @@ Then(/^I see the details I entered on the Step Three of the collection form$/) d
   find_field('nominated-date-day').value.should == '01'
   find_field('nominated-date-month').value.should == '11'
   find_field('nominated-date-year').value.should == '1977'
-  find_field('nominated-nationality').value.should == 'Chinese'
+  find_field('nominated-nationality').value.should == 'China'
   find_field('nominated-id-number').value.should == 'MYIDNUMBER'
 end
 
@@ -77,14 +77,14 @@ Then(/^I change the details entered in Step Three of the collection form$/) do
   fill_in('nominated-date-day', :with => '24')
   fill_in('nominated-date-month', :with => '07')
   fill_in('nominated-date-year', :with => '1971')
-  fill_in('nominated-nationality', :with => 'Germany')
+  fill_in('nominated-nationality', :with => 'Japan')
   fill_in('nominated-id-number', :with => '0987654321')
 end
 
 Then(/^I see all the changes I made on Step (\d+) of the collection form$/) do |arg1|
   page.should have_content('Mister Unresonable')
   page.should have_content('24 July')
-  page.should have_content('Germany')
+  page.should have_content('Japan')
   page.should have_content('0987654321')
 end
 
@@ -93,7 +93,7 @@ Then(/^I see the personal details I entered on Step Four of the collection form$
   find_field('date-of-birth-day').value.should == '17'
   find_field('date-of-birth-month').value.should == '08'
   find_field('date-of-birth-year').value.should == '1988'
-  find_field('nationality').value.should == 'Chinese'
+  find_field('nationality').value.should == 'China'
 end
 
 Then(/^I can see all the changed personal details from step three of the collection form$/) do
