@@ -19,35 +19,19 @@ module.exports = {
   },
   'delivery-date': {
     legend: 'fields.delivery-date.legend',
-    hint: 'fields.dalivery-date.hint',
-    dependent: {
-      value: 'yes',
-      field: 'received',
-    }
+    hint: 'fields.dalivery-date.hint'
   },
   'delivery-date-day': {
     validate: ['required', 'numeric'],
-    label: 'fields.delivery-date-day.label',
-    dependent: {
-      value: 'yes',
-      field: 'received',
-    }
+    label: 'fields.delivery-date-day.label'
   },
   'delivery-date-month': {
     validate: ['required', 'numeric'],
-    label: 'fields.delivery-date-month.label',
-    dependent: {
-      value: 'yes',
-      field: 'received',
-    }
+    label: 'fields.delivery-date-month.label'
   },
   'delivery-date-year': {
     validate: ['required', 'numeric'],
-    label: 'fields.delivery-date-year.label',
-    dependent: {
-      value: 'yes',
-      field: 'received',
-    }
+    label: 'fields.delivery-date-year.label'
   },
   'no-letter': {
     label: 'fields.no-letter.label',

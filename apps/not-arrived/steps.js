@@ -15,10 +15,23 @@ module.exports = {
       'delivery-date-year',
       'no-letter'
     ],
-    next: '/same-address'
+    next: '/same-address',
+    forks: [{
+      target: '/letter-not-received',
+      condition: {
+        field: 'received',
+        value: 'no'
+      }
+    }, {
+      target: '/letter-lost',
+      condition: {
+        field: 'no-letter',
+        value: 'true'
+      }
+    }]
   },
-  '/letter-not-received': {
-  },
+  '/letter-lost': {},
+  '/letter-not-received': {},
   '/on-the-way': {
     controller: require('./controllers/on-the-way'),
     prereqs: ['/']

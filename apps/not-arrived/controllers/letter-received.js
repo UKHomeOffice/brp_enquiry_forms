@@ -1,8 +1,7 @@
 'use strict';
 
 var util = require('util');
-var DateController = require('../../../lib/date-controller');
-
+var DateController = require('hof').controllers.date;
 var moment = require('moment');
 var dateFormat = 'DD-MM-YYYY';
 
@@ -19,13 +18,6 @@ function getValue(req, key) {
   }
 }
 
-function checkReceived(form, value) {
-  var received = getValue(form, 'received');
-  if (received) {
-    return received === value;
-  }
-}
-
 function isWithin(value, days) {
   if (value) {
     return moment(value, dateFormat)
@@ -34,8 +26,7 @@ function isWithin(value, days) {
   }
 }
 
-function weekDayRange(req) {
-  var value = getValue(req, 'delivery-date');
+function weekDayRange(value, days) {
   var weekDaysSince;
   var dateReceived;
 
@@ -45,34 +36,30 @@ function weekDayRange(req) {
 
     return {
       weekDaysSince: weekDaysSince,
-      weekDaysUntil: 10 - weekDaysSince
+      weekDaysUntil: days - weekDaysSince
     };
   }
 }
 
 LetterRecievedController.prototype.saveValues = function saveValues(req) {
-
-  if (isWithin(getValue(req, 'delivery-date'), 10)) {
+  var deliveryDate = getValue(req, 'delivery-date');
+  if (isWithin(deliveryDate, 10)) {
+    req.sessionModel.set('week-day-range', weekDayRange(deliveryDate, 10));
     this.options.next = '/on-the-way';
-    req.sessionModel.set('week-day-range', weekDayRange(req, 10));
-  } else if (checkReceived(req, 'no')) {
-    this.options.next = '/letter-not-received';
-  } else {
-    this.options.next = '/same-address';
   }
-
   return DateController.prototype.saveValues.apply(this, arguments);
 };
 
 LetterRecievedController.prototype.validateField = function validateField(key, req) {
-  if (req.form.values['no-letter'] === 'true') {
+  if (getValue(req, 'no-letter') === 'true') {
     return undefined;
   }
-
-  if (checkReceived(req, 'no')) {
+  if (getValue(req, 'received') === 'no') {
     return undefined;
   }
-
+  if (key.indexOf(this.dateKey) !== -1 && getValue(req, 'received') === '') {
+    return undefined;
+  }
   return DateController.prototype.validateField.apply(this, arguments);
 };
 
