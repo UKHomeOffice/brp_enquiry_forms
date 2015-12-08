@@ -1,0 +1,34 @@
+{
+  "org-help": {
+    "options": {
+      "yes": {
+        "label": "Yes"
+      },
+      "no": {
+        "label": "No"
+      }
+    }
+  },
+  "rep-name": {
+    "label": "Full name"
+  },
+  "rep-email": {
+    "label": "E-mail"
+  },
+  "org-type": {
+    "options": {
+      "pbs": {
+        "label": "PBS sponsor"
+      },
+      "legal": {
+        "label": "Legal represntative"
+      },
+      "relative": {
+        "label": "Relative/friend"
+      },
+      "support": {
+        "label": "Support organisation"
+      }
+    }
+  }
+}

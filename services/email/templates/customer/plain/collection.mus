@@ -88,7 +88,7 @@
   {{/email}}
 
   {{#org-help}}
-  Help from a {{org-type}} called {{rep-name}}
+  Help from a {{org-type}} called {{rep-name}} {{#rep-email}}<{{rep-email}}>{{/rep-email}}
   {{/org-help}}
 
 {{/data}}
