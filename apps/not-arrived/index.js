@@ -20,7 +20,7 @@ router.use(mixins(fields, {
 }));
 
 router.use('/not-arrived/', wizard(require('./steps'), fields, {
-  controller: require('../../lib/base-controller'),
+  controller: require('hof').controllers.base,
   templatePath: path.resolve(__dirname, 'views'),
   translate: i18n.translate.bind(i18n),
   params: '/:action?'

@@ -1,8 +1,19 @@
 'use strict';
 
-var Controller = require('../../../../../lib/base-controller');
-var DateController = require('../../../../../lib/date-controller');
-var LetterReceivedController = require('../../../../../apps/not-arrived/controllers/letter-received');
+var proxyquire = require('proxyquire');
+
+var DateController = function () {
+  this.options = {};
+};
+DateController.prototype.saveValues = sinon.stub();
+
+var LetterReceivedController = proxyquire('../../../../../apps/not-arrived/controllers/letter-received', {
+  'hof': {
+    controllers: {
+      date: DateController
+    }
+  }
+});
 var moment = require('moment');
 
 describe('controllers/letter-received', function () {
@@ -30,9 +41,9 @@ describe('controllers/letter-received', function () {
       should.equal(controller.validateField(key, req), undefined);
     });
 
-    it('redirects user to /letter-not-received', function () {
+    it('delegates to date controller to redirect', function () {
       controller.saveValues(req, res);
-      controller.options.next.should.equal('/letter-not-received');
+      should.equal(controller.options.next, undefined);
     });
 
   });
@@ -66,14 +77,14 @@ describe('controllers/letter-received', function () {
         DateController.prototype.validateField.should.have.been.calledWith(key, req);
       });
 
-      it('will redirect the user to the same-address page', function () {
+      it('delegates to the date controller to redirect', function () {
         controller.saveValues(req, res);
-        controller.options.next.should.equal('/same-address');
+        should.equal(controller.options.next, undefined);
       });
 
       it('calls the parent controllers\' saveValues with the arguments', function () {
         controller.saveValues(req, res, callback);
-        Controller.prototype.saveValues.should.have.been.calledWith(req, res, callback);
+        DateController.prototype.saveValues.should.have.been.calledWith(req, res, callback);
       });
 
     });
