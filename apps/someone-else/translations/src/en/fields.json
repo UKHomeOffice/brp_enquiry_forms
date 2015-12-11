@@ -32,7 +32,7 @@
     "label":  "Country of nationality"
   },
   "someone-else-id-number": {
-    "label": "Identity document number <br/>(This could be UK/EU driving licence, passport or BRP)"
+    "label": "Identity document number <br/>(This must be a UK or EU passport, EU national ID or BRP number)"
   },
   "someone-else-reason-radio": {
     "options": {
@@ -70,7 +70,7 @@
     "label":  "Country of nationality"
   },
   "change-person-id-number": {
-    "label": "Identity document number <br/>(This could be UK/EU driving licence, passport or BRP)"
+    "label": "Identity document number <br/>(This must be a UK or EU passport, EU national ID or BRP number)"
   },
   "nominated-date": {
     "label": "Date",
@@ -124,10 +124,10 @@
   "org-type": {
     "options": {
       "pbs": {
-        "label": "PBS sponsor"
+        "label": "Sponsor"
       },
       "legal": {
-        "label": "Legal represntative"
+        "label": "Legal representative"
       },
       "relative": {
         "label": "Relative/friend"

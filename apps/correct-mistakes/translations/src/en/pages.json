@@ -1,31 +1,31 @@
 {
   "about-error": {
     "header": "What’s the problem with your BRP?",
-    "subheader": "You can select more than one problem."
+    "subheader": "You can select more than one option."
   },
   "contact-details": {
-    "header": "Where can we contact you to let you know about your BRP?",
+    "header": "How should we contact you about your BRP?",
     "address": {
-      "title": "Tell us your address so we can contact you by post."
+      "title": "What address should we use to contact you by post?"
     }
   },
   "uk-address": {
-    "header": "Do you have a UK address where we can send a replacement BRP?",
+    "header": "Is there a suitable UK address we can deliver your BRP to?",
     "address": {
-      "title": "If you need a replacement BRP, we will post it to your UK address. If you don't have a UK address, we will deliver it to a Post Office for collection."
+      "title": "If you need a replacement BRP, we will post it to a UK address of your preference. If you don't have a suitable UK address, we will deliver it to a Post Office for collection."
     }
   },
   "personal-details": {
-    "header": "What are your personal details?",
-    "subheader": "We need these details to review the problem with your BRP."
+    "header": "How do your personal details appear on your BRP?",
+    "subheader": "These must be entered exactly as they are printed on your BRP so we can review the problem."
   },
   "check-details": {
-    "header": "Is the information you have given us correct?",
+    "header": "Check the details you have provided",
     "subheader": "If any information is incorrect, you can change it here.",
     "table": {
       "headers": {
         "contact-address": "Contact address",
-        "address": "New address",
+        "address": "Address",
         "fullname": "Full name",
         "date-of-birth": "Date of birth",
         "nationality": "Nationality",
@@ -37,7 +37,7 @@
     },
     "org-help": {
       "title": "Has someone helped you fill in this form?",
-      "explanation": "This could be a friend, family member, immigartion lawyer or representative, a charity worker, an employer or a college or university official."
+      "explanation": "This could be a friend, family member, immigration lawyer or representative, a charity worker, an employer or a college or university official."
     },
     "org-details-group": {
       "header": "Provide their details",
@@ -45,7 +45,7 @@
     }
   },
   "check-details-error": {
-    "header": "Is the information you have given us correct?",
+    "header": "Check the details you have provided",
     "subheader": "If any information is incorrect, you can change it here.",
     "corrected-details-table": {
       "title": "Corrected BRP details"
@@ -70,8 +70,8 @@
       "header": "What happens next",
       "not-specified": {
         "para": {
-          "one": "We will review the information you have provided and let you know whether or not you need a replacement BRP.",
-          "two": "We will respond as soon as we can. During busy times, this may take up to 5 working days.",
+          "one": "We will review the information you have provided and let you know if a replacement BRP is required.",
+          "two": "We investigate each case individually and will respond to you as soon as possible - within 5 working days.",
           "three": "We will then advise you what to do next."
         }
       },

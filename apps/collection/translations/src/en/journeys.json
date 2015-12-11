@@ -7,7 +7,7 @@
         "subheader": "We need these details to process your request."
       },
       "check-details": {
-        "header": "Is the information you have given us correct?",
+        "header": "Check the details you have provided",
         "subheader": "If any information is incorrect, you can change it here.",
         "tables": {
           "problem-details": {

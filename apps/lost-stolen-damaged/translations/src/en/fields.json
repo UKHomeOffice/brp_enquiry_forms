@@ -73,10 +73,10 @@
   "org-type": {
     "options": {
       "pbs": {
-        "label": "PBS sponsor"
+        "label": "Sponsor"
       },
       "legal": {
-        "label": "Legal represntative"
+        "label": "Legal representative"
       },
       "relative": {
         "label": "Relative/friend"

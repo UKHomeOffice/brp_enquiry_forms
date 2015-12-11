@@ -12,7 +12,7 @@
   "letter-not-received": {
     "header": "Contact us",
     "para": {
-      "one": "If you haven't received a letter from the Home Office about your application to remain in the UK it may mean a decision hasn't been made yet.",
+      "one": "If you haven't yet received a letter, the Home Office may still be processing your application.",
       "two": "Call the contact centre 0300 123 2241."
     }
   },
@@ -34,7 +34,7 @@
     }
   },
   "contact-details": {
-    "header": "Where can we contact you to let you know about your BRP?",
+    "header": "How should we contact you about your BRP?",
     "address": {
       "title": "Tell us your address so that we can contact you by post."
     }
@@ -48,7 +48,7 @@
   "same-address": {
     "header": "Did you expect your BRP to be delivered to the same address as the one on the letter from the Home Office?",
     "address": {
-      "title": "Tell us the new address and we will organise another delivery."
+      "title": "Tell us the address and we will organise another delivery."
     }
   },
   "personal-details": {
@@ -56,8 +56,8 @@
     "subheader": "We need these details to review the problem with your BRP."
   },
   "check-details": {
-    "header": "Is the information you have given us correct?",
-    "subheader": "Check and make sure the information below is right. If it isn't you can change it here.",
+    "header": "Check the details you have provided",
+    "subheader": "If any information is incorrect, you can change it here.",
     "table": {
       "head": {
         "delivery-details": "Delivery details",
@@ -73,7 +73,7 @@
         "passport": "Passport number",
         "email": "Email address",
         "phone": "Phone number",
-        "delivery-date": "Delivery date",
+        "delivery-date": "Date of letter",
         "no-letter": "You do not have the delivery letter",
         "delivery-details": "Delivery details",
         "delivery-address": "Delivery address"
@@ -81,7 +81,7 @@
     },
     "org-help": {
       "title": "Has someone helped you fill in this form?",
-      "explanation": "This could be a friend, family member, immigartion lawyer or representative, a charity worker, an employer or a college or university official."
+      "explanation": "This could be a friend, family member, immigration lawyer or representative, a charity worker, an employer or a college or university official."
     },
     "org-details-group": {
       "header": "Provide their details",
@@ -89,8 +89,8 @@
     }
   },
   "check-details-error": {
-    "header": "Is the information you have given us correct?",
-    "subheader": "Check and make sure the information below is right. If it isn't you can change it here.",
+    "header": "Check the details you have provided",
+    "subheader": "If any information is incorrect, you can change it here.",
     "corrected-details-table": {
       "title": "Corrected BRP details"
     },
@@ -117,9 +117,9 @@
       "header": "What happens next",
       "not-specified": {
         "para": {
-          "one": "We will review the information you have sent us and we will let you know if you need a new card.",
-          "two": "We will respond as soon as we can. During busy times, this may take up to 5 working days.",
-          "three": "We will then advise you what to do next."
+          "one": "Our staff will review the information you have sent and speak with the courier if necessary to find out why your card hasn't yet arrived.",
+          "two": "As each BRP delivery is tracked, we will be able to find your BRP card and arrange redelivery.",
+          "three": "We shall be in touch with you as soon as possible. During very busy periods this can take up to 5 working days."
         }
       },
       "inside-uk": {

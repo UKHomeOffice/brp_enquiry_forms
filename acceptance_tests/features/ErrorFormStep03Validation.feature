@@ -13,13 +13,13 @@ Feature: Validation for Step 03 of the Error Form
 		When I check the "Yes" radio button
 		When I click Continue
 		Then I see the "Enter your street" link
-		Then I see the "Enter the Town or City" link
+		Then I see the "Enter the town or city" link
 		Then I see the "Enter the postcode" link
 
 	# Scenario: Attempting to proceed to Step 04 of the Error Form without filling in the first address field
 	# 	When I check the "Yes" radio button
-	# 	And I fill in the second address field on Step Four of the Error form 
-	# 	And I fill in the postcode field on Step Four of the Error form 
+	# 	And I fill in the second address field on Step Four of the Error form
+	# 	And I fill in the postcode field on Step Four of the Error form
 	# 	When I click Continue
 	# 	# And I wait for 30 seconds
 	# 	Then I see the "Enter your street" link
@@ -27,16 +27,16 @@ Feature: Validation for Step 03 of the Error Form
 
 	# Scenario: Attempting to proceed to Step 04 of the Error Form without filling in the second address field
 	# 	When I check the "Yes" radio button
-	# 	And I fill in the first address field on Step Four of the Error form 
-	# 	And I fill in the postcode field on Step Four of the Error form 
+	# 	And I fill in the first address field on Step Four of the Error form
+	# 	And I fill in the postcode field on Step Four of the Error form
 	# 	When I click Continue
-	# 	Then I see the "Enter the Town or City" link in the "/html/body/main/div[2]/div/div/ul/li/a" xpath 
-	# 	And I see "Enter the Town or City"
-	
+	# 	Then I see the "Enter the town or city" link in the "/html/body/main/div[2]/div/div/ul/li/a" xpath
+	# 	And I see "Enter the town or city"
+
 	# Scenario: Attempting to proceed to Step 04 of the Error Form without filling in the postcode field
 	# 	When I check the "Yes" radio button
-	# 	And I fill in the first address field on Step Four of the Error form 
-	# 	And I fill in the second address field on Step Four of the Error form 
+	# 	And I fill in the first address field on Step Four of the Error form
+	# 	And I fill in the second address field on Step Four of the Error form
 	# 	When I click Continue
 	# 	Then I see the "Enter the postcode" link in the "/html/body/main/div[2]/div/div/ul/li/a" xpath
 	# 	And I see "Enter the postcode"
