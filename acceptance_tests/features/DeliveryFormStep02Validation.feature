@@ -7,7 +7,7 @@ Feature: Validation for Step 02 of the Delivery Form
 	Scenario: Attempting to proceed to Step 03 of the Delivery Form without doing anything
 		When I click Continue
 		Then I see the "Tell us if your address is the same as on the letter from the Home Office" link
-		And I see "Would you like your BRP sent to the same address as the one on the letter from the Home Office?"
+		And I see "Would you like your BRP sent to the address that is on the letter from the Home Office?"
 
 	Scenario: Attempting to proceed to Step 03 of the Delivery Form have selecting the No radio button having not completed the address fields
 		When I check the "No" radio button

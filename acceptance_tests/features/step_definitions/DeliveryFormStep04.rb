@@ -21,7 +21,7 @@ When(/^I go to Step Four of the delivery form$/) do
 end
 
 Then(/^I am on Step Four of the delivery form$/) do
-  page.should have_content('Where can we contact you to let you know about your BRP?')
+  page.should have_content('How should we contact you about your BRP?')
   page.should have_content('Email address')
   find_by_id('email')
   find_by_id('no-email')
