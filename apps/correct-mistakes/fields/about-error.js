@@ -168,24 +168,8 @@ module.exports = {
     label: 'fields.conditions-error-checkbox.label',
     toggle: 'conditions-error-container'
   },
-  'conditions-error': {
-    validate: ['required'],
-    label: 'fields.conditions-error.label',
-    dependent: {
-      field: 'conditions-error-checkbox',
-      value: 'true'
-    }
-  },
   'letter-error-checkbox': {
     label: 'fields.letter-error-checkbox.label',
     toggle: 'letter-error-container'
-  },
-  'letter-error': {
-    validate: ['required'],
-    label: 'fields.letter-error.label',
-    dependent: {
-      field: 'letter-error-checkbox',
-      value: 'true'
-    }
   }
 };
