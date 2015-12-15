@@ -7,4 +7,4 @@ if [[ -d ${PUBLIC_DIR} ]] && [[ ! $(ls -A ${PUBLIC_DIR}) ]]; then
   cp -r /app/public/ /
 fi
 
-npm start
+exec "npm start"
