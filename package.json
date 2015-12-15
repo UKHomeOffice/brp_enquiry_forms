@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "main": "app.js",
   "description": "A Home Office application for Biometric Residence Permit covering lost and stolen, error on card and delivery error services.",
-  "license": "GPLv2",
+  "license": "GPL-2.0",
   "scripts": {
     "start": "node .",
     "dev": "parallelshell 'NODE_ENV=development nodemon .' 'npm run watch:scss' 'npm run watch:js'",
