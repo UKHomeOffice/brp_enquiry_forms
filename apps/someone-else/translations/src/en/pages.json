@@ -6,7 +6,7 @@
   },
   "someone-else": {
     "someone-else-group": {
-      "title": "Provide details of <strong>the person you want to nominate to collect your BRP</strong>."
+      "title": "Provide details of <strong>the person you want to nominate to collect your BRP</strong>. The nominated person must hold a valid UK or EU passport, EU national ID card or BRP."
     },
     "change-person-group": {
       "title": "Provide details of the <strong>new person</strong> you want to collect your BRP."
@@ -27,11 +27,11 @@
   "contact-details": {
     "header": "How should we contact you about your BRP?",
     "address": {
-      "title": "Tell us your address so we can contact you by post."
+      "title": "What address should we use to contact you by post?"
     }
   },
   "check-details": {
-    "header": "Is the information you have given us correct?",
+    "header": "Check the details you have provided",
     "subheader": "If any information is incorrect, you can change it here.",
     "table": {
       "headers": {
@@ -48,7 +48,7 @@
     },
     "org-help": {
       "title": "Has someone helped you fill in this form?",
-      "explanation": "This could be a friend, family member, immigartion lawyer or representative, a charity worker, an employer or a college or university official."
+      "explanation": "This could be a friend, family member, immigration lawyer or representative, a charity worker, an employer or a college or university official."
     },
     "org-details-group": {
       "header": "Provide their details",
@@ -56,7 +56,7 @@
     }
   },
   "someone-else-check-details": {
-    "header": "Is the information you have given us correct?",
+    "header": "Check the details you have provided",
     "subheader": "If any information is incorrect, you can change it here.",
     "tables": {
       "other-person": {
@@ -77,9 +77,9 @@
       "header": "What happens next",
       "not-specified": {
         "para": {
-          "one": "We shall review the information you have provided, and let you know whether or not your your request has been approved.",
-          "two": "We will respond as soon as we can. During busy times, this may take up to 5 working days.",
-          "three": "We will then advise you what to do next."
+          "one": "We shall review the information you have provided.",
+          "two": "We consider each case individually and will respond to you as soon as possible - within 5 working days.",
+          "three": "We will let you know whether your nominated person has been approved to collect your BRP."
         }
       },
       "inside-uk": {

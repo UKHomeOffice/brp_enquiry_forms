@@ -31,7 +31,7 @@ Then(/^I am on the inside the UK confirmation page$/) do
 end
 
 Then(/^I am on the outside the UK confirmation page$/) do
-  page.should have_content('As you are outside the UK, you may need to apply for a temporary visa to get back to the UK.')
+  page.should have_content('We will confirm whether you require a temporary BRP visa to return to the UK.')
 end
 
 Given(/^that on step one I had selected that I am outside the UK$/) do

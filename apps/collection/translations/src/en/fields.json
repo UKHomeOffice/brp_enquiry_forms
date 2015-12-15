@@ -34,12 +34,12 @@
           "label": "I am under 18 and attempted collection without my responsible adult"
         },
         "non-identity": {
-          "legend": "My identity could not be confirmed",
-          "label": "My identity could not be confirmed"
+          "legend": "I could not prove my identity",
+          "label": "I could not prove my identity"
         },
         "others-identity": {
-          "legend": "The person collecting the card on my behalf was not identified as the person I nominated",
-          "label": "The person collecting the card on my behalf was not identified as the person I nominated"
+          "legend": "Someone attempted to collect my BRP on my behalf, but was unable to",
+          "label": "Someone attempted to collect my BRP on my behalf, but was unable to"
         },
         "others-auth": {
           "legend": "The Home Office did not authorise someone else to collect on my behalf",
@@ -160,10 +160,10 @@
     "org-type": {
       "options": {
         "pbs": {
-          "label": "PBS sponsor"
+          "label": "Sponsor"
         },
         "legal": {
-          "label": "Legal represntative"
+          "label": "Legal representative"
         },
         "relative": {
           "label": "Relative/friend"

@@ -13,7 +13,7 @@
     "required": "Enter your street"
   },
   "uk-address-town": {
-    "required": "Enter the Town or City"
+    "required": "Enter the town or city"
   },
   "uk-address-postcode": {
     "required": "Enter the postcode"

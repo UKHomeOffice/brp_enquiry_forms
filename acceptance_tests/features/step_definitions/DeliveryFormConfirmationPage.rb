@@ -16,7 +16,7 @@ When(/^I go to the Confirmation page of the delivery form$/) do
   click_button('Continue')
   fill_in('email', :with => 'zero@forconduct.cr')
   click_button('Continue')
-  page.should have_content('Is the information you have given us correct?')
+  page.should have_content('Check the details you have provided')
   choose('org-help-no')
 
   # Submit the form (on Local and Dev only)

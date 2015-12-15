@@ -22,8 +22,8 @@ Feature: Validation for Step 05 of the Error Form
 		And I fill in the first contact address field
 		And I fill in the contact postcode field
 		When I click Continue
-		Then I see the "Enter the Town or City" link
-		And I see "Enter the Town or City"
+		Then I see the "Enter the town or city" link
+		And I see "Enter the town or city"
 
 	Scenario: Attempting to proceed to Step 06 the Error Form without filling in the postcode field
 		When I check the I do not have an email address checkbox

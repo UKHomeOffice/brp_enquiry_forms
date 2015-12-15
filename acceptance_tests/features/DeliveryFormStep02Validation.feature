@@ -7,13 +7,13 @@ Feature: Validation for Step 02 of the Delivery Form
 	Scenario: Attempting to proceed to Step 03 of the Delivery Form without doing anything
 		When I click Continue
 		Then I see the "Tell us if your address is the same as on the letter from the Home Office" link
-		And I see "Would you like your BRP sent to the same address as the one on the letter from the Home Office?"
+		And I see "Would you like your BRP sent to the address that is on the letter from the Home Office?"
 
 	Scenario: Attempting to proceed to Step 03 of the Delivery Form have selecting the No radio button having not completed the address fields
 		When I check the "No" radio button
 		When I click Continue
 		Then I see the "Enter your street" link
-		Then I see the "Enter the Town or City" link
+		Then I see the "Enter the town or city" link
 		Then I see the "Enter the postcode" link
 
 	Scenario: Attempting to proceed to Step 03 of the Delivery Form without filling in the first address field
@@ -29,8 +29,8 @@ Feature: Validation for Step 02 of the Delivery Form
 		And I fill in the address street field
 		And I fill in the postcode field
 		When I click Continue
-		Then I see the "Enter the Town or City" link
-		And I see "Enter the Town or City"
+		Then I see the "Enter the town or city" link
+		And I see "Enter the town or city"
 
 	Scenario: Attempting to proceed to Step 03 of the Delivery Form without filling in the postcode field
 		When I check the "No" radio button

@@ -14,7 +14,7 @@
     "contact-details": {
       "header": "How should we contact you about your BRP?",
       "address": {
-        "title": "Tell us your address so we can contact you by post."
+        "title": "What address should we use to contact you by post?"
       }
     },
     "personal-details": {
@@ -22,7 +22,7 @@
       "subheader": "We need these details to process your request."
     },
     "check-details": {
-      "header": "Is the information you have given us correct?",
+      "header": "Check the details you have provided",
       "subheader": "If any information is incorrect, you can change it here.",
       "table": {
         "headers": {
@@ -40,7 +40,7 @@
       },
       "org-help": {
         "title": "Has someone helped you fill in this form?",
-        "explanation": "This could be a friend, family member, immigartion lawyer or representative, a charity worker, an employer or a college or university official."
+        "explanation": "This could be a friend, family member, immigration lawyer or representative, a charity worker, an employer or a college or university official."
       },
       "org-details-group": {
         "header": "Provide their details",
@@ -52,8 +52,8 @@
       }
     },
     "check-details-error": {
-      "header": "Is the information you have given us correct?",
-      "subheader": "Check and make sure the information below is right. If it isn't you can change it here.",
+      "header": "Check the details you have provided",
+      "subheader": "If any information is incorrect, you can change it here.",
       "corrected-details-table": {
         "title": "Corrected BRP details"
       },
@@ -78,7 +78,7 @@
         "not-specified": {
           "para": {
             "one": "We will review the information you have provided to find out why there was a problem with your BRP collection.",
-            "two": "We will respond as soon as we can and tell you what you need to do next. During busy times, this may take up to 5 working days."
+            "two": "We investigate each case individually and will respond to you as soon as possible - within 5 working days."
           }
         },
         "inside-uk": {

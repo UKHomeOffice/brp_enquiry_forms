@@ -21,8 +21,8 @@ Feature: Changing Delivery Form details
 
 		Examples:
 			|another reason radio button |fields 				    |another collection value|another reason    													|
-			|reason-radio-non-identity	 |reason-non-identity	    |1234					 |My identity could not be confirmed 									|
-			|reason-radio-others-identity|reason-others-identity    |5678					 |The person collecting the card on my behalf was not identified as the person I nominated|
+			|reason-radio-non-identity	 |reason-non-identity	    |1234					 |I could not prove my identity 									|
+			|reason-radio-others-identity|reason-others-identity    |5678					 |Someone attempted to collect my BRP on my behalf, but was unable to|
 			|reason-radio-others-auth	 |reason-others-auth	    |1212					 |The Home Office did not authorise someone else to collect on my behalf|
 			|reason-radio-passport-family|reason-passport-family    |3131					 |The vignette (sticker) in my passport is not linked to my family 				|
 			|reason-radio-passport-lost  |reason-passport-lost      |8989					 |I have lost my passport 												|
