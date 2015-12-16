@@ -18,5 +18,6 @@ RUN chown -R app:app .
 USER app
 RUN npm run hof-transpile
 
+USER root
 EXPOSE 8080
 CMD ./run.sh
