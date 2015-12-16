@@ -24,8 +24,6 @@ Feature: Validation for Step 02 of the Error Form
 		  |signature-error-checkbox      |What is wrong with your signature?   |What is wrong with your signature?   |
 		  |photograph-error-checkbox     |What is wrong with your photograph?  |What is wrong with your photograph?  |
 		  |damaged-error-checkbox        |What is wrong with your BRP?         |What is wrong with your BRP?         |
-		  |conditions-error-checkbox     |Tell us about the problem            |Tell us about the problem            |
-		  |letter-error-checkbox         |Tell us about the problem            |Tell us about the problem            |
 
 	Scenario: Go to Step Six and clear the cookies
 		When I expire the cookies
