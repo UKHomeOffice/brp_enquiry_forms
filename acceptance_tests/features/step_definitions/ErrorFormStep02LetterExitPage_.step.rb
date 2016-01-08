@@ -8,7 +8,7 @@ end
 
 Then(/^I am on the Enrolment letter exit page$/) do
   page.should have_content('Enrolment letter problems')
-  page.should have_content('As you have not received a BRP yet and have a problem with your enrolment, please follow our Enrolment letter process to enquire about your problem.')
+  page.should have_content('You need an enrolment letter to get a BRP. You must follow this process to report problems with your enrolment letter.')
   find_link('Close').visible?
   # FIXME: Edit and uncomment once we have something to link to
   #find_link('Enrolment letter')
