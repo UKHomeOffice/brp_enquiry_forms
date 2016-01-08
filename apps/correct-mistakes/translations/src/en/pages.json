@@ -98,7 +98,7 @@
   "enrolment-letter": {
     "header": "Enrolment letter problems",
     "para": {
-      "one": "As you have not received a BRP yet and have a problem with your enrolment, please follow our Enrolment letter process to enquire about your problem."
+      "one": "You need an enrolment letter to get a BRP. You must follow this process to <a href='https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/422051/Biometric_Information_-_enrolment_v4_0.pdf'>report problems with your enrolment letter</a>."
     }
   },
   "truncated": {
