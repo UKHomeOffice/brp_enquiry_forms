@@ -1,4 +1,5 @@
 'use strict';
+
 var path = require('path');
 var hof = require('hof');
 var i18n = hof.i18n({

@@ -96,6 +96,8 @@ app.get('/terms-and-conditions', function renderTerms(req, res) {
   res.render('terms');
 });
 
+app.use(require('./middleware/not-found')());
+
 // errors
 app.use(require('./errors/'));
 
