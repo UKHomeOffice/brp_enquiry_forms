@@ -77,7 +77,7 @@ module.exports = {
     },
     legend: {
       className: 'visuallyhidden',
-      value: 'fields.gender-error-checkbox.label'
+      value: 'fields.gender-error.legend'
     },
     options: [{
       value: 'female',
