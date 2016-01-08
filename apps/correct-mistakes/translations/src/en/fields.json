@@ -86,6 +86,7 @@
   "gender-error": {
     "legend": "Gender",
     "title": "What is your correct gender?",
+    "hint": "What is the gender shown on your passport?",
     "options": {
       "male": {
         "label": "Male"
