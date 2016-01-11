@@ -9,7 +9,7 @@ var config = require('../config');
 var logger = require('../lib/logger');
 
 /*eslint no-unused-vars: 0*/
-module.exports = function errorHandler(err, req, res) {
+module.exports = function errorHandler(err, req, res, next) {
   /*eslint no-unused-vars: 1*/
   var content = {};
 
@@ -25,7 +25,6 @@ module.exports = function errorHandler(err, req, res) {
   res.statusCode = err.status || 500;
 
   logger.error(err.message || err.error, err);
-
   res.render(err.template, {
     error: err,
     content: content,
