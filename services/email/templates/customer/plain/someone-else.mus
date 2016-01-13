@@ -11,16 +11,16 @@
 
   {{#t}}pages.someone-else-check-details.tables.other-person.title{{/t}}
 
-  {{#t}}pages.someone-else-check-details.tables.other-person.fullname{{/t}}
+  {{#t}}pages.check-details.table.headers.fullname{{/t}}
   {{changed-person-fullname}}
 
-  {{#t}}pages.someone-else-check-details.tables.other-person.date-of-birth{{/t}}
+  {{#t}}pages.check-details.table.headers.date-of-birth{{/t}}
   {{changed-person-date-formatted}}
 
-  {{#t}}pages.someone-else-check-details.tables.other-person.nationality{{/t}}
+  {{#t}}pages.check-details.table.headers.nationality{{/t}}
   {{changed-person-nationality}}
 
-  {{#t}}pages.someone-else-check-details.tables.other-person.id-number{{/t}}
+  {{#t}}pages.check-details.table.headers.id-number{{/t}}
   {{changed-person-id-number}}
 
 
