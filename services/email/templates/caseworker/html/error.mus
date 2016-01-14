@@ -76,19 +76,19 @@
                       <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{brp-card}}</p></td>
                     </tr>
                     {{/brp-card}}
-                    {{#address-street}}
+                    {{#uk-address-street}}
                       <tr style="border-top: 1px solid #009390;">
                         <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.check-details.table.headers.address{{/t}}</p></td>
                         <td width="75%">
                           <p style="font-size: 16px; color: #000; margin: 10px 0;">
-                            {{address-street}},
-                            {{address-town}},
-                            {{#address-county}}{{address-county}},{{/address-county}}
-                            {{address-postcode}}
+                            {{uk-address-house-number}} {{uk-address-street}},
+                            {{uk-address-town}},
+                            {{#uk-address-county}}{{uk-address-county}},{{/uk-address-county}}
+                            {{uk-address-postcode}}
                           </p>
                         </td>
                       </tr>
-                    {{/address-street}}
+                    {{/uk-address-street}}
                     {{#org-type}}
                       <tr style="border-top: 1px solid #009390;">
                         <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">Help from ({{#t}}fields.org-type.options[{{org-type}}].label{{/t}})</p></td>
@@ -203,7 +203,7 @@
                         <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.check-details.table.headers.contact-address{{/t}}</p></td>
                         <td width="75%">
                           <p style="font-size: 16px; color: #000; margin: 10px 0;">
-                            {{contact-address-street}},
+                            {{contact-address-house-number}} {{contact-address-street}},
                             {{contact-address-town}},
                             {{#contact-address-county}}{{contact-address-county}},{{/contact-address-county}}
                             {{contact-address-postcode}}

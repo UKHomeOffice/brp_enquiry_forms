@@ -18,13 +18,13 @@
     {{brp-card}}
   {{/brp-card}}
 
-  {{#address-street}}
+  {{#uk-address-street}}
     {{#t}}pages.check-details.table.headers.address{{/t}}
-    {{address-street}},
-    {{address-town}},
-    {{#address-county}}{{address-county}},{{/address-county}}
-    {{address-postcode}}
-  {{/address-street}}
+    {{uk-address-house-number}} {{uk-address-street}},
+    {{uk-address-town}},
+    {{#uk-address-county}}{{uk-address-county}},{{/uk-address-county}}
+    {{uk-address-postcode}}
+  {{/uk-address-street}}
 
   Reported errors
 
@@ -97,7 +97,7 @@
 
   {{#contact-address-street}}
     {{#t}}pages.check-details.table.headers.address{{/t}}
-    {{contact-address-street}},
+    {{contact-address-house-number}} {{contact-address-street}},
     {{contact-address-town}},
     {{#contact-address-county}}{{contact-address-county}},{{/contact-address-county}}
     {{contact-address-postcode}}
