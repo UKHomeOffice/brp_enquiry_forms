@@ -126,44 +126,46 @@
           </tr>
         </tbody>
       </table>
-
-      <table id="others-details" class="table-details">
-        <thead>
-          <tr>
-            <th colspan="3"><h3>{{#t}}journeys.collection.pages.check-details.tables.others-details.title{{/t}}</h3></th>
-          </tr>
-        </thead>
-        <tbody>
-          {{#values.nominated-fullname}}
-          <tr>
-            <td>{{#t}}journeys.collection.pages.check-details.tables.others-details.fullname{{/t}}</td>
-            <td>{{values.nominated-fullname}}</td>
-            <td><a href="nominated-person/edit#nominated-fullname" class="button">{{#t}}buttons.change{{/t}}</a></td>
-          </tr>
-          {{/values.nominated-fullname}}
-          {{#values.nominated-date}}
-          <tr>
-            <td>{{#t}}journeys.collection.pages.check-details.tables.others-details.date-of-birth{{/t}}</td>
-            <td>{{values.nominated-date-formatted}}</td>
-            <td><a href="nominated-person/edit#nominated-date-day" class="button">{{#t}}buttons.change{{/t}}</a></td>
-          </tr>
-          {{/values.nominated-date}}
-          {{#values.nominated-nationality}}
-          <tr>
-            <td>{{#t}}journeys.collection.pages.check-details.tables.others-details.nationality{{/t}}</td>
-            <td>{{values.nominated-nationality}}</td>
-            <td><a href="nominated-person/edit#nominated-nationality" class="button">{{#t}}buttons.change{{/t}}</a></td>
-          </tr>
-          {{/values.nominated-nationality}}
-          {{#values.nominated-id-number}}
-          <tr>
-            <td>{{#t}}journeys.collection.pages.check-details.tables.others-details.id-number{{/t}}</td>
-            <td>{{values.nominated-id-number}}</td>
-            <td><a href="nominated-person/edit#nominated-id-number" class="button">{{#t}}buttons.change{{/t}}</a></td>
-          </tr>
-          {{/values.nominated-id-number}}
-        </tbody>
-      </table>
+      <h1>{{values.nominated-fullname}}</h1>
+      {{#values.nominated-fullname}}
+        <table id="others-details" class="table-details">
+          <thead>
+            <tr>
+              <th colspan="3"><h3>{{#t}}journeys.collection.pages.check-details.tables.others-details.title{{/t}}</h3></th>
+            </tr>
+          </thead>
+          <tbody>
+            {{#values.nominated-fullname}}
+            <tr>
+              <td>{{#t}}journeys.collection.pages.check-details.tables.others-details.fullname{{/t}}</td>
+              <td>{{values.nominated-fullname}}</td>
+              <td><a href="nominated-person/edit#nominated-fullname" class="button">{{#t}}buttons.change{{/t}}</a></td>
+            </tr>
+            {{/values.nominated-fullname}}
+            {{#values.nominated-date}}
+            <tr>
+              <td>{{#t}}journeys.collection.pages.check-details.tables.others-details.date-of-birth{{/t}}</td>
+              <td>{{values.nominated-date-formatted}}</td>
+              <td><a href="nominated-person/edit#nominated-date-day" class="button">{{#t}}buttons.change{{/t}}</a></td>
+            </tr>
+            {{/values.nominated-date}}
+            {{#values.nominated-nationality}}
+            <tr>
+              <td>{{#t}}journeys.collection.pages.check-details.tables.others-details.nationality{{/t}}</td>
+              <td>{{values.nominated-nationality}}</td>
+              <td><a href="nominated-person/edit#nominated-nationality" class="button">{{#t}}buttons.change{{/t}}</a></td>
+            </tr>
+            {{/values.nominated-nationality}}
+            {{#values.nominated-id-number}}
+            <tr>
+              <td>{{#t}}journeys.collection.pages.check-details.tables.others-details.id-number{{/t}}</td>
+              <td>{{values.nominated-id-number}}</td>
+              <td><a href="nominated-person/edit#nominated-id-number" class="button">{{#t}}buttons.change{{/t}}</a></td>
+            </tr>
+            {{/values.nominated-id-number}}
+          </tbody>
+        </table>
+      {{/values.nominated-fullname}}
 
       <table id="personal-details" class="table-details">
         <thead>

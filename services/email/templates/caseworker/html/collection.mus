@@ -99,27 +99,29 @@
                     </tr>
                   </table>
 
-                  <!-- OTHER PERSONS DETAILS TABLE -->
-                  <p style="font-size: 19px; font-weight: bold; color: #000; line-height: 1.32; margin: 0 0 10px 0;">{{#t}}journeys.collection.pages.check-details.tables.others-details.title{{/t}}</p>
+                  {{#nominated-fullname}}
+                    <!-- OTHER PERSONS DETAILS TABLE -->
+                    <p style="font-size: 19px; font-weight: bold; color: #000; line-height: 1.32; margin: 0 0 10px 0;">{{#t}}journeys.collection.pages.check-details.tables.others-details.title{{/t}}</p>
 
-                  <table width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#FFFFFF" style="margin: 0 0 20px 0;">
-                    <tr style="border-top: 1px solid #009390;">
-                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}journeys.collection.pages.check-details.tables.others-details.fullname{{/t}}</p></td>
-                      <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{nominated-fullname}}</p></td>
-                    </tr>
-                    <tr style="border-top: 1px solid #009390;">
-                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}journeys.collection.pages.check-details.tables.others-details.date-of-birth{{/t}}</p></td>
-                      <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{nominated-date-formatted}}</p></td>
-                    </tr>
-                    <tr style="border-top: 1px solid #009390;">
-                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}journeys.collection.pages.check-details.tables.others-details.nationality{{/t}}</p></td>
-                      <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{nominated-nationality}}</p></td>
-                    </tr>
-                    <tr style="border-top: 1px solid #009390;">
-                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}journeys.collection.pages.check-details.tables.others-details.id-number{{/t}}</p></td>
-                      <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{nominated-id-number}}</p></td>
-                    </tr>
-                  </table>
+                    <table width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#FFFFFF" style="margin: 0 0 20px 0;">
+                      <tr style="border-top: 1px solid #009390;">
+                        <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}journeys.collection.pages.check-details.tables.others-details.fullname{{/t}}</p></td>
+                        <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{nominated-fullname}}</p></td>
+                      </tr>
+                      <tr style="border-top: 1px solid #009390;">
+                        <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}journeys.collection.pages.check-details.tables.others-details.date-of-birth{{/t}}</p></td>
+                        <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{nominated-date-formatted}}</p></td>
+                      </tr>
+                      <tr style="border-top: 1px solid #009390;">
+                        <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}journeys.collection.pages.check-details.tables.others-details.nationality{{/t}}</p></td>
+                        <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{nominated-nationality}}</p></td>
+                      </tr>
+                      <tr style="border-top: 1px solid #009390;">
+                        <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}journeys.collection.pages.check-details.tables.others-details.id-number{{/t}}</p></td>
+                        <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{nominated-id-number}}</p></td>
+                      </tr>
+                    </table>
+                  {{/nominated-fullname}}
 
                   <!-- PERSONAL DETAILS TABLE -->
                   <p style="font-size: 19px; font-weight: bold; color: #000; line-height: 1.32; margin: 0 0 10px 0;">{{#t}}journeys.collection.pages.check-details.tables.personal-details.title{{/t}}</p>
