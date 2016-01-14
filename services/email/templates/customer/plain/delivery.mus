@@ -1,55 +1,64 @@
 {{#data}}
-  {{#t}}emails.not-arrived.header{{/t}}
+{{#t}}emails.not-arrived.header{{/t}}
 
-  Dear {{fullname}}
+Dear {{fullname}}
 
-  We will review the information you have given us to find out why you have not received the biometric residence permit.
+We will review the information you have given us to find out why you have not received the biometric residence permit.
 
-  We will get back to you within 5 working days. For example, if you contact us on a Monday you will hear back by the following Monday.
+We will get back to you within 5 working days. For example, if you contact us on a Monday you will hear back by the following Monday.
 
-  We will then tell you what to do next.
+We will then tell you what to do next.
 
-  Here is the information you have sent us:
+Here is the information you have sent us:
 
-  {{#address-street}}
-    {{#t}}pages.check-details.table.headers.address{{/t}}
-    {{address-street}},
-    {{address-town}},
-    {{#address-county}}{{address-county}},{{/address-county}}
-    {{address-postcode}}
-  {{/address-street}}
+{{#delivery-date-formatted}}
+{{#t}}pages.check-details.table.headers.delivery-date{{/t}}
+{{delivery-date-formatted}}
+{{/delivery-date-formatted}}
+{{#delivery-details}}
+{{#t}}pages.check-details.table.headers.delivery-details{{/t}}
+{{delivery-details}}
+{{/delivery-details}}
 
-  {{#t}}pages.check-details-error.personal-details-table.headers.fullname{{/t}}
-  {{fullname}}
+{{#address-street}}
+{{#t}}pages.check-details.table.headers.address{{/t}}
+{{address-street}},
+{{address-town}},
+{{#address-county}}{{address-county}},{{/address-county}}
+{{address-postcode}}
+{{/address-street}}
 
-  {{#t}}pages.check-details-error.personal-details-table.headers.date-of-birth{{/t}}
-  {{date-of-birth-day}}-{{date-of-birth-month}}-{{date-of-birth-year}}
+{{#t}}pages.check-details-error.personal-details-table.headers.fullname{{/t}}
+{{fullname}}
 
-  {{#t}}pages.check-details-error.personal-details-table.headers.nationality{{/t}}
-  {{nationality}}
+{{#t}}pages.check-details-error.personal-details-table.headers.date-of-birth{{/t}}
+{{date-of-birth-day}}-{{date-of-birth-month}}-{{date-of-birth-year}}
 
-  {{#passport}}
-  {{#t}}pages.check-details.table.headers.passport{{/t}}
-  XXXXXXXXX
-  {{/passport}}
+{{#t}}pages.check-details-error.personal-details-table.headers.nationality{{/t}}
+{{nationality}}
 
-  {{#contact-address-street}}
-    {{#t}}pages.check-details.table.headers.address{{/t}}
-    {{contact-address-street}},
-    {{contact-address-town}},
-    {{#contact-address-county}}{{contact-address-county}},{{/contact-address-county}}
-    {{contact-address-postcode}}
-  {{/contact-address-street}}
+{{#passport}}
+{{#t}}pages.check-details.table.headers.passport{{/t}}
+XXXXXXXXX
+{{/passport}}
 
-  {{#email}}
-    {{#t}}fields.email.label{{/t}}
-    {{email}}
-  {{/email}}
+{{#contact-address-street}}
+{{#t}}pages.check-details.table.headers.address{{/t}}
+{{contact-address-street}},
+{{contact-address-town}},
+{{#contact-address-county}}{{contact-address-county}},{{/contact-address-county}}
+{{contact-address-postcode}}
+{{/contact-address-street}}
 
-  {{#phone}}
-    {{#t}}emails.phone{{/t}}
-    {{phone}}
-  {{/phone}}
+{{#email}}
+{{#t}}fields.email.label{{/t}}
+{{email}}
+{{/email}}
+
+{{#phone}}
+{{#t}}emails.phone{{/t}}
+{{phone}}
+{{/phone}}
 
 {{/data}}
 
