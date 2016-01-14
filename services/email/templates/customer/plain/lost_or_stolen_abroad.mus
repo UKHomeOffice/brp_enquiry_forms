@@ -11,13 +11,13 @@
 
   Here is the information you have sent us:
 
-  {{#t}}pages.check-details-error.personal-details-table.headers.fullname{{/t}}
+  {{#t}}pages.check-details.table.headers.fullname{{/t}}
   {{fullname}}
 
-  {{#t}}pages.check-details-error.personal-details-table.headers.date-of-birth{{/t}}
+  {{#t}}pages.check-details.table.headers.date-of-birth{{/t}}
   {{date-of-birth-day}}-{{date-of-birth-month}}-{{date-of-birth-year}}
 
-  {{#t}}pages.check-details-error.personal-details-table.headers.nationality{{/t}}
+  {{#t}}pages.check-details.table.headers.nationality{{/t}}
   {{nationality}}
 
   {{#contact-address-street}}
