@@ -147,7 +147,7 @@ When(/^I enter a valid date of birth$/) do
 end
 
 When(/^I type fill in the nationality field with something valid$/) do
-  fill_in('nationality', :with => 'Mongolian')
+  fill_in('nationality', :with => 'Mongolia')
 end
 
 When(/^I enter something valid in the Full name field$/) do
@@ -176,6 +176,25 @@ When(/^I enter special character values into the Date of birth field$/) do
   fill_in('date-of-birth-day', :with => '^&')
   fill_in('date-of-birth-month', :with => '&^')
   fill_in('date-of-birth-year', :with => '^&^&')
+end
+
+def dob_fill(name, age)
+  now = Time.now
+  fill_in(name + '-day', :with => now.day)
+  fill_in(name + '-month', :with => now.month)
+  fill_in(name + '-year', :with => now.year - age.to_i)
+end;
+
+When(/^I enter "([^"]*)" years old into the Date of birth field$/) do |age|
+  dob_fill('date-of-birth', age)
+end
+
+When(/^I enter "([^"]*)" years old into the Someone else DOB field$/) do |age|
+  dob_fill('someone-else-date', age)
+end
+
+When(/^I enter "([^"]*)" years old into the Change person DOB field$/) do |age|
+  dob_fill('change-person-date', age)
 end
 
 #
