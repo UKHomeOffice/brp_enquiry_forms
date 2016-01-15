@@ -78,6 +78,12 @@ h1 {
   @include media(desktop) {
     width: 65%;
   }
+
+  @at-root {
+    textarea#{&} {
+      height: 95px;
+    }
+  }
 }
 
 .form-group {
