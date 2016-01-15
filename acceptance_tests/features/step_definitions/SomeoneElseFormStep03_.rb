@@ -13,6 +13,37 @@ When(/^I go to Step Three of the someone else form$/) do
   click_button('Continue')
 end
 
+When(/^I go to Step Three of the someone else form, selecting "incapable"$/) do
+  visit config['someone_host']
+  choose('arrange-collection-radio-someone-else')
+  fill_in('someone-else-fullname', :with => 'Alex Murphy')
+  fill_in('someone-else-date-day', :with => '01')
+  fill_in('someone-else-date-month', :with => '02')
+  fill_in('someone-else-date-year', :with => '1971')
+  fill_in('someone-else-nationality', :with => 'China')
+  choose('someone-else-id-type-passport')
+  fill_in('someone-else-id-number', :with => '1234567890')
+  click_button('Continue')
+  choose('someone-else-reason-radio-incapable')
+  fill_in('incapable-details', :with => 'General idiocy.')
+  click_button('Continue')
+end
+
+When(/^I go to Step Three of the someone else form, selecting "under-age"$/) do
+  visit config['someone_host']
+  choose('arrange-collection-radio-someone-else')
+  fill_in('someone-else-fullname', :with => 'Alex Murphy')
+  fill_in('someone-else-date-day', :with => '01')
+  fill_in('someone-else-date-month', :with => '02')
+  fill_in('someone-else-date-year', :with => '1971')
+  fill_in('someone-else-nationality', :with => 'China')
+  choose('someone-else-id-type-passport')
+  fill_in('someone-else-id-number', :with => '1234567890')
+  click_button('Continue')
+  choose('someone-else-reason-radio-under-age')
+  click_button('Continue')
+end
+
 Then(/^I am on Step Three of the somone else form$/) do
   page.should have_content('Step 3 of 5')
   page.should have_content('What are your personal details?')
