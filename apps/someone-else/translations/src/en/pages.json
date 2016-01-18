@@ -58,6 +58,10 @@
     "header": "Check the details you have provided",
     "subheader": "If any information is incorrect, you can change it here.",
     "tables": {
+      "reason": {
+        "title": "Nomination reason",
+        "further-details": "Further details"
+      },
       "other-person": {
         "title": "Details of person nominated to collect BRP"
       },

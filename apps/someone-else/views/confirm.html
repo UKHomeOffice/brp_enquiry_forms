@@ -40,6 +40,20 @@
             </tr>
           </thead>
           <tbody>
+            {{#values.someone-else-reason-radio}}
+              <tr>
+                <td>{{#t}}pages.someone-else-check-details.tables.reason.title{{/t}}</td>
+                <td>{{#t}}fields.someone-else-reason-radio.options.{{values.someone-else-reason-radio}}.label{{/t}}</td>
+                <td><a href="/someone-else/reason/edit#someone-else-reason-radio" class="button">{{#t}}buttons.change{{/t}}</a></td>
+              </tr>
+              {{#values.incapable-details}}
+              <tr>
+                <td>{{#t}}pages.someone-else-check-details.tables.reason.further-details{{/t}}</td>
+                <td>{{values.incapable-details}}</td>
+                <td><a href="/someone-else/arrange/edit#someone-else-fullname" class="button">{{#t}}buttons.change{{/t}}</a></td>
+              </tr>
+              {{/values.incapable-details}}
+            {{/values.someone-else-reason-radio}}
             {{#values.someone-else-fullname}}
             <tr>
               <td>{{#t}}pages.check-details.table.headers.fullname{{/t}}</td>
