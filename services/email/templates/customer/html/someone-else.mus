@@ -100,6 +100,21 @@
                         <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">XXXXXXXXX</p></td>
                       </tr>
                     {{/passport}}
+                    {{#someone-else-reason-radio}}
+                      <tr style="border-top: 1px solid #009390;">
+                        <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}emails.someone-else.tables.personal-details.reason{{/t}}</p></td>
+                        <td width="75%">
+                          <p style="font-size: 16px; color: #000; margin: 10px 0;">
+                            {{#t}}fields.someone-else-reason-radio.options.{{someone-else-reason-radio}}.label{{/t}}
+                          </p>
+                          {{#incapable-details}}
+                          <p style="font-size: 16px; color: #000; margin: 10px 0;">
+                            {{incapable-details}}
+                          </p>
+                          {{/incapable-details}}
+                        </td>
+                      </tr>
+                    {{/someone-else-reason-radio}}
                     {{#email}}
                       <tr style="border-top: 1px solid #009390;">
                         <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.check-details.table.headers.email{{/t}}</p></td>
