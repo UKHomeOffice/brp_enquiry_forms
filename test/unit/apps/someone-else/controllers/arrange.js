@@ -73,19 +73,11 @@ describe('apps/someone-else/controllers/arrange', function () {
       });
 
       it('sets the correct options.next', function () {
-        controller.options.next.should.equal('/personal-details-no-reason');
+        controller.options.next.should.equal('/exit-cancel-request');
       });
 
       it('doesnt use a dateKey', function () {
         should.equal(controller.dateKey, '');
-      });
-
-      it('adds a no-reason flag to the session', function () {
-        req.form.values['no-reason'].should.equal(true);
-      });
-
-      it('adds a nominating flag to the session', function () {
-        req.form.values.nominating.should.equal('Cancel');
       });
     });
 

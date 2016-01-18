@@ -30,8 +30,9 @@
   {{#reason-passport-lost}}{{reason-passport-lost}}{{/reason-passport-lost}}
   {{#reason-other}}{{reason-other}}{{/reason-other}}
 
-  {{#t}}journeys.collection.pages.check-details.tables.others-details.title{{/t}}
 
+  {{#nominated-fullname}}
+  {{#t}}journeys.collection.pages.check-details.tables.others-details.title{{/t}}
   {{#t}}journeys.collection.pages.check-details.tables.others-details.fullname{{/t}}
   {{nominated-fullname}}
 
@@ -43,9 +44,10 @@
 
   {{#t}}journeys.collection.pages.check-details.tables.others-details.id-number{{/t}}
   {{nominated-id-number}}
+  {{/nominated-fullname}}
+
 
   {{#t}}journeys.collection.pages.check-details.tables.personal-details.title{{/t}}
-
   {{#contact-address-street}}
   {{#t}}pages.check-details.table.headers.contact-address{{/t}}
   {{contact-address-street}},

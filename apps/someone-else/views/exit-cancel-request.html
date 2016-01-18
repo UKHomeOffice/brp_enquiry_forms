@@ -1,0 +1,31 @@
+{{<layout}}
+
+  {{$journeyHeader}}
+    {{#t}}journeys.someone-else.header{{/t}}
+  {{/journeyHeader}}
+
+  {{$propositionHeader}}
+    {{> partials-navigation}}
+  {{/propositionHeader}}
+
+  {{$title}}
+    {{#t}}pages.exit-cancel-request.header{{/t}}
+  {{/title}}
+
+  {{$header}}
+    {{<partials-page-header}}
+      {{$page-header}}
+        {{#t}}pages.exit-cancel-request.header{{/t}}
+      {{/page-header}}
+    {{/partials-page-header}}
+  {{/header}}
+
+  {{$content}}
+
+    <p>{{#t}}pages.exit-cancel-request.subheader{{/t}}</p>
+
+    <a class="button" href='{{baseUrl}}'>{{#t}}buttons.close{{/t}}</a>
+
+  {{/content}}
+
+{{/layout}}

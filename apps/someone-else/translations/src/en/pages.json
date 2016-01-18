@@ -1,8 +1,7 @@
 {
   "arrange-collection": {
     "header": "What would you like to do?",
-    "subheader": "Tell us what would you like to do.",
-    "cancel-request-message": "You do not need to cancel your request for a nominated person to collect your BRP. If you are still unable to collect your BRP yourself, you can nominate a new person to collect it for you."
+    "subheader": "Tell us what would you like to do."
   },
   "someone-else": {
     "someone-else-group": {
@@ -22,6 +21,10 @@
       "one": "you have a serious illness or disability that prevents you from collecting it",
       "two": "you’re under 18 and can’t collect your BRP with your parent or guardian"
     }
+  },
+  "exit-cancel-request": {
+    "header": "You cannot use this service",
+    "subheader": "You do not need to cancel your request for a nominated person to collect your BRP. If you are still unable to collect your BRP yourself, you can nominate a new person to collect it for you."
   },
   "contact-details": {
     "header": "How should we contact you about your BRP?",
@@ -58,6 +61,10 @@
     "header": "Check the details you have provided",
     "subheader": "If any information is incorrect, you can change it here.",
     "tables": {
+      "reason": {
+        "title": "Nomination reason",
+        "further-details": "Further details"
+      },
       "other-person": {
         "title": "Details of person nominated to collect BRP"
       },

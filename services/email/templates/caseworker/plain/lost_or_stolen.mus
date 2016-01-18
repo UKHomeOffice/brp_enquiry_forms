@@ -4,24 +4,29 @@
   {{#t}}emails.lost-stolen.header{{/t}}
 
   {{#t}}emails.caseworker.country{{/t}}
+  {{#country}}
   {{country}}
+  {{/country}}
+  {{^country}}
+  UK
+  {{/country}}
 
   {{#t}}emails.caseworker.date-lost{{/t}}
   {{date-lost}}
 
   BRP applicant's details
 
-  {{#t}}pages.check-details-error.personal-details-table.headers.fullname{{/t}}
+  {{#t}}pages.check-details.table.headers.fullname{{/t}}
   {{fullname}}
 
-  {{#t}}pages.check-details-error.personal-details-table.headers.date-of-birth{{/t}}
+  {{#t}}pages.check-details.table.headers.date-of-birth{{/t}}
   {{date-of-birth-day}}-{{date-of-birth-month}}-{{date-of-birth-year}}
 
-  {{#t}}pages.check-details-error.personal-details-table.headers.nationality{{/t}}
+  {{#t}}pages.check-details.table.headers.nationality{{/t}}
   {{nationality}}
 
   {{#brp-card}}
-    {{#t}}pages.check-details-error.personal-details-table.headers.brp-card-number{{/t}}
+    {{#t}}pages.check-details.table.headers.brp-card-number{{/t}}
     {{brp-card}}
   {{/brp-card}}
 

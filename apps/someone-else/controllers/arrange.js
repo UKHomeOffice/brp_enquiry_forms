@@ -26,9 +26,7 @@ ArrangeController.prototype.process = function process(req) {
 
   if (req.form.values['arrange-collection-radio'] === 'cancel-request') {
     this.dateKey = '';
-    req.form.values['no-reason'] = true;
-    req.form.values.nominating = 'Cancel';
-    this.options.next = '/personal-details-no-reason';
+    this.options.next = '/exit-cancel-request';
   }
 
   DateController.prototype.process.apply(this, arguments);

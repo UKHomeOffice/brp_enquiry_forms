@@ -1,64 +1,72 @@
 {{#data}}
-  {{#t}}emails.someone-else.header{{/t}}
+{{#t}}emails.someone-else.header{{/t}}
 
-  Dear {{fullname}}
+Dear {{fullname}}
 
-  {{#t}}pages.someone-else-confirmation.paragraph{{/t}}
-  {{#t}}pages.confirmation.next.not-specified.para.two{{/t}}
-  {{#t}}pages.confirmation.next.not-specified.para.three{{/t}}
+{{#t}}pages.someone-else-confirmation.paragraph{{/t}}
+{{#t}}pages.confirmation.next.not-specified.para.two{{/t}}
+{{#t}}pages.confirmation.next.not-specified.para.three{{/t}}
 
-  {{#t}}emails.you-sent{{/t}}
+{{#t}}emails.you-sent{{/t}}
 
-  {{#t}}pages.someone-else-check-details.tables.other-person.title{{/t}}
+{{#t}}pages.someone-else-check-details.tables.other-person.title{{/t}}
 
-  {{#t}}pages.someone-else-check-details.tables.other-person.fullname{{/t}}
-  {{changed-person-fullname}}
+{{#t}}pages.check-details.table.headers.fullname{{/t}}
+{{changed-person-fullname}}
 
-  {{#t}}pages.someone-else-check-details.tables.other-person.date-of-birth{{/t}}
-  {{changed-person-date-formatted}}
+{{#t}}pages.check-details.table.headers.date-of-birth{{/t}}
+{{changed-person-date-formatted}}
 
-  {{#t}}pages.someone-else-check-details.tables.other-person.nationality{{/t}}
-  {{changed-person-nationality}}
+{{#t}}pages.check-details.table.headers.nationality{{/t}}
+{{changed-person-nationality}}
 
-  {{#t}}pages.someone-else-check-details.tables.other-person.id-number{{/t}}
-  {{changed-person-id-number}}
+{{#t}}pages.check-details.table.headers.id-number{{/t}}
+{{changed-person-id-number}}
 
 
-  {{#t}}pages.someone-else-check-details.tables.personal-details.title{{/t}}
+{{#t}}pages.someone-else-check-details.tables.personal-details.title{{/t}}
 
-  {{#contact-address-street}}
-  {{#t}}pages.check-details.table.headers.contact-address{{/t}}
-  {{contact-address-street}},
-  {{contact-address-town}},
-  {{#contact-address-county}}
-  {{contact-address-county}},
-  {{/contact-address-county}}
-  {{contact-address-postcode}}
-  {{/contact-address-street}}
+{{#contact-address-street}}
+{{#t}}pages.check-details.table.headers.contact-address{{/t}}
+{{contact-address-street}},
+{{contact-address-town}},
+{{#contact-address-county}}
+{{contact-address-county}},
+{{/contact-address-county}}
+{{contact-address-postcode}}
+{{/contact-address-street}}
 
-  {{#t}}pages.check-details.table.headers.fullname{{/t}}
-  {{fullname}}
+{{#t}}pages.check-details.table.headers.fullname{{/t}}
+{{fullname}}
 
-  {{#t}}pages.check-details.table.headers.date-of-birth{{/t}}
-  {{date-of-birth-formatted}}
+{{#t}}pages.check-details.table.headers.date-of-birth{{/t}}
+{{date-of-birth-formatted}}
 
-  {{#t}}pages.check-details.table.headers.nationality{{/t}}
-  {{nationality}}
+{{#t}}pages.check-details.table.headers.nationality{{/t}}
+{{nationality}}
 
-  {{#passport}}
-  {{#t}}pages.check-details.table.headers.passport{{/t}}
-  XXXXXXXXX
-  {{/passport}}
+{{#passport}}
+{{#t}}pages.check-details.table.headers.passport{{/t}}
+XXXXXXXXX
+{{/passport}}
 
-  {{#phone}}
-  {{#t}}pages.check-details.table.headers.phone{{/t}}
-  {{phone}}
-  {{/phone}}
+{{#someone-else-reason-radio}}
+{{#t}}emails.someone-else.tables.personal-details.reason{{/t}}
+{{#t}}fields.someone-else-reason-radio.options.{{someone-else-reason-radio}}.label{{/t}}
+{{#incapable-details}}
+{{incapable-details}}
+{{/incapable-details}}
+{{/someone-else-reason-radio}}
 
-  {{#email}}
-  {{#t}}pages.check-details.table.headers.email{{/t}}
-  {{email}}
-  {{/email}}
+{{#phone}}
+{{#t}}pages.check-details.table.headers.phone{{/t}}
+{{phone}}
+{{/phone}}
+
+{{#email}}
+{{#t}}pages.check-details.table.headers.email{{/t}}
+{{email}}
+{{/email}}
 
 {{/data}}
 
