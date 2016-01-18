@@ -52,7 +52,7 @@ XXXXXXXXX
 
 {{#someone-else-reason-radio}}
 {{#t}}emails.someone-else.tables.personal-details.reason{{/t}}
-{{#t}}fields.someone-else-reason-radio.options.{{someone-else-reason-radio}}.label
+{{#t}}fields.someone-else-reason-radio.options.{{someone-else-reason-radio}}.label{{/t}}
 {{#incapable-details}}
 {{incapable-details}}
 {{/incapable-details}}
