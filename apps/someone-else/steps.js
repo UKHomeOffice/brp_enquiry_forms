@@ -34,6 +34,10 @@ module.exports = {
     ],
     next: '/personal-details'
   },
+  '/exit-cancel-request': {
+    clearSession: true,
+    prereqs: ['/']
+  },
   '/exit-not-eligible': {
     clearSession: true,
     prereqs: ['/']
