@@ -2,7 +2,7 @@
 
 var util = require('util');
 var DateController = require('../../../lib/date-controller');
-var BaseController = require('../../../lib/base-controller');
+var BaseController = require('hof').controllers.base;
 var ErrorClass = require('../../../lib/base-error');
 var _ = require('underscore');
 

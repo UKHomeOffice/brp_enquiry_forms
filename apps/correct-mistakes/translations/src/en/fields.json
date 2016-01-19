@@ -12,6 +12,16 @@
   "date-of-birth-year": {
     "label": "Year"
   },
+  "same-address-radio": {
+    "options": {
+      "yes": {
+        "label": "Yes"
+      },
+      "no": {
+        "label": "no"
+      }
+    }
+  },
   "uk-address-radio": {
     "options": {
       "yes": {

@@ -1,0 +1,63 @@
+{{<layout}}
+{{$step}}Step 3 of 6{{/step}}
+
+{{$journeyHeader}}
+  {{#t}}journeys.error.header{{/t}}
+{{/journeyHeader}}
+
+{{$validationSummary}}
+  {{> partials-validation-summary}}
+{{/validationSummary}}
+
+{{$propositionHeader}}
+  {{> partials-navigation}}
+{{/propositionHeader}}
+
+{{$title}}
+  {{#t}}pages.same-address.header{{/t}}
+{{/title}}
+
+{{$header}}
+  {{<partials-page-header}}
+    {{$page-header}}
+      {{#t}}pages.same-address.header{{/t}}
+    {{/page-header}}
+  {{/partials-page-header}}
+{{/header}}
+
+{{$content}}
+
+  {{<partials-form}}
+
+    {{$form}}
+
+      {{#radio-group}}same-address-radio{{/radio-group}}
+
+      <fieldset id="same-address-fieldset" class="panel-indent js-hidden {{#errorlist.length}}validation-error{{/errorlist.length}}">
+        <legend class="visuallyhidden">
+            <span class="form-legend">
+              {{#t}}fields.address.legend{{/t}}
+            </span>
+        </legend>
+
+        {{#input-text}}same-address-house-number{{/input-text}}
+
+        {{#input-text}}same-address-street{{/input-text}}
+
+        {{#input-text}}same-address-town{{/input-text}}
+
+        {{#input-text}}same-address-county{{/input-text}}
+
+        {{#input-text-code}}same-address-postcode{{/input-text-code}}
+
+      </fieldset>
+
+      {{#input-submit}}continue{{/input-submit}}
+
+    {{/form}}
+
+  {{/partials-form}}
+
+{{/content}}
+
+{{/layout}}

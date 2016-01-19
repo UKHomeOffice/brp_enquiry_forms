@@ -7,7 +7,11 @@ Controller.prototype.validateField = sinon.stub();
 var moment = require('moment');
 var proxyquire = require('proxyquire');
 var DateController = proxyquire('../../../lib/date-controller', {
-  '../lib/base-controller': Controller
+  'hof': {
+    controllers: {
+      base: Controller
+    }
+  }
 });
 var ErrorClass = require('../../../lib/base-error');
 
