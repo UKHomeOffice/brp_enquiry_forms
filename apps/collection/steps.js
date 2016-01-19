@@ -24,7 +24,6 @@ module.exports = {
       'reason-under-age',
       'reason-non-identity',
       'reason-others-identity',
-      'reason-others-auth',
       'reason-passport-family',
       'reason-passport-lost',
       'reason-passport-stamp'
