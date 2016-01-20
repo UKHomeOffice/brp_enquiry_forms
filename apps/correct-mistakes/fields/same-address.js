@@ -19,18 +19,18 @@ module.exports = {
   },
   'same-address-house-number': {
     validate: ['required'],
-    label: 'common-fields.address-house-number.label',
-    dependent: {
-      value: 'no',
-      field: 'same-address-radio',
-    }
+      label: 'common-fields.address-house-number.label',
+      dependent: {
+        value: 'no',
+        field: 'same-address-radio'
+      }
   },
   'same-address-street': {
     validate: ['required'],
     label: 'common-fields.address-street.label',
     dependent: {
       value: 'no',
-      field: 'same-address-radio',
+      field: 'same-address-radio'
     }
   },
   'same-address-town': {
@@ -38,22 +38,18 @@ module.exports = {
     label: 'common-fields.address-town.label',
     dependent: {
       value: 'no',
-      field: 'same-address-radio',
+      field: 'same-address-radio'
     }
   },
   'same-address-county': {
     label: 'common-fields.address-county.label',
-    dependent: {
-      value: 'no',
-      field: 'same-address-radio',
-    }
   },
   'same-address-postcode': {
     validate: ['required'],
     label: 'common-fields.address-postcode.label',
     dependent: {
       value: 'no',
-      field: 'same-address-radio',
+      field: 'same-address-radio'
     }
   }
 };

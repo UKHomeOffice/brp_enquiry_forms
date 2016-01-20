@@ -33,7 +33,9 @@
 
       {{#radio-group}}same-address-radio{{/radio-group}}
 
-      <fieldset id="same-address-fieldset" class="panel-indent js-hidden {{#errorlist.length}}validation-error{{/errorlist.length}}">
+      <fieldset id="same-address-fieldset"
+        class="panel-indent js-hidden {{#errors.same-address-house-number}}validation-error{{/errors.same-address-house-number}} {{#errors.same-address-street}}validation-error{{/errors.same-address-street}} {{#errors.same-address-town}}validation-error{{/errors.same-address-town}} {{#errors.same-address-postcode}}validation-error{{/errors.same-address-postcode}}">
+
         <legend class="visuallyhidden">
             <span class="form-legend">
               {{#t}}fields.address.legend{{/t}}

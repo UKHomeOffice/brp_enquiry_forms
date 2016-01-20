@@ -35,7 +35,9 @@
 
       {{#radio-group}}uk-address-radio{{/radio-group}}
 
-      <fieldset id="uk-address-fieldset" class="panel-indent js-hidden {{#errorlist.length}}validation-error{{/errorlist.length}}">
+      <fieldset id="uk-address-fieldset"
+        class="panel-indent js-hidden {{#errors.uk-address-house-number}}validation-error{{/errors.uk-address-house-number}} {{#errors.uk-address-street}}validation-error{{/errors.uk-address-street}} {{#errors.uk-address-town}}validation-error{{/errors.uk-address-town}} {{#errors.uk-address-postcode}}validation-error{{/errors.uk-address-postcode}}">
+
         <legend class="visuallyhidden">
             <span class="form-legend">
               {{#t}}fields.address.legend{{/t}}
