@@ -41,10 +41,6 @@
           "legend": "Someone attempted to collect my BRP on my behalf, but was unable to",
           "label": "Someone attempted to collect my BRP on my behalf, but was unable to"
         },
-        "others-auth": {
-          "legend": "The Home Office did not authorise someone else to collect on my behalf",
-          "label": "The Home Office did not authorise someone else to collect on my behalf"
-        },
         "passport-family": {
           "legend": "The vignette (sticker) in my passport is not linked to my family",
           "label": "The vignette (sticker) in my passport is not linked to my family"
@@ -69,9 +65,6 @@
       "label": "Describe the problem (optional)"
     },
     "reason-others-identity": {
-      "label": "Describe the problem (optional)"
-    },
-    "reason-others-auth": {
       "label": "Describe the problem (optional)"
     },
     "reason-passport-family": {

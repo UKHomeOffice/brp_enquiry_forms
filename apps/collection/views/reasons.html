@@ -146,35 +146,6 @@
         <fieldset>
           <legend class="visuallyhidden">
             <span class="form-legend">
-              {{#t}}fields.reason-radio.options.others-auth.legend{{/t}}
-            </span>
-          </legend>
-
-          <label class="block-label" for="reason-radio-others-auth">
-            <input
-              type="radio"
-              name="reason-radio"
-              id="reason-radio-others-auth"
-              value="others-auth"
-              aria-required="true"
-              data-toggle="reason-others-auth-desc"
-              {{#errors.reason-others-auth}} checked="checked"{{/errors.reason-others-auth}}
-              {{#reason.others-auth}} checked="checked"{{/reason.others-auth}}
-              {{#errors.reason-others-auth}} aria-describedby="reason-others-auth-error" aria-invalid="true"{{/errors.reason-others-auth}}
-            >
-            <span>{{#t}}fields.reason-radio.options.others-auth.label{{/t}}</span>
-          </label>
-
-          <div id="reason-others-auth-desc" class="panel-indent js-hidden {{#errors.reason-others-auth}}validation-error{{/errors.reason-others-auth}}">
-            {{#input-text}}reason-others-auth{{/input-text}}
-          </div>
-        </fieldset>
-        {{/where.post-office}}
-
-        {{#where.post-office}}
-        <fieldset>
-          <legend class="visuallyhidden">
-            <span class="form-legend">
               {{#t}}fields.reason-radio.options.passport-family.legend{{/t}}
             </span>
           </legend>

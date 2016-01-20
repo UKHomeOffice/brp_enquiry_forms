@@ -22,7 +22,6 @@
   {{#under-age}}{{#t}}fields.reason-radio.options.under-age.label{{/t}}{{/under-age}}
   {{#non-identity}}{{#t}}fields.reason-radio.options.non-identity.label{{/t}}{{/non-identity}}
   {{#others-identity}}{{#t}}fields.reason-radio.options.others-identity.label{{/t}}{{/others-identity}}
-  {{#others-auth}}{{#t}}fields.reason-radio.options.others-auth.label{{/t}}{{/others-auth}}
   {{#passport-family}}{{#t}}fields.reason-radio.options.passport-family.label{{/t}}{{/passport-family}}
   {{#passport-lost}}{{#t}}fields.reason-radio.options.passport-lost.label{{/t}}{{/passport-lost}}
   {{#no-brp}}{{#t}}fields.reason-radio.options.no-brp.label{{/t}}{{/no-brp}}
@@ -32,7 +31,6 @@
   {{#reason-under-age}}{{reason-under-age}}{{/reason-under-age}}
   {{#reason-non-identity}}{{reason-non-identity}}{{/reason-non-identity}}
   {{#reason-others-identity}}{{reason-others-identity}}{{/reason-others-identity}}
-  {{#reason-others-auth}}{{reason-others-auth}}{{/reason-others-auth}}
   {{#reason-passport-family}}{{reason-passport-family}}{{/reason-passport-family}}
   {{#reason-passport-lost}}{{reason-passport-lost}}{{/reason-passport-lost}}
   {{#reason-other}}{{reason-other}}{{/reason-other}}

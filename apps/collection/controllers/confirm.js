@@ -16,7 +16,6 @@ function getReason(req) {
     'under-age',
     'non-identity',
     'others-identity',
-    'others-auth',
     'passport-family',
     'passport-lost',
     'no-brp',

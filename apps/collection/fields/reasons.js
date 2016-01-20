@@ -20,10 +20,6 @@ module.exports = {
       label: 'fields.reason-radio.others-identity.label',
       toggle: 'reason-others-identity-group',
     }, {
-      value: 'others-auth',
-      label: 'fields.reason-radio.others-auth.label',
-      toggle: 'reason-others-auth-group',
-    }, {
       value: 'passport-family',
       label: 'fields.reason-radio.reason-passport-family.label',
       toggle: 'reason-reason-passport-family-group',
@@ -56,13 +52,6 @@ module.exports = {
     label: 'fields.reason-others-identity.label',
     dependent: {
       value: 'others-identity',
-      field: 'reason-radio'
-    }
-  },
-  'reason-others-auth': {
-    label: 'fields.reason-others-auth.label',
-    dependent: {
-      value: 'others-auth',
       field: 'reason-radio'
     }
   },
