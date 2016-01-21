@@ -18,6 +18,14 @@
     {{brp-card}}
   {{/brp-card}}
 
+  {{#same-address-street}}
+    {{#t}}pages.check-details.table.headers.address{{/t}}
+    {{same-address-house-number}} {{same-address-street}},
+    {{same-address-town}},
+    {{#same-address-county}}{{same-address-county}},{{/same-address-county}}
+    {{same-address-postcode}}
+  {{/same-address-street}}
+
   {{#uk-address-street}}
     {{#t}}pages.check-details.table.headers.address{{/t}}
     {{uk-address-house-number}} {{uk-address-street}},
