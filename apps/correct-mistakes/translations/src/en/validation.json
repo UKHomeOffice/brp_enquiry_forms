@@ -2,6 +2,9 @@
   "uk-address-radio": {
     "required": "Do you have a UK address?"
   },
+  "same-address-radio": {
+    "required": "Is your address the same as the address on the delivery letter?"
+  },
   "email": {
     "required": "Enter your email address",
     "email": "Enter your email in the correct format for example, name@domain.com"
@@ -16,6 +19,18 @@
     "required": "Enter the town or city"
   },
   "uk-address-postcode": {
+    "required": "Enter the postcode"
+  },
+  "same-address-house-number": {
+    "required": "Enter your house name or number"
+  },
+  "same-address-street": {
+    "required": "Enter your street"
+  },
+  "same-address-town": {
+    "required": "Enter the town or city"
+  },
+  "same-address-postcode": {
     "required": "Enter the postcode"
   },
   "fullname": {

@@ -1,7 +1,7 @@
 When(/^I go through to Step Six of the error form$/) do
   click_button('Continue')
-  choose('uk-address-radio-yes')
-  complete_address_fields_with_prefix('uk-')
+  choose('same-address-radio-no')
+  complete_address_fields_with_prefix('same-')
   click_button('Continue')
   fill_in('fullname', :with => 'Alex Murphy')
   fill_in('date-of-birth-day', :with => '17')
@@ -66,8 +66,8 @@ Given(/^I have provided a contact address and I am on Step Five of the error for
   check('last-name-error-checkbox')
   fill_in('last-name-error', :with => 'Reasonable')
   click_button('Continue')
-  choose('uk-address-radio-yes')
-  complete_address_fields_with_prefix "uk-"
+  choose('same-address-radio-no')
+  complete_address_fields_with_prefix "same-"
   click_button('Continue')
   fill_in('fullname', :with => 'Alex Murphy')
   fill_in('date-of-birth-day', :with => '17')

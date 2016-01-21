@@ -1,4 +1,4 @@
-When(/^I go to Step Four of the error form and have not entered my address details in Step Two$/) do
+When(/^I go to Step Four of the error form and have not entered my address details in Step Three$/) do
   visit config['correct_mistakes_host']
   # page.status_code.should == 200
   page.should have_content('Step 1 of 6')
@@ -7,7 +7,7 @@ When(/^I go to Step Four of the error form and have not entered my address detai
   check('last-name-error-checkbox')
   fill_in('last-name-error', :with => 'reasonable')
   click_button('Continue')
-  choose('uk-address-radio-no')
+  choose('same-address-radio-no')
   click_button('Continue')
   page.should have_content('Step 4 of 6')
 end

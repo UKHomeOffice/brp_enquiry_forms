@@ -3,7 +3,11 @@
 var DateController = sinon.stub();
 var proxyquire = require('proxyquire');
 var PersonalDetailsController = proxyquire('../../../../../apps/common/controllers/personal-details', {
-  '../../../lib/date-controller': DateController
+  'hof': {
+    controllers: {
+      date: DateController
+    }
+  }
 });
 
 describe('apps/common/controllers/personal-details', function () {

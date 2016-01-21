@@ -47,7 +47,24 @@ module.exports = {
       'letter-error'
     ],
     backLink: 'location',
-    next: '/uk-address'
+    next: '/uk-address',
+    forks: [{
+      target: '/same-address',
+      condition: function testUKLocation(req) {
+        if (req.sessionModel && req.sessionModel.toJSON) {
+          return req.sessionModel.toJSON()['location-applied'] === 'yes';
+        }
+        return false;
+      }
+    }, {
+      target: '/uk-address',
+      condition: function testAbroadLocation(req) {
+        if (req.sessionModel && req.sessionModel.toJSON) {
+          return req.sessionModel.toJSON()['location-applied'] === 'no';
+        }
+        return false;
+      }
+    }]
   },
   '/conditions-and-length': {
     prereqs: ['/']
@@ -79,6 +96,18 @@ module.exports = {
     backLink: 'about-error',
     next: '/personal-details'
   },
+  '/same-address': {
+    fields: [
+      'same-address-radio',
+      'same-address-house-number',
+      'same-address-street',
+      'same-address-town',
+      'same-address-county',
+      'same-address-postcode'
+    ],
+    backLink: 'about-error',
+    next: '/personal-details'
+  },
   '/personal-details': {
     controller: require('../common/controllers/personal-details'),
     template: 'personal-details-brp',
@@ -91,7 +120,6 @@ module.exports = {
       'nationality',
       'brp-card'
     ],
-    backLink: 'uk-address',
     next: '/contact-details'
   },
   '/contact-details': {

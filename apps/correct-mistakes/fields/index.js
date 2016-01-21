@@ -7,5 +7,6 @@ module.exports = _.extend(
   require('./truncated'),
   require('./uk-address'),
   require('./location-applied'),
-  require('./personal-details')
+  require('./personal-details'),
+  require('./same-address')
 );
