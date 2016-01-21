@@ -20,6 +20,9 @@ Dear {{fullname}}
 {{#t}}pages.check-details.table.headers.nationality{{/t}}
 {{changed-person-nationality}}
 
+{{#t}}fields.someone-else-id-type.legend{{/t}}
+{{#t}}fields.someone-else-id-type.options.{{changed-person-id-type}}.label{{/t}}
+
 {{#t}}pages.check-details.table.headers.id-number{{/t}}
 {{changed-person-id-number}}
 

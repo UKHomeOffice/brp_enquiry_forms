@@ -4,6 +4,9 @@
     "subheader": "Tell us what would you like to do."
   },
   "someone-else": {
+    "someone-else-id-type": {
+      "title": "The person must bring this ID document and their Home Office letter of authority when they collect your BRP. They will also need to present your passport or travel document containing the vignette (sticker)."
+    },
     "someone-else-group": {
       "title": "Provide details of <strong>the person you want to nominate to collect your BRP</strong>. The nominated person must hold a valid UK or EU passport, EU national ID card or BRP."
     },

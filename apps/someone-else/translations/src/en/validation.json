@@ -31,6 +31,9 @@
     "required": "What is the nominee's nationality?",
     "equal": "Please pick a nationality from the list"
   },
+  "someone-else-id-type": {
+    "required": "What is the nominee's identity type?"
+  },
   "someone-else-id-number": {
     "required": "What is the nominee's identity document number?"
   },
@@ -49,6 +52,9 @@
   "change-person-nationality": {
     "required": "What is the nominee's nationality?",
     "equal": "Please pick a nationality from the list"
+  },
+  "change-person-id-type": {
+    "required": "What is the nominee's identity type?"
   },
   "change-person-id-number": {
     "required": "What is the nominee's identity document number?"

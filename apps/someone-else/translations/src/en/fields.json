@@ -31,8 +31,22 @@
   "someone-else-nationality": {
     "label":  "Country of nationality"
   },
+  "someone-else-id-type": {
+    "legend": "Identity document type",
+    "options": {
+      "passport": {
+        "label": "Passport"
+      },
+      "eu-national-id": {
+        "label": "EU National ID"
+      },
+      "brp-card": {
+        "label": "BRP Card"
+      }
+    }
+  },
   "someone-else-id-number": {
-    "label": "Identity document number <br/>(This must be a UK or EU passport, EU national ID or BRP number)"
+    "label": "Identity document number"
   },
   "someone-else-reason-radio": {
     "options": {
@@ -69,8 +83,22 @@
   "change-person-nationality": {
     "label":  "Country of nationality"
   },
+  "change-person-id-type": {
+    "legend": "Identity document type",
+    "options": {
+      "passport": {
+        "label": "Passport"
+      },
+      "eu-national-id": {
+        "label": "EU National ID"
+      },
+      "brp-card": {
+        "label": "BRP Card"
+      }
+    }
+  },
   "change-person-id-number": {
-    "label": "Identity document number <br/>(This must be a UK or EU passport, EU national ID or BRP number)"
+    "label": "Identity document number"
   },
   "nominated-date": {
     "label": "Date",

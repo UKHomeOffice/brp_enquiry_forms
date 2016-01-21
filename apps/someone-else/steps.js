@@ -15,6 +15,7 @@ module.exports = {
       'someone-else-date-month',
       'someone-else-date-year',
       'someone-else-nationality',
+      'someone-else-id-type',
       'someone-else-id-number',
       'change-person-fullname',
       'change-person-date',
@@ -22,6 +23,7 @@ module.exports = {
       'change-person-date-month',
       'change-person-date-year',
       'change-person-nationality',
+      'change-person-id-type',
       'change-person-id-number',
     ],
     next: '/reason'

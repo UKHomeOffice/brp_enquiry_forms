@@ -1,61 +1,64 @@
 {{#data}}
 
-  {{#t}}emails.someone-else.header{{/t}}
+{{#t}}emails.someone-else.header{{/t}}
 
-  {{#t}}emails.someone-else.caseworker.nominating{{/t}} ({{nominating}})
+{{#t}}emails.someone-else.caseworker.nominating{{/t}} ({{nominating}})
 
-  {{#t}}pages.check-details.table.headers.fullname{{/t}}
-  {{fullname}}
+{{#t}}pages.check-details.table.headers.fullname{{/t}}
+{{fullname}}
 
-  {{#t}}pages.check-details.table.headers.date-of-birth{{/t}}
-  {{date-of-birth-formatted}}
+{{#t}}pages.check-details.table.headers.date-of-birth{{/t}}
+{{date-of-birth-formatted}}
 
-  {{#t}}pages.check-details.table.headers.nationality{{/t}}
-  {{nationality}}
+{{#t}}pages.check-details.table.headers.nationality{{/t}}
+{{nationality}}
 
-  {{#passport}}
-  {{#t}}pages.check-details.table.headers.passport{{/t}}
-  {{passport}}
-  {{/passport}}
+{{#passport}}
+{{#t}}pages.check-details.table.headers.passport{{/t}}
+{{passport}}
+{{/passport}}
 
-  {{#phone}}
-  {{#t}}pages.check-details.table.headers.phone{{/t}}
-  {{phone}}
-  {{/phone}}
+{{#phone}}
+{{#t}}pages.check-details.table.headers.phone{{/t}}
+{{phone}}
+{{/phone}}
 
-  {{#email}}
-  {{#t}}pages.check-details.table.headers.email{{/t}}
-  {{email}}
-  {{/email}}
+{{#email}}
+{{#t}}pages.check-details.table.headers.email{{/t}}
+{{email}}
+{{/email}}
 
-  {{#t}}pages.someone-else-check-details.tables.other-person.title{{/t}}
+{{#t}}pages.someone-else-check-details.tables.other-person.title{{/t}}
 
-  {{#t}}pages.check-details.table.headers.fullname{{/t}}
-  {{changed-person-fullname}}
+{{#t}}pages.check-details.table.headers.fullname{{/t}}
+{{changed-person-fullname}}
 
-  {{#t}}pages.check-details.table.headers.date-of-birth{{/t}}
-  {{changed-person-date-formatted}}
+{{#t}}pages.check-details.table.headers.date-of-birth{{/t}}
+{{changed-person-date-formatted}}
 
-  {{#t}}pages.check-details.table.headers.nationality{{/t}}
-  {{changed-person-nationality}}
+{{#t}}pages.check-details.table.headers.nationality{{/t}}
+{{changed-person-nationality}}
 
-  {{#t}}pages.check-details.table.headers.id-number{{/t}}
-  {{changed-person-id-number}}
+{{#t}}fields.someone-else-id-type.legend{{/t}}
+{{#t}}fields.someone-else-id-type.options.{{changed-person-id-type}}.label{{/t}}
 
-  {{#t}}pages.someone-else-check-details.tables.other-person.title{{/t}}
+{{#t}}pages.check-details.table.headers.id-number{{/t}}
+{{changed-person-id-number}}
 
-  {{#contact-address-street}}
-  {{#t}}pages.check-details.table.headers.contact-address{{/t}}
-  {{contact-address-street}},
-  {{contact-address-town}},
-  {{#contact-address-county}}
-  {{contact-address-county}},
-  {{/contact-address-county}}
-  {{contact-address-postcode}}
-  {{/contact-address-street}}
+{{#t}}pages.someone-else-check-details.tables.other-person.title{{/t}}
 
-  {{#org-type}}
-  Help from a {{#t}}fields.org-type.options[{{org-type}}].label{{/t}} called {{rep-name}} {{#rep-email}}<{{rep-email}}>{{/rep-email}}
-  {{/org-type}}
+{{#contact-address-street}}
+{{#t}}pages.check-details.table.headers.contact-address{{/t}}
+{{contact-address-street}},
+{{contact-address-town}},
+{{#contact-address-county}}
+{{contact-address-county}},
+{{/contact-address-county}}
+{{contact-address-postcode}}
+{{/contact-address-street}}
+
+{{#org-type}}
+Help from a {{#t}}fields.org-type.options[{{org-type}}].label{{/t}} called {{rep-name}} {{#rep-email}}<{{rep-email}}>{{/rep-email}}
+{{/org-type}}
 
 {{/data}}

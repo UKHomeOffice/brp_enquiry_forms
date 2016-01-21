@@ -6,6 +6,7 @@ When(/^I go to the Confirmation page of the someone else form$/) do
   fill_in('someone-else-date-month', :with => '02')
   fill_in('someone-else-date-year', :with => '1971')
   fill_in('someone-else-nationality', :with => 'China')
+  choose('someone-else-id-type-passport')
   fill_in('someone-else-id-number', :with => '1234567890')
   click_button('Continue')
   choose('someone-else-reason-radio-under-age')
