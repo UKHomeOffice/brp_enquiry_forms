@@ -46,6 +46,8 @@ LetterRecievedController.prototype.saveValues = function saveValues(req) {
   if (isWithin(deliveryDate, 10)) {
     req.sessionModel.set('week-day-range', weekDayRange(deliveryDate, 10));
     this.options.next = '/on-the-way';
+  } else {
+    this.options.next = '/same-address';
   }
   return DateController.prototype.saveValues.apply(this, arguments);
 };

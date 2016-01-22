@@ -43,7 +43,7 @@ describe('controllers/letter-received', function () {
 
     it('delegates to date controller to redirect', function () {
       controller.saveValues(req, res);
-      should.equal(controller.options.next, undefined);
+      should.equal(controller.options.next, '/same-address');
     });
 
   });
@@ -79,7 +79,7 @@ describe('controllers/letter-received', function () {
 
       it('delegates to the date controller to redirect', function () {
         controller.saveValues(req, res);
-        should.equal(controller.options.next, undefined);
+        should.equal(controller.options.next, '/same-address');
       });
 
       it('calls the parent controllers\' saveValues with the arguments', function () {
