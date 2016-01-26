@@ -23,8 +23,9 @@
     "required": "What is the nominee's date of birth?",
     "numeric": "Date must only contain numbers",
     "future": "The date is in the future",
+    "date": "Enter the nominee's date of birth in the correct format",
     "format": "Enter the nominee's date of birth in the correct format",
-    "over-18": "The person nominated to collect your BRP must be over 18 years old"
+    "before": "The person nominated to collect your BRP must be over 18 years old"
   },
   "someone-else-fullname": {
     "required": "What is the nominee's full name?"
@@ -47,7 +48,7 @@
     "numeric": "Date must only contain numbers",
     "future": "The date is in the future",
     "format": "Enter the nominee's date of birth in the correct format",
-    "over-18": "The person nominated to collect your BRP must be over 18 years old"
+    "before": "The person nominated to collect your BRP must be over 18 years old"
   },
   "change-person-fullname": {
     "required": "What is the nominee's full name?"

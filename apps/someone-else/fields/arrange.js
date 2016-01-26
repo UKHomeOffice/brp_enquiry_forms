@@ -30,6 +30,7 @@ module.exports = {
     }
   },
   'someone-else-date': {
+    validate: ['required', 'date', {type: 'before', arguments: [18, 'years']}],
     legend: 'fields.someone-else-date.legend',
     hint: 'fields.someone-else-date.hint',
     dependent: {
@@ -106,6 +107,7 @@ module.exports = {
     }
   },
   'change-person-date': {
+    validate: ['required', 'date', {type: 'before', arguments: [18, 'years']}],
     legend: 'fields.change-person-date.legend',
     hint: 'fields.change-person-date.hint',
     dependent: {
