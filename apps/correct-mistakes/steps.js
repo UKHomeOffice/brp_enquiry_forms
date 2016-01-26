@@ -67,10 +67,12 @@ module.exports = {
     }]
   },
   '/conditions-and-length': {
-    prereqs: ['/']
+    prereqs: ['/'],
+    clearSession: true
   },
   '/enrolment-letter': {
-    prereqs: ['/']
+    prereqs: ['/'],
+    clearSession: true
   },
   '/truncated': {
     controller: require('./controllers/truncated'),
@@ -82,7 +84,8 @@ module.exports = {
     next: '/uk-address'
   },
   '/exit-truncated': {
-    prereqs: ['/truncated']
+    prereqs: ['/truncated'],
+    clearSession: true
   },
   '/uk-address': {
     fields: [
