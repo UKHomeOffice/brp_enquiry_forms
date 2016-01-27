@@ -18,7 +18,7 @@
   "check-details": {
     "header": "Check the details you have provided",
     "subheader": "If any information is incorrect, you can change it here.",
-    "warn-card-cancelled": "Once you have submitted this information, we shall cancel your lost or stolen BRP. If you find the BRP you reported as lost or stolen, you will not be able to use it. You must get a replacement card.",
+    "warn-card-cancelled": "Once you have submitted this information, we will cancel your BRP. If you find the BRP you reported as lost or stolen, you will not be able to use it and may need to apply for a replacement.",
     "table": {
       "headers": {
         "contact-address": "Contact address",
