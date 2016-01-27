@@ -23,7 +23,7 @@
     }
   },
   "exit-cancel-request": {
-    "header": "You cannot use this service",
+    "header": "You don't need to use this service",
     "subheader": "You do not need to cancel your request for a nominated person to collect your BRP. If you are still unable to collect your BRP yourself, you can nominate a new person to collect it for you."
   },
   "contact-details": {
