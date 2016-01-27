@@ -71,6 +71,24 @@ module.exports = {
       field: 'arrange-collection-radio',
     }
   },
+  'someone-else-id-type': {
+    validate: ['required'],
+    label: 'fields.someone-else-id-type.label',
+    dependent: {
+      value: 'someone-else',
+      field: 'arrange-collection-radio',
+    },
+    options: [{
+      value: 'passport',
+      label: 'fields.someone-else-id-type.options.passport.label'
+    }, {
+      value: 'eu-national-id',
+      label: 'fields.someone-else-id-type.options.eu-national-id.label'
+    }, {
+      value: 'brp-card',
+      label: 'fields.someone-else-id-type.options.brp-card.label'
+    }]
+  },
   'someone-else-id-number': {
     validate: ['required'],
     label: 'fields.someone-else-id-number.label',
@@ -128,6 +146,24 @@ module.exports = {
       value: 'change-person',
       field: 'arrange-collection-radio',
     }
+  },
+  'change-person-id-type': {
+    validate: ['required'],
+    label: 'fields.change-person-id-type.label',
+    dependent: {
+      value: 'change-person',
+      field: 'arrange-collection-radio',
+    },
+    options: [{
+      value: 'passport',
+      label: 'fields.change-person-id-type.options.passport.label'
+    }, {
+      value: 'eu-national-id',
+      label: 'fields.change-person-id-type.options.eu-national-id.label'
+    }, {
+      value: 'brp-card',
+      label: 'fields.someone-else-id-type.options.brp-card.label'
+    }]
   },
   'change-person-id-number': {
     validate: ['required'],

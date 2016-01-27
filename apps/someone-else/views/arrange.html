@@ -38,7 +38,7 @@
 
           {{#input-text}}someone-else-fullname{{/input-text}}
 
-          <fieldset id="someone-else-date-group" class="{{#errors.someone-else-date}}validation-error{{/errors.someone-else-date}}">
+          <fieldset id="someone-else-date-group" class="{{#errors.someone-else-date}}validation-error{{/errors.someone-else-date}} form-group">
 
             <legend class=visuallyhidden>
               <span class="form-label-bold">{{#t}}fields.someone-else-date.legend{{/t}}</span>
@@ -61,6 +61,10 @@
 
           {{#select}}someone-else-nationality{{/select}}
 
+          {{#radio-group}}someone-else-id-type{{/radio-group}}
+
+          <p>{{#t}}pages.someone-else.someone-else-id-type.title{{/t}}</p>
+
           {{#input-text}}someone-else-id-number{{/input-text}}
 
           <div class="notice">
@@ -78,7 +82,7 @@
 
           {{#input-text}}change-person-fullname{{/input-text}}
 
-          <fieldset id="change-person-date-group" class="{{#errors.change-person-date}}validation-error{{/errors.change-person-date}}">
+          <fieldset id="change-person-date-group" class="{{#errors.change-person-date}}validation-error{{/errors.change-person-date}} form-group">
 
             <legend class=visuallyhidden>
               <span class="form-label-bold">{{#t}}fields.change-person-date.legend{{/t}}</span>
@@ -100,6 +104,10 @@
           </fieldset>
 
           {{#select}}change-person-nationality{{/select}}
+
+          {{#radio-group}}change-person-id-type{{/radio-group}}
+
+          <p>{{#t}}pages.someone-else.someone-else-id-type.title{{/t}}</p>
 
           {{#input-text}}change-person-id-number{{/input-text}}
 
