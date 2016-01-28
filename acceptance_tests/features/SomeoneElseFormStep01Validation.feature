@@ -28,3 +28,17 @@ Feature: Validation for Step 01 of the Someone Else Form
 		And I see "What is the nominee's nationality?" in the "/html/body/main/div[2]/div/form/div[2]/div[2]/label/span[2]" xpath
 		And I see "What is the nominee's identity type?"
 		And I see "What is the nominee's identity document number?" in the "//*[@id="someone-else-id-number-group"]" xpath
+
+	Scenario: Attempt to proceed to Step 02 after selecting the Allow someone else to collect my BRP radio button and nominating a child to collect the BRP
+		When I go to Step One of the someone else form
+		And I check the "arrange-collection-radio-someone-else" radio button
+		And I enter "17" years old into the Someone else DOB field
+		And I click "Continue"
+		Then I see "The person nominated to collect your BRP must be over 18 years old"
+
+	Scenario: Attempt to proceed to Step 02 after selecting the Change the person I requested to collect my BRP radio button and nominating a child to collect the BRP
+		When I go to Step One of the someone else form
+		And I check the "arrange-collection-radio-change-person" radio button
+		And I enter "17" years old into the Change person DOB field
+		And I click "Continue"
+		Then I see "The person nominated to collect your BRP must be over 18 years old"

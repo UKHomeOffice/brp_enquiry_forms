@@ -1,12 +1,11 @@
 'use strict';
 
 var ArrangeController = require('../../../../../apps/someone-else/controllers/arrange');
-var DateController = require('../../../../../lib/date-controller');
+var Parent = require('hof').controllers.base;
 
 describe('apps/someone-else/controllers/arrange', function () {
 
   var controller;
-  var key = '';
   var req;
 
   describe('process', function () {
@@ -15,22 +14,22 @@ describe('apps/someone-else/controllers/arrange', function () {
       req = {
         form: {
           values: {
-            'arrange-collection-radio': ''
+            'arrange-collection-radio': '',
+            'someone-else-date-day': '',
+            'someone-else-date-month': '',
+            'change-person-date-day': '',
+            'change-person-date-month': ''
           }
         }
       };
       controller = new ArrangeController({template: 'index'});
-      DateController.prototype.process = sinon.stub();
+      Parent.prototype.process = sinon.stub();
     });
 
     describe('someone-else selected', function () {
       beforeEach(function () {
         req.form.values['arrange-collection-radio'] = 'someone-else';
         controller.process(req);
-      });
-
-      it('sets the correct date-key', function () {
-        controller.dateKey.should.equal('someone-else-date');
       });
 
       it('sets the correct options.next', function () {
@@ -46,10 +45,6 @@ describe('apps/someone-else/controllers/arrange', function () {
       beforeEach(function () {
         req.form.values['arrange-collection-radio'] = 'change-person';
         controller.process(req);
-      });
-
-      it('sets the correct date-key', function () {
-        controller.dateKey.should.equal('change-person-date');
       });
 
       it('sets the correct options.next', function () {
@@ -75,50 +70,14 @@ describe('apps/someone-else/controllers/arrange', function () {
       it('sets the correct options.next', function () {
         controller.options.next.should.equal('/exit-cancel-request');
       });
-
-      it('doesnt use a dateKey', function () {
-        should.equal(controller.dateKey, '');
-      });
     });
 
-    it('calls date controller', function () {
+    it('calls parent controller', function () {
       controller.process(req);
 
-      DateController.prototype.process.should.have.been.called;
+      Parent.prototype.process.should.have.been.called;
     });
 
-  });
-
-  describe('validateField', function () {
-    beforeEach(function () {
-      controller = new ArrangeController({template: 'index'});
-      controller.dateKey = undefined;
-      DateController.prototype.validateField = sinon.stub();
-    });
-
-    it('sets required to true if the key is part of someone-else', function () {
-      controller.dateKey = 'someone-else-date';
-      key = 'someone-else';
-      controller.validateField(key, req);
-
-      DateController.prototype.validateField.should.have.been.calledWith(key, req, true);
-    });
-
-    it('sets required to true if the key is part of change-person', function () {
-      controller.dateKey = 'change-person-date';
-      key = 'change-person';
-      controller.validateField(key, req);
-
-      DateController.prototype.validateField.should.have.been.calledWith(key, req, true);
-    });
-
-    it('set required to false if the key is not part of the dateKey', function () {
-      controller.dateKey = 'someone-else-date';
-      key = 'change-person';
-      controller.validateField(key, req);
-
-      DateController.prototype.validateField.should.have.been.calledWith(key, req, false);
-    });
   });
 
 });
