@@ -11,10 +11,11 @@ Feature: Validation for Step 02 of the Delivery Form
 
 	Scenario: Attempting to proceed to Step 03 of the Delivery Form have selecting the No radio button having not completed the address fields
 		When I check the "No" radio button
-		When I click Continue
+		And I click Continue
 		Then I see the "Enter your street" link
-		Then I see the "Enter the town or city" link
-		Then I see the "Enter the postcode" link
+		And I see the "Enter the town or city" link
+		And I see the "Enter the postcode" link
+		And I see the "A case ID number is required for your BRP to be sent to a different address" link
 
 	Scenario: Attempting to proceed to Step 03 of the Delivery Form without filling in the first address field
 		When I check the "No" radio button
@@ -40,8 +41,15 @@ Feature: Validation for Step 02 of the Delivery Form
 		Then I see the "Enter the postcode" link
 		And I see "Enter the postcode"
 
-	Scenario: Attempting to proceed to Step 03 of the Delivery Form having selected the No radio button and completing the required address fields
+	Scenario: Attempting to proceed to Step 03 of the Delivery Form without filling in the case-id field
 		When I check the "No" radio button
     And I fill in all the address details
+		When I click Continue
+		Then I see the "A case ID number is required for your BRP to be sent to a different address" link
+
+	Scenario: Attempting to proceed to Step 03 of the Delivery Form having selected the No radio button and completing the required address and case-id fields
+		When I check the "No" radio button
+    And I fill in all the address details
+    And I fill in the case-id field
 		When I click Continue
 		Then I am on Step Three of the delivery form
