@@ -90,7 +90,14 @@
 
         <h2>{{#t}}footer.title{{/t}}</h2>
         <p>{{#t}}footer.explanation{{/t}}</p>
-        <p>{{#t}}pages.check-details.warn-card-cancelled{{/t}}</p>
+        <div class="notice">
+          <i class="icon icon-important">
+            <span class="visuallyhidden">Warning</span>
+          </i>
+          <strong class="bold-small">
+            {{#t}}pages.check-details.warn-card-cancelled{{/t}}
+          </strong>
+        </div>
 
         {{#input-submit}}send{{/input-submit}}
 

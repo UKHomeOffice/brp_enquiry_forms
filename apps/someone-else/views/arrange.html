@@ -63,8 +63,6 @@
 
           {{#radio-group}}someone-else-id-type{{/radio-group}}
 
-          <p>{{#t}}pages.someone-else.someone-else-id-type.title{{/t}}</p>
-
           {{#input-text}}someone-else-id-number{{/input-text}}
 
           <div class="notice">
@@ -72,9 +70,10 @@
               <span class="visuallyhidden">Warning</span>
             </i>
             <strong class="bold-small">
-              The person must bring this ID document and their Home Office letter of authority when they collect your BRP. They will also need to present your passport or travel document containing the vignette (sticker).
+              {{#t}}pages.someone-else.someone-else-id-type.title{{/t}}
             </strong>
           </div>
+
         </div>
 
         <div id="change-person-group" class="panel-indent">
@@ -107,8 +106,6 @@
 
           {{#radio-group}}change-person-id-type{{/radio-group}}
 
-          <p>{{#t}}pages.someone-else.someone-else-id-type.title{{/t}}</p>
-
           {{#input-text}}change-person-id-number{{/input-text}}
 
           <div class="notice">
@@ -116,7 +113,7 @@
               <span class="visuallyhidden">Warning</span>
             </i>
             <strong class="bold-small">
-              The person must bring this ID document and their Home Office letter of authority when they collect your BRP. They will also need to present your passport or travel document containing the vignette (sticker).
+              {{#t}}pages.someone-else.someone-else-id-type.title{{/t}}
             </strong>
           </div>
 
