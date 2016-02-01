@@ -16,5 +16,9 @@
   },
   "address-postcode": {
     "label": "Postcode"
+  },
+  "case-id": {
+    "label": "Case ID number",
+    "hint": "(Enter the case ID found on your visa decision letter.)"
   }
 }

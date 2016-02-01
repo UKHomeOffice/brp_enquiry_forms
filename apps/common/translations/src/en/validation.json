@@ -11,6 +11,9 @@
   "address-postcode": {
     "required": "Enter the postcode"
   },
+  "case-id": {
+    "required": "A case ID number is required for your BRP to be sent to a different address"
+  },
   "contact-address-house-number": {
     "required": "Enter your house name or number"
   },

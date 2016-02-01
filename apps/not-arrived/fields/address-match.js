@@ -61,4 +61,13 @@ module.exports = {
       field: 'address-match',
     }
   },
+  'case-id': {
+    validate: ['required'],
+    label: 'common-fields.case-id.label',
+    hint: 'common-fields.case-id.hint',
+    dependent: {
+      value: 'no',
+      field: 'address-match',
+    }
+  }
 };

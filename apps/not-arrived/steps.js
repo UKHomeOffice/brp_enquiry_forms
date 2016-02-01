@@ -34,7 +34,8 @@ module.exports = {
   '/letter-not-received': {},
   '/on-the-way': {
     controller: require('./controllers/on-the-way'),
-    prereqs: ['/']
+    prereqs: ['/'],
+    clearSession: true
   },
   '/same-address': {
     template: 'same-address-details.html',
@@ -45,7 +46,8 @@ module.exports = {
       'address-street',
       'address-town',
       'address-county',
-      'address-postcode'
+      'address-postcode',
+      'case-id'
     ],
     backLink: 'letter-received',
     next: '/personal-details'
