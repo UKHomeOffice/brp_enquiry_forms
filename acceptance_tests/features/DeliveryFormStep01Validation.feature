@@ -1,4 +1,4 @@
-@DeliveryForm @StepOne @Validation @DSP-54
+@DeliveryForm @StepOne @Validation @DSP-54 @1
 Feature: Validation for Step 01 of the Delivery Form
 
 	Background:
@@ -39,4 +39,3 @@ Feature: Validation for Step 01 of the Delivery Form
 		When I check the "Yes" radio button
 		When I check the "I don't have the letter anymore" checkbox
 		And I click "Continue"
-		Then I am on Step Two of the delivery form
