@@ -26,6 +26,9 @@ Here is the information you have sent us:
 {{address-town}},
 {{#address-county}}{{address-county}},{{/address-county}}
 {{address-postcode}}
+
+{{#t}}common-fields.case-id.label{{/t}}
+{{case-id}}
 {{/address-street}}
 
 {{#t}}pages.check-details-error.personal-details-table.headers.fullname{{/t}}

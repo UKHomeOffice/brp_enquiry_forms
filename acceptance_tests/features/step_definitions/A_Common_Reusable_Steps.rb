@@ -137,6 +137,10 @@ When(/^I fill in the postcode field with special characters$/) do
   fill_in('address-postcode', :with => '!&^')
 end
 
+When(/^I fill in the case-id field$/) do
+  fill_in('case-id', :with => '1')
+end
+
 #
 # => DSP-66_.steps
 #

@@ -10,6 +10,7 @@ When(/^I go to Step Three of the delivery form$/) do
   fill_in('address-street', :with => 'Marsham Street')
   fill_in('address-town', :with => 'Westminster')
   fill_in('address-postcode', :with => 'SW1P 4DF')
+  fill_in('case-id', :with => '1')
   click_button('Continue')
 end                                                                          
                                                                              
