@@ -5,7 +5,6 @@ var nodemailer = require('nodemailer');
 var config = require('../../config');
 var i18n = require('hof').i18n;
 var Hogan = require('hogan.js');
-var i18nLookup = require('hof').i18nLookup;
 var fs = require('fs');
 var path = require('path');
 
@@ -99,13 +98,12 @@ Emailer.prototype.send = function send(email, callback) {
   });
 
   locali18n.on('ready', function locali18nLoaded() {
-    var lookup = i18nLookup(locali18n.translate.bind(locali18n));
     var templateData = {
       data: email.dataToSend,
       t: function t() {
         return function lookupTranslation(translate) {
           // for translations inside our mustache templates
-          return lookup(Hogan.compile(translate).render(email.dataToSend));
+          return locali18n.translate(Hogan.compile(translate).render(email.dataToSend));
         };
       }
     };
