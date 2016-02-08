@@ -22,13 +22,13 @@ ArrangeController.prototype.processDate = function processDate(key, values) {
     var month = v[k + '-month'];
     var day = v[k + '-day'];
 
-    return (year !== '' && month !== '' && day !== '') ? year + '-' + pad(month) + '-' + pad(day) : undefined;
+    return (year !== '' && month !== '' && day !== '') ? year + '-' + pad(month) + '-' + pad(day) : '';
   };
 
   var date = pureProcessDate(key, values);
 
   values[key] = date;
-  values[key + '-formatted'] = moment(date).format(prettyDate);
+  values[key + '-formatted'] = date === '' ? '' : moment(date).format(prettyDate);
 };
 
 ArrangeController.prototype.process = function process(req) {
