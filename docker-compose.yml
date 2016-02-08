@@ -1,18 +1,24 @@
 app:
   build: .
+  environment:
+  - NODE_ENV=docker-compose
+  - EMAIL_HOST=localhost
+  - EMAIL_PORT=25
+  - EMAIL_IGNORE_TLS=true
+  - CASEWORKER_SOMEONEELSE_EMAIL=a@user.com
+  - CASEWORKER_LOSTSTOLEN_EMAIL=a@user.com
   ports:
-  - "8080"
+  - "8080:8080"
   volumes:
   - "/public"
-  net: "host"
-nginx:
-  image: quay.io/ukhomeofficedigital/brpapp-nginx:v0.2.3
-  ports:
-  - "80:443"
-  volumes_from:
-  - "app"
   net: "host"
 redis:
   image: redis
   net: "host"
+maildev:
+  image: djfarrelly/maildev
+  net: "host"
+  ports:
+  - "80"
+  - "25"
 

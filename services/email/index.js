@@ -77,17 +77,25 @@ var translationLocation = {
   'someone-else': 'someone-else'
 };
 
-var transport = config.email.auth.user === '' ?
+var transport = (config.email.auth.user === '' && config.env !== 'docker-compose') ?
   require('nodemailer-stub-transport') : require('nodemailer-smtp-transport');
 
+var emailOptions = {
+  host: config.email.host,
+  port: config.email.port,
+  ignoreTLS: config.email.ignoreTLS
+};
+
+if (config.email.auth.user && config.email.auth.pass) {
+  emailOptions.auth = config.email.auth;
+}
+
+if (config.email.secure) {
+  emailOptions.secure = config.email.secure;
+}
+
 function Emailer() {
-  this.transporter = nodemailer.createTransport(transport({
-    host: config.email.host,
-    port: config.email.port,
-    secure: false,
-    auth: config.email.auth,
-    ignoreTLS: false
-  }));
+  this.transporter = nodemailer.createTransport(transport(emailOptions));
 }
 
 Emailer.prototype.send = function send(email, callback) {
