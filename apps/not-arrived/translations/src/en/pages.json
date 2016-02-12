@@ -18,7 +18,10 @@
   },
   "letter-lost": {
     "header": "Contact us",
-    "description": "We need to know the date on your letter so we can look into why you haven't received your BRP. To find out when your letter was sent, call customer services on 0300 123 2241."
+    "para": {
+      "one": "If you haven't yet received a letter, the Home Office may still be processing your application.",
+      "two": "If you think you should have received the letter by now, contact <a href=\"https://www.gov.uk/contact-ukvi/visas-and-settlement\">UK Visas and Immigration</a>."
+    }
   },
   "on-the-way": {
     "header": "Your biometric residence permit should be on the way",
