@@ -9,6 +9,8 @@ Install the dependencies and build the project resources
 $ npm install
 ```
 
+Install `Redis` and make sure you have a running redis instance in the background.
+
 Initiate the server in development mode (Express is used to serve the static resources in development).
 ```bash
 $ npm run dev
