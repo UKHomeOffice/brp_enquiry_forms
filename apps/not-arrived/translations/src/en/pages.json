@@ -13,7 +13,7 @@
     "header": "Contact us",
     "para": {
       "one": "If you haven't yet received a letter, the Home Office may still be processing your application.",
-      "two": "Call the contact centre 0300 123 2241."
+      "two": "If you think you should have received the letter by now, contact <a href=\"https://www.gov.uk/contact-ukvi/visas-and-settlement\">UK Visas and Immigration</a>."
     }
   },
   "letter-lost": {
