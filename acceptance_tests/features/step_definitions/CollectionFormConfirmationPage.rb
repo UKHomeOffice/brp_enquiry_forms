@@ -10,7 +10,7 @@ When(/^I go to the Confirmation page of the collection form$/) do
   fill_in('fullname', :with => 'Alex Murphy')
   fill_in('date-of-birth-day', :with => '17')
   fill_in('date-of-birth-month', :with => '08')
-  fill_in('date-of-birth-year', :with => '1988')
+  fill_in('date-of-birth-year', :with => '2010')
   fill_in('nationality', :with => 'China')
   click_button('Continue')
 

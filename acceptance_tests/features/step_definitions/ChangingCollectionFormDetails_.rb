@@ -17,14 +17,14 @@ When(/^I proceed back to Step Six of the collection form$/) do
   fill_in('nominated-fullname', :with => 'Mister Resonable')
   fill_in('nominated-date-day', :with => '17')
   fill_in('nominated-date-month', :with => '08')
-  fill_in('nominated-date-year', :with => '1988')
+  fill_in('nominated-date-year', :with => '2010')
   fill_in('nominated-nationality', :with => 'China')
   fill_in('nominated-id-number', :with => '1234567890')
   click_button('Continue')
   fill_in('fullname', :with => 'Alex Murphy')
   fill_in('date-of-birth-day', :with => '17')
   fill_in('date-of-birth-month', :with => '08')
-  fill_in('date-of-birth-year', :with => '1988')
+  fill_in('date-of-birth-year', :with => '2010')
   fill_in('nationality', :with => 'China')
   click_button('Continue')
   fill_in('email', :with => 'blockb@veryverygood.cr')
@@ -92,13 +92,13 @@ Then(/^I see the personal details I entered on Step Four of the collection form$
   find_field('fullname').value.should == 'Topp Dogg'
   find_field('date-of-birth-day').value.should == '17'
   find_field('date-of-birth-month').value.should == '08'
-  find_field('date-of-birth-year').value.should == '1988'
+  find_field('date-of-birth-year').value.should == '2010'
   find_field('nationality').value.should == 'China'
 end
 
 Then(/^I can see all the changed personal details from step three of the collection form$/) do
   page.should have_content('Hans Zimmerman')
-  page.should have_content('6 January 1971')
+  page.should have_content('6 January 2011')
   page.should have_content('South Africa')
   page.should have_content('987654321')
 end
