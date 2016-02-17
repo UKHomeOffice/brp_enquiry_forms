@@ -19,7 +19,7 @@ Personal Details
 
 {{#address-street}}
 {{#t}}pages.check-details.table.headers.address{{/t}}
-{{address-street}},
+{{address-house-number}} {{address-street}},
 {{address-town}},
 {{#address-county}}{{address-county}},{{/address-county}}
 {{address-postcode}}
@@ -32,7 +32,7 @@ Contact Details
 
 {{#contact-address-street}}
 {{#t}}pages.check-details.table.headers.address{{/t}}
-{{contact-address-street}},
+{{contact-address-house-number}} {{contact-address-street}},
 {{contact-address-town}},
 {{#contact-address-county}}{{contact-address-county}},{{/contact-address-county}}
 {{contact-address-postcode}}
