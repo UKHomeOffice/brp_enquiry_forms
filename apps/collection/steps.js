@@ -54,7 +54,7 @@ module.exports = {
     backLink: 'reasons'
   },
   '/personal-details': {
-    controller: require('../common/controllers/personal-details'),
+    controller: require('./controllers/personal-details'),
     fields: [
       'fullname',
       'date-of-birth',

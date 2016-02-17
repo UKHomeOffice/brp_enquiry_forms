@@ -18,7 +18,7 @@ end
 When(/^I change the values in the Date of birth fields$/) do
   fill_in('date-of-birth-day', :with => '06')
   fill_in('date-of-birth-month', :with => '01')
-  fill_in('date-of-birth-year', :with => '1971')
+  fill_in('date-of-birth-year', :with => '2011')
 end
 
 When(/^I change the value in the Nationality field$/) do

@@ -16,7 +16,8 @@
     "required": "Enter your date of birth",
     "numeric": "Date must only contain numbers",
     "future": "The date is in the future",
-    "format": "Enter your date of birth in the correct format"
+    "format": "Enter your date of birth in the correct format",
+    "under-18": "If you are over 18 years old you can collect your own BRP"
   },
   "collection-date": {
     "required": "Enter the collection date",
