@@ -7,6 +7,9 @@ app:
   - EMAIL_IGNORE_TLS=true
   - CASEWORKER_SOMEONEELSE_EMAIL=a@user.com
   - CASEWORKER_LOSTSTOLEN_EMAIL=a@user.com
+  - CASEWORKER_ERROR_EMAIL=a@user.com
+  - CASEWORKER_DELIVERY_EMAIL=a@user.com
+  - CASEWORKER_COLLECTION_EMAIL=a@user.com
   ports:
   - "8080:8080"
   volumes:
