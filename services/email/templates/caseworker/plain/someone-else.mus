@@ -49,7 +49,7 @@
 
 {{#contact-address-street}}
 {{#t}}pages.check-details.table.headers.contact-address{{/t}}
-{{contact-address-street}},
+{{contact-address-house-number}} {{contact-address-street}},
 {{contact-address-town}},
 {{#contact-address-county}}
 {{contact-address-county}},

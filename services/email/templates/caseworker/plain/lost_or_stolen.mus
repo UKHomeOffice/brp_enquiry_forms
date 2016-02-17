@@ -34,7 +34,7 @@
 
   {{#contact-address-street}}
     {{#t}}emails.address{{/t}}
-    {{contact-address-street}},
+    {{contact-address-house-number}} {{contact-address-street}},
     {{contact-address-town}},
     {{#contact-address-county}}{{contact-address-county}},{{/contact-address-county}}
     {{contact-address-postcode}}
