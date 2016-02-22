@@ -39,6 +39,9 @@ app.use(function setBaseUrl(req, res, next) {
   next();
 });
 
+// Trust proxy for secure cookies
+app.set('trust proxy', 1);
+
 /*************************************/
 /******* Redis session storage *******/
 /*************************************/
