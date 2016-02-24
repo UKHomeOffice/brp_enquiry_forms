@@ -1,5 +1,5 @@
 {{#data}}
-{{#t}}emails.no-arrived.header{{/t}}
+{{#t}}emails.not-arrived.header{{/t}}
 
 Personal Details
 
