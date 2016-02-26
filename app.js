@@ -94,6 +94,24 @@ app.use(session({
   saveUninitialized: true
 }));
 
+// check for cookies first!
+app.get('/cookies-required', function renderCookiesRequired(req, res) {
+  res.render('cookies-required');
+});
+
+app.get('/:journey/', function setCookie(req, res) {
+  res.cookie('brp_app', 1);
+  res.redirect('/' + req.params.journey + '/check-cookies');
+});
+
+app.get('/:journey/check-cookies', function checkCookie(req, res) {
+  if (Object.keys(req.cookies).length === 0) {
+    res.redirect('/cookies-required');
+  } else {
+    res.redirect('/' + req.params.journey + '/start');
+  }
+});
+
 // apps
 app.use(require('./apps/correct-mistakes/'));
 app.use(require('./apps/collection/'));
