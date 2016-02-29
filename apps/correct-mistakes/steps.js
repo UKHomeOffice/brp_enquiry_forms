@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = {
-  '/': {
+  '/start': {
     controller: require('../common/controllers/start'),
     next: '/location'
   },
@@ -67,16 +67,16 @@ module.exports = {
     }]
   },
   '/conditions-and-length': {
-    prereqs: ['/'],
+    prereqs: ['/start'],
     clearSession: true
   },
   '/enrolment-letter': {
-    prereqs: ['/'],
+    prereqs: ['/start'],
     clearSession: true
   },
   '/truncated': {
     controller: require('./controllers/truncated'),
-    prereqs: ['/'],
+    prereqs: ['/start'],
     fields: [
       'truncated',
       'truncation-page'

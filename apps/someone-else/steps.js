@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = {
-  '/': {
+  '/start': {
     controller: require('../common/controllers/start'),
     next: '/arrange'
   },
@@ -38,11 +38,11 @@ module.exports = {
   },
   '/exit-cancel-request': {
     clearSession: true,
-    prereqs: ['/']
+    prereqs: ['/start']
   },
   '/exit-not-eligible': {
     clearSession: true,
-    prereqs: ['/']
+    prereqs: ['/start']
   },
   '/personal-details': {
     controller: require('./controllers/personal-details'),

@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = {
-  '/': {
+  '/start': {
     controller: require('../common/controllers/start'),
     next: '/inside-uk'
   },

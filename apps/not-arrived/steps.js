@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = {
-  '/': {
+  '/start': {
     controller: require('../common/controllers/start'),
     next: '/letter-received'
   },
@@ -34,7 +34,7 @@ module.exports = {
   '/letter-not-received': {},
   '/on-the-way': {
     controller: require('./controllers/on-the-way'),
-    prereqs: ['/'],
+    prereqs: ['/start'],
     clearSession: true
   },
   '/same-address': {

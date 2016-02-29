@@ -183,10 +183,10 @@ When(/^I enter special character values into the Date of birth field$/) do
 end
 
 def dob_fill(name, age)
-  now = Time.now
-  fill_in(name + '-day', :with => now.day)
-  fill_in(name + '-month', :with => now.month)
-  fill_in(name + '-year', :with => now.year - age.to_i)
+  birthDate = DateTime.now << (12 * age.to_i)
+  fill_in(name + '-day', :with => birthDate.day)
+  fill_in(name + '-month', :with => birthDate.month)
+  fill_in(name + '-year', :with => birthDate.year)
 end;
 
 When(/^I enter "([^"]*)" years old into the Date of birth field$/) do |age|
