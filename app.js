@@ -94,20 +94,23 @@ app.use(session({
   saveUninitialized: true
 }));
 
+app.get('/cookies', function renderCookies(req, res) {
+  res.render('cookies');
+});
+
+app.get('/terms-and-conditions', function renderTerms(req, res) {
+  res.render('terms');
+});
+
+// use the hof middleware
+app.use(require('hof').middleware());
+
 // apps
 app.use(require('./apps/correct-mistakes/'));
 app.use(require('./apps/collection/'));
 app.use(require('./apps/someone-else/'));
 app.use(require('./apps/not-arrived/'));
 app.use(require('./apps/lost-stolen-damaged/'));
-
-app.get('/cookies', function renderCookies(req, res) {
-  res.render('cookies');
-});
-app.get('/terms-and-conditions', function renderTerms(req, res) {
-  res.render('terms');
-});
-
 app.use(require('./middleware/not-found')());
 
 // errors
