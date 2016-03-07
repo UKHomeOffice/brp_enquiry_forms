@@ -19,7 +19,10 @@ if (config.env === 'development' || config.env === 'ci' || config.env === 'docke
   app.use('/public', express.static(path.resolve(__dirname, './public')));
 }
 
-app.use(function setAssetPath(req, res, next) {
+app.use(function setLocals(req, res, next) {
+  if (config.gaTag) {
+    res.locals.gaTag = config.gaTag;
+  }
   res.locals.assetPath = '/public';
   next();
 });
