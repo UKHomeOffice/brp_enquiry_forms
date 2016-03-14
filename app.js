@@ -89,7 +89,7 @@ app.use(secureCookies);
 app.use(session({
   store: redisStore,
   cookie: {
-    secure: (config.env === 'development' || config.env === 'ci') ? false : true
+    secure: (config.env === 'development' || config.env === 'ci' || config.env === 'docker-compose') ? false : true
   },
   key: 'hmbrp.sid',
   secret: config.session.secret,
