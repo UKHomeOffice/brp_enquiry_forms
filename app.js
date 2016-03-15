@@ -105,6 +105,7 @@ app.get('/terms-and-conditions', function renderTerms(req, res) {
   res.render('terms');
 });
 
+
 // use the hof middleware
 app.use(require('hof').middleware());
 
