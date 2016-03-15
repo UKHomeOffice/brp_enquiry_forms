@@ -166,3 +166,18 @@ h1 {
       text-transform: none;
   }
 }
+
+
+.lte-ie8 {
+  #logo {
+    width: 100%;
+  }
+
+  .block-label {
+    float: left;
+  }
+
+  .form-control {
+    width: 65%;
+  }
+}
