@@ -10,7 +10,6 @@
 }
 
 #step {
-  @include core-16;
   a {
     display: inline-block;
     margin-top: $gutter-half;
