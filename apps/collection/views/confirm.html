@@ -32,100 +32,92 @@
 
     {{$form}}
 
-      <table id="problem-details" class="table-details">
-        <thead>
-          <tr>
-            <th colspan="3"><h3>{{#t}}journeys.collection.pages.check-details.tables.problem-details.title{{/t}}</h3></th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>{{#t}}journeys.collection.pages.check-details.tables.problem-details.where-radio.label{{/t}}</td>
-            <td>{{values.collection-where-radio}}{{#values.collection-date}}<br /><span>{{values.collection-date-formatted}}</span>{{/values.collection-date}}</td>
-            <td><a href="/collection/where/edit#collection-where-radio-group" class="button">{{#t}}buttons.change{{/t}}</a></td>
-          </tr>
+        <h2 class="details-header">{{#t}}journeys.collection.pages.check-details.tables.problem-details.title{{/t}}</h2>
+        <table id="problem-details" class="table-details">
+          <tbody>
+            <tr>
+              <td>{{#t}}journeys.collection.pages.check-details.tables.problem-details.where-radio.label{{/t}}</td>
+              <td>{{values.collection-where-radio}}{{#values.collection-date}}<br /><span>{{values.collection-date-formatted}}</span>{{/values.collection-date}}</td>
+              <td><a href="/collection/where/edit#collection-where-radio-group" class="button">{{#t}}buttons.change{{/t}}</a></td>
+            </tr>
 
-          <tr>
-            <td>{{#t}}journeys.collection.pages.check-details.tables.problem-details.reason.label{{/t}}</td>
-            <td>
-              {{#reason.which-post-office}}
-                {{#t}}fields.reason-radio.options.which-post-office.label{{/t}}
-              {{/reason.which-post-office}}
+            <tr>
+              <td>{{#t}}journeys.collection.pages.check-details.tables.problem-details.reason.label{{/t}}</td>
+              <td>
+                {{#reason.which-post-office}}
+                  {{#t}}fields.reason-radio.options.which-post-office.label{{/t}}
+                {{/reason.which-post-office}}
 
-              {{#reason.under-age}}
-                {{#t}}fields.reason-radio.options.under-age.label{{/t}}
-              {{/reason.under-age}}
+                {{#reason.under-age}}
+                  {{#t}}fields.reason-radio.options.under-age.label{{/t}}
+                {{/reason.under-age}}
 
-              {{#reason.non-identity}}
-                {{#t}}fields.reason-radio.options.non-identity.label{{/t}}
-              {{/reason.non-identity}}
+                {{#reason.non-identity}}
+                  {{#t}}fields.reason-radio.options.non-identity.label{{/t}}
+                {{/reason.non-identity}}
 
-              {{#reason.others-identity}}
-                {{#t}}fields.reason-radio.options.others-identity.label{{/t}}
-              {{/reason.others-identity}}
+                {{#reason.others-identity}}
+                  {{#t}}fields.reason-radio.options.others-identity.label{{/t}}
+                {{/reason.others-identity}}
 
-              {{#reason.passport-family}}
-                {{#t}}fields.reason-radio.options.passport-family.label{{/t}}
-              {{/reason.passport-family}}
+                {{#reason.passport-family}}
+                  {{#t}}fields.reason-radio.options.passport-family.label{{/t}}
+                {{/reason.passport-family}}
 
-              {{#reason.passport-lost}}
-                {{#t}}fields.reason-radio.options.passport-lost.label{{/t}}
-              {{/reason.passport-lost}}
+                {{#reason.passport-lost}}
+                  {{#t}}fields.reason-radio.options.passport-lost.label{{/t}}
+                {{/reason.passport-lost}}
 
-              {{#reason.no-brp}}
-                {{#t}}fields.reason-radio.options.no-brp.label{{/t}}
-              {{/reason.no-brp}}
+                {{#reason.no-brp}}
+                  {{#t}}fields.reason-radio.options.no-brp.label{{/t}}
+                {{/reason.no-brp}}
 
-              {{#reason.other}}
-                {{#t}}fields.reason-radio.options.other.label{{/t}}
-              {{/reason.other}}
-              <br />
-              <span>
-                {{#values.reason-which-post-office}}
-                  {{values.reason-which-post-office}}
-                {{/values.reason-which-post-office}}
+                {{#reason.other}}
+                  {{#t}}fields.reason-radio.options.other.label{{/t}}
+                {{/reason.other}}
+                <br />
+                <span>
+                  {{#values.reason-which-post-office}}
+                    {{values.reason-which-post-office}}
+                  {{/values.reason-which-post-office}}
 
-                {{#values.reason-under-age}}
-                  {{values.reason-under-age}}
-                {{/values.reason-under-age}}
+                  {{#values.reason-under-age}}
+                    {{values.reason-under-age}}
+                  {{/values.reason-under-age}}
 
-                {{#values.reason-non-identity}}
-                  {{values.reason-non-identity}}
-                {{/values.reason-non-identity}}
+                  {{#values.reason-non-identity}}
+                    {{values.reason-non-identity}}
+                  {{/values.reason-non-identity}}
 
-                {{#values.reason-others-identity}}
-                  {{values.reason-others-identity}}
-                {{/values.reason-others-identity}}
+                  {{#values.reason-others-identity}}
+                    {{values.reason-others-identity}}
+                  {{/values.reason-others-identity}}
 
-                {{#values.reason-passport-family}}
-                  {{values.reason-passport-family}}
-                {{/values.reason-passport-family}}
+                  {{#values.reason-passport-family}}
+                    {{values.reason-passport-family}}
+                  {{/values.reason-passport-family}}
 
-                {{#values.reason-passport-lost}}
-                  {{values.reason-passport-lost}}
-                {{/values.reason-passport-lost}}
+                  {{#values.reason-passport-lost}}
+                    {{values.reason-passport-lost}}
+                  {{/values.reason-passport-lost}}
 
-                {{#values.reason-no-brp}}
-                  {{values.reason-no-brp}}
-                {{/values.reason-no-brp}}
+                  {{#values.reason-no-brp}}
+                    {{values.reason-no-brp}}
+                  {{/values.reason-no-brp}}
 
-                {{#values.reason-other}}
-                  {{values.reason-other}}
-                {{/values.reason-other}}
-              </span>
-            </td>
-            <td><a href="/collection/reasons/edit" class="button">{{#t}}buttons.change{{/t}}</a></td>
-          </tr>
-        </tbody>
-      </table>
+                  {{#values.reason-other}}
+                    {{values.reason-other}}
+                  {{/values.reason-other}}
+                </span>
+              </td>
+              <td><a href="/collection/reasons/edit" class="button">{{#t}}buttons.change{{/t}}</a></td>
+            </tr>
+          </tbody>
+        </table>
       {{#values.nominated-fullname}}
         <h1>{{values.nominated-fullname}}</h1>
+        <h2 class="details-header">{{#t}}journeys.collection.pages.check-details.tables.others-details.title{{/t}}</h2>
         <table id="others-details" class="table-details">
-          <thead>
-            <tr>
-              <th colspan="3"><h3>{{#t}}journeys.collection.pages.check-details.tables.others-details.title{{/t}}</h3></th>
-            </tr>
-          </thead>
           <tbody>
             {{#values.nominated-fullname}}
             <tr>
@@ -159,12 +151,8 @@
         </table>
       {{/values.nominated-fullname}}
 
+      <h2 class="details-header">{{#t}}journeys.collection.pages.check-details.tables.personal-details.title{{/t}}</h2>
       <table id="personal-details" class="table-details">
-        <thead>
-          <tr>
-            <th colspan="3"><h3>{{#t}}journeys.collection.pages.check-details.tables.personal-details.title{{/t}}</h3></th>
-          </tr>
-        </thead>
         <tbody>
           {{#values.fullname}}
           <tr>
