@@ -115,6 +115,8 @@ h1 {
   width: 100%;
 
   tbody {
+    border-top: $border-colour 1px solid;
+
     td:nth-child(1) {
       width: 20%;
     }
@@ -127,16 +129,16 @@ h1 {
     }
   }
 
-  h2 {
-    @include bold-19;
-    margin: 1em 0 0 0;
-  }
-
   .button {
     margin: 0;
     background: #dde0e1;
     color: #000;
   }
+}
+
+.details-header {
+  @include bold-19;
+  margin: 1em 0 0 0;
 }
 
 .notice {
@@ -164,11 +166,11 @@ h1 {
     background-size: 100%;
   }
   .bold-small {
-      font-family: "nta", Arial, sans-serif;
-      font-size: 16px;
-      line-height: 1.25;
-      font-weight: 700;
-      text-transform: none;
+    font-family: "nta", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.25;
+    font-weight: 700;
+    text-transform: none;
   }
 }
 
