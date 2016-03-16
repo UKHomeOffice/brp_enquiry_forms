@@ -127,6 +127,11 @@ h1 {
     }
   }
 
+  h2 {
+    @include bold-19;
+    margin: 1em 0 0 0;
+  }
+
   .button {
     margin: 0;
     background: #dde0e1;
