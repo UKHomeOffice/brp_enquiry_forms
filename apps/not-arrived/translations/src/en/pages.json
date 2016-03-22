@@ -32,7 +32,7 @@
       },
       "two": {
         "first": "Wait another ",
-        "second": " working days, and if you still have not received your card, use this form to contact us."
+        "second": " working days, and if you still have not received your BRP, use this form to contact us."
       }
     }
   },
@@ -43,7 +43,7 @@
     }
   },
   "uk-address": {
-    "header": "Do you have an UK address where we can send the card?",
+    "header": "Do you have an UK address where we can send the BRP?",
     "address": {
       "title": "If needed, we will send a correct BRP to this address."
     }
@@ -83,8 +83,8 @@
       }
     },
     "org-help": {
-      "title": "Has someone helped you fill in this form?",
-      "explanation": "This could be a friend, family member, immigration lawyer or representative, a charity worker, an employer or a college or university official."
+      "title": "Are you completing this form on behalf of the BRP holder?",
+      "explanation": "Friends, relatives, employers, charity workers and lwayers, for example, can complete this form on behalf of the BRP holder."
     },
     "org-details-group": {
       "header": "Provide their details",
@@ -103,7 +103,7 @@
         "fullname": "Full name",
         "date-of-birth": "Date of birth",
         "nationality": "Nationality",
-        "brp-card-number": "BRP card number",
+        "brp-card-number": "BRP number",
         "email": "Email address",
         "phone": "Phone number",
         "passport": "Passport number"
@@ -120,8 +120,8 @@
       "header": "What happens next",
       "not-specified": {
         "para": {
-          "one": "Our staff will review the information you have sent and speak with the courier if necessary to find out why your card hasn't yet arrived.",
-          "two": "As each BRP delivery is tracked, we will be able to find your BRP card and arrange redelivery.",
+          "one": "Our staff will review the information you have sent and speak with the courier if necessary to find out why your BRP hasn't yet arrived.",
+          "two": "As each BRP delivery is tracked, we will be able to find your BRP and arrange redelivery.",
           "three": "We shall be in touch with you as soon as possible. During very busy periods this can take up to 5 working days."
         }
       },

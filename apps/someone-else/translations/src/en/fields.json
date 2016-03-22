@@ -13,10 +13,10 @@
     }
   },
   "someone-else-fullname": {
-    "label": "Full name"
+    "label": "Nominated person's full name"
   },
   "someone-else-date": {
-    "legend": "Date of birth",
+    "legend": "Nominated person's date of birth",
     "hint": "For example, 31  3  1970"
   },
   "someone-else-date-day": {
@@ -29,10 +29,10 @@
     "label": "Year"
   },
   "someone-else-nationality": {
-    "label":  "Country of nationality"
+    "label":  "Nominated person's country of nationality"
   },
   "someone-else-id-type": {
-    "legend": "Identity document type",
+    "legend": "Nominated person's identity document type (to be shown at collection)",
     "options": {
       "passport": {
         "label": "Passport"
@@ -41,17 +41,17 @@
         "label": "EU National ID"
       },
       "brp-card": {
-        "label": "BRP Card"
+        "label": "BRP"
       }
     }
   },
   "someone-else-id-number": {
-    "label": "Identity document number"
+    "label": "Nominated person's identity document number"
   },
   "someone-else-reason-radio": {
     "options": {
       "incapable": {
-        "label": "I am physically or mentally incapable"
+        "label": "I have a medical condition"
       },
       "under-age": {
         "label": "I am under 18"
@@ -84,7 +84,7 @@
     "label":  "Country of nationality"
   },
   "change-person-id-type": {
-    "legend": "Identity document type",
+    "legend": "Nominated person's identity document type (to be shown at collection)",
     "options": {
       "passport": {
         "label": "Passport"
@@ -93,7 +93,7 @@
         "label": "EU National ID"
       },
       "brp-card": {
-        "label": "BRP Card"
+        "label": "BRP"
       }
     }
   },

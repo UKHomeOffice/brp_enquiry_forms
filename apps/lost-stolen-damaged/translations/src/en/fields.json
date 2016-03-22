@@ -23,7 +23,7 @@
     "label": "Country of nationality"
   },
   "brp-card": {
-    "label": "BRP card number  (optional)",
+    "label": "BRP number  (optional)",
     "hint": "For example, ZR1000452"
   },
   "email": {

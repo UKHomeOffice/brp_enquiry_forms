@@ -34,8 +34,8 @@
           "label": "I am under 18 and attempted collection without my responsible adult"
         },
         "non-identity": {
-          "legend": "I could not prove my identity",
-          "label": "I could not prove my identity"
+          "legend": "I could not prove my identity to the Post Office staff",
+          "label": "I could not prove my identity to the Post Office staff"
         },
         "others-identity": {
           "legend": "Someone attempted to collect my BRP on my behalf, but was unable to",
@@ -46,12 +46,12 @@
           "label": "The vignette (sticker) in my passport is not linked to my family"
         },
         "passport-lost": {
-          "legend": "I have lost my passport or travel documents",
-          "label": "I have lost my passport or travel documents"
+          "legend": "I have lost my passport",
+          "label": "I have lost my passport"
         },
         "no-brp": {
-          "legend": "My BRP was not at the Post Office",
-          "label": "My BRP was not at the Post Office"
+          "legend": "I went to the Post Office and my BRP was not there",
+          "label": "I went to the Post Office and my BRP was not there"
         }
       }
     },

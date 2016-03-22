@@ -26,20 +26,20 @@
     "format": "Enter the collection date in the correct format"
   },
   "nominated-date": {
-    "required": "What is the nominee's date of birth?",
+    "required": "What is the nominated person's date of birth?",
     "numeric": "Date must only contain numbers",
     "future": "The date is in the future",
-    "format": "Enter the nominee's date of birth in the correct format"
+    "format": "Enter the nominated person's date of birth in the correct format"
   },
   "nominated-fullname": {
-    "required": "What is the nominee's full name?"
+    "required": "What is the nominated person's full name?"
   },
   "nominated-nationality": {
-    "required": "What is the nominee's nationality?",
+    "required": "What is the nominated person's nationality?",
     "equal": "Please pick a nationality from the list"
   },
   "nominated-id-number": {
-    "required": "What is the nominee's identity document number?"
+    "required": "What is the nominated person's identity document number?"
   },
   "nationality": {
     "required": "What is your nationality?",

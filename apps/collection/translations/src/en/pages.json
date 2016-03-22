@@ -39,8 +39,8 @@
         }
       },
       "org-help": {
-        "title": "Has someone helped you fill in this form?",
-        "explanation": "This could be a friend, family member, immigration lawyer or representative, a charity worker, an employer or a college or university official."
+        "title": "Are you completing this form on behalf of the BRP holder?",
+        "explanation": "Friends, relatives, employers, charity workers and lwayers, for example, can complete this form on behalf of the BRP holder."
       },
       "org-details-group": {
         "header": "Provide their details",
@@ -63,7 +63,7 @@
           "fullname": "Full name",
           "date-of-birth": "Date of birth",
           "nationality": "Nationality",
-          "brp-card-number": "BRP card number",
+          "brp-card-number": "BRP number",
           "email": "Email address",
           "phone": "Phone number",
           "passport": "Passport number"

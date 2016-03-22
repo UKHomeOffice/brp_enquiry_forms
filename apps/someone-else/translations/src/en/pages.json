@@ -5,17 +5,17 @@
   },
   "someone-else": {
     "someone-else-id-type": {
-      "title": "The person must bring this ID document and their Home Office letter of authority when they collect your BRP. They will also need to present your passport or travel document containing the vignette (sticker)."
+      "title": "If the Home Office approves this request, a letter of authority will be posted. The person collecting your BRP must bring this letter, the identity document selected above and your passport containing the vignette (sticker) to the Post Office when they collect your BRP."
     },
     "someone-else-group": {
-      "title": "Provide details of <strong>the person you want to nominate to collect your BRP</strong>. The nominated person must hold a valid UK or EU passport, EU national ID card or BRP."
+      "title": "Provide details of <strong>the person you want to nominate to collect your BRP</strong>. The nominated person must hold a valid passport, EU national ID card or BRP."
     },
     "change-person-group": {
       "title": "Provide details of the <strong>new person</strong> you want to collect your BRP."
     }
   },
   "someone-else-reason": {
-    "header": "Why do you need someone else to collect your biometric card?"
+    "header": "Why do you need someone else to collect your BRP?"
   },
   "exit-not-eligible": {
     "header": "You cannot use this service",
@@ -52,8 +52,8 @@
       }
     },
     "org-help": {
-      "title": "Has someone helped you fill in this form?",
-      "explanation": "This could be a friend, family member, immigration lawyer or representative, a charity worker, an employer or a college or university official."
+      "title": "Are you completing this form on behalf of the BRP holder?",
+      "explanation": "Friends, relatives, employers, charity workers and lwayers, for example, can complete this form on behalf of the BRP holder."
     },
     "org-details-group": {
       "header": "Provide their details",
@@ -65,7 +65,7 @@
     "subheader": "If any information is incorrect, you can change it here.",
     "tables": {
       "reason": {
-        "title": "Nomination reason",
+        "title": "Reason for nominating",
         "further-details": "Further details"
       },
       "other-person": {

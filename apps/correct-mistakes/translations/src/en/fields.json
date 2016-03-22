@@ -42,7 +42,7 @@
     "label": "Passport number (optional)"
   },
   "brp-card": {
-    "label": "BRP card number",
+    "label": "BRP number",
     "hint": "For example, ZR1000452"
   },
   "email": {
@@ -146,10 +146,10 @@
     "label": "What is your correct National Insurance number?"
   },
   "damaged-error-checkbox": {
-    "label": "Faulty or damaged BRP card"
+    "label": "Faulty or damaged BRP"
   },
   "damaged-error": {
-    "legend": "Faulty or damaged BRP card",
+    "legend": "Faulty or damaged BRP",
     "label": "Describe the problem"
   },
   "conditions-error-checkbox": {

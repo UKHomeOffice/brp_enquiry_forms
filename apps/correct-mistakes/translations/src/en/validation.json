@@ -43,26 +43,26 @@
     "format": "Enter your date of birth in the correct format"
   },
   "change-person-date": {
-    "required": "What is the nominee's date of birth?",
+    "required": "What is the nominated person's date of birth?",
     "numeric": "Date must only contain numbers",
     "future": "The date is in the future",
-    "format": "Enter the nominee's date of birth in the correct format"
+    "format": "Enter the nominated person's date of birth in the correct format"
   },
   "change-person-fullname": {
-    "required": "What is the nominee's full name?"
+    "required": "What is the nominated person's full name?"
   },
   "change-person-nationality": {
-    "required": "What is the nominee's nationality?"
+    "required": "What is the nominated person's nationality?"
   },
   "change-person-id-number": {
-    "required": "What is the nominee's identity document number?"
+    "required": "What is the nominated person's identity document number?"
   },
   "nationality": {
     "required": "What is your nationality?",
     "equal": "Please pick a nationality from the list"
   },
   "brp-card": {
-    "required": "What is your BRP card number?"
+    "required": "What is your BRP number?"
   },
   "error-selection": {
     "required": "Tick one or more boxes"
