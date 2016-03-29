@@ -9,16 +9,7 @@
 {{/propositionHeader}}
 
 {{$content}}
-  <div class="alert-complete" role="alert">
-    <span class="icon icon-complete" role="presentation"></span>
-    <div class="alert-message">
-      <h1>{{#t}}pages.confirmation.header{{/t}}</h1>
-    </div>
-  </div>
-
-  {{#values.email}}
-    <p>{{#t}}pages.confirmation.email{{/t}} <strong>{{values.email}}</strong></p>
-  {{/values.email}}
+  {{> partials-confirmation-banner}}
 
   <hr>
 
