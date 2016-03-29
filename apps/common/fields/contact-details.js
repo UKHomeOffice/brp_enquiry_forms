@@ -11,7 +11,6 @@ module.exports = {
     }
   },
   'no-email': {
-    className: 'inline',
     label: 'fields.no-email.label',
     toggle: 'address-group'
   },
