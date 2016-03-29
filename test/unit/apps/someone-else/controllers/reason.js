@@ -1,7 +1,7 @@
 'use strict';
 
 var ReasonController = require('../../../../../apps/someone-else/controllers/reason');
-var BaseController = require('../../../../../lib/base-controller');
+var BaseController = require('hof').controllers.base;
 
 describe('apps/someone-else/controllers/reason', function () {
 

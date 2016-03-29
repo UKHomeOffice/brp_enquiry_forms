@@ -1,6 +1,6 @@
 'use strict';
 
-var BaseController = require('../../../../../lib/base-controller');
+var BaseController = require('hof').controllers.base;
 var ConfirmationController = require('../../../../../apps/common/controllers/confirmation');
 
 describe('apps/common/controllers/confirmation', function () {

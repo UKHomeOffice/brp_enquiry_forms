@@ -2,7 +2,7 @@
 
 var util = require('util');
 var Parent = require('../../../lib/date-controller');
-var ErrorClass = require('../../../lib/base-error');
+var ErrorClass = require('hof').controllers.base;
 var moment = require('moment');
 
 var PersonalDetailsController = function PersonalDetailsController() {
