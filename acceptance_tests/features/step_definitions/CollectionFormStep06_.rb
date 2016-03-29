@@ -59,7 +59,7 @@ Then(/^I am on Step Six of the collection form$/) do
   page.should have_content('Send us your details')
   page.should have_content('By sending us your details you confirm that the information you have provided is true and that you accept our terms and conditions.')
   page.should have_content('Are you completing this form on behalf of the BRP holder?')
-  page.should have_content('Friends, relatives, employers, charity workers and lwayers, for example, can complete this form on behalf of the BRP holder.')
+  page.should have_content('Friends, relatives, employers, charity workers and lawyers, for example, can complete this form on behalf of the BRP holder.')
   find_by_id('org-help-yes')
   find_by_id('org-help-no')
   page.should have_content('Send us your details')
