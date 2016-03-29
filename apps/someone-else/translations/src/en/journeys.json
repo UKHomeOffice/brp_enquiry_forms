@@ -3,7 +3,7 @@
     "header": "Someone else collecting",
     "personal-details": {
       "header": "What are your personal details?",
-      "subheader": "We need these details to find out what has happened to your BRP."
+      "subheader": "We need these details so we know which BRP to give to the person collecting on your behalf."
     }
   }
 }

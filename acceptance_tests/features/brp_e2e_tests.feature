@@ -12,5 +12,5 @@ Feature: E2E tests
     Examples:
       | collection_option | reason                                      |
       | Post Office       | I could not prove my identity               |
-      | Sponsor           | I have lost my passport or travel documents |
+      | Sponsor           | I have lost my passport                     |
 

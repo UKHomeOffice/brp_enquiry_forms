@@ -47,7 +47,7 @@ end
 Then(/^I am on Step Three of the somone else form$/) do
   page.should have_content('Step 3 of 5')
   page.should have_content('What are your personal details?')
-  page.should have_content('We need these details to find out what has happened to your BRP.')
+  page.should have_content('We need these details so we know which BRP to give to the person collecting on your behalf.')
   page.should have_content('Full name')
   page.should have_content('Date of birth')
   page.should have_content('For example, 31  3  1970')

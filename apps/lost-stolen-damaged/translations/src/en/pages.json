@@ -6,7 +6,7 @@
     }
   },
   "uk-address": {
-    "header": "Do you have an UK address where we can send the card?",
+    "header": "Do you have an UK address where we can send the BRP?",
     "address": {
       "title": "If needed, we will send a correct BRP to this address."
     }
@@ -29,12 +29,12 @@
         "passport": "Passport number",
         "email": "Email address",
         "phone": "Phone number",
-        "brp-card-number": "BRP card number"
+        "brp-card-number": "BRP number"
       }
     },
     "org-help": {
-      "title": "Has someone helped you fill in this form?",
-      "explanation": "This could be a friend, family member, immigration lawyer or representative, a charity worker, an employer or a college or university official."
+      "title": "Are you completing this form on behalf of the BRP holder?",
+      "explanation": "Friends, relatives, employers, charity workers and lwayers, for example, can complete this form on behalf of the BRP holder."
     },
     "org-details-group": {
       "header": "Provide their details",

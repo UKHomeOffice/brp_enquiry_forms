@@ -13,8 +13,8 @@ end
 
 Then(/^I am on Step Two of the somone else form$/) do
   page.should have_content('Step 2 of 5')
-  page.should have_content('Why do you need someone else to collect your biometric card?')
-  page.should have_content('I am physically or mentally incapable')
+  page.should have_content('Why do you need someone else to collect your BRP?')
+  page.should have_content('I have a medical condition')
   find_by_id('someone-else-reason-radio-incapable')
   page.should have_content('I am under 18')
   find_by_id('someone-else-reason-radio-under-age')
