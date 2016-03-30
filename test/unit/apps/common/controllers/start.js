@@ -1,7 +1,7 @@
 'use strict';
 
 var StartController = require('../../../../../apps/common/controllers/start');
-var Controller = require('hof').controllers.base;
+var Controller = require('../../../../../lib/base-controller');
 
 describe('apps/common/controllers/start', function () {
 

@@ -1,7 +1,7 @@
 'use strict';
 
 var util = require('util');
-var BaseController = require('hof').controllers.base;
+var BaseController = require('../../../lib/base-controller');
 
 var OnTheWayController = function OnTheWayController() {
   BaseController.apply(this, arguments);

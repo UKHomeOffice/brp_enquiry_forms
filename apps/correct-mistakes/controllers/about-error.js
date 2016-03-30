@@ -3,7 +3,7 @@
 var util = require('util');
 var DateController = require('../../../lib/date-controller');
 var BaseController = require('hof').controllers.base;
-var ErrorClass = require('hof').controllers.error;
+var ErrorClass = require('../../../lib/base-error');
 var _ = require('underscore');
 
 var AboutErrorController = function AboutErrorController() {
