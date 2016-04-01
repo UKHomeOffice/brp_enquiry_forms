@@ -87,7 +87,7 @@
       "explanation": "Friends, relatives, employers, charity workers and lawyers, for example, can complete this form on behalf of the BRP holder."
     },
     "org-details-group": {
-      "header": "Provide their details",
+      "header": "What are your details?",
       "type": "Type of support"
     }
   },
