@@ -3,7 +3,11 @@
 var proxyquire = require('proxyquire');
 var DateController = sinon.stub();
 var CollectionWhereController = proxyquire('../../../../../apps/collection/controllers/where', {
-  '../../../lib/date-controller': DateController
+  'hof': {
+    controllers: {
+      date: DateController
+    }
+  }
 });
 
 describe('apps/collection/controllers/where', function () {
