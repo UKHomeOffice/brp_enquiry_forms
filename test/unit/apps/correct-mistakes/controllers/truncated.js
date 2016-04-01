@@ -1,6 +1,6 @@
 'use strict';
 
-var BaseController = require('../../../../../lib/base-controller');
+var BaseController = require('hof').controllers.base;
 var Controller = require('../../../../../apps/correct-mistakes/controllers/truncated');
 
 describe('apps/correct-mistakes/controllers/truncated', function () {
