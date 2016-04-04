@@ -1,8 +1,8 @@
 'use strict';
 
 var util = require('util');
-var Parent = require('../../../lib/date-controller');
-var ErrorClass = require('../../../lib/base-error');
+var Parent = require('hof').controllers.date;
+var ErrorClass = require('hof').controllers.error;
 var moment = require('moment');
 
 var PersonalDetailsController = function PersonalDetailsController() {

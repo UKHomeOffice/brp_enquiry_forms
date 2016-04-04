@@ -1,7 +1,7 @@
 'use strict';
 
 var util = require('util');
-var BaseController = require('../../../lib/base-controller');
+var BaseController = require('hof').controllers.base;
 var _ = require('underscore');
 
 var UKAddressController = function UKAddressController() {

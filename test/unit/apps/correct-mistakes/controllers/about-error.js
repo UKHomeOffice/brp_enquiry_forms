@@ -1,9 +1,9 @@
 'use strict';
 
 var AboutErrorController = require('../../../../../apps/correct-mistakes/controllers/about-error');
-var DateController = require('../../../../../lib/date-controller');
+var DateController = require('hof').controllers.date;
 var Controller = require('hof').controllers.base;
-var ErrorClass = require('../../../../../lib/base-error');
+var ErrorClass = require('hof').controllers.error;
 
 describe('apps/correct-mistakes/controllers/about-error', function () {
 
