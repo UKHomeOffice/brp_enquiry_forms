@@ -9,8 +9,8 @@ helpers.documentReady(progressiveReveal);
 helpers.documentReady(formFocus);
 
 var $ = require('jquery');
-var typeahead = require('typeahead.js-browserify');
-var Bloodhound = require('typeahead.js-browserify').Bloodhound;
+var typeahead = require('typeahead-aria');
+var Bloodhound = require('typeahead-aria').Bloodhound;
 
 typeahead.loadjQueryPlugin();
 
