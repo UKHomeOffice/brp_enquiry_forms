@@ -39,7 +39,7 @@
     "jquery": "^1.9.3",
     "moment": "^2.10.3",
     "moment-business": "^2.0.0",
-    "node-sass": "^3.2.0",
+    "node-sass": "^3.5.2",
     "nodemailer": "^1.4.0",
     "nodemailer-smtp-transport": "^1.0.3",
     "nodemailer-stub-transport": "^1.0.0",
