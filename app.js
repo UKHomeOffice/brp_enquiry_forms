@@ -106,8 +106,8 @@ app.get('/terms-and-conditions', function renderTerms(req, res) {
 });
 
 
-// use the hof middleware
-app.use(require('hof').middleware());
+// use the hof middleware to enforce cookies
+app.use(require('hof').middleware.cookies());
 
 // apps
 app.use(require('./apps/correct-mistakes/'));
