@@ -5,9 +5,7 @@ var app = express();
 var path = require('path');
 var logger = require('./lib/logger');
 var churchill = require('churchill');
-var session = require('express-session');
-var redis = require('redis');
-var RedisStore = require('connect-redis-crypto')(session);
+var session = require('client-sessions');
 var config = require('./config');
 require('moment-business');
 
@@ -42,35 +40,6 @@ app.use(function setBaseUrl(req, res, next) {
   next();
 });
 
-// Trust proxy for secure cookies
-app.set('trust proxy', 1);
-
-/*************************************/
-/******* Redis session storage *******/
-/*************************************/
-var client = redis.createClient(config.redis.port, config.redis.host);
-
-client.on('connecting', function redisConnecting() {
-  logger.info('Connecting to redis');
-});
-
-client.on('connect', function redisConnected() {
-  logger.info('Connected to redis');
-});
-
-client.on('reconnecting', function redisReconnecting() {
-  logger.info('Reconnecting to redis');
-});
-
-client.on('error', function clientErrorHandler(e) {
-  logger.error(e);
-});
-
-var redisStore = new RedisStore({
-  client: client,
-  ttl: config.session.ttl,
-  secret: config.session.secret
-});
 
 function secureCookies(req, res, next) {
   var cookie = res.cookie.bind(res);
@@ -87,14 +56,15 @@ function secureCookies(req, res, next) {
 app.use(require('cookie-parser')(config.session.secret));
 app.use(secureCookies);
 app.use(session({
-  store: redisStore,
-  cookie: {
-    secure: (config.env === 'development' || config.env === 'ci' || config.env === 'docker-compose') ? false : true
-  },
-  key: 'hmbrp.sid',
+  cookieName: 'session',
   secret: config.session.secret,
-  resave: true,
-  saveUninitialized: true
+  duration: config.session.ttl * 1000,
+  activeDuration: config.session.ttl * 1000,
+  cookie: {
+    path: '/',
+    ephemeral: false,
+    httpOnly: true
+  }
 }));
 
 app.get('/cookies', function renderCookies(req, res) {

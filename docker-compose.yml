@@ -15,9 +15,6 @@ app:
   volumes:
   - "/public"
   net: "host"
-redis:
-  image: redis
-  net: "host"
 maildev:
   image: djfarrelly/maildev
   net: "host"
