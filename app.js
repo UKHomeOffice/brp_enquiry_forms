@@ -7,7 +7,6 @@ var logger = require('./lib/logger');
 var churchill = require('churchill');
 var session = require('express-session');
 var redis = require('redis');
-var RedisStore = require('connect-redis-crypto')(session);
 var config = require('./config');
 require('moment-business');
 
@@ -66,6 +65,7 @@ client.on('error', function clientErrorHandler(e) {
   logger.error(e);
 });
 
+var RedisStore = require('connect-redis-crypto')(session);
 var redisStore = new RedisStore({
   client: client,
   ttl: config.session.ttl,
@@ -106,8 +106,8 @@ app.get('/terms-and-conditions', function renderTerms(req, res) {
 });
 
 
-// use the hof middleware
-app.use(require('hof').middleware());
+// use the hof middleware to enforce cookies
+app.use(require('hof').middleware.cookies());
 
 // apps
 app.use(require('./apps/correct-mistakes/'));
