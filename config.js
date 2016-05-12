@@ -19,6 +19,7 @@ module.exports = {
   email: {
     caseworker: {
       error: process.env.CASEWORKER_ERROR_EMAIL || 'caseworker_email_address',
+      'error-triage': process.env.CASEWORKER_ERROR_TRIAGE_EMAIL || 'triage_email_address',
       'lost-or-stolen-uk': process.env.CASEWORKER_LOSTSTOLEN_EMAIL || 'caseworker_email_address',
       'lost-or-stolen-abroad': process.env.CASEWORKER_LOSTSTOLEN_EMAIL || 'caseworker_email_address',
       delivery: process.env.CASEWORKER_DELIVERY_EMAIL || 'caseworker_email_address',

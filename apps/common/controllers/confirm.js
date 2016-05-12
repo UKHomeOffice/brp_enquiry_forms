@@ -19,9 +19,10 @@ var serviceMap = {
       subject: 'Form submitted: Your BRP hasn\'t arrived'
     };
   },
-  '/correct-mistakes/confirm': function correctMistakes() {
+  '/correct-mistakes/confirm': function correctMistakes(data) {
+    var suffix = data.triage ? '-triage' : '';
     return {
-      template: 'error',
+      template: 'error' + suffix,
       subject: 'Form submitted: Report a problem with your new BRP'
     };
   },

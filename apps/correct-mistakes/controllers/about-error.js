@@ -69,9 +69,10 @@ function anyChecked(req) {
 AboutErrorController.prototype.getNextStep = function getNextStep(req) {
   var next = BaseController.prototype.getNextStep.apply(this, arguments);
   var truncatedItems = getTruncatedItems(req);
+  req.sessionModel.unset('triage');
 
   if (isChecked.call(this, 'conditions-error-checkbox', req) && req.sessionModel.get('location-applied') === 'yes') {
-    next = req.baseUrl + '/conditions-and-length';
+    req.sessionModel.set('triage', true);
   } else if (isChecked.call(this, 'letter-error-checkbox', req) && req.sessionModel.get('location-applied') === 'yes') {
     next = req.baseUrl + '/enrolment-letter';
   } else if (truncatedItems) {
