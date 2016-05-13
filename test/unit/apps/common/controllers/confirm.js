@@ -17,8 +17,7 @@ var ConfirmController = proxyquire('../../../../../apps/common/controllers/confi
       base: BaseController
     }
   },
-  '../models/email': Model,
-  '../routes/fields': {foo: {}, bar: {}}
+  '../models/email': Model
 });
 
 describe('apps/common/controllers/confirm', function () {
@@ -26,17 +25,20 @@ describe('apps/common/controllers/confirm', function () {
   describe('.saveValues()', function () {
 
     var controller;
+    var req;
+    var res;
     var expected = {foo: 'bar'};
-    var req = {
-      sessionModel: {
-        toJSON: sinon.stub().returns(expected)
-      },
-      originalUrl: '/not-arrived/confirm'
-    };
-    var res = {};
-    var callback = sinon.stub();
+    var callback;
 
     beforeEach(function () {
+      req = {
+        sessionModel: {
+          toJSON: sinon.stub().returns(expected)
+        },
+        originalUrl: '/not-arrived/confirm'
+      };
+      res = {};
+      callback = sinon.stub();
       controller = new ConfirmController({template: 'index'});
       controller.saveValues(req, res, callback);
     });
@@ -58,6 +60,20 @@ describe('apps/common/controllers/confirm', function () {
       controller.saveValues(req, res, callback);
 
       modelProto.set.should.have.been.calledWith('template', 'error');
+    });
+
+    it('sets a template for error-triage journey', function () {
+      var request = {
+        sessionModel: {
+          toJSON: sinon.stub().returns({
+            triage: true
+          })
+        },
+        originalUrl: '/correct-mistakes/confirm'
+      };
+      controller.saveValues(request, res, callback);
+
+      modelProto.set.should.have.been.calledWith('template', 'error-triage');
     });
 
     it('sets a template for lost or stolen inside uk journey', function () {

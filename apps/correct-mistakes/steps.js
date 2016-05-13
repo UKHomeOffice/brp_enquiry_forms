@@ -66,10 +66,6 @@ module.exports = {
       }
     }]
   },
-  '/conditions-and-length': {
-    prereqs: ['/'],
-    clearSession: true
-  },
   '/enrolment-letter': {
     prereqs: ['/'],
     clearSession: true

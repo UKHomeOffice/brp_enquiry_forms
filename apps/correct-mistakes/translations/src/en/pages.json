@@ -92,12 +92,6 @@
       }
     }
   },
-  "conditions-and-length": {
-    "header": "Information about leave to remain in the UK",
-    "para": {
-      "one": "As you think the conditions or length of your leave are incorrect you must apply for <a href='https://www.gov.uk/ask-for-a-visa-administrative-review/if-youre-in-the-uk'>administrative review</a>, where this will be considered."
-    }
-  },
   "enrolment-letter": {
     "header": "Enrolment letter problems",
     "para": {

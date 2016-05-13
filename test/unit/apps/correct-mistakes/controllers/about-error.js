@@ -78,7 +78,8 @@ describe('apps/correct-mistakes/controllers/about-error', function () {
         },
         sessionModel: {
           set: sinon.stub(),
-          get: sinon.stub()
+          get: sinon.stub(),
+          unset: sinon.stub()
         }
       };
       res = {};
@@ -87,13 +88,20 @@ describe('apps/correct-mistakes/controllers/about-error', function () {
       controller = new AboutErrorController({template: 'index'});
     });
 
+    it('unsets the triage flag', function () {
+      controller.getNextStep(req, res, callback);
+
+      req.sessionModel.unset.should.have.been.called;
+    });
+
     describe('when collection location is UK and conditions and length was checked', function () {
       beforeEach(function () {
         req.form.values['conditions-error-checkbox'] = 'true';
         req.sessionModel.get.withArgs('location-applied').returns('yes');
       });
-      it('returns baseUrl and "/conditions-and-length"', function () {
-        controller.getNextStep(req, res, callback).should.equal('/foo/conditions-and-length');
+      it('sets a triage flag "/conditions-and-length"', function () {
+        controller.getNextStep(req, res, callback);
+        req.sessionModel.set.should.have.been.calledWith('triage', true);
       });
     });
 
