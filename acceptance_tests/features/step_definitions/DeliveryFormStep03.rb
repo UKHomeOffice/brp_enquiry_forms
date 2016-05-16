@@ -1,4 +1,4 @@
-When(/^I go to Step Three of the delivery form$/) do                                            
+When(/^I go to Step Three of the delivery form$/) do
   visit config['not_arrived_host']
   choose('received-yes')
   fill_in('delivery-date-day', :with => '17')
@@ -12,8 +12,8 @@ When(/^I go to Step Three of the delivery form$/) do
   fill_in('address-postcode', :with => 'SW1P 4DF')
   fill_in('case-id', :with => '1')
   click_button('Continue')
-end                                                                          
-                                                                             
+end
+
 Then(/^I am on Step Three of the delivery form$/) do
   page.should have_content('Step 3 of 5')
   page.should have_content('What are your personal details?')
@@ -29,7 +29,7 @@ Then(/^I am on Step Three of the delivery form$/) do
   find_by_id('date-of-birth-year')
   page.should have_content('Country of nationality ')
   find_by_id('nationality')
-  page.should have_content('Passport number (optional)')
+  page.should have_content('Passport number')
   find_by_id('passport')
-  delete_cookie('hmbrp.sid')                                    
-end                                                                          
+  delete_cookie('hmbrp.sid')
+end

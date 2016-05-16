@@ -39,7 +39,7 @@
     "label": "Country of nationality"
   },
   "passport": {
-    "label": "Passport number (optional)"
+    "label": "Passport number"
   },
   "brp-card": {
     "label": "BRP number",

@@ -28,7 +28,8 @@ module.exports = {
     label: 'fields.nationality.label'
   },
   passport: {
-    label: 'fields.passport.label'
+    label: 'fields.passport.label',
+    validate: 'required'
   },
   'brp-card': {
     label: 'fields.brp-card.label',
