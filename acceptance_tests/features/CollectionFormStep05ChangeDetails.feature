@@ -53,8 +53,8 @@ Feature: Changing Delivery Form details
 
 		Examples:
 			|xpath													 	 |
-			|/html/body/main/div[2]/div/form/table[2]/tbody/tr[4]/td[3]/a|
 			|/html/body/main/div[2]/div/form/table[2]/tbody/tr[5]/td[3]/a|
+			|/html/body/main/div[2]/div/form/table[2]/tbody/tr[6]/td[3]/a|
 
 	Scenario: Go to Step Six and clear the cookies
 		When I go to Step Six of the collection form

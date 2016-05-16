@@ -59,7 +59,7 @@ Then(/^I am on Step Three of the somone else form$/) do
   find_by_id('date-of-birth-year')
   page.should have_content('Country of nationality ')
   find_by_id('nationality')
-  page.should have_content('Passport number (optional)')
+  page.should have_content('Passport number')
   find_by_id('passport')
   delete_cookie('hmbrp.sid')
 end

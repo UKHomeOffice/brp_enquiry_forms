@@ -29,7 +29,7 @@ Then(/^I am on Step Four of the collection form$/) do
   find_by_id('date-of-birth-year')
   page.should have_content('Country of nationality ')
   find_by_id('nationality')
-  page.should have_content('Passport number (optional)')
+  page.should have_content('Passport number')
   find_by_id('passport')
   find_button('Continue')
   delete_cookie('hmbrp.sid')

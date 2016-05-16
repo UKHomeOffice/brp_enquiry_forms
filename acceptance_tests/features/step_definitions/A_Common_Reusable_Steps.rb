@@ -154,6 +154,10 @@ When(/^I type fill in the nationality field with something valid$/) do
   fill_in('nationality', :with => 'Mongolia')
 end
 
+When(/^I type in the passport field with something valid$/) do
+  fill_in('passport', :with => '123456789')
+end
+
 When(/^I enter something valid in the Full name field$/) do
   fill_in('fullname', :with => 'Alex Murphy')
 end

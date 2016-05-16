@@ -17,6 +17,7 @@ When(/^I go to the Confirmation page of the someone else form$/) do
   fill_in('date-of-birth-month', :with => '08')
   fill_in('date-of-birth-year', :with => '1988')
   fill_in('nationality', :with => 'China')
+  fill_in('passport', :with => '123456789')
   click_button('Continue')
   fill_in('email', :with => 'zero@forconduct.cr')
   fill_in('phone', :with => '07751710987')

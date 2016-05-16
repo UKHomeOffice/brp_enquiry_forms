@@ -19,6 +19,9 @@
     "required": "What is your nationality?",
     "equal": "Please pick a nationality from the list"
   },
+  "passport": {
+    "required": "What is your passport number?"
+  },
   "country": {
     "required": "Tell us where you are"
   },

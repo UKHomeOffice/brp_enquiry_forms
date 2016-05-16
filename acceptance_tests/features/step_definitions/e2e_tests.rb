@@ -18,6 +18,7 @@ Given(/^I enter my personal details$/) do
   page.fill_in('Month', :with => '04')
   page.fill_in('Year', :with => '1996')
   page.fill_in('Country of nationality', :with => 'Peru')
+  page.fill_in('Passport number', :with => '123456789')
   page.click_button('Continue')
   page.fill_in('Email address', :with => 'test@gov.uk')
   page.click_button('Continue')
