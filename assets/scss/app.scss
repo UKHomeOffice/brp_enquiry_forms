@@ -48,6 +48,8 @@ h1 {
   background-color: #fff;
   border: 1px solid #ccc;
   width: 65%;
+  max-height: 220px;
+  overflow: scroll;
 }
 
 .tt-suggestion {

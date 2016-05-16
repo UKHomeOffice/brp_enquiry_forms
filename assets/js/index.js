@@ -44,14 +44,13 @@ $('.typeahead').each(function applyTypeahead() {
   $parent.append($input);
 
   $input.typeahead({
-    minLength: 1,
-    hint: false,
-    limit: 5
+    hint: false
   }, {
     source: new Bloodhound({
       datumTokenizer: Bloodhound.tokenizers.whitespace,
       queryTokenizer: Bloodhound.tokenizers.whitespace,
       local: typeaheadList
-    })
+    }),
+    limit: 100
   });
 });
