@@ -1,0 +1,17 @@
+{
+  "change": {
+    "attempted-location": "Change <span class=\"visuallyhidden\">attempted collection location</span>",
+    "reason": "Change <span class=\"visuallyhidden\">reason</span>",
+    "nominated-full-name": "Change <span class=\"visuallyhidden\">nominated full name</span>",
+    "nominated-dob": "Change <span class=\"visuallyhidden\">nominated date of birth</span>",
+    "nominated-nationality": "Change <span class=\"visuallyhidden\">nominated nationality</span>",
+    "nominated-id-number": "Change <span class=\"visuallyhidden\">nominated id number</span>",
+    "fullname": "Change <span class=\"visuallyhidden\">full name</span>",
+    "date-of-birth": "Change <span class=\"visuallyhidden\">date of birth</span>",
+    "nationality": "Change <span class=\"visuallyhidden\">nationality</span>",
+    "address": "Change <span class=\"visuallyhidden\">address</span>",
+    "passport": "Change <span class=\"visuallyhidden\">passport</span>",
+    "email": "Change <span class=\"visuallyhidden\">email</span>",
+    "phone": "Change <span class=\"visuallyhidden\">phone</span>"
+  }
+}

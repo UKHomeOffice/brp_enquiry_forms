@@ -1,0 +1,11 @@
+{
+  "change": {
+    "fullname": "Change <span class=\"visuallyhidden\">full name</span>",
+    "date-of-birth": "Change <span class=\"visuallyhidden\">date of birth</span>",
+    "nationality": "Change <span class=\"visuallyhidden\">nationality</span>",
+    "address": "Change <span class=\"visuallyhidden\">address</span>",
+    "brp-card": "Change <span class=\"visuallyhidden\">brp card</span>",
+    "email": "Change <span class=\"visuallyhidden\">email</span>",
+    "phone": "Change <span class=\"visuallyhidden\">phone</span>"
+  }
+}
