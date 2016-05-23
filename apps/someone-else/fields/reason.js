@@ -22,9 +22,6 @@ module.exports = {
     }, {
       value: 'under-age',
       label: 'fields.someone-else-reason-radio.options.under-age.label'
-    }, {
-      value: 'other',
-      label: 'fields.someone-else-reason-radio.options.other.label'
     }]
   }
 };

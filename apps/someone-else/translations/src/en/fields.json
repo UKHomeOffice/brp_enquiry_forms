@@ -55,9 +55,6 @@
       },
       "under-age": {
         "label": "I am under 18"
-      },
-      "other": {
-        "label": "None of the above"
       }
     }
   },
