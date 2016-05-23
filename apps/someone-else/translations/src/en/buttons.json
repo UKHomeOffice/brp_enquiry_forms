@@ -1,0 +1,17 @@
+{
+  "change": {
+    "someone-else-reason": "Change <span class=\"visuallyhidden\">nomianted person reason</span>",
+    "someone-else-fullname": "Change <span class=\"visuallyhidden\">nominated person full name</span>",
+    "someone-else-date-of-birth": "Change <span class=\"visuallyhidden\">nominated date of birth</span>",
+    "someone-else-nationality": "Change <span class=\"visuallyhidden\">nominated nationality</span>",
+    "someone-else-id-type": "Change <span class=\"visuallyhidden\">nominated id type</span>",
+    "someone-else-id-number": "Change <span class=\"visuallyhidden\">nominated id number</span>",
+    "fullname": "Change <span class=\"visuallyhidden\">full name</span>",
+    "date-of-birth": "Change <span class=\"visuallyhidden\">date of birth</span>",
+    "nationality": "Change <span class=\"visuallyhidden\">nationality</span>",
+    "address": "Change <span class=\"visuallyhidden\">address</span>",
+    "passport": "Change <span class=\"visuallyhidden\">passport</span>",
+    "email": "Change <span class=\"visuallyhidden\">email</span>",
+    "phone": "Change <span class=\"visuallyhidden\">phone</span>"
+  }
+}
