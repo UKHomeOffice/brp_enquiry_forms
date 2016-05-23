@@ -18,8 +18,6 @@ Then(/^I am on Step Two of the somone else form$/) do
   find_by_id('someone-else-reason-radio-incapable')
   page.should have_content('I am under 18')
   find_by_id('someone-else-reason-radio-under-age')
-  page.should have_content('None of the above')
-  find_by_id('someone-else-reason-radio-other')
 end
 
 Then(/^I see the related content$/) do

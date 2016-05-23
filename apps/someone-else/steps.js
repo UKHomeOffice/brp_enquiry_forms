@@ -29,7 +29,6 @@ module.exports = {
     next: '/reason'
   },
   '/reason': {
-    controller: require('./controllers/reason'),
     fields: [
       'someone-else-reason-radio',
       'incapable-details'

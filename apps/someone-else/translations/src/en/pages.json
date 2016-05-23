@@ -17,14 +17,6 @@
   "someone-else-reason": {
     "header": "Why do you need someone else to collect your BRP?"
   },
-  "exit-not-eligible": {
-    "header": "You cannot use this service",
-    "subheader": "You can only nominate someone else to collect your BRP if:",
-    "list": {
-      "one": "you have a serious illness or disability that prevents you from collecting it",
-      "two": "you’re under 18 and can’t collect your BRP with your parent or guardian"
-    }
-  },
   "exit-cancel-request": {
     "header": "You don't need to use this service",
     "subheader": "You do not need to cancel your request for a nominated person to collect your BRP. If you are still unable to collect your BRP yourself, you can nominate a new person to collect it for you."
