@@ -1,7 +1,7 @@
 {{#data}}
   {{#t}}emails.correct-mistakes.header{{/t}}
 
-  Dear {{fullname}}
+  Thanks
 
   We will review the information you have sent us and we will let you know if you need a new card.
 
