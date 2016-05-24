@@ -14,8 +14,8 @@ Feature: Validation for Step 02 of the Error Form
 
 		Examples:
 		  |error                         |link                                 |content                              |
-		  |first-name-error-checkbox     |What is your correct first name?     |What is your correct first name?     |
-		  |last-name-error-checkbox      |What is your correct last name?      |What is your correct last name?      |
+		  |first-name-error-checkbox     |What are your correct given name(s)? |What are your correct given name(s)? |
+		  |last-name-error-checkbox      |What is your correct family name?    |What is your correct family name?    |
 		  |date-of-birth-error-checkbox  |Enter your date of birth             |Enter your date of birth             |
 		  |birth-place-error-checkbox    |What is your correct place of birth? |What is your correct place of birth? |
 		  |gender-error-checkbox         |What is your correct gender?         |What is your correct gender?         |
