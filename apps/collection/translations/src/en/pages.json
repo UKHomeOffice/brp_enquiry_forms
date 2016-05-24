@@ -47,8 +47,8 @@
         "type": "Type of support"
       },
       "footer": {
-        "title": "Send us your details",
-        "explanation": "By sending us your details you confirm that the information you have provided is true and that you accept our <a target='_blank' href='/terms-and-conditions'>terms and conditions</a>."
+        "title": "Terms and conditions",
+        "explanation": "By sending this report you confirm the information provided is accurate, and you accept our <a target='_blank' href='/terms-and-conditions'>terms and conditions</a>."
       }
     },
     "check-details-error": {

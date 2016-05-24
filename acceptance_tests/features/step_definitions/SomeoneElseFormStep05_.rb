@@ -27,8 +27,8 @@ end
 Then(/^I am on Step Five of the somone else form$/) do
   page.should have_content('Check the details you have provided')
   page.should have_content("If any information is incorrect, you can change it here.")
-  page.should have_content('Send us your details')
-  page.should have_content('By sending us your details you confirm that the information you have provided is true and that you accept our terms and conditions.')
+  page.should have_content('Terms and conditions')
+  page.should have_content('By sending this report you confirm the information provided is accurate, and you accept our terms and conditions.')
   find_button('Send')
   delete_cookie('hmbrp.sid')
 end

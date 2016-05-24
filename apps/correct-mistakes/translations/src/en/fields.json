@@ -55,17 +55,17 @@
     "label": "Phone number (optional)"
   },
   "last-name-error-checkbox": {
-    "label": "Last name"
+    "label": "Family name"
   },
   "last-name-error": {
-    "label": "What is your correct last name?",
+    "label": "What is your correct family name?",
     "title": "This is the first line under 'name' on your BRP."
   },
   "first-name-error-checkbox": {
-    "label": "First name"
+    "label": "Given name(s)"
   },
   "first-name-error": {
-    "label": "What is your correct first name?",
+    "label": "What are your correct given name(s)?",
     "title": "This is the second line under 'name' on your BRP."
   },
   "birth-place-error-checkbox": {
