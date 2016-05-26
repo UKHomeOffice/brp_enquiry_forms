@@ -32,105 +32,60 @@
 
     {{$form}}
 
-      {{#values.someone-else-fullname}}
-        <h2 class="details-header">{{#t}}pages.someone-else-check-details.tables.other-person.title{{/t}}</h2>
-        <table id="others-details" class="table-details">
-          <tbody>
-            {{#values.someone-else-reason-radio}}
-              <tr>
-                <td>{{#t}}pages.someone-else-check-details.tables.reason.title{{/t}}</td>
-                <td>{{#t}}fields.someone-else-reason-radio.options.{{values.someone-else-reason-radio}}.label{{/t}}</td>
-                <td><a href="/someone-else/reason/edit#someone-else-reason-radio" class="button">{{#t}}buttons.change.someone-else-reason{{/t}}</a></td>
-              </tr>
-              {{#values.incapable-details}}
-              <tr>
-                <td>{{#t}}pages.someone-else-check-details.tables.reason.further-details{{/t}}</td>
-                <td>{{values.incapable-details}}</td>
-                <td><a href="/someone-else/arrange/edit#someone-else-fullname" class="button">{{#t}}buttons.change.someone-else-fullname{{/t}}</a></td>
-              </tr>
-              {{/values.incapable-details}}
-            {{/values.someone-else-reason-radio}}
-            {{#values.someone-else-fullname}}
+      <h2 class="details-header">{{#t}}pages.someone-else-check-details.tables.other-person.title{{/t}}</h2>
+      <table id="others-details" class="table-details">
+        <tbody>
+          {{#values.someone-else-reason-radio}}
             <tr>
-              <td>{{#t}}pages.check-details.table.headers.fullname{{/t}}</td>
-              <td>{{values.someone-else-fullname}}</td>
+              <td>{{#t}}pages.someone-else-check-details.tables.reason.title{{/t}}</td>
+              <td>{{#t}}fields.someone-else-reason-radio.options.{{values.someone-else-reason-radio}}.label{{/t}}</td>
+              <td><a href="/someone-else/reason/edit#someone-else-reason-radio" class="button">{{#t}}buttons.change.someone-else-reason{{/t}}</a></td>
+            </tr>
+            {{#values.incapable-details}}
+            <tr>
+              <td>{{#t}}pages.someone-else-check-details.tables.reason.further-details{{/t}}</td>
+              <td>{{values.incapable-details}}</td>
               <td><a href="/someone-else/arrange/edit#someone-else-fullname" class="button">{{#t}}buttons.change.someone-else-fullname{{/t}}</a></td>
             </tr>
-            {{/values.someone-else-fullname}}
-            {{#values.someone-else-date}}
-            <tr>
-              <td>{{#t}}pages.check-details.table.headers.date-of-birth{{/t}}</td>
-              <td>{{values.someone-else-date-formatted}}</td>
-              <td><a href="/someone-else/arrange/edit#someone-else-date-day" class="button">{{#t}}buttons.change.someone-else-date-of-birth{{/t}}</a></td>
-            </tr>
-            {{/values.someone-else-date}}
-            {{#values.someone-else-nationality}}
-            <tr>
-              <td>{{#t}}pages.check-details.table.headers.nationality{{/t}}</td>
-              <td>{{values.someone-else-nationality}}</td>
-              <td><a href="/someone-else/arrange/edit#someone-else-nationality" class="button">{{#t}}buttons.change.someone-else-nationality{{/t}}</a></td>
-            </tr>
-            {{/values.someone-else-nationality}}
-            {{#values.someone-else-id-type}}
-            <tr>
-              <td>{{#t}}fields.someone-else-id-type.legend{{/t}}</td>
-              <td>{{#t}}fields.someone-else-id-type.options.{{values.someone-else-id-type}}.label{{/t}}</td>
-              <td><a href="/someone-else/arrange/edit#someone-else-id-type-group" class="button">{{#t}}buttons.change.someone-else-id-type{{/t}}</a></td>
-            </tr>
-            {{/values.someone-else-id-type}}
-            {{#values.someone-else-id-number}}
-            <tr>
-              <td>{{#t}}pages.check-details.table.headers.id-number{{/t}}</td>
-              <td>{{values.someone-else-id-number}}</td>
-              <td><a href="/someone-else/arrange/edit#someone-else-id-number" class="button">{{#t}}buttons.change.someone-else-id-number{{/t}}</a></td>
-            </tr>
-            {{/values.someone-else-id-number}}
-          </tbody>
-        </table>
-      {{/values.someone-else-fullname}}
-
-      {{#values.change-person-fullname}}
-        <h2 class="details-header">{{#t}}pages.someone-else-check-details.tables.other-person.title{{/t}}</h2>
-        <table id="change-details" class="table-details">
-          <tbody>
-            {{#values.change-person-fullname}}
-            <tr>
-              <td>{{#t}}pages.check-details.table.headers.fullname{{/t}}</td>
-              <td>{{values.change-person-fullname}}</td>
-              <td><a href="/someone-else/arrange/edit#change-person-fullname" class="button">{{#t}}buttons.change.someone-else-fullname{{/t}}</a></td>
-            </tr>
-            {{/values.change-person-fullname}}
-            {{#values.change-person-date}}
-            <tr>
-              <td>{{#t}}pages.check-details.table.headers.date-of-birth{{/t}}</td>
-              <td>{{values.change-person-date-formatted}}</td>
-              <td><a href="/someone-else/arrange/edit#change-person-date-day" class="button">{{#t}}buttons.change.someone-else-date-of-birth{{/t}}</a></td>
-            </tr>
-            {{/values.change-person-date}}
-            {{#values.change-person-nationality}}
-            <tr>
-              <td>{{#t}}pages.check-details.table.headers.nationality{{/t}}</td>
-              <td>{{values.change-person-nationality}}</td>
-              <td><a href="/someone-else/arrange/edit#change-person-nationality" class="button">{{#t}}buttons.change.someone-else-nationality{{/t}}</a></td>
-            </tr>
-            {{/values.change-person-nationality}}
-            {{#values.change-person-id-type}}
-            <tr>
-              <td>{{#t}}fields.change-person-id-type.legend{{/t}}</td>
-              <td>{{#t}}fields.change-person-id-type.options.{{values.change-person-id-type}}.label{{/t}}</td>
-              <td><a href="/someone-else/arrange/edit#change-person-id-type-group" class="button">{{#t}}buttons.change.someone-else-id-type{{/t}}</a></td>
-            </tr>
-            {{/values.change-person-id-type}}
-            {{#values.change-person-id-number}}
-            <tr>
-              <td>{{#t}}pages.check-details.table.headers.id-number{{/t}}</td>
-              <td>{{values.change-person-id-number}}</td>
-              <td><a href="/someone-else/arrange/edit#change-person-id-number" class="button">{{#t}}buttons.change.someone-else-id-number{{/t}}</a></td>
-            </tr>
-            {{/values.change-person-id-number}}
-          </tbody>
-        </table>
-      {{/values.change-person-fullname}}
+            {{/values.incapable-details}}
+          {{/values.someone-else-reason-radio}}
+          {{#values.someone-else-fullname}}
+          <tr>
+            <td>{{#t}}pages.check-details.table.headers.fullname{{/t}}</td>
+            <td>{{values.someone-else-fullname}}</td>
+            <td><a href="/someone-else/arrange/edit#someone-else-fullname" class="button">{{#t}}buttons.change.someone-else-fullname{{/t}}</a></td>
+          </tr>
+          {{/values.someone-else-fullname}}
+          {{#values.someone-else-date}}
+          <tr>
+            <td>{{#t}}pages.check-details.table.headers.date-of-birth{{/t}}</td>
+            <td>{{values.someone-else-date-formatted}}</td>
+            <td><a href="/someone-else/arrange/edit#someone-else-date-day" class="button">{{#t}}buttons.change.someone-else-date-of-birth{{/t}}</a></td>
+          </tr>
+          {{/values.someone-else-date}}
+          {{#values.someone-else-nationality}}
+          <tr>
+            <td>{{#t}}pages.check-details.table.headers.nationality{{/t}}</td>
+            <td>{{values.someone-else-nationality}}</td>
+            <td><a href="/someone-else/arrange/edit#someone-else-nationality" class="button">{{#t}}buttons.change.someone-else-nationality{{/t}}</a></td>
+          </tr>
+          {{/values.someone-else-nationality}}
+          {{#values.someone-else-id-type}}
+          <tr>
+            <td>{{#t}}fields.someone-else-id-type.legend{{/t}}</td>
+            <td>{{#t}}fields.someone-else-id-type.options.{{values.someone-else-id-type}}.label{{/t}}</td>
+            <td><a href="/someone-else/arrange/edit#someone-else-id-type-group" class="button">{{#t}}buttons.change.someone-else-id-type{{/t}}</a></td>
+          </tr>
+          {{/values.someone-else-id-type}}
+          {{#values.someone-else-id-number}}
+          <tr>
+            <td>{{#t}}pages.check-details.table.headers.id-number{{/t}}</td>
+            <td>{{values.someone-else-id-number}}</td>
+            <td><a href="/someone-else/arrange/edit#someone-else-id-number" class="button">{{#t}}buttons.change.someone-else-id-number{{/t}}</a></td>
+          </tr>
+          {{/values.someone-else-id-number}}
+        </tbody>
+      </table>
 
       <h2 class="details-header">{{#t}}pages.someone-else-check-details.tables.personal-details.title{{/t}}</h2>
       <table id="personal-details" class="table-details">

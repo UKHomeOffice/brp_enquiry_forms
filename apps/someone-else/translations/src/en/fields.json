@@ -1,17 +1,4 @@
 {
-  "arrange-collection-radio": {
-    "options": {
-      "someone-else": {
-        "label": "Nominate someone else to collect my BRP"
-      },
-      "change-person": {
-        "label": "Change the person I nominated to collect my BRP"
-      },
-      "cancel-request": {
-        "label": "Cancel the request for my nominated person to collect my BRP"
-      }
-    }
-  },
   "someone-else-fullname": {
     "label": "Nominated person's full name"
   },
@@ -60,42 +47,6 @@
   },
   "incapable-details": {
     "label": "Describe your situation"
-  },
-  "change-person-fullname": {
-    "label": "Full name"
-  },
-  "change-person-date": {
-    "legend": "Date of birth",
-    "hint": "For example, 31  3  1970"
-  },
-  "change-person-date-day": {
-    "label": "Day"
-  },
-  "change-person-date-month": {
-    "label": "Month"
-  },
-  "change-person-date-year": {
-    "label": "Year"
-  },
-  "change-person-nationality": {
-    "label":  "Country of nationality"
-  },
-  "change-person-id-type": {
-    "legend": "Nominated person's identity document type (to be shown at collection)",
-    "options": {
-      "passport": {
-        "label": "Passport"
-      },
-      "eu-national-id": {
-        "label": "EU National ID"
-      },
-      "brp-card": {
-        "label": "BRP"
-      }
-    }
-  },
-  "change-person-id-number": {
-    "label": "Identity document number"
   },
   "nominated-date": {
     "label": "Date",

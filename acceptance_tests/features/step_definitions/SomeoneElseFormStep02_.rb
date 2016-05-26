@@ -1,6 +1,5 @@
 When(/^I go to Step Two of the someone else form$/) do
   visit config['someone_host']
-  choose('arrange-collection-radio-someone-else')
   fill_in('someone-else-fullname', :with => 'Alex Murphy')
   fill_in('someone-else-date-day', :with => '01')
   fill_in('someone-else-date-month', :with => '02')

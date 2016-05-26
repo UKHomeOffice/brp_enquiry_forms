@@ -43,26 +43,6 @@
   "someone-else-reason-radio": {
     "required": "Select a reason why you couldn't collect your BRP"
   },
-  "change-person-date": {
-    "required": "What is the nominated person's date of birth?",
-    "numeric": "Date must only contain numbers",
-    "future": "The date is in the future",
-    "format": "Enter the nominated person's date of birth in the correct format",
-    "before": "The person nominated to collect your BRP must be over 18 years old"
-  },
-  "change-person-fullname": {
-    "required": "What is the nominated person's full name?"
-  },
-  "change-person-nationality": {
-    "required": "What is the nominated person's nationality?",
-    "equal": "Please pick a nationality from the list"
-  },
-  "change-person-id-type": {
-    "required": "What is the nominated person's identity type?"
-  },
-  "change-person-id-number": {
-    "required": "What is the nominated person's identity document number?"
-  },
   "nationality": {
     "required": "What is your nationality?",
     "equal": "Please pick a nationality from the list"

@@ -62,23 +62,23 @@
                   <table width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#FFFFFF" style="margin: 0 0 20px 0;">
                     <tr style="border-top: 1px solid #009390;">
                       <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.check-details.table.headers.fullname{{/t}}</p></td>
-                      <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{changed-person-fullname}}</p></td>
+                      <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{someone-else-fullname}}</p></td>
                     </tr>
                     <tr style="border-top: 1px solid #009390;">
                       <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.check-details.table.headers.date-of-birth{{/t}}</p></td>
-                      <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{changed-person-date-formatted}}</p></td>
+                      <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{someone-else-date-formatted}}</p></td>
                     </tr>
                     <tr style="border-top: 1px solid #009390;">
                       <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.check-details.table.headers.nationality{{/t}}</p></td>
-                      <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{changed-person-nationality}}</p></td>
+                      <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{someone-else-nationality}}</p></td>
                     </tr>
                     <tr style="border-top: 1px solid #009390;">
                       <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}fields.someone-else-id-type.legend{{/t}}</p></td>
-                      <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{#t}}fields.someone-else-id-type.options.{{changed-person-id-type}}.label{{/t}}</p></td>
+                      <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{#t}}fields.someone-else-id-type.options.{{someone-else-id-type}}.label{{/t}}</p></td>
                     </tr>
                     <tr style="border-top: 1px solid #009390;">
                       <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.check-details.table.headers.id-number{{/t}}</p></td>
-                      <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{changed-person-id-number}}</p></td>
+                      <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{someone-else-id-number}}</p></td>
                     </tr>
                   </table>
 
