@@ -31,19 +31,19 @@
 {{#t}}pages.someone-else-check-details.tables.other-person.title{{/t}}
 
 {{#t}}pages.check-details.table.headers.fullname{{/t}}
-{{changed-person-fullname}}
+{{someone-else-fullname}}
 
 {{#t}}pages.check-details.table.headers.date-of-birth{{/t}}
-{{changed-person-date-formatted}}
+{{someone-else-date-formatted}}
 
 {{#t}}pages.check-details.table.headers.nationality{{/t}}
-{{changed-person-nationality}}
+{{someone-else-nationality}}
 
 {{#t}}fields.someone-else-id-type.legend{{/t}}
-{{#t}}fields.someone-else-id-type.options.{{changed-person-id-type}}.label{{/t}}
+{{#t}}fields.someone-else-id-type.options.{{someone-else-id-type}}.label{{/t}}
 
 {{#t}}pages.check-details.table.headers.id-number{{/t}}
-{{changed-person-id-number}}
+{{someone-else-id-number}}
 
 {{#t}}pages.someone-else-check-details.tables.other-person.title{{/t}}
 

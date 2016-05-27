@@ -26,14 +26,11 @@
   {{/header}}
 
   {{$content}}
-    <p>{{#t}}pages.arrange-collection.subheader{{/t}}</p>
-
     {{<partials-form}}
 
       {{$form}}
-        {{#radio-group}}arrange-collection-radio{{/radio-group}}
 
-        <div id="someone-else-group" class="panel-indent">
+        <div>
           <p>{{#t}}pages.someone-else.someone-else-group.title{{/t}}</p>
 
           {{#input-text}}someone-else-fullname{{/input-text}}
@@ -76,48 +73,6 @@
 
         </div>
 
-        <div id="change-person-group" class="panel-indent">
-          <p>{{#t}}pages.someone-else.change-person-group.title{{/t}}</p>
-
-          {{#input-text}}change-person-fullname{{/input-text}}
-
-          <fieldset id="change-person-date-group" class="{{#errors.change-person-date}}validation-error{{/errors.change-person-date}} form-group">
-
-            <legend class=visuallyhidden>
-              <span class="form-label-bold">{{#t}}fields.change-person-date.legend{{/t}}</span>
-            </legend>
-
-            <div class="form-group form-date">
-              {{#t}}fields.change-person-date.legend{{/t}}
-              {{#errors.change-person-date}}
-                <span id="nominated-date-error" class="error-message">
-                  {{errors.change-person-date.message}}
-                </span>
-              {{/errors.change-person-date}}
-              <p id="nominated-date-hint" class="form-hint">
-                {{#t}}fields.nominated-date.hint{{/t}}
-              </p>
-              {{#input-date}}change-person-date{{/input-date}}
-            </div>
-
-          </fieldset>
-
-          {{#select}}change-person-nationality{{/select}}
-
-          {{#radio-group}}change-person-id-type{{/radio-group}}
-
-          {{#input-text}}change-person-id-number{{/input-text}}
-
-          <div class="notice">
-            <i class="icon icon-important">
-              <span class="visuallyhidden">Warning</span>
-            </i>
-            <strong class="bold-small">
-              {{#t}}pages.someone-else.someone-else-id-type.title{{/t}}
-            </strong>
-          </div>
-
-        </div>
 
         {{#input-submit}}continue{{/input-submit}}
       {{/form}}

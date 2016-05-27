@@ -8,7 +8,6 @@ module.exports = {
   '/arrange': {
     controller: require('./controllers/arrange'),
     fields: [
-      'arrange-collection-radio',
       'someone-else-fullname',
       'someone-else-date',
       'someone-else-date-day',
@@ -16,15 +15,7 @@ module.exports = {
       'someone-else-date-year',
       'someone-else-nationality',
       'someone-else-id-type',
-      'someone-else-id-number',
-      'change-person-fullname',
-      'change-person-date',
-      'change-person-date-day',
-      'change-person-date-month',
-      'change-person-date-year',
-      'change-person-nationality',
-      'change-person-id-type',
-      'change-person-id-number',
+      'someone-else-id-number'
     ],
     next: '/reason'
   },
@@ -34,10 +25,6 @@ module.exports = {
       'incapable-details'
     ],
     next: '/personal-details'
-  },
-  '/exit-cancel-request': {
-    clearSession: true,
-    prereqs: ['/']
   },
   '/exit-not-eligible': {
     clearSession: true,
