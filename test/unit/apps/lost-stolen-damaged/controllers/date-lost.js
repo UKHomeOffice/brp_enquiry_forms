@@ -1,7 +1,7 @@
 'use strict';
 
 var DateController = sinon.stub();
-var DateLostController = require('proxyquire')('../../../../../apps/lost-stolen-damaged/controllers/date-lost', {
+var DateLostController = require('proxyquire')('../../../../../apps/lost-stolen/controllers/date-lost', {
   'hof': {
     controllers: {
       date: DateController
@@ -9,7 +9,7 @@ var DateLostController = require('proxyquire')('../../../../../apps/lost-stolen-
   }
 });
 
-describe('apps/lost-stolen-damaged/controllers/date-lost', function () {
+describe('apps/lost-stolen/controllers/date-lost', function () {
 
   describe('instantiated', function () {
 

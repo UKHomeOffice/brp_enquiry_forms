@@ -4,7 +4,7 @@ var proxyquire = require('proxyquire');
 var Controller = sinon.stub();
 Controller.prototype.locals = sinon.stub().returns({foo: 'bar'});
 Controller.prototype.getNextStep = sinon.stub();
-var ContactDetailsController = proxyquire('../../../../../apps/lost-stolen-damaged/controllers/contact-details', {
+var ContactDetailsController = proxyquire('../../../../../apps/lost-stolen/controllers/contact-details', {
   'hof': {
     controllers: {
       base: Controller
@@ -12,7 +12,7 @@ var ContactDetailsController = proxyquire('../../../../../apps/lost-stolen-damag
   }
 });
 
-describe('apps/lost-stolen-damaged/controllers/contact-details', function () {
+describe('apps/lost-stolen/controllers/contact-details', function () {
 
   describe('instantiated', function () {
 

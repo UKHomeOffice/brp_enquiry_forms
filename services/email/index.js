@@ -79,8 +79,8 @@ var caseworkerPlainTextTemplates = {
 var translationLocation = {
   error: 'correct-mistakes',
   'error-triage': 'correct-mistakes',
-  'lost-or-stolen-uk': 'lost-stolen-damaged',
-  'lost-or-stolen-abroad': 'lost-stolen-damaged',
+  'lost-or-stolen-uk': 'lost-stolen',
+  'lost-or-stolen-abroad': 'lost-stolen',
   delivery: 'not-arrived',
   collection: 'collection',
   'someone-else': 'someone-else'

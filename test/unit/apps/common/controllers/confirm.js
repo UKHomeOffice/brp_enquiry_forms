@@ -77,7 +77,7 @@ describe('apps/common/controllers/confirm', function () {
     });
 
     it('sets a template for lost or stolen inside uk journey', function () {
-      req.originalUrl = '/lost-stolen-damaged/confirm';
+      req.originalUrl = '/lost-stolen/confirm';
       req.sessionModel.toJSON.returns({'inside-uk': 'yes'});
       controller.saveValues(req, res, callback);
 
@@ -85,7 +85,7 @@ describe('apps/common/controllers/confirm', function () {
     });
 
     it('sets a template for lost or stolen outside uk journey', function () {
-      req.originalUrl = '/lost-stolen-damaged/confirm';
+      req.originalUrl = '/lost-stolen/confirm';
       req.sessionModel.toJSON.returns({'inside-uk': 'no'});
       controller.saveValues(req, res, callback);
 

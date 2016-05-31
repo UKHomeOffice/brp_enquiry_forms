@@ -114,7 +114,7 @@ app.use(require('./apps/correct-mistakes/'));
 app.use(require('./apps/collection/'));
 app.use(require('./apps/someone-else/'));
 app.use(require('./apps/not-arrived/'));
-app.use(require('./apps/lost-stolen-damaged/'));
+app.use(require('./apps/lost-stolen/'));
 app.use(require('./middleware/not-found')());
 
 // errors

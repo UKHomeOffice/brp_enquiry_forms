@@ -6,7 +6,7 @@ not_arrived_host: 'https://www.biometric-residence-permit.service.gov.uk/not-arr
 
 correct_mistakes_host: 'https://www.biometric-residence-permit.service.gov.uk/correct-mistakes/'
 
-lost_stolen_host: 'https://www.biometric-residence-permit.service.gov.uk/lost-stolen-damaged'
+lost_stolen_host: 'https://www.biometric-residence-permit.service.gov.uk/lost-stolen'
 
 # collection_host: 'https://www.biometric-residence-permit.service.gov.uk/collection'
 
