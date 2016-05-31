@@ -19,7 +19,7 @@ router.use(mixins(fields, {
   translate: i18n.translate.bind(i18n)
 }));
 
-router.use('/lost-stolen-damaged/', wizard(require('./steps'), fields, {
+router.use('/lost-stolen/', wizard(require('./steps'), fields, {
   controller: require('../../lib/base-controller'),
   templatePath: path.resolve(__dirname, 'views'),
   translate: i18n.translate.bind(i18n),

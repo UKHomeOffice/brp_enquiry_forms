@@ -12,7 +12,7 @@ not_arrived_host: 'http://localhost:8080/not-arrived'
 
 correct_mistakes_host: 'http://localhost:8080/correct-mistakes'
 
-lost_stolen_host: 'http://localhost:8080/lost-stolen-damaged'
+lost_stolen_host: 'http://localhost:8080/lost-stolen'
 
 collection_host: 'http://localhost:8080/collection'
 

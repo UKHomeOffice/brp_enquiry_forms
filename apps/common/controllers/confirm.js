@@ -26,7 +26,7 @@ var serviceMap = {
       subject: 'Form submitted: Report a problem with your new BRP'
     };
   },
-  '/lost-stolen-damaged/confirm': function lostStolenDamaged(data) {
+  '/lost-stolen/confirm': function lostStolenDamaged(data) {
     var suffix = (data['inside-uk'] === 'yes') ? '-uk' : '-abroad';
     return {
       template: 'lost-or-stolen' + suffix,
