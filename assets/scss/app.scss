@@ -5,6 +5,12 @@
 @import "./validation.scss";
 
 
+#banner-content {
+  @extend #content;
+  padding-bottom: 0;
+}
+
+
 .phase-banner {
   @include phase-banner(beta);
 }

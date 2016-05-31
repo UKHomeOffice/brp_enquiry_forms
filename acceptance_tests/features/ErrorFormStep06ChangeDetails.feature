@@ -6,7 +6,7 @@ Feature: Changing Error Form details
 		When I check the "<error>" checkbox
 		And fill the "<field>" with the value "<value>"
 		And I go through to Step Six of the error form
-		And I click the "Change" link in the "/html/body/main/div[2]/div/form/table[1]/tbody/tr/td[3]/a"
+		And I click the "Change" link in the "/html/body/main/div/div/form/table[1]/tbody/tr/td[3]/a"
 		When I fill the "<field>" with "<another value>"
 		And I click "Continue"
 		Then I see "<another value>" on Step Six of the error form
@@ -36,10 +36,10 @@ Feature: Changing Error Form details
 
 		Examples:
 			|xpath													  	 |
-			|/html/body/main/div[2]/div/form/table[3]/tbody/tr[1]/td[3]/a|
-			|/html/body/main/div[2]/div/form/table[3]/tbody/tr[2]/td[3]/a|
-			|/html/body/main/div[2]/div/form/table[3]/tbody/tr[3]/td[3]/a|
-			|/html/body/main/div[2]/div/form/table[3]/tbody/tr[4]/td[3]/a|
+			|/html/body/main/div/div/form/table[3]/tbody/tr[1]/td[3]/a|
+			|/html/body/main/div/div/form/table[3]/tbody/tr[2]/td[3]/a|
+			|/html/body/main/div/div/form/table[3]/tbody/tr[3]/td[3]/a|
+			|/html/body/main/div/div/form/table[3]/tbody/tr[4]/td[3]/a|
 
 	Scenario Outline: Changing the email value from Step 04 of the Error form
 		When I go to Step Six of the error form
@@ -52,12 +52,12 @@ Feature: Changing Error Form details
 
 		Examples:
 			|xpath													  	 |
-			|/html/body/main/div[2]/div/form/table[3]/tbody/tr[5]/td[3]/a|
-			|/html/body/main/div[2]/div/form/table[3]/tbody/tr[6]/td[3]/a|
+			|/html/body/main/div/div/form/table[3]/tbody/tr[5]/td[3]/a|
+			|/html/body/main/div/div/form/table[3]/tbody/tr[6]/td[3]/a|
 
 	Scenario: Changing the address values from Step 05 of the Error form
 		Given I have provided a contact address and I am on Step Five of the error form
-		And I click the "Change" link in the "/html/body/main/div[2]/div/form/table/tbody/tr[4]/td[3]/a"
+		And I click the "Change" link in the "/html/body/main/div/div/form/table/tbody/tr[4]/td[3]/a"
 		Then I see the contact address I entered on Step Five of the error form
 		When I change the value in the House name field of Step Four of the error form
 		And I change the value in the Town/City field of Step Four of the error form

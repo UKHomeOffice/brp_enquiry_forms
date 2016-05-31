@@ -14,10 +14,10 @@ Feature: Changing Lost Stolen Damaged Form details
 
 		Examples:
 			|xpath													  |
-			|/html/body/main/div[2]/div/form/table/tbody/tr[1]/td[3]/a|
-			|/html/body/main/div[2]/div/form/table/tbody/tr[2]/td[3]/a|
-			|/html/body/main/div[2]/div/form/table/tbody/tr[3]/td[3]/a|
-			|/html/body/main/div[2]/div/form/table/tbody/tr[4]/td[3]/a|
+			|/html/body/main/div/div/form/table/tbody/tr[1]/td[3]/a|
+			|/html/body/main/div/div/form/table/tbody/tr[2]/td[3]/a|
+			|/html/body/main/div/div/form/table/tbody/tr[3]/td[3]/a|
+			|/html/body/main/div/div/form/table/tbody/tr[4]/td[3]/a|
 
 	Scenario Outline: Changing the email value from Step 04 of the Lost Stolen Damaged form
 		When I go to Step Five of the lost stolen damaged form
@@ -30,12 +30,12 @@ Feature: Changing Lost Stolen Damaged Form details
 
 		Examples:
 			|xpath													  |
-			|/html/body/main/div[2]/div/form/table/tbody/tr[5]/td[3]/a|
-			|/html/body/main/div[2]/div/form/table/tbody/tr[6]/td[3]/a|
+			|/html/body/main/div/div/form/table/tbody/tr[5]/td[3]/a|
+			|/html/body/main/div/div/form/table/tbody/tr[6]/td[3]/a|
 
 	Scenario: Changing the address values from Step 04 of the Lost Stolen Damaged form
 		Given I have provided a contact address and I am on Step Five of the lost stolen damaged form
-		And I click the "Change" link in the "/html/body/main/div[2]/div/form/table/tbody/tr[4]/td[3]/a"
+		And I click the "Change" link in the "/html/body/main/div/div/form/table/tbody/tr[4]/td[3]/a"
 		Then I see the contact address I entered on Step Four of the lost stolen damaged form
 		When I change the value in the House name field of Step Four of the lost stolen damaged form
 		And I change the value in the Town/City field of Step Four of the lost stolen damaged form
