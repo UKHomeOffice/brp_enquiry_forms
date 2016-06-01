@@ -6,12 +6,12 @@ Feature: Validation for Step 03 of the Lost Stolen Damaged Form
 
 	Scenario: Attempting to proceed to Step 04 of the Lost Stolen Damaged Form without entering anything
 		When I click Continue
-		Then I see the "Enter your full name" link in the "/html/body/main/div[2]/div/div/ul/li[1]/a" xpath
-		Then I see the "Enter your date of birth" link in the "/html/body/main/div[2]/div/div/ul/li[2]/a" xpath
-		Then I see the "What is your nationality?" link in the "/html/body/main/div[2]/div/div/ul/li[3]/a" xpath
-		Then I see the "Enter your full name" link in the "/html/body/main/div[2]/div/form/div[1]/label/span[1]" xpath
-		Then I see the "Enter your date of birth" link in the "/html/body/main/div[2]/div/form/fieldset/span" xpath
-		Then I see the "What is your nationality?" link in the "/html/body/main/div[2]/div/form/div[2]/label/span[1]" xpath
+		Then I see the "Enter your full name" link in the "/html/body/main/div/div/div/ul/li[1]/a" xpath
+		Then I see the "Enter your date of birth" link in the "/html/body/main/div/div/div/ul/li[2]/a" xpath
+		Then I see the "What is your nationality?" link in the "/html/body/main/div/div/div/ul/li[3]/a" xpath
+		Then I see the "Enter your full name" link in the "/html/body/main/div/div/form/div[1]/label/span[1]" xpath
+		Then I see the "Enter your date of birth" link in the "/html/body/main/div/div/form/fieldset/span" xpath
+		Then I see the "What is your nationality?" link in the "/html/body/main/div/div/form/div[2]/label/span[1]" xpath
 
 	Scenario: Attempting to proceed to Step 04 of the Lost Stolen Damaged Form without entering something in the name field
 		When I enter a valid date of birth

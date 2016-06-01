@@ -38,9 +38,9 @@ Feature: Changing Delivery Form details
 
 		Examples:
 			|xpath													 	 |
-			|/html/body/main/div[2]/div/form/table[2]/tbody/tr[1]/td[3]/a|
-			|/html/body/main/div[2]/div/form/table[2]/tbody/tr[2]/td[3]/a|
-			|/html/body/main/div[2]/div/form/table[2]/tbody/tr[3]/td[3]/a|
+			|/html/body/main/div/div/form/table[2]/tbody/tr[1]/td[3]/a|
+			|/html/body/main/div/div/form/table[2]/tbody/tr[2]/td[3]/a|
+			|/html/body/main/div/div/form/table[2]/tbody/tr[3]/td[3]/a|
 
 	Scenario Outline: Changing the email value from Step 05 of the collection form
 		When I go to Step Six of the collection form
@@ -53,8 +53,8 @@ Feature: Changing Delivery Form details
 
 		Examples:
 			|xpath													 	 |
-			|/html/body/main/div[2]/div/form/table[2]/tbody/tr[5]/td[3]/a|
-			|/html/body/main/div[2]/div/form/table[2]/tbody/tr[6]/td[3]/a|
+			|/html/body/main/div/div/form/table[2]/tbody/tr[5]/td[3]/a|
+			|/html/body/main/div/div/form/table[2]/tbody/tr[6]/td[3]/a|
 
 	Scenario: Go to Step Six and clear the cookies
 		When I go to Step Six of the collection form

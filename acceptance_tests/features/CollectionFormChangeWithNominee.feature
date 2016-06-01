@@ -11,7 +11,7 @@ Feature: Change details of Nominee
 
     Examples:
       |xpath                             |
-      |/html/body/main/div[2]/div/form/table[2]/tbody/tr[1]/td[3]/a|
-      |/html/body/main/div[2]/div/form/table[2]/tbody/tr[2]/td[3]/a|
-      |/html/body/main/div[2]/div/form/table[2]/tbody/tr[3]/td[3]/a|
-      |/html/body/main/div[2]/div/form/table[2]/tbody/tr[4]/td[3]/a|
+      |/html/body/main/div/div/form/table[2]/tbody/tr[1]/td[3]/a|
+      |/html/body/main/div/div/form/table[2]/tbody/tr[2]/td[3]/a|
+      |/html/body/main/div/div/form/table[2]/tbody/tr[3]/td[3]/a|
+      |/html/body/main/div/div/form/table[2]/tbody/tr[4]/td[3]/a|
