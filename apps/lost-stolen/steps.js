@@ -3,9 +3,9 @@
 module.exports = {
   '/': {
     controller: require('../common/controllers/start'),
-    next: '/inside-uk'
+    next: '/where'
   },
-  '/inside-uk': {
+  '/where': {
     fields: [
       'inside-uk',
       'country'
