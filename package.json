@@ -43,7 +43,7 @@
     "nodemailer": "^2.4.1",
     "nodemailer-smtp-transport": "^2.5.0",
     "nodemailer-stub-transport": "^1.0.0",
-    "redis": "^0.12.1",
+    "redis": "^2.6.1",
     "typeahead-aria": "^1.0.1",
     "uglifyify": "^3.0.1",
     "underscore": "^1.8.3",
