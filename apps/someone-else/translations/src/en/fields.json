@@ -16,7 +16,8 @@
     "label": "Year"
   },
   "someone-else-nationality": {
-    "label":  "Nominated person's country of nationality"
+    "label": "Nominated person's country of nationality <span class='screenreader-punctuation'>.</span>",
+    "hint": "Start typing your nationality to create a short list of options. Then press up or down to navigate between options."
   },
   "someone-else-id-type": {
     "legend": "Nominated person's identity document type (to be shown at collection)",
@@ -70,7 +71,8 @@
     "label": "Full name"
   },
   "nationality": {
-    "label": "Country of nationality"
+    "label": "Country of nationality<span class='screenreader-punctuation'>.</span>",
+    "hint": "Start typing your nationality to create a short list of options. Then press up or down to navigate between options."
   },
   "passport": {
     "label": "Passport number"

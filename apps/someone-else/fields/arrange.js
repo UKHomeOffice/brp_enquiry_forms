@@ -2,8 +2,7 @@
 
 module.exports = {
   'someone-else-fullname': {
-    validate: ['required'],
-    label: 'fields.someone-else-fullname.label'
+    validate: ['required']
   },
   'someone-else-date': {
     validate: ['required', 'date', {type: 'before', arguments: [18, 'years']}],
@@ -11,26 +10,22 @@ module.exports = {
     hint: 'fields.someone-else-date.hint'
   },
   'someone-else-date-day': {
-    validate: ['required', 'numeric'],
-    label: 'fields.someone-else-date-day.label'
+    validate: ['required', 'numeric']
   },
   'someone-else-date-month': {
-    validate: ['required', 'numeric'],
-    label: 'fields.someone-else-date-month.label'
+    validate: ['required', 'numeric']
   },
   'someone-else-date-year': {
-    validate: ['required', 'numeric'],
-    label: 'fields.someone-else-date-year.label'
+    validate: ['required', 'numeric']
   },
   'someone-else-nationality': {
     validate: ['required'],
     className: ['typeahead', 'js-hidden'],
     options: [''].concat(require('../../../assets/countries').allCountries),
-    type: 'typeahead'
+    hint: 'fields.someone-else-nationality.hint',
   },
   'someone-else-id-type': {
     validate: ['required'],
-    label: 'fields.someone-else-id-type.label',
     options: [{
       value: 'passport',
       label: 'fields.someone-else-id-type.options.passport.label'
@@ -43,7 +38,6 @@ module.exports = {
     }]
   },
   'someone-else-id-number': {
-    validate: ['required'],
-    label: 'fields.someone-else-id-number.label'
+    validate: ['required']
   }
 };

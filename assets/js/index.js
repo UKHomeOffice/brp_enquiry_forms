@@ -16,6 +16,7 @@ typeahead.loadjQueryPlugin();
 
 $('.typeahead').each(function applyTypeahead() {
   var $el = $(this);
+  $el.parent().addClass('typeahead');
   var $parent = $el.parent();
   var attributes = $el.prop('attributes');
   var $input = $('<input/>');

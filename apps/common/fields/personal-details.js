@@ -2,37 +2,31 @@
 
 module.exports = {
   fullname: {
-    validate: ['required'],
-    label: 'fields.fullname.label'
+    validate: ['required']
   },
   'date-of-birth': {
     legend: 'fields.date-of-birth.legend',
     hint: 'fields.date-of-birth.hint'
   },
   'date-of-birth-day': {
-    validate: ['required', 'numeric'],
-    label: 'fields.date-of-birth-day.label'
+    validate: ['required', 'numeric']
   },
   'date-of-birth-month': {
-    validate: ['required', 'numeric'],
-    label: 'fields.date-of-birth-month.label'
+    validate: ['required', 'numeric']
   },
   'date-of-birth-year': {
-    validate: ['required', 'numeric'],
-    label: 'fields.date-of-birth-year.label'
+    validate: ['required', 'numeric']
   },
   nationality: {
     validate: ['required'],
     className: ['typeahead', 'js-hidden'],
     options: [''].concat(require('../../../assets/countries').nonEuCountries),
-    label: 'fields.nationality.label'
+    hint: 'fields.nationality.hint'
   },
   passport: {
-    label: 'fields.passport.label',
     validate: 'required'
   },
   'brp-card': {
-    label: 'fields.brp-card.label',
     hint: 'fields.brp-card.hint'
   }
 };
