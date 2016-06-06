@@ -76,8 +76,8 @@ h1 {
   width: 100%;
 }
 
-.typeahead .screenreader-punctuation,
-.typeahead .form-hint, {
+.hidden-hint .screenreader-punctuation,
+.hidden-hint .form-hint, {
   @extend .visuallyhidden;
 }
 
