@@ -1,17 +1,19 @@
 'use strict';
 
 var util = require('util');
-var DateController = require('hof').controllers.date;
 var BaseController = require('hof').controllers.base;
 var ErrorClass = require('hof').controllers.error;
 var _ = require('underscore');
+var moment = require('moment');
 
 var AboutErrorController = function AboutErrorController() {
   this.dateKey = 'date-of-birth-error';
-  DateController.apply(this, arguments);
+  BaseController.apply(this, arguments);
 };
 
-util.inherits(AboutErrorController, DateController);
+util.inherits(AboutErrorController, BaseController);
+
+var prettyDate = 'D MMMM YYYY';
 
 var truncateConfigs = [
   {
@@ -66,6 +68,25 @@ function anyChecked(req) {
   }.bind(this));
 }
 
+AboutErrorController.prototype.processDate = function processDate(key, values) {
+  var pureProcessDate = function pureProcessDate(k, v) {
+    var pad = function pad(n) {
+      return (n.length < 2) ? '0' + n : n;
+    };
+
+    var year = v[k + '-year'];
+    var month = v[k + '-month'];
+    var day = v[k + '-day'];
+
+    return (year !== '' && month !== '' && day !== '') ? year + '-' + pad(month) + '-' + pad(day) : '';
+  };
+
+  var date = pureProcessDate(key, values);
+
+  values[key] = date;
+  values[key + '-formatted'] = date === '' ? '' : moment(date).format(prettyDate);
+};
+
 AboutErrorController.prototype.getNextStep = function getNextStep(req) {
   var next = BaseController.prototype.getNextStep.apply(this, arguments);
   var truncatedItems = getTruncatedItems(req);
@@ -73,8 +94,6 @@ AboutErrorController.prototype.getNextStep = function getNextStep(req) {
 
   if (isChecked.call(this, 'conditions-error-checkbox', req) && req.sessionModel.get('location-applied') === 'yes') {
     req.sessionModel.set('triage', true);
-  } else if (isChecked.call(this, 'letter-error-checkbox', req) && req.sessionModel.get('location-applied') === 'yes') {
-    next = req.baseUrl + '/enrolment-letter';
   } else if (truncatedItems) {
     next = req.baseUrl + '/truncated';
     req.sessionModel.set('truncated-items', truncatedItems);
@@ -85,8 +104,6 @@ AboutErrorController.prototype.getNextStep = function getNextStep(req) {
 };
 
 AboutErrorController.prototype.saveValues = function saveValues(req, res, callback) {
-  DateController.prototype.format.call(this, req);
-
   var formData = _.clone(req.form.values);
   var diff;
 
@@ -104,7 +121,6 @@ AboutErrorController.prototype.saveValues = function saveValues(req, res, callba
 };
 
 AboutErrorController.prototype.validateField = function validateField(key, req) {
-
   if (anyChecked.call(this, req).length === 0) {
     return new ErrorClass('error-selection', {
       key: 'error-selection',
@@ -113,14 +129,15 @@ AboutErrorController.prototype.validateField = function validateField(key, req) 
     });
   }
 
-  if (isDatePart(key)) {
-    // fields[key].dependent is not available for dates
-    if (isChecked.apply(this, arguments)) {
-      return DateController.prototype.validateField.apply(this, arguments);
-    }
-  } else {
+  if (isDatePart(key) === false || isChecked.apply(this, arguments)) {
     return BaseController.prototype.validateField.apply(this, arguments);
   }
+};
+
+AboutErrorController.prototype.process = function process(req) {
+  this.processDate(this.dateKey, req.form.values);
+
+  BaseController.prototype.process.apply(this, arguments);
 };
 
 module.exports = AboutErrorController;

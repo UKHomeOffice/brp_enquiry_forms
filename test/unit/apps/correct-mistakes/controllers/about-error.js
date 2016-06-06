@@ -1,7 +1,6 @@
 'use strict';
 
 var AboutErrorController = require('../../../../../apps/correct-mistakes/controllers/about-error');
-var DateController = require('hof').controllers.date;
 var Controller = require('hof').controllers.base;
 var ErrorClass = require('hof').controllers.error;
 
@@ -52,14 +51,6 @@ describe('apps/correct-mistakes/controllers/about-error', function () {
         .and.always.have.been.calledWithExactly(req, res, callback);
     });
 
-    it('always calls DateController#format with the request object', function () {
-      DateController.prototype.format = sinon.stub();
-      controller.saveValues(req, res, callback);
-
-      DateController.prototype.format
-        .should.always.have.been.calledWithExactly(req);
-    });
-
   });
 
   describe('.getNextStep()', function () {
@@ -102,16 +93,6 @@ describe('apps/correct-mistakes/controllers/about-error', function () {
       it('sets a triage flag "/conditions-and-length"', function () {
         controller.getNextStep(req, res, callback);
         req.sessionModel.set.should.have.been.calledWith('triage', true);
-      });
-    });
-
-    describe('when collection location is UK and enrolment letter was checked', function () {
-      beforeEach(function () {
-        req.form.values['letter-error-checkbox'] = 'true';
-        req.sessionModel.get.withArgs('location-applied').returns('yes');
-      });
-      it('returns baseUrl and "/enrolment-letter"', function () {
-        controller.getNextStep(req, res, callback).should.equal('/foo/enrolment-letter');
       });
     });
 
@@ -167,7 +148,6 @@ describe('apps/correct-mistakes/controllers/about-error', function () {
     beforeEach(function () {
       req = {form: {values: {}}};
       Controller.prototype.validateField = sinon.stub();
-      DateController.prototype.validateField = sinon.stub();
       controller = new AboutErrorController({template: 'index'});
     });
 
@@ -192,7 +172,7 @@ describe('apps/correct-mistakes/controllers/about-error', function () {
         req.form.values['date-of-birth-error-checkbox'] = 'true';
         controller.validateField('date-of-birth-day-error', req);
 
-        DateController.prototype.validateField.should.have.been.calledWithExactly('date-of-birth-day-error', req);
+        Controller.prototype.validateField.should.have.been.calledWithExactly('date-of-birth-day-error', req);
       });
 
     });

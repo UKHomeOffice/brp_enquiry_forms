@@ -9,7 +9,7 @@
     "required": "Enter your email address",
     "email": "Enter your email in the correct format for example, name@domain.com"
   },
-  "uk-address-building-number": {
+  "uk-address-house-number": {
     "required": "Enter your building name or number"
   },
   "uk-address-street": {
@@ -21,7 +21,7 @@
   "uk-address-postcode": {
     "required": "Enter the postcode"
   },
-  "same-address-building-number": {
+  "same-address-house-number": {
     "required": "Enter your building name or number"
   },
   "same-address-street": {
@@ -40,7 +40,7 @@
     "required": "Enter your date of birth",
     "numeric": "Date must only contain numbers",
     "future": "The date is in the future",
-    "format": "Enter your date of birth in the correct format"
+    "format": "Enter a valid date"
   },
   "change-person-date": {
     "required": "What is the nominated person's date of birth?",
@@ -80,7 +80,7 @@
     "required": "Enter your date of birth",
     "numeric": "Date must only contain numbers",
     "future": "The date is in the future",
-    "format": "Enter your date of birth in the correct format"
+    "date": "Enter a valid date"
   },
   "birth-place-error": {
     "required": "What is your correct place of birth?"

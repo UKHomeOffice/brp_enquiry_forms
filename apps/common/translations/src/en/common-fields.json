@@ -2,7 +2,7 @@
   "address": {
     "legend": "Address"
   },
-  "address-building-number": {
+  "address-house-number": {
     "label": "Building name or number"
   },
   "address-street": {
