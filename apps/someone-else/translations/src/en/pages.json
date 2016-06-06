@@ -1,16 +1,13 @@
 {
   "arrange-collection": {
-    "header": "What would you like to do?"
+    "header": "Who would you like to nominate?"
   },
   "someone-else": {
     "someone-else-id-type": {
       "title": "If the Home Office approves this request, a letter of authority will be posted. The person collecting your BRP must bring this letter, the identity document selected above and your passport containing the vignette (sticker) to the Post Office when they collect your BRP."
     },
     "someone-else-group": {
-      "title": "Provide details of <strong>the person you want to nominate to collect your BRP</strong>. The nominated person must hold a valid passport, EU national ID card or BRP."
-    },
-    "change-person-group": {
-      "title": "Provide details of the <strong>new person</strong> you want to collect your BRP."
+      "title": "Provide details of the person you want to collect your BRP. The nominated person must be over 18 years old and hold a valid passport, EU national ID card or BRP.​"
     }
   },
   "someone-else-reason": {
