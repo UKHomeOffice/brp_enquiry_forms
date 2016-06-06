@@ -55,19 +55,19 @@
       "not-specified": {
         "para": {
           "one": "We will review the information you have sent us.",
-          "two": "We investigate each case individually and will respond to you as soon as possible - within 5 working days.",
+          "two": "We investigate each case individually and will respond to you as soon as possible. If you provided an email address, this will be within 5 working days. If you need to report multiple BRPs as being lost or stolen, you must report each lost or stolen BRP separately.",
           "three": "We shall let you know if you need a replacement BRP."
         }
       },
       "inside-uk": {
         "para": {
-          "one": "You should hear from us in the <strong>next working day</strong>, We will tell you if you need to apply for a replacement BRP."
+          "one": "If you provided an email address, you should hear from us in the <strong>next working day</strong>. We will tell you if you need to apply for a replacement BRP. If you need to report multiple BRPs as being lost or stolen, you must report each lost or stolen BRP separately."
         }
       },
       "outside-uk": {
         "para": {
-          "one": "We will contact you within one <strong>working day</strong>.",
-          "two": "We will receive instructions on what you need to do next.",
+          "one": "If you provided an email address, we will contact you within one <strong>working day</strong>. If you need to report multiple BRPs as being lost or stolen, you must report each lost or stolen BRP separately.",
+          "two": "You will receive instructions on what you need to do next.",
           "three": "We will confirm whether you require a temporary BRP visa to return to the UK."
         }
       }
