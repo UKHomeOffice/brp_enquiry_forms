@@ -4,18 +4,13 @@ module.exports = {
   email: {
     validate: ['required', 'email'],
     type: 'email',
-    label: 'fields.email.label',
     dependent: {
       value: '',
       field: 'no-email'
     }
   },
   'no-email': {
-    label: 'fields.no-email.label',
     toggle: 'address-group'
-  },
-  phone: {
-    label: 'fields.phone.label'
   },
   'contact-address-house-number': {
     validate: ['required'],

@@ -7,25 +7,22 @@ module.exports = {
   'nominated-nationality': {
     validate: ['required'],
     className: ['typeahead', 'js-hidden'],
-    options: [''].concat(require('../../../assets/countries').nonEuCountries)
+    options: [''].concat(require('../../../assets/countries').nonEuCountries),
+    hint: 'fields.nominated-nationality.hint'
   },
   'nominated-id-number': {
     validate: ['required']
   },
   'nominated-date': {
-    legend: 'fields.nominated-date.legend',
     hint: 'fields.dalivery-date.hint'
   },
   'nominated-date-day': {
     validate: ['required', 'numeric'],
-    label: 'fields.nominated-date-day.label'
   },
   'nominated-date-month': {
-    validate: ['required', 'numeric'],
-    label: 'fields.nominated-date-month.label'
+    validate: ['required', 'numeric']
   },
   'nominated-date-year': {
-    validate: ['required', 'numeric'],
-    label: 'fields.nominated-date-year.label'
+    validate: ['required', 'numeric']
   }
 };

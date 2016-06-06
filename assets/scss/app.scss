@@ -76,6 +76,11 @@ h1 {
   width: 100%;
 }
 
+.hidden-hint .screenreader-punctuation,
+.hidden-hint .form-hint, {
+  @extend .visuallyhidden;
+}
+
 //custom form styling
 .form-control {
   padding: 0.5em;

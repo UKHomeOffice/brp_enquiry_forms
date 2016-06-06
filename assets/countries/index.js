@@ -5,7 +5,8 @@ var countriesDomestic = [
   'Guernsey',
   'Jersey',
   'Isle of Man',
-  'United Kingdom'
+  'United Kingdom',
+  'UK'
 ];
 
 var countriesOtherEU = [
@@ -253,6 +254,7 @@ var countriesNonEU = [
   'United Nations Agency',
   'United States Minor Outlying Islands',
   'United States of America',
+  'USA',
   'Uruguay',
   'Uzbekistan',
   'Vanuatu',

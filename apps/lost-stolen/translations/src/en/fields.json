@@ -20,7 +20,8 @@
     "label": "Full name"
   },
   "nationality": {
-    "label": "Country of nationality"
+    "label": "Country of nationality<span class='screenreader-punctuation'>.</span>",
+    "hint": "Start typing your nationality to create a short list of options. Then press up or down to navigate between options."
   },
   "brp-card": {
     "label": "BRP number  (optional)",

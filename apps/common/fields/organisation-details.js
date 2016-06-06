@@ -19,7 +19,6 @@ module.exports = {
   },
   'rep-name': {
     validate: ['required'],
-    label: 'fields.rep-name.label',
     dependent: {
       field: 'org-help',
       value: 'yes'
@@ -27,7 +26,6 @@ module.exports = {
   },
   'rep-email': {
     validate: ['email'],
-    label: 'fields.rep-email.label',
     dependent: {
       field: 'org-help',
       value: 'yes'
