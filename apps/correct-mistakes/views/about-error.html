@@ -65,21 +65,7 @@
       </div>
 
       {{#checkbox}}gender-error-checkbox{{/checkbox}}
-      <fieldset id="gender-error-group" class="panel-indent block " aria-hidden="false">
-        <p>{{#t}}fields.gender-error.hint{{/t}}</p>
-        <label class="block-label" for="gender-error-female">
-          <input type="radio" name="gender-error" id="gender-error-female" value="female" aria-required="true" aria-describedby="gender-error-hint">
-          {{#t}}fields.gender-error.options.female.label{{/t}}
-        </label>
-        <label class="block-label" for="gender-error-male">
-          <input type="radio" name="gender-error" id="gender-error-male" value="male" aria-required="true" aria-describedby="gender-error-hint">
-          {{#t}}fields.gender-error.options.male.label{{/t}}
-        </label>
-        <label class="block-label" for="gender-error-unspecified">
-          <input type="radio" name="gender-error" id="gender-error-unspecified" value="unspecified" aria-required="true" aria-describedby="gender-error-hint">
-          {{#t}}fields.gender-error.options.unspecified.label{{/t}}
-        </label>
-      </fieldset>
+      {{#radio-group}}gender-error{{/radio-group}}
 
       {{#checkbox}}sponsor-details-error-checkbox{{/checkbox}}
       <div id="sponsor-details-error-container" class="panel-indent js-hidden {{#errors.sponsor-details-error}}validation-error{{/errors.sponsor-details-error}}">
@@ -113,6 +99,9 @@
       </div>
 
       {{#checkbox}}conditions-error-checkbox{{/checkbox}}
+      <div id="conditions-error-container" class="panel-indent js-hidden {{#errors.conditions-error}}validation-error{{/errors.conditions-error}}">
+        {{#textarea}}conditions-error{{/textarea}}
+      </div>
 
       {{#checkbox}}letter-error-checkbox{{/checkbox}}
 

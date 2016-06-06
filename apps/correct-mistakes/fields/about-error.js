@@ -68,11 +68,14 @@ module.exports = {
       value: 'fields.gender-error.legend'
     },
     options: [{
-      value: 'female'
+      value: 'female',
+      label: 'fields.gender-error.options.female.label'
     }, {
-      value: 'male'
+      value: 'male',
+      label: 'fields.gender-error.options.male.label'
     }, {
-      value: 'unspecified'
+      value: 'unspecified',
+      label: 'fields.gender-error.options.unspecified.label'
     }]
   },
   'sponsor-details-error-checkbox': {
@@ -140,6 +143,13 @@ module.exports = {
   },
   'conditions-error-checkbox': {
     toggle: 'conditions-error-container'
+  },
+  'conditions-error': {
+    validate: ['required'],
+    dependent: {
+      field: 'conditions-error-checkbox',
+      value: 'true'
+    }
   },
   'letter-error-checkbox': {
     toggle: 'letter-error-container'
