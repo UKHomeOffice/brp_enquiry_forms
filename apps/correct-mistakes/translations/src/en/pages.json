@@ -74,18 +74,18 @@
       "not-specified": {
         "para": {
           "one": "We will review the information you have provided and let you know if a replacement BRP is required.",
-          "two": "We investigate each case individually and will respond to you as soon as possible - within 5 working days.",
+          "two": "We investigate each case individually and will respond to you as soon as possible. If you provided an email address, this will be within 5 working days. If you need to report errors on multiple BRPs, you must report the issues with each BRP separately.",
           "three": "We will then advise you what to do next."
         }
       },
       "inside-uk": {
         "para": {
-          "one": "You should hear from us in the <strong>next working day</strong>, We will tell you if you need to apply for a replacement BRP."
+          "one": "If you provided an email address, you should hear from us in the <strong>next working day</strong>, We will tell you if you need to apply for a replacement BRP."
         }
       },
       "outside-uk": {
         "para": {
-          "one": "We will contact you in the <strong>next working day</strong> to tell you what to do.",
+          "one": "If you provided an email address, we will contact you in the <strong>next working day</strong> to tell you what to do.",
           "two": "As you are outside the UK, you may need to apply for a temporary visa to get back to the UK.",
           "three": "We will tell you if you need to apply for a temporary visa when we contact you."
         }

@@ -12,15 +12,15 @@
   "letter-not-received": {
     "header": "Contact us",
     "para": {
-      "one": "If you haven't yet received a letter, the Home Office may still be processing your application.",
-      "two": "If you think you should have received the letter by now, contact <a href=\"https://www.gov.uk/contact-ukvi/visas-and-settlement\">UK Visas and Immigration</a>."
+      "one": "We need to know the date on your letter to find your BRP. If you haven't yet received a letter, the Home Office may still be processing your application.",
+      "two": "If you think you should have received the letter by now, or you no longer have your letter, contact <a href=\"https://www.gov.uk/contact-ukvi/visas-and-settlement\">UK Visas and Immigration</a>."
     }
   },
   "letter-lost": {
     "header": "Contact us",
     "para": {
-      "one": "If you haven't yet received a letter, the Home Office may still be processing your application.",
-      "two": "If you think you should have received the letter by now, contact <a href=\"https://www.gov.uk/contact-ukvi/visas-and-settlement\">UK Visas and Immigration</a>."
+      "one": "We need to know the date on your letter to find your BRP. If you haven't yet received a letter, the Home Office may still be processing your application.",
+      "two": "If you think you should have received the letter by now, or you no longer have your letter, contact <a href=\"https://www.gov.uk/contact-ukvi/visas-and-settlement\">UK Visas and Immigration</a>."
     }
   },
   "on-the-way": {
@@ -121,18 +121,18 @@
       "not-specified": {
         "para": {
           "one": "Our staff will review the information you have sent and speak with the courier if necessary to find out why your BRP hasn't yet arrived.",
-          "two": "As each BRP delivery is tracked, we will be able to find your BRP and arrange redelivery.",
-          "three": "We shall be in touch with you as soon as possible. During very busy periods this can take up to 5 working days."
+          "two": "As each BRP delivery is tracked, we will be able to find your BRP and arrange redelivery. If you are expecting multiple BRPs to be delivered but they haven’t arrived, you must report each undelivered BRP separately.",
+          "three": "We shall be in touch with you as soon as possible. During very busy periods this can take up to 5 working days, or slightly longer if you didn't provide an email address."
         }
       },
       "inside-uk": {
         "para": {
-          "one": "You should hear from us in the <strong>next working day</strong>, We will tell you if you need to apply for a replacement BRP."
+          "one": "If you provided an email address, you should hear from us in the <strong>next working day</strong>, We will tell you if you need to apply for a replacement BRP."
         }
       },
       "outside-uk": {
         "para": {
-          "one": "We will contact you in the <strong>next working day</strong> to tell you what to do.",
+          "one": "If you provided an email address, we will contact you in the <strong>next working day</strong> to tell you what to do.",
           "two": "As you are outside the UK, you may need to apply for a temporary visa to get back to the UK.",
           "three": "We will tell you if you need to apply for a temporary visa when we contact you."
         }

@@ -78,7 +78,7 @@
         "not-specified": {
           "para": {
             "one": "We will review the information you have provided to find out why there was a problem with your BRP collection.",
-            "two": "We investigate each case individually and will respond to you as soon as possible - within 5 working days."
+            "two": "We investigate each case individually and will respond to you as soon as possible. If you provided an email address, this will be within 5 working days. If you need to report an issue collecting multiple BRPs, you must report each attempted BRP collection separately."
           }
         },
         "inside-uk": {

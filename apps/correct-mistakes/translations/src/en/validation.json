@@ -9,8 +9,8 @@
     "required": "Enter your email address",
     "email": "Enter your email in the correct format for example, name@domain.com"
   },
-  "uk-address-house-number": {
-    "required": "Enter your house name or number"
+  "uk-address-building-number": {
+    "required": "Enter your building name or number"
   },
   "uk-address-street": {
     "required": "Enter your street"
@@ -21,8 +21,8 @@
   "uk-address-postcode": {
     "required": "Enter the postcode"
   },
-  "same-address-house-number": {
-    "required": "Enter your house name or number"
+  "same-address-building-number": {
+    "required": "Enter your building name or number"
   },
   "same-address-street": {
     "required": "Enter your street"

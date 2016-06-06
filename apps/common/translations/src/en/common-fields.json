@@ -2,8 +2,8 @@
   "address": {
     "legend": "Address"
   },
-  "address-house-number": {
-    "label": "House name or number"
+  "address-building-number": {
+    "label": "Building name or number"
   },
   "address-street": {
     "label": "Street"
