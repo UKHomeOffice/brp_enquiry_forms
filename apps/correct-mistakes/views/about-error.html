@@ -113,6 +113,9 @@
       </div>
 
       {{#checkbox}}conditions-error-checkbox{{/checkbox}}
+      <div id="conditions-error-container" class="panel-indent js-hidden {{#errors.conditions-error}}validation-error{{/errors.conditions-error}}">
+        {{#textarea}}conditions-error{{/textarea}}
+      </div>
 
       {{#checkbox}}letter-error-checkbox{{/checkbox}}
 

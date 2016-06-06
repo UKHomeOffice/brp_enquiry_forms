@@ -141,6 +141,13 @@ module.exports = {
   'conditions-error-checkbox': {
     toggle: 'conditions-error-container'
   },
+  'conditions-error': {
+    validate: ['required'],
+    dependent: {
+      field: 'conditions-error-checkbox',
+      value: 'true'
+    }
+  },
   'letter-error-checkbox': {
     toggle: 'letter-error-container'
   }
