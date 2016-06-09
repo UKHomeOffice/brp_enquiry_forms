@@ -29,6 +29,7 @@ module.exports = {
     toggle: 'date-of-birth-error-container'
   },
   'date-of-birth-error': {
+    validate: ['required', 'date', 'before'],
     hint: 'fields.date-of-birth-error.hint'
   },
   'date-of-birth-error-day': {
@@ -150,8 +151,5 @@ module.exports = {
       field: 'conditions-error-checkbox',
       value: 'true'
     }
-  },
-  'letter-error-checkbox': {
-    toggle: 'letter-error-container'
   }
 };

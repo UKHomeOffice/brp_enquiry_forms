@@ -1,5 +1,5 @@
 {
-  "address-building-number": {
+  "address-house-number": {
     "required": "Enter your building name or number"
   },
   "address-street": {
@@ -14,7 +14,7 @@
   "case-id": {
     "required": "A case ID number is required for your BRP to be sent to a different address"
   },
-  "contact-address-building-number": {
+  "contact-address-house-number": {
     "required": "Enter your building name or number"
   },
   "contact-address-street": {
