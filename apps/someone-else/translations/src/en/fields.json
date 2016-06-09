@@ -81,7 +81,7 @@
     "label": "Email address"
   },
   "no-email": {
-    "label": "I do not have an email address"
+    "label": "I want to be contacted by post"
   },
   "phone": {
     "label": "Phone number (optional)"

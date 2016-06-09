@@ -1,7 +1,7 @@
 @LostStolenDamagedForm @Validation @StepFour @DSP-94
 Feature: Validation for Step 04 of the Lost Stolen Damaged Form
 
-	Background: 
+	Background:
 		When I go to Step Four of the lost stolen damaged form
 
 	Scenario: Attempting to proceed to Step 05 of the Lost Stolen Damaged Form without entering an email address or ticking the checkbox
@@ -10,7 +10,7 @@ Feature: Validation for Step 04 of the Lost Stolen Damaged Form
 		And I see "Enter your email address"
 
 	Scenario: Attempting to proceed to Step 05 of the Lost Stolen Damaged Form without filling in the first address field
-		When I check the I do not have an email address checkbox
+		When I check the I want to be contacted by post checkbox
 		And I fill in the second contact address field
 		And I fill in the contact postcode field
 		When I click Continue
@@ -18,7 +18,7 @@ Feature: Validation for Step 04 of the Lost Stolen Damaged Form
 		And I see "Enter your street"
 
 	Scenario: Attempting to proceed to Step 05 of the Lost Stolen Damaged Form without filling in the second address field
-		When I check the I do not have an email address checkbox
+		When I check the I want to be contacted by post checkbox
 		And I fill in the first contact address field
 		And I fill in the contact postcode field
 		When I click Continue
@@ -26,7 +26,7 @@ Feature: Validation for Step 04 of the Lost Stolen Damaged Form
 		And I see "Enter the town or city"
 
 	Scenario: Attempting to proceed to Step 05 of the Lost Stolen Damaged Form without filling in the postcode field
-		When I check the I do not have an email address checkbox
+		When I check the I want to be contacted by post checkbox
 		And I fill in the first contact address field
 		And I fill in the second contact address field
 		When I click Continue
