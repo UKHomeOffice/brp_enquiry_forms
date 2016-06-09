@@ -26,7 +26,7 @@ Then(/^I am on Step Five of the collection form$/) do
   page.should have_content('Email address')
   find_by_id('email')
   find_by_id('no-email')
-  page.should have_content('I do not have an email address')
+  page.should have_content('I want to be contacted by post')
   page.should have_content('Phone number (optional)')
   find_field('phone')
   find_button('Continue')

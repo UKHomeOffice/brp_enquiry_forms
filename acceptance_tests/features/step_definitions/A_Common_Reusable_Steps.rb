@@ -208,7 +208,7 @@ end
 #
 # => DSP-67_.steps
 #
-When(/^I check the I do not have an email address checkbox$/) do
+When(/^I check the I want to be contacted by post checkbox$/) do
   check('no-email')
 end
 
