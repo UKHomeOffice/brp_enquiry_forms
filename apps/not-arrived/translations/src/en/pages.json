@@ -89,6 +89,7 @@
     },
     "org-details-group": {
       "header": "What are your details?",
+      "subheader": "We will attempt to contact the BRP holder directly. We will only use these details to contact you if needed.",
       "type": "Type of support"
     }
   },
