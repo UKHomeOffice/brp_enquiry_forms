@@ -7,7 +7,8 @@
     "header": "How should we contact you about your BRP?",
     "address": {
       "title": "What address should we use to contact you by post?"
-    }
+    },
+    "delay": "Asking to be contacted by post will add a further 2 days on to our response time. If you provide an email address we can get back to you sooner."
   },
   "uk-address": {
     "header": "Is there a suitable UK address we can deliver your BRP to?",
