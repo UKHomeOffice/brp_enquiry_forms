@@ -56,22 +56,22 @@
 
                   <p style="font-size: 23px; color: #000; line-height: 1.32; margin: 0 0 20px 0;">{{#t}}emails.correct-mistakes.header{{/t}}</p>
 
-                  <p style="font-size: 23px; color: #000; line-height: 1.32; margin: 0 0 20px 0;">{{#t}}emails.correct-mistakes.paragraph-one{{/t}}</p>
+                  <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">{{#t}}emails.correct-mistakes.paragraph-one{{/t}}</p>
 
                   {{#triage}}
-                    <p style="font-size: 23px; color: #000; line-height: 1.32; margin: 0 0 20px 0;">{{#t}}emails.correct-mistakes.paragraph-two-triage{{/t}}</p>
+                    <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">{{#t}}emails.correct-mistakes.paragraph-two-triage{{/t}}</p>
                   {{/triage}}
                   {{^triage}}
-                    <p style="font-size: 23px; color: #000; line-height: 1.32; margin: 0 0 20px 0;">{{#t}}emails.correct-mistakes.paragraph-two{{/t}}</p>
+                    <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">{{#t}}emails.correct-mistakes.paragraph-two{{/t}}</p>
                   {{/triage}}
 
-                  <p style="font-size: 23px; color: #000; line-height: 1.32; margin: 0 0 20px 0;">{{#t}}emails.correct-mistakes.paragraph-three{{/t}}</p>
+                  <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">{{#t}}emails.correct-mistakes.paragraph-three{{/t}}</p>
 
-                  <p style="font-size: 23px; color: #000; line-height: 1.32; margin: 0 0 20px 0;">{{#t}}emails.correct-mistakes.paragraph-four{{/t}}</p>
+                  <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">{{#t}}emails.correct-mistakes.paragraph-four{{/t}}</p>
 
-                  <p style="font-size: 23px; color: #000; line-height: 1.32; margin: 0 0 20px 0;">{{#t}}emails.correct-mistakes.thanks{{/t}}</p>
+                  <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">{{#t}}emails.correct-mistakes.thanks{{/t}}</p>
 
-                  <p style="font-size: 23px; color: #000; line-height: 1.32; margin: 0 0 20px 0;">{{#t}}emails.correct-mistakes.signature{{/t}}</p>
+                  <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">{{#t}}emails.correct-mistakes.signature{{/t}}</p>
 
 
                 {{/data}}

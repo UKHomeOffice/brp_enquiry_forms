@@ -56,17 +56,17 @@
 
                   <p style="font-size: 23px; color: #000; line-height: 1.32; margin: 0 0 20px 0;">{{#t}}emails.collection.header{{/t}}</p>
 
-                  <p style="font-size: 23px; color: #000; line-height: 1.32; margin: 0 0 20px 0;">{{#t}}emails.collection.paragraph-one{{/t}}</p>
+                  <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">{{#t}}emails.collection.paragraph-one{{/t}}</p>
 
-                  <p style="font-size: 23px; color: #000; line-height: 1.32; margin: 0 0 20px 0;">{{#t}}emails.collection.paragraph-two{{/t}}</p>
+                  <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">{{#t}}emails.collection.paragraph-two{{/t}}</p>
 
-                  <p style="font-size: 23px; color: #000; line-height: 1.32; margin: 0 0 20px 0;">{{#t}}emails.collection.paragraph-three{{/t}}</p>
+                  <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">{{#t}}emails.collection.paragraph-three{{/t}}</p>
 
-                  <p style="font-size: 23px; color: #000; line-height: 1.32; margin: 0 0 20px 0;">{{#t}}emails.collection.paragraph-four{{/t}}</p>
+                  <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">{{#t}}emails.collection.paragraph-four{{/t}}</p>
 
-                  <p style="font-size: 23px; color: #000; line-height: 1.32; margin: 0 0 20px 0;">{{#t}}emails.collection.thanks{{/t}}</p>
+                  <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">{{#t}}emails.collection.thanks{{/t}}</p>
 
-                  <p style="font-size: 23px; color: #000; line-height: 1.32; margin: 0 0 20px 0;">{{#t}}emails.collection.signature{{/t}}</p>
+                  <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">{{#t}}emails.collection.signature{{/t}}</p>
 
                 {{/data}}
 

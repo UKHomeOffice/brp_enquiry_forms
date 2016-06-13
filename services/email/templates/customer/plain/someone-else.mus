@@ -13,9 +13,8 @@
 
 {{#t}}emails.someone-else.signature{{/t}}
 
-{{/data}}
-
-
 If you're unsure an email is from UKVI:
  * do not reply to it or click any links
  * forward it to phishing@homeoffice.gsi.gov.uk
+
+{{/data}}

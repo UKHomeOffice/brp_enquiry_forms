@@ -56,17 +56,17 @@
 
                   <p style="font-size: 23px; color: #000; line-height: 1.32; margin: 0 0 20px 0;">{{#t}}emails.not-arrived.header{{/t}}</p>
 
-                  <p style="font-size: 23px; color: #000; line-height: 1.32; margin: 0 0 20px 0;">{{#t}}emails.not-arrived.paragraph-one{{/t}}</p>
+                  <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">{{#t}}emails.not-arrived.paragraph-one{{/t}}</p>
 
-                  <p style="font-size: 23px; color: #000; line-height: 1.32; margin: 0 0 20px 0;">{{#t}}emails.not-arrived.paragraph-two{{/t}}</p>
+                  <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">{{#t}}emails.not-arrived.paragraph-two{{/t}}</p>
 
-                  <p style="font-size: 23px; color: #000; line-height: 1.32; margin: 0 0 20px 0;">{{#t}}emails.not-arrived.paragraph-three{{/t}}</p>
+                  <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">{{#t}}emails.not-arrived.paragraph-three{{/t}}</p>
 
-                  <p style="font-size: 23px; color: #000; line-height: 1.32; margin: 0 0 20px 0;">{{#t}}emails.not-arrived.paragraph-four{{/t}}</p>
+                  <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">{{#t}}emails.not-arrived.paragraph-four{{/t}}</p>
 
-                  <p style="font-size: 23px; color: #000; line-height: 1.32; margin: 0 0 20px 0;">{{#t}}emails.not-arrived.thanks{{/t}}</p>
+                  <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">{{#t}}emails.not-arrived.thanks{{/t}}</p>
 
-                  <p style="font-size: 23px; color: #000; line-height: 1.32; margin: 0 0 20px 0;">{{#t}}emails.not-arrived.signature{{/t}}</p>
+                  <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">{{#t}}emails.not-arrived.signature{{/t}}</p>
 
 
                 {{/data}}

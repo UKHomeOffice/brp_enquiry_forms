@@ -56,21 +56,21 @@
 
                   <p style="font-size: 23px; color: #000; line-height: 1.32; margin: 0 0 20px 0;">{{#t}}emails.lost-stolen.header{{/t}}</p>
 
-                  <p style="font-size: 23px; color: #000; line-height: 1.32; margin: 0 0 20px 0;">As you are outside the UK, you may need to apply for a temporary visa to get back to the UK.</p>
+                  <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">As you are outside the UK, you may need to apply for a temporary visa to get back to the UK.</p>
 
-                  <p style="font-size: 23px; color: #000; line-height: 1.32; margin: 0 0 20px 0;">We will tell you if you need to apply for a temporary visa when we contact you.</p>
+                  <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">We will tell you if you need to apply for a temporary visa when we contact you.</p>
 
-                  <p style="font-size: 23px; color: #000; line-height: 1.32; margin: 0 0 20px 0;">{{#t}}emails.lost-stolen.paragraph-one{{/t}}</p>
+                  <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">{{#t}}emails.lost-stolen.paragraph-one{{/t}}</p>
 
-                  <p style="font-size: 23px; color: #000; line-height: 1.32; margin: 0 0 20px 0;">{{#t}}emails.lost-stolen.paragraph-two{{/t}}</p>
+                  <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">{{#t}}emails.lost-stolen.paragraph-two{{/t}}</p>
 
-                  <p style="font-size: 23px; color: #000; line-height: 1.32; margin: 0 0 20px 0;">{{#t}}emails.lost-stolen.paragraph-three{{/t}}</p>
+                  <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">{{#t}}emails.lost-stolen.paragraph-three{{/t}}</p>
 
-                  <p style="font-size: 23px; color: #000; line-height: 1.32; margin: 0 0 20px 0;">{{#t}}emails.lost-stolen.paragraph-four{{/t}}</p>
+                  <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">{{#t}}emails.lost-stolen.paragraph-four{{/t}}</p>
 
-                  <p style="font-size: 23px; color: #000; line-height: 1.32; margin: 0 0 20px 0;">{{#t}}emails.lost-stolen.thanks{{/t}}</p>
+                  <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">{{#t}}emails.lost-stolen.thanks{{/t}}</p>
 
-                  <p style="font-size: 23px; color: #000; line-height: 1.32; margin: 0 0 20px 0;">{{#t}}emails.lost-stolen.signature{{/t}}</p>
+                  <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">{{#t}}emails.lost-stolen.signature{{/t}}</p>
 
                 {{/data}}
 
