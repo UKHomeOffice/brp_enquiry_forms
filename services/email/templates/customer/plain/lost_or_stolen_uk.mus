@@ -1,33 +1,17 @@
 {{#data}}
-  {{#t}}emails.lost-stolen.header{{/t}}
+{{#t}}emails.lost-stolen.header{{/t}}
 
-  Dear {{fullname}}
+{{#t}}emails.lost-stolen.paragraph-one{{/t}}
 
-  You should hear from us in the next working day. We will tell you if you need to apply for a replacement BRP.
+{{#t}}emails.lost-stolen.paragraph-two{{/t}}
 
-  Here is the information you have sent us:
+{{#t}}emails.lost-stolen.paragraph-three{{/t}}
 
-  {{#t}}pages.check-details.table.headers.fullname{{/t}}
-  {{fullname}}
+{{#t}}emails.lost-stolen.paragraph-four{{/t}}
 
-  {{#t}}pages.check-details.table.headers.date-of-birth{{/t}}
-  {{date-of-birth-day}}-{{date-of-birth-month}}-{{date-of-birth-year}}
+{{#t}}emails.lost-stolen.thanks{{/t}}
 
-  {{#t}}pages.check-details.table.headers.nationality{{/t}}
-  {{nationality}}
-
-  {{#contact-address-street}}
-    {{#t}}emails.address{{/t}}
-    {{contact-address-house-number}} {{contact-address-street}},
-    {{contact-address-town}},
-    {{#contact-address-county}}{{contact-address-county}},{{/contact-address-county}}
-    {{contact-address-postcode}}
-  {{/contact-address-street}}
-
-  {{#phone}}
-    {{#t}}emails.phone{{/t}}
-    {{phone}}
-  {{/phone}}
+{{#t}}emails.lost-stolen.signature{{/t}}
 
 {{/data}}
 

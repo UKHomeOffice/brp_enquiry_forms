@@ -1,95 +1,19 @@
 {{#data}}
-  {{#t}}emails.collection.header{{/t}}
+{{#t}}emails.collection.header{{/t}}
 
-  Dear {{fullname}}
+{{#t}}emails.collection.paragraph-one{{/t}}
 
-  {{#t}}journeys.collection.pages.confirmation.next.paragraphs.one{{/t}}
-  {{#t}}pages.confirmation.next.not-specified.para.two{{/t}}
-  {{#t}}pages.confirmation.next.not-specified.para.three{{/t}}
+{{#t}}emails.collection.paragraph-two{{/t}}
 
-  {{#t}}emails.you-sent{{/t}}
+{{#t}}emails.collection.paragraph-three{{/t}}
 
-  {{#t}}journeys.collection.pages.check-details.tables.problem-details.title{{/t}}
+{{#t}}emails.collection.paragraph-four{{/t}}
 
-  {{#t}}journeys.collection.pages.check-details.tables.problem-details.where-radio.label{{/t}}
-  {{collection-where-radio}}
-  {{#collection-date}}
-  {{collection-date-formatted}}
-  {{/collection-date}}
+{{#t}}emails.collection.thanks{{/t}}
 
-  {{#t}}journeys.collection.pages.check-details.tables.problem-details.reason.label{{/t}}
-  {{#which-post-office}}{{#t}}fields.reason-radio.options.which-post-office.label{{/t}}{{/which-post-office}}
-  {{#under-age}}{{#t}}fields.reason-radio.options.under-age.label{{/t}}{{/under-age}}
-  {{#non-identity}}{{#t}}fields.reason-radio.options.non-identity.label{{/t}}{{/non-identity}}
-  {{#others-identity}}{{#t}}fields.reason-radio.options.others-identity.label{{/t}}{{/others-identity}}
-  {{#passport-family}}{{#t}}fields.reason-radio.options.passport-family.label{{/t}}{{/passport-family}}
-  {{#passport-lost}}{{#t}}fields.reason-radio.options.passport-lost.label{{/t}}{{/passport-lost}}
-  {{#no-brp}}{{#t}}fields.reason-radio.options.no-brp.label{{/t}}{{/no-brp}}
-  {{#other}}{{#t}}fields.reason-radio.options.other.label{{/t}}{{/other}}
-
-  {{#reason-which-post-office}}{{reason-which-post-office}}{{/reason-which-post-office}}
-  {{#reason-under-age}}{{reason-under-age}}{{/reason-under-age}}
-  {{#reason-non-identity}}{{reason-non-identity}}{{/reason-non-identity}}
-  {{#reason-others-identity}}{{reason-others-identity}}{{/reason-others-identity}}
-  {{#reason-passport-family}}{{reason-passport-family}}{{/reason-passport-family}}
-  {{#reason-passport-lost}}{{reason-passport-lost}}{{/reason-passport-lost}}
-  {{#reason-other}}{{reason-other}}{{/reason-other}}
-
-
-  {{#nominated-fullname}}
-  {{#t}}journeys.collection.pages.check-details.tables.others-details.title{{/t}}
-  {{#t}}journeys.collection.pages.check-details.tables.others-details.fullname{{/t}}
-  {{nominated-fullname}}
-
-  {{#t}}journeys.collection.pages.check-details.tables.others-details.date-of-birth{{/t}}
-  {{nominated-date-formatted}}
-
-  {{#t}}journeys.collection.pages.check-details.tables.others-details.nationality{{/t}}
-  {{nominated-nationality}}
-
-  {{#t}}journeys.collection.pages.check-details.tables.others-details.id-number{{/t}}
-  {{nominated-id-number}}
-  {{/nominated-fullname}}
-
-
-  {{#t}}journeys.collection.pages.check-details.tables.personal-details.title{{/t}}
-  {{#contact-address-street}}
-  {{#t}}pages.check-details.table.headers.contact-address{{/t}}
-  {{contact-address-house-number}} {{contact-address-street}},
-  {{contact-address-town}},
-  {{#contact-address-county}}
-  {{contact-address-county}},
-  {{/contact-address-county}}
-  {{contact-address-postcode}}
-  {{/contact-address-street}}
-
-  {{#t}}pages.check-details.table.headers.fullname{{/t}}
-  {{fullname}}
-
-  {{#t}}pages.check-details.table.headers.date-of-birth{{/t}}
-  {{date-of-birth-formatted}}
-
-  {{#t}}pages.check-details.table.headers.nationality{{/t}}
-  {{nationality}}
-
-  {{#passport}}
-  {{#t}}pages.check-details.table.headers.passport{{/t}}
-  XXXXXXXXX
-  {{/passport}}
-
-  {{#phone}}
-  {{#t}}pages.check-details.table.headers.phone{{/t}}
-  {{phone}}
-  {{/phone}}
-
-  {{#email}}
-  {{#t}}pages.check-details.table.headers.email{{/t}}
-  {{email}}
-  {{/email}}
-
-{{/data}}
-
+{{#t}}emails.collection.signature{{/t}}
 
 If you're unsure an email is from UKVI:
- * do not reply to it or click any links
- * forward it to phishing@homeoffice.gsi.gov.uk
+  * do not reply to it or click any links
+  * forward it to phishing@homeoffice.gsi.gov.uk
+{{/data}}

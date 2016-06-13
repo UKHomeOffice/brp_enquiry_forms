@@ -1,37 +1,21 @@
 {{#data}}
-  {{#t}}emails.lost-stolen.header{{/t}}
+{{#t}}emails.lost-stolen.header{{/t}}
 
-  Dear {{fullname}}
+{{#t}}emails.lost-stolen.paragraph-one{{/t}}
 
-  We will contact you in the next working day to tell you what to do.
+As you are outside the UK, you may need to apply for a temporary visa to get back to the UK.
 
-  As you are outside the UK, you may need to apply for a temporary visa to get back to the UK.
+We will tell you if you need to apply for a temporary visa when we contact you.
 
-  We will tell you if you need to apply for a temporary visa when we contact you.
+{{#t}}emails.lost-stolen.paragraph-two{{/t}}
 
-  Here is the information you have sent us:
+{{#t}}emails.lost-stolen.paragraph-three{{/t}}
 
-  {{#t}}pages.check-details.table.headers.fullname{{/t}}
-  {{fullname}}
+{{#t}}emails.lost-stolen.paragraph-four{{/t}}
 
-  {{#t}}pages.check-details.table.headers.date-of-birth{{/t}}
-  {{date-of-birth-day}}-{{date-of-birth-month}}-{{date-of-birth-year}}
+{{#t}}emails.lost-stolen.thanks{{/t}}
 
-  {{#t}}pages.check-details.table.headers.nationality{{/t}}
-  {{nationality}}
-
-  {{#contact-address-street}}
-    {{#t}}emails.address{{/t}}
-    {{contact-address-house-number}} {{contact-address-street}},
-    {{contact-address-town}},
-    {{#contact-address-county}}{{contact-address-county}},{{/contact-address-county}}
-    {{contact-address-postcode}}
-  {{/contact-address-street}}
-
-  {{#phone}}
-    {{#t}}emails.phone{{/t}}
-    {{phone}}
-  {{/phone}}
+{{#t}}emails.lost-stolen.signature{{/t}}
 
 {{/data}}
 
