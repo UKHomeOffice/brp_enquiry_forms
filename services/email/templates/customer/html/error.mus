@@ -58,7 +58,12 @@
 
                   <p style="font-size: 23px; color: #000; line-height: 1.32; margin: 0 0 20px 0;">{{#t}}emails.correct-mistakes.paragraph-one{{/t}}</p>
 
-                  <p style="font-size: 23px; color: #000; line-height: 1.32; margin: 0 0 20px 0;">{{#t}}emails.correct-mistakes.paragraph-two{{/t}}</p>
+                  {{#triage}}
+                    <p style="font-size: 23px; color: #000; line-height: 1.32; margin: 0 0 20px 0;">{{#t}}emails.correct-mistakes.paragraph-two-triage{{/t}}</p>
+                  {{/triage}}
+                  {{^triage}}
+                    <p style="font-size: 23px; color: #000; line-height: 1.32; margin: 0 0 20px 0;">{{#t}}emails.correct-mistakes.paragraph-two{{/t}}</p>
+                  {{/triage}}
 
                   <p style="font-size: 23px; color: #000; line-height: 1.32; margin: 0 0 20px 0;">{{#t}}emails.correct-mistakes.paragraph-three{{/t}}</p>
 

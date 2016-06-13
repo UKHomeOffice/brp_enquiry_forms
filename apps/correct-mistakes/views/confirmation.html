@@ -16,7 +16,12 @@
   <h2>{{#t}}pages.confirmation.next.header{{/t}}</h2>
 
   <p>{{#t}}pages.confirmation.next.not-specified.para.one{{/t}}</p>
-  <p>{{#t}}pages.confirmation.next.not-specified.para.two{{/t}}</p>
+  {{#triage}}
+    <p>{{#t}}pages.confirmation.next.not-specified.para.two-triage{{/t}}</p>
+  {{/triage}}
+  {{^triage}}
+    <p>{{#t}}pages.confirmation.next.not-specified.para.two{{/t}}</p>
+  {{/triage}}
   <p>{{#t}}pages.confirmation.next.not-specified.para.three{{/t}}</p>
 
   <hr>

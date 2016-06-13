@@ -3,7 +3,12 @@
 
 {{#t}}emails.correct-mistakes.paragraph-one{{/t}}
 
+{{#triage}}
+{{#t}}emails.correct-mistakes.paragraph-two-triage{{/t}}
+{{/triage}}
+{{^triage}}
 {{#t}}emails.correct-mistakes.paragraph-two{{/t}}
+{{/triage}}
 
 {{#t}}emails.correct-mistakes.paragraph-three{{/t}}
 
