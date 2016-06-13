@@ -1,132 +1,26 @@
 {{#data}}
-  {{#t}}emails.correct-mistakes.header{{/t}}
+{{#t}}emails.correct-mistakes.header{{/t}}
 
-  Hello
+{{#t}}emails.correct-mistakes.paragraph-one{{/t}}
 
-  We will review the information you have sent us and we will let you know if you need a new card.
+{{#triage}}
+{{#t}}emails.correct-mistakes.paragraph-two-triage{{/t}}
+{{/triage}}
+{{^triage}}
+{{#t}}emails.correct-mistakes.paragraph-two{{/t}}
+{{/triage}}
 
-  We will get back to you within 5 working days. For example, if you contact us on a Monday you will hear back by the following Monday.
+{{#t}}emails.correct-mistakes.paragraph-three{{/t}}
 
-  We will then advise you what to do next.
+{{#t}}emails.correct-mistakes.paragraph-four{{/t}}
 
-  BRP team
+{{#t}}emails.correct-mistakes.thanks{{/t}}
 
-  Here is the information you have sent us:
-
-  Personal details
-  {{#t}}pages.check-details-error.personal-details-table.headers.fullname{{/t}}
-  {{fullname}}
-
-  {{#t}}pages.check-details-error.personal-details-table.headers.date-of-birth{{/t}}
-  {{date-of-birth-day}}-{{date-of-birth-month}}-{{date-of-birth-year}}
-
-  {{#t}}pages.check-details-error.personal-details-table.headers.nationality{{/t}}</p></td>
-  {{nationality}}
-
-  {{#brp-card}}
-    {{#t}}pages.check-details-error.personal-details-table.headers.brp-card-number{{/t}}
-    {{brp-card}}
-  {{/brp-card}}
-
-  {{#same-address-street}}
-    {{#t}}pages.check-details.table.headers.address{{/t}}
-    {{same-address-house-number}} {{same-address-street}},
-    {{same-address-town}},
-    {{#same-address-county}}{{same-address-county}},{{/same-address-county}}
-    {{same-address-postcode}}
-  {{/same-address-street}}
-
-  {{#uk-address-street}}
-    {{#t}}pages.check-details.table.headers.address{{/t}}
-    {{uk-address-house-number}} {{uk-address-street}},
-    {{uk-address-town}},
-    {{#uk-address-county}}{{uk-address-county}},{{/uk-address-county}}
-    {{uk-address-postcode}}
-  {{/uk-address-street}}
-
-  Reported errors
-  {{#first-name-error}}
-    {{#t}}fields.first-name-error-checkbox.label{{/t}}
-    {{first-name-error}}
-  {{/first-name-error}}
-
-  {{#last-name-error}}
-    {{#t}}fields.last-name-error-checkbox.label{{/t}}
-    {{last-name-error}}
-  {{/last-name-error}}
-
-  {{#birth-place-error}}
-    {{#t}}fields.birth-place-error-checkbox.label{{/t}}
-    {{birth-place-error}}
-  {{/birth-place-error}}
-
-  {{#date-of-birth-error-formatted}}
-    {{#t}}fields.date-of-birth-error-checkbox.label{{/t}}
-    {{date-of-birth-error-formatted}}
-  {{/date-of-birth-error-formatted}}
-
-  {{#gender-error}}
-    {{#t}}fields.gender-error-checkbox.label{{/t}}
-    {{gender-error}}
-  {{/gender-error}}
-
-  {{#sponsor-details-error}}
-    {{#t}}fields.sponsor-details-error-checkbox.label{{/t}}
-    {{sponsor-details-error}}
-  {{/sponsor-details-error}}
-
-  {{#nationality-error}}
-    {{#t}}fields.nationality-error-checkbox.label{{/t}}
-    {{nationality-error}}
-  {{/nationality-error}}
-
-  {{#signature-error}}
-    {{#t}}fields.signature-error-checkbox.label{{/t}}
-    {{signature-error}}
-  {{/signature-error}}
-
-  {{#national-insurance-error}}
-    {{#t}}fields.national-insurance-error-checkbox.label{{/t}}
-    {{national-insurance-error}}
-  {{/national-insurance-error}}
-
-  {{#photograph-error}}
-    {{#t}}fields.photograph-error-checkbox.label{{/t}}
-    {{photograph-error}}
-  {{/photograph-error}}
-
-  {{#damaged-error}}
-    {{#t}}fields.damaged-error-checkbox.label{{/t}}
-    {{damaged-error}}
-  {{/damaged-error}}
-
-  {{#conditions-error}}
-    {{#t}}fields.conditions-error-checkbox.label{{/t}}
-    {{conditions-error}}
-  {{/conditions-error}}
-
-  Contact details
-
-  {{#contact-address-street}}
-    {{#t}}emails.address{{/t}}
-    {{contact-address-house-number}} {{contact-address-street}},
-    {{contact-address-town}},
-    {{#contact-address-county}}{{contact-address-county}},{{/contact-address-county}}
-    {{contact-address-postcode}}
-  {{/contact-address-street}}
-
-  {{#email}}
-    {{#t}}fields.email.label{{/t}}
-    {{email}}
-  {{/email}}
-
-  {{#phone}}
-    {{#t}}fields.phone.label{{/t}}
-    {{phone}}
-  {{/phone}}
-
-{{/data}}
+{{#t}}emails.correct-mistakes.signature{{/t}}
 
 If you're unsure an email is from UKVI:
- * do not reply to it or click any links
- * forward it to phishing@homeoffice.gsi.gov.uk
+  * do not reply to it or click any links
+  * forward it to phishing@homeoffice.gsi.gov.uk
+
+
+{{/data}}

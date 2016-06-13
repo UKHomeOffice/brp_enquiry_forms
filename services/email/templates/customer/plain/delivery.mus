@@ -1,67 +1,17 @@
 {{#data}}
 {{#t}}emails.not-arrived.header{{/t}}
 
-Dear {{fullname}}
+{{#t}}emails.not-arrived.paragraph-one{{/t}}
 
-We will review the information you have given us to find out why you have not received the biometric residence permit.
+{{#t}}emails.not-arrived.paragraph-two{{/t}}
 
-We will get back to you within 5 working days. For example, if you contact us on a Monday you will hear back by the following Monday.
+{{#t}}emails.not-arrived.paragraph-three{{/t}}
 
-We will then tell you what to do next.
+{{#t}}emails.not-arrived.paragraph-four{{/t}}
 
-Here is the information you have sent us:
+{{#t}}emails.not-arrived.thanks{{/t}}
 
-{{#delivery-date-formatted}}
-{{#t}}pages.check-details.table.headers.delivery-date{{/t}}
-{{delivery-date-formatted}}
-{{/delivery-date-formatted}}
-{{#delivery-details}}
-{{#t}}pages.check-details.table.headers.delivery-details{{/t}}
-{{delivery-details}}
-{{/delivery-details}}
-
-{{#address-street}}
-{{#t}}pages.check-details.table.headers.address{{/t}}
-{{address-house-number}} {{address-street}},
-{{address-town}},
-{{#address-county}}{{address-county}},{{/address-county}}
-{{address-postcode}}
-
-{{#t}}common-fields.case-id.label{{/t}}
-{{case-id}}
-{{/address-street}}
-
-{{#t}}pages.check-details-error.personal-details-table.headers.fullname{{/t}}
-{{fullname}}
-
-{{#t}}pages.check-details-error.personal-details-table.headers.date-of-birth{{/t}}
-{{date-of-birth-day}}-{{date-of-birth-month}}-{{date-of-birth-year}}
-
-{{#t}}pages.check-details-error.personal-details-table.headers.nationality{{/t}}
-{{nationality}}
-
-{{#passport}}
-{{#t}}pages.check-details.table.headers.passport{{/t}}
-XXXXXXXXX
-{{/passport}}
-
-{{#contact-address-street}}
-{{#t}}pages.check-details.table.headers.address{{/t}}
-{{contact-address-house-number}} {{contact-address-street}},
-{{contact-address-town}},
-{{#contact-address-county}}{{contact-address-county}},{{/contact-address-county}}
-{{contact-address-postcode}}
-{{/contact-address-street}}
-
-{{#email}}
-{{#t}}fields.email.label{{/t}}
-{{email}}
-{{/email}}
-
-{{#phone}}
-{{#t}}emails.phone{{/t}}
-{{phone}}
-{{/phone}}
+{{#t}}emails.not-arrived.signature{{/t}}
 
 {{/data}}
 

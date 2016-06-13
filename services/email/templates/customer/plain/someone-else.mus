@@ -1,79 +1,20 @@
 {{#data}}
 {{#t}}emails.someone-else.header{{/t}}
 
-Dear {{fullname}}
+{{#t}}emails.someone-else.paragraph-one{{/t}}
 
-{{#t}}pages.someone-else-confirmation.paragraph{{/t}}
-{{#t}}pages.confirmation.next.not-specified.para.two{{/t}}
-{{#t}}pages.confirmation.next.not-specified.para.three{{/t}}
+{{#t}}emails.someone-else.paragraph-two{{/t}}
 
-{{#t}}emails.you-sent{{/t}}
+{{#t}}emails.someone-else.paragraph-three{{/t}}
 
-{{#t}}pages.someone-else-check-details.tables.other-person.title{{/t}}
+{{#t}}emails.someone-else.paragraph-four{{/t}}
 
-{{#t}}pages.check-details.table.headers.fullname{{/t}}
-{{someone-else-fullname}}
+{{#t}}emails.someone-else.thanks{{/t}}
 
-{{#t}}pages.check-details.table.headers.date-of-birth{{/t}}
-{{someone-else-date-formatted}}
-
-{{#t}}pages.check-details.table.headers.nationality{{/t}}
-{{someone-else-nationality}}
-
-{{#t}}fields.someone-else-id-type.legend{{/t}}
-{{#t}}fields.someone-else-id-type.options.{{someone-else-id-type}}.label{{/t}}
-
-{{#t}}pages.check-details.table.headers.id-number{{/t}}
-{{someone-else-id-number}}
-
-
-{{#t}}pages.someone-else-check-details.tables.personal-details.title{{/t}}
-
-{{#contact-address-street}}
-{{#t}}pages.check-details.table.headers.contact-address{{/t}}
-{{contact-address-house-number}} {{contact-address-street}},
-{{contact-address-town}},
-{{#contact-address-county}}
-{{contact-address-county}},
-{{/contact-address-county}}
-{{contact-address-postcode}}
-{{/contact-address-street}}
-
-{{#t}}pages.check-details.table.headers.fullname{{/t}}
-{{fullname}}
-
-{{#t}}pages.check-details.table.headers.date-of-birth{{/t}}
-{{date-of-birth-formatted}}
-
-{{#t}}pages.check-details.table.headers.nationality{{/t}}
-{{nationality}}
-
-{{#passport}}
-{{#t}}pages.check-details.table.headers.passport{{/t}}
-XXXXXXXXX
-{{/passport}}
-
-{{#someone-else-reason-radio}}
-{{#t}}emails.someone-else.tables.personal-details.reason{{/t}}
-{{#t}}fields.someone-else-reason-radio.options.{{someone-else-reason-radio}}.label{{/t}}
-{{#incapable-details}}
-{{incapable-details}}
-{{/incapable-details}}
-{{/someone-else-reason-radio}}
-
-{{#phone}}
-{{#t}}pages.check-details.table.headers.phone{{/t}}
-{{phone}}
-{{/phone}}
-
-{{#email}}
-{{#t}}pages.check-details.table.headers.email{{/t}}
-{{email}}
-{{/email}}
-
-{{/data}}
-
+{{#t}}emails.someone-else.signature{{/t}}
 
 If you're unsure an email is from UKVI:
  * do not reply to it or click any links
  * forward it to phishing@homeoffice.gsi.gov.uk
+
+{{/data}}
