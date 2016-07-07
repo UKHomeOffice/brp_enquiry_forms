@@ -36,7 +36,7 @@
     "hof": "^7.0.1",
     "hogan-express-strict": "^0.5.4",
     "hogan.js": "^3.0.2",
-    "jquery": "^1.9.3",
+    "jquery": "^3.1.0",
     "moment": "^2.10.3",
     "moment-business": "^2.0.0",
     "node-sass": "^3.2.0",
