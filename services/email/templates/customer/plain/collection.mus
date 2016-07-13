@@ -5,6 +5,8 @@
 
 {{#t}}emails.collection.paragraph-two{{/t}}
 
+{{#t}}emails.collection.paragraph-two-extra{{/t}}
+
 {{#t}}emails.collection.paragraph-three{{/t}}
 
 {{#t}}emails.collection.paragraph-four{{/t}}
