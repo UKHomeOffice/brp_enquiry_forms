@@ -1,0 +1,41 @@
+pipeline:
+  build_4:
+    image: node:4.4.2
+    commands:
+      - npm --loglevel warn install -g npm@3
+      - npm --loglevel warn install
+      - npm test
+
+  build_5:
+    image: node:5
+    commands:
+      - npm --loglevel warn install
+      - npm test
+
+  build_brpapp:
+    image: docker:1.10
+    environment:
+      - DOCKER_HOST=tcp://127.0.0.1:2375
+    commands:
+      - docker build -t brpapp .
+
+  build_acceptance:
+    image: docker:1.10
+    environment:
+      - DOCKER_HOST=tcp://127.0.0.1:2375
+    commands:
+      - docker build -f Dockerfile-acceptance -t acceptance .
+
+  test_acceptance:
+    image: docker:1.10
+    environment:
+      - DOCKER_HOST=tcp://127.0.0.1:2375
+    commands:
+      docker run -e NODE_ENV=ci --net host -d brpapp
+
+services:
+  redis:
+    image: redis
+  dind:
+    image: docker:1.10-dind
+    privileged: true
