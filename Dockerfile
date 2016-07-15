@@ -1,21 +1,16 @@
 FROM quay.io/ukhomeofficedigital/nodejs-base:v4.4.2
 
-COPY . /app
-
-RUN npm install -g npm@3
-
+RUN mkdir /public
 RUN yum clean all && \
-  yum update -y && \
-  yum install -y git && \
+  yum update -y -q && \
+  yum install -y -q git && \
   yum clean all && \
   rpm --rebuilddb && \
-  rm -rf node_modules && \
-  npm --production=false install --unsafe-perm --no-optional && \
-  NODE_ENV=development npm test && \
-  npm prune --production && \
-  chown -R nodejs:nodejs .
+  npm --loglevel warn install -g npm@3
 
-USER nodejs
+COPY package.json /app/package.json
+RUN npm --loglevel warn install --production --no-optional
+COPY . /app
+RUN npm --loglevel warn run postinstall
 
-EXPOSE 8080
 CMD /app/run.sh
