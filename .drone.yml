@@ -2,7 +2,7 @@ pipeline:
   build:
     image: node:${NODE_VERSION}
     commands:
-      - [[$NODE_VERSION == 4.4.2]] && npm install -g npm@3
+      - [[ $NODE_VERSION == 4.4.2 ]] && npm install -g npm@3
       - npm install
       - npm test
 matrix:
