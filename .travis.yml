@@ -1,13 +1,10 @@
 language: node_js
 node_js:
   - "4.2.2"
+  - "6"
 
 services:
   - redis-server
-
-cache:
-  directories:
-    - node_modules
 
 before_install:
   - rvm install 2.2.2
