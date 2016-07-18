@@ -60,6 +60,8 @@
 
                   <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">{{#t}}emails.collection.paragraph-two{{/t}}</p>
 
+                  <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">{{#t}}emails.collection.paragraph-two-extra{{/t}}</p>
+
                   <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">{{#t}}emails.collection.paragraph-three{{/t}}</p>
 
                   <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">{{#t}}emails.collection.paragraph-four{{/t}}</p>
