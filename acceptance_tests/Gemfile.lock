@@ -30,6 +30,8 @@ GEM
     nokogiri (1.6.7.1)
       mini_portile2 (~> 2.0.0.rc2)
     phantomjs (1.9.8.0)
+    phantomjs-binaries (2.1.1.0)
+      sys-uname (= 0.9.0)
     poltergeist (1.8.1)
       capybara (~> 2.1)
       cliver (~> 0.3.1)
@@ -59,6 +61,8 @@ GEM
       websocket (~> 1.0)
     show_me_the_cookies (3.1.0)
       capybara (~> 2.0)
+    sys-uname (0.9.0)
+      ffi (>= 1.0.0)
     websocket (1.2.2)
     websocket-driver (0.6.3)
       websocket-extensions (>= 0.1.0)
@@ -78,8 +82,12 @@ DEPENDENCIES
   capybara
   cucumber
   phantomjs
+  phantomjs-binaries
   poltergeist
   rspec
   selenium-webdriver (= 2.45.0)
   show_me_the_cookies
   yard-cucumber
+
+BUNDLED WITH
+   1.11.2
