@@ -31,7 +31,8 @@ pipeline:
     environment:
       - DOCKER_HOST=tcp://127.0.0.1:2375
     commands:
-      docker run -e NODE_ENV=ci --net host -d brpapp
+      - docker run -e NODE_ENV=ci -d --net host brpapp
+      - docker run --rm --net host acceptance
 
 services:
   redis:
