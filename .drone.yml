@@ -13,29 +13,48 @@ pipeline:
       - npm test
 
   build_brpapp:
-    image: docker:1.10
+    image: docker:1.11
     environment:
       - DOCKER_HOST=tcp://127.0.0.1:2375
     commands:
       - docker build -t brpapp .
 
   build_acceptance:
-    image: docker:1.10
+    image: docker:1.11
     environment:
       - DOCKER_HOST=tcp://127.0.0.1:2375
     commands:
       - docker build -f Dockerfile-acceptance -t acceptance .
 
   test_acceptance:
-    image: docker:1.10
+    image: docker:1.11
     environment:
       - DOCKER_HOST=tcp://127.0.0.1:2375
     commands:
-      docker run -e NODE_ENV=ci --net host -d brpapp
+      - docker run -e NODE_ENV=ci -d --net host brpapp
+      - docker run --rm --net host acceptance
+
+  image_to_quay:
+    image: docker:1.11
+    environment:
+      - DOCKER_HOST=tcp://127.0.0.1:2375
+    commands:
+      - docker login -u="ukhomeofficedigital+drone" -p=${DOCKER_PASSWORD} quay.io
+      - docker tag brpapp quay.io/ukhomeofficedigital/brpapp-test:${DRONE_COMMIT_SHA}
+      - docker push quay.io/ukhomeofficedigital/brpapp-test:${DRONE_COMMIT_SHA}
+    when:
+      branch: master
+
+  # trigger_deploy:
+  #   image: fedora:24
+  #   commands:
+  #     - 'curl -H "Authorization: Bearer ${DRONE_TOKEN}" "https://drone.digital.homeoffice.gov.uk/api/repos/UKHomeOffice/kube-brpapp/builds/1?BRPAPP_IMAGE_TAG=${DRONE_COMMIT_SHA}&NAMESPACE=brp-dev"'
+  #   when:
+  #     branch: master
 
 services:
   redis:
     image: redis
   dind:
-    image: docker:1.10-dind
+    image: docker:1.11-dind
     privileged: true
