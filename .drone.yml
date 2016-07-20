@@ -34,6 +34,15 @@ pipeline:
       - docker run -e NODE_ENV=ci -d --net host brpapp
       - docker run --rm --net host acceptance
 
+  image_to_quay:
+    image: docker:1.10
+    environment:
+      - DOCKER_HOST=tcp://127.0.0.1:2375
+    commands:
+      - env
+      - docker tag brpapp quay.io/ukhomeofficedigital/brpapp:${DRONE_COMMIT_SHA}
+      - docker push quay.io/ukhomeofficedigital/brpapp:${DRONE_COMMIT_SHA}
+
 services:
   redis:
     image: redis
