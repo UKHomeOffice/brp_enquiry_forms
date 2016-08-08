@@ -1,18 +1,36 @@
 {{#data}}
-{{#t}}emails.lost-stolen.header{{/t}}
+{{#t}}emails.lost-stolen-abroad.header{{/t}}
 
-{{#t}}emails.lost-stolen.paragraph-one{{/t}}
+{{#t}}emails.lost-stolen-abroad.subheading{{/t}}
 
-{{#t}}emails.lost-stolen.paragraph-two{{/t}}
+{{#t}}emails.lost-stolen-abroad.subheading-address.line-one{{/t}}
+{{#t}}emails.lost-stolen-abroad.subheading-address.line-two{{/t}}
+{{#t}}emails.lost-stolen-abroad.subheading-address.line-three{{/t}}
+{{#t}}emails.lost-stolen-abroad.subheading-address.line-four{{/t}}
+{{#t}}emails.lost-stolen-abroad.subheading-address.line-five{{/t}}
 
-{{#t}}emails.lost-stolen.paragraph-three{{/t}}
+* {{#t}}emails.lost-stolen-abroad.header-two{{/t}} *
 
-{{#t}}emails.lost-stolen.paragraph-four{{/t}}
+{{#t}}emails.lost-stolen-uk.paragraph-one{{/t}}
+ * {{#t}}emails.lost-stolen-abroad.paragraph-six-bullets.one{{/t}}
+ * {{#t}}emails.lost-stolen-abroad.paragraph-six-bullets.two{{/t}}
 
-{{#t}}emails.lost-stolen.thanks{{/t}}
+{{#t}}emails.lost-stolen-abroad.paragraph-seven{{/t}}
 
-{{#t}}emails.lost-stolen.signature{{/t}}
+{{#t}}emails.lost-stolen-abroad.paragraph-eight{{/t}}
+ * {{#t}}emails.lost-stolen-abroad.paragraph-eight-bullets.one{{/t}}
+ * {{#t}}emails.lost-stolen-abroad.paragraph-eight-bullets.two{{/t}}
 
-If you're unsure an email is from UKVI:
- * do not reply to it or click any links
+{{#t}}emails.lost-stolen-abroad.paragraph-nine{{/t}}
+
+* {{#t}}emails.lost-stolen-abroad.header-four{{/t}} *
+
+{{#t}}emails.lost-stolen-abroad.paragraph-ten{{/t}}
+
+{{#t}}emails.lost-stolen-abroad.paragraph-eleven{{/t}}
+ * {{#t}}emails.lost-stolen-abroad.paragraph-eleven-bullets.one{{/t}}
+ * {{#t}}emails.lost-stolen-abroad.paragraph-eleven-bullets.twp{{/t}}
+
+{{#t}}emails.lost-stolen-abroad.thanks{{/t}}
+{{#t}}emails.lost-stolen-abroad.signature{{/t}}
 {{/data}}

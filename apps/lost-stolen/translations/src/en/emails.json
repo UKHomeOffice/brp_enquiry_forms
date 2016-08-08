@@ -6,13 +6,53 @@
     "country": "Current location",
     "date-lost": "Date realised"
   },
-  "lost-stolen": {
-    "header": "You have reported your BRP as lost or stolen",
-    "paragraph-one": "Thank you for contacting the BRP management unit about your lost or stolen BRP.",
-    "paragraph-two": "Somebody from the BRP management unit will contact you within 1 working day about the issue you have reported.",
-    "paragraph-three": "If you have an issue with multiple BRPs, for example your spouse's BRP or your child's BRP, then you must report the issues with each BRP separately at www.gov.uk/brp",
-    "paragraph-four": "This is an automated email, so please don't reply.",
-    "thanks": "Thanks,",
-    "signature": "The BRP management unit"
-  }
+  "lost-stolen-abroad": {
+    "header": "Thank you for reporting that your biometric residence permit (BRP) has been lost or stolen. We will now cancel your BRP and it can’t be reactivated.",
+    "subheading": "If you find your BRP you must return it to the address below as soon as possible:",
+    "subheading-address": {
+      "line-one": "Freepost RRYX-GLYU-GXHZ",
+      "line-two": "Returns Unit",
+      "line-three": "PO Box 163",
+      "line-four": "Bristol",
+      "line-five": "BS20 1AB"
+    },
+    "header-two": "What to do next",
+    "paragraph-one": "To return to the UK you must apply for a replacement BRP visa. Details are available at on the <a href=\"https://www.gov.uk/replace-brp\">GOV.UK website</a>.",
+    "paragraph-two": "You should not make arrangements to travel back to the UK until you receive your replacement BRP visa.",
+    "paragraph-three": "This office can’t help you with the Replacement BRP Visa application process and won’t respond to enquiries.",
+    "paragraph-four": "Don’t reply to this email for support regarding your replacement BRP visa. Instead, you should direct enquiries to your local <a href=\"https://ukvi-international.faq-help.com\">Visa Application Centre</a>.",
+    "paragraph-five": "After returning to the UK, you’ll need to apply for a <a href=\"https://www.gov.uk/biometric-residence-permits/replace\">replacement BRP</a>.",
+    "header-three": "When you return to the UK",
+    "paragraph-six": "When you return to the UK, you must apply for a replacement BRP within 3 months. If you don’t you may:",
+    "paragraph-six-bullets": {
+      "one": "receive a fine of up to £1,000",
+      "two": "have your permission to stay in UK taken away"
+    },
+    "paragraph-seven": "Guidance and the application form can be found on the <a href=\"https://www.gov.uk/biometric-residence-permits/replace\">GOV.UK website</a>",
+    "paragraph-eight": "We aim to consider applications for a replacement BRP within:",
+    "paragraph-eight-bullets": {
+      "one": "eight weeks of receipt if you hold limited leave to enter or remain",
+      "two": "six months of receipt if you hold indefinite leave to enter or remain"
+    },
+    "paragraph-nine": "If you require a replacement BRP urgently, you can book an appointment to apply in person at a <a href=\"https://www.gov.uk/ukvi-premium-service-centres\">Premium Service Centre</a>.",
+    "header-four": "Leaving the UK",
+    "paragraph-ten": "You need a BRP to enter the UK but not to leave.",
+    "paragraph-eleven": "If you submit a replacement BRP application and then find that you need to travel urgently you must either:",
+    "paragraph-eleven-bullets": {
+      "one": "withdraw the application and make a new one at a Premium Service Centre",
+      "two": "or leave the UK and then apply for a replacement BRP visa at a Visa Application Centre while you’re overseas"
+    },
+    "thanks": "Thank you,",
+    "signature": "BRP lost and stolen team"
+  },
+  "you-sent": "Here is the information you have sent us",
+  "address": "Contact address",
+  "phone": "Phone number",
+  "caseworker": {
+    "country": "Current location",
+    "date-lost": "Date realised"
+  },
+  "lost-stolen-uk": {
+    "paragraph-one": "You must apply for a replacement BRP within 3 months. If you don’t you may:"
+  },
 }

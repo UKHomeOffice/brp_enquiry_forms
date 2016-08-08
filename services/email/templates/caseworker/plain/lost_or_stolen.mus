@@ -1,7 +1,5 @@
 {{#data}}
-  Lost/stolen form
-
-  {{#t}}emails.lost-stolen.header{{/t}}
+  BRP Reported as lost or stolen
 
   {{#t}}emails.caseworker.country{{/t}}
   {{#country}}
