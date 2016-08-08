@@ -6,7 +6,7 @@
     "country": "Current location",
     "date-lost": "Date realised"
   },
-  "lost-stolen-abroad": {
+  "lost-stolen": {
     "header": "Thank you for reporting that your biometric residence permit (BRP) has been lost or stolen. We will now cancel your BRP and it can’t be reactivated.",
     "subheading": "If you find your BRP you must return it to the address below as soon as possible:",
     "subheading-address": {
@@ -45,14 +45,14 @@
     "thanks": "Thank you,",
     "signature": "BRP lost and stolen team"
   },
+  "lost-stolen-uk": {
+    "paragraph-one": "You must apply for a replacement BRP within 3 months. If you don’t you may:"
+  },
   "you-sent": "Here is the information you have sent us",
   "address": "Contact address",
   "phone": "Phone number",
   "caseworker": {
     "country": "Current location",
     "date-lost": "Date realised"
-  },
-  "lost-stolen-uk": {
-    "paragraph-one": "You must apply for a replacement BRP within 3 months. If you don’t you may:"
-  },
+  }
 }
