@@ -1,5 +1,5 @@
 {{#data}}
-  BRP Reported as lost or stolen
+  {{#t}}emails.caseworker.heading{{/t}}
 
   {{#t}}emails.caseworker.country{{/t}}
   {{#country}}

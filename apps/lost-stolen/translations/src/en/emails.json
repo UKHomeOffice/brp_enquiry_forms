@@ -4,7 +4,8 @@
   "phone": "Phone number",
   "caseworker": {
     "country": "Current location",
-    "date-lost": "Date realised"
+    "date-lost": "Date realised",
+    "heading": "BRP reported as lost or stolen"
   },
   "lost-stolen": {
     "header": "Thank you for reporting that your biometric residence permit (BRP) has been lost or stolen. We will now cancel your BRP and it can’t be reactivated.",
