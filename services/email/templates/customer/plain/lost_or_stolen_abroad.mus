@@ -1,11 +1,15 @@
 {{#data}}
 {{#t}}emails.lost-stolen.header{{/t}}
 
-{{#t}}emails.lost-stolen.paragraph-one{{/t}}
+{{#t}}emails.lost-stolen.subheading{{/t}}
 
-As you are outside the UK, you may need to apply for a temporary visa to get back to the UK.
+{{#t}}emails.lost-stolen.subheading-address.line-one{{/t}}
+{{#t}}emails.lost-stolen.subheading-address.line-two{{/t}}
+{{#t}}emails.lost-stolen.subheading-address.line-three{{/t}}
+{{#t}}emails.lost-stolen.subheading-address.line-four{{/t}}
+{{#t}}emails.lost-stolen.subheading-address.line-five{{/t}}
 
-We will tell you if you need to apply for a temporary visa when we contact you.
+* {{#t}}emails.lost-stolen.header-two{{/t}} *
 
 {{#t}}emails.lost-stolen.paragraph-two{{/t}}
 
@@ -13,10 +17,30 @@ We will tell you if you need to apply for a temporary visa when we contact you.
 
 {{#t}}emails.lost-stolen.paragraph-four{{/t}}
 
+{{#t}}emails.lost-stolen.paragraph-five{{/t}}
+
+* {{#t}}emails.lost-stolen.header-three{{/t}} *
+
+{{#t}}emails.lost-stolen.paragraph-six{{/t}}
+ * {{#t}}emails.lost-stolen.paragraph-six-bullets.one{{/t}}
+ * {{#t}}emails.lost-stolen.paragraph-six-bullets.two{{/t}}
+
+{{#t}}emails.lost-stolen.paragraph-seven{{/t}}
+
+{{#t}}emails.lost-stolen.paragraph-eight{{/t}}
+ * {{#t}}emails.lost-stolen.paragraph-eight-bullets.one{{/t}}
+ * {{#t}}emails.lost-stolen.paragraph-eight-bullets.two{{/t}}
+
+{{#t}}emails.lost-stolen.paragraph-nine{{/t}}
+
+* {{#t}}emails.lost-stolen.header-four{{/t}} *
+
+{{#t}}emails.lost-stolen.paragraph-ten{{/t}}
+
+{{#t}}emails.lost-stolen.paragraph-eleven{{/t}}
+ * {{#t}}emails.lost-stolen.paragraph-eleven-bullets.one{{/t}}
+ * {{#t}}emails.lost-stolen.paragraph-eleven-bullets.twp{{/t}}
+
 {{#t}}emails.lost-stolen.thanks{{/t}}
-
 {{#t}}emails.lost-stolen.signature{{/t}}
-
-If you're unsure an email is from UKVI:
- * do not reply to it or click any links
 {{/data}}
