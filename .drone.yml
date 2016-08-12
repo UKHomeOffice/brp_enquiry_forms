@@ -20,6 +20,7 @@ pipeline:
       - docker build -t brpapp .
     when:
       event: pull_request
+      include: ['master']
 
   build_acceptance:
     image: docker:1.11
@@ -29,6 +30,7 @@ pipeline:
       - docker build -f Dockerfile-acceptance -t acceptance .
     when:
       event: pull_request
+      include: ['master']
 
   test_acceptance:
     image: docker:1.11
@@ -39,6 +41,7 @@ pipeline:
       - docker run --rm --net host acceptance
     when:
       event: pull_request
+      include: ['master']
 
   image_to_quay:
     image: docker:1.11
