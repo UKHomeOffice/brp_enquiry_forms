@@ -57,7 +57,7 @@
       "not-specified": {
         "para": {
           "one": "We will review the information you have sent us.",
-          "two": "We investigate each case individually and will respond to you as soon as possible. If you provided an email address, this will be within 5 working days. If you need to report multiple BRPs as being lost or stolen, you must report each lost or stolen BRP separately.",
+          "two": "We investigate each case individually and will respond to you as soon as possible. If you provided an email address, this will be within 1 working day. If you need to report multiple BRPs as being lost or stolen, you must report each lost or stolen BRP separately.",
           "three": "We shall let you know if you need a replacement BRP."
         }
       },
