@@ -74,7 +74,7 @@ pipeline:
       - DOCKER_HOST=tcp://127.0.0.1:2375
     commands:
       - docker login -u="ukhomeofficedigital+drone" -p=${DOCKER_PASSWORD} quay.io
-      - docker tag brpapp quay.io/ukhomeofficedigital/brpapp-test:${DRONE_COMMIT_SHA}
+      - docker tag brpapp quay.io/ukhomeofficedigital/brpapp:${DRONE_COMMIT_SHA}
       - docker push quay.io/ukhomeofficedigital/brpapp:${DRONE_COMMIT_SHA}
     when:
       branch: master
