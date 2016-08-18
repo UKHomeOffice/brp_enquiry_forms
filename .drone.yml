@@ -79,12 +79,16 @@ pipeline:
     when:
       branch: master
 
-  # trigger_deploy:
-  #   image: fedora:24
-  #   commands:
-  #     - 'curl -H "Authorization: Bearer ${DRONE_TOKEN}" "https://drone.digital.homeoffice.gov.uk/api/repos/UKHomeOffice/kube-brpapp/builds/1?BRPAPP_IMAGE_TAG=${DRONE_COMMIT_SHA}&NAMESPACE=brp-dev"'
-  #   when:
-  #     branch: master
+  trigger_deploy:
+    image: quay.io/ukhomeofficedigital/drone-trigger:latest
+    drone-server: https://drone.digital.homeoffice.gov.uk
+    repo: UKHomeOffice/kube-brpapp
+    branch: master
+    deploy-to: dev
+    params:
+      - IMAGE_NAME=quay.io/ukhomeofficedigital/brpapp:${DRONE_COMMIT_SHA}
+    when:
+      branch: master
 
 services:
   redis:
