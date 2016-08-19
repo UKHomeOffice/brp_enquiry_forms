@@ -81,7 +81,7 @@ pipeline:
 
   trigger_deploy:
     image: quay.io/ukhomeofficedigital/drone-trigger:latest
-    drone-server: https://drone.digital.homeoffice.gov.uk
+    drone_server: https://drone.digital.homeoffice.gov.uk
     repo: UKHomeOffice/kube-brpapp
     branch: master
     deploy-to: dev
