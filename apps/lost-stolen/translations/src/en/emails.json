@@ -49,7 +49,10 @@
     "signature": "BRP lost and stolen team"
   },
   "lost-stolen-uk": {
-    "paragraph-one": "You must apply for a replacement BRP within 3 months. If you don’t you may:"
+    "paragraph-one": "You must apply for a replacement BRP within 3 months. If you don’t you may:",
+    "eea-header": "EEA Nationals",
+    "eea-paragraph-one": "If you’re exercising EEA treaty rights in the UK, you can choose whether or not to replace your residence card. You will not receive a penalty if you don’t replace it.",
+    "eea-paragraph-two": "If you apply for a replacement EEA treaty rights residence card and later have an urgent need to travel, you can discuss your options with the European Enquiries contact centre on 0300 123 2253."
   },
   "you-sent": "Here is the information you have sent us",
   "address": "Contact address",
