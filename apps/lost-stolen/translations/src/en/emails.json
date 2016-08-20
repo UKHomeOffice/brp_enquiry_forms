@@ -23,6 +23,7 @@
     "paragraph-three": "This office can’t help you with the Replacement BRP Visa application process and won’t respond to enquiries.",
     "paragraph-four": "Don’t reply to this email for support regarding your replacement BRP visa. Instead, you should direct enquiries to your local <a href=\"https://ukvi-international.faq-help.com\">Visa Application Centre</a>.",
     "paragraph-five": "After returning to the UK, you’ll need to apply for a <a href=\"https://www.gov.uk/biometric-residence-permits/replace\">replacement BRP</a>.",
+    "paragraph-five-eea": "If you are exercising EEA Treaty Rights you will need a replacement Family Permit vignette. Please see the details on the <a href=\"https://www.gov.uk/apply-for-a-uk-residence-card/replace\">GOV.UK website</a>",
     "header-three": "When you return to the UK",
     "paragraph-six": "When you return to the UK, you must apply for a replacement BRP within 3 months. If you don’t you may:",
     "paragraph-six-bullets": {
@@ -43,6 +44,7 @@
       "one": "withdraw the application and make a new one at a Premium Service Centre",
       "two": "or leave the UK and then apply for a replacement BRP visa at a Visa Application Centre while you’re overseas"
     },
+    "paragraph-twelve": "If you apply for a replacement EEA treaty rights residence card and later have an urgent need to travel, you can discuss your options with the European Enquiries contact centre on 0300 123 2253.",
     "thanks": "Thank you,",
     "signature": "BRP lost and stolen team"
   },
