@@ -19,6 +19,8 @@
 
 {{#t}}emails.lost-stolen.paragraph-five{{/t}}
 
+{{#t}}emails.lost-stolen.paragraph-five-eaa{{/t}}
+
 * {{#t}}emails.lost-stolen.header-three{{/t}} *
 
 {{#t}}emails.lost-stolen.paragraph-six{{/t}}
@@ -40,6 +42,8 @@
 {{#t}}emails.lost-stolen.paragraph-eleven{{/t}}
  * {{#t}}emails.lost-stolen.paragraph-eleven-bullets.one{{/t}}
  * {{#t}}emails.lost-stolen.paragraph-eleven-bullets.twp{{/t}}
+
+{{#t}}emails.lost-stolen.paragraph-twelve{{/t}}
 
 {{#t}}emails.lost-stolen.thanks{{/t}}
 {{#t}}emails.lost-stolen.signature{{/t}}

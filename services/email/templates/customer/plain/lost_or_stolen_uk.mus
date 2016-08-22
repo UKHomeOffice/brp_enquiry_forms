@@ -23,6 +23,12 @@
 
 {{#t}}emails.lost-stolen.paragraph-nine{{/t}}
 
+* {{#t}}emails.lost-stolen.header-eea-header{{/t}} *
+
+{{#t}}emails.lost-stolen.paragraph-eea-paragraph-one{{/t}}
+
+{{#t}}emails.lost-stolen.paragraph-eea-paragraph-two{{/t}}
+
 * {{#t}}emails.lost-stolen.header-four{{/t}} *
 
 {{#t}}emails.lost-stolen.paragraph-ten{{/t}}

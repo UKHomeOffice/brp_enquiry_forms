@@ -75,6 +75,8 @@
 
                   <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">{{#t}}emails.lost-stolen.paragraph-five{{/t}}</p>
 
+                  <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">{{#t}}emails.lost-stolen.paragraph-five-eaa{{/t}}</p>
+
                   <p style="font-size: 23px; color: #000; line-height: 1.32; margin: 0 0 20px 0;">{{#t}}emails.lost-stolen.header-three{{/t}}</p>
 
                   <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">{{#t}}emails.lost-stolen.paragraph-six{{/t}}</p>
@@ -102,6 +104,8 @@
                     <li style="font-size: 16px; color: #6f777b; line-height: 1.125; margin: 0 0 10px 0;">{{#t}}emails.lost-stolen.paragraph-eleven-bullets.one{{/t}}</li>
                     <li style="font-size: 16px; color: #6f777b; line-heleven: 1.125; margin: 0 0 10px 0;">{{#t}}emails.lost-stolen.paragraph-eight-bullets.two{{/t}}</li>
                   </ul>
+
+                  <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">{{#t}}emails.lost-stolen.paragraph-twelve{{/t}}</p>
 
                   <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">{{#t}}emails.lost-stolen.thanks{{/t}}</p>
 
