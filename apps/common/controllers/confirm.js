@@ -46,7 +46,8 @@ ConfirmController.prototype.saveValues = function saveValues(req, res, callback)
   BaseController.prototype.saveValues.call(this, req, res, function saveModel() {
     var data = _.pick(req.sessionModel.toJSON(), _.identity);
     var model = new Model(data);
-    var service = serviceMap[req.originalUrl] && serviceMap[req.originalUrl](data);
+    var url = req.baseUrl + req.path;
+    var service = serviceMap[url] && serviceMap[url](data);
 
     if (service) {
       model.set('template', service.template);
