@@ -35,7 +35,8 @@ describe('apps/common/controllers/confirm', function () {
         sessionModel: {
           toJSON: sinon.stub().returns(expected)
         },
-        originalUrl: '/not-arrived/confirm'
+        baseUrl: '/not-arrived',
+        path: '/confirm'
       };
       res = {};
       callback = sinon.stub();
@@ -49,14 +50,14 @@ describe('apps/common/controllers/confirm', function () {
     });
 
     it('sets a template for delivery journey', function () {
-      req.originalUrl = '/not-arrived/confirm';
+      req.baseUrl = '/not-arrived';
       controller.saveValues(req, res, callback);
 
       modelProto.set.should.have.been.calledWith('template', 'delivery');
     });
 
     it('sets a template for error journey', function () {
-      req.originalUrl = '/correct-mistakes/confirm';
+      req.baseUrl = '/correct-mistakes';
       controller.saveValues(req, res, callback);
 
       modelProto.set.should.have.been.calledWith('template', 'error');
@@ -69,7 +70,8 @@ describe('apps/common/controllers/confirm', function () {
             triage: true
           })
         },
-        originalUrl: '/correct-mistakes/confirm'
+        baseUrl: '/correct-mistakes',
+        path: '/confirm'
       };
       controller.saveValues(request, res, callback);
 
@@ -77,7 +79,7 @@ describe('apps/common/controllers/confirm', function () {
     });
 
     it('sets a template for lost or stolen inside uk journey', function () {
-      req.originalUrl = '/lost-stolen/confirm';
+      req.baseUrl = '/lost-stolen';
       req.sessionModel.toJSON.returns({'inside-uk': 'yes'});
       controller.saveValues(req, res, callback);
 
@@ -85,7 +87,7 @@ describe('apps/common/controllers/confirm', function () {
     });
 
     it('sets a template for lost or stolen outside uk journey', function () {
-      req.originalUrl = '/lost-stolen/confirm';
+      req.baseUrl = '/lost-stolen';
       req.sessionModel.toJSON.returns({'inside-uk': 'no'});
       controller.saveValues(req, res, callback);
 
@@ -93,7 +95,7 @@ describe('apps/common/controllers/confirm', function () {
     });
 
     it('throws an error if its not part of a recognised journey', function () {
-      req.originalUrl = '/unrecognised-journey';
+      req.baseUrl = '/unrecognised-journey';
 
       (function () {
         controller.saveValues(req, res, callback);
