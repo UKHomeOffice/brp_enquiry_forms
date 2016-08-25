@@ -79,14 +79,13 @@ pipeline:
     when:
       branch: master
 
-  trigger_deploy:
+  trigger_deploy_to_brp_dev:
     image: quay.io/ukhomeofficedigital/drone-trigger:latest
     drone_server: https://drone.digital.homeoffice.gov.uk
     repo: UKHomeOffice/kube-brpapp
     branch: master
-    deploy-to: dev
-    params:
-      - IMAGE_NAME=quay.io/ukhomeofficedigital/brpapp:${DRONE_COMMIT_SHA}
+    deploy_to: brp-dev
+    params: BRPAPP_IMAGE_TAG=${DRONE_COMMIT_SHA}
     when:
       branch: master
 
