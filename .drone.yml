@@ -106,7 +106,6 @@ pipeline:
     deploy_to: brp-preprod
     params: BRPAPP_IMAGE_TAG=${DRONE_COMMIT_SHA},KUBE_NAMESPACE=brp-preprod
     when:
-      branch: master
       event: tag
 
 services:
