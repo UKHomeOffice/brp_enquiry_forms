@@ -85,7 +85,7 @@ pipeline:
     repo: UKHomeOffice/kube-brpapp
     branch: master
     deploy_to: brp-dev
-    params: BRPAPP_IMAGE_TAG=${DRONE_COMMIT_SHA}
+    params: BRPAPP_IMAGE_TAG=${DRONE_COMMIT_SHA},KUBE_NAMESPACE=brp-dev
     when:
       branch: master
 
