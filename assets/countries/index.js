@@ -231,6 +231,7 @@ var countriesNonEU = [
   'Suriname',
   'Svalbard and Jan Mayen Islands',
   'Swaziland',
+  'Switzerland',
   'Syria',
   'Taiwan',
   'Tajikistan',
