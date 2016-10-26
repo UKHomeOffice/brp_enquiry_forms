@@ -11,15 +11,17 @@
 
 * {{#t}}emails.lost-stolen.header-two{{/t}} *
 
-{{#t}}emails.lost-stolen.paragraph-two{{/t}}
+{{#t}}emails.lost-stolen.paragraph-one{{/t}}
 
-{{#t}}emails.lost-stolen.paragraph-three{{/t}}
+{{#t}}emails.lost-stolen.paragraph-two{{/t}}
 
 {{#t}}emails.lost-stolen.paragraph-four{{/t}}
 
-{{#t}}emails.lost-stolen.paragraph-five{{/t}}
+* {{#t}}emails.lost-stolen.eea-header{{/t}} *
 
-{{#t}}emails.lost-stolen.paragraph-five-eaa{{/t}}
+{{#t}}emails.lost-stolen.paragraph-eea{{/t}}
+
+{{#t}}emails.lost-stolen.paragraph-five{{/t}}
 
 * {{#t}}emails.lost-stolen.header-three{{/t}} *
 
@@ -27,13 +29,17 @@
  * {{#t}}emails.lost-stolen.paragraph-six-bullets.one{{/t}}
  * {{#t}}emails.lost-stolen.paragraph-six-bullets.two{{/t}}
 
-{{#t}}emails.lost-stolen.paragraph-seven{{/t}}
-
 {{#t}}emails.lost-stolen.paragraph-eight{{/t}}
  * {{#t}}emails.lost-stolen.paragraph-eight-bullets.one{{/t}}
  * {{#t}}emails.lost-stolen.paragraph-eight-bullets.two{{/t}}
 
 {{#t}}emails.lost-stolen.paragraph-nine{{/t}}
+
+* {{#t}}emails.lost-stolen.eea-deps-header{{/t}} *
+
+{{#t}}emails.lost-stolen.paragraph-eea-deps-one{{/t}}
+
+{{#t}}emails.lost-stolen.paragraph-eea-deps-two{{/t}}
 
 * {{#t}}emails.lost-stolen.header-four{{/t}} *
 
@@ -47,4 +53,5 @@
 
 {{#t}}emails.lost-stolen.thanks{{/t}}
 {{#t}}emails.lost-stolen.signature{{/t}}
+{{#t}}emails.lost-stolen.fake-email{{/t}}
 {{/data}}
