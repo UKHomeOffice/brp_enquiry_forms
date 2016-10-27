@@ -20,7 +20,7 @@ module.exports = {
       'date-lost-month',
       'date-lost-year',
     ],
-    backLink: 'inside-uk',
+    backLink: 'where',
     next: '/personal-details'
   },
   '/personal-details': {
