@@ -9,7 +9,7 @@
   },
   "lost-stolen": {
     "header": "Thank you for reporting that your biometric residence permit (BRP) has been lost or stolen. We will now cancel your BRP and it can’t be reactivated.",
-    "subheading": "If you find your BRP you must return it to the address below as soon as possible:",
+    "subheading": "If you find your BRP, you must return it to the address below as soon as possible after you return to the UK",
     "subheading-address": {
       "line-one": "Freepost RRYX-GLYU-GXHZ",
       "line-two": "Returns Unit",
@@ -18,35 +18,38 @@
       "line-five": "BS20 1AB"
     },
     "header-two": "What to do next",
-    "paragraph-one": "To return to the UK you must apply for a replacement BRP visa. Details are available at on the <a href=\"https://www.gov.uk/replace-brp\">GOV.UK website</a>.",
+    "paragraph-one": "To return to the UK you must apply for a Replacement BRP visa. More information can be found on the <a href=\"https://www.gov.uk/replace-brp\">GOV.UK website</a>.",
     "paragraph-two": "You should not make arrangements to travel back to the UK until you receive your replacement BRP visa.",
     "paragraph-three": "This office can’t help you with the Replacement BRP Visa application process and won’t respond to enquiries.",
-    "paragraph-four": "Don’t reply to this email for support regarding your replacement BRP visa. Instead, you should direct enquiries to your local <a href=\"https://ukvi-international.faq-help.com\">Visa Application Centre</a>.",
-    "paragraph-five": "After returning to the UK, you’ll need to apply for a <a href=\"https://www.gov.uk/biometric-residence-permits/replace\">replacement BRP</a>.",
-    "paragraph-five-eea": "If you are exercising EEA Treaty Rights you will need a replacement Family Permit vignette. Please see the details on the <a href=\"https://www.gov.uk/apply-for-a-uk-residence-card/replace\">GOV.UK website</a>",
+    "paragraph-four": "Don’t reply to this email for help regarding your replacement BRP visa. Instead, you should direct enquiries to your local <a href=\"https://ukvi-international.faq-help.com\">Visa Application Centre</a>.",
+    "eea-header": "Dependents of EEA Nationals",
+    "paragraph-eea": "If you’re using your EEA treaty rights to stay in the UK as a dependent of an EEA National and have lost your residence card outside of the UK, you must ask your local <a href=\"https://ukvi-international.faq-help.com\">Visa Application Centre</a>.",
     "header-three": "When you return to the UK",
-    "paragraph-six": "When you return to the UK, you must apply for a replacement BRP within 3 months. If you don’t you may:",
+    "paragraph-six": "When you return to the UK, you must apply for a replacement <a href=\"https://visas-immigration.service.gov.uk/product/mvp/beta/biometric-residence-permit-replacement-service\">BRP</a>. You can’t apply for a replacement while you are outside of the UK. You must make your application within 3 months of returning to the UK, otherwise you may:",
     "paragraph-six-bullets": {
       "one": "receive a fine of up to £1,000",
       "two": "have your permission to stay in UK taken away"
     },
-    "paragraph-seven": "Guidance and the application form can be found on the <a href=\"https://www.gov.uk/biometric-residence-permits/replace\">GOV.UK website</a>",
-    "paragraph-eight": "We aim to consider applications for a replacement BRP within:",
+    "paragraph-eight": "Applications for a replacement BRPs take the following times to consider:",
     "paragraph-eight-bullets": {
-      "one": "eight weeks of receipt if you hold limited leave to enter or remain",
-      "two": "six months of receipt if you hold indefinite leave to enter or remain"
+      "one": "up to eight weeks of receipt if you hold limited leave to enter or remain",
+      "two": "up to six months of receipt if you hold indefinite leave to enter or remain"
     },
     "paragraph-nine": "If you require a replacement BRP urgently, you can book an appointment to apply in person at a <a href=\"https://www.gov.uk/ukvi-premium-service-centres\">Premium Service Centre</a>.",
-    "header-four": "Leaving the UK",
-    "paragraph-ten": "You need a BRP to enter the UK but not to leave.",
-    "paragraph-eleven": "If you submit a replacement BRP application and then find that you need to travel urgently you must either:",
+    "eea-deps-header": "Dependents of EEA Nationals",
+    "paragraph-eea-deps-one": "If you’re using your EEA treaty rights to stay in the UK as a dependent of an EEA National, you can choose whether or not to replace your residence card. You will not receive a penalty if you don’t replace it.",
+    "paragraph-eea-deps-two": "If you apply for a replacement EEA treaty rights residence card and later have an urgent need to travel, you should phone the European Enquiries contact centre on 0300 123 2253.",
+    "header-four": "Leaving the UK again",
+    "paragraph-ten": "You do not need a BRP to leave the UK, but you will need a BRP or a Replacement BRP visa to return.",
+    "paragraph-eleven": "Once you have returned to the UK, if you submit a replacement BRP application and then need to travel urgently, you must either:",
     "paragraph-eleven-bullets": {
       "one": "withdraw the application and make a new one at a Premium Service Centre",
-      "two": "or leave the UK and then apply for a replacement BRP visa at a Visa Application Centre while you’re overseas"
+      "two": "leave the UK and apply for a Replacement BRP Visa at a <a href=\"https://ukvi-international.faq-help.com\">Visa Application Centre</a> while you are overseas"
     },
     "paragraph-twelve": "If you apply for a replacement EEA treaty rights residence card and later have an urgent need to travel, you can discuss your options with the European Enquiries contact centre on 0300 123 2253.",
     "thanks": "Thank you,",
-    "signature": "BRP lost and stolen team"
+    "signature": "BRP lost and stolen team",
+    "fake-email": "If you receive an email about UK Visas and Immigration and are unsure of its authenticity, do not reply to it or click on any of the links."
   },
   "lost-stolen-uk": {
     "paragraph-one": "You must apply for a replacement BRP within 3 months. If you don’t you may:",
