@@ -117,7 +117,8 @@
   },
   "confirmation": {
     "header": "Thank you, we have received your information.",
-    "email": "We have sent you an email containing the information you provided to",
+    "email": "We have sent an email to",
+    "email_part_two": "to confirm reciept of your enquiry.",
     "next": {
       "header": "What happens next",
       "not-specified": {

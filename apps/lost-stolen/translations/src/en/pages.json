@@ -51,7 +51,8 @@
   },
   "confirmation": {
     "header": "Thank you, we have received your information.",
-    "email": "We have sent you an email containing the information you provided to",
+    "email": "We have sent an email to",
+    "email_part_two": "to confirm reciept of your enquiry.",
     "next": {
       "header": "What happens next",
       "not-specified": {
@@ -68,9 +69,8 @@
       },
       "outside-uk": {
         "para": {
-          "one": "If you provided an email address, we will contact you within one <strong>working day</strong>. If you need to report multiple BRPs as being lost or stolen, you must report each lost or stolen BRP separately.",
-          "two": "You will receive instructions on what you need to do next.",
-          "three": "We will confirm whether you require a temporary BRP visa to return to the UK."
+          "one": "If you need to report multiple BRPs as being lost or stolen, you must report each lost or stolen BRP separately.",
+          "two": "You will receive instructions on what you need to do next."
         }
       }
     }
