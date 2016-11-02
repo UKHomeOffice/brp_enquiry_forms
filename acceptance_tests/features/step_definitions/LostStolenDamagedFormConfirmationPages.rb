@@ -26,12 +26,12 @@ Given(/^that on step one I had selected that I am inside the UK$/) do
 end
 
 Then(/^I am on the inside the UK confirmation page$/) do
-  page.should have_no_content('As you are outside the UK, you may need to apply for a temporary visa to get back to the UK.')
+  page.should have_content('We will tell you if you need to apply for a replacement BRP. If you need to report multiple BRPs as being lost or stolen, you must report each lost or stolen BRP separately.')
   click_link('Close')
 end
 
 Then(/^I am on the outside the UK confirmation page$/) do
-  page.should have_content('We will confirm whether you require a temporary BRP visa to return to the UK.')
+  page.should have_content('If you need to report multiple BRPs as being lost or stolen, you must report each lost or stolen BRP separately.')
 end
 
 Given(/^that on step one I had selected that I am outside the UK$/) do
