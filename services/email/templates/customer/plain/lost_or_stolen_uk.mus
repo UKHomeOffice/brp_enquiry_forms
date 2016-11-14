@@ -15,8 +15,6 @@
  * {{#t}}emails.lost-stolen.paragraph-six-bullets.one{{/t}}
  * {{#t}}emails.lost-stolen.paragraph-six-bullets.two{{/t}}
 
-{{#t}}emails.lost-stolen.paragraph-seven{{/t}}
-
 {{#t}}emails.lost-stolen.paragraph-eight{{/t}}
  * {{#t}}emails.lost-stolen.paragraph-eight-bullets.one{{/t}}
  * {{#t}}emails.lost-stolen.paragraph-eight-bullets.two{{/t}}
@@ -36,6 +34,7 @@
 {{#t}}emails.lost-stolen.paragraph-eleven{{/t}}
  * {{#t}}emails.lost-stolen.paragraph-eleven-bullets.one{{/t}}
  * {{#t}}emails.lost-stolen.paragraph-eleven-bullets.two{{/t}}
+{{#t}}emails.lost-stolen.paragraph-eleven-eea{{/t}}
 
 {{#t}}emails.lost-stolen.thanks{{/t}}
 {{#t}}emails.lost-stolen.signature{{/t}}
