@@ -106,8 +106,10 @@
                   <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">{{#t}}emails.lost-stolen.paragraph-eleven{{/t}}</p>
                   <ul>
                     <li style="font-size: 16px; color: #6f777b; line-height: 1.125; margin: 0 0 10px 0;">{{#t}}emails.lost-stolen.paragraph-eleven-bullets.one{{/t}}</li>
-                    <li style="font-size: 16px; color: #6f777b; line-heleven: 1.125; margin: 0 0 10px 0;">{{#t}}emails.lost-stolen.paragraph-eight-bullets.two{{/t}}</li>
+                    <li style="font-size: 16px; color: #6f777b; line-heleven: 1.125; margin: 0 0 10px 0;">{{#t}}emails.lost-stolen.paragraph-eleven-bullets.two{{/t}}</li>
                   </ul>
+
+                  <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">{{#t}}emails.lost-stolen.paragraph-eleven-eea{{/t}}</p>
 
                   <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">{{#t}}emails.lost-stolen.paragraph-twelve{{/t}}</p>
 

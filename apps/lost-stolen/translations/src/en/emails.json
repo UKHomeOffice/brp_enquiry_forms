@@ -18,7 +18,7 @@
       "line-five": "BS20 1AB"
     },
     "header-two": "What to do next",
-    "paragraph-one": "To return to the UK you must apply for a Replacement BRP visa. More information can be found on the <a href=\"https://www.gov.uk/replace-brp\">GOV.UK website</a>.",
+    "paragraph-one": "To return to the UK you must apply for a Replacement BRP visa. More information can be found on the <a href=\"https://www.gov.uk/biometric-residence-permits/replace\">GOV.UK website</a>.",
     "paragraph-two": "You should not make arrangements to travel back to the UK until you receive your replacement BRP visa.",
     "paragraph-three": "This office can’t help you with the Replacement BRP Visa application process and won’t respond to enquiries.",
     "paragraph-four": "Don’t reply to this email for help regarding your replacement BRP visa. Instead, you should direct enquiries to your local <a href=\"https://ukvi-international.faq-help.com\">Visa Application Centre</a>.",
@@ -28,7 +28,7 @@
     "paragraph-six": "When you return to the UK, you must apply for a replacement <a href=\"https://visas-immigration.service.gov.uk/product/mvp/beta/biometric-residence-permit-replacement-service\">BRP</a>. You can’t apply for a replacement while you are outside of the UK. You must make your application within 3 months of returning to the UK, otherwise you may:",
     "paragraph-six-bullets": {
       "one": "receive a fine of up to £1,000",
-      "two": "have your permission to stay in UK taken away"
+      "two": "have your permission to stay in the UK taken away"
     },
     "paragraph-eight": "Applications for a replacement BRPs take the following times to consider:",
     "paragraph-eight-bullets": {
@@ -43,9 +43,10 @@
     "paragraph-ten": "You do not need a BRP to leave the UK, but you will need a BRP or a Replacement BRP visa to return.",
     "paragraph-eleven": "Once you have returned to the UK, if you submit a replacement BRP application and then need to travel urgently, you must either:",
     "paragraph-eleven-bullets": {
-      "one": "withdraw the application and make a new one at a Premium Service Centre",
+      "one": "withdraw the application and make a new one at a Premium Service Centre, or",
       "two": "leave the UK and apply for a Replacement BRP Visa at a <a href=\"https://ukvi-international.faq-help.com\">Visa Application Centre</a> while you are overseas"
     },
+    "paragraph-eleven-eea": "If you apply for a replacement EEA treaty rights residence card and later have an urgent need to travel, you can discuss your options with the European Enquiries contact centre on 0300 123 2253.",
     "paragraph-twelve": "If you apply for a replacement EEA treaty rights residence card and later have an urgent need to travel, you can discuss your options with the European Enquiries contact centre on 0300 123 2253.",
     "thanks": "Thank you,",
     "signature": "BRP lost and stolen team",
