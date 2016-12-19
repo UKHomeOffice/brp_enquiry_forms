@@ -32,6 +32,11 @@ module.exports = {
       user: process.env.SMTP_USER || '',
       pass: process.env.SMTP_PASSWORD || ''
     },
+    aws: {
+      region: process.env.AWS_REGION || 'eu-west-1',
+      accessKeyId: process.env.AWS_USER || '',
+      secretAccessKey: process.env.AWS_PASSWORD || ''
+    },
     from: process.env.FROM_ADDRESS || 'brp@dsp.notprod.homeoffice.gov.uk',
     ignoreTLS: process.env.EMAIL_IGNORE_TLS === 'true',
     secure: process.env.EMAIL_SECURE === 'true'

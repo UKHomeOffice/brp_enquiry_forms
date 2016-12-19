@@ -86,8 +86,8 @@ var translationLocation = {
   'someone-else': 'someone-else'
 };
 
-var transport = (config.email.auth.user === '' && config.env !== 'docker-compose') ?
-  require('nodemailer-stub-transport') : require('nodemailer-smtp-transport');
+var transportType = (config.email.auth.user === '' && config.env !== 'docker-compose') ?
+  'stub' : 'smtp';
 
 var emailOptions = {
   host: config.email.host,
@@ -103,8 +103,16 @@ if (config.email.secure) {
   emailOptions.secure = config.email.secure;
 }
 
+if (config.email.aws.accessKeyId && config.email.aws.secretAccessKey) {
+  transportType = 'ses';
+
+  emailOptions = config.email.aws;
+}
+
+logger.info('Sending mail via', transportType, 'transport');
+
 function Emailer() {
-  this.transporter = nodemailer.createTransport(transport(emailOptions));
+  this.transporter = nodemailer.createTransport(require('nodemailer-' + transportType + '-transport')(emailOptions));
 }
 
 Emailer.prototype.send = function send(email, callback) {
@@ -147,6 +155,7 @@ Emailer.prototype.send = function send(email, callback) {
         logger.info('Emailing customer: ', email.subject);
         this.transporter.sendMail({
           from: config.email.from,
+          replyTo: config.email.replyTo,
           to: email.to,
           subject: email.subject,
           text: Hogan.compile(customerPlainTextTemplates[email.template]).render(templateData),
