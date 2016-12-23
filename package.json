@@ -40,7 +40,7 @@
     "hogan.js": "^3.0.2",
     "jquery": "^1.9.3",
     "moment": "^2.10.3",
-    "moment-business": "^2.0.0",
+    "moment-business": "^3.0.1",
     "node-sass": "^3.7.0",
     "nodemailer": "^2.7.0",
     "nodemailer-ses-transport": "^1.5.0",
