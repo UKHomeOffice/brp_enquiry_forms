@@ -35,7 +35,7 @@
     "express-partial-templates": "^0.1.0",
     "express-session": "^1.11.3",
     "hof": "^7.0.1",
-    "hof-transpiler": "0.0.6",
+    "hof-transpiler": "0.2.0",
     "hogan-express-strict": "^0.5.4",
     "hogan.js": "^3.0.2",
     "jquery": "^1.9.3",
