@@ -14,11 +14,11 @@ module.exports = {
   },
   'contact-address-house-number': {
     validate: ['required'],
-      label: 'common-fields.address-house-number.label',
-      dependent: {
-        value: 'true',
-        field: 'use-address'
-      }
+    label: 'common-fields.address-house-number.label',
+    dependent: {
+      value: 'true',
+      field: 'use-address'
+    }
   },
   'contact-address-street': {
     validate: ['required'],
