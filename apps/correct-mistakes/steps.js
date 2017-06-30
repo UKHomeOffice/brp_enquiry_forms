@@ -1,10 +1,6 @@
 'use strict';
 
 module.exports = {
-  '/': {
-    controller: require('../common/controllers/start'),
-    next: '/location'
-  },
   '/location': {
     template: 'location-applied',
     fields: [
@@ -13,7 +9,7 @@ module.exports = {
     next: '/about-error'
   },
   '/about-error': {
-    controller: require('./controllers/about-error'),
+    behaviours: [require('./behaviours/about-error')],
     fields: [
       'error-selection',
       'first-name-error-checkbox',
@@ -22,9 +18,6 @@ module.exports = {
       'last-name-error',
       'date-of-birth-error-checkbox',
       'date-of-birth-error',
-      'date-of-birth-error-day',
-      'date-of-birth-error-month',
-      'date-of-birth-error-year',
       'birth-place-error-checkbox',
       'birth-place-error',
       'gender-error-checkbox',
@@ -67,12 +60,10 @@ module.exports = {
     }]
   },
   '/enrolment-letter': {
-    prereqs: ['/'],
     clearSession: true
   },
   '/truncated': {
-    controller: require('./controllers/truncated'),
-    prereqs: ['/'],
+    //controller: require('./controllers/truncated'),
     fields: [
       'truncated',
       'truncation-page'
@@ -108,7 +99,7 @@ module.exports = {
     next: '/personal-details'
   },
   '/personal-details': {
-    controller: require('../common/controllers/personal-details'),
+    //controller: require('../common/controllers/personal-details'),
     template: 'personal-details-brp',
     fields: [
       'fullname',
@@ -136,7 +127,7 @@ module.exports = {
     next: '/confirm'
   },
   '/confirm': {
-    controller: require('../common/controllers/confirm'),
+    //controller: require('../common/controllers/confirm'),
     fields: [
       'org-help',
       'rep-name',
@@ -147,7 +138,7 @@ module.exports = {
     next: '/confirmation'
   },
   '/confirmation': {
-    controller: require('../common/controllers/confirmation'),
+    //controller: require('../common/controllers/confirmation'),
     backLink: false,
     clearSession: true
   }

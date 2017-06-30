@@ -1,5 +1,7 @@
 'use strict';
 
+const date = require('hof-component-date');
+
 module.exports = {
   /* eslint no-inline-comments: 0 */
   'error-selection': {
@@ -28,22 +30,13 @@ module.exports = {
   'date-of-birth-error-checkbox': {
     toggle: 'date-of-birth-error-container'
   },
-  'date-of-birth-error': {
-    validate: ['required', 'date', 'before'],
-    hint: 'fields.date-of-birth-error.hint'
-  },
-  'date-of-birth-error-day': {
-    validate: ['required', 'numeric'],
-    hint: 'fields.date-of-birth-error-day.hint'
-  },
-  'date-of-birth-error-month': {
-    validate: ['required', 'numeric'],
-    hint: 'fields.date-of-birth-error-month.hint'
-  },
-  'date-of-birth-error-year': {
-    validate: ['required', 'numeric'],
-    hint: 'fields.date-of-birth-error-year.hint'
-  },
+  'date-of-birth-error': date('date-of-birth-error', {
+    validate: ['required', 'before'],
+    dependent: {
+      field: 'date-of-birth-error-checkbox',
+      value: 'true'
+    }
+  }),
   'birth-place-error-checkbox': {
     toggle: 'birth-place-error-container'
   },
