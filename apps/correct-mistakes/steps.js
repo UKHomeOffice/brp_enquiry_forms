@@ -63,7 +63,7 @@ module.exports = {
     clearSession: true
   },
   '/truncated': {
-    //controller: require('./controllers/truncated'),
+    behaviours: [require('./behaviours/truncated')],
     fields: [
       'truncated',
       'truncation-page'
