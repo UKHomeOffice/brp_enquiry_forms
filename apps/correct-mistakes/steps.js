@@ -99,14 +99,10 @@ module.exports = {
     next: '/personal-details'
   },
   '/personal-details': {
-    //controller: require('../common/controllers/personal-details'),
     template: 'personal-details-brp',
     fields: [
       'fullname',
       'date-of-birth',
-      'date-of-birth-day',
-      'date-of-birth-month',
-      'date-of-birth-year',
       'nationality',
       'brp-card'
     ],
@@ -127,7 +123,7 @@ module.exports = {
     next: '/confirm'
   },
   '/confirm': {
-    //controller: require('../common/controllers/confirm'),
+    behaviours: ['complete', require('../common/behaviours/email')],
     fields: [
       'org-help',
       'rep-name',
@@ -138,8 +134,7 @@ module.exports = {
     next: '/confirmation'
   },
   '/confirmation': {
-    //controller: require('../common/controllers/confirmation'),
-    backLink: false,
-    clearSession: true
+    behaviours: [require('../common/behaviours/confirmation')],
+    backLink: false
   }
 };

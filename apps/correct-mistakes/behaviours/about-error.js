@@ -3,8 +3,6 @@
 const _ = require('underscore');
 const moment = require('moment');
 
-const prettyDate = 'D MMMM YYYY';
-
 const truncateConfigs = [
   {
     id: 'first-name-error',
@@ -80,12 +78,6 @@ module.exports = superclass => class AboutError extends superclass {
     });
 
     req.sessionModel.unset(diff);
-
-    if (req.form.values['date-of-birth-error']) {
-      req.form.values['date-of-birth-error-formatted'] = moment(req.form.values['date-of-birth-error']).format(prettyDate);
-    } else {
-      req.form.values['date-of-birth-error-formatted'] = null;
-    }
 
     super.saveValues(req, res, callback);
   }

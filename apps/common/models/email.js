@@ -2,7 +2,7 @@
 
 var util = require('util');
 var emailService = require('../../../services/email');
-var Model = require('hof').Model;
+var Model = require('hof-model');
 var _ = require('underscore');
 
 function EmailModel() {
