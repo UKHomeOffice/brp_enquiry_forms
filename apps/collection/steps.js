@@ -1,23 +1,15 @@
 'use strict';
 
 module.exports = {
-  '/': {
-    controller: require('../common/controllers/start'),
-    next: '/where'
-  },
   '/where': {
-    controller: require('./controllers/where'),
     fields: [
       'collection-where-radio',
-      'collection-date',
-      'collection-date-day',
-      'collection-date-month',
-      'collection-date-year',
+      'collection-date'
     ],
     next: '/reasons'
   },
   '/reasons': {
-    controller: require('./controllers/reason'),
+    behaviours: [require('./behaviours/reason')],
     fields: [
       'reason-radio',
       'reason-which-post-office',
@@ -39,14 +31,10 @@ module.exports = {
     }]
   },
   '/nominated-person': {
-    controller: require('./controllers/nominee'),
     template: 'nominated',
     fields: [
       'nominated-fullname',
       'nominated-date',
-      'nominated-date-day',
-      'nominated-date-month',
-      'nominated-date-year',
       'nominated-nationality',
       'nominated-id-number'
     ],
@@ -54,13 +42,10 @@ module.exports = {
     backLink: 'reasons'
   },
   '/personal-details': {
-    controller: require('./controllers/personal-details'),
+    behaviours: [require('./behaviours/personal-details')],
     fields: [
       'fullname',
       'date-of-birth',
-      'date-of-birth-day',
-      'date-of-birth-month',
-      'date-of-birth-year',
       'nationality',
       'passport'
     ],
@@ -81,7 +66,7 @@ module.exports = {
     next: '/confirm'
   },
   '/confirm': {
-    controller: require('./controllers/confirm'),
+    behaviours: ['complete', require('./behaviours/confirm'), require('../common/behaviours/email')],
     fields: [
       'org-help',
       'rep-name',
@@ -92,8 +77,7 @@ module.exports = {
     next: '/confirmation'
   },
   '/confirmation': {
-    controller: require('../common/controllers/confirmation'),
-    backLink: false,
-    clearSession: true
+    behaviours: [require('../common/behaviours/confirmation')],
+    backLink: false
   }
 };
