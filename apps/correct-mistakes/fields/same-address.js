@@ -8,14 +8,13 @@ module.exports = {
       className: 'visuallyhidden',
       value: 'pages.same-address.address.title'
     },
-    options: [{
-      value: 'yes',
-      label: 'fields.same-address-radio.options.yes.label'
-    }, {
-      value: 'no',
-      label: 'fields.same-address-radio.options.no.label',
-      toggle: 'same-address-fieldset'
-    }]
+    options: [
+      'yes',
+      {
+        value: 'no',
+        toggle: 'same-address-fieldset'
+      }
+    ]
   },
   'same-address-house-number': {
     validate: ['required'],

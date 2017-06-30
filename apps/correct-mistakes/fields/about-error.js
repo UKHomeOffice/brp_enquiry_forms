@@ -58,19 +58,9 @@ module.exports = {
       value: 'true'
     },
     legend: {
-      className: 'visuallyhidden',
-      value: 'fields.gender-error.legend'
+      className: 'visuallyhidden'
     },
-    options: [{
-      value: 'female',
-      label: 'fields.gender-error.options.female.label'
-    }, {
-      value: 'male',
-      label: 'fields.gender-error.options.male.label'
-    }, {
-      value: 'unspecified',
-      label: 'fields.gender-error.options.unspecified.label'
-    }]
+    options: ['female', 'male', 'unspecified']
   },
   'sponsor-details-error-checkbox': {
     toggle: 'sponsor-details-error-container'

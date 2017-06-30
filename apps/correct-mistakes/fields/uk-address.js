@@ -8,14 +8,13 @@ module.exports = {
       className: 'visuallyhidden',
       value: 'pages.uk-address.address.title'
     },
-    options: [{
-      value: 'yes',
-      label: 'fields.uk-address-radio.options.yes.label',
-      toggle: 'uk-address-fieldset'
-    }, {
-      value: 'no',
-      label: 'fields.uk-address-radio.options.no.label'
-    }]
+    options: [
+      {
+        value: 'yes',
+        toggle: 'uk-address-fieldset'
+      },
+      'no'
+    ]
   },
   'uk-address-house-number': {
     validate: ['required'],
