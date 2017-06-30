@@ -209,7 +209,7 @@ end
 # => DSP-67_.steps
 #
 When(/^I check the I want to be contacted by post checkbox$/) do
-  check('no-email')
+  check('use-address')
 end
 
 When(/^I enter an email address without an @$/) do

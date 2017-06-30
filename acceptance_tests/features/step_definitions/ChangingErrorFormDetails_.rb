@@ -77,7 +77,7 @@ Given(/^I have provided a contact address and I am on Step Five of the error for
   fill_in('brp-card', :with => '1234567890')
   # page.status_code.should == 302
   click_button('Continue')
-  check('no-email')
+  check('use-address')
   complete_address_fields_with_prefix "contact-"
   click_button('Continue')
   # page.status_code.should == 302

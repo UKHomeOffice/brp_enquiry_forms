@@ -98,7 +98,7 @@
               <td>{{values.nationality}}</td>
               <td><a href="personal-details/edit#nationality" class="button">{{#t}}buttons.change.nationality{{/t}}</a></td>
             </tr>
-            {{#values.no-email}}
+            {{#values.use-address}}
             {{#values.contact-address-street}}
               <tr>
                 <td>{{#t}}pages.check-details.table.headers.contact-address{{/t}}</td>
@@ -111,7 +111,7 @@
                 <td><a href="contact-details/edit#address-group" class="button">{{#t}}buttons.change.address{{/t}}</a></td>
               </tr>
             {{/values.contact-address-street}}
-            {{/values.no-email}}
+            {{/values.use-address}}
             {{#values.passport}}
               <tr>
                 <td>{{#t}}pages.check-details.table.headers.passport{{/t}}</td>

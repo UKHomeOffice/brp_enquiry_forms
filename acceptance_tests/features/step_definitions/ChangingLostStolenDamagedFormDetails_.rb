@@ -28,7 +28,7 @@ Then(/^I can see the changed email address and phone number from step four of th
   delete_cookie('hmbrp.sid')
 end
 
-Given(/^I have provided a contact address and I am on Step Five of the lost stolen damaged form$/) do                                           
+Given(/^I have provided a contact address and I am on Step Five of the lost stolen damaged form$/) do
   visit config['lost_stolen_host']
   choose('UK')
   click_button('Continue')
@@ -43,7 +43,7 @@ Given(/^I have provided a contact address and I am on Step Five of the lost stol
   fill_in('nationality', :with => 'China')
   fill_in('brp-card', :with => '123456789')
   click_button('Continue')
-  check('no-email')
+  check('use-address')
   complete_address_fields_with_prefix "contact-"
   click_button('Continue')
 end
