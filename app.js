@@ -8,15 +8,16 @@ var churchill = require('churchill');
 var session = require('express-session');
 var redis = require('redis');
 var config = require('./config');
+
+var theme = require('hof-theme-govuk');
+
 require('moment-business');
 
 if (config.env !== 'ci') {
   app.use(churchill(logger));
 }
 
-if (config.env === 'development' || config.env === 'ci' || config.env === 'docker-compose') {
-  app.use('/public', express.static(path.resolve(__dirname, './public')));
-}
+app.use('/public', express.static(path.resolve(__dirname, './public')));
 
 app.use(function setLocals(req, res, next) {
   if (config.gaTag) {
@@ -26,12 +27,14 @@ app.use(function setLocals(req, res, next) {
   next();
 });
 
-require('hof').template.setup(app);
+
 app.set('view engine', 'html');
-app.set('views', path.resolve(__dirname, './apps/common/views'));
+app.set('views', [path.resolve(__dirname, './apps/common/views'), theme.views]);
 app.enable('view cache');
 app.use(require('express-partial-templates')(app));
 app.engine('html', require('hogan-express-strict'));
+
+app.use(theme());
 
 app.use(require('body-parser').urlencoded({extended: true}));
 app.use(require('body-parser').json());
