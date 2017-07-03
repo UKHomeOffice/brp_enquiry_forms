@@ -124,7 +124,7 @@ module.exports = {
   '/contact-details': {
     fields: [
       'email',
-      'no-email',
+      'use-address',
       'contact-address-house-number',
       'contact-address-street',
       'contact-address-town',

@@ -74,7 +74,7 @@ Given(/^I have provided a contact address and I am on Step Five of the delivery 
   fill_in('nationality', :with => 'China')
   fill_in('passport', :with => '123456789')
   click_button('Continue')
-  check('no-email')
+  check('use-address')
   fill_in('contact-address-house-number', :with => '2')
   fill_in('contact-address-street', :with => 'Marsham Street')
   fill_in('contact-address-town', :with => 'Westminster')

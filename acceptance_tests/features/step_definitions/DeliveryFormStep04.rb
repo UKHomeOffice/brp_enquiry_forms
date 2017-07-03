@@ -26,7 +26,7 @@ Then(/^I am on Step Four of the delivery form$/) do
   page.should have_content('How should we contact you about your BRP?')
   page.should have_content('Email address')
   find_by_id('email')
-  find_by_id('no-email')
+  find_by_id('use-address')
   page.should have_content('I want to be contacted by post')
   # page.should have_content('Provide your address so that we contact you by post')
   # page.should have_content('House name or number and street')
