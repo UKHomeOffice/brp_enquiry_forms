@@ -17,7 +17,9 @@ module.exports = {
       'no'
     ]
   },
-  'delivery-date': date('delivery-date', {}),
+  'delivery-date': date('delivery-date', {
+    validate: ['before']
+  }),
   'no-letter': {
     className: 'form-checkbox',
     dependent: {

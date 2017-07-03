@@ -11,9 +11,8 @@
   },
   "date-of-birth": {
     "required": "Enter your date of birth",
-    "numeric": "Date must only contain numbers",
-    "future": "The date is in the future",
-    "format": "Enter a valid date"
+    "before": "The date is in the future",
+    "date": "Enter a valid date"
   },
   "nationality": {
     "required": "What is your nationality?",
@@ -39,8 +38,7 @@
   },
   "delivery-date": {
     "required": "Enter the date of the letter from the Home Office",
-    "numeric": "Date must only contain numbers",
-    "future": "The date is in the future",
-    "format": "Enter the date in the correct format "
+    "before": "The date is in the future",
+    "date": "Enter the date in the correct format"
   }
 }

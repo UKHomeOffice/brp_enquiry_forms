@@ -11,7 +11,7 @@ Feature: Validation for Step 03 of the Lost Stolen Damaged Form
 		Then I see the "What is your nationality?" link in the "/html/body/main/div/div/div/ul/li[3]/a" xpath
 		Then I see the "Enter your full name" link in the "/html/body/main/div/div/form/div[1]/label/span[1]" xpath
 		Then I see the "Enter your date of birth" link in the "/html/body/main/div/div/form/fieldset/span" xpath
-		Then I see the "What is your nationality?" link in the "/html/body/main/div/div/form/div[2]/label/span[1]" xpath
+		Then I see the "What is your nationality?" link in the "/html/body/main/div/div/form/div[2]/label/span[3]" xpath
 
 	Scenario: Attempting to proceed to Step 04 of the Lost Stolen Damaged Form without entering something in the name field
 		When I enter a valid date of birth
@@ -37,11 +37,11 @@ Feature: Validation for Step 03 of the Lost Stolen Damaged Form
 	Scenario: Attempting to proceed to Step 04 of the Lost Stolen Damaged Form with text values in the Date of birth fields
 		When I enter text values into the Date of birth field
 		And I click "Continue"
-		Then I see the "Date must only contain numbers" link
-		And I see "Date must only contain numbers"
+		Then I see the "Enter a valid date" link
+		And I see "Enter a valid date"
 
 	Scenario: Attempting to proceed to Step 04 of the Lost Stolen Damaged Form with special character values in the Date of birth fields
 		When I enter special character values into the Date of birth field
 		And I click "Continue"
-		Then I see the "Date must only contain numbers" link
-		And I see "Date must only contain numbers"
+		Then I see the "Enter a valid date" link
+		And I see "Enter a valid date"

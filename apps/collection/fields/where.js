@@ -21,6 +21,6 @@ module.exports = {
     }]
   },
   'collection-date': date('collection-date', {
-    validate: ['required', 'before']
+    validate: ['before']
   })
 };
