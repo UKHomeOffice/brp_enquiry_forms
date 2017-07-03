@@ -40,6 +40,6 @@ module.exports = superclass => class Reason extends superclass {
       where: getPlace(req),
       reason: getReason(req)
     });
-  };
+  }
 
-}
+};

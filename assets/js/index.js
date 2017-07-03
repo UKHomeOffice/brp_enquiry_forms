@@ -18,9 +18,9 @@ $('.typeahead').each(function applyTypeahead() {
   var typeaheadList = $el.find('option').map(function mapOptions() {
     if (this.value === '') {
       // remove any empty values from typeahead
-      /*eslint consistent-return: 0*/
+      /* eslint consistent-return: 0*/
       return;
-      /*eslint consistent-return: 1*/
+      /* eslint consistent-return: 1*/
     }
     return this.value;
   }).get();

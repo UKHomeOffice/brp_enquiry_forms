@@ -1,7 +1,6 @@
 'use strict';
 
 const _ = require('underscore');
-const moment = require('moment');
 
 const truncateConfigs = [
   {
@@ -91,4 +90,4 @@ module.exports = superclass => class AboutError extends superclass {
     super.validate(req, res, next);
   }
 
-}
+};

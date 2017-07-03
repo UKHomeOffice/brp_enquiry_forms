@@ -41,11 +41,6 @@ const serviceMap = {
 
 module.exports = superclass => class Emailer extends superclass {
 
-  getValues(req, res, callback) {
-    console.log(req.sessionModel.toJSON());
-    super.getValues(req, res, callback);
-  }
-
   saveValues(req, res, callback) {
 
     super.saveValues(req, res, function saveModel() {
@@ -62,6 +57,6 @@ module.exports = superclass => class Emailer extends superclass {
       model.save(callback);
     });
 
-  };
+  }
 
-}
+};

@@ -9,7 +9,7 @@ module.exports = {
   'someone-else-date': date('someone-else-date', {
     validate: [
       'required',
-      { type: 'before', arguments: [ 18, 'years' ] }
+      { type: 'before', arguments: [18, 'years'] }
     ]
   }),
   'someone-else-nationality': {

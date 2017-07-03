@@ -13,4 +13,4 @@ module.exports = superclass => class PersonalDetails extends superclass {
     next();
   }
 
-}
+};

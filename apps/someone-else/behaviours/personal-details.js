@@ -2,10 +2,6 @@
 
 const moment = require('moment');
 
-function isOver18(value) {
-  return moment(value).isBefore(moment().subtract({years: 18}));
-}
-
 module.exports = superclass => class PersonalDetails extends superclass {
 
   validate(req, res, next) {
@@ -23,6 +19,6 @@ module.exports = superclass => class PersonalDetails extends superclass {
     }
 
     super.validate(req, res, next);
-  };
+  }
 
-}
+};

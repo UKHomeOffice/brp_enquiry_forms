@@ -14,6 +14,6 @@ module.exports = class Email extends Model {
       subject: this.get('subject'),
       dataToSend: _.omit(this.toJSON(), ['steps', 'csrf-secret', 'template'])
     }, callback);
-  };
+  }
 
-}
+};

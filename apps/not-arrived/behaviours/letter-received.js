@@ -34,7 +34,7 @@ module.exports = superclass => class LetterRecieved extends superclass {
       req.form.options.next = '/same-address';
     }
     super.saveValues(req, res, next);
-  };
+  }
 
   validate(req, res, next) {
     if (req.form.values.received === 'yes') {
@@ -48,4 +48,4 @@ module.exports = superclass => class LetterRecieved extends superclass {
     super.validate(req, res, next);
   }
 
-}
+};

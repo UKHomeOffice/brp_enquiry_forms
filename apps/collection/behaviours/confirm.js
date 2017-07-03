@@ -30,6 +30,6 @@ module.exports = superclass => class Confirm extends superclass {
     return Object.assign({}, locals, {
       reason
     });
-  };
+  }
 
-}
+};

@@ -75,4 +75,4 @@ module.exports = superclass => class Truncated extends superclass {
     super.saveValues(req, res, next);
   }
 
-}
+};
