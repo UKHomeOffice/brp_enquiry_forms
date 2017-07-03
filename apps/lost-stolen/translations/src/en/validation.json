@@ -8,9 +8,8 @@
   },
   "date-of-birth": {
     "required": "Enter your date of birth",
-    "numeric": "Date must only contain numbers",
-    "future": "The date is in the future",
-    "format": "Enter a valid date"
+    "before": "The date is in the future",
+    "date": "Enter a valid date"
   },
   "nationality": {
     "required": "What is your nationality?",
@@ -25,9 +24,8 @@
   },
   "date-lost": {
     "required": "When did you lose or have your BRP stolen?",
-    "numeric": "Date must only contain numbers",
-    "future": "The date is in the future",
-    "format": "Enter the date in the correct format"
+    "before": "The date is in the future",
+    "date": "Enter a valid date"
   },
   "org-help": {
     "required": "Did someone help you complete this form?"

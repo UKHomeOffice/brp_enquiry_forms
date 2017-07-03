@@ -10,8 +10,8 @@ const options = {
     require('./apps/correct-mistakes/'),
     require('./apps/collection/'),
     //require('./apps/someone-else/'),
-    //require('./apps/not-arrived/'),
-    //require('./apps/lost-stolen/')
+    require('./apps/not-arrived/'),
+    require('./apps/lost-stolen/')
   ],
   start: false
 };

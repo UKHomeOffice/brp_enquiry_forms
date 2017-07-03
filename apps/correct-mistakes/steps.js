@@ -134,7 +134,6 @@ module.exports = {
     next: '/confirmation'
   },
   '/confirmation': {
-    behaviours: [require('../common/behaviours/confirmation')],
     backLink: false
   }
 };

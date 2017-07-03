@@ -1,20 +1,11 @@
 'use strict';
 
+const date = require('hof-component-date');
+
 module.exports = {
-  'date-lost': {
+  'date-lost': date('date-lost', {
+    validate: ['required', 'before'],
     legend: 'fields.date-lost.legend',
     hint: 'fields.date-lost.hint'
-  },
-  'date-lost-day': {
-    validate: ['required', 'numeric'],
-    label: 'fields.date-lost-day.label'
-  },
-  'date-lost-month': {
-    validate: ['required', 'numeric'],
-    label: 'fields.date-lost-month.label'
-  },
-  'date-lost-year': {
-    validate: ['required', 'numeric'],
-    label: 'fields.date-lost-year.label'
-  }
+  })
 };
