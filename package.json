@@ -67,7 +67,6 @@
   },
   "pre-commit": [
     "lint",
-    "style",
     "test"
   ]
 }
