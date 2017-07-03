@@ -9,7 +9,7 @@ const options = {
   routes: [
     require('./apps/correct-mistakes/'),
     require('./apps/collection/'),
-    //require('./apps/someone-else/'),
+    require('./apps/someone-else/'),
     require('./apps/not-arrived/'),
     require('./apps/lost-stolen/')
   ],

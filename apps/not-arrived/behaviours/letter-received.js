@@ -45,7 +45,7 @@ module.exports = superclass => class LetterRecieved extends superclass {
         });
       }
     }
-    next();
+    super.validate(req, res, next);
   }
 
 }

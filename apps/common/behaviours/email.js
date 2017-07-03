@@ -30,6 +30,12 @@ const serviceMap = {
       template: 'collection',
       subject: 'Form submitted: Report a collection problem'
     };
+  },
+  '/someone-else': function someoneElse() {
+    return {
+      template: 'someone-else',
+      subject: 'Form submitted: Report someone else collecting your BRP'
+    };
   }
 };
 
