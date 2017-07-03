@@ -11,7 +11,7 @@
     "numeric": "Date must only contain numbers",
     "future": "The date is in the future",
     "format": "Enter a valid date",
-    "under-18": "If you are over 18 years old you can collect your own BRP"
+    "after": "If you are over 18 years old you can collect your own BRP"
   },
   "nominated-date": {
     "required": "What is the nominated person's date of birth?",
