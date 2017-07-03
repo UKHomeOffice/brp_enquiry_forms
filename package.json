@@ -49,7 +49,7 @@
     "eslint-plugin-filenames": "^0.1.1",
     "eslint-plugin-mocha": "^0.2.2",
     "eslint-plugin-one-variable-per-var": "0.0.3",
-    "funkie": "0.0.5",
+    "funkie": "0.0.6",
     "funkie-phantom": "0.0.1",
     "jscs": "^1.13.1",
     "mocha": "^2.2.5",
