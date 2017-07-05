@@ -9,7 +9,7 @@
     "dev": "NODE_ENV=development hof-build watch",
     "test": "npm run test:lint",
     "test:lint": "eslint .",
-    "test:unit": "NODE_ENV=test mocha ./test/unit/apps/correct-mistakes",
+    "test:unit": "NODE_ENV=test mocha ./test/unit/apps/not-arrived",
     "test:acceptance": "npm run test:acceptance:new && npm run test:acceptance:old",
     "test:acceptance:new": "funkie so-acceptance --steps",
     "test:acceptance:old": "cd acceptance_tests/; bundle install && cucumber",

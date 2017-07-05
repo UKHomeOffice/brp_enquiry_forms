@@ -27,7 +27,7 @@ module.exports = superclass => class LetterRecieved extends superclass {
 
   saveValues(req, res, next) {
     const deliveryDate = req.form.values['delivery-date'];
-    if (isWithin(deliveryDate, 10)) {
+    if (deliveryDate && isWithin(deliveryDate, 10)) {
       req.sessionModel.set('week-day-range', weekDayRange(deliveryDate, 10));
       req.form.options.next = '/on-the-way';
     } else {
