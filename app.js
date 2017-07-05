@@ -18,9 +18,7 @@ const options = {
 
 const app = hof(options);
 
-/*app.get('/lost-stolen-damaged', function lostStolen(req, res) {
-  res.redirect('/lost-stolen');
-});*/
+app.use(require('./redirects.js')());
 
 app.start();
 
