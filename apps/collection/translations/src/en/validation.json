@@ -14,22 +14,19 @@
   },
   "date-of-birth": {
     "required": "Enter your date of birth",
-    "numeric": "Date must only contain numbers",
-    "future": "The date is in the future",
-    "format": "Enter a valid date",
-    "under-18": "If you are over 18 years old you can collect your own BRP"
+    "before": "The date is in the future",
+    "date": "Enter a valid date",
+    "after": "If you are over 18 years old you can collect your own BRP"
   },
   "collection-date": {
     "required": "Enter the collection date",
-    "numeric": "Date must only contain numbers",
-    "future": "The date is in the future",
-    "format": "Enter the collection date in the correct format"
+    "before": "The date is in the future",
+    "date": "Enter the collection date in the correct format"
   },
   "nominated-date": {
     "required": "What is the nominated person's date of birth?",
-    "numeric": "Date must only contain numbers",
-    "future": "The date is in the future",
-    "format": "Enter the nominated person's date of birth in the correct format"
+    "before": "The date is in the future",
+    "date": "Enter the nominated person's date of birth in the correct format"
   },
   "nominated-fullname": {
     "required": "What is the nominated person's full name?"

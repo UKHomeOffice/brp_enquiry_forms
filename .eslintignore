@@ -6,3 +6,5 @@ dist/js/bundle.js
 acceptance_tests
 doc/**/*
 apps/**/translations/**/default.json
+apps/**/acceptance
+test

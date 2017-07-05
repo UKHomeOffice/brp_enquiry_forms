@@ -1,5 +1,7 @@
 'use strict';
 
+const date = require('hof-component-date');
+
 module.exports = {
   'collection-where-radio': {
     validate: ['required'],
@@ -18,20 +20,7 @@ module.exports = {
       toggle: 'collection-date-group'
     }]
   },
-  'collection-date': {
-    legend: 'fields.collection-date.legend',
-    hint: 'fields.dalivery-date.hint'
-  },
-  'collection-date-day': {
-    validate: ['numeric'],
-    label: 'fields.collection-date-day.label'
-  },
-  'collection-date-month': {
-    validate: ['numeric'],
-    label: 'fields.collection-date-month.label'
-  },
-  'collection-date-year': {
-    validate: ['numeric'],
-    label: 'fields.collection-date-year.label'
-  }
+  'collection-date': date('collection-date', {
+    validate: ['before']
+  })
 };

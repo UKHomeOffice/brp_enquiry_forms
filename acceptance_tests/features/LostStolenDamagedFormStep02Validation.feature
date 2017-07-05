@@ -12,14 +12,14 @@ Feature: Validation for Step 02 of the Lost Stolen Damaged Form
 	Scenario: Attempting to proceed to Step 03 of the Lost Stolen Damaged Form with text values in the date lost fields
 		When I enter text values into the date lost field
 		And I click "Continue"
-		Then I see the "Date must only contain numbers" link
-		And I see "Date must only contain numbers"
+		Then I see the "Enter a valid date" link
+		And I see "Enter a valid date"
 
 	Scenario: Attempting to proceed to Step 03 of the Lost Stolen Damaged Form with special character values in the date lost fields
 		When I enter special character values into the date lost field
 		And I click "Continue"
-		Then I see the "Date must only contain numbers" link
-		And I see "Date must only contain numbers"
+		Then I see the "Enter a valid date" link
+		And I see "Enter a valid date"
 
 	Scenario: Attempting to proceed to Step 03 of the Lost Stolen Damaged Form with Yes and the correct values in the date lost fields
 		When I enter a future date into the date lost field

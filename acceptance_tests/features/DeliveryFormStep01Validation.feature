@@ -19,15 +19,15 @@ Feature: Validation for Step 01 of the Delivery Form
 		When I check the "Yes" radio button
 		When I enter text values into the date field
 		And I click "Continue"
-		Then I see the "Date must only contain numbers" link
-		And I see "Date must only contain numbers"
+		Then I see the "Enter the date in the correct format" link
+		And I see "Enter the date in the correct format"
 
 	Scenario: Selecting Continue with special character values in the date fields
 		When I check the "Yes" radio button
 		When I enter special character values into the date field
 		And I click "Continue"
-		Then I see the "Date must only contain numbers" link
-		And I see "Date must only contain numbers"
+		Then I see the "Enter the date in the correct format" link
+		And I see "Enter the date in the correct format"
 
 	Scenario: Entering a future date into the date fields
 		When I check the "Yes" radio button

@@ -1,18 +1,11 @@
 'use strict';
 
 module.exports = {
-  '/': {
-    controller: require('../common/controllers/start'),
-    next: '/letter-received'
-  },
   '/letter-received': {
-    controller: require('./controllers/letter-received'),
+    behaviours: [require('./behaviours/letter-received')],
     fields: [
       'received',
       'delivery-date',
-      'delivery-date-day',
-      'delivery-date-month',
-      'delivery-date-year',
       'no-letter'
     ],
     next: '/same-address',
@@ -33,9 +26,7 @@ module.exports = {
   '/letter-lost': {},
   '/letter-not-received': {},
   '/on-the-way': {
-    controller: require('./controllers/on-the-way'),
-    prereqs: ['/'],
-    clearSession: true
+    prereqs: ['/letter-received']
   },
   '/same-address': {
     template: 'same-address-details.html',
@@ -53,13 +44,9 @@ module.exports = {
     next: '/personal-details'
   },
   '/personal-details': {
-    controller: require('../common/controllers/personal-details'),
     fields: [
       'fullname',
       'date-of-birth',
-      'date-of-birth-day',
-      'date-of-birth-month',
-      'date-of-birth-year',
       'nationality',
       'passport'
     ],
@@ -81,7 +68,7 @@ module.exports = {
     next: '/confirm'
   },
   '/confirm': {
-    controller: require('../common/controllers/confirm'),
+    behaviours: ['complete', require('../common/behaviours/email')],
     fields: [
       'org-help',
       'rep-name',
@@ -92,8 +79,6 @@ module.exports = {
     next: '/confirmation'
   },
   '/confirmation': {
-    controller: require('../common/controllers/confirmation'),
-    backLink: false,
-    clearSession: true
+    backLink: false
   }
 };

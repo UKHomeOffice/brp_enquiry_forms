@@ -17,3 +17,11 @@ lost_stolen_host: 'http://localhost:8080/lost-stolen'
 collection_host: 'http://localhost:8080/collection'
 
 someone_host: 'http://localhost:8080/someone-else'
+
+## Some handy debugging flags
+
+# stop immediately on the first failing test
+bail: false
+
+# open a screenshot of the failure point
+screenshot_on_fail: false

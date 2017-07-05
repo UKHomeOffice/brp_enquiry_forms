@@ -1,9 +1,11 @@
 'use strict';
 
+const date = require('hof-component-date');
+
 module.exports = {
   /* eslint no-inline-comments: 0 */
   'error-selection': {
-    /*this is here so we can display an error message if no error is selected */
+    /* this is here so we can display an error message if no error is selected */
   },
   'first-name-error-checkbox': {
     toggle: 'first-name-error-container'
@@ -28,22 +30,13 @@ module.exports = {
   'date-of-birth-error-checkbox': {
     toggle: 'date-of-birth-error-container'
   },
-  'date-of-birth-error': {
-    validate: ['required', 'date', 'before'],
-    hint: 'fields.date-of-birth-error.hint'
-  },
-  'date-of-birth-error-day': {
-    validate: ['required', 'numeric'],
-    hint: 'fields.date-of-birth-error-day.hint'
-  },
-  'date-of-birth-error-month': {
-    validate: ['required', 'numeric'],
-    hint: 'fields.date-of-birth-error-month.hint'
-  },
-  'date-of-birth-error-year': {
-    validate: ['required', 'numeric'],
-    hint: 'fields.date-of-birth-error-year.hint'
-  },
+  'date-of-birth-error': date('date-of-birth-error', {
+    validate: ['required', 'before'],
+    dependent: {
+      field: 'date-of-birth-error-checkbox',
+      value: 'true'
+    }
+  }),
   'birth-place-error-checkbox': {
     toggle: 'birth-place-error-container'
   },
@@ -65,19 +58,9 @@ module.exports = {
       value: 'true'
     },
     legend: {
-      className: 'visuallyhidden',
-      value: 'fields.gender-error.legend'
+      className: 'visuallyhidden'
     },
-    options: [{
-      value: 'female',
-      label: 'fields.gender-error.options.female.label'
-    }, {
-      value: 'male',
-      label: 'fields.gender-error.options.male.label'
-    }, {
-      value: 'unspecified',
-      label: 'fields.gender-error.options.unspecified.label'
-    }]
+    options: ['female', 'male', 'unspecified']
   },
   'sponsor-details-error-checkbox': {
     toggle: 'sponsor-details-error-container'

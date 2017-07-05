@@ -3,7 +3,6 @@
 module.exports = {
   'incapable-details': {
     validate: ['required'],
-    label: 'fields.incapable-details.label',
     dependent: {
       value: 'incapable',
       field: 'someone-else-reason-radio',
@@ -15,13 +14,12 @@ module.exports = {
       className: 'visuallyhidden',
       value: ''
     },
-    options: [{
-      value: 'incapable',
-      label: 'fields.someone-else-reason-radio.options.incapable.label',
-      toggle: 'incapable-details',
-    }, {
-      value: 'under-age',
-      label: 'fields.someone-else-reason-radio.options.under-age.label'
-    }]
+    options: [
+      {
+        value: 'incapable',
+        toggle: 'incapable-details',
+      },
+      'under-age'
+    ]
   }
 };

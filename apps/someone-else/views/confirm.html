@@ -59,7 +59,7 @@
           {{#values.someone-else-date}}
           <tr>
             <td>{{#t}}pages.check-details.table.headers.date-of-birth{{/t}}</td>
-            <td>{{values.someone-else-date-formatted}}</td>
+            <td>{{#date}}{{values.someone-else-date}}{{/date}}</td>
             <td><a href="/someone-else/arrange/edit#someone-else-date-day" class="button">{{#t}}buttons.change.someone-else-date-of-birth{{/t}}</a></td>
           </tr>
           {{/values.someone-else-date}}
@@ -100,7 +100,7 @@
           {{#values.date-of-birth}}
           <tr>
             <td>{{#t}}pages.check-details.table.headers.date-of-birth{{/t}}</td>
-            <td>{{values.date-of-birth-formatted}}</td>
+            <td>{{#date}}{{values.date-of-birth}}{{/date}}</td>
             <td><a href="personal-details{{#values.no-reason}}-no-reason{{/values.no-reason}}/edit#date-of-birth-day" class="button">{{#t}}buttons.change.date-of-birth{{/t}}</a></td>
           </tr>
           {{/values.date-of-birth}}

@@ -8,14 +8,13 @@ module.exports = {
       className: 'visuallyhidden',
       value: 'pages.check-details.org-help.title'
     },
-    options: [{
-      value: 'yes',
-      label: 'fields.org-help.options.yes.label',
-      toggle: 'org-details-group'
-    }, {
-      value: 'no',
-      label: 'fields.org-help.options.no.label'
-    }]
+    options: [
+      {
+        value: 'yes',
+        toggle: 'org-details-group'
+      },
+      'no'
+    ]
   },
   'rep-name': {
     validate: ['required'],
@@ -41,18 +40,11 @@ module.exports = {
       className: 'visuallyhidden',
       value: 'pages.check-details.org-details-group.type'
     },
-    options: [{
-      value: 'pbs',
-      label: 'fields.org-type.options.pbs.label'
-    }, {
-      value: 'legal',
-      label: 'fields.org-type.options.legal.label'
-    }, {
-      value: 'relative',
-      label: 'fields.org-type.options.relative.label'
-    }, {
-      value: 'support',
-      label: 'fields.org-type.options.support.label'
-    }]
+    options: [
+      'pbs',
+      'legal',
+      'relative',
+      'support'
+    ]
   }
 };

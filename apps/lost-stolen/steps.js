@@ -1,10 +1,6 @@
 'use strict';
 
 module.exports = {
-  '/': {
-    controller: require('../common/controllers/start'),
-    next: '/where'
-  },
   '/where': {
     fields: [
       'inside-uk',
@@ -13,7 +9,6 @@ module.exports = {
     next: '/date-lost'
   },
   '/date-lost': {
-    controller: require('./controllers/date-lost'),
     fields: [
       'date-lost',
       'date-lost-day',
@@ -24,13 +19,9 @@ module.exports = {
     next: '/personal-details'
   },
   '/personal-details': {
-    controller: require('../common/controllers/personal-details'),
     fields: [
       'fullname',
       'date-of-birth',
-      'date-of-birth-day',
-      'date-of-birth-month',
-      'date-of-birth-year',
       'nationality',
       'brp-card'
     ],
@@ -38,7 +29,6 @@ module.exports = {
     next: '/contact-details'
   },
   '/contact-details': {
-    controller: require('./controllers/contact-details'),
     fields: [
       'email',
       'use-address',
@@ -53,7 +43,7 @@ module.exports = {
     next: '/confirm'
   },
   '/confirm': {
-    controller: require('../common/controllers/confirm'),
+    behaviours: ['complete', require('../common/behaviours/email')],
     fields: [
       'org-help',
       'rep-name',
@@ -64,8 +54,6 @@ module.exports = {
     next: '/confirmation'
   },
   '/confirmation': {
-    controller: require('../common/controllers/confirmation'),
-    backLink: false,
-    clearSession: true
+    backLink: false
   }
 };

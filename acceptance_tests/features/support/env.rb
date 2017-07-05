@@ -52,6 +52,22 @@ def config
   YAML.load_file(config_file)
 end
 
+Before do |scenario|
+  expire_cookies
+end
+
+After do |scenario|
+  if scenario.failed?
+    if config["bail"] === true
+      Cucumber.wants_to_quit = true
+    end
+    if config["screenshot_on_fail"] === true
+      Capybara.current_session.current_window.resize_to(800, 1200)
+      save_and_open_screenshot
+    end
+  end
+end
+
 def rest
   sleep config['sleep_time']
 end
