@@ -7,11 +7,12 @@
   "scripts": {
     "start": "node .",
     "dev": "NODE_ENV=development hof-build watch",
-    "test": "NODE_ENV=test mocha",
+    "test": "npm run test:lint && npm run test:unit",
+    "test:lint": "eslint .",
+    "test:unit": "NODE_ENV=test mocha ./test/unit/apps/common",
     "test:acceptance": "funkie so-acceptance --steps",
     "test:acceptance:old": "cd acceptance_tests/; bundle install && cucumber",
-    "test:ci": "npm run lint && npm run style && npm run test",
-    "lint": "eslint .",
+    "quality": "plato -r -x 'node_modules|reports|test' -d reports/plato .",
     "build": "hof-build",
     "postinstall": "bash -c 'if [[ ${NODE_ENV} != production ]]; then npm run build; fi;'"
   },
@@ -52,10 +53,11 @@
     "eslint-config-homeoffice": "^2.1.2",
     "funkie": "0.0.6",
     "funkie-phantom": "0.0.1",
-    "jscs": "^1.13.1",
+    "hof-util-reqres": "^1.0.1",
     "mocha": "^2.2.5",
     "mocha-junit-reporter": "^1.4.0",
     "mocha-multi": "^0.7.1",
+    "mocha-sandbox": "^1.0.0",
     "parallelshell": "^1.1.1",
     "plato": "^1.5.0",
     "pre-commit": "^1.0.10",
@@ -66,7 +68,6 @@
     "so-acceptance": "^4.3.1"
   },
   "pre-commit": [
-    "lint",
     "test"
   ]
 }
