@@ -11,7 +11,7 @@ describe('apps/common/behaviours/location', () => {
     let req;
     let res;
 
-    beforeEach(function (done) {
+    beforeEach(done => {
       req = reqres.req();
       res = reqres.res();
 

@@ -46,6 +46,7 @@
     "eslint-config-homeoffice": "^2.1.2",
     "funkie": "0.0.6",
     "funkie-phantom": "0.0.1",
+    "hof-form-controller": "^5.1.0",
     "hof-util-reqres": "^1.0.1",
     "mocha": "^2.2.5",
     "mocha-junit-reporter": "^1.4.0",

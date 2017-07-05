@@ -3,7 +3,7 @@
 const Behaviour = require('../../../../../apps/correct-mistakes/behaviours/about-error');
 const Controller = require('hof-form-controller');
 
-describe('apps/correct-mistakes/behaviours/about-error', function () {
+describe('apps/correct-mistakes/behaviours/about-error', () => {
 
   let controller;
   let req;
@@ -18,7 +18,7 @@ describe('apps/correct-mistakes/behaviours/about-error', function () {
     controller._configure(req, res, done);
   });
 
-  describe('.saveValues()', function () {
+  describe('.saveValues()', () => {
 
     beforeEach(() => {
       sinon.stub(Controller.prototype, 'saveValues').yieldsAsync();
@@ -53,7 +53,7 @@ describe('apps/correct-mistakes/behaviours/about-error', function () {
 
   });
 
-  describe('.getNextStep()', function () {
+  describe('.getNextStep()', () => {
 
     beforeEach(() => {
       req.baseUrl = '/foo';
@@ -63,29 +63,29 @@ describe('apps/correct-mistakes/behaviours/about-error', function () {
       req.sessionModel.unset.restore();
     });
 
-    it('unsets the triage flag', function () {
+    it('unsets the triage flag', () => {
       controller.getNextStep(req, res, () => {});
       req.sessionModel.unset.should.have.been.calledWith('triage');
     });
 
-    describe('when collection location is UK and conditions and length was checked', function () {
-      beforeEach(function () {
+    describe('when collection location is UK and conditions and length was checked', () => {
+      beforeEach(() => {
         req.form.values['conditions-error-checkbox'] = 'true';
         req.sessionModel.set('location-applied', 'yes');
       });
 
-      it('sets a triage flag "/conditions-and-length"', function () {
+      it('sets a triage flag "/conditions-and-length"', () => {
         controller.getNextStep(req, res, () => {});
         req.sessionModel.get('triage').should.equal(true);
       });
     });
 
-    describe('when entered first name is more than 30 characters', function () {
-      beforeEach(function () {
+    describe('when entered first name is more than 30 characters', () => {
+      beforeEach(() => {
         req.form.values['first-name-error-checkbox'] = 'true';
         req.form.values['first-name-error'] = 'foobarbazfoobarbazfoobarbazfoobarbaz';
       });
-      it('returns baseUrl and "/truncated"', function () {
+      it('returns baseUrl and "/truncated"', () => {
         controller.getNextStep(req, res, () => {}).should.equal('/foo/truncated');
         req.sessionModel.get('truncated-items').should.eql([{id: 'first-name-error'}]);
       });
@@ -96,18 +96,18 @@ describe('apps/correct-mistakes/behaviours/about-error', function () {
         req.form.values['last-name-error-checkbox'] = 'true';
         req.form.values['last-name-error'] = 'foobarbazfoobarbazfoobarbazfoobarbaz';
       });
-      it('returns baseUrl and "/truncated"', function () {
+      it('returns baseUrl and "/truncated"', () => {
         controller.getNextStep(req, res, () => {}).should.equal('/foo/truncated');
         req.sessionModel.get('truncated-items').should.eql([{id: 'last-name-error'}]);
       });
     });
 
-    describe('when birth place is more than 16 characters', function () {
-      beforeEach(function () {
+    describe('when birth place is more than 16 characters', () => {
+      beforeEach(() => {
         req.form.values['birth-place-error-checkbox'] = 'true';
         req.form.values['birth-place-error'] = 'foobarbazfoobarba';
       });
-      it('returns baseUrl and "/truncated"', function () {
+      it('returns baseUrl and "/truncated"', () => {
         controller.getNextStep(req, res, () => {}).should.equal('/foo/truncated');
         req.sessionModel.get('truncated-items').should.eql([{id: 'birth-place-error'}]);
       });
@@ -115,7 +115,7 @@ describe('apps/correct-mistakes/behaviours/about-error', function () {
 
   });
 
-  describe('.validate', function () {
+  describe('.validate', () => {
 
     it('returns an error-selection required error if none are checked', done => {
       req.form.values['first-name-error-checkbox'] = '';

@@ -63,7 +63,7 @@ describe('apps/correct-mistakes/behaviours/truncated', () => {
       });
     });
 
-    it('redirects to the next page if "no" is selected for any truncated-items', () => {
+    it('redirects to the next page if "no" is selected for any truncated-items', done => {
       req.form.values = {
         'truncation-page': 'item-one',
          truncated: 'yes'
@@ -80,7 +80,7 @@ describe('apps/correct-mistakes/behaviours/truncated', () => {
       });
     });
 
-    it('redirects to the truncate page if any item has not been selected', () => {
+    it('redirects to the truncate page if any item has not been selected', done => {
       req.form.values = {
         'truncation-page': 'item-one',
          truncated: 'yes'
@@ -104,6 +104,7 @@ describe('apps/correct-mistakes/behaviours/truncated', () => {
 
       controller.locals(req, res).should.have.property('truncatedItem');
     });
+
     it('includes a pretty version of the truncatedItem id', () => {
       req.form.values['item-one'] = 'foofoofoofoofoofoofoofoofoomaxfoo';
       var locals = controller.locals(req, res);
@@ -111,18 +112,21 @@ describe('apps/correct-mistakes/behaviours/truncated', () => {
       locals.truncatedItem.id.should.equal('item-one');
       locals.truncatedItem.pretty.should.equal('item one');
     });
+
     it('includes the original length of the truncatedItem value', () => {
       req.form.values['item-one'] = 'foofoofoofoofoofoofoofoofoomaxfoo';
       var locals = controller.locals(req, res);
 
       locals.truncatedItem.length.should.equal(33);
     });
+
     it('includes the original value of the truncatedItem', () => {
       req.form.values['item-one'] = 'foofoofoofoofoofoofoofoofoomaxfoo';
       var locals = controller.locals(req, res);
 
       locals.truncatedItem.value.should.equal('foofoofoofoofoofoofoofoofoomaxfoo');
     });
+
     it('includes the truncated value of the truncatedItem', () => {
       req.form.values['item-one'] = 'foofoofoofoofoofoofoofoofoomaxfoo';
       var locals = controller.locals(req, res);

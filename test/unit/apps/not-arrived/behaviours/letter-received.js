@@ -5,7 +5,7 @@ const moment = require('moment');
 const Behaviour = require('../../../../../apps/not-arrived/behaviours/letter-received');
 const Controller = require('hof-form-controller');
 
-describe('apps/not-arrived/behaviours/letter-received', function () {
+describe('apps/not-arrived/behaviours/letter-received', () => {
 
   let controller;
   let req;

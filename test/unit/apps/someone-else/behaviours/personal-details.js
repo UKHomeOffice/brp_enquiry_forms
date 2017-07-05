@@ -1,11 +1,9 @@
 'use strict';
 
-const moment = require('moment');
-
 const Behaviour = require('../../../../../apps/someone-else/behaviours/personal-details');
 const Controller = require('hof-form-controller');
 
-describe('apps/someone-else/behaviours/personal-details', function () {
+describe('apps/someone-else/behaviours/personal-details', () => {
 
   let controller;
   let req;
@@ -36,19 +34,25 @@ describe('apps/someone-else/behaviours/personal-details', function () {
       Controller.prototype.configure.restore();
     });
 
-    it('adds an `after` validator to the date of birth field if the reason for contacting is `under-age`', done => {
+    it('adds an `after` validator to the date of birth field if the reason is `under-age`', done => {
       req.sessionModel.set('someone-else-reason-radio', 'under-age');
       controller.configure(req, res, sandbox(() => {
         req.form.options.fields['date-of-birth'].should.have.property('validate');
-        req.form.options.fields['date-of-birth'].validate.should.contain({ type: 'after', arguments: [18, 'years'] });
+        req.form.options.fields['date-of-birth'].validate.should.contain({
+          type: 'after',
+          arguments: [18, 'years']
+        });
       }, done));
     });
 
-    it('does not add an `after` validator to the date of birth field if the reason for contacting is not `under-age`', done => {
+    it('does not add an `after` validator to the date of birth field if the reason is not `under-age`', done => {
       req.sessionModel.set('someone-else-reason-radio', 'incapable');
       controller.configure(req, res, sandbox(() => {
         req.form.options.fields['date-of-birth'].should.have.property('validate');
-        req.form.options.fields['date-of-birth'].validate.should.not.contain({ type: 'after', arguments: [18, 'years'] });
+        req.form.options.fields['date-of-birth'].validate.should.not.contain({
+          type: 'after',
+          arguments: [18, 'years']
+        });
       }, done));
     });
 
@@ -57,7 +61,10 @@ describe('apps/someone-else/behaviours/personal-details', function () {
       req.sessionModel.set('someone-else-reason-radio', 'under-age');
       controller.configure(req, res, sandbox(() => {
         req.form.options.fields['date-of-birth'].should.have.property('validate');
-        req.form.options.fields['date-of-birth'].validate.should.contain({ type: 'after', arguments: [18, 'years'] });
+        req.form.options.fields['date-of-birth'].validate.should.contain({
+          type: 'after',
+          arguments: [18, 'years']
+        });
       }, done));
     });
 

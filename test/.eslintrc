@@ -4,3 +4,10 @@ extends:
 
 env:
   es6: true
+
+rules:
+  no-underscore-dangle: 0
+
+globals:
+  reqres: false
+  sandbox: false
