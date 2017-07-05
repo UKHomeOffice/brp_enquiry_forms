@@ -7,7 +7,7 @@
   "scripts": {
     "start": "node .",
     "dev": "NODE_ENV=development hof-build watch",
-    "test": "npm run test:lint",
+    "test": "npm run test:lint && npm run test:unit",
     "test:lint": "eslint .",
     "test:unit": "NODE_ENV=test mocha ./test",
     "test:acceptance": "npm run test:acceptance:new && npm run test:acceptance:old",
