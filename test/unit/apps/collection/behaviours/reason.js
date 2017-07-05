@@ -1,48 +1,23 @@
 'use strict';
 
-var proxyquire = require('proxyquire');
-var Controller = sinon.stub();
-Controller.prototype.locals = sinon.stub().returns({foo: 'bar'});
-Controller.prototype.getNextStep = sinon.stub();
-var CollectionReasonController = proxyquire('../../../../../apps/collection/controllers/reason', {
-  'hof': {
-    controllers: {
-      base: Controller
-    }
-  }
-});
+const Behaviour = require('../../../../../apps/collection/behaviours/reason');
+const Controller = require('hof-form-controller');
 
-describe('apps/collection/controllers/collection-reason', function () {
-
-  describe('instantiated', function () {
-
-
-    it('calls Controller with the arguments', function () {
-      var args = {template: 'index'};
-      /*eslint no-new: 0*/
-      new CollectionReasonController(args);
-
-      Controller.should.have.been.calledWith(args);
-    });
-  });
+describe('apps/collection/behaviours/reason', function () {
 
   describe('.locals()', function () {
 
-    var controller;
-    var args = {template: 'index'};
-    var req = {
-      form: {
-        values: {}
-      }
-    };
-    var res = {};
+    let controller;
+    let req;
+    let res;
 
-    beforeEach(function () {
-      controller = new CollectionReasonController(args);
-    });
+    beforeEach(function (done) {
+      req = reqres.req();
+      res = reqres.res();
 
-    it('extends form the parent controller', function () {
-      controller.locals(req, res).should.have.property('foo').and.equal('bar');
+      const ReasonController = Behaviour(Controller);
+      controller = new ReasonController({ template: 'index', route: '/index' });
+      controller._configure(req, res, done);
     });
 
     it('returns a value indicating where the permit should have been collected from"', function () {

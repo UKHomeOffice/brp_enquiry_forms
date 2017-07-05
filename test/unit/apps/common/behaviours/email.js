@@ -1,105 +1,104 @@
 'use strict';
 
-var proxyquire = require('proxyquire');
-
-var modelProto = {
-  save: sinon.stub(),
-  set: sinon.stub()
-};
-var Model = sinon.stub();
-Model.prototype = modelProto;
-var BaseController = sinon.stub();
-BaseController.prototype.saveValues = sinon.stub().callsArg(2);
-
-var ConfirmController = proxyquire('../../../../../apps/common/controllers/confirm', {
-  'hof': {
-    controllers: {
-      base: BaseController
-    }
-  },
-  '../models/email': Model
-});
+const Behaviour = require('../../../../../apps/common/behaviours/email');
+const Model = require('../../../../../apps/common/models/email');
+const Controller = require('hof-form-controller');
 
 describe('apps/common/controllers/confirm', function () {
 
   describe('.saveValues()', function () {
 
-    var controller;
-    var req;
-    var res;
-    var expected = {foo: 'bar'};
-    var callback;
+    let controller;
+    let req;
+    let res;
 
-    beforeEach(function () {
-      req = {
-        sessionModel: {
-          toJSON: sinon.stub().returns(expected)
-        },
-        baseUrl: '/not-arrived',
-        path: '/confirm'
-      };
-      res = {};
-      callback = sinon.stub();
-      controller = new ConfirmController({template: 'index'});
-      controller.saveValues(req, res, callback);
+    beforeEach(done => {
+      req = reqres.req({
+        session: {
+          foo: 'bar'
+        }
+      });
+      res = reqres.res();
+
+      sinon.stub(Model.prototype, 'set');
+      sinon.stub(Model.prototype, 'save').yieldsAsync();
+
+      const EmailController = Behaviour(Controller);
+      controller = new EmailController({ template: 'index', route: '/index' });
+      controller._configure(req, res, done);
     });
 
-    it('saves the session data to the a model', function () {
-      Model.should.have.been.calledWith(expected);
-      Model.prototype.save.should.have.been.called;
+    afterEach(() => {
+      Model.prototype.set.restore();
+      Model.prototype.save.restore();
     });
 
-    it('sets a template for delivery journey', function () {
+    it('saves the session data to the a model', done => {
+      req.baseUrl = '/collection';
+      controller.saveValues(req, res, sandbox(err => {
+        expect(err).not.to.be.ok;
+        Model.prototype.set.should.have.been.calledWith({ foo: 'bar' });
+        Model.prototype.save.should.have.been.called;
+      }, done));
+    });
+
+    it('sets a template for delivery journey', done => {
       req.baseUrl = '/not-arrived';
-      controller.saveValues(req, res, callback);
-
-      modelProto.set.should.have.been.calledWith('template', 'delivery');
+      controller.saveValues(req, res, sandbox(err => {
+        expect(err).not.to.be.ok;
+        Model.prototype.set.should.have.been.calledWith('template', 'delivery');
+      }, done));
     });
 
-    it('sets a template for error journey', function () {
+    it('sets a template for error journey', done => {
       req.baseUrl = '/correct-mistakes';
-      controller.saveValues(req, res, callback);
-
-      modelProto.set.should.have.been.calledWith('template', 'error');
+      controller.saveValues(req, res, sandbox(err => {
+        expect(err).not.to.be.ok;
+        Model.prototype.set.should.have.been.calledWith('template', 'error');
+      }, done));
     });
 
-    it('sets a template for error-triage journey', function () {
-      var request = {
-        sessionModel: {
-          toJSON: sinon.stub().returns({
-            triage: true
-          })
-        },
-        baseUrl: '/correct-mistakes',
-        path: '/confirm'
-      };
-      controller.saveValues(request, res, callback);
-
-      modelProto.set.should.have.been.calledWith('template', 'error-triage');
+    it('sets a template for error-triage journey', done => {
+      req.baseUrl = '/correct-mistakes';
+      req.sessionModel.set('triage', true);
+      controller.saveValues(req, res, sandbox(err => {
+        expect(err).not.to.be.ok;
+        Model.prototype.set.should.have.been.calledWith('template', 'error-triage');
+      }, done));
     });
 
-    it('sets a template for lost or stolen inside uk journey', function () {
+    it('sets a template for lost or stolen inside uk journey', done => {
       req.baseUrl = '/lost-stolen';
-      req.sessionModel.toJSON.returns({'inside-uk': 'yes'});
-      controller.saveValues(req, res, callback);
-
-      modelProto.set.should.have.been.calledWith('template', 'lost-or-stolen-uk');
+      req.sessionModel.set('inside-uk', 'yes');
+      controller.saveValues(req, res, sandbox(err => {
+        expect(err).not.to.be.ok;
+        Model.prototype.set.should.have.been.calledWith('template', 'lost-or-stolen-uk');
+      }, done));
     });
 
-    it('sets a template for lost or stolen outside uk journey', function () {
+    it('sets a template for lost or stolen outside uk journey', done => {
       req.baseUrl = '/lost-stolen';
-      req.sessionModel.toJSON.returns({'inside-uk': 'no'});
-      controller.saveValues(req, res, callback);
-
-      modelProto.set.should.have.been.calledWith('template', 'lost-or-stolen-abroad');
+      req.sessionModel.set('inside-uk', 'no');
+      controller.saveValues(req, res, sandbox(err => {
+        expect(err).not.to.be.ok;
+        Model.prototype.set.should.have.been.calledWith('template', 'lost-or-stolen-abroad');
+      }, done));
     });
 
-    it('throws an error if its not part of a recognised journey', function () {
+    it('sets a template for nominate someone else journey', done => {
+      req.baseUrl = '/someone-else';
+      controller.saveValues(req, res, sandbox(err => {
+        expect(err).not.to.be.ok;
+        Model.prototype.set.should.have.been.calledWith('template', 'someone-else');
+      }, done));
+    });
+
+    it('throws an error if its not part of a recognised journey', done => {
       req.baseUrl = '/unrecognised-journey';
-
-      (function () {
-        controller.saveValues(req, res, callback);
-      }).should.throw('no service found');
+      controller.saveValues(req, res, sandbox(err => {
+        err.should.be.an('error');
+        err.message.should.equal('no service found');
+      }, done));
     });
 
   });

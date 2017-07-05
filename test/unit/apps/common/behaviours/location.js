@@ -1,110 +1,57 @@
 'use strict';
 
-var BaseController = require('hof').controllers.base;
-var ConfirmationController = require('../../../../../apps/common/controllers/confirmation');
+const Controller = require('hof-form-controller');
+const Behaviour = require('../../../../../apps/common/behaviours/location');
 
-describe('apps/common/controllers/confirmation', function () {
+describe('apps/common/behaviours/location', () => {
 
-  beforeEach(function () {
-    BaseController.prototype.getNextStep = sinon.stub();
-  });
+  describe('locals', () => {
 
-  describe('.getValues()', function () {
-    var controller;
-    var json = {foo: 'bar'};
-    var req = {
-      sessionModel: {
-      reset: sinon.stub(),
-      toJSON: sinon.stub().returns(json)
-    }};
-    var res = {};
-    var callback = sinon.stub();
+    let controller;
+    let req;
+    let res;
 
-    beforeEach(function () {
-      controller = new ConfirmationController({template: 'foo'});
-      controller.getValues(req, res, callback);
+    beforeEach(function (done) {
+      req = reqres.req();
+      res = reqres.res();
+
+      const LocationController = Behaviour(Controller);
+      controller = new LocationController({ template: 'index', route: '/index' });
+      controller._configure(req, res, done);
     });
 
-    it('resets the session', function () {
-      req.sessionModel.reset.should.have.been.calledOnce;
-    });
+    describe('when the user is outside the uk', () => {
 
-    it('responds with null errors and json', function () {
-      callback.should.have.been.calledWith(null, json);
-    });
-  });
+      beforeEach(() => {
+        req.form.values['inside-uk'] = 'no';
+      });
 
-  describe('when the user is outside the uk', function () {
-
-    var req = {
-      form: {
-        values: {
-          'inside-uk': 'no'
-        }
-      }
-    };
-    var res = {};
-    var controller;
-
-    beforeEach(function () {
-      controller = new ConfirmationController({template: 'foo'});
-    });
-
-    it('locals.location is ouside-uk', function () {
-      var preparedLocals = controller.locals(req, res);
-
-      preparedLocals.should.have.property('location')
-        .and.deep.equal({'outside-uk': true});
+      it('locals.location is ouside-uk', () => {
+        controller.locals(req, res).should.have.property('location')
+          .and.deep.equal({'outside-uk': true});
+      });
 
     });
 
-  });
+    describe('when the user is inside the uk', () => {
 
-  describe('when the user is inside the uk', function () {
+      beforeEach(() => {
+        req.form.values['inside-uk'] = 'yes';
+      });
 
-    var req = {
-      form: {
-        values: {
-          'inside-uk': 'yes'
-        }
-      }
-    };
-    var res = {};
-    var controller;
-
-    beforeEach(function () {
-      controller = new ConfirmationController({template: 'foo'});
-    });
-
-    it('locals.location is inside-uk', function () {
-      var preparedLocals = controller.locals(req, res);
-
-      preparedLocals.should.have.property('location')
-        .and.deep.equal({'inside-uk': true});
+      it('locals.location is inside-uk', () => {
+        controller.locals(req, res).should.have.property('location')
+          .and.deep.equal({'inside-uk': true});
+      });
 
     });
 
-  });
+    describe('when the user is neither inside the uk or outside the uk', () => {
 
-  describe('when the user is neither inside the uk or outside the uk', function () {
-
-    var req = {
-      form: {
-        values: {}
-      }
-    };
-    var res = {};
-    var controller;
-
-    beforeEach(function () {
-      controller = new ConfirmationController({template: 'foo'});
-    });
-
-    it('locals.location is not-specified', function () {
-      var preparedLocals = controller.locals(req, res);
-
-      preparedLocals.should.have.property('location')
-        .and.deep.equal({'not-specified': true});
+      it('locals.location is not-specified', () => {
+        controller.locals(req, res).should.have.property('location')
+          .and.deep.equal({'not-specified': true});
+      });
 
     });
 
