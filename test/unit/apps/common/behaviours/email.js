@@ -4,9 +4,9 @@ const Behaviour = require('../../../../../apps/common/behaviours/email');
 const Model = require('../../../../../apps/common/models/email');
 const Controller = require('hof-form-controller');
 
-describe('apps/common/controllers/confirm', function () {
+describe('apps/common/controllers/confirm', () => {
 
-  describe('.saveValues()', function () {
+  describe('.saveValues()', () => {
 
     let controller;
     let req;

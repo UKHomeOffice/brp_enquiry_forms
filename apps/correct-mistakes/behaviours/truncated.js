@@ -50,8 +50,6 @@ module.exports = superclass => class Truncated extends superclass {
 
   locals(req, res) {
     return Object.assign({}, super.locals(req, res), {
-      baseUrl: req.baseUrl,
-      nextPage: this.getNextStep(req, res),
       truncatedItem: truncatedItem(req)
     });
   }

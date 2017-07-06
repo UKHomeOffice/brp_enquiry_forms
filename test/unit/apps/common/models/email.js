@@ -3,13 +3,13 @@
 const EmailService = require('../../../../../services/email');
 const EmailModel = require('../../../../../apps/common/models/email');
 
-describe('apps/common/models/email', function () {
+describe('apps/common/models/email', () => {
 
-  describe('.save()', function () {
+  describe('.save()', () => {
 
     let model;
 
-    beforeEach(function () {
+    beforeEach(() => {
       sinon.stub(EmailService, 'send').yieldsAsync();
       model = new EmailModel({
         template: 'test_template',

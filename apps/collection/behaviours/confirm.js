@@ -1,7 +1,5 @@
 'use strict';
 
-var _ = require('underscore');
-
 function getReason(req) {
   var reasons = [
     'which-post-office',
@@ -15,7 +13,7 @@ function getReason(req) {
   ];
   var reason = {};
 
-  if (_.includes(reasons, req.form.values['reason-radio'])) {
+  if (reasons.includes(req.form.values['reason-radio'])) {
     reason[req.form.values['reason-radio']] = true;
     return reason;
   }
