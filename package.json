@@ -54,7 +54,7 @@
     "mocha-multi": "^0.7.1",
     "mocha-sandbox": "^1.0.0",
     "parallelshell": "^1.1.1",
-    "plato": "^1.5.0",
+    "plato": "^1.6.0",
     "pre-commit": "^1.0.10",
     "proxyquire": "^1.5.0",
     "sinomocha": "^0.2.4",
