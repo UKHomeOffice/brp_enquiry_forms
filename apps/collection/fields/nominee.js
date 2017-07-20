@@ -1,5 +1,7 @@
 'use strict';
 
+const date = require('hof-component-date');
+
 module.exports = {
   'nominated-fullname': {
     validate: ['required']
@@ -13,16 +15,8 @@ module.exports = {
   'nominated-id-number': {
     validate: ['required']
   },
-  'nominated-date': {
+  'nominated-date': date('nominated-date', {
+    validate: ['required', 'before'],
     hint: 'fields.dalivery-date.hint'
-  },
-  'nominated-date-day': {
-    validate: ['required', 'numeric'],
-  },
-  'nominated-date-month': {
-    validate: ['required', 'numeric']
-  },
-  'nominated-date-year': {
-    validate: ['required', 'numeric']
-  }
+  })
 };

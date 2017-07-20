@@ -129,7 +129,7 @@
     "email": {
       "label": "Email address"
     },
-    "no-email": {
+    "use-address": {
       "label": "I want to be contacted by post"
     },
     "phone": {

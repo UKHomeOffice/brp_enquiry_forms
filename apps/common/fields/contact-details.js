@@ -6,26 +6,26 @@ module.exports = {
     type: 'email',
     dependent: {
       value: '',
-      field: 'no-email'
+      field: 'use-address'
     }
   },
-  'no-email': {
+  'use-address': {
     toggle: 'address-group'
   },
   'contact-address-house-number': {
     validate: ['required'],
-      label: 'common-fields.address-house-number.label',
-      dependent: {
-        value: 'true',
-        field: 'no-email'
-      }
+    label: 'common-fields.address-house-number.label',
+    dependent: {
+      value: 'true',
+      field: 'use-address'
+    }
   },
   'contact-address-street': {
     validate: ['required'],
     label: 'common-fields.address-street.label',
     dependent: {
       value: 'true',
-      field: 'no-email'
+      field: 'use-address'
     }
   },
   'contact-address-town': {
@@ -33,7 +33,7 @@ module.exports = {
     label: 'common-fields.address-town.label',
     dependent: {
       value: 'true',
-      field: 'no-email'
+      field: 'use-address'
     }
   },
   'contact-address-county': {
@@ -44,7 +44,7 @@ module.exports = {
     label: 'common-fields.address-postcode.label',
     dependent: {
       value: 'true',
-      field: 'no-email'
+      field: 'use-address'
     }
   }
 };

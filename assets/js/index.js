@@ -1,12 +1,6 @@
 'use strict';
 
-var toolkit = require('hof').toolkit;
-var helpers = toolkit.helpers;
-var progressiveReveal = toolkit.progressiveReveal;
-var formFocus = toolkit.formFocus;
-
-helpers.documentReady(progressiveReveal);
-helpers.documentReady(formFocus);
+require('hof-theme-govuk');
 
 var $ = require('jquery');
 var typeahead = require('typeahead-aria');
@@ -24,9 +18,9 @@ $('.typeahead').each(function applyTypeahead() {
   var typeaheadList = $el.find('option').map(function mapOptions() {
     if (this.value === '') {
       // remove any empty values from typeahead
-      /*eslint consistent-return: 0*/
+      /* eslint consistent-return: 0*/
       return;
-      /*eslint consistent-return: 1*/
+      /* eslint consistent-return: 1*/
     }
     return this.value;
   }).get();

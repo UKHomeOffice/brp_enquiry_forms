@@ -8,9 +8,9 @@ var i18n = hof.i18n({
 var config = require('../config');
 var logger = require('../lib/logger');
 
-/*eslint no-unused-vars: 0*/
+/* eslint no-unused-vars: 0*/
 module.exports = function errorHandler(err, req, res, next) {
-  /*eslint no-unused-vars: 1*/
+  /* eslint no-unused-vars: 1*/
   var content = {};
 
   if (err.code === 'SESSION_TIMEOUT') {

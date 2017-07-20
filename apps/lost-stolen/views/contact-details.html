@@ -33,8 +33,8 @@
 
         {{#input-text}}email{{/input-text}}
 
-        {{#insideUk}}
-          {{#checkbox}}no-email{{/checkbox}}
+        {{#location.inside-uk}}
+          {{#checkbox}}use-address{{/checkbox}}
 
           <fieldset id="address-group" class="panel-indent js-hidden">
             <legend class="visuallyhidden">
@@ -65,7 +65,7 @@
             </div>
 
           </fieldset>
-        {{/insideUk}}
+        {{/location.inside-uk}}
 
         {{#input-phone}}phone{{/input-phone}}
 

@@ -1,22 +1,16 @@
 'use strict';
 
+const date = require('hof-component-date');
+
 module.exports = {
   fullname: {
     validate: ['required']
   },
-  'date-of-birth': {
+  'date-of-birth': date('date-of-birth', {
+    validate: ['required', 'before'],
     legend: 'fields.date-of-birth.legend',
     hint: 'fields.date-of-birth.hint'
-  },
-  'date-of-birth-day': {
-    validate: ['required', 'numeric']
-  },
-  'date-of-birth-month': {
-    validate: ['required', 'numeric']
-  },
-  'date-of-birth-year': {
-    validate: ['required', 'numeric']
-  },
+  }),
   nationality: {
     validate: ['required'],
     className: ['typeahead', 'js-hidden'],

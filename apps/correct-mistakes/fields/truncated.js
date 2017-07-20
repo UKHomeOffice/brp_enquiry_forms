@@ -9,11 +9,9 @@ module.exports = {
       className: 'visuallyhidden'
     },
     options: [{
-      value: 'yes',
-      label: 'fields.truncated.options.yes.label'
+      value: 'yes'
     }, {
       value: 'no',
-      label: 'fields.truncated.options.no.label',
       toggle: 'truncated-reason-no'
     }]
   },

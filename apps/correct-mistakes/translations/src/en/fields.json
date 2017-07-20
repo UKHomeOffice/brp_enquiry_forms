@@ -1,4 +1,7 @@
 {
+  "location-applied": {
+    "legend": "Where did you make your application?"
+  },
   "date-of-birth": {
     "legend": "Date of birth",
     "hint": "For example, 31  3  1970"
@@ -49,7 +52,7 @@
   "email": {
     "label": "Email address"
   },
-  "no-email": {
+  "use-address": {
     "label": "I want to be contacted by post"
   },
   "phone": {

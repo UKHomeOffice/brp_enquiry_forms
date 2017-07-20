@@ -1,13 +1,13 @@
+extends:
+- "../.eslintrc"
+- "homeoffice/config/testing"
+
 env:
-  mocha: true
-globals:
-  chai: true
-  expect: true
-  sinon: true
-  should: true
+  es6: true
+
 rules:
-  func-names: 0
-  max-nested-callbacks: 0
-  no-unused-expressions: 0
-  no-process-env: 0
-  no-console: 0
+  no-underscore-dangle: 0
+
+globals:
+  reqres: false
+  sandbox: false

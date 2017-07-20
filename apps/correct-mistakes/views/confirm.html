@@ -65,15 +65,15 @@
           </tr>
         {{/values.birth-place-error}}
 
-        {{#values.date-of-birth-error-day}}
+        {{#values.date-of-birth-error}}
           <tr>
             <td>{{#t}}fields.date-of-birth-error-checkbox.label{{/t}}</td>
             <td>
-              {{values.date-of-birth-error-formatted}}
+              {{#date}}{{values.date-of-birth-error}}{{/date}}
             </td>
             <td><a href="about-error/edit#date-of-birth-error-group" class="button">{{#t}}buttons.change.date-of-birth-error{{/t}}</a></td>
           </tr>
-        {{/values.date-of-birth-error-day}}
+        {{/values.date-of-birth-error}}
 
         {{#values.gender-error}}
           <tr>
@@ -205,7 +205,7 @@
         {{#values.date-of-birth}}
         <tr>
           <td>{{#t}}pages.check-details-error.personal-details-table.headers.date-of-birth{{/t}}</td>
-          <td>{{values.date-of-birth-formatted}}</td>
+          <td>{{#date}}{{values.date-of-birth}}{{/date}}</td>
           <td><a href="personal-details/edit#date-of-birth-day" class="button">{{#t}}buttons.change.date-of-birth{{/t}}</a></td>
         </tr>
         {{/values.date-of-birth}}

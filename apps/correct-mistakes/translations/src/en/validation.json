@@ -38,9 +38,8 @@
   },
   "date-of-birth": {
     "required": "Enter your date of birth",
-    "numeric": "Date must only contain numbers",
-    "future": "The date is in the future",
-    "format": "Enter a valid date"
+    "before": "The date is in the future",
+    "date": "Enter a valid date"
   },
   "change-person-date": {
     "required": "What is the nominated person's date of birth?",

@@ -12,3 +12,4 @@ doc
 Gemfile.lock
 apps/**/translations/en
 dump.rdb
+coverage
