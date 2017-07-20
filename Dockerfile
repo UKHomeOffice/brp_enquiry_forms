@@ -5,6 +5,9 @@ RUN mkdir /public
 COPY package.json /app/package.json
 RUN npm --loglevel warn install --production --no-optional
 COPY . /app
-RUN npm --loglevel warn run postinstall
+RUN npm --loglevel warn run postinstall --production
+RUN chown -R nodejs:nodejs /public
 
-CMD /app/run.sh
+USER nodejs
+
+CMD ["/app/run.sh"]
