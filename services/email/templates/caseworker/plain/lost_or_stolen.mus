@@ -18,7 +18,7 @@
   {{fullname}}
 
   {{#t}}pages.check-details.table.headers.date-of-birth{{/t}}
-  {{date-of-birth-day}}-{{date-of-birth-month}}-{{date-of-birth-year}}
+  {{date-of-birth}}
 
   {{#t}}pages.check-details.table.headers.nationality{{/t}}
   {{nationality}}

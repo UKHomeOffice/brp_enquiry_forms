@@ -64,7 +64,7 @@
                     </tr>
                     <tr style="border-top: 1px solid #009390;">
                       <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.check-details-error.personal-details-table.headers.date-of-birth{{/t}}</p></td>
-                      <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{date-of-birth-day}}-{{date-of-birth-month}}-{{date-of-birth-year}}</p></td>
+                      <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{date-of-birth}}</p></td>
                     </tr>
                     <tr style="border-top: 1px solid #009390;">
                       <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.check-details-error.personal-details-table.headers.nationality{{/t}}</p></td>
@@ -138,12 +138,12 @@
                       </tr>
                     {{/birth-place-error}}
 
-                    {{#date-of-birth-error-day}}
+                    {{#date-of-birth-error}}
                       <tr style="border-top: 1px solid #009390;">
                         <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}fields.date-of-birth-error-checkbox.label{{/t}}</p></td>
                         <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{date-of-birth-error}}</p></td>
                       </tr>
-                    {{/date-of-birth-error-day}}
+                    {{/date-of-birth-error}}
 
                     {{#gender-error}}
                       <tr style="border-top: 1px solid #009390;">
