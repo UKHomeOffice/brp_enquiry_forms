@@ -7,7 +7,7 @@
   {{#t}}journeys.collection.pages.check-details.tables.problem-details.where-radio.label{{/t}}
   {{collection-where-radio}}
   {{#collection-date}}
-  {{collection-date-formatted}}
+  {{collection-date}}
   {{/collection-date}}
 
   {{#t}}journeys.collection.pages.check-details.tables.problem-details.reason.label{{/t}}
@@ -35,7 +35,7 @@
   {{nominated-fullname}}
 
   {{#t}}journeys.collection.pages.check-details.tables.others-details.date-of-birth{{/t}}
-  {{nominated-date-formatted}}
+  {{nominated-date}}
 
   {{#t}}journeys.collection.pages.check-details.tables.others-details.nationality{{/t}}
   {{nominated-nationality}}
@@ -60,7 +60,7 @@
   {{fullname}}
 
   {{#t}}pages.check-details.table.headers.date-of-birth{{/t}}
-  {{date-of-birth-formatted}}
+  {{date-of-birth}}
 
   {{#t}}pages.check-details.table.headers.nationality{{/t}}
   {{nationality}}

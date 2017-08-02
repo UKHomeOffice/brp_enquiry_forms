@@ -50,10 +50,10 @@ Contact Details
 
 Delivery Details
 
-{{#delivery-date-formatted}}
+{{#delivery-date}}
 {{#t}}pages.check-details.table.headers.delivery-date{{/t}}
-{{delivery-date-formatted}}
-{{/delivery-date-formatted}}
+{{delivery-date}}
+{{/delivery-date}}
 
 {{^address-street}}
 {{#delivery-details}}
