@@ -9,7 +9,7 @@ reports
 public/js/bundle.js
 .yardoc
 doc
-Gemfile.lock
 apps/**/translations/en
 dump.rdb
 coverage
+package-lock.json
