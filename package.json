@@ -42,8 +42,8 @@
   "devDependencies": {
     "chai": "^3.0.0",
     "debug": "^2.2.0",
-    "eslint": "^4.1.1",
-    "eslint-config-homeoffice": "^2.1.2",
+    "eslint": "^4.16.0",
+    "eslint-config-homeoffice": "^2.2.0",
     "funkie": "0.0.6",
     "funkie-phantom": "0.0.1",
     "hof-form-controller": "^5.1.0",
