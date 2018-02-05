@@ -33,6 +33,11 @@
       {{$form}}
 
         <table id="personal-details" class="table-details">
+          <tr data-id="date-lost">
+            <td>{{#t}}pages.check-details.table.headers.date-lost{{/t}}</td>
+            <td>{{values.date-lost}}</td>
+            <td><a href="date-lost/edit#date-lost-day" class="button">{{#t}}buttons.change.date-lost{{/t}}</a></td>
+          </tr>
           <tr>
             <td>{{#t}}pages.check-details.table.headers.fullname{{/t}}</td>
             <td>{{values.fullname}}</td>

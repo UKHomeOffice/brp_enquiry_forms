@@ -22,6 +22,7 @@
     "warn-card-cancelled": "Once you have submitted this information, we will cancel your BRP. If you find the BRP you reported as lost or stolen, you will not be able to use it and may need to apply for a replacement.",
     "table": {
       "headers": {
+        "date-lost":"Date lost",
         "contact-address": "Contact address",
         "address": "New address",
         "fullname": "Full name",

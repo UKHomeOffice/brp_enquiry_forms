@@ -27,6 +27,7 @@
       "subheader": "If any information is incorrect, you can change it here.",
       "table": {
         "headers": {
+          "date-lost": "Date lost",
           "contact-address": "Contact address",
           "address": "New address",
           "delivery-address": "Delivery address",
