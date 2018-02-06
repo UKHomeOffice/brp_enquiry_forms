@@ -33,24 +33,29 @@
       {{$form}}
 
         <table id="personal-details" class="table-details">
-          <tr>
+          <tr data-id="date-lost">
+            <td>{{#t}}pages.check-details.table.headers.date-lost{{/t}}</td>
+            <td>{{values.date-lost}}</td>
+            <td><a href="date-lost/edit#date-lost-day" id='date-lost-change' class="button">{{#t}}buttons.change.date-lost{{/t}}</a></td>
+          </tr>
+          <tr data-id="fullname">
             <td>{{#t}}pages.check-details.table.headers.fullname{{/t}}</td>
             <td>{{values.fullname}}</td>
-            <td><a href="personal-details/edit#fullname" class="button">{{#t}}buttons.change.fullname{{/t}}</a></td>
+            <td><a href="personal-details/edit#fullname" id='fullname-change' class="button">{{#t}}buttons.change.fullname{{/t}}</a></td>
           </tr>
-          <tr>
+          <tr data-id="date-of-birth">
             <td>{{#t}}pages.check-details.table.headers.date-of-birth{{/t}}</td>
             <td>{{values.date-of-birth}}</td>
-            <td><a href="personal-details/edit#date-of-birth-day" class="button">{{#t}}buttons.change.date-of-birth{{/t}}</a></td>
+            <td><a href="personal-details/edit#date-of-birth-day" id='date-of-birth-change' class="button">{{#t}}buttons.change.date-of-birth{{/t}}</a></td>
           </tr>
-          <tr>
+          <tr data-id="nationality">
             <td>{{#t}}pages.check-details.table.headers.nationality{{/t}}</td>
             <td>{{values.nationality}}</td>
-            <td><a href="personal-details/edit#nationality" class="button">{{#t}}buttons.change.nationality{{/t}}</a></td>
+            <td><a href="personal-details/edit#nationality" id='nationality-change' class="button">{{#t}}buttons.change.nationality{{/t}}</a></td>
           </tr>
           {{#values.use-address}}
           {{#values.contact-address-street}}
-            <tr>
+            <tr data-id="address">
               <td>{{#t}}pages.check-details.table.headers.contact-address{{/t}}</td>
               <td>
                 {{values.contact-address-house-number}} {{values.contact-address-street}},
@@ -58,29 +63,29 @@
                 {{#values.contact-address-county}}{{values.contact-address-county}},{{/values.contact-address-county}}
                 {{values.contact-address-postcode}}
               </td>
-              <td><a href="contact-details/edit#address-group" class="button">{{#t}}buttons.change.address{{/t}}</a></td>
+              <td><a href="contact-details/edit#address-group" id='address-change'class="button">{{#t}}buttons.change.address{{/t}}</a></td>
             </tr>
           {{/values.contact-address-street}}
           {{/values.use-address}}
           {{#values.brp-card}}
-            <tr>
+            <tr data-id="brp-card">
               <td>{{#t}}pages.check-details.table.headers.brp-card-number{{/t}}</td>
               <td>{{values.brp-card}}</td>
-              <td><a href="personal-details/edit#brp-card" class="button">{{#t}}buttons.change.brp-card{{/t}}</a></td>
+              <td><a href="personal-details/edit#brp-card"  id='brp-card-change' class="button">{{#t}}buttons.change.brp-card{{/t}}</a></td>
             </tr>
           {{/values.brp-card}}
           {{#values.email}}
-            <tr>
+            <tr date-id='email'>
               <td>{{#t}}pages.check-details.table.headers.email{{/t}}</td>
               <td>{{values.email}}</td>
-              <td><a href="contact-details/edit#email" class="button">{{#t}}buttons.change.email{{/t}}</a></td>
+              <td><a href="contact-details/edit#email" id='email-change' class="button">{{#t}}buttons.change.email{{/t}}</a></td>
             </tr>
           {{/values.email}}
           {{#values.phone}}
-            <tr>
+            <tr data-id="phone">
               <td>{{#t}}pages.check-details.table.headers.phone{{/t}}</td>
               <td>{{values.phone}}</td>
-              <td><a href="contact-details/edit#phone" class="button">{{#t}}buttons.change.phone{{/t}}</a></td>
+              <td><a href="contact-details/edit#phone" id='phone-change' class="button">{{#t}}buttons.change.phone{{/t}}</a></td>
             </tr>
           {{/values.phone}}
         </table>
