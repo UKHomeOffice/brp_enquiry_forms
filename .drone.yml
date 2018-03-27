@@ -109,3 +109,16 @@ pipeline:
     when:
       event: deployment
       environment: preprod
+
+  trigger_deploy_to_brp_prod:
+    image: quay.io/ukhomeofficedigital/drone-trigger:v0.3.0
+    secrets:
+      - DRONE_TOKEN
+    drone_server: https://drone.acp.homeoffice.gov.uk
+    repo: UKHomeOffice/kube-brpapp
+    branch: master
+    deploy_to: prod
+    params: BRPAPP_IMAGE_TAG=${DRONE_COMMIT_SHA},KUBE_NAMESPACE=brp-prod
+    when:
+      event: deployment
+      environment: prod
