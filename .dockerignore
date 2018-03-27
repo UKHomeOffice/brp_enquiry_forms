@@ -1,5 +1,5 @@
 node_modules
-kube
+documentation
 public
 apps/**/translations/**/default.json
 LICENSE.md
