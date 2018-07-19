@@ -2,6 +2,7 @@
 
 const path = require('path');
 const hof = require('hof');
+const config = require('./config.js');
 
 const options = {
   views: path.resolve(__dirname, './apps/common/views'),
@@ -13,7 +14,8 @@ const options = {
     require('./apps/not-arrived/'),
     require('./apps/lost-stolen/')
   ],
-  start: false
+  start: false,
+  redis: config.redis
 };
 
 const app = hof(options);
@@ -21,4 +23,3 @@ const app = hof(options);
 app.use(require('./redirects.js')());
 
 app.start();
-
