@@ -1,7 +1,8 @@
 'use strict';
 
 const _ = require('underscore');
-
+const StatsD = require('hot-shots');
+const client = new StatsD();
 const Model = require('../models/email');
 
 const serviceMap = {
@@ -54,6 +55,7 @@ module.exports = superclass => class Emailer extends superclass {
       const model = new Model(data);
       model.set('template', service.template);
       model.set('subject', service.subject);
+      client.increment('brp.' + service.template + '.submission');
       model.save(callback);
     });
 
