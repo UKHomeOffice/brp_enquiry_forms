@@ -12,4 +12,3 @@ doc
 apps/**/translations/en
 dump.rdb
 coverage
-package-lock.json
