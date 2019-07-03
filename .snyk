@@ -1,5 +1,5 @@
 # Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
-version: v1.12.0
+version: v1.13.5
 ignore: {}
 # patches apply the minimum changes required to fix a vulnerability
 patch:
@@ -18,3 +18,46 @@ patch:
         patched: '2018-09-21T12:44:40.405Z'
     - hof > helmet > connect > finalhandler > debug > ms:
         patched: '2018-09-21T12:44:40.405Z'
+  SNYK-JS-LODASH-450202:
+    - snyk > inquirer > lodash:
+        patched: '2019-07-03T21:13:49.057Z'
+    - snyk > lodash:
+        patched: '2019-07-03T21:13:49.057Z'
+    - hof-model > lodash:
+        patched: '2019-07-03T21:13:49.057Z'
+    - hof-component-date > lodash:
+        patched: '2019-07-03T21:13:49.057Z'
+    - hof > hof-form-wizard > lodash:
+        patched: '2019-07-03T21:13:49.057Z'
+    - hof > hof-middleware > lodash:
+        patched: '2019-07-03T21:13:49.057Z'
+    - hof > hof-middleware-markdown > lodash:
+        patched: '2019-07-03T21:13:49.057Z'
+    - hof-theme-govuk > hof-template-partials > lodash:
+        patched: '2019-07-03T21:13:49.057Z'
+    - snyk > snyk-config > lodash:
+        patched: '2019-07-03T21:13:49.057Z'
+    - hof-build > hof-transpiler > lodash:
+        patched: '2019-07-03T21:13:49.057Z'
+    - hof > lodash:
+        patched: '2019-07-03T21:13:49.057Z'
+    - snyk > snyk-php-plugin > lodash:
+        patched: '2019-07-03T21:13:49.057Z'
+    - snyk > snyk-nuget-plugin > lodash:
+        patched: '2019-07-03T21:13:49.057Z'
+    - hof > hof-theme-govuk > hof-template-partials > lodash:
+        patched: '2019-07-03T21:13:49.057Z'
+    - snyk > snyk-go-plugin > graphlib > lodash:
+        patched: '2019-07-03T21:13:49.057Z'
+    - hof > hof-form-wizard > hof-model > lodash:
+        patched: '2019-07-03T21:13:49.057Z'
+    - hof > hof-form-wizard > hof-form-controller > lodash:
+        patched: '2019-07-03T21:13:49.057Z'
+    - hof-build > npm-sass > node-sass > sass-graph > lodash:
+        patched: '2019-07-03T21:13:49.057Z'
+    - hof > hof-form-wizard > hof-form-controller > hof-behaviour-session > lodash:
+        patched: '2019-07-03T21:13:49.057Z'
+    - hof > hof-form-wizard > hof-form-controller > hof-behaviour-hooks > lodash:
+        patched: '2019-07-03T21:13:49.057Z'
+    - hof-build > npm-sass > node-sass > gaze > globule > lodash:
+        patched: '2019-07-03T21:13:49.057Z'
