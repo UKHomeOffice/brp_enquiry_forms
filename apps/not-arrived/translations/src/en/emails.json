@@ -7,12 +7,12 @@
     "date-lost": "Date realised"
   },
   "not-arrived": {
-    "header": "You have reported that your BRP hasn't arrived",
-    "paragraph-one": "Thank you for contacting the BRP management unit about your BRP not being delivered.",
-    "paragraph-two": "Somebody from the BRP management unit will contact you within 5 working days about the issue you have reported.",
-    "paragraph-three": "If you have an issue with multiple BRPs, for example your spouse's BRP or your child's BRP, then you must report the issues with each BRP separately at www.gov.uk/brp",
-    "paragraph-four": "This is an automated email, so please don't reply.",
-    "thanks": "Thanks,",
+    "header": "What happens next",
+    "paragraph-one": "We are currently experiencing very high volumes of requests. It is taking significantly longer than usual to resolve requests and it may take up to 20 working days.",
+    "paragraph-two": "We investigate each case individually and in date order. We will respond to you as soon as possible.",
+    "paragraph-three": "Please do not chase for updates as this reduces ability to respond in a timely manner.",
+    "paragraph-four": "We will review the information you have provided and let you know if a replacement BRP is required.",
+    "thanks": "If you need to report errors on multiple BRPs, you must report the issues with each BRP separately.  We will then advise you what to do next.",
     "signature": "The BRP management unit"
   }
 }
