@@ -3,6 +3,8 @@
 
 {{#t}}emails.correct-mistakes.paragraph-one{{/t}}
 
+{{#t}}emails.correct-mistakes.paragraph-one-high-load{{/t}}
+
 {{#triage}}
 {{#t}}emails.correct-mistakes.paragraph-two-triage{{/t}}
 {{/triage}}
