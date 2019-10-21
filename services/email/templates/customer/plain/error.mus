@@ -1,18 +1,17 @@
 {{#data}}
 {{#t}}emails.correct-mistakes.header{{/t}}
 
-{{#t}}emails.correct-mistakes.paragraph-one{{/t}}
+Thank you for contacting UKVI about a problem with your BRP.
 
-{{#triage}}
-{{#t}}emails.correct-mistakes.paragraph-two-triage{{/t}}
-{{/triage}}
-{{^triage}}
-{{#t}}emails.correct-mistakes.paragraph-two{{/t}}
-{{/triage}}
+We are currently experiencing very high volumes of requests. It is taking significantly longer than usual to resolve requests and it may take up to 20 working days.
 
-{{#t}}emails.correct-mistakes.paragraph-three{{/t}}
+We investigate each case individually and in date order. We will respond to you as soon as possible.
 
-{{#t}}emails.correct-mistakes.paragraph-four{{/t}}
+Please do not chase for updates as this reduces ability to respond in a timely manner.
+
+If you have an issue with multiple BRPs, for example your spouse's BRP or your child's BRP, then you must report the issues with each BRP separately at www.gov.uk/brp
+
+This is an automated email, so please do not reply.
 
 {{#t}}emails.correct-mistakes.thanks{{/t}}
 
