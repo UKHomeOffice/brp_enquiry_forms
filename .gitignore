@@ -12,3 +12,4 @@ doc
 apps/**/translations/en
 dump.rdb
 coverage
+.env

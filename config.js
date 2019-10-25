@@ -41,5 +41,16 @@ module.exports = {
     from: process.env.FROM_ADDRESS || 'brp@dsp.notprod.homeoffice.gov.uk',
     ignoreTLS: process.env.EMAIL_IGNORE_TLS === 'true',
     secure: process.env.EMAIL_SECURE === 'true'
+  },
+  caseworking: {
+    auth: {
+      url: process.env.KEYCLOAK_URL,
+      realm: process.env.KEYCLOAK_REALM,
+      client: process.env.KEYCLOAK_CLIENT,
+      secret: process.env.KEYCLOAK_SECRET,
+      username: process.env.KEYCLOAK_USERNAME,
+      password: process.env.KEYCLOAK_PASSWORD
+    },
+    url: process.env.CASEWORKING_URL
   }
 };

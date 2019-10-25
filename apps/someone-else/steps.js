@@ -42,7 +42,7 @@ module.exports = {
     next: '/confirm'
   },
   '/confirm': {
-    behaviours: ['complete', require('../common/behaviours/email')],
+    behaviours: ['complete', require('../common/behaviours/email'), require('../common/behaviours/workflow')],
     fields: [
       'org-help',
       'rep-name',
