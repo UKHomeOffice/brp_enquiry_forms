@@ -31,7 +31,7 @@
     "hof-template-mixins": "4.2.0",
     "hogan.js": "^3.0.2",
     "hot-shots": "^5.9.0",
-    "i18n-future": "^1.1.0",
+    "i18n-future": "^2.0.0",
     "jquery": "^3.3.1",
     "moment": "^2.10.3",
     "moment-business": "^2.0.0",
