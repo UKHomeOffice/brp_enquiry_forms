@@ -42,7 +42,7 @@
     "typeahead-aria": "^1.0.1",
     "underscore": "^1.8.3",
     "winston": "^1.0.1",
-    "snyk": "^1.97.0"
+    "snyk": "^1.290.1"
   },
   "devDependencies": {
     "chai": "^3.0.0",
