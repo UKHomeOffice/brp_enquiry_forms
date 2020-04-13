@@ -32,7 +32,7 @@
     "hogan.js": "^3.0.2",
     "hot-shots": "^5.9.0",
     "i18n-future": "^1.1.0",
-    "jquery": "^3.3.1",
+    "jquery": "^3.5.0",
     "moment": "^2.10.3",
     "moment-business": "^2.0.0",
     "nodemailer": "^2.7.0",
