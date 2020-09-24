@@ -8,6 +8,11 @@ const options = {
   views: path.resolve(__dirname, './apps/common/views'),
   fields: path.resolve(__dirname, './apps/common/fields'),
   routes: [
+    {
+      pages: {
+        '/accessibility': 'accessibility'
+      }
+    },
     require('./apps/correct-mistakes/'),
     require('./apps/collection/'),
     require('./apps/someone-else/'),
