@@ -4,5 +4,10 @@ module.exports = {
   name: 'collection',
   baseUrl: '/collection',
   params: '/:action?',
-  steps: require('./steps')
+  steps: require('./steps'),
+  pages: {
+    '/cookies': 'cookies',
+    '/terms-and-conditions': 'terms',
+    '/accessibility': 'accessibility'
+  }
 };

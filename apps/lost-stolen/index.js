@@ -5,5 +5,10 @@ module.exports = {
   baseUrl: '/lost-stolen',
   params: '/:action?',
   behaviours: [require('../common/behaviours/location')],
-  steps: require('./steps')
+  steps: require('./steps'),
+  pages: {
+    '/cookies': 'cookies',
+    '/terms-and-conditions': 'terms',
+    '/accessibility': 'accessibility'
+  }
 };
