@@ -11,6 +11,8 @@ $ npm install
 
 Install `Redis` and make sure you have a running redis instance in the background.
 
+Tested running on redis server version v6.0.9, and npm version v8.10.0.
+
 Initiate the server in development mode (Express is used to serve the static resources in development).
 ```bash
 $ npm run dev
