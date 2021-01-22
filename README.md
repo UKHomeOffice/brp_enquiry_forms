@@ -2,6 +2,16 @@
 
 [![Docker Repository on Quay.io](https://quay.io/repository/ukhomeofficedigital/brpapp/status "Docker Repository on Quay.io")](https://quay.io/repository/ukhomeofficedigital/brpapp) [![Build Status](https://travis-ci.org/UKHomeOffice/brp_app.svg)](https://travis-ci.org/UKHomeOffice/brp_app)
 
+## Contents
+
+* [Quick start](#quick-start)
+* [User journeys](#user-journeys)
+* [Environment variables](#environment-variables)
+* [Development documentation](#development-documentation)
+* [Testing email locally](#testing-email-locally)
+* [Npm scripts](#npm-scripts)
+* [Acceptance tests](#acceptance-tests)
+
 ## Quick start
 
 Install the dependencies and build the project resources
@@ -18,6 +28,8 @@ Initiate the server in development mode (Express is used to serve the static res
 $ npm run dev
 ```
 
+## User journeys
+
 Then select one of the following journeys to see the applcation in action
 
 - [Collection](http://localhost:8080/collection)
@@ -26,8 +38,31 @@ Then select one of the following journeys to see the applcation in action
 - [Correct mistakes](http://localhost:8080/correct-mistakes)
 - [Lost or stolen](http://localhost:8080/lost-stolen)
 
-See the [development documentation](./documentation/DEVELOPMENT.MD) for a complete description of the application and how to maintain and support BRP.
+## Environment variables
 
+Full list of [environment variables](./documentation/ENVIRONMENT_VARIABLES.md)
+
+## Development documentation
+
+See the [development documentation](./documentation/DEVELOPMENT.md) for a complete description of the application and how to maintain and support BRP.
+
+## Testing email locally
+
+Run the following docker command to run maildev
+
+```bash
+docker run -p 1080:80 -p 1025:25 djfarrelly/maildev
+```
+
+set the following environment variables [config.js](./config.js) variables
+
+```bash
+EMAIL_PORT=1025
+EMAIL_HOST='localhost'
+EMAIL_SECURE='true'
+SMTP_USER='test'
+```
+you should see all emails going to http://localhost:1080/
 
 ## NPM scripts
 
@@ -68,11 +103,8 @@ Compile the Sass to CSS
 $ npm run sass
 ```
 
-_____________________________________________________________
+## Acceptance tests
 
-- For details on [Acceptance tests](https://github.com/UKHomeOffice/brp_app/tree/master/acceptance_tests)
+For details on [Acceptance tests](https://github.com/UKHomeOffice/brp_app/tree/master/acceptance_tests)
 
-- See the [package.json](./package.json) for a full list of scripts.
-
-- Full list of [environment variables](./documentation/ENVIRONMENT_VARIABLES.md)
 
