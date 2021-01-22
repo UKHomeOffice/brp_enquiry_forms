@@ -61,8 +61,9 @@ EMAIL_PORT=1025
 EMAIL_HOST='localhost'
 EMAIL_SECURE='true'
 SMTP_USER='test'
+NODE_TLS_REJECT_UNAUTHORIZED='0'
 ```
-you should see all emails going to http://localhost:1080/
+Run the app like normal and you should see all emails going to http://localhost:1080/
 
 ## NPM scripts
 
