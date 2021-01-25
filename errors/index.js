@@ -31,6 +31,7 @@ module.exports = function errorHandler(err, req, res, next) {
   res.statusCode = err.status || 500;
 
   logger.error(err.message || err.error, err);
+
   res.render(err.template, {
     error: err,
     content: content,
