@@ -112,7 +112,7 @@ steps:
     KUBE_TOKEN_DEV:
       from_secret: kube_token_dev
     KUBE_NAMESPACE: brp-dev
-    APP_IMAGE_TAG: ${DRONE_COMMIT_SHA}
+    BRPAPP_IMAGE_TAG: ${DRONE_COMMIT_SHA}
   when:
     branch: master
     event: push
@@ -129,7 +129,7 @@ steps:
     KUBE_TOKEN_DEV:
       from_secret: kube_token_dev
     KUBE_NAMESPACE: brp-preprod
-    APP_IMAGE_TAG: ${DRONE_COMMIT_SHA}
+    BRPAPP_IMAGE_TAG: ${DRONE_COMMIT_SHA}
   when:
     event: promote
     target: preprod
@@ -146,7 +146,7 @@ steps:
     KUBE_TOKEN_PROD:
       from_secret: kube_token_prod
     KUBE_NAMESPACE: brp
-    APP_IMAGE_TAG: ${DRONE_COMMIT_SHA}
+    BRPAPP_IMAGE_TAG: ${DRONE_COMMIT_SHA}
   when:
     event: promote
     target: prod
