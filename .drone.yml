@@ -72,7 +72,7 @@ steps:
     branch: [ master, features/* ]
     event: push
 
-- name: clone_repo
+- name: clone_repo_build
   pull: if-not-exists
   image: docker:git
   environment:
@@ -86,7 +86,7 @@ steps:
     branch: master
     event: push
 
-- name: clone_repo_preprod
+- name: clone_repo_promote
   pull: if-not-exists
   image: docker:git
   environment:
@@ -98,21 +98,7 @@ steps:
     - git clone https://$${DRONE_GIT_USERNAME}:$${DRONE_GIT_TOKEN}@github.com/UKHomeOffice/kube-brpapp.git
   when:
     event: promote
-    target: preprod
-
-- name: clone_repo_prod
-  pull: if-not-exists
-  image: docker:git
-  environment:
-    DRONE_GIT_USERNAME:
-      from_secret: DRONE_GIT_USERNAME
-    DRONE_GIT_TOKEN:
-      from_secret: DRONE_GIT_TOKEN
-  commands:
-    - git clone https://$${DRONE_GIT_USERNAME}:$${DRONE_GIT_TOKEN}@github.com/UKHomeOffice/kube-brpapp.git
-  when:
-    event: promote
-    target: prod
+    target: [ preprod, prod ]
 
 - name: deploy_to_dev
   pull: if-not-exists
