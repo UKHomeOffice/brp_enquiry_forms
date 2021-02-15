@@ -69,62 +69,73 @@ steps:
     - name: dockersock
       path: /var/run
   when:
-    branch: master
+    branch: [ master, features/* ]
     event: push
 
-- name: trigger_deploy_to_brp_dev
+- name: clone_repo
   pull: if-not-exists
-  image: plugins/downstream
-  settings:
-    server: https://drone-gh.acp.homeoffice.gov.uk
-    deploy: dev
-    last_successful: true
-    token:
-      from_secret: DRONE_TOKEN
-    repositories: UKHomeOffice/kube-brpapp@master
-    fork: true
-    params:
-      - BRPAPP_IMAGE_TAG=${DRONE_COMMIT_SHA}
-      - KUBE_NAMESPACE=brp-dev
+  image: docker:git
+  environment:
+    DRONE_GIT_USERNAME:
+      from_secret: DRONE_GIT_USERNAME
+    DRONE_GIT_TOKEN:
+      from_secret: DRONE_GIT_TOKEN
+  commands:
+    - git clone https://$${DRONE_GIT_USERNAME}:$${DRONE_GIT_TOKEN}@github.com/UKHomeOffice/kube-brpapp.git
   when:
-    branch: master
+    branch: [ master, features/* ]
     event: push
 
-- name: trigger_deploy_to_brp_preprod
+- name: deploy_to_dev
   pull: if-not-exists
-  image: plugins/downstream
-  settings:
-    server: https://drone-gh.acp.homeoffice.gov.uk
-    deploy: preprod
-    last_successful: true
-    token:
-      from_secret: DRONE_TOKEN
-    repositories: UKHomeOffice/kube-brpapp@master
-    fork: true
-    params:
-      - BRPAPP_IMAGE_TAG=${DRONE_COMMIT_SHA}
-      - KUBE_NAMESPACE=brp-preprod
-    when:
-      event: promote
-      target: preprod
+  image: quay.io/ukhomeofficedigital/kd:v1.14.0
+  commands:
+    - cd kube-brpapp
+    - bin/deploy.sh
+  environment:
+    KUBE_SERVER_DEV:
+      from_secret: kube_server_dev
+    KUBE_TOKEN_DEV:
+      from_secret: kube_token_dev
+    KUBE_NAMESPACE: brp-dev
+    APP_IMAGE_TAG: ${DRONE_COMMIT_SHA}
+  when:
+    branch: [ master, features/* ]
+    event: push
 
-- name: trigger_deploy_to_brp_prod
+- name: deploy_to_preprod
   pull: if-not-exists
-  image: plugins/downstream
-  settings:
-    server: https://drone-gh.acp.homeoffice.gov.uk
-    deploy: prod
-    last_successful: true
-    token:
-      from_secret: DRONE_TOKEN
-    repositories: UKHomeOffice/kube-brpapp@master
-    fork: true
-    params:
-      - BRPAPP_IMAGE_TAG=${DRONE_COMMIT_SHA}
-      - KUBE_NAMESPACE=brp
-    when:
-      event: promote
-      target: prod
+  image: quay.io/ukhomeofficedigital/kd:v1.14.0
+  commands:
+    - cd kube-brpapp
+    - bin/deploy.sh
+  environment:
+    KUBE_SERVER_DEV:
+      from_secret: kube_server_dev
+    KUBE_TOKEN_DEV:
+      from_secret: kube_token_dev
+    KUBE_NAMESPACE: brp-preprod
+    APP_IMAGE_TAG: ${DRONE_COMMIT_SHA}
+  when:
+    event: promote
+    target: preprod
+
+- name: deploy_to_prod
+  pull: if-not-exists
+  image: quay.io/ukhomeofficedigital/kd:v1.14.0
+  commands:
+    - cd kube-brpapp
+    - bin/deploy.sh
+  environment:
+    KUBE_SERVER_PROD:
+      from_secret: kube_server_prod
+    KUBE_TOKEN_PROD:
+      from_secret: kube_token_prod
+    KUBE_NAMESPACE: brp
+    APP_IMAGE_TAG: ${DRONE_COMMIT_SHA}
+  when:
+    event: promote
+    target: prod
 
 services:
   - name: docker
