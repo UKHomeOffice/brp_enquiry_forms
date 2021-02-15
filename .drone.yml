@@ -4,7 +4,7 @@ name: default
 type: kubernetes
 
 steps:
-- name: build_10
+- name: build
   pull: if-not-exists
   image: node:10
   commands:
