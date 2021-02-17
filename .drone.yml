@@ -11,7 +11,8 @@ steps:
   - npm --loglevel warn install
   - npm test
   when:
-    event: [ push, pull_request ]
+    branch: [ master, features/* ]
+    event: push
 
 - name: build_brpapp
   pull: if-not-exists
