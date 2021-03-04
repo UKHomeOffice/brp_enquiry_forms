@@ -25,8 +25,8 @@
     "hof-build": "^1.3.4",
     "hof-component-date": "^1.4.0",
     "hof-model": "^3.1.2",
-    "hof-theme-govuk": "^2.0.4",
     "hof-template-mixins": "4.2.0",
+    "hof-theme-govuk": "^2.0.4",
     "hogan.js": "^3.0.2",
     "hot-shots": "^5.9.0",
     "i18n-future": "^1.1.0",
@@ -37,10 +37,10 @@
     "nodemailer-ses-transport": "^1.5.0",
     "nodemailer-smtp-transport": "^2.7.2",
     "nodemailer-stub-transport": "^1.1.0",
+    "snyk": "^1.97.0",
     "typeahead-aria": "^1.0.1",
     "underscore": "^1.8.3",
-    "winston": "^1.0.1",
-    "snyk": "^1.97.0"
+    "winston": "^1.0.1"
   },
   "devDependencies": {
     "chai": "^3.0.0",
