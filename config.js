@@ -19,13 +19,13 @@ module.exports = {
   },
   email: {
     caseworker: {
-      error: process.env.CASEWORKER_ERROR_EMAIL || 'caseworker_email_address',
-      'error-triage': process.env.CASEWORKER_ERROR_TRIAGE_EMAIL || 'triage_email_address',
-      'lost-or-stolen-uk': process.env.CASEWORKER_LOSTSTOLEN_EMAIL || 'caseworker_email_address',
-      'lost-or-stolen-abroad': process.env.CASEWORKER_LOSTSTOLEN_EMAIL || 'caseworker_email_address',
-      delivery: process.env.CASEWORKER_DELIVERY_EMAIL || 'caseworker_email_address',
-      collection: process.env.CASEWORKER_COLLECTION_EMAIL || 'caseworker_email_address',
-      'someone-else': process.env.CASEWORKER_SOMEONEELSE_EMAIL || 'someoneelse_email_address'
+      error: process.env.CASEWORKER_ERROR_EMAIL || 'caseworker_email_address@test.com',
+      'error-triage': process.env.CASEWORKER_ERROR_TRIAGE_EMAIL || 'triage_email_address@test.com',
+      'lost-or-stolen-uk': process.env.CASEWORKER_LOSTSTOLEN_EMAIL || 'caseworker_email_address@test.com',
+      'lost-or-stolen-abroad': process.env.CASEWORKER_LOSTSTOLEN_EMAIL || 'caseworker_email_address@test.com',
+      delivery: process.env.CASEWORKER_DELIVERY_EMAIL || 'caseworker_email_address@test.com',
+      collection: process.env.CASEWORKER_COLLECTION_EMAIL || 'caseworker_email_address@test.com',
+      'someone-else': process.env.CASEWORKER_SOMEONEELSE_EMAIL || 'someoneelse_email_address@test.com'
     },
     port: process.env.EMAIL_PORT || 587,
     host: process.env.EMAIL_HOST || 'email-smtp.eu-west-1.amazonaws.com',

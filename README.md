@@ -54,14 +54,14 @@ Run the following docker command to run maildev
 docker run -p 1080:80 -p 1025:25 djfarrelly/maildev
 ```
 
-set the following environment variables [config.js](./config.js) variables
+set the following local environment variables
 
 ```bash
 EMAIL_PORT=1025
 EMAIL_HOST='localhost'
-EMAIL_SECURE='true'
+EMAIL_SECURE='false'
 SMTP_USER='test'
-NODE_TLS_REJECT_UNAUTHORIZED='0'
+EMAIL_IGNORE_TLS='true'
 ```
 Run the app like normal and you should see all emails going to http://localhost:1080/
 

@@ -1,20 +1,27 @@
 {{#data}}
-{{#t}}emails.collection.header{{/t}}
+  {{#t}}emails.collection.header{{/t}}
 
-{{#t}}emails.collection.paragraph-one{{/t}}
+  {{#t}}emails.collection.subheader-one{{/t}}
+  {{#t}}emails.collection.paragraph-one-p1{{/t}}
+  {{#t}}emails.collection.paragraph-one-p2{{/t}}
+  {{#t}}emails.collection.paragraph-one-p3{{/t}}
 
-{{#t}}emails.collection.paragraph-two{{/t}}
+  {{#t}}emails.collection.subheader-two{{/t}}
+  {{#t}}emails.collection.paragraph-two-p1{{/t}}
+  {{#t}}emails.collection.paragraph-two-p2{{/t}}
 
-{{#t}}emails.collection.paragraph-two-extra{{/t}}
+  {{#t}}emails.collection.subheader-three{{/t}}
+  {{#t}}emails.collection.paragraph-three-p1{{/t}}{{#t}}emails.collection.paragraph-three-a{{/t}}
+  {{#t}}emails.collection.paragraph-three-p2{{/t}}{{#t}}emails.collection.paragraph-three-a{{/t}}{{#t}}emails.collection.paragraph-three-after-a{{/t}}
 
-{{#t}}emails.collection.paragraph-three{{/t}}
+  {{#t}}emails.collection.subheader-four{{/t}}
+  {{#t}}emails.collection.paragraph-four-p1{{/t}}
+  {{#t}}emails.collection.paragraph-four-p2{{/t}}{{#t}}emails.collection.paragraph-four-a{{/t}}{{#t}}emails.collection.paragraph-four-after-a{{/t}}
+  {{#t}}emails.collection.paragraph-four-p3{{/t}}{{#t}}emails.collection.paragraph-four-a2{{/t}}{{#t}}emails.collection.paragraph-four-after-a2{{/t}}{{#t}}emails.collection.paragraph-four-a3{{/t}}
 
-{{#t}}emails.collection.paragraph-four{{/t}}
+  {{#t}}emails.collection.subheader-five{{/t}}
+  {{#t}}emails.collection.paragraph-five{{/t}}
 
-{{#t}}emails.collection.thanks{{/t}}
-
-{{#t}}emails.collection.signature{{/t}}
-
-If you're unsure an email is from UKVI:
-  * do not reply to it or click any links
+  {{#t}}emails.collection.subheader-six{{/t}}
+  {{#t}}emails.collection.paragraph-six{{/t}}
 {{/data}}
