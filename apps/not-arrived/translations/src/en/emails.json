@@ -7,7 +7,7 @@
     "date-lost": "Date realised"
   },
   "not-arrived": {
-    "header": "Collection problem form",
+    "header": "You have reported that your BRP hasn't arrived",
     "subheader-one": "What happens next",
     "paragraph-one-p1": "Our staff will review the information you have sent and speak with the courier if necessary to find out why your BRP hasn't yet arrived.",
     "paragraph-one-p2": "As each BRP delivery is tracked, we will be able to find your BRP and arrange redelivery. If you are expecting multiple BRPs to be delivered but they haven’t arrived, you must report each undelivered BRP separately.",
