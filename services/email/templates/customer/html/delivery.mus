@@ -56,31 +56,49 @@
 
                   <p style="font-size: 23px; color: #000; line-height: 1.32; margin: 0 0 20px 0;">{{#t}}emails.not-arrived.header{{/t}}</p>
 
-                  <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 10px 0;"><strong>{{#t}}emails.not-arrived.subheader-one{{/t}}</strong></p>
-                  <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 10px 0;">{{#t}}emails.not-arrived.paragraph-one-p1{{/t}}</p>
-                  <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 10px 0;">{{#t}}emails.not-arrived.paragraph-one-p2{{/t}}</p>
-                  <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">{{#t}}emails.not-arrived.paragraph-one-p3{{/t}}</p>
+                  <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">{{#t}}emails.not-arrived.paragraph-one{{/t}}</p>
 
-                  <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 10px 0;"><strong>{{#t}}emails.not-arrived.subheader-two{{/t}}</strong></p>
-                  <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 10px 0;">{{#t}}emails.not-arrived.paragraph-two-p1{{/t}}</p>
-                  <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">{{#t}}emails.not-arrived.paragraph-two-p2{{/t}}</p>
+                  <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">{{#t}}emails.not-arrived.paragraph-two{{/t}}</p>
 
-                  <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 10px 0;"><strong>{{#t}}emails.not-arrived.subheader-three{{/t}}</strong></p>
-                  <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 10px 0;">{{#t}}emails.not-arrived.paragraph-three-p1{{/t}}<a href="https://www.gov.uk/employee-immigration-employment-status">{{#t}}emails.not-arrived.paragraph-three-a{{/t}}</a>.</p>
-                  <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">{{#t}}emails.not-arrived.paragraph-three-p2{{/t}}<a href="https://www.gov.uk/employee-immigration-employment-status">{{#t}}emails.not-arrived.paragraph-three-a{{/t}}</a>.{{#t}}emails.not-arrived.paragraph-three-after-a{{/t}}</p>
+                  <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">{{#t}}emails.not-arrived.paragraph-three{{/t}}<a href="https://www.gov.uk/biometric-residence-permits">{{#t}}emails.not-arrived.paragraph-three-a{{/t}}</a></p>
 
                   <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 10px 0;"><strong>{{#t}}emails.not-arrived.subheader-four{{/t}}</strong></p>
                   <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 10px 0;">{{#t}}emails.not-arrived.paragraph-four-p1{{/t}}</p>
-                  <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 10px 0;">{{#t}}emails.not-arrived.paragraph-four-p2{{/t}}<a href="https://eforms.homeoffice.gov.uk/outreach/lcs-application.ofml">{{#t}}emails.not-arrived.paragraph-four-a1{{/t}}</a>.{{#t}}emails.not-arrived.paragraph-four-after-a1{{/t}}</p>
-                  <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">{{#t}}emails.not-arrived.paragraph-four-p3{{/t}}<a href="https://www.gov.uk/view-right-to-work">{{#t}}emails.not-arrived.paragraph-four-a2{{/t}}</a>.{{#t}}emails.not-arrived.paragraph-four-after-a2{{/t}}<a href="https://www.gov.uk/view-right-to-rent">{{#t}}emails.not-arrived.paragraph-four-a3{{/t}}</a></p>
+                  <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 10px 0;">{{#t}}emails.not-arrived.paragraph-four-p2{{/t}}</p>
+                  <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">{{#t}}emails.not-arrived.paragraph-four-p3{{/t}}</p>
 
-                   <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 10px 0;"><strong>{{#t}}emails.not-arrived.subheader-five{{/t}}</strong></p>
-                   <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 10px 0;">{{#t}}emails.not-arrived.paragraph-five{{/t}}</p>
+                  <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 10px 0;"><strong>{{#t}}emails.not-arrived.subheader-five{{/t}}</strong></p>
+                  <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 10px 0;">{{#t}}emails.not-arrived.paragraph-five-p1{{/t}}</p>
+                  <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">{{#t}}emails.not-arrived.paragraph-five-p2{{/t}}</p>
 
-                   <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 10px 0;"><strong>{{#t}}emails.not-arrived.subheader-six{{/t}}</strong></p>
-                   <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 10px 0;">{{#t}}emails.not-arrived.paragraph-six{{/t}}</p>
+                  <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 10px 0;"><strong>{{#t}}emails.not-arrived.subheader-six{{/t}}</strong></p>
+                  <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 10px 0;">{{#t}}emails.not-arrived.paragraph-six-p1{{/t}}<a href="https://www.gov.uk/employee-immigration-employment-status">{{#t}}emails.not-arrived.paragraph-six-a{{/t}}</a>.</p>
+                  <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">{{#t}}emails.not-arrived.paragraph-six-p2{{/t}}<a href="https://www.gov.uk/employee-immigration-employment-status">{{#t}}emails.not-arrived.paragraph-six-a{{/t}}</a>.{{#t}}emails.not-arrived.paragraph-six-after-a{{/t}}</p>
+
+                  <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 10px 0;"><strong>{{#t}}emails.not-arrived.subheader-seven{{/t}}</strong></p>
+                  <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 10px 0;">{{#t}}emails.not-arrived.paragraph-seven-p1{{/t}}</p>
+                  <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 10px 0;">{{#t}}emails.not-arrived.paragraph-seven-p2{{/t}}<a href="https://eforms.homeoffice.gov.uk/outreach/lcs-application.ofml">{{#t}}emails.not-arrived.paragraph-seven-a1{{/t}}</a>.{{#t}}emails.not-arrived.paragraph-seven-after-a1{{/t}}</p>
+                  <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">{{#t}}emails.not-arrived.paragraph-seven-p3{{/t}}<a href="https://www.gov.uk/view-right-to-work">{{#t}}emails.not-arrived.paragraph-seven-a2{{/t}}</a>.{{#t}}emails.not-arrived.paragraph-seven-after-a2{{/t}}<a href="https://www.gov.uk/view-right-to-rent">{{#t}}emails.not-arrived.paragraph-seven-a3{{/t}}</a></p>
+
+                   <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 10px 0;"><strong>{{#t}}emails.not-arrived.subheader-eight{{/t}}</strong></p>
+                   <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">{{#t}}emails.not-arrived.paragraph-eight{{/t}}</p>
+
+                   <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 10px 0;"><strong>{{#t}}emails.not-arrived.subheader-nine{{/t}}</strong></p>
+                   <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">{{#t}}emails.not-arrived.paragraph-nine{{/t}}</p>
+
+                   <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">{{#t}}emails.not-arrived.paragraph-ten{{/t}}</p>
+
+                   <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">{{#t}}emails.not-arrived.thanks{{/t}}</p>
+
+                   <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">{{#t}}emails.not-arrived.signature{{/t}}</p>
 
                 {{/data}}
+
+                <p style="font-size: 16px; color: #6f777b; line-height: 1.125; margin: 0 0 20px 0;">If you're unsure an email is from UKVI:</p>
+
+                <ul>
+                  <li style="font-size: 16px; color: #6f777b; line-height: 1.125; margin: 0 0 10px 0;">do not reply to it or click any links</li>
+                </ul>
 
               </td>
               <td width="25%">&nbsp;</td>
