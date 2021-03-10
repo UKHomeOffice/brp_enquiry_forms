@@ -1,27 +1,38 @@
 {{#data}}
   {{#t}}emails.not-arrived.header{{/t}}
 
-  {{#t}}emails.not-arrived.subheader-one{{/t}}
-  {{#t}}emails.not-arrived.paragraph-one-p1{{/t}}
-  {{#t}}emails.not-arrived.paragraph-one-p2{{/t}}
-  {{#t}}emails.not-arrived.paragraph-one-p3{{/t}}
+  {{#t}}emails.not-arrived.paragraph-one{{/t}}
 
-  {{#t}}emails.not-arrived.subheader-two{{/t}}
-  {{#t}}emails.not-arrived.paragraph-two-p1{{/t}}
-  {{#t}}emails.not-arrived.paragraph-two-p2{{/t}}
+  {{#t}}emails.not-arrived.paragraph-two{{/t}}
 
-  {{#t}}emails.not-arrived.subheader-three{{/t}}
-  {{#t}}emails.not-arrived.paragraph-three-p1{{/t}}{{#t}}emails.not-arrived.paragraph-three-a{{/t}}
-  {{#t}}emails.not-arrived.paragraph-three-p2{{/t}}{{#t}}emails.not-arrived.paragraph-three-a{{/t}}{{#t}}emails.not-arrived.paragraph-three-after-a{{/t}}
+  {{#t}}emails.not-arrived.paragraph-three{{/t}}{{#t}}emails.not-arrived.paragraph-three-a{{/t}}
 
   {{#t}}emails.not-arrived.subheader-four{{/t}}
   {{#t}}emails.not-arrived.paragraph-four-p1{{/t}}
-  {{#t}}emails.not-arrived.paragraph-four-p2{{/t}}{{#t}}emails.not-arrived.paragraph-four-a{{/t}}{{#t}}emails.not-arrived.paragraph-four-after-a{{/t}}
-  {{#t}}emails.not-arrived.paragraph-four-p3{{/t}}{{#t}}emails.not-arrived.paragraph-four-a2{{/t}}{{#t}}emails.not-arrived.paragraph-four-after-a2{{/t}}{{#t}}emails.not-arrived.paragraph-four-a3{{/t}}
+  {{#t}}emails.not-arrived.paragraph-four-p2{{/t}}
+  {{#t}}emails.not-arrived.paragraph-four-p3{{/t}}
 
   {{#t}}emails.not-arrived.subheader-five{{/t}}
-  {{#t}}emails.not-arrived.paragraph-five{{/t}}
+  {{#t}}emails.not-arrived.paragraph-five-p1{{/t}}
+  {{#t}}emails.not-arrived.paragraph-five-p2{{/t}}
 
   {{#t}}emails.not-arrived.subheader-six{{/t}}
-  {{#t}}emails.not-arrived.paragraph-six{{/t}}
+  {{#t}}emails.not-arrived.paragraph-six-p1{{/t}}{{#t}}emails.not-arrived.paragraph-six-a{{/t}}
+  {{#t}}emails.not-arrived.paragraph-six-p2{{/t}}{{#t}}emails.not-arrived.paragraph-six-a{{/t}}{{#t}}emails.not-arrived.paragraph-six-after-a{{/t}}
+
+  {{#t}}emails.not-arrived.subheader-seven{{/t}}
+  {{#t}}emails.not-arrived.paragraph-seven-p1{{/t}}
+  {{#t}}emails.not-arrived.paragraph-seven-p2{{/t}}{{#t}}emails.not-arrived.paragraph-seven-a{{/t}}{{#t}}emails.not-arrived.paragraph-seven-after-a{{/t}}
+  {{#t}}emails.not-arrived.paragraph-seven-p3{{/t}}{{#t}}emails.not-arrived.paragraph-seven-a2{{/t}}{{#t}}emails.not-arrived.paragraph-seven-after-a2{{/t}}{{#t}}emails.not-arrived.paragraph-seven-a3{{/t}}
+
+  {{#t}}emails.not-arrived.subheader-eight{{/t}}
+  {{#t}}emails.not-arrived.paragraph-eight{{/t}}
+
+  {{#t}}emails.not-arrived.subheader-nine{{/t}}
+  {{#t}}emails.not-arrived.paragraph-nine{{/t}}
+
+  {{#t}}emails.not-arrived.paragraph-ten{{/t}}
+
+  {{#t}}emails.not-arrived.thanks{{/t}}
+  {{#t}}emails.not-arrived.signature{{/t}}
 {{/data}}
