@@ -56,46 +56,28 @@
 
                   <p style="font-size: 23px; color: #000; line-height: 1.32; margin: 0 0 20px 0;">{{#t}}emails.collection.header{{/t}}</p>
 
-                                    <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">{{#t}}emails.collection.paragraph-one{{/t}}</p>
+                  <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">{{#t}}emails.collection.paragraph-one{{/t}}</p>
 
-                                    <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">{{#t}}emails.collection.paragraph-two{{/t}}</p>
-                                    <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">{{#t}}emails.collection.paragraph-two-extra{{/t}}</p>
+                  <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">{{#t}}emails.collection.paragraph-two{{/t}}</p>
 
-                                    <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">{{#t}}emails.collection.paragraph-three{{/t}}<a href="https://www.gov.uk/biometric-residence-permits">{{#t}}emails.collection.paragraph-three-a{{/t}}</a></p>
+                  <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">{{#t}}emails.collection.paragraph-two-extra{{/t}}</p>
 
-                                    <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 10px 0;"><strong>{{#t}}emails.collection.subheader-five{{/t}}</strong></p>
-                                    <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 10px 0;">{{#t}}emails.collection.paragraph-five-p1{{/t}}</p>
-                                    <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">{{#t}}emails.collection.paragraph-five-p2{{/t}}</p>
+                  <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">{{#t}}emails.collection.paragraph-three{{/t}}</p>
 
-                                    <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 10px 0;"><strong>{{#t}}emails.collection.subheader-six{{/t}}</strong></p>
-                                    <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 10px 0;">{{#t}}emails.collection.paragraph-six-p1{{/t}}<a href="https://www.gov.uk/employee-immigration-employment-status">{{#t}}emails.collection.paragraph-six-a{{/t}}</a>.</p>
-                                    <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">{{#t}}emails.collection.paragraph-six-p2{{/t}}<a href="https://www.gov.uk/employee-immigration-employment-status">{{#t}}emails.collection.paragraph-six-a{{/t}}</a>.{{#t}}emails.collection.paragraph-six-after-a{{/t}}</p>
+                  <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">{{#t}}emails.collection.paragraph-four{{/t}}</p>
 
-                                    <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 10px 0;"><strong>{{#t}}emails.collection.subheader-seven{{/t}}</strong></p>
-                                    <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 10px 0;">{{#t}}emails.collection.paragraph-seven-p1{{/t}}</p>
-                                    <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 10px 0;">{{#t}}emails.collection.paragraph-seven-p2{{/t}}<a href="https://eforms.homeoffice.gov.uk/outreach/lcs-application.ofml">{{#t}}emails.collection.paragraph-seven-a1{{/t}}</a>.{{#t}}emails.collection.paragraph-seven-after-a1{{/t}}</p>
-                                    <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">{{#t}}emails.collection.paragraph-seven-p3{{/t}}<a href="https://www.gov.uk/view-right-to-work">{{#t}}emails.collection.paragraph-seven-a2{{/t}}</a>.{{#t}}emails.collection.paragraph-seven-after-a2{{/t}}<a href="https://www.gov.uk/view-right-to-rent">{{#t}}emails.collection.paragraph-seven-a3{{/t}}</a></p>
+                  <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">{{#t}}emails.collection.thanks{{/t}}</p>
 
-                                     <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 10px 0;"><strong>{{#t}}emails.collection.subheader-eight{{/t}}</strong></p>
-                                     <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">{{#t}}emails.collection.paragraph-eight{{/t}}</p>
-
-                                     <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 10px 0;"><strong>{{#t}}emails.collection.subheader-nine{{/t}}</strong></p>
-                                     <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">{{#t}}emails.collection.paragraph-nine{{/t}}</p>
-
-                                     <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">{{#t}}emails.collection.paragraph-ten{{/t}}</p>
-
-                                     <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">{{#t}}emails.collection.thanks{{/t}}</p>
-
-                                     <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">{{#t}}emails.collection.signature{{/t}}</p>
+                  <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">{{#t}}emails.collection.signature{{/t}}</p>
 
                 {{/data}}
 
-                <p style="font-size: 16px; color: #6f777b; line-height: 1.125; margin: 0 0 20px 0;">If you're unsure an email is from UKVI:</p>
+
+                <p style="font-size: 16px; color: #6f777b; line-height: 1.125; margin: 0 0 30px 0;">If you're unsure an email is from UKVI:</p>
 
                 <ul>
                   <li style="font-size: 16px; color: #6f777b; line-height: 1.125; margin: 0 0 10px 0;">do not reply to it or click any links</li>
                 </ul>
-
               </td>
               <td width="25%">&nbsp;</td>
             </tr>
