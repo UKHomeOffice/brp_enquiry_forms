@@ -56,45 +56,27 @@
 
                   <p style="font-size: 23px; color: #000; line-height: 1.32; margin: 0 0 20px 0;">{{#t}}emails.not-arrived.header{{/t}}</p>
 
-                  <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">{{#t}}emails.not-arrived.paragraph-one{{/t}}</p>
+                  <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;"><strong>We are currently experiencing very high volumes of requests</strong></p>
 
-                  <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">{{#t}}emails.not-arrived.paragraph-two{{/t}}</p>
+                  <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">It is taking significantly longer than usual to resolve requests and it may take up to 20 working days to respond. We are working hard to reduce these waiting times.</p>
 
-                  <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">{{#t}}emails.not-arrived.paragraph-three{{/t}}<a href="https://www.gov.uk/biometric-residence-permits">{{#t}}emails.not-arrived.paragraph-three-a{{/t}}</a></p>
+                  <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">If your BRP has been successfully delivered to the address you provided in your application we will not respond to your enquiry. If you have your TNT consignment reference you can track your package here: <a href="https://delivery.tnt.com/tracking">https://delivery.tnt.com/tracking</a>, alternatively you can call TNT on 0345 608 0630. If you have changed address since making your application and did not inform us you will need to make contact with your previous address to obtain your BRP, or you will need to report it lost and apply for a replacement BRP here: <a href="https://www.gov.uk/biometric-residence-permits/not-arrived">https://www.gov.uk/biometric-residence-permits/lost-stolen-damaged</a>.</p>
 
-                  <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 10px 0;"><strong>{{#t}}emails.not-arrived.subheader-four{{/t}}</strong></p>
-                  <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 10px 0;">{{#t}}emails.not-arrived.paragraph-four-p1{{/t}}</p>
-                  <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 10px 0;">{{#t}}emails.not-arrived.paragraph-four-p2{{/t}}</p>
-                  <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">{{#t}}emails.not-arrived.paragraph-four-p3{{/t}}</p>
+                  <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">If you have an issue with multiple BRPs, for example your spouse's BRP or your child's BRP, then you must report the issues with each BRP separately at <a href="www.gov.uk/brp">www.gov.uk/brp</a></p>
 
-                  <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 10px 0;"><strong>{{#t}}emails.not-arrived.subheader-five{{/t}}</strong></p>
-                  <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 10px 0;">{{#t}}emails.not-arrived.paragraph-five-p1{{/t}}</p>
-                  <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">{{#t}}emails.not-arrived.paragraph-five-p2{{/t}}</p>
+                  <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">How long must I wait for a reply?</p>
+                  <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">If you have not received a response from us after 20 working days and still have not received your BRP please complete the form again.</p>
 
-                  <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 10px 0;"><strong>{{#t}}emails.not-arrived.subheader-six{{/t}}</strong></p>
-                  <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 10px 0;">{{#t}}emails.not-arrived.paragraph-six-p1{{/t}}<a href="https://www.gov.uk/employee-immigration-employment-status">{{#t}}emails.not-arrived.paragraph-six-a{{/t}}</a>.</p>
-                  <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">{{#t}}emails.not-arrived.paragraph-six-p2{{/t}}<a href="https://www.gov.uk/employee-immigration-employment-status">{{#t}}emails.not-arrived.paragraph-six-a{{/t}}</a>.{{#t}}emails.not-arrived.paragraph-six-after-a{{/t}}</p>
+                  <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">This is an automated email, so please do not respond to it.</p>
 
-                  <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 10px 0;"><strong>{{#t}}emails.not-arrived.subheader-seven{{/t}}</strong></p>
-                  <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 10px 0;">{{#t}}emails.not-arrived.paragraph-seven-p1{{/t}}</p>
-                  <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 10px 0;">{{#t}}emails.not-arrived.paragraph-seven-p2{{/t}}<a href="https://eforms.homeoffice.gov.uk/outreach/lcs-application.ofml">{{#t}}emails.not-arrived.paragraph-seven-a1{{/t}}</a>.{{#t}}emails.not-arrived.paragraph-seven-after-a1{{/t}}</p>
-                  <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">{{#t}}emails.not-arrived.paragraph-seven-p3{{/t}}<a href="https://www.gov.uk/view-right-to-work">{{#t}}emails.not-arrived.paragraph-seven-a2{{/t}}</a>.{{#t}}emails.not-arrived.paragraph-seven-after-a2{{/t}}<a href="https://www.gov.uk/view-right-to-rent">{{#t}}emails.not-arrived.paragraph-seven-a3{{/t}}</a></p>
+                  <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">{{#t}}emails.not-arrived.thanks{{/t}}</p>
 
-                   <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 10px 0;"><strong>{{#t}}emails.not-arrived.subheader-eight{{/t}}</strong></p>
-                   <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">{{#t}}emails.not-arrived.paragraph-eight{{/t}}</p>
+                  <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">{{#t}}emails.not-arrived.signature{{/t}}</p>
 
-                   <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 10px 0;"><strong>{{#t}}emails.not-arrived.subheader-nine{{/t}}</strong></p>
-                   <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">{{#t}}emails.not-arrived.paragraph-nine{{/t}}</p>
-
-                   <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">{{#t}}emails.not-arrived.paragraph-ten{{/t}}</p>
-
-                   <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">{{#t}}emails.not-arrived.thanks{{/t}}</p>
-
-                   <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">{{#t}}emails.not-arrived.signature{{/t}}</p>
 
                 {{/data}}
 
-                <p style="font-size: 16px; color: #6f777b; line-height: 1.125; margin: 0 0 20px 0;">If you're unsure an email is from UKVI:</p>
+                <p style="font-size: 16px; color: #6f777b; line-height: 1.125; margin: 0 0 30px 0;">If you're unsure an email is from UKVI:</p>
 
                 <ul>
                   <li style="font-size: 16px; color: #6f777b; line-height: 1.125; margin: 0 0 10px 0;">do not reply to it or click any links</li>
