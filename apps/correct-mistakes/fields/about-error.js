@@ -82,7 +82,7 @@ module.exports = {
       value: 'true'
     },
     className: ['typeahead', 'js-hidden'],
-    options: [''].concat(require('../../../assets/countries').nonEuCountries),
+    options: [''].concat(require('../../../assets/countries').allCountries),
     hint: 'fields.nationality-error.hint'
   },
   'signature-error-checkbox': {
