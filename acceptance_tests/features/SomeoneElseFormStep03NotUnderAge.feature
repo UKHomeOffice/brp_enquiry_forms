@@ -10,7 +10,7 @@ Feature: Under age validation for Step 03 of the Someone Else Form
 		And I type fill in the nationality field with something valid
 		And I type in the passport field with something valid
 		And I click "Continue"
-		Then I am on Step Four of the somone else form
+		Then I am on Step Four of the someone else form
 
 	Scenario: Proceeding to Step 04 of the Someone Else Form when under 18
 		When I enter "17" years old into the Date of birth field
@@ -18,4 +18,4 @@ Feature: Under age validation for Step 03 of the Someone Else Form
 		And I type fill in the nationality field with something valid
 		And I type in the passport field with something valid
 		And I click "Continue"
-		Then I am on Step Four of the somone else form
+		Then I am on Step Four of the someone else form

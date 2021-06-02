@@ -41,20 +41,20 @@ When(/^I go to Step Three of the someone else form, selecting "under-age"$/) do
   click_button('Continue')
 end
 
-Then(/^I am on Step Three of the somone else form$/) do
+Then(/^I am on Step Three of the someone else form$/) do
   page.should have_content('Step 3 of 5')
   page.should have_content('What are your personal details?')
   page.should have_content('We need these details so we know which BRP to give to the person collecting on your behalf.')
   page.should have_content('Full name')
   page.should have_content('Date of birth')
-  page.should have_content('For example, 31  3  1970')
+  page.should have_content('For example, 31 3 1970')
   page.should have_content('Day')
   find_by_id('date-of-birth-day')
   page.should have_content('Month')
   find_by_id('date-of-birth-month')
   page.should have_content('Year')
   find_by_id('date-of-birth-year')
-  page.should have_content('Country of nationality ')
+  page.should have_content('Country of nationality')
   find_by_id('nationality')
   page.should have_content('Passport number')
   find_by_id('passport')

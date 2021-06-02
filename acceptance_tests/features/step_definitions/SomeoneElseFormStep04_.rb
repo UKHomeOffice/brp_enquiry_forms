@@ -20,7 +20,7 @@ When(/^I go to Step Four of the someone else form$/) do
   click_button('Continue')
 end
 
-Then(/^I am on Step Four of the somone else form$/) do
+Then(/^I am on Step Four of the someone else form$/) do
   page.should have_content('How should we contact you about your BRP?')
   page.should have_content('Email address')
   find_by_id('email')

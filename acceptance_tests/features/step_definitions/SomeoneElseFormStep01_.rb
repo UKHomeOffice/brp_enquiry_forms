@@ -2,7 +2,7 @@ When(/^I go to Step One of the someone else form$/) do
   visit config['someone_host']
 end
 
-Then(/^I am on Step One of the somone else form$/) do
+Then(/^I am on Step One of the someone else form$/) do
   page.should have_content('Step 1 of 5')
   page.should have_content('What would you like to do?')
   page.should have_content('Tell us what would you like to do.')
