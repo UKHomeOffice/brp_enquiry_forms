@@ -10,7 +10,7 @@ Feature: Changing Someone Else Form details
 		Then I see the changes I made in Step one of the Someone Else form
 
 		Examples:
-			|xpath													  	 |
+			|xpath													   |
 			|/html/body/main/div/div/form/table[1]/tbody/tr[2]/td[3]/a|
 			|/html/body/main/div/div/form/table[1]/tbody/tr[3]/td[3]/a|
 			|/html/body/main/div/div/form/table[1]/tbody/tr[4]/td[3]/a|

@@ -10,7 +10,7 @@ When(/^I go to Step Two of the someone else form$/) do
   click_button('Continue')
 end
 
-Then(/^I am on Step Two of the somone else form$/) do
+Then(/^I am on Step Two of the someone else form$/) do
   page.should have_content('Step 2 of 5')
   page.should have_content('Why do you need someone else to collect your BRP?')
   page.should have_content('I have a medical condition')

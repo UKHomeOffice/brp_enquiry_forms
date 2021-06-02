@@ -1,5 +1,5 @@
 When(/^I click the "([^"]*)" link in the "([^"]*)"$/) do |arg1, arg2|
-find(:xpath, arg2, arg1).click
+find(:xpath, arg2).click(arg1)
 end
 
 Then(/^I see the personal details I entered on Step Three of the delivery form$/) do

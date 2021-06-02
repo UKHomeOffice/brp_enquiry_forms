@@ -23,7 +23,7 @@ When(/^I go to Step Five of the someone else form$/) do
   click_button('Continue')
 end
 
-Then(/^I am on Step Five of the somone else form$/) do
+Then(/^I am on Step Five of the someone else form$/) do
   page.should have_content('Check the details you have provided')
   page.should have_content("If any information is incorrect, you can change it here.")
   page.should have_content('Terms and conditions')
