@@ -1,6 +1,6 @@
 'use strict';
 
-const Controller = require('hof-form-controller');
+const Controller = require('hof').controller;
 const Behaviour = require('../../../../../apps/common/behaviours/location');
 
 describe('apps/common/behaviours/location', () => {

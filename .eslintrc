@@ -1,9 +1,0 @@
-extends:
-- "homeoffice/config/default"
-
-rules:
-  space-before-function-paren: 0
-  consistent-return: 0
-
-env:
-  es6: true

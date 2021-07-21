@@ -1,7 +1,7 @@
 'use strict';
 
 const Behaviour = require('../../../../../apps/correct-mistakes/behaviours/about-error');
-const Controller = require('hof-form-controller');
+const Controller = require('hof').controller;
 
 describe('apps/correct-mistakes/behaviours/about-error', () => {
 
