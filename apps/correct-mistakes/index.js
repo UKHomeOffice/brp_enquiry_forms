@@ -5,10 +5,5 @@ module.exports = {
   baseUrl: '/correct-mistakes',
   params: '/:action?',
   behaviours: [require('../common/behaviours/location')],
-  steps: require('./steps'),
-  pages: {
-    '/cookies': 'cookies',
-    '/terms-and-conditions': 'terms',
-    '/accessibility': 'accessibility'
-  }
+  steps: require('./steps')
 };

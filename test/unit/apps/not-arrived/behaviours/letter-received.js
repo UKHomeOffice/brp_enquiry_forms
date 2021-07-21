@@ -3,7 +3,7 @@
 const moment = require('moment');
 
 const Behaviour = require('../../../../../apps/not-arrived/behaviours/letter-received');
-const Controller = require('hof-form-controller');
+const Controller = require('hof').controller;
 
 describe('apps/not-arrived/behaviours/letter-received', () => {
 
@@ -92,5 +92,3 @@ describe('apps/not-arrived/behaviours/letter-received', () => {
   });
 
 });
-
-
