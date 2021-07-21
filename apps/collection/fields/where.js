@@ -1,6 +1,6 @@
 'use strict';
 
-const date = require('hof-component-date');
+const date = require('hof').components.date;
 
 module.exports = {
   'collection-where-radio': {

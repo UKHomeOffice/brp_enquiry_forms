@@ -1,7 +1,7 @@
 'use strict';
 
 var emailService = require('../../../services/email');
-var Model = require('hof-model');
+var Model = require('hof').model;
 var _ = require('underscore');
 
 module.exports = class Email extends Model {

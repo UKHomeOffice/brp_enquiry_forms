@@ -2,7 +2,7 @@
 
 const Behaviour = require('../../../../../apps/common/behaviours/email');
 const Model = require('../../../../../apps/common/models/email');
-const Controller = require('hof-form-controller');
+const Controller = require('hof').controller;
 
 describe('apps/common/controllers/confirm', () => {
 

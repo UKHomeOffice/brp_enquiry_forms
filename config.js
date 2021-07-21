@@ -13,8 +13,6 @@ module.exports = {
     ttl: process.env.SESSION_TTL || 1800 /* 30 mins timeout */
   },
   redis: {
-    port: process.env.REDIS_PORT_6379_TCP_PORT || process.env.REDIS_PORT || 6379,
-    host: process.env.REDIS_PORT_6379_TCP_ADDR || process.env.REDIS_HOST || '127.0.0.1',
     password: process.env.REDIS_PASSWORD
   },
   email: {
@@ -41,5 +39,6 @@ module.exports = {
     from: process.env.FROM_ADDRESS || 'brp@dsp.notprod.homeoffice.gov.uk',
     ignoreTLS: process.env.EMAIL_IGNORE_TLS === 'true',
     secure: process.env.EMAIL_SECURE === 'true'
-  }
+  },
+  govukLandingPageUrl: new URL('https://www.gov.uk/biometric-residence-permits')
 };

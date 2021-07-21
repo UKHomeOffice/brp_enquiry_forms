@@ -1,7 +1,7 @@
 'use strict';
 
 const Behaviour = require('../../../../../apps/someone-else/behaviours/personal-details');
-const Controller = require('hof-form-controller');
+const Controller = require('hof').controller;
 
 describe('apps/someone-else/behaviours/personal-details', () => {
 

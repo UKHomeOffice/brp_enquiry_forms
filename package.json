@@ -4,41 +4,34 @@
   "main": "app.js",
   "description": "A Home Office application for Biometric Residence Permit covering lost and stolen, error on card and delivery error services.",
   "license": "GPL-2.0",
+  "engines": {
+    "node": "^14.15.0"
+  },
   "scripts": {
-    "start": "node .",
+    "start": "node server.js",
+    "start:dev": "hof-build watch",
     "dev": "NODE_ENV=development hof-build watch",
-    "test": "npm run test:lint && npm run test:unit",
-    "test:lint": "eslint .",
+    "test": "yarn run test:lint && yarn run test:unit",
+    "test:lint": "eslint . --config ./node_modules/eslint-config-hof/default.js",
     "test:unit": "NODE_ENV=test istanbul cover _mocha ./test",
     "test:acceptance": "npm run test:acceptance:new && npm run test:acceptance:old",
     "test:acceptance:new": "funkie so-acceptance --steps",
     "test:acceptance:old": "cd acceptance_tests/; bundle install && cucumber",
     "quality": "plato -r -x 'node_modules|reports|test' -d reports/plato .",
     "build": "hof-build",
-    "postinstall": "npm run build"
+    "postinstall": "yarn run build"
   },
   "author": "HomeOffice",
   "dependencies": {
-    "churchill": "0.1.0",
     "express": "^4.17.1",
-    "hof": "^18.2.4",
-    "hof-build": "^2.0.0",
-    "hof-component-date": "^1.4.0",
-    "hof-middleware": "^2.2.4",
-    "hof-model": "^3.1.2",
-    "hof-template-mixins": "4.2.0",
-    "hof-theme-govuk": "^5.2.4",
+    "hof": "^19.4.2",
     "hogan.js": "^3.0.2",
     "hot-shots": "^5.9.0",
     "i18n-future": "^1.1.0",
     "jquery": "^3.6.0",
     "moment": "^2.29.1",
     "moment-business": "^2.0.0",
-    "node-sass": "^6.0.0",
     "nodemailer": "^6.4.16",
-    "nodemailer-ses-transport": "^1.5.0",
-    "nodemailer-smtp-transport": "^2.7.2",
-    "nodemailer-stub-transport": "^1.1.0",
     "snyk": "^1.595.0",
     "typeahead-aria": "^1.0.1",
     "underscore": "^1.13.1",
@@ -47,11 +40,10 @@
   "devDependencies": {
     "chai": "^3.0.0",
     "debug": "^2.6.9",
-    "eslint": "^4.16.0",
-    "eslint-config-homeoffice": "^2.2.0",
+    "eslint": "^7.30.0",
+    "eslint-config-hof": "^1.0.4",
     "funkie": "0.0.6",
     "funkie-phantom": "0.0.1",
-    "hof-form-controller": "^5.1.0",
     "hof-util-reqres": "^1.0.1",
     "install": "^0.13.0",
     "istanbul": "^0.4.5",
@@ -61,15 +53,10 @@
     "mocha-sandbox": "^1.0.0",
     "parallelshell": "^1.1.1",
     "plato": "^1.7.0",
-    "pre-commit": "^1.0.10",
     "proxyquire": "^1.5.0",
     "sinomocha": "^0.2.4",
     "sinon": "^1.15.3",
     "sinon-chai": "^2.8.0",
     "so-acceptance": "^4.3.1"
-  },
-  "pre-commit": [
-    "test"
-  ],
-  "snyk": true
+  }
 }

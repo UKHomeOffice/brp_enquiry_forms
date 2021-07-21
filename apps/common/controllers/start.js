@@ -1,7 +1,7 @@
 'use strict';
 
 var util = require('util');
-var BaseController = require('hof').controllers.base;
+var BaseController = require('hof').controller;
 
 var StartController = function StartController() {
   BaseController.apply(this, arguments);
