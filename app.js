@@ -8,6 +8,7 @@ const options = {
   views: path.resolve(__dirname, './apps/common/views'),
   fields: path.resolve(__dirname, './apps/common/fields'),
   routes: [
+    require('./apps/common'),
     require('./apps/correct-mistakes/'),
     require('./apps/collection/'),
     require('./apps/someone-else/'),
@@ -15,6 +16,7 @@ const options = {
     require('./apps/lost-stolen/')
   ],
   getCookies: false,
+  getTerms: false,
   start: false,
   redis: config.redis
 };
@@ -27,7 +29,7 @@ const addGenericLocals = (req, res, next) => {
   res.locals.footerSupportLinks = [
     { path: '/cookies', property: 'base.cookies' },
     { path: '/terms-and-conditions', property: 'base.terms' },
-    { path: '/accessibility', property: 'accessibility' },
+    { path: '/accessibility', property: 'Accessibility statement' },
   ];
   // Set service name for cookie-banner
   res.locals.serviceName = 'Biometric Residency Permit Enquiry Forms';
@@ -41,6 +43,11 @@ app.use((req, res, next) => addGenericLocals(req, res, next));
 app.use('/cookies', (req, res) => {
   res.locals = Object.assign({}, res.locals, req.translate('cookies'));
   res.render('cookies');
+});
+
+app.use('/terms-and-conditions', (req, res, next) => {
+  res.locals = Object.assign({}, res.locals, req.translate('terms'));
+  next();
 });
 
 app.use(require('./redirects.js')());
