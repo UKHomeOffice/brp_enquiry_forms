@@ -1,171 +1,171 @@
 {
-    "collection-date": {
-      "label": "Date",
-      "legend": "Date on the letter",
-      "hint": "For example, 11  6  2015"
-    },
-    "collection-date-day": {
-      "label": "Day"
-    },
-    "collection-date-month": {
-      "label": "Month"
-    },
-    "collection-date-year": {
-      "label": "Year"
-    },
-    "collection-where-radio": {
-      "options": {
-        "post-office": {
-          "label": "Post Office"
-        },
-        "sponsor": {
-          "label": "Sponsor"
-        }
+  "collection-date": {
+    "label": "Date",
+    "legend": "Date on the letter",
+    "hint": "For example, 11  6  2015"
+  },
+  "collection-date-day": {
+    "label": "Day"
+  },
+  "collection-date-month": {
+    "label": "Month"
+  },
+  "collection-date-year": {
+    "label": "Year"
+  },
+  "collection-where-radio": {
+    "options": {
+      "Post Office": {
+        "label": "Post Office"
+      },
+      "Sponsor": {
+        "label": "Sponsor"
       }
-    },
-    "reason-radio": {
-      "options": {
-        "under-age": {
-          "legend": "I am under 18 and attempted collection without my responsible adult",
-          "label": "I am under 18 and attempted collection without my responsible adult"
-        },
-        "non-identity": {
-          "legend": "I could not prove my identity",
-          "label": "I could not prove my identity"
-        },
-        "others-identity": {
-          "legend": "Someone attempted to collect my BRP on my behalf, but was unable to",
-          "label": "Someone attempted to collect my BRP on my behalf, but was unable to"
-        },
-        "passport-family": {
-          "legend": "The vignette (sticker) in my passport is not linked to my family",
-          "label": "The vignette (sticker) in my passport is not linked to my family"
-        },
-        "passport-lost": {
-          "legend": "I have lost my passport",
-          "label": "I have lost my passport"
-        },
-        "no-brp": {
-          "legend": "My BRP was not there",
-          "label": "My BRP was not there"
-        },
-        "which-post-office": {
-          "legend": "I don't know which Post Office I need to collect my BRP from",
-          "label": "I don't know which Post Office I need to collect my BRP from"
-        }
+    }
+  },
+  "reason-radio": {
+    "options": {
+      "under-age": {
+        "legend": "I am under 18 and attempted collection without my responsible adult",
+        "label": "I am under 18 and attempted collection without my responsible adult"
+      },
+      "non-identity": {
+        "legend": "I could not prove my identity",
+        "label": "I could not prove my identity"
+      },
+      "others-identity": {
+        "legend": "Someone attempted to collect my BRP on my behalf, but was unable to",
+        "label": "Someone attempted to collect my BRP on my behalf, but was unable to"
+      },
+      "passport-family": {
+        "legend": "The vignette (sticker) in my passport is not linked to my family",
+        "label": "The vignette (sticker) in my passport is not linked to my family"
+      },
+      "passport-lost": {
+        "legend": "I have lost my passport",
+        "label": "I have lost my passport"
+      },
+      "no-brp": {
+        "legend": "My BRP was not there",
+        "label": "My BRP was not there"
+      },
+      "which-post-office": {
+        "legend": "I don't know which Post Office I need to collect my BRP from",
+        "label": "I don't know which Post Office I need to collect my BRP from"
       }
-    },
-    "reason-which-post-office": {
-      "label": "Describe the problem (optional)"
-    },
-    "reason-under-age": {
-      "label": "Describe the problem (optional)"
-    },
-    "reason-non-identity": {
-      "label": "Describe the problem (optional)"
-    },
-    "reason-others-identity": {
-      "label": "Describe the problem (optional)"
-    },
-    "reason-passport-family": {
-      "label": "Describe the problem (optional)"
-    },
-    "reason-passport-lost": {
-      "label": "Describe the problem (optional)"
-    },
-    "reason-passport-stamp": {
-      "label": "Describe the problem (optional)"
-    },
-    "nominated-fullname": {
-      "label": "Full name"
-    },
-    "nominated-nationality": {
-      "label": "Country of nationality<span class='screenreader-punctuation'>.</span>",
-      "hint": "Start typing your nationality to create a short list of options. Then press up or down to navigate between options."
-    },
-    "nominated-id-number": {
-      "label": "Identity document number"
-    },
-    "nominated-date": {
-      "label": "Date",
-      "legend": "Date of birth",
-      "hint": "For example, 31  3  1970"
-    },
-    "nominated-date-day": {
-      "label": "Day"
-    },
-    "nominated-date-month": {
-      "label": "Month"
-    },
-    "nominated-date-year": {
-      "label": "Year"
-    },
-    "date-of-birth": {
-      "legend": "Date of birth",
-      "hint": "For example, 31  3  1970"
-    },
-    "date-of-birth-day": {
-      "label": "Day"
-    },
-    "date-of-birth-month": {
-      "label": "Month"
-    },
-    "date-of-birth-year": {
-      "label": "Year"
-    },
-    "delivery-details": {
-      "label": "If the courier could have problems delivering to this address, for example there's no door number, then let us know and we'll contact them. (optional)"
-    },
-    "fullname": {
-      "label": "Full name"
-    },
-    "nationality": {
-      "label": "Country of nationality<span class='screenreader-punctuation'>.</span>",
-      "hint": "Start typing your nationality to create a short list of options. Then press up or down to navigate between options."
-    },
-    "passport": {
-      "label": "Passport number"
-    },
-    "email": {
-      "label": "Email address"
-    },
-    "use-address": {
-      "label": "I want to be contacted by post"
-    },
-    "phone": {
-      "label": "Phone number (optional)"
-    },
-    "country": {
-      "legend": "Inside the UK",
-      "label": "Which country are you in?"
-    },
-    "org-help": {
-      "options": {
-        "yes": {
-          "label": "Yes"
-        },
-        "no": {
-          "label": "No"
-        }
+    }
+  },
+  "reason-which-post-office-group": {
+    "label": "Describe the problem (optional)"
+  },
+  "reason-under-age-group": {
+    "label": "Describe the problem (optional)"
+  },
+  "reason-non-identity-group": {
+    "label": "Describe the problem (optional)"
+  },
+  "reason-others-identity-group": {
+    "label": "Describe the problem (optional)"
+  },
+  "reason-passport-family-group": {
+    "label": "Describe the problem (optional)"
+  },
+  "reason-passport-lost-group": {
+    "label": "Describe the problem (optional)"
+  },
+  "reason-passport-stamp-group": {
+    "label": "Describe the problem (optional)"
+  },
+  "nominated-fullname": {
+    "label": "Full name"
+  },
+  "nominated-nationality": {
+    "label": "Country of nationality<span class='screenreader-punctuation'>.</span>",
+    "hint": "Start typing your nationality to create a short list of options. Then press up or down to navigate between options."
+  },
+  "nominated-id-number": {
+    "label": "Identity document number"
+  },
+  "nominated-date": {
+    "label": "Date",
+    "legend": "Date of birth",
+    "hint": "For example, 31  3  1970"
+  },
+  "nominated-date-day": {
+    "label": "Day"
+  },
+  "nominated-date-month": {
+    "label": "Month"
+  },
+  "nominated-date-year": {
+    "label": "Year"
+  },
+  "date-of-birth": {
+    "legend": "Date of birth",
+    "hint": "For example, 31  3  1970"
+  },
+  "date-of-birth-day": {
+    "label": "Day"
+  },
+  "date-of-birth-month": {
+    "label": "Month"
+  },
+  "date-of-birth-year": {
+    "label": "Year"
+  },
+  "delivery-details": {
+    "label": "If the courier could have problems delivering to this address, for example there's no door number, then let us know and we'll contact them. (optional)"
+  },
+  "fullname": {
+    "label": "Full name"
+  },
+  "nationality": {
+    "label": "Country of nationality<span class='screenreader-punctuation'>.</span>",
+    "hint": "Start typing your nationality to create a short list of options. Then press up or down to navigate between options."
+  },
+  "passport": {
+    "label": "Passport number"
+  },
+  "email": {
+    "label": "Email address"
+  },
+  "use-address": {
+    "label": "I want to be contacted by post"
+  },
+  "phone": {
+    "label": "Phone number (optional)"
+  },
+  "country": {
+    "legend": "Inside the UK",
+    "label": "Which country are you in?"
+  },
+  "org-help": {
+    "options": {
+      "yes": {
+        "label": "Yes"
+      },
+      "no": {
+        "label": "No"
       }
-    },
-    "rep-name": {
-      "label": "Full name"
-    },
-    "org-type": {
-      "options": {
-        "pbs": {
-          "label": "Sponsor"
-        },
-        "legal": {
-          "label": "Legal representative"
-        },
-        "relative": {
-          "label": "Relative/friend"
-        },
-        "support": {
-          "label": "Support organisation/charity"
-        }
+    }
+  },
+  "rep-name": {
+    "label": "Full name"
+  },
+  "org-type": {
+    "options": {
+      "pbs": {
+        "label": "Sponsor"
+      },
+      "legal": {
+        "label": "Legal representative"
+      },
+      "relative": {
+        "label": "Relative/friend"
+      },
+      "support": {
+        "label": "Support organisation/charity"
       }
     }
   }
+}

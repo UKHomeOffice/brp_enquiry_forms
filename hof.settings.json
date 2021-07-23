@@ -2,8 +2,10 @@
   "appName": "Biometric Residency Permit",
   "theme": "govUK",
   "behaviours": [
-    "hof/components/clear-session"
+    "hof/components/clear-session",
+    "./apps/common/behaviours/country-select"
   ],
+  "fields": "./apps/common/fields",
   "routes": [
     "./apps/common",
     "./apps/collection",

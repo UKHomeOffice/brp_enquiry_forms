@@ -24,11 +24,12 @@
   "author": "HomeOffice",
   "dependencies": {
     "express": "^4.17.1",
-    "hof": "^19.4.2",
+    "hof": "^19.5.1",
     "hogan.js": "^3.0.2",
     "hot-shots": "^5.9.0",
     "i18n-future": "^1.1.0",
     "jquery": "^3.6.0",
+    "lodash": "^4.17.21",
     "moment": "^2.29.1",
     "moment-business": "^2.0.0",
     "nodemailer": "^6.4.16",

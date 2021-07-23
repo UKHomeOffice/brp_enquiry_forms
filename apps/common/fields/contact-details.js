@@ -14,7 +14,7 @@ module.exports = {
   },
   'contact-address-house-number': {
     validate: ['required'],
-    label: 'common-fields.address-house-number.label',
+    label: 'fields.address-house-number.label',
     dependent: {
       value: 'true',
       field: 'use-address'
@@ -22,7 +22,7 @@ module.exports = {
   },
   'contact-address-street': {
     validate: ['required'],
-    label: 'common-fields.address-street.label',
+    label: 'fields.address-street.label',
     dependent: {
       value: 'true',
       field: 'use-address'
@@ -30,18 +30,18 @@ module.exports = {
   },
   'contact-address-town': {
     validate: ['required'],
-    label: 'common-fields.address-town.label',
+    label: 'fields.address-town.label',
     dependent: {
       value: 'true',
       field: 'use-address'
     }
   },
   'contact-address-county': {
-    label: 'common-fields.address-county.label',
+    label: 'fields.address-county.label',
   },
   'contact-address-postcode': {
     validate: ['required'],
-    label: 'common-fields.address-postcode.label',
+    label: 'fields.address-postcode.label',
     dependent: {
       value: 'true',
       field: 'use-address'

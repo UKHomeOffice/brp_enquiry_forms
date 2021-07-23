@@ -1,10 +1,7 @@
 'use strict';
 
-var _ = require('underscore');
-
-module.exports = _.extend(
+module.exports = Object.assign({},
   require('./contact-details'),
   require('./personal-details'),
   require('./organisation-details')
 );
-
