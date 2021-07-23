@@ -18,6 +18,7 @@
     "test:acceptance:new": "funkie so-acceptance --steps",
     "test:acceptance:old": "cd acceptance_tests/; bundle install && cucumber",
     "quality": "plato -r -x 'node_modules|reports|test' -d reports/plato .",
+    "test:snyk": "snyk config set api=SNYK_TOKEN && snyk test",
     "build": "hof-build",
     "postinstall": "yarn run build"
   },
@@ -33,7 +34,6 @@
     "moment": "^2.29.1",
     "moment-business": "^2.0.0",
     "nodemailer": "^6.4.16",
-    "snyk": "^1.595.0",
     "typeahead-aria": "^1.0.1",
     "underscore": "^1.13.1",
     "winston": "^1.0.1"
@@ -58,6 +58,10 @@
     "sinomocha": "^0.2.4",
     "sinon": "^1.15.3",
     "sinon-chai": "^2.8.0",
-    "so-acceptance": "^4.3.1"
+    "so-acceptance": "^4.3.1",
+    "snyk": "^1.666.0"
+  },
+  "resolutions": {
+    "underscore": "^1.12.1"
   }
 }
