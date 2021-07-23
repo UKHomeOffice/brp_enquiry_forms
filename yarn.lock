@@ -4501,17 +4501,7 @@ https-browserify@^1.0.0:
   resolved "https://registry.yarnpkg.com/https-browserify/-/https-browserify-1.0.0.tgz#ec06c10e0a34c0f2faf199f7fd7fc78fffd03c73"
   integrity sha1-7AbBDgo0wPL68Zn3/X/Hj//QPHM=
 
-i18n-future@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/i18n-future/-/i18n-future-1.1.0.tgz#aa64d5fd3b9d740ff60ef5e22d764afff1a2a71c"
-  integrity sha1-qmTV/TuddA/2DvXiLXZK//Gipxw=
-  dependencies:
-    callsites "^1.0.0"
-    findup "^0.1.5"
-    glob "^5.0.5"
-    lodash "^3.7.0"
-
-i18n-future@^2.0.0:
+i18n-future@^2.0.0, i18n-future@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/i18n-future/-/i18n-future-2.0.1.tgz#c7fe4c6b15a75a004301818eb7ccd4f9994717d6"
   integrity sha512-//BxPFI/X7Nfgn0ZTrTUqyutmJ42Y2BMhBnpdYS77cn1cuT3J4RDZxj2ZNwc7cQTko4nbfqP11uHaSMzP0PNVQ==
@@ -5621,7 +5611,7 @@ lodash.values@^4.3.0:
   resolved "https://registry.yarnpkg.com/lodash.values/-/lodash.values-4.3.0.tgz#a3a6c2b0ebecc5c2cba1c17e6e620fe81b53d347"
   integrity sha1-o6bCsOvsxcLLocF+bmIP6BtT00c=
 
-lodash@^3.3.1, lodash@^3.7.0:
+lodash@^3.3.1:
   version "3.10.1"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-3.10.1.tgz#5bf45e8e49ba4189e17d482789dfd15bd140b7b6"
   integrity sha1-W/Rejkm6QYnhfUgnid/RW9FAt7Y=
