@@ -1,3 +1,4 @@
+/* eslint-disable consistent-return */
 'use strict';
 
 require('moment-business');
@@ -24,7 +25,6 @@ function weekDayRange(value, days) {
 }
 
 module.exports = superclass => class LetterRecieved extends superclass {
-
   saveValues(req, res, next) {
     const deliveryDate = req.form.values['delivery-date'];
     if (deliveryDate && isWithin(deliveryDate, 10)) {
@@ -47,5 +47,4 @@ module.exports = superclass => class LetterRecieved extends superclass {
     }
     super.validate(req, res, next);
   }
-
 };

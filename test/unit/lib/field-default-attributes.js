@@ -1,9 +1,8 @@
 'use strict';
 
 describe('lib/field-default-attributes', () => {
-
-  var defaultAttributes;
-  var fields;
+  let defaultAttributes;
+  let fields;
 
   beforeEach(() => {
     defaultAttributes = require('../../../lib/field-default-attributes');
@@ -16,7 +15,6 @@ describe('lib/field-default-attributes', () => {
   });
 
   describe('extending field attributes', () => {
-
     beforeEach(() => {
       fields = {
         'some-field-name': {
@@ -87,7 +85,5 @@ describe('lib/field-default-attributes', () => {
         }
       });
     });
-
   });
-
 });

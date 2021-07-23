@@ -104,19 +104,19 @@ module.exports = {
     // TODO confirm with BA on over18 check 'over18' validation
     validate: ['required', 'before']
   }),
-  'fullname': {
+  fullname: {
     validate: ['required']
   },
   'date-of-birth': date('date-of-birth', {
     validate: ['required', 'before']
   }),
-  'nationality': {
+  nationality: {
     validate: ['required'],
     className: ['typeahead', 'js-hidden'],
     options: countries,
     hint: 'fields.nationality.hint'
   },
-  'passport': {
+  passport: {
     validate: ['required']
   }
 };

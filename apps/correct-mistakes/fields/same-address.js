@@ -18,11 +18,11 @@ module.exports = {
   },
   'same-address-house-number': {
     validate: ['required'],
-      label: 'fields.address-house-number.label',
-      dependent: {
-        value: 'no',
-        field: 'same-address-radio'
-      }
+    label: 'fields.address-house-number.label',
+    dependent: {
+      value: 'no',
+      field: 'same-address-radio'
+    }
   },
   'same-address-street': {
     validate: ['required'],
@@ -41,7 +41,7 @@ module.exports = {
     }
   },
   'same-address-county': {
-    label: 'fields.address-county.label',
+    label: 'fields.address-county.label'
   },
   'same-address-postcode': {
     validate: ['required'],

@@ -1,15 +1,16 @@
+/* eslint-disable no-undef */
 'use strict';
 
-var util = require('util');
-var BaseController = require('hof').controller;
+const util = require('util');
+const BaseController = require('hof').controller;
 
-var StartController = function StartController() {
+const StartController = () => {
   BaseController.apply(this, arguments);
 };
 
 util.inherits(StartController, BaseController);
 
-StartController.prototype.getValues = function getValues(req) {
+StartController.prototype.getValues = req => {
   req.sessionModel.reset();
   BaseController.prototype.successHandler.apply(this, arguments);
 };

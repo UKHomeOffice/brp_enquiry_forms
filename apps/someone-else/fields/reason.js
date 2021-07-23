@@ -5,7 +5,7 @@ module.exports = {
     validate: ['required'],
     dependent: {
       value: 'incapable',
-      field: 'someone-else-reason-radio',
+      field: 'someone-else-reason-radio'
     }
   },
   'someone-else-reason-radio': {
@@ -17,7 +17,7 @@ module.exports = {
     options: [
       {
         value: 'incapable',
-        toggle: 'incapable-details',
+        toggle: 'incapable-details'
       },
       'under-age'
     ]

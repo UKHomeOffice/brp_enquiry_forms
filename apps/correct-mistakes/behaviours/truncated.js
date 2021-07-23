@@ -1,3 +1,4 @@
+/* eslint-disable arrow-body-style, consistent-return */
 'use strict';
 
 function prettyName(value) {
@@ -9,7 +10,7 @@ function getTruncatedItems(req) {
 }
 
 function truncatedItem(req) {
-  var itemOne = getTruncatedItems(req).filter(function filterUndefined(item) {
+  const itemOne = getTruncatedItems(req).filter(item => {
     return item.value === undefined;
   })[0];
 
@@ -25,10 +26,10 @@ function truncatedItem(req) {
 }
 
 function updateTruncatedItems(req) {
-  var values = req.form.values;
-  var items = getTruncatedItems(req);
+  const values = req.form.values;
+  let items = getTruncatedItems(req);
 
-  items = items.map(function mapPageMatch(item) {
+  items = items.map(item => {
     if (item.id === values['truncation-page']) {
       item.value = values.truncated;
     }
@@ -39,15 +40,14 @@ function updateTruncatedItems(req) {
 }
 
 function identity(req, all, value) {
-  var method = (Boolean(all) === true) ? [].every : [].some;
-  return method.call(getTruncatedItems(req), function findIdentity(item) {
+  const method = (Boolean(all) === true) ? [].every : [].some;
+  return method.call(getTruncatedItems(req), item => {
     return item.value === value;
   });
 }
 
 
 module.exports = superclass => class Truncated extends superclass {
-
   locals(req, res) {
     return Object.assign({}, super.locals(req, res), {
       truncatedItem: truncatedItem(req)
@@ -55,7 +55,6 @@ module.exports = superclass => class Truncated extends superclass {
   }
 
   saveValues(req, res, next) {
-
     updateTruncatedItems(req);
 
     if (identity(req, true, 'yes') === true) {
@@ -72,5 +71,4 @@ module.exports = superclass => class Truncated extends superclass {
 
     super.saveValues(req, res, next);
   }
-
 };

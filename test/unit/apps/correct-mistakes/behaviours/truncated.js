@@ -4,7 +4,6 @@ const Behaviour = require('../../../../../apps/correct-mistakes/behaviours/trunc
 const Controller = require('hof').controller;
 
 describe('apps/correct-mistakes/behaviours/truncated', () => {
-
   let controller;
   let req;
   let res;
@@ -21,7 +20,6 @@ describe('apps/correct-mistakes/behaviours/truncated', () => {
   });
 
   describe('.saveValues()', () => {
-
     beforeEach(() => {
       sinon.stub(Controller.prototype, 'saveValues').yieldsAsync();
     });
@@ -39,7 +37,7 @@ describe('apps/correct-mistakes/behaviours/truncated', () => {
     it('updates the truncated-items', done => {
       req.form.values = {
         'truncation-page': 'item-one',
-         truncated: 'no'
+        truncated: 'no'
       };
       controller.saveValues(req, res, sandbox(() => {
         req.sessionModel.get('truncated-items').should.eql([{id: 'item-one', value: 'no'}, {id: 'item-two'}]);
@@ -49,12 +47,12 @@ describe('apps/correct-mistakes/behaviours/truncated', () => {
     it('redirects to the exit page if "yes" is selected for all truncated-items', done => {
       req.form.values = {
         'truncation-page': 'item-one',
-         truncated: 'yes'
+        truncated: 'yes'
       };
       controller.saveValues(req, res, () => {
         req.form.values = {
           'truncation-page': 'item-two',
-           truncated: 'yes'
+          truncated: 'yes'
         };
 
         controller.saveValues(req, res, sandbox(() => {
@@ -66,12 +64,12 @@ describe('apps/correct-mistakes/behaviours/truncated', () => {
     it('redirects to the next page if "no" is selected for any truncated-items', done => {
       req.form.values = {
         'truncation-page': 'item-one',
-         truncated: 'yes'
+        truncated: 'yes'
       };
       controller.saveValues(req, res, () => {
         req.form.values = {
           'truncation-page': 'item-two',
-           truncated: 'no'
+          truncated: 'no'
         };
 
         controller.saveValues(req, res, sandbox(() => {
@@ -83,7 +81,7 @@ describe('apps/correct-mistakes/behaviours/truncated', () => {
     it('redirects to the truncate page if any item has not been selected', done => {
       req.form.values = {
         'truncation-page': 'item-one',
-         truncated: 'yes'
+        truncated: 'yes'
       };
       controller.saveValues(req, res, () => {
         req.form.values = {
@@ -98,7 +96,6 @@ describe('apps/correct-mistakes/behaviours/truncated', () => {
   });
 
   describe('.locals()', () => {
-
     it('includes a truncatedItem entity', () => {
       req.form.values['item-one'] = 'foofoofoofoofoofoofoofoofoomaxfoo';
 
@@ -107,7 +104,7 @@ describe('apps/correct-mistakes/behaviours/truncated', () => {
 
     it('includes a pretty version of the truncatedItem id', () => {
       req.form.values['item-one'] = 'foofoofoofoofoofoofoofoofoomaxfoo';
-      var locals = controller.locals(req, res);
+      const locals = controller.locals(req, res);
 
       locals.truncatedItem.id.should.equal('item-one');
       locals.truncatedItem.pretty.should.equal('item one');
@@ -115,21 +112,21 @@ describe('apps/correct-mistakes/behaviours/truncated', () => {
 
     it('includes the original length of the truncatedItem value', () => {
       req.form.values['item-one'] = 'foofoofoofoofoofoofoofoofoomaxfoo';
-      var locals = controller.locals(req, res);
+      const locals = controller.locals(req, res);
 
       locals.truncatedItem.length.should.equal(33);
     });
 
     it('includes the original value of the truncatedItem', () => {
       req.form.values['item-one'] = 'foofoofoofoofoofoofoofoofoomaxfoo';
-      var locals = controller.locals(req, res);
+      const locals = controller.locals(req, res);
 
       locals.truncatedItem.value.should.equal('foofoofoofoofoofoofoofoofoomaxfoo');
     });
 
     it('includes the truncated value of the truncatedItem', () => {
       req.form.values['item-one'] = 'foofoofoofoofoofoofoofoofoomaxfoo';
-      var locals = controller.locals(req, res);
+      const locals = controller.locals(req, res);
 
       locals.truncatedItem.slice.should.equal('foofoofoofoofoofoofoofoofoomax');
     });

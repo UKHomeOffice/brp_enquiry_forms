@@ -5,9 +5,7 @@ const Model = require('../../../../../apps/common/models/email');
 const Controller = require('hof').controller;
 
 describe('apps/common/controllers/confirm', () => {
-
   describe('.saveValues()', () => {
-
     let controller;
     let req;
     let res;
@@ -100,7 +98,5 @@ describe('apps/common/controllers/confirm', () => {
         err.message.should.equal('no service found');
       }, done));
     });
-
   });
-
 });

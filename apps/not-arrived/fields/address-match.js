@@ -27,7 +27,7 @@ module.exports = {
     label: 'fields.address-house-number.label',
     dependent: {
       value: 'no',
-      field: 'address-match',
+      field: 'address-match'
     }
   },
   'address-street': {
@@ -35,7 +35,7 @@ module.exports = {
     label: 'fields.address-street.label',
     dependent: {
       value: 'no',
-      field: 'address-match',
+      field: 'address-match'
     }
   },
   'address-town': {
@@ -43,14 +43,14 @@ module.exports = {
     label: 'fields.address-town.label',
     dependent: {
       value: 'no',
-      field: 'address-match',
+      field: 'address-match'
     }
   },
   'address-county': {
     label: 'fields.address-county.label',
     dependent: {
       value: 'no',
-      field: 'address-match',
+      field: 'address-match'
     }
   },
   'address-postcode': {
@@ -58,7 +58,7 @@ module.exports = {
     label: 'fields.address-postcode.label',
     dependent: {
       value: 'no',
-      field: 'address-match',
+      field: 'address-match'
     }
   },
   'case-id': {
@@ -67,7 +67,7 @@ module.exports = {
     hint: 'fields.case-id.hint',
     dependent: {
       value: 'no',
-      field: 'address-match',
+      field: 'address-match'
     }
   }
 };

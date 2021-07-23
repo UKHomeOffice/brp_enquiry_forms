@@ -18,7 +18,7 @@ module.exports = {
         'date-lost',
         'date-lost-day',
         'date-lost-month',
-        'date-lost-year',
+        'date-lost-year'
       ],
       backLink: 'where',
       next: '/personal-details'

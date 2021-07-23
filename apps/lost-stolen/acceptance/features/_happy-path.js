@@ -1,3 +1,4 @@
+/* eslint-disable */
 'use strict';
 
 Feature('Lost or Stolen - Happy path');
@@ -8,15 +9,10 @@ const values = {
   'org-help': 'yes'
 };
 
-Before((
-  I
-) => {
+Before(I => {
   I.amOnPage('/lost-stolen/where');
 });
 
-Scenario('An applicaton can be completed end-to-end', (
-  I
-) => {
+Scenario('An applicaton can be completed end-to-end', I => {
   I.completeToStep('/lost-stolen/confirmation', values);
 });
-

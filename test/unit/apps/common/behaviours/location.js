@@ -4,9 +4,7 @@ const Controller = require('hof').controller;
 const Behaviour = require('../../../../../apps/common/behaviours/location');
 
 describe('apps/common/behaviours/location', () => {
-
   describe('locals', () => {
-
     let controller;
     let req;
     let res;
@@ -21,7 +19,6 @@ describe('apps/common/behaviours/location', () => {
     });
 
     describe('when the user is outside the uk', () => {
-
       beforeEach(() => {
         req.form.values['inside-uk'] = 'no';
       });
@@ -30,11 +27,9 @@ describe('apps/common/behaviours/location', () => {
         controller.locals(req, res).should.have.property('location')
           .and.deep.equal({'outside-uk': true});
       });
-
     });
 
     describe('when the user is inside the uk', () => {
-
       beforeEach(() => {
         req.form.values['inside-uk'] = 'yes';
       });
@@ -43,18 +38,13 @@ describe('apps/common/behaviours/location', () => {
         controller.locals(req, res).should.have.property('location')
           .and.deep.equal({'inside-uk': true});
       });
-
     });
 
     describe('when the user is neither inside the uk or outside the uk', () => {
-
       it('locals.location is not-specified', () => {
         controller.locals(req, res).should.have.property('location')
           .and.deep.equal({'not-specified': true});
       });
-
     });
-
   });
-
 });

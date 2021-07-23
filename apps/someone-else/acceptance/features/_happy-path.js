@@ -1,3 +1,4 @@
+/* eslint-disable */
 'use strict';
 
 Feature('Someone Else - Happy path');
@@ -12,15 +13,10 @@ const values = {
   'org-help': 'yes'
 };
 
-Before((
-  I
-) => {
+Before(I => {
   I.amOnPage('/someone-else/');
 });
 
-Scenario('An applicaton can be completed end-to-end', (
-  I
-) => {
+Scenario('An applicaton can be completed end-to-end', I => {
   I.completeToStep('/someone-else/confirmation', values);
 });
-

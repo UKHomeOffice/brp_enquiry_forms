@@ -6,7 +6,6 @@ const Behaviour = require('../../../../../apps/not-arrived/behaviours/letter-rec
 const Controller = require('hof').controller;
 
 describe('apps/not-arrived/behaviours/letter-received', () => {
-
   let controller;
   let req;
   let res;
@@ -21,7 +20,6 @@ describe('apps/not-arrived/behaviours/letter-received', () => {
   });
 
   describe('validate', () => {
-
     it('throws a `required` error if a letter has been received, but no other questions are answered', done => {
       req.form.values = {
         received: 'yes',
@@ -29,16 +27,14 @@ describe('apps/not-arrived/behaviours/letter-received', () => {
         'no-letter': ''
       };
 
-      controller.validate(req, res, sandbox((err) => {
+      controller.validate(req, res, sandbox(err => {
         err['delivery-date'].should.be.an.instanceOf(controller.ValidationError);
         err['delivery-date'].type.should.equal('required');
       }, done));
     });
-
   });
 
   describe('saveValues', () => {
-
     let clock;
 
     beforeEach(() => {
@@ -88,7 +84,5 @@ describe('apps/not-arrived/behaviours/letter-received', () => {
         req.form.options.next.should.equal('/same-address');
       }, done));
     });
-
   });
-
 });

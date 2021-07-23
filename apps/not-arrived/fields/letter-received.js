@@ -26,5 +26,5 @@ module.exports = {
       value: 'yes',
       field: 'received'
     }
-  },
+  }
 };

@@ -4,7 +4,6 @@ const Behaviour = require('../../../../../apps/someone-else/behaviours/personal-
 const Controller = require('hof').controller;
 
 describe('apps/someone-else/behaviours/personal-details', () => {
-
   let controller;
   let req;
   let res;
@@ -20,7 +19,6 @@ describe('apps/someone-else/behaviours/personal-details', () => {
   });
 
   describe('configure', () => {
-
     beforeEach(() => {
       req.form.options.fields = {
         'date-of-birth': {
@@ -67,7 +65,5 @@ describe('apps/someone-else/behaviours/personal-details', () => {
         });
       }, done));
     });
-
   });
-
 });

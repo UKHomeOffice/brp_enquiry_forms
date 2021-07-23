@@ -1,3 +1,4 @@
+/* eslint-disable consistent-return, arrow-body-style */
 'use strict';
 
 const _ = require('underscore');
@@ -31,7 +32,7 @@ function isTooLong(key, max, req) {
 function getTruncatedItems(req) {
   const items = [];
 
-  truncateConfigs.forEach(function eachConfig(config) {
+  truncateConfigs.forEach(config => {
     if (isTooLong.call(this, config.id, config.max, req)) {
       items.unshift({id: config.id});
     }
@@ -40,17 +41,16 @@ function getTruncatedItems(req) {
 }
 
 function anyChecked(req) {
-  const checked = _.filter(_.keys(req.form.values), function filterChecked(valueKey) {
+  const checked = _.filter(_.keys(req.form.values), valueKey => {
     return isChecked(valueKey, req);
   });
   return checked.length > 0;
 }
 
 module.exports = superclass => class AboutError extends superclass {
-
   getNextStep(req, res) {
-    var next = super.getNextStep(req, res);
-    var truncatedItems = getTruncatedItems(req);
+    let next = super.getNextStep(req, res);
+    const truncatedItems = getTruncatedItems(req);
     req.sessionModel.unset('triage');
 
     if (isChecked.call(this, 'conditions-error-checkbox', req) && req.sessionModel.get('location-applied') === 'yes') {
@@ -65,14 +65,13 @@ module.exports = superclass => class AboutError extends superclass {
   }
 
   saveValues(req, res, callback) {
-    var formData = _.clone(req.form.values);
-    var diff;
+    const formData = _.clone(req.form.values);
 
-    req.form.values = _.pick(formData, function pickCheckedData(value, key) {
+    req.form.values = _.pick(formData, function (value, key) {
       return isChecked.call(this, key, req);
     }.bind(this));
 
-    diff = _.filter(_.keys(formData), function filterDiff(key) {
+    const diff = _.filter(_.keys(formData), key => {
       return !_.has(req.form.values, key);
     });
 
@@ -89,5 +88,4 @@ module.exports = superclass => class AboutError extends superclass {
     }
     super.validate(req, res, next);
   }
-
 };

@@ -48,7 +48,7 @@ module.exports = {
       next: '/uk-address',
       forks: [{
         target: '/same-address',
-        condition: function testUKLocation(req) {
+        condition: req => {
           if (req.sessionModel && req.sessionModel.toJSON) {
             return req.sessionModel.toJSON()['location-applied'] === 'yes';
           }
@@ -56,7 +56,7 @@ module.exports = {
         }
       }, {
         target: '/uk-address',
-        condition: function testAbroadLocation(req) {
+        condition: req => {
           if (req.sessionModel && req.sessionModel.toJSON) {
             return req.sessionModel.toJSON()['location-applied'] === 'no';
           }

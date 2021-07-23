@@ -1,3 +1,4 @@
+/* eslint-disable consistent-return, arrow-body-style */
 'use strict';
 
 const _ = require('underscore');
@@ -6,33 +7,33 @@ const client = new StatsD();
 const Model = require('../models/email');
 
 const serviceMap = {
-  '/not-arrived': function notArrived() {
+  '/not-arrived': () => {
     return {
       template: 'delivery',
       subject: 'Form submitted: Your BRP hasn\'t arrived'
     };
   },
-  '/correct-mistakes': function correctMistakes(data) {
-    var suffix = data.triage ? '-triage' : '';
+  '/correct-mistakes': data => {
+    const suffix = data.triage ? '-triage' : '';
     return {
       template: 'error' + suffix,
       subject: 'Form submitted: Report a problem with your new BRP'
     };
   },
-  '/lost-stolen': function lostStolenDamaged(data) {
-    var suffix = (data['inside-uk'] === 'yes') ? '-uk' : '-abroad';
+  '/lost-stolen': data => {
+    const suffix = (data['inside-uk'] === 'yes') ? '-uk' : '-abroad';
     return {
       template: 'lost-or-stolen' + suffix,
       subject: 'Form submitted: Report a lost or stolen BRP'
     };
   },
-  '/collection': function collection() {
+  '/collection': () => {
     return {
       template: 'collection',
       subject: 'Form submitted: Report a collection problem'
     };
   },
-  '/someone-else': function someoneElse() {
+  '/someone-else': () => {
     return {
       template: 'someone-else',
       subject: 'Form submitted: Report someone else collecting your BRP'
@@ -41,10 +42,8 @@ const serviceMap = {
 };
 
 module.exports = superclass => class Emailer extends superclass {
-
   saveValues(req, res, callback) {
-
-    super.saveValues(req, res, function saveModel() {
+    super.saveValues(req, res, () => {
       const data = _.pick(req.sessionModel.toJSON(), _.identity);
       const service = serviceMap[req.baseUrl] && serviceMap[req.baseUrl](data);
 
@@ -58,7 +57,5 @@ module.exports = superclass => class Emailer extends superclass {
       client.increment('brp.' + service.template + '.submission');
       model.save(callback);
     });
-
   }
-
 };

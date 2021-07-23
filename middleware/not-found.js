@@ -1,14 +1,15 @@
+/* eslint-disable arrow-body-style */
 'use strict';
 
-var path = require('path');
-var hof = require('hof');
-var i18n = hof.i18n({
+const path = require('path');
+const hof = require('hof');
+const i18n = hof.i18n({
   path: path.resolve(__dirname, '../apps/common/translations/__lng__/__ns__.json')
 });
-var logger = require('../lib/logger');
+const logger = require('../lib/logger');
 
-module.exports = function notFound() {
-  return function notFoundHandler(req, res) {
+module.exports = () => {
+  return (req, res) => {
     logger.warn('Cannot find:', req.url);
 
     res.status(404).render('404', {

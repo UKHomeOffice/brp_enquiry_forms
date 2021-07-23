@@ -11,7 +11,6 @@ const redirects = [
 ];
 
 module.exports = () => {
-
   const router = express.Router();
 
   redirects.forEach(redirect => {
@@ -21,5 +20,4 @@ module.exports = () => {
   });
 
   return router;
-
 };

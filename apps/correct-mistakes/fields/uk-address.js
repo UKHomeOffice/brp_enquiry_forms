@@ -21,7 +21,7 @@ module.exports = {
     label: 'fields.address-house-number.label',
     dependent: {
       value: 'yes',
-      field: 'uk-address-radio',
+      field: 'uk-address-radio'
     }
   },
   'uk-address-street': {
@@ -29,7 +29,7 @@ module.exports = {
     label: 'fields.address-street.label',
     dependent: {
       value: 'yes',
-      field: 'uk-address-radio',
+      field: 'uk-address-radio'
     }
   },
   'uk-address-town': {
@@ -37,14 +37,14 @@ module.exports = {
     label: 'fields.address-town.label',
     dependent: {
       value: 'yes',
-      field: 'uk-address-radio',
+      field: 'uk-address-radio'
     }
   },
   'uk-address-county': {
     label: 'fields.address-county.label',
     dependent: {
       value: 'yes',
-      field: 'uk-address-radio',
+      field: 'uk-address-radio'
     }
   },
   'uk-address-postcode': {
@@ -52,7 +52,7 @@ module.exports = {
     label: 'fields.address-postcode.label',
     dependent: {
       value: 'yes',
-      field: 'uk-address-radio',
+      field: 'uk-address-radio'
     }
   }
 };

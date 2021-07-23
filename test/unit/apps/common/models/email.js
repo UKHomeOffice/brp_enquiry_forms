@@ -4,9 +4,7 @@ const EmailService = require('../../../../../services/email');
 const EmailModel = require('../../../../../apps/common/models/email');
 
 describe('apps/common/models/email', () => {
-
   describe('.save()', () => {
-
     let model;
 
     beforeEach(() => {
@@ -25,7 +23,6 @@ describe('apps/common/models/email', () => {
     });
 
     it('calls the send endpoint on the email service with the model data', done => {
-
       model.save(sandbox(() => {
         EmailService.send.should.have.been.calledWith({
           template: 'test_template',
@@ -40,7 +37,5 @@ describe('apps/common/models/email', () => {
         });
       }, done));
     });
-
   });
-
 });

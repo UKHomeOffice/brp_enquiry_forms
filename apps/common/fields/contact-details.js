@@ -37,7 +37,7 @@ module.exports = {
     }
   },
   'contact-address-county': {
-    label: 'fields.address-county.label',
+    label: 'fields.address-county.label'
   },
   'contact-address-postcode': {
     validate: ['required'],
