@@ -1,4 +1,4 @@
-/* eslint-disable consistent-return, arrow-body-style */
+/* eslint-disable consistent-return */
 'use strict';
 
 const _ = require('underscore');

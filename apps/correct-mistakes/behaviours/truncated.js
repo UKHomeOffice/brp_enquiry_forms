@@ -1,4 +1,4 @@
-/* eslint-disable arrow-body-style, consistent-return */
+/* eslint-disable consistent-return */
 'use strict';
 
 function prettyName(value) {
