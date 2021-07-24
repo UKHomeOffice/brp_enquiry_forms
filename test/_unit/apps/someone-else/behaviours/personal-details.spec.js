@@ -19,51 +19,58 @@ describe('apps/someone-else/behaviours/personal-details', () => {
   });
 
   describe('configure', () => {
+    let sandbox;
+
     beforeEach(() => {
+      sandbox = sinon.createSandbox();
       req.form.options.fields = {
         'date-of-birth': {
           validate: ['required']
         }
       };
 
-      sinon.stub(Controller.prototype, 'configure').yieldsAsync();
+      sandbox.stub(Controller.prototype, 'configure').yieldsAsync();
     });
+
     afterEach(() => {
-      Controller.prototype.configure.restore();
+      sandbox.restore();
     });
 
-    it('adds an `after` validator to the date of birth field if the reason is `under-age`', done => {
+    it('adds an `after` validator to the date of birth field if the reason is `under-age`', () => {
       req.sessionModel.set('someone-else-reason-radio', 'under-age');
-      controller.configure(req, res, sandbox(() => {
+      controller.configure(req, res, () => {
         req.form.options.fields['date-of-birth'].should.have.property('validate');
-        req.form.options.fields['date-of-birth'].validate.should.contain({
-          type: 'after',
-          arguments: [18, 'years']
-        });
-      }, done));
+        expect(req.form.options.fields['date-of-birth'].validate).to.deep.eql([
+          'required',
+          {
+            type: 'after',
+            arguments: [18, 'years']
+          }
+        ]);
+      });
     });
 
-    it('does not add an `after` validator to the date of birth field if the reason is not `under-age`', done => {
+    it('does not add an `after` validator to the date of birth field if the reason is not `under-age`', () => {
       req.sessionModel.set('someone-else-reason-radio', 'incapable');
-      controller.configure(req, res, sandbox(() => {
+      controller.configure(req, res, () => {
         req.form.options.fields['date-of-birth'].should.have.property('validate');
         req.form.options.fields['date-of-birth'].validate.should.not.contain({
           type: 'after',
           arguments: [18, 'years']
         });
-      }, done));
+      });
     });
 
-    it('can handle there not being any validators on the date-of-birth field', done => {
+    it('can handle there not being any validators on the date-of-birth field', () => {
       req.form.options.fields['date-of-birth'] = {};
       req.sessionModel.set('someone-else-reason-radio', 'under-age');
-      controller.configure(req, res, sandbox(() => {
+      controller.configure(req, res, () => {
         req.form.options.fields['date-of-birth'].should.have.property('validate');
-        req.form.options.fields['date-of-birth'].validate.should.contain({
+        expect(req.form.options.fields['date-of-birth'].validate).to.deep.eql([{
           type: 'after',
           arguments: [18, 'years']
-        });
-      }, done));
+        }]);
+      });
     });
   });
 });

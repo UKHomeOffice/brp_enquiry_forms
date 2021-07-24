@@ -20,31 +20,35 @@ describe('apps/correct-mistakes/behaviours/truncated', () => {
   });
 
   describe('.saveValues()', () => {
+    let sandbox;
+
     beforeEach(() => {
-      sinon.stub(Controller.prototype, 'saveValues').yieldsAsync();
-    });
-    afterEach(() => {
-      Controller.prototype.saveValues.restore();
+      sandbox = sinon.createSandbox();
+      sandbox.stub(Controller.prototype, 'saveValues').yieldsAsync();
     });
 
-    it('always calls saveValues on the parent controller with exact arguments', done => {
-      controller.saveValues(req, res, sandbox(() => {
+    afterEach(() => {
+      sandbox.restore();
+    });
+
+    it('always calls saveValues on the parent controller with exact arguments', () => {
+      controller.saveValues(req, res, () => {
         Controller.prototype.saveValues.should.have.been.calledOnce;
         Controller.prototype.saveValues.should.have.been.calledWith(req, res);
-      }, done));
+      });
     });
 
-    it('updates the truncated-items', done => {
+    it('updates the truncated-items', () => {
       req.form.values = {
         'truncation-page': 'item-one',
         truncated: 'no'
       };
-      controller.saveValues(req, res, sandbox(() => {
+      controller.saveValues(req, res, () => {
         req.sessionModel.get('truncated-items').should.eql([{id: 'item-one', value: 'no'}, {id: 'item-two'}]);
-      }, done));
+      });
     });
 
-    it('redirects to the exit page if "yes" is selected for all truncated-items', done => {
+    it('redirects to the exit page if "yes" is selected for all truncated-items', () => {
       req.form.values = {
         'truncation-page': 'item-one',
         truncated: 'yes'
@@ -55,13 +59,13 @@ describe('apps/correct-mistakes/behaviours/truncated', () => {
           truncated: 'yes'
         };
 
-        controller.saveValues(req, res, sandbox(() => {
+        controller.saveValues(req, res, () => {
           req.form.options.next.should.equal('/exit-truncated');
-        }, done));
+        });
       });
     });
 
-    it('redirects to the next page if "no" is selected for any truncated-items', done => {
+    it('redirects to the next page if "no" is selected for any truncated-items', () => {
       req.form.values = {
         'truncation-page': 'item-one',
         truncated: 'yes'
@@ -72,13 +76,13 @@ describe('apps/correct-mistakes/behaviours/truncated', () => {
           truncated: 'no'
         };
 
-        controller.saveValues(req, res, sandbox(() => {
+        controller.saveValues(req, res, () => {
           req.form.options.next.should.equal('/uk-address');
-        }, done));
+        });
       });
     });
 
-    it('redirects to the truncate page if any item has not been selected', done => {
+    it('redirects to the truncate page if any item has not been selected', () => {
       req.form.values = {
         'truncation-page': 'item-one',
         truncated: 'yes'
@@ -88,9 +92,9 @@ describe('apps/correct-mistakes/behaviours/truncated', () => {
           'truncation-page': 'item-two'
         };
 
-        controller.saveValues(req, res, sandbox(() => {
+        controller.saveValues(req, res, () => {
           req.form.options.next.should.equal('/truncated');
-        }, done));
+        });
       });
     });
   });

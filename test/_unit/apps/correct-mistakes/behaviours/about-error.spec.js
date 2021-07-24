@@ -18,15 +18,19 @@ describe('apps/correct-mistakes/behaviours/about-error', () => {
   });
 
   describe('.saveValues()', () => {
+    let sandbox;
+
     beforeEach(() => {
-      sinon.stub(Controller.prototype, 'saveValues').yieldsAsync();
-    });
-    afterEach(() => {
-      Controller.prototype.saveValues.restore();
+      sandbox = sinon.createSandbox();
+      sandbox.stub(Controller.prototype, 'saveValues').yieldsAsync();
     });
 
-    it('removes values that are not checked and have unchecked counterparts', done => {
-      sinon.stub(req.sessionModel, 'unset');
+    afterEach(() => {
+      sandbox.restore();
+    });
+
+    it('removes values that are not checked and have unchecked counterparts', () => {
+      sandbox.stub(req.sessionModel, 'unset');
 
       req.form.values = {
         'foo-checkbox': '',
@@ -35,16 +39,16 @@ describe('apps/correct-mistakes/behaviours/about-error', () => {
         baz: 'foo'
       };
 
-      controller.saveValues(req, res, sandbox(() => {
+      controller.saveValues(req, res, () => {
         req.sessionModel.unset.should.have.been.calledWithExactly(['foo-checkbox', 'foo']);
-      }, done));
+      });
     });
 
-    it('always calls the parent controller saveValues with the arguments', done => {
-      controller.saveValues(req, res, sandbox(() => {
+    it('always calls the parent controller saveValues with the arguments', () => {
+      controller.saveValues(req, res, () => {
         Controller.prototype.saveValues.should.have.been.calledOnce
           .and.have.been.calledWith(req, res);
-      }, done));
+      });
     });
   });
 
@@ -109,16 +113,16 @@ describe('apps/correct-mistakes/behaviours/about-error', () => {
   });
 
   describe('.validate', () => {
-    it('returns an error-selection required error if none are checked', done => {
+    it('returns an error-selection required error if none are checked', () => {
       req.form.values['first-name-error-checkbox'] = '';
       req.form.values['last-name-error-checkbox'] = '';
       req.form.values['birth-place-error-checkbox'] = '';
       req.form.values['date-of-birth-error-checkbox'] = '';
 
-      controller.validate(req, res, sandbox(err => {
+      controller.validate(req, res, err => {
         err['error-selection'].should.be.an.instanceof(controller.ValidationError);
         err['error-selection'].should.have.property('type').and.equal('required');
-      }, done));
+      });
     });
   });
 });

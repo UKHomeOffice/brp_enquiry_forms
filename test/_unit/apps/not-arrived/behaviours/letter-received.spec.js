@@ -20,69 +20,71 @@ describe('apps/not-arrived/behaviours/letter-received', () => {
   });
 
   describe('validate', () => {
-    it('throws a `required` error if a letter has been received, but no other questions are answered', done => {
+    it('throws a `required` error if a letter has been received, but no other questions are answered', () => {
       req.form.values = {
         received: 'yes',
         'delivery-date': '',
         'no-letter': ''
       };
 
-      controller.validate(req, res, sandbox(err => {
+      controller.validate(req, res, err => {
         err['delivery-date'].should.be.an.instanceOf(controller.ValidationError);
         err['delivery-date'].type.should.equal('required');
-      }, done));
+      });
     });
   });
 
   describe('saveValues', () => {
     let clock;
+    let sandbox;
 
     beforeEach(() => {
+      sandbox = sinon.createSandbox();
       // set up a fake "now" for tests which test dates
       const now = moment('2017-07-05T12:00:00Z').valueOf();
       clock = sinon.useFakeTimers(now);
 
-      sinon.stub(Controller.prototype, 'saveValues').yieldsAsync();
+      sandbox.stub(Controller.prototype, 'saveValues').yieldsAsync();
     });
 
     afterEach(() => {
       clock.restore();
-      Controller.prototype.saveValues.restore();
+      sandbox.restore();
     });
 
-    it('calls super saveValues', done => {
-      controller.saveValues(req, res, sandbox(() => {
+    it('calls super saveValues', () => {
+      controller.saveValues(req, res, () => {
         Controller.prototype.saveValues.should.have.been.calledOnce;
         Controller.prototype.saveValues.should.have.been.calledWith(req, res);
-      }, done));
+      });
     });
 
-    it('sets range to session if delivery date is within 10 working days of current date', done => {
+    it('sets range to session if delivery date is within 10 working days of current date', () => {
       req.form.values['delivery-date'] = '2017-06-22';
 
-      controller.saveValues(req, res, sandbox(() => {
+      controller.saveValues(req, res, () => {
         req.sessionModel.get('week-day-range').should.eql({
           weekDaysSince: 9,
           weekDaysUntil: 1
         });
-      }, done));
+      });
     });
 
-    it('sets next step if delivery date is not within 10 working days of current date', done => {
+    it('sets next step if delivery date is not within 10 working days of current date', () => {
       req.form.values['delivery-date'] = '2017-06-20';
 
-      controller.saveValues(req, res, sandbox(() => {
+      controller.saveValues(req, res, () => {
         req.form.options.next.should.equal('/same-address');
-      }, done));
+      });
     });
 
-    it('sets next step if no-delivery date is provided', done => {
+    it('sets next step if no-delivery date is provided', () => {
       req.form.values['delivery-date'] = '';
       req.form.values['no-letter'] = 'true';
 
-      controller.saveValues(req, res, sandbox(() => {
+      controller.saveValues(req, res, () => {
         req.form.options.next.should.equal('/same-address');
-      }, done));
+      });
     });
   });
 });

@@ -1,0 +1,16 @@
+{
+  "reporter": [
+    "lcov",
+    "text-summary"
+  ],
+  "check-coverage": true,
+  "statements": 89,
+  "branches": 75,
+  "functions": 85,
+  "lines": 89,
+  "exclude": [
+    "test/**/*.js",
+    "apps/**/sections/**/*.js",
+    "apps/**/fields/**/*.js"
+  ]
+}
