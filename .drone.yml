@@ -24,28 +24,28 @@ steps:
     branch: [ master, feature/* ]
     event: push
 
-- name: build_acceptance
-  pull: if-not-exists
-  image: 340268328991.dkr.ecr.eu-west-2.amazonaws.com/acp/dind
-  commands:
-    - n=0; while [ "$n" -lt 60 ] && [ ! docker stats --no-stream ]; do n=$(( n + 1 )); sleep 1; done
-    - docker build -f Dockerfile-acceptance -t acceptance-$${DRONE_COMMIT_SHA} .
-  when:
-    branch: [ master, feature/* ]
-    event: push
-
-- name: test_acceptance
-  pull: if-not-exists
-  image: 340268328991.dkr.ecr.eu-west-2.amazonaws.com/acp/dind
-  commands:
-  - n=0; while [ "$n" -lt 60 ] && [ ! docker stats --no-stream ]; do n=$(( n + 1 )); sleep 1; done
-  - docker run -d --name=redis-$${DRONE_COMMIT_SHA} redis
-  - docker run -d -e NODE_ENV=ci -e DISABLE_CSP=true --name=app-$${DRONE_COMMIT_SHA} --net=container:redis-$${DRONE_COMMIT_SHA} app-$${DRONE_COMMIT_SHA}
-  - docker run -e OPENSSL_CONF=/etc/ssl/ --rm --net=container:app-$${DRONE_COMMIT_SHA} acceptance-$${DRONE_COMMIT_SHA}
-  - docker rm -vf "app-$${DRONE_COMMIT_SHA}" "redis-$${DRONE_COMMIT_SHA}"
-  when:
-    branch: [ master, feature/* ]
-    event: push
+# - name: build_acceptance
+#   pull: if-not-exists
+#   image: 340268328991.dkr.ecr.eu-west-2.amazonaws.com/acp/dind
+#   commands:
+#     - n=0; while [ "$n" -lt 60 ] && [ ! docker stats --no-stream ]; do n=$(( n + 1 )); sleep 1; done
+#     - docker build -f Dockerfile-acceptance -t acceptance-$${DRONE_COMMIT_SHA} .
+#   when:
+#     branch: [ master, feature/* ]
+#     event: push
+#
+# - name: test_acceptance
+#   pull: if-not-exists
+#   image: 340268328991.dkr.ecr.eu-west-2.amazonaws.com/acp/dind
+#   commands:
+#   - n=0; while [ "$n" -lt 60 ] && [ ! docker stats --no-stream ]; do n=$(( n + 1 )); sleep 1; done
+#   - docker run -d --name=redis-$${DRONE_COMMIT_SHA} redis
+#   - docker run -d -e NODE_ENV=ci -e DISABLE_CSP=true --name=app-$${DRONE_COMMIT_SHA} --net=container:redis-$${DRONE_COMMIT_SHA} app-$${DRONE_COMMIT_SHA}
+#   - docker run -e OPENSSL_CONF=/etc/ssl/ --rm --net=container:app-$${DRONE_COMMIT_SHA} acceptance-$${DRONE_COMMIT_SHA}
+#   - docker rm -vf "app-$${DRONE_COMMIT_SHA}" "redis-$${DRONE_COMMIT_SHA}"
+#   when:
+#     branch: [ master, feature/* ]
+#     event: push
 
 - name: image_to_quay
   pull: if-not-exists
