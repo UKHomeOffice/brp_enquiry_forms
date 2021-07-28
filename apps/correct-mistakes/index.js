@@ -139,7 +139,8 @@ module.exports = {
       next: '/confirmation'
     },
     '/confirmation': {
-      backLink: false
+      backLink: false,
+      clearSession: true
     }
   }
 };

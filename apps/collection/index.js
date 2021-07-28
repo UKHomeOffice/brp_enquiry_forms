@@ -19,7 +19,15 @@ module.exports = {
     },
     '/reasons': {
       behaviours: ReasonsBehaviour,
-      fields: ['reason-radio'],
+      fields: [
+        'reason-radio',
+        'which-post-office',
+        'under-age',
+        'non-identity',
+        'others-identity',
+        'passport-family',
+        'passport-lost'
+      ],
       next: '/personal-details',
       backLink: 'where',
       forks: [{
@@ -76,7 +84,8 @@ module.exports = {
       next: '/confirmation'
     },
     '/confirmation': {
-      backLink: false
+      backLink: false,
+      clearSession: true
     }
   }
 };

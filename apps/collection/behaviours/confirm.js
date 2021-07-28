@@ -13,11 +13,18 @@ function getReason(req) {
     'other'
   ];
   const reason = {};
+  const reasonType = req.form.values['reason-radio'];
 
-  if (reasons.includes(req.form.values['reason-radio'])) {
-    reason[req.form.values['reason-radio']] = true;
-    return reason;
-  }
+  reasons.forEach(r => {
+    if (r === reasonType) {
+      reason[reasonType] = req.sessionModel.get(reasonType);
+      return;
+    }
+    req.sessionModel.unset(r);
+    delete req.form.values[r];
+  });
+
+  return reason;
 }
 
 module.exports = superclass => class Confirm extends superclass {

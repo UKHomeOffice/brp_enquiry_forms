@@ -27,28 +27,28 @@ module.exports = {
     validate: ['required'],
     options: [{
       value: 'which-post-office',
-      toggle: 'reason-which-post-office-group',
+      toggle: 'which-post-office',
       child: 'input-text'
     }, {
       value: 'under-age',
-      toggle: 'reason-under-age-group',
+      toggle: 'under-age',
       child: 'input-text'
     }, {
       value: 'non-identity',
-      toggle: 'reason-non-identity-group',
+      toggle: 'non-identity',
       child: 'input-text'
     }, {
       value: 'others-identity',
-      toggle: 'reason-others-identity-group',
+      toggle: 'others-identity',
       child: 'input-text'
     }, {
       value: 'passport-family',
-      toggle: 'reason-passport-family-group',
+      toggle: 'passport-family',
       child: 'input-text'
     },
     {
       value: 'passport-lost',
-      toggle: 'reason-passport-lost-group',
+      toggle: 'passport-lost',
       child: 'input-text'
     },
     {
@@ -56,36 +56,6 @@ module.exports = {
     }],
     legend: {
       className: 'visuallyhidden'
-    }
-  },
-  'reason-under-age': {
-    dependent: {
-      value: 'under-age',
-      field: 'reason-radio'
-    }
-  },
-  'reason-non-identity': {
-    dependent: {
-      value: 'non-identity',
-      field: 'reason-radio'
-    }
-  },
-  'reason-others-identity': {
-    dependent: {
-      value: 'others-identity',
-      field: 'reason-radio'
-    }
-  },
-  'reason-passport-family': {
-    dependent: {
-      value: 'passport-family',
-      field: 'reason-radio'
-    }
-  },
-  'reason-passport-lost': {
-    dependent: {
-      value: 'passport-lost',
-      field: 'reason-radio'
     }
   },
   'nominated-fullname': {

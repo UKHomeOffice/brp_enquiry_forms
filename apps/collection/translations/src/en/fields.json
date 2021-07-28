@@ -55,25 +55,22 @@
       }
     }
   },
-  "reason-which-post-office-group": {
+  "which-post-office": {
     "label": "Describe the problem (optional)"
   },
-  "reason-under-age-group": {
+  "under-age": {
     "label": "Describe the problem (optional)"
   },
-  "reason-non-identity-group": {
+  "non-identity": {
     "label": "Describe the problem (optional)"
   },
-  "reason-others-identity-group": {
+  "others-identity": {
     "label": "Describe the problem (optional)"
   },
-  "reason-passport-family-group": {
+  "passport-family": {
     "label": "Describe the problem (optional)"
   },
-  "reason-passport-lost-group": {
-    "label": "Describe the problem (optional)"
-  },
-  "reason-passport-stamp-group": {
+  "passport-lost": {
     "label": "Describe the problem (optional)"
   },
   "nominated-fullname": {

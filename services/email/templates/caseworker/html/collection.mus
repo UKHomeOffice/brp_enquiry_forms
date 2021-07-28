@@ -85,13 +85,13 @@
                     <tr style="border-top: 1px solid #009390;">
                       <td colspan="2" width="100%">
                         <p style="font-size: 16px; color: #000; margin: 10px 0;">
-                          {{#reason-which-post-office}}{{reason-which-post-office}}{{/reason-which-post-office}}
-                          {{#reason-under-age}}{{reason-under-age}}{{/reason-under-age}}
-                          {{#reason-non-identity}}{{reason-non-identity}}{{/reason-non-identity}}
-                          {{#reason-others-identity}}{{reason-others-identity}}{{/reason-others-identity}}
-                          {{#reason-passport-family}}{{reason-passport-family}}{{/reason-passport-family}}
-                          {{#reason-passport-lost}}{{reason-passport-lost}}{{/reason-passport-lost}}
-                          {{#reason-other}}{{reason-other}}{{/reason-other}}
+                          {{#which-post-office}}{{which-post-office}}{{/which-post-office}}
+                          {{#under-age}}{{under-age}}{{/under-age}}
+                          {{#non-identity}}{{non-identity}}{{/non-identity}}
+                          {{#others-identity}}{{others-identity}}{{/others-identity}}
+                          {{#passport-family}}{{passport-family}}{{/passport-family}}
+                          {{#passport-lost}}{{passport-lost}}{{/passport-lost}}
+                          {{#other}}{{other}}{{/other}}
                         </p>
                       </td>
                     </tr>
