@@ -5,3 +5,4 @@ apps/**/translations/**/default.json
 LICENSE.md
 README.md
 CONTRIBUTING.md
+npm-debug.log

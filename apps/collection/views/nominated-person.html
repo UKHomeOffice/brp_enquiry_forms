@@ -1,0 +1,69 @@
+{{<layout}}
+  {{$step}}Step 3 of 6{{/step}}
+
+  {{$journeyHeader}}
+    {{#t}}journeys.collection.header{{/t}}
+  {{/journeyHeader}}
+
+  {{$validationSummary}}
+    {{> partials-validation-summary}}
+  {{/validationSummary}}
+
+  {{$propositionHeader}}
+    {{> partials-navigation}}
+  {{/propositionHeader}}
+
+  {{$title}}
+    {{#t}}pages.nominated.header{{/t}}
+  {{/title}}
+
+  {{$header}}
+    {{<partials-page-header}}
+      {{$page-header}}
+        {{#t}}pages.nominated.header{{/t}}
+      {{/page-header}}
+    {{/partials-page-header}}
+  {{/header}}
+
+  {{$content}}
+    <p>{{#t}}pages.nominated.description{{/t}}</p>
+
+    {{<partials-form}}
+
+      {{$form}}
+
+        {{#input-text}}nominated-fullname{{/input-text}}
+
+        <fieldset id="nominated-date-group" class="{{#errors.nominated-date}}validation-error{{/errors.nominated-date}}">
+
+          <legend class="visuallyhidden">
+            <span class="form-label-bold">{{#t}}fields.nominated-date.legend{{/t}}</span>
+          </legend>
+
+          <div class="form-group form-date">
+            {{#t}}fields.nominated-date.legend{{/t}}
+            {{#errors.nominated-date}}
+              <span id="nominated-date-error" class="error-message">
+                {{errors.nominated-date.message}}
+              </span>
+            {{/errors.nominated-date}}
+            <p id="nominated-date-hint" class="form-hint">
+              {{#t}}fields.nominated-date.hint{{/t}}
+            </p>
+            {{#input-date}}nominated-date{{/input-date}}
+          </div>
+
+        </fieldset>
+
+        {{#select}}nominated-nationality{{/select}}
+
+        {{#input-text}}nominated-id-number{{/input-text}}
+
+        {{#input-submit}}continue{{/input-submit}}
+      {{/form}}
+
+    {{/partials-form}}
+
+  {{/content}}
+
+{{/layout}}

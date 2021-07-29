@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = {
- 'location-applied': {
+  'location-applied': {
     validate: ['required'],
     legend: {
       className: 'visuallyhidden'

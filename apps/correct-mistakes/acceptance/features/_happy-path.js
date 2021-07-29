@@ -1,3 +1,4 @@
+/* eslint-disable */
 'use strict';
 
 Feature('Correct Mistakes - Happy path');
@@ -21,15 +22,10 @@ const values = {
   'org-help': 'yes'
 };
 
-Before((
-  I
-) => {
+Before(I => {
   I.amOnPage('/correct-mistakes/location');
 });
 
-Scenario('An applicaton can be completed end-to-end', (
-  I
-) => {
+Scenario('An applicaton can be completed end-to-end', I => {
   I.completeToStep('/correct-mistakes/confirmation', values);
 });
-

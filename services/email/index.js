@@ -1,14 +1,15 @@
+/* eslint-disable func-names */
 'use strict';
 
-var logger = require('../../lib/logger');
-var nodemailer = require('nodemailer');
-var config = require('../../config');
-var i18n = require('i18n-future');
-var Hogan = require('hogan.js');
-var fs = require('fs');
-var path = require('path');
+const logger = require('../../lib/logger');
+const nodemailer = require('nodemailer');
+const config = require('../../config');
+const i18n = require('i18n-future');
+const Hogan = require('hogan.js');
+const fs = require('fs');
+const path = require('path');
 
-var customerHtmlTemplates = {
+const customerHtmlTemplates = {
   error: fs.readFileSync(
     path.resolve(__dirname, './templates/customer/html/error.mus')).toString('utf8'),
   'error-triage': fs.readFileSync(
@@ -25,7 +26,7 @@ var customerHtmlTemplates = {
     path.resolve(__dirname, './templates/customer/html/someone-else.mus')).toString('utf8')
 };
 
-var customerPlainTextTemplates = {
+const customerPlainTextTemplates = {
   error: fs.readFileSync(
     path.resolve(__dirname, './templates/customer/plain/error.mus')).toString('utf8'),
   'error-triage': fs.readFileSync(
@@ -42,7 +43,7 @@ var customerPlainTextTemplates = {
     path.resolve(__dirname, './templates/customer/plain/someone-else.mus')).toString('utf8')
 };
 
-var caseworkerHtmlTemplates = {
+const caseworkerHtmlTemplates = {
   error: fs.readFileSync(
     path.resolve(__dirname, './templates/caseworker/html/error.mus')).toString('utf8'),
   'error-triage': fs.readFileSync(
@@ -59,7 +60,7 @@ var caseworkerHtmlTemplates = {
     path.resolve(__dirname, './templates/caseworker/html/someone-else.mus')).toString('utf8')
 };
 
-var caseworkerPlainTextTemplates = {
+const caseworkerPlainTextTemplates = {
   error: fs.readFileSync(
     path.resolve(__dirname, './templates/caseworker/plain/error.mus')).toString('utf8'),
   'error-triage': fs.readFileSync(
@@ -76,7 +77,7 @@ var caseworkerPlainTextTemplates = {
     path.resolve(__dirname, './templates/caseworker/plain/someone-else.mus')).toString('utf8')
 };
 
-var translationLocation = {
+const translationLocation = {
   error: 'correct-mistakes',
   'error-triage': 'correct-mistakes',
   'lost-or-stolen-uk': 'lost-stolen',
@@ -86,10 +87,10 @@ var translationLocation = {
   'someone-else': 'someone-else'
 };
 
-var transportType = (config.email.auth.user === '' && config.env !== 'docker-compose') ?
+let transportType = (config.email.auth.user === '' && config.env !== 'docker-compose') ?
   'stub' : 'smtp';
 
-var emailOptions = {
+let emailOptions = {
   host: config.email.host,
   port: config.email.port,
   ignoreTLS: config.email.ignoreTLS
@@ -116,14 +117,14 @@ function Emailer() {
 }
 
 Emailer.prototype.send = function send(email, callback) {
-  var locali18n = i18n({
+  const locali18n = i18n({
     path: path.resolve(
       __dirname, '../../apps/', './' + translationLocation[email.template], './translations/__lng__/__ns__.json'
     )
   });
 
   locali18n.on('ready', function locali18nLoaded() {
-    var templateData = {
+    const templateData = {
       data: email.dataToSend,
       t: function t() {
         return function lookupTranslation(translate) {
@@ -132,7 +133,7 @@ Emailer.prototype.send = function send(email, callback) {
         };
       }
     };
-    var attachments = [
+    const attachments = [
       {
         filename: 'govuk_logotype_email.png',
         path: path.resolve(__dirname, './images/govuk_logotype_email.png'),

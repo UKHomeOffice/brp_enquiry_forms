@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = {
-  'truncated': {
+  truncated: {
     validate: ['required'],
     className: 'inline',
     legend: {

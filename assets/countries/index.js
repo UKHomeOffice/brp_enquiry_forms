@@ -1,3 +1,4 @@
+/* eslint-disable */
 'use strict';
 
 var countriesDomestic = [
@@ -267,7 +268,7 @@ var countriesNonEU = [
   'Western Sahara',
   'Yemen',
   'Zambia',
-  'Zimbabwe',
+  'Zimbabwe'
 ];
 
 var euCountries = [].concat(countriesDomestic, countriesOtherEU);

@@ -17,11 +17,9 @@ function getLocation(req) {
 }
 
 module.exports = superclass => class Confirmation extends superclass {
-
   locals(req, res) {
     return Object.assign({}, super.locals(req, res), {
       location: getLocation(req)
     });
   }
-
 };

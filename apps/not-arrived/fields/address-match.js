@@ -24,50 +24,50 @@ module.exports = {
   },
   'address-house-number': {
     validate: ['required'],
-    label: 'common-fields.address-house-number.label',
+    label: 'fields.address-house-number.label',
     dependent: {
       value: 'no',
-      field: 'address-match',
+      field: 'address-match'
     }
   },
   'address-street': {
     validate: ['required'],
-    label: 'common-fields.address-street.label',
+    label: 'fields.address-street.label',
     dependent: {
       value: 'no',
-      field: 'address-match',
+      field: 'address-match'
     }
   },
   'address-town': {
     validate: ['required'],
-    label: 'common-fields.address-town.label',
+    label: 'fields.address-town.label',
     dependent: {
       value: 'no',
-      field: 'address-match',
+      field: 'address-match'
     }
   },
   'address-county': {
-    label: 'common-fields.address-county.label',
+    label: 'fields.address-county.label',
     dependent: {
       value: 'no',
-      field: 'address-match',
+      field: 'address-match'
     }
   },
   'address-postcode': {
     validate: ['required'],
-    label: 'common-fields.address-postcode.label',
+    label: 'fields.address-postcode.label',
     dependent: {
       value: 'no',
-      field: 'address-match',
+      field: 'address-match'
     }
   },
   'case-id': {
     validate: ['required'],
-    label: 'common-fields.case-id.label',
-    hint: 'common-fields.case-id.hint',
+    label: 'fields.case-id.label',
+    hint: 'fields.case-id.hint',
     dependent: {
       value: 'no',
-      field: 'address-match',
+      field: 'address-match'
     }
   }
 };

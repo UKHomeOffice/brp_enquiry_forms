@@ -1,7 +1,8 @@
+/* eslint-disable consistent-return */
 'use strict';
 
 function getReason(req) {
-  var reasons = [
+  const reasons = [
     'which-post-office',
     'under-age',
     'non-identity',
@@ -11,23 +12,28 @@ function getReason(req) {
     'no-brp',
     'other'
   ];
-  var reason = {};
+  const reason = {};
+  const reasonType = req.form.values['reason-radio'];
 
-  if (reasons.includes(req.form.values['reason-radio'])) {
-    reason[req.form.values['reason-radio']] = true;
-    return reason;
-  }
+  reasons.forEach(r => {
+    if (r === reasonType) {
+      reason[reasonType] = req.sessionModel.get(reasonType);
+      return;
+    }
+    req.sessionModel.unset(r);
+    delete req.form.values[r];
+  });
+
+  return reason;
 }
 
 module.exports = superclass => class Confirm extends superclass {
-
   locals(req, res) {
-    var locals = super.locals(req, res);
+    const locals = super.locals(req, res);
     const reason = getReason(req);
     req.sessionModel.set(reason);
     return Object.assign({}, locals, {
       reason
     });
   }
-
 };

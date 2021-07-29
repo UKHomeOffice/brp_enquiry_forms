@@ -16,7 +16,8 @@
     "required": "Enter your date of birth",
     "before": "The date is in the future",
     "date": "Enter a valid date",
-    "after": "If you are over 18 years old you can collect your own BRP"
+    "after": "If you are over 18 years old you can collect your own BRP",
+    "over18": "You must be over 18 years old to collect your own BRP otherwise use a nominated person"
   },
   "collection-date": {
     "required": "Enter the collection date",
@@ -26,7 +27,8 @@
   "nominated-date": {
     "required": "What is the nominated person's date of birth?",
     "before": "The date is in the future",
-    "date": "Enter the nominated person's date of birth in the correct format"
+    "date": "Enter the nominated person's date of birth in the correct format",
+    "over18": "Your nominated person must be over 18 years old to collect your BRP"
   },
   "nominated-fullname": {
     "required": "What is the nominated person's full name?"

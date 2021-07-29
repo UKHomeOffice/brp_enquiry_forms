@@ -1,4 +1,26 @@
 {
+  "address": {
+    "legend": "Address"
+  },
+  "address-house-number": {
+    "label": "Building name or number"
+  },
+  "address-street": {
+    "label": "Street"
+  },
+  "address-town": {
+    "label": "Town/City"
+  },
+  "address-county": {
+    "label": "County (optional)"
+  },
+  "address-postcode": {
+    "label": "Postcode"
+  },
+  "case-id": {
+    "label": "Case ID number",
+    "hint": "(Enter the case ID found on your visa decision letter.)"
+  },
   "org-help": {
     "options": {
       "yes": {

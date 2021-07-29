@@ -1,3 +1,4 @@
+/* eslint-disable */
 'use strict';
 
 const baseUrl = require('../../../').baseUrl || '';
@@ -9,21 +10,17 @@ const values = {
   'date-lost-day': '1',
   'date-lost-month': '1',
   'date-lost-year': '2017',
-  'fullname': 'Saad Khan',
-  'nationality': 'United Arab Emirates',
-  'brp-card': '123',
+  fullname: 'Saad Khan',
+  nationality: 'United Arab Emirates',
+  'brp-card': '123'
 };
 
-Before((
-  I
-) => {
+Before(I => {
   I.amOnPage(`${baseUrl}`);
   I.completeToStep(`${baseUrl}/contact-details`, values);
 });
 
-Scenario('I can edit the email', (
-  I
-) => {
+Scenario('I can edit the email', I => {
   I.fillField('email', 's@email.com');
   I.click('input[type="submit"]');
   I.click('#email-change');

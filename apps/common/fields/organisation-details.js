@@ -21,7 +21,7 @@ module.exports = {
     dependent: {
       field: 'org-help',
       value: 'yes'
-    },
+    }
   },
   'rep-email': {
     validate: ['email'],

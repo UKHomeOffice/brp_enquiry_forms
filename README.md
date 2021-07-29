@@ -94,11 +94,6 @@ Run the jscs style checker. Rules are defined in [.jscsrc.json](./.jscsrc.json)
 $ npm run style
 ```
 
-Analyse the quality of the codebase (for results - open [./reports/plato/index.html](./reports/plato/index.html))
-```bash
-$ npm run quality
-```
-
 Compile the Sass to CSS
 ```bash
 $ npm run sass
@@ -107,4 +102,3 @@ $ npm run sass
 ## Acceptance tests
 
 For details on [Acceptance tests](https://github.com/UKHomeOffice/brp_app/tree/master/acceptance_tests)
-

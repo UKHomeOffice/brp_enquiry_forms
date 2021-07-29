@@ -1,7 +1,24 @@
 {
-  "build": {
-    "translate": {
-      "shared": "./apps/common/translations/src"
-    }
+  "appName": "Biometric Residency Permit",
+  "theme": "govUK",
+  "behaviours": [
+    "hof/components/clear-session",
+    "./apps/common/behaviours/country-select"
+  ],
+  "fields": "./apps/common/fields",
+  "routes": [
+    "./apps/common",
+    "./apps/collection",
+    "./apps/correct-mistakes",
+    "./apps/lost-stolen",
+    "./apps/not-arrived",
+    "./apps/someone-else"
+  ],
+  "translations": "./apps/common/translations",
+  "views": [
+    "./apps/common/views"
+  ],
+  "session": {
+    "name": "biometric-residency-permit.hof.sid"
   }
 }

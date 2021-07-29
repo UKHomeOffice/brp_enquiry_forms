@@ -1,3 +1,4 @@
+/* eslint-disable */
 'use strict';
 
 Feature('Not Arrived - Happy path');
@@ -5,7 +6,7 @@ Feature('Not Arrived - Happy path');
 const yearString = () => ((new Date()).getFullYear() - 1).toString();
 
 const values = {
-  'received': 'yes',
+  received: 'yes',
   'no-letter': 'false',
   'delivery-date-month': '6',
   'delivery-date-year': yearString(),
@@ -13,15 +14,10 @@ const values = {
   'org-help': 'yes'
 };
 
-Before((
-  I
-) => {
+Before(I => {
   I.amOnPage('/not-arrived/letter-received');
 });
 
-Scenario('An applicaton can be completed end-to-end', (
-  I
-) => {
+Scenario('An applicaton can be completed end-to-end', I => {
   I.completeToStep('/not-arrived/confirmation', values);
 });
-

@@ -12,3 +12,5 @@ doc
 apps/**/translations/en
 dump.rdb
 coverage
+.nyc_output
+codecept.conf.js

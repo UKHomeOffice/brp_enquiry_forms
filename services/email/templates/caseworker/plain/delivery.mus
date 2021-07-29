@@ -24,7 +24,7 @@ Personal Details
 {{#address-county}}{{address-county}},{{/address-county}}
 {{address-postcode}}
 
-{{#t}}common-fields.case-id.label{{/t}}
+{{#t}}fields.case-id.label{{/t}}
 {{case-id}}
 {{/address-street}}
 
@@ -69,7 +69,7 @@ Delivery Details
 {{#address-county}}{{address-county}},{{/address-county}}
 {{address-postcode}}
 
-{{#t}}common-fields.case-id.label{{/t}}
+{{#t}}fields.case-id.label{{/t}}
 {{case-id}}
 {{/address-street}}
 
