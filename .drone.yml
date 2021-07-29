@@ -175,7 +175,7 @@ steps:
         include:
           - master
           - feature/*
-    event: pull_request
+      event: pull_request
 
   - name: sonar_scanner_branch
     <<: *sonar_scanner
