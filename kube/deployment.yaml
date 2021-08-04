@@ -99,15 +99,6 @@ spec:
                   name: brp-session
                   key: token
             {{ end }}
-              {{ if {eq. KUBE_NAMESPACE .BRANCH_ENV} }}
-            - name: CUCUMBER_PUBLISH_ENABLED
-              value: true
-            - name: CUCUMBER_PUBLISH_TOKEN
-              valueFrom:
-                secretKeyRef:
-                  name: cucumber-publish
-                  key: token
-              {{ end }}
           {{ if not (eq .KUBE_NAMESPACE .BRANCH_ENV) }}
           livenessProbe:
             httpGet:
