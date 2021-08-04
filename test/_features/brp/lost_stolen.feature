@@ -1,4 +1,4 @@
-@feauture @lost_stolen
+@feature @lost_stolen
 Feature: A user should be able to log a lost or stolen BRP
 
   Scenario: Lost brp in the UK

@@ -1,4 +1,4 @@
-@feauture @someone_else
+@feature @someone_else
 Feature: I want someone else to collect my BRP
 
   Scenario: I want someone else to collect my BRP because I have a medical condition
