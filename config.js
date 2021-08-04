@@ -40,5 +40,8 @@ module.exports = {
     ignoreTLS: process.env.EMAIL_IGNORE_TLS === 'true',
     secure: process.env.EMAIL_SECURE === 'true'
   },
+  hosts: {
+    acceptanceTests: process.env.ACCEPTANCE_HOST_NAME || `http://localhost:${process.env.PORT || 8080}`
+  },
   govukLandingPageUrl: new URL('https://www.gov.uk/biometric-residence-permits')
 };
