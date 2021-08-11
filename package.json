@@ -15,7 +15,7 @@
     "test:lint": "eslint . --config ./node_modules/eslint-config-hof/default.js",
     "test:unit": "nyc _mocha \"test/_unit/**/*.spec.js\"",
     "test:acceptance": "npm run test:acceptance:new && npm run test:acceptance:old",
-    "test:acceptance:new": "funkie so-acceptance --steps",
+    "test:acceptance:new": "so-acceptance --steps",
     "test:acceptance:old": "cd acceptance_tests/; bundle install && cucumber",
     "test:snyk": "snyk config set api=SNYK_TOKEN && snyk test",
     "build": "hof-build",
