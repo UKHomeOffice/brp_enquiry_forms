@@ -4208,10 +4208,10 @@ hof-util-testdata@^1.0.1:
   dependencies:
     homeoffice-countries "^0.1.0"
 
-hof@^19.5.3:
-  version "19.5.3"
-  resolved "https://registry.yarnpkg.com/hof/-/hof-19.5.3.tgz#c4ae0e70de276dc42b0bfd22cbcb5e790f3645f0"
-  integrity sha512-VBWqhvkWq+MvX1+6tZepgOmGkgc0VUN63NL5FSMpznd7kB8wdrfhf+wq5X+PpYhLNsC7AqXz7ZX6RxRDg2h6uA==
+hof@^19.7.3:
+  version "19.7.3"
+  resolved "https://registry.yarnpkg.com/hof/-/hof-19.7.3.tgz#e80a6cbf36ca8df8ba1c3ee2f7c8db0225ce35ac"
+  integrity sha512-DejWtFNTKRkpWFrXFVI1rYrqCSkCAe+YDhUQNMHm2NZwgnp+2Dy/IpfnVRpFDts9TEMuP35qJzCzsT/zK4DuQw==
   dependencies:
     aliasify "^2.1.0"
     bluebird "^3.7.2"
@@ -4242,7 +4242,8 @@ hof@^19.5.3:
     homeoffice-countries "^0.1.0"
     i18n-future "^2.0.0"
     i18n-lookup "^0.1.0"
-    libphonenumber-js "^1.8.5"
+    is-pdf "^1.0.0"
+    libphonenumber-js "^1.9.22"
     lodash "^4.17.21"
     minimatch "^3.0.3"
     minimist "^1.2.0"
@@ -4251,7 +4252,7 @@ hof@^19.5.3:
     moment "^2.24.0"
     morgan "^1.10.0"
     mustache "^2.3.0"
-    nodemailer "^6.4.16"
+    nodemailer "^6.6.3"
     nodemailer-ses-transport "^1.5.0"
     nodemailer-smtp-transport "^2.7.4"
     nodemailer-stub-transport "^1.1.0"
@@ -4259,7 +4260,7 @@ hof@^19.5.3:
     reqres "^3.0.1"
     request "^2.79.0"
     rimraf "^3.0.2"
-    sass "^1.35.1"
+    sass "^1.35.2"
     serve-static "^1.14.1"
     showdown "^1.8.2"
     uglify-js "^2.8.22"
@@ -4747,6 +4748,11 @@ is-path-inside@^3.0.2:
   resolved "https://registry.yarnpkg.com/is-path-inside/-/is-path-inside-3.0.3.tgz#d231362e53a07ff2b0e0ea7fed049161ffd16283"
   integrity sha512-Fd4gABb+ycGAmKou8eMftCupSir5lRxqf4aD/vd0cD2qc4HL07OjCeuHMr8Ro4CoMaeCKDB0/ECBOVWjTwUvPQ==
 
+is-pdf@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/is-pdf/-/is-pdf-1.0.0.tgz#b456f30ae048aa83d02cc2b15c1f428ca689241c"
+  integrity sha1-tFbzCuBIqoPQLMKxXB9CjKaJJBw=
+
 is-plain-obj@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/is-plain-obj/-/is-plain-obj-2.1.0.tgz#45e42e37fccf1f40da8e5f76ee21515840c09287"
@@ -5146,10 +5152,10 @@ levn@^0.4.1:
     prelude-ls "^1.2.1"
     type-check "~0.4.0"
 
-libphonenumber-js@^1.8.5:
-  version "1.9.22"
-  resolved "https://registry.yarnpkg.com/libphonenumber-js/-/libphonenumber-js-1.9.22.tgz#b6b460603dedbd58f2d71f15500f216d70850fad"
-  integrity sha512-nE0aF0wrNq09ewF36s9FVqRW73hmpw6cobVDlbexmsu1432LEfuN24BCudNuRx4t2rElSeK/N0JbedzRW/TC4A==
+libphonenumber-js@^1.9.22:
+  version "1.9.24"
+  resolved "https://registry.yarnpkg.com/libphonenumber-js/-/libphonenumber-js-1.9.24.tgz#711329b171577635147a0fa1533164944873f805"
+  integrity sha512-ypFnxTPbOzV98oiJhl4YlUJFsM0vx+40ZJDJ9N3nNfRyhoOYne3NGcUsTfZmXgLq0j7tfSLT6km6GYzjb5Y8bQ==
 
 lie@~3.3.0:
   version "3.3.0"
@@ -6046,7 +6052,7 @@ nodemailer-wellknown@0.1.10:
   resolved "https://registry.yarnpkg.com/nodemailer-wellknown/-/nodemailer-wellknown-0.1.10.tgz#586db8101db30cb4438eb546737a41aad0cf13d5"
   integrity sha1-WG24EB2zDLRDjrVGc3pBqtDPE9U=
 
-nodemailer@^6.4.16:
+nodemailer@^6.4.16, nodemailer@^6.6.3:
   version "6.6.3"
   resolved "https://registry.yarnpkg.com/nodemailer/-/nodemailer-6.6.3.tgz#31fb53dd4d8ae16fc088a65cb9ffa8d928a69b48"
   integrity sha512-faZFufgTMrphYoDjvyVpbpJcYzwyFnbAMmQtj1lVBYAUSm3SOy2fIdd9+Mr4UxPosBa0JRw9bJoIwQn+nswiew==
@@ -7343,10 +7349,10 @@ safe-buffer@~5.0.1:
   resolved "https://registry.yarnpkg.com/safer-buffer/-/safer-buffer-2.1.2.tgz#44fa161b0187b9549dd84bb91802f9bd8385cd6a"
   integrity sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==
 
-sass@^1.35.1:
-  version "1.35.2"
-  resolved "https://registry.yarnpkg.com/sass/-/sass-1.35.2.tgz#b732314fcdaf7ef8d0f1698698adc378043cb821"
-  integrity sha512-jhO5KAR+AMxCEwIH3v+4zbB2WB0z67V1X0jbapfVwQQdjHZUGUyukpnoM6+iCMfsIUC016w9OPKQ5jrNOS9uXw==
+sass@^1.35.2:
+  version "1.38.0"
+  resolved "https://registry.yarnpkg.com/sass/-/sass-1.38.0.tgz#2f3e60a1efdcdc910586fa79dc89d3399a145b4f"
+  integrity sha512-WBccZeMigAGKoI+NgD7Adh0ab1HUq+6BmyBUEaGxtErbUtWUevEbdgo5EZiJQofLUGcKtlNaO2IdN73AHEua5g==
   dependencies:
     chokidar ">=3.0.0 <4.0.0"
 
