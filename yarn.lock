@@ -3926,10 +3926,100 @@ hmac-drbg@^1.0.1:
     minimalistic-assert "^1.0.0"
     minimalistic-crypto-utils "^1.0.1"
 
+<<<<<<< HEAD
 hof@^19.5.3:
   version "19.5.5"
   resolved "https://registry.yarnpkg.com/hof/-/hof-19.5.5.tgz#4b9a22f4d55175cf9b3c076c8560228687d06d57"
   integrity sha512-tv08zGZ0syHmbR7U1cl6k+B93VOz0UcxEwlqH8DogiIMSHoA7jtf+T6oD6/ZSD5LaLmeNBp9hg5HFGhWGiGwdQ==
+=======
+hoek@2.x.x:
+  version "2.16.3"
+  resolved "https://registry.yarnpkg.com/hoek/-/hoek-2.16.3.tgz#20bb7403d3cea398e91dc4710a8ff1b8274a25ed"
+  integrity sha1-ILt0A9POo5jpHcRxCo/xuCdKJe0=
+
+hoek@6.x.x:
+  version "6.1.3"
+  resolved "https://registry.yarnpkg.com/hoek/-/hoek-6.1.3.tgz#73b7d33952e01fe27a38b0457294b79dd8da242c"
+  integrity sha512-YXXAAhmF9zpQbC7LEcREFtXfGq5K1fmd+4PHkBq8NUqmzW3G+Dq10bI/i0KucLRwss3YYFQ0fSfoxBZYiGUqtQ==
+
+hof-behaviour-hooks@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/hof-behaviour-hooks/-/hof-behaviour-hooks-1.0.2.tgz#6dd3e0740f030e5c965f8e443cbc735af729403f"
+  integrity sha1-bdPgdA8DDlyWX45EPLxzWvcpQD8=
+  dependencies:
+    express "^4.15.2"
+    lodash "^4.17.4"
+
+hof-behaviour-session@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/hof-behaviour-session/-/hof-behaviour-session-1.0.1.tgz#cedc173ffab3377137b077575c51f5d416390e15"
+  integrity sha1-ztwXP/qzN3E3sHdXXFH11BY5DhU=
+  dependencies:
+    express "^4.15.2"
+    lodash "^4.17.4"
+
+hof-form-controller@^4.0.0:
+  version "4.1.1"
+  resolved "https://registry.yarnpkg.com/hof-form-controller/-/hof-form-controller-4.1.1.tgz#23c3c3800eb8193ebf0e9851a0b2564f30c52a2b"
+  integrity sha1-I8PDgA64GT6/DphRoLJWTzDFKis=
+  dependencies:
+    debug "^2.1.1"
+    deprecate "^1.0.0"
+    express "^4.15.2"
+    hof-behaviour-hooks "^1.0.2"
+    hof-behaviour-session "^1.0.1"
+    hogan.js "^3.0.2"
+    i18n-lookup "^0.1.0"
+    lodash "^4.17.4"
+    mixwith "^0.1.1"
+    moment "^2.9.0"
+    mustache "^2.3.0"
+
+hof-form-wizard@^3.2.0:
+  version "3.2.3"
+  resolved "https://registry.yarnpkg.com/hof-form-wizard/-/hof-form-wizard-3.2.3.tgz#cf3858fec49358fd20e52b8834dacc3c1539cb04"
+  integrity sha1-zzhY/sSTWP0g5SuINNrMPBU5ywQ=
+  dependencies:
+    csrf "^3.0.2"
+    debug "^2.1.2"
+    deprecate "^1.0.0"
+    express "^4.12.2"
+    hof-form-controller "^4.0.0"
+    hof-model "^2.0.0"
+    hogan.js "^3.0.2"
+    i18n-lookup "^0.1.0"
+    lodash "^4.17.2"
+    mixwith "^0.1.1"
+
+hof-model@^2.0.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/hof-model/-/hof-model-2.1.0.tgz#5caada0534d979ccc0b8fa9ccb3029c4c2755631"
+  integrity sha1-XKraBTTZeczAuPqcyzApxMJ1VjE=
+  dependencies:
+    lodash "^4.17.2"
+    request "^2.72.0"
+
+hof-util-autofill@^1.1.3:
+  version "1.1.4"
+  resolved "https://registry.yarnpkg.com/hof-util-autofill/-/hof-util-autofill-1.1.4.tgz#3105ca5b2166dc0229feca366360441bb902f7e9"
+  integrity sha512-LRZtItLRiayDBuk1V4TqMf8mG6tuYzBM6owx9xNAX3EglygPnm+s3igPAdEDWVWBrPlZMW3kx6g2iDdS0W8A/g==
+  dependencies:
+    bluebird "^3.4.7"
+    debug "^2.6.1"
+    hof-util-testdata "^1.0.1"
+
+hof-util-testdata@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/hof-util-testdata/-/hof-util-testdata-1.0.1.tgz#dc2953f6fdf0416d6f53387c34f40865f7f29484"
+  integrity sha1-3ClT9v3wQW1vUzh8NPQIZffylIQ=
+  dependencies:
+    homeoffice-countries "^0.1.0"
+
+hof@^19.8.0:
+  version "19.8.0"
+  resolved "https://registry.yarnpkg.com/hof/-/hof-19.8.0.tgz#2a4988087c44ab3b0631901358d00cb98e4a51e0"
+  integrity sha512-P77yuCcPTaUcTMtb7w1VJMLY913LIfQU68amNok3hZPuqFHgwCWUST3XLFAwnJV1mLmsHlf51RVcKwzJonb8VA==
+>>>>>>> [HOTFIX]: Patch HOF to v19.8.0 to fix cookies issues
   dependencies:
     aliasify "^2.1.0"
     bluebird "^3.7.2"
