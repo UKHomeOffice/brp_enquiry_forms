@@ -1,20 +1,9 @@
 # Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
 version: v1.19.0
-ignore: {}
-# patches apply the minimum changes required to fix a vulnerability
-patch:
-  'npm:debug:20170905':
-    - hof > helmet > connect > debug:
-        patched: '2018-09-21T12:44:40.405Z'
-    - hof > helmet > connect > finalhandler > debug:
-        patched: '2018-09-21T12:44:40.405Z'
-  'npm:lodash:20180130':
-    - i18n-future > lodash:
-        patched: '2018-09-21T12:44:40.405Z'
-    - hof > i18n-future > lodash:
-        patched: '2018-09-21T12:44:40.405Z'
-  'npm:ms:20170412':
-    - hof > helmet > connect > debug > ms:
-        patched: '2018-09-21T12:44:40.405Z'
-    - hof > helmet > connect > finalhandler > debug > ms:
-        patched: '2018-09-21T12:44:40.405Z'
+# ignores vulnerabilities until expiry date; change duration by modifying expiry date
+ignore:
+  SNYK-JS-REQUEST-1314897:
+    - hof > request:
+        reason: Need to replace request in HOF
+        expires: '2022-09-18T14:58:46.388Z'
+patch: {}
