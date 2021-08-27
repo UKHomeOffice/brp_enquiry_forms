@@ -192,7 +192,6 @@ steps:
     commands:
       - export CUCUMBER_PUBLISH_ENABLED=true
       - export ACCEPTANCE_HOST_NAME=https://$${APP_NAME}-$${DRONE_SOURCE_BRANCH}.branch.internal.sas-notprod.homeoffice.gov.uk
-      - npx playwright install
       - npm run test:acceptance
     environment:
       CUCUMBER_PUBLISH_TOKEN:
@@ -469,12 +468,5 @@ services:
 volumes:
   - name: dockersock
     temp: {}
-
----
-kind: secret
-name: cucumber
-get:
-  path: cucumber-publish
-  name: token
 
 ...
