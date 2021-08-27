@@ -84,21 +84,13 @@ Run the unit tests
 $ npm run test
 ```
 
-Run the EcmaScript (ES) linter.  Rules are defined in [.eslintrc](./.eslintrc)
-```bash
-$ npm run lint
-```
-
-Run the jscs style checker. Rules are defined in [.jscsrc.json](./.jscsrc.json)
-```bash
-$ npm run style
-```
-
 Compile the Sass to CSS
 ```bash
 $ npm run sass
 ```
 
 ## Acceptance tests
+```bash
+$ yarn test:acceptance
+```
 
-For details on [Acceptance tests](https://github.com/UKHomeOffice/brp_app/tree/master/acceptance_tests)
