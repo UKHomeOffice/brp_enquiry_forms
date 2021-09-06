@@ -190,7 +190,7 @@ steps:
   - name: acceptance_tests_branch
     <<: *acceptance_tests
     commands:
-      - export ACCEPTANCE_HOST_NAME=https://$${APP_NAME}-$${DRONE_SOURCE_BRANCH}.branch.internal.sas-notprod.homeoffice.gov.uk
+      - export ACCEPTANCE_HOST_NAME=https://$${APP_NAME}-$${DRONE_SOURCE_BRANCH}.internal.{{ .BRANCH_ENV }}.homeoffice.gov.uk
       - npx playwright install
       - npm run test:acceptance
     when:
