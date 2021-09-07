@@ -64,7 +64,8 @@
     "required": "What is your passport number?"
   },
   "brp-card": {
-    "required": "What is your BRP number?"
+    "required": "What is your BRP number?",
+    "regex": "Please enter a valid BRP number - this should be 9 characters long and start with 2 or 3 letters"
   },
   "error-selection": {
     "required": "Tick one or more boxes"
