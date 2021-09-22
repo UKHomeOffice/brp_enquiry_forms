@@ -64,7 +64,8 @@
     "required": "What is your passport number?"
   },
   "brp-card": {
-    "required": "What is your BRP number?"
+    "required": "What is your BRP number?",
+    "regex": "Enter your BRP number in the correct format; for example, ‘ZUX123456 or ZU1234567’"
   },
   "error-selection": {
     "required": "Tick one or more boxes"
