@@ -1,10 +1,15 @@
 'use strict';
 
+const brpNumber = {
+  type: 'regex',
+  arguments: /^(?=(?:.){9})[a-zA-Z]{2}[xX0-9]{1}\d{6}$/
+};
+
+
 module.exports = {
   'brp-card': {
-    validate: ['required',
-      {type: 'regex', arguments: /^R\D(\d|X)\d{5}$/gi}
-    ],
+    validate: ['required', brpNumber],
+    formatter: ['uppercase'],
     hint: 'fields.brp-card.hint'
   }
 };

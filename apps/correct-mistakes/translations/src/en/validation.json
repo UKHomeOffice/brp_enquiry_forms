@@ -65,7 +65,7 @@
   },
   "brp-card": {
     "required": "What is your BRP number?",
-    "regex": "Please enter a valid BRP number - this should be 9 characters long and start with 2 or 3 letters"
+    "regex": "Enter your BRP number in the correct format; for example, ‘ZUX123456 or ZU1234567’"
   },
   "error-selection": {
     "required": "Tick one or more boxes"
