@@ -18,7 +18,7 @@ Feature: A user should access the correct mistakes service and be able to log an
     Then I fill 'fullname' with 'Ronald Testman'
     Then I fill the date 'date-of-birth' with '30-05-1990'
     Then I fill 'nationality' with 'Namibia'
-    Then I fill 'brp-card' with 'RZ000123'
+    Then I fill 'brp-card' with 'XR1000123'
     Then I select 'Continue'
     Then I should be on the 'contact-details' page showing 'How should we contact you about your BRP?'
     Then I fill 'email' with 'test@dtest.testemail'
@@ -47,7 +47,7 @@ Feature: A user should access the correct mistakes service and be able to log an
     Then I fill 'fullname' with 'Ronald Testman'
     Then I fill the date 'date-of-birth' with '30-05-1990'
     Then I fill 'nationality' with 'Namibia'
-    Then I fill 'brp-card' with 'RZ000123'
+    Then I fill 'brp-card' with 'ZRX000123'
     Then I select 'Continue'
     Then I should be on the 'contact-details' page showing 'How should we contact you about your BRP?'
     Then I fill 'email' with 'christopher.medland@digital.homeoffice.gov.uk'
@@ -111,5 +111,5 @@ Feature: A user should access the correct mistakes service and be able to log an
       Then I fill 'nationality' with 'Namibia'
       Then I fill 'brp-card' with 'ZR000123'
       Then I select 'Continue'
-      Then I should see 'Please enter a valid BRP number - this should be 9 characters long and start with 2 or 3 letters' on the page
+      Then I should see 'Enter your BRP number in the correct format; for example, ‘ZUX123456 or ZU1234567’' on the page
 
