@@ -48,6 +48,9 @@ sonar_scanner: &sonar_scanner
 acceptance_tests: &acceptance_tests
   pull: if-not-exists
   image: mcr.microsoft.com/playwright:v1.12.3-focal
+  environment:
+    CUCUMBER_PUBLISH_TOKEN:
+      from_secret: CUCUMBER_PUBLISH_TOKEN
 
 steps:
   - name: clone_repos
@@ -191,6 +194,7 @@ steps:
     <<: *acceptance_tests
     commands:
       - export ACCEPTANCE_HOST_NAME=https://$${APP_NAME}-$${DRONE_SOURCE_BRANCH}.internal.$${BRANCH_ENV}.homeoffice.gov.uk
+      - export CUCUMBER_PUBLISH_ENABLED=true
       - npx playwright install
       - npm run test:acceptance
     when:
