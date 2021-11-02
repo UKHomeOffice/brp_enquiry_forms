@@ -9,7 +9,8 @@
   "date-of-birth": {
     "required": "Enter your date of birth",
     "before": "The date is in the future",
-    "date": "Enter a valid date"
+    "date": "Enter a valid date",
+    "today": "Date of birth cannot be todays date"
   },
   "nationality": {
     "required": "What is your nationality?",
