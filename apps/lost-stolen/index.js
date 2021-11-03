@@ -21,7 +21,6 @@ module.exports = {
       next: '/personal-details'
     },
     '/personal-details': {
-      behaviours: [require('./behaviours/date-validate')],
       fields: ['fullname', 'date-of-birth', 'nationality', 'brp-card'],
       backLink: 'date-lost',
       next: '/contact-details'
