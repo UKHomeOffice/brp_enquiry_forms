@@ -158,9 +158,27 @@
     "label": "Describe the problem"
   },
   "conditions-error-checkbox": {
-    "label": "Conditions or length of stay"
+    "label": "Conditions"
   },
   "conditions-error": {
+    "label": "Describe the problem"
+  },
+  "length-of-stay-error-checkbox": {
+    "label": "Length of stay"
+  },
+  "length-of-stay-error": {
+    "label": "Describe the problem"
+  },
+  "biographics-error-checkbox": {
+    "label": "Biographics"
+  },
+  "biographics-error": {
+    "label": "Describe the problem"
+  },
+  "BRP-issue-error-checkbox": {
+    "label": "My BRP doesn't work"
+  },
+  "BRP-issue-error": {
     "label": "Describe the problem"
   },
   "truncated": {

@@ -8,9 +8,7 @@ module.exports = {
   steps: {
     '/location': {
       template: 'location-applied',
-      fields: [
-        'location-applied'
-      ],
+      fields: ['location-applied'],
       next: '/about-error'
     },
     '/about-error': {
@@ -41,38 +39,44 @@ module.exports = {
         'damaged-error',
         'conditions-error-checkbox',
         'conditions-error',
+        'length-of-stay-error-checkbox',
+        'length-of-stay-error',
+        'biographics-error-checkbox',
+        'biographics-error',
+        'BRP-issue-error-checkbox',
+        'BRP-issue-error',
         'letter-error-checkbox',
         'letter-error'
       ],
       backLink: 'location',
       next: '/uk-address',
-      forks: [{
-        target: '/same-address',
-        condition: req => {
-          if (req.sessionModel && req.sessionModel.toJSON) {
-            return req.sessionModel.toJSON()['location-applied'] === 'yes';
+      forks: [
+        {
+          target: '/same-address',
+          condition: req => {
+            if (req.sessionModel && req.sessionModel.toJSON) {
+              return req.sessionModel.toJSON()['location-applied'] === 'yes';
+            }
+            return false;
           }
-          return false;
-        }
-      }, {
-        target: '/uk-address',
-        condition: req => {
-          if (req.sessionModel && req.sessionModel.toJSON) {
-            return req.sessionModel.toJSON()['location-applied'] === 'no';
+        },
+        {
+          target: '/uk-address',
+          condition: req => {
+            if (req.sessionModel && req.sessionModel.toJSON) {
+              return req.sessionModel.toJSON()['location-applied'] === 'no';
+            }
+            return false;
           }
-          return false;
         }
-      }]
+      ]
     },
     '/enrolment-letter': {
       clearSession: true
     },
     '/truncated': {
       behaviours: [require('./behaviours/truncated')],
-      fields: [
-        'truncated',
-        'truncation-page'
-      ],
+      fields: ['truncated', 'truncation-page'],
       next: '/uk-address'
     },
     '/exit-truncated': {
@@ -105,12 +109,7 @@ module.exports = {
     },
     '/personal-details': {
       template: 'personal-details-brp',
-      fields: [
-        'fullname',
-        'date-of-birth',
-        'nationality',
-        'brp-card'
-      ],
+      fields: ['fullname', 'date-of-birth', 'nationality', 'brp-card'],
       next: '/contact-details'
     },
     '/contact-details': {
@@ -129,12 +128,7 @@ module.exports = {
     },
     '/confirm': {
       behaviours: ['complete', require('../common/behaviours/email')],
-      fields: [
-        'org-help',
-        'rep-name',
-        'rep-email',
-        'org-type'
-      ],
+      fields: ['org-help', 'rep-name', 'rep-email', 'org-type'],
       backLink: 'contact-details',
       next: '/confirmation'
     },

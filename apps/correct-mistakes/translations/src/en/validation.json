@@ -94,6 +94,15 @@
   "conditions-error": {
     "required": "Tell us about the problem"
   },
+  "length-of-stay-error": {
+    "required": "Tell us about the problem"
+  },
+  "biographics-error": {
+    "required": "Tell us about the problem"
+  },
+  "BRP-issue-error": {
+    "required": "Tell us about the problem"
+  },
   "letter-error": {
     "required": "Tell us about the problem"
   },
