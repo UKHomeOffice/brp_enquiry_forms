@@ -6,6 +6,7 @@ module.exports = {
   params: '/:action?',
   steps: {
     '/arrange': {
+      behaviours: [require('./behaviours/someone-else-brp')],
       fields: [
         'someone-else-fullname',
         'someone-else-date',
