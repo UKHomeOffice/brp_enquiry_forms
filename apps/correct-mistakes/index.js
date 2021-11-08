@@ -8,7 +8,9 @@ module.exports = {
   steps: {
     '/location': {
       template: 'location-applied',
-      fields: ['location-applied'],
+      fields: [
+        'location-applied'
+      ],
       next: '/about-error'
     },
     '/about-error': {
@@ -50,8 +52,7 @@ module.exports = {
       ],
       backLink: 'location',
       next: '/uk-address',
-      forks: [
-        {
+      forks: [{
           target: '/same-address',
           condition: req => {
             if (req.sessionModel && req.sessionModel.toJSON) {
@@ -59,8 +60,7 @@ module.exports = {
             }
             return false;
           }
-        },
-        {
+        }, {
           target: '/uk-address',
           condition: req => {
             if (req.sessionModel && req.sessionModel.toJSON) {
@@ -76,7 +76,10 @@ module.exports = {
     },
     '/truncated': {
       behaviours: [require('./behaviours/truncated')],
-      fields: ['truncated', 'truncation-page'],
+      fields: [
+        'truncated', 
+        'truncation-page'
+      ],
       next: '/uk-address'
     },
     '/exit-truncated': {
@@ -109,7 +112,12 @@ module.exports = {
     },
     '/personal-details': {
       template: 'personal-details-brp',
-      fields: ['fullname', 'date-of-birth', 'nationality', 'brp-card'],
+      fields: [
+        'fullname', 
+        'date-of-birth', 
+        'nationality', 
+        'brp-card'
+      ],
       next: '/contact-details'
     },
     '/contact-details': {
@@ -128,7 +136,12 @@ module.exports = {
     },
     '/confirm': {
       behaviours: ['complete', require('../common/behaviours/email')],
-      fields: ['org-help', 'rep-name', 'rep-email', 'org-type'],
+      fields: [
+        'org-help', 
+        'rep-name', 
+        'rep-email', 
+        'org-type'
+      ],
       backLink: 'contact-details',
       next: '/confirmation'
     },
