@@ -53,22 +53,22 @@ module.exports = {
       backLink: 'location',
       next: '/uk-address',
       forks: [{
-          target: '/same-address',
-          condition: req => {
-            if (req.sessionModel && req.sessionModel.toJSON) {
-              return req.sessionModel.toJSON()['location-applied'] === 'yes';
-            }
-            return false;
+        target: '/same-address',
+        condition: req => {
+          if (req.sessionModel && req.sessionModel.toJSON) {
+            return req.sessionModel.toJSON()['location-applied'] === 'yes';
           }
-        }, {
-          target: '/uk-address',
-          condition: req => {
-            if (req.sessionModel && req.sessionModel.toJSON) {
-              return req.sessionModel.toJSON()['location-applied'] === 'no';
-            }
-            return false;
-          }
+          return false;
         }
+      }, {
+        target: '/uk-address',
+        condition: req => {
+          if (req.sessionModel && req.sessionModel.toJSON) {
+            return req.sessionModel.toJSON()['location-applied'] === 'no';
+          }
+          return false;
+        }
+      }
       ]
     },
     '/enrolment-letter': {
@@ -77,8 +77,7 @@ module.exports = {
     '/truncated': {
       behaviours: [require('./behaviours/truncated')],
       fields: [
-        'truncated', 
-        'truncation-page'
+        'truncated', 'truncation-page'
       ],
       next: '/uk-address'
     },
@@ -113,10 +112,7 @@ module.exports = {
     '/personal-details': {
       template: 'personal-details-brp',
       fields: [
-        'fullname', 
-        'date-of-birth', 
-        'nationality', 
-        'brp-card'
+        'fullname', 'date-of-birth', 'nationality', 'brp-card'
       ],
       next: '/contact-details'
     },
@@ -137,10 +133,7 @@ module.exports = {
     '/confirm': {
       behaviours: ['complete', require('../common/behaviours/email')],
       fields: [
-        'org-help', 
-        'rep-name', 
-        'rep-email', 
-        'org-type'
+        'org-help', 'rep-name', 'rep-email', 'org-type'
       ],
       backLink: 'contact-details',
       next: '/confirmation'
