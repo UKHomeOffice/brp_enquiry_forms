@@ -5,6 +5,25 @@ module.exports = {
   baseUrl: '/not-arrived',
   params: '/:action?',
   steps: {
+    '/collection': {
+      next: '/letter-received',
+      fields:[
+        'collection'
+      ],
+      forks: [{
+        target: '/letter-received',
+        condition: {
+          field: 'collection',
+          value: 'no'
+        }
+      },{
+        target: '/collection/where',
+        condition: {
+          field: 'collection',
+          value: 'yes'
+        }
+      }]
+    },
     '/letter-received': {
       behaviours: [require('./behaviours/letter-received')],
       fields: [
@@ -12,6 +31,7 @@ module.exports = {
         'delivery-date',
         'no-letter'
       ],
+      backLink: 'collection',
       next: '/same-address',
       forks: [{
         target: '/letter-not-received',
