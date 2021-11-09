@@ -7,22 +7,10 @@ module.exports = {
   steps: {
     '/collection': {
       next: '/letter-received',
-      fields:[
+      behaviours: [require('./behaviours/change-path')],
+      fields: [
         'collection'
-      ],
-      forks: [{
-        target: '/letter-received',
-        condition: {
-          field: 'collection',
-          value: 'no'
-        }
-      },{
-        target: '/collection/where',
-        condition: {
-          field: 'collection',
-          value: 'yes'
-        }
-      }]
+      ]
     },
     '/letter-received': {
       behaviours: [require('./behaviours/letter-received')],

@@ -73,6 +73,12 @@ Then('I should be on the {string} page showing {string}', async function (uri, h
   expect(await this.page.innerText('body')).to.include(heading);
 }.bind(World));
 
+Then('I should be redirected to the collection page showing {string}', async function (heading) {
+  await this.page.waitForSelector('body', { timeout: 15000 });
+  expect(await this.page.url()).to.include('https://www.biometric-residence-permit.service.gov.uk/collection/where');
+  expect(await this.page.innerText('body')).to.include(heading);
+}.bind(World));
+
 Then('I should see {string} on the page', async function (content) {
   await this.page.waitForSelector('body', { timeout: 15000 });
   expect(await this.page.innerText('body')).to.include(content);
