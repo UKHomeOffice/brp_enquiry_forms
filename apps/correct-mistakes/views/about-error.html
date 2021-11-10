@@ -103,6 +103,21 @@
         {{#textarea}}conditions-error{{/textarea}}
       </div>
 
+      {{#checkbox}}length-of-stay-error-checkbox{{/checkbox}}
+      <div id="length-of-stay-error-container" class="panel-indent js-hidden {{#errors.length-of-stay-error}}validation-error{{/errors.length-of-stay-error}}">
+        {{#textarea}}length-of-stay-error{{/textarea}}
+      </div>
+
+      {{#checkbox}}biographics-error-checkbox{{/checkbox}}
+      <div id="biographics-error-container" class="panel-indent js-hidden {{#errors.biographics-error}}validation-error{{/errors.biographics-error}}">
+        {{#textarea}}biographics-error{{/textarea}}
+      </div>
+
+      {{#checkbox}}BRP-issue-error-checkbox{{/checkbox}}
+      <div id="BRP-issue-error-container" class="panel-indent js-hidden {{#errors.BRP-issue-error}}validation-error{{/errors.BRP-issue-error}}">
+        {{#textarea}}BRP-issue-error{{/textarea}}
+      </div>
+
       {{#input-submit}}continue{{/input-submit}}
 
 

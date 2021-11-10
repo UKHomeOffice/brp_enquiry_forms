@@ -41,6 +41,12 @@ module.exports = {
         'damaged-error',
         'conditions-error-checkbox',
         'conditions-error',
+        'length-of-stay-error-checkbox',
+        'length-of-stay-error',
+        'biographics-error-checkbox',
+        'biographics-error',
+        'BRP-issue-error-checkbox',
+        'BRP-issue-error',
         'letter-error-checkbox',
         'letter-error'
       ],
@@ -62,7 +68,8 @@ module.exports = {
           }
           return false;
         }
-      }]
+      }
+      ]
     },
     '/enrolment-letter': {
       clearSession: true
@@ -70,8 +77,7 @@ module.exports = {
     '/truncated': {
       behaviours: [require('./behaviours/truncated')],
       fields: [
-        'truncated',
-        'truncation-page'
+        'truncated', 'truncation-page'
       ],
       next: '/uk-address'
     },
@@ -106,10 +112,7 @@ module.exports = {
     '/personal-details': {
       template: 'personal-details-brp',
       fields: [
-        'fullname',
-        'date-of-birth',
-        'nationality',
-        'brp-card'
+        'fullname', 'date-of-birth', 'nationality', 'brp-card'
       ],
       next: '/contact-details'
     },
@@ -130,10 +133,7 @@ module.exports = {
     '/confirm': {
       behaviours: ['complete', require('../common/behaviours/email')],
       fields: [
-        'org-help',
-        'rep-name',
-        'rep-email',
-        'org-type'
+        'org-help', 'rep-name', 'rep-email', 'org-type'
       ],
       backLink: 'contact-details',
       next: '/confirmation'
