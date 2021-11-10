@@ -27,6 +27,10 @@
     "before": "The date is in the future",
     "date": "Enter a valid date"
   },
+  "brp-card": {
+    "required": "What is your BRP number?",
+    "regex": "Enter your BRP number in the correct format; for example, ‘ZUX123456 or ZU1234567’"
+  },
   "org-help": {
     "required": "Did someone help you complete this form?"
   },
