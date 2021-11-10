@@ -8,7 +8,7 @@
   },
   "date-of-birth": {
     "required": "Enter your date of birth",
-    "before": "The date is in the future",
+    "before": "Enter a date in the past",
     "date": "Enter a valid date"
   },
   "nationality": {

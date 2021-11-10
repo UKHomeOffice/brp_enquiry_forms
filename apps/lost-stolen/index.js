@@ -7,10 +7,7 @@ module.exports = {
   behaviours: [require('../common/behaviours/location')],
   steps: {
     '/where': {
-      fields: [
-        'inside-uk',
-        'country'
-      ],
+      fields: ['inside-uk', 'country'],
       next: '/date-lost'
     },
     '/date-lost': {
@@ -24,12 +21,7 @@ module.exports = {
       next: '/personal-details'
     },
     '/personal-details': {
-      fields: [
-        'fullname',
-        'date-of-birth',
-        'nationality',
-        'brp-card'
-      ],
+      fields: ['fullname', 'date-of-birth', 'nationality', 'brp-card'],
       backLink: 'date-lost',
       next: '/contact-details'
     },
@@ -49,12 +41,7 @@ module.exports = {
     },
     '/confirm': {
       behaviours: ['complete', require('../common/behaviours/email')],
-      fields: [
-        'org-help',
-        'rep-name',
-        'rep-email',
-        'org-type'
-      ],
+      fields: ['org-help', 'rep-name', 'rep-email', 'org-type'],
       backLink: 'contact-details',
       next: '/confirmation'
     },

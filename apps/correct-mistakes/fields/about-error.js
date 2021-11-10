@@ -134,5 +134,35 @@ module.exports = {
       field: 'conditions-error-checkbox',
       value: 'true'
     }
+  },
+  'length-of-stay-error-checkbox': {
+    toggle: 'length-of-stay-error-container'
+  },
+  'length-of-stay-error': {
+    validate: ['required'],
+    dependent: {
+      field: 'length-of-stay-error-checkbox',
+      value: 'true'
+    }
+  },
+  'biographics-error-checkbox': {
+    toggle: 'biographics-error-container'
+  },
+  'biographics-error': {
+    validate: ['required'],
+    dependent: {
+      field: 'biographics-error-checkbox',
+      value: 'true'
+    }
+  },
+  'BRP-issue-error-checkbox': {
+    toggle: 'BRP-issue-error-container'
+  },
+  'BRP-issue-error': {
+    validate: ['required'],
+    dependent: {
+      field: 'BRP-issue-error-checkbox',
+      value: 'true'
+    }
   }
 };
