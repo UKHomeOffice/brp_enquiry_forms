@@ -6,7 +6,7 @@ Feature: I should be able to log that my BRP has not arrived
     Then I should be on the 'collection' page showing 'Were you due to collect your document from the Post Office?'
     Then I check 'collection-yes'
     Then I select 'Continue'
-    Then I should be redirected to the collection page showing 'From where were you asked to collect your BRP?'
+    Then I should be on the 'collection/where' page showing 'From where were you asked to collect your BRP?'
 
   Scenario: Letter not received from the home office
     Given I start the 'not-arrived' application journey

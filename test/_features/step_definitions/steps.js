@@ -68,14 +68,11 @@ Then('I enter a {string} date of birth for a {int} year old', async function (fi
 }.bind(World));
 
 Then('I should be on the {string} page showing {string}', async function (uri, heading) {
+  const redirect = '/collection/where';
   await this.page.waitForSelector('body', { timeout: 15000 });
-  expect(new URL(await this.page.url()).pathname).to.eql(`${this.subApp}/${uri}`);
-  expect(await this.page.innerText('body')).to.include(heading);
-}.bind(World));
-
-Then('I should be redirected to the collection page showing {string}', async function (heading) {
-  await this.page.waitForSelector('body', { timeout: 15000 });
-  expect(await this.page.url()).to.include('https://www.biometric-residence-permit.service.gov.uk/collection/where');
+  expect(new URL(await this.page.url()).pathname).to.satisfy(
+    urlPathname => urlPathname === `${this.subApp}/${uri}` || redirect
+  );
   expect(await this.page.innerText('body')).to.include(heading);
 }.bind(World));
 
