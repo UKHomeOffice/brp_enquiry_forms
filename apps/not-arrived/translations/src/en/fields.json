@@ -1,4 +1,14 @@
 {
+  "collection": {
+    "options": {
+      "yes": {
+        "label": "Yes"
+      },
+      "no": {
+        "label": "No"
+      }
+    }
+  },
   "delivery-date": {
     "label": "Date",
     "legend": "Date on the letter",

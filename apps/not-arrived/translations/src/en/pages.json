@@ -1,4 +1,7 @@
 {
+  "collection": {
+    "header": "Were you due to collect your document from the Post Office?"
+  },
   "letter-received": {
     "header": "Have you received a letter from the Home Office?",
     "subheader": "This letter may tell you:",

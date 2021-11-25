@@ -73,6 +73,19 @@ Then('I should be on the {string} page showing {string}', async function (uri, h
   expect(await this.page.innerText('body')).to.include(heading);
 }.bind(World));
 
+Then(
+  'I should be redirected to the {string} journey on the {string} page showing {string}',
+  async function (subApp, uri, heading) {
+    this.subApp = subApp === 'base' ? '' : `/${subApp}`;
+    await this.page.goto(`${domain}${this.subApp}/${uri}`);
+    await this.page.waitForSelector('body', { timeout: 15000 });
+    expect(new URL(await this.page.url()).pathname).to.eql(
+      `${this.subApp}/${uri}`
+    );
+    expect(await this.page.innerText('body')).to.include(heading);
+  }.bind(World)
+);
+
 Then('I should see {string} on the page', async function (content) {
   await this.page.waitForSelector('body', { timeout: 15000 });
   expect(await this.page.innerText('body')).to.include(content);
