@@ -3,24 +3,24 @@ Feature: I should be able to log that my BRP has not arrived
   
   Scenario: Due to collect the document from the postcode
     Given I start the 'not-arrived' application journey
-    Then I should be on the 'collection' page showing 'Were you due to collect your document from the Post Office?'
+    Then I should be on the 'post-office-collect' page showing 'Were you due to collect your document from the Post Office?'
     Then I check 'collection-yes'
     Then I select 'Continue'
     Then I should be redirected to the 'collection' journey on the 'where' page showing 'From where were you asked to collect your BRP?'
 
   Scenario: Letter not received from the home office
     Given I start the 'not-arrived' application journey
-    Then I should be on the 'collection' page showing 'Were you due to collect your document from the Post Office?'
+    Then I should be on the 'post-office-collect' page showing 'Were you due to collect your document from the Post Office?'
     Then I check 'collection-no'
     Then I select 'Continue'
     Then I should be on the 'letter-received' page showing 'Have you received a letter from the Home Office?'
     Then I check 'received-no'
     Then I select 'Continue'
-    Then I should be on the 'letter-not-received' page showing 'Contact us'
+    Then I should be on the 'letter-not-received' page ggshowing 'Contact us'
 
   Scenario: BRP resent to same address
     Given I start the 'not-arrived' application journey
-    Then I should be on the 'collection' page showing 'Were you due to collect your document from the Post Office?'
+    Then I should be on the 'post-office-collect' page showing 'Were you due to collect your document from the Post Office?'
     Then I check 'collection-no'
     Then I select 'Continue'
     Then I should be on the 'letter-received' page showing 'Have you received a letter from the Home Office?'
@@ -44,7 +44,7 @@ Feature: I should be able to log that my BRP has not arrived
 
   Scenario: BRP resent to different address
     Given I start the 'not-arrived' application journey
-    Then I should be on the 'collection' page showing 'Were you due to collect your document from the Post Office?'
+    Then I should be on the 'post-office-collect' page showing 'Were you due to collect your document from the Post Office?'
     Then I check 'collection-no'
     Then I select 'Continue'
     Then I should be on the 'letter-received' page showing 'Have you received a letter from the Home Office?'
