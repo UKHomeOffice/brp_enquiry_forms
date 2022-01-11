@@ -5,7 +5,7 @@ module.exports = {
   baseUrl: '/not-arrived',
   params: '/:action?',
   steps: {
-    '/collection': {
+    '/post-office-collect': {
       next: '/letter-received',
       behaviours: [require('./behaviours/change-path')],
       fields: [
@@ -19,7 +19,7 @@ module.exports = {
         'delivery-date',
         'no-letter'
       ],
-      backLink: 'collection',
+      backLink: 'post-office-collect',
       next: '/same-address',
       forks: [{
         target: '/letter-not-received',
