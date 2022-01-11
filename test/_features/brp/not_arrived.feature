@@ -16,7 +16,7 @@ Feature: I should be able to log that my BRP has not arrived
     Then I should be on the 'letter-received' page showing 'Have you received a letter from the Home Office?'
     Then I check 'received-no'
     Then I select 'Continue'
-    Then I should be on the 'letter-not-received' page ggshowing 'Contact us'
+    Then I should be on the 'letter-not-received' page showing 'Contact us'
 
   Scenario: BRP resent to same address
     Given I start the 'not-arrived' application journey
