@@ -2,8 +2,8 @@
 
 const Controller = require('hof').controller;
 
-//We don't need an actual controller, so just create a dummy
-const DummyController = superclass => class DummyController extends superclass {
+// We don't need an actual controller, so just create a dummy
+const DummyController = class DummyControllerBase extends Controller {
   configure(req, res, next) {
     super.configure(req, res, next);
   }
@@ -15,15 +15,14 @@ describe('apps/commong/validation', () => {
   let res;
 
   'use strict';
-  
+
   beforeEach(() => {
     req = reqres.req();
     res = reqres.res();
 
     req.form.options = {};
 
-    const MyDummyController = DummyController(Controller);
-    controller = new MyDummyController({ template: 'index', route: '/index' });
+    controller = new DummyController({ template: 'index', route: '/index' });
   });
 
   describe('configure', () => {
@@ -32,7 +31,7 @@ describe('apps/commong/validation', () => {
     beforeEach(() => {
       sandbox = sinon.createSandbox();
       req.form.options.fields = {
-        'ImAURL': {
+        ImAURL: {
           validate: 'notUrl'
         }
       };
@@ -46,14 +45,12 @@ describe('apps/commong/validation', () => {
 
     describe('validation', () => {
       it('notUrl should not accept a URL input', () => {
-        req.form.values['ImAURL'] = 'www.google.com';
-        
+        req.form.values.ImAURL = 'www.google.com';
         controller._validate(req, res, err => {
-          err['ImAURL'].should.be.an.instanceof(controller.ValidationError);
-          err['ImAURL'].should.have.property('type').and.equal('notUrl');
+          err.ImAURL.should.be.an.instanceof(controller.ValidationError);
+          err.ImAURL.should.have.property('type').and.equal('notUrl');
         });
       });
     });
-  
   });
 });
