@@ -4,7 +4,8 @@
     "email": "Enter your email in the correct format for example, name@domain.com"
   },
   "fullname": {
-    "required": "Enter your full name"
+    "required": "Enter your full name",
+    "notUrl": "Full name must not be a URL"
   },
   "date-of-birth": {
     "required": "Enter your date of birth",
@@ -24,7 +25,8 @@
     "before": "The person nominated to collect your BRP must be over 18 years old"
   },
   "someone-else-fullname": {
-    "required": "What is the nominated person's full name?"
+    "required": "What is the nominated person's full name?",
+    "notUrl": "The nominated person's name must not be a URL"
   },
   "someone-else-nationality": {
     "required": "What is the nominated person's nationality?",
@@ -35,7 +37,8 @@
   },
   "someone-else-id-number": {
     "required": "What is the nominated person's identity document number?",
-    "brp-valid": "BRP number must be in the correct format; for example, ‘ZUX123456 or ZU1234567’"
+    "brp-valid": "BRP number must be in the correct format; for example, ‘ZUX123456 or ZU1234567’",
+    "notUrl": "The nominatated person's identity document number must not be a URL"
   },
   "someone-else-reason-radio": {
     "required": "Select a reason why you couldn't collect your BRP"

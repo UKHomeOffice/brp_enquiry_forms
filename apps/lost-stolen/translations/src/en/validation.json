@@ -4,7 +4,8 @@
     "email": "Enter your email in the correct format for example, name@domain.com"
   },
   "fullname": {
-    "required": "Enter your full name"
+    "required": "Enter your full name",
+    "notUrl": "Full name must not be a URL"
   },
   "date-of-birth": {
     "required": "Enter your date of birth",

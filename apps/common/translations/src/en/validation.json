@@ -38,5 +38,9 @@
   },
   "org-type": {
     "required": "Who has helped you fill in this form?"
+  },
+  "fullname": {
+    "required": "Enter your full name",
+    "notUrl": "Full name must not be a URL"
   }
 }

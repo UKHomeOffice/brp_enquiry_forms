@@ -10,6 +10,9 @@ const beforeTodayValidator = {
 };
 
 module.exports = {
+  fullname: {
+    validate: 'notUrl'
+  },
   'brp-card': {
     validate: ['required', {type: 'regex', arguments: /^[a-z][a-z](\d|X)\d{6}$/gi }],
     formatter: ['uppercase'],

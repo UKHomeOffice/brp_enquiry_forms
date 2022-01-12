@@ -19,7 +19,8 @@
     "equal": "Please pick a nationality from the list"
   },
   "passport": {
-    "required": "What is your passport number?"
+    "required": "What is your passport number?",
+    "notUrl": "Passport Number must not be a URL"
   },
   "country": {
     "required": "Tell us where you are"
