@@ -8,6 +8,7 @@ module.exports = {
     '/post-office-collect': {
       next: '/letter-received',
       behaviours: [require('./behaviours/change-path')],
+      template: 'collection.html',
       fields: [
         'collection'
       ]
