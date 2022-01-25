@@ -17,7 +17,7 @@ module.exports = {
     ]
   },
   'rep-name': {
-    validate: ['required'],
+    validate: ['required', 'notUrl'],
     dependent: {
       field: 'org-help',
       value: 'yes'

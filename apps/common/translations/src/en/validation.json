@@ -30,7 +30,8 @@
     "required": "Did you have help completing this form?"
   },
   "rep-name": {
-    "required": "What is the name of the person who helped you complete this form?"
+    "required": "What is the name of the person who helped you complete this form?",
+    "notUrl": "Full name must not be a URL"
   },
   "rep-email": {
     "required": "What is the contact e-mail address of the person who helped you complete this form?",
