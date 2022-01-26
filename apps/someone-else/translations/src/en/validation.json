@@ -48,7 +48,8 @@
     "equal": "Please pick a nationality from the list"
   },
   "passport": {
-    "required": "What is your passport number?"
+    "required": "What is your passport number?",
+    "notUrl": "Passport number must not be a URL"
   },
   "org-help": {
     "required": "Did you have help completing this form?"
