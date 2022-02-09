@@ -75,7 +75,7 @@ module.exports = {
     validate: ['required', 'before']
   }),
   fullname: {
-    validate: ['required']
+    validate: ['required', 'notUrl']
   },
   'date-of-birth': date('date-of-birth', {
     validate: ['required', 'before']
@@ -87,6 +87,6 @@ module.exports = {
     hint: 'fields.nationality.hint'
   },
   passport: {
-    validate: ['required']
+    validate: ['required', 'notUrl']
   }
 };

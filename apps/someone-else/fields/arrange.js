@@ -4,7 +4,7 @@ const date = require('hof').components.date;
 
 module.exports = {
   'someone-else-fullname': {
-    validate: ['required']
+    validate: ['required', 'notUrl']
   },
   'someone-else-date': date('someone-else-date', {
     validate: [
@@ -26,6 +26,6 @@ module.exports = {
     ]
   },
   'someone-else-id-number': {
-    validate: ['required']
+    validate: ['required', 'notUrl']
   }
 };

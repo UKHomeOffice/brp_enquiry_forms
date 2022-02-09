@@ -4,7 +4,7 @@ const date = require('hof').components.date;
 
 module.exports = {
   fullname: {
-    validate: ['required']
+    validate: ['required', 'notUrl']
   },
   'date-of-birth': date('date-of-birth', {
     validate: ['required', 'before'],
@@ -18,7 +18,7 @@ module.exports = {
     hint: 'fields.nationality.hint'
   },
   passport: {
-    validate: 'required'
+    validate: ['required', 'notUrl']
   },
   'brp-card': {
     hint: 'fields.brp-card.hint'

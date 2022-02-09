@@ -10,7 +10,8 @@
     "email": "Enter your email in the correct format for example, name@domain.com"
   },
   "fullname": {
-    "required": "Enter your full name"
+    "required": "Enter your full name",
+    "notUrl": "Full name must not be a URL"
   },
   "date-of-birth": {
     "required": "Enter your date of birth",
@@ -45,13 +46,15 @@
     "equal": "Please pick a nationality from the list"
   },
   "passport": {
-    "required": "What is your passport number?"
+    "required": "What is your passport number?",
+    "notUrl": "Passport Number must not be a URL"
   },
   "org-help": {
     "required": "Did you have help completing this form?"
   },
   "rep-name": {
-    "required": "What is the name of the person who helped you complete this form?"
+    "required": "What is the name of the person who helped you complete this form?",
+    "notUrl": "Full name must not be a URL"
   },
   "org-type": {
     "required": "Who has helped you fill in this form?"
