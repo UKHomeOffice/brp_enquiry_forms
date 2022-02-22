@@ -11,7 +11,7 @@ module.exports = {
     toggle: 'first-name-error-container'
   },
   'first-name-error': {
-    validate: ['required','notUrl'],
+    validate: ['required', 'notUrl'],
     dependent: {
       field: 'first-name-error-checkbox',
       value: 'true'
@@ -21,7 +21,7 @@ module.exports = {
     toggle: 'last-name-error-container'
   },
   'last-name-error': {
-    validate: ['required','notUrl'],
+    validate: ['required', 'notUrl'],
     dependent: {
       field: 'last-name-error-checkbox',
       value: 'true'
