@@ -16,8 +16,15 @@ ignore:
         expires: '2022-09-18T12:35:24.867Z'
   SNYK-JS-CACHEDPATHRELATIVE-2342653:
     - hof > browserify > cached-path-relative:
-        reason: No update currently available
-        expires: '2022-02-20T10:38:20.144Z'
+        reason: >-
+          No update currently available - Will discuss adding resolution to hof
+          framework as future proof fix
+        expires: '2022-03-20T10:38:20.144Z'
+      hof > browserify > module-deps > cached-path-relative:
+        reason: >-
+          No update available - Will discuss adding resolution to hof framework
+          as future proof fix
+        expires: '2022-03-24T16:53:44.487Z'
     - hof > browserify > module-deps > cached-path-relative:
         reason: No update currently available
         expires: '2022-02-20T10:38:20.144Z'
