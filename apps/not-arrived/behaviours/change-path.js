@@ -4,7 +4,7 @@ module.exports = superclass =>
   class LetterRecieved extends superclass {
     saveValues(req, res, next) {
       if(req.form.values.collection === 'yes') {
-        res.redirect(302, `${req.headers.origin}/collection/where`);
+        res.redirect('/collection/where');
         res.end();
       }else{
         super.saveValues(req, res, next);

@@ -31,8 +31,8 @@ module.exports = {
       }, {
         target: '/letter-lost',
         condition: {
-          field: 'no-letter',
-          value: 'true'
+          field: 'delivery-date',
+          value: 'null'
         }
       }]
     },
