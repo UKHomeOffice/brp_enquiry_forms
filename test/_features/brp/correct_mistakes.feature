@@ -167,3 +167,18 @@ Feature: A user should access the correct mistakes service and be able to log an
       Then I fill 'rep-name' with 'www.google.com'
       Then I submit the application
       Then I should see 'Full name must not be a URL' on the page
+
+    @validation
+    Scenario: Correct Mistakes Family Name and Given Name(s) not a URL validation
+      Given I start the 'correct-mistakes' application journey
+      Then I should be on the 'location' page showing 'Where did you apply for your visa?'
+      Then I check 'location-applied-yes'
+      Then I select 'Continue'
+      Then I should be on the 'about-error' page showing 'What’s the problem with your BRP?'
+      Then I check 'last-name-error-checkbox'
+      Then I fill 'last-name-error' with 'wwww.google.com'
+      Then I check 'first-name-error-checkbox'
+      Then I fill 'first-name-error' with 'wwww.google.com'
+      Then I select 'Continue'
+      Then I should see 'Family name must not be a URL' on the page
+      Then I should see 'Given name(s) must not be a URL' on the page

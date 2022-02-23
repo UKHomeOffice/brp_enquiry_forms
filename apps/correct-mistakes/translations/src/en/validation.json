@@ -71,10 +71,12 @@
     "required": "Tick one or more boxes"
   },
   "first-name-error": {
-    "required": "What are your correct given name(s)?"
+    "required": "What are your correct given name(s)?",
+    "notUrl": "Given name(s) must not be a URL"
   },
   "last-name-error": {
-    "required": "What is your correct family name?"
+    "required": "What is your correct family name?",
+    "notUrl": "Family name must not be a URL"
   },
   "date-of-birth-error": {
     "required": "Enter your date of birth",
