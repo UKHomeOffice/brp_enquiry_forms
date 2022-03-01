@@ -14,7 +14,7 @@ module.exports = {
     validate: 'notUrl'
   },
   'brp-card': {
-    validate: ['required', {type: 'regex', arguments: /^[a-z][a-z](\d|X)\d{6}$/gi }],
+    validate: [{type: 'regex', arguments: /(^[a-z][a-z](\d|X)\d{6}$)|(^$)/gi }],
     formatter: ['uppercase'],
     hint: 'fields.brp-card.hint'
   },
