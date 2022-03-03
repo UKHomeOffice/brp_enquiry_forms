@@ -200,6 +200,28 @@
                         <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{conditions-error}}</p></td>
                       </tr>
                     {{/conditions-error}}
+
+                    {{#length-of-stay-error}}
+                      <tr style="border-top: 1px solid #009390;">
+                        <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}fields.length-of-stay-error-checkbox.label{{/t}}</p></td>
+                        <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{length-of-stay-error}}</p></td>
+                      </tr>
+                    {{/length-of-stay-error}}
+
+                    {{#biographics-error}}
+                      <tr style="border-top: 1px solid #009390;">
+                        <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}fields.biographics-error-checkbox.label{{/t}}</p></td>
+                        <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{biographics-error}}</p></td>
+                      </tr>
+                    {{/biographics-error}}
+
+                    {{#BRP-issue-error}}
+                      <tr style="border-top: 1px solid #009390;">
+                        <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}fields.BRP-issue-error-checkbox.label{{/t}}</p></td>
+                        <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{BRP-issue-error}}</p></td>
+                      </tr>
+                    {{/BRP-issue-error}}
+
                   </table>
 
                   <p style="font-size: 19px; font-weight: bold; color: #000; line-height: 1.32; margin: 0 0 10px 0;">Contact details</p>
