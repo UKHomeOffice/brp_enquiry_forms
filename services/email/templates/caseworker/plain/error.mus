@@ -96,6 +96,21 @@
     {{conditions-error}}
   {{/conditions-error}}
 
+  {{#length-of-stay-error}}
+    {{#t}}fields.length-of-stay-error-checkbox.label{{/t}}
+    {{length-of-stay-error}}
+  {{/length-of-stay-error}}
+
+  {{#biographics-error}}
+    {{#t}}fields.biographics-error-checkbox.label{{/t}}
+    {{biographics-error}}
+  {{/biographics-error}}
+
+  {{#BRP-issue-error}}
+    {{#t}}fields.BRP-issue-error-checkbox.label{{/t}}
+    {{BRP-issue-error}}
+  {{/BRP-issue-error}}
+
   Contact details
 
   {{#contact-address-street}}
