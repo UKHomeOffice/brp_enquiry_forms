@@ -6,6 +6,19 @@ const StatsD = require('hot-shots');
 const client = new StatsD();
 const Model = require('../models/email');
 
+function errorChecked(key, data) {
+  if (data[key + '-checkbox']) {
+    return key;
+  }
+}
+
+function checkedErrors(data) {
+  const checked = _.filter(_.keys(data), valueKey => {
+    return errorChecked(valueKey, data);
+  });
+  return checked;
+}
+
 const serviceMap = {
   '/not-arrived': () => {
     return {
@@ -16,7 +29,7 @@ const serviceMap = {
   '/correct-mistakes': data => {
     let subjectErrors = '';
     checkedErrors(data).forEach(element => {
-      subjectErrors += " " + element;
+      subjectErrors += ' '  + element;
     });
 
     const suffix = data.triage ? '-triage' : '';
@@ -45,19 +58,6 @@ const serviceMap = {
     };
   }
 };
-
-function checkedErrors(data) {
-  const checked = _.filter(_.keys(data), valueKey => {
-    return errorChecked(valueKey, data);
-  });
-  return checked;
-}
-
-function errorChecked(key, data) {
-  if (data[key + '-checkbox']) {
-    return key;
-  }
-}
 
 module.exports = superclass => class Emailer extends superclass {
   saveValues(req, res, callback) {
