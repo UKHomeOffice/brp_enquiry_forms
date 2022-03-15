@@ -14,10 +14,15 @@ const serviceMap = {
     };
   },
   '/correct-mistakes': data => {
+    let subjectErrors = '';
+    checkedErrors(data).forEach(element => {
+      subjectErrors += " " + element;
+    });
+
     const suffix = data.triage ? '-triage' : '';
     return {
       template: 'error' + suffix,
-      subject: 'Form submitted: Report a problem with your new BRP'
+      subject: 'Form submitted: Report a problem with your new BRP ' + subjectErrors
     };
   },
   '/lost-stolen': data => {
@@ -40,6 +45,19 @@ const serviceMap = {
     };
   }
 };
+
+function checkedErrors(data) {
+  const checked = _.filter(_.keys(data), valueKey => {
+    return errorChecked(valueKey, data);
+  });
+  return checked;
+}
+
+function errorChecked(key, data) {
+  if (data[key + '-checkbox']) {
+    return key;
+  }
+}
 
 module.exports = superclass => class Emailer extends superclass {
   saveValues(req, res, callback) {
