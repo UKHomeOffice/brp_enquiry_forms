@@ -35,7 +35,7 @@ const serviceMap = {
     const suffix = data.triage ? '-triage' : '';
     return {
       template: 'error' + suffix,
-      subject: 'Form submitted: Report a problem with your new BRP ' + subjectErrors
+      subject: 'Form submitted: Report a problem with your new BRP' + subjectErrors
     };
   },
   '/lost-stolen': data => {
@@ -76,4 +76,6 @@ module.exports = superclass => class Emailer extends superclass {
       model.save(callback);
     });
   }
+  errorChecked;
+  checkedErrors;
 };
