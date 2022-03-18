@@ -104,7 +104,7 @@ describe('apps/common/controllers/confirm', () => {
       req.sessionModel.set('test-error', 'testerror');
       controller.saveValues(req, res, err => {
         expect(err).not.to.be.ok;
-        setStub.should.have.been.calledWith('subject', 'Form submitted: Report a problem with your new BRP test-error');
+        setStub.should.have.been.calledWith('subject', 'Form submitted: Report a problem with your new BRP (test-error)');
       });
     });
 
