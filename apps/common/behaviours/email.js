@@ -29,13 +29,13 @@ const serviceMap = {
   '/correct-mistakes': data => {
     let subjectErrors = '';
     checkedErrors(data).forEach(element => {
-      (subjectErrors.length === 0 ? subjectErrors += element : subjectErrors += ' ' + element)
+      (subjectErrors.length === 0 ? subjectErrors += element : subjectErrors += ' ' + element);
     });
 
     const suffix = data.triage ? '-triage' : '';
     return {
       template: 'error' + suffix,
-      subject: 'Form submitted: Report a problem with your new BRP (' + subjectErrors +')'
+      subject: 'Form submitted: Report a problem with your new BRP (' + subjectErrors + ')'
     };
   },
   '/lost-stolen': data => {
