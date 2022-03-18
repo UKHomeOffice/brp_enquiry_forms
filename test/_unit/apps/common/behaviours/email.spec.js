@@ -107,7 +107,7 @@ describe('apps/common/controllers/confirm', () => {
         setStub.should.have.been.calledWith('subject', 'Form submitted: Report a problem with your new BRP test-error');
       });
     });
-    
+
     it('throws an error if its not part of a recognised journey', () => {
       req.baseUrl = '/unrecognised-journey';
       controller.saveValues(req, res, err => {
