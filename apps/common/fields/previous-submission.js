@@ -14,5 +14,8 @@ module.exports = {
     }, {
       value: 'no'
     }]
+  },
+  'submission-reference': {
+    validate: [ {type: 'regex', arguments: /^[A-Za-z0-9]{15}$|(^$)+/g }]
   }
 };

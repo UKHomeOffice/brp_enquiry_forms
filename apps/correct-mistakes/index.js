@@ -19,7 +19,7 @@ module.exports = {
         'location-applied'
       ],
       next: '/about-error',
-      backLink: 'submission-reference'
+      backLink: 'previous-submission'
     },
     '/about-error': {
       behaviours: [require('./behaviours/about-error')],
