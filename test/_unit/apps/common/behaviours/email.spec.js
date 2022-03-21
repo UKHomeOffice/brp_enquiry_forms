@@ -1,5 +1,6 @@
 'use strict';
 
+const { expect } = require('chai');
 const Controller = require('hof').controller;
 
 describe('apps/common/controllers/confirm', () => {
@@ -94,6 +95,17 @@ describe('apps/common/controllers/confirm', () => {
       controller.saveValues(req, res, err => {
         expect(err).not.to.be.ok;
         setStub.should.have.been.calledWith('template', 'someone-else');
+      });
+    });
+
+    it('sets errors in the subject for the correct mistakes journey', () => {
+      req.baseUrl = '/correct-mistakes';
+      req.sessionModel.set('test-error-checkbox', 'true');
+      req.sessionModel.set('test-error', 'testerror');
+      controller.saveValues(req, res, err => {
+        expect(err).not.to.be.ok;
+        setStub.should.have.been.calledWith('subject',
+          'Form submitted: Report a problem with your new BRP (test-error)');
       });
     });
 

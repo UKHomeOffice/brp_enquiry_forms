@@ -6,6 +6,19 @@ const StatsD = require('hot-shots');
 const client = new StatsD();
 const Model = require('../models/email');
 
+function errorChecked(key, data) {
+  if (data[key + '-checkbox']) {
+    return key;
+  }
+}
+
+function checkedErrors(data) {
+  const checked = _.filter(_.keys(data), valueKey => {
+    return errorChecked(valueKey, data);
+  });
+  return checked;
+}
+
 const serviceMap = {
   '/not-arrived': () => {
     return {
@@ -14,10 +27,15 @@ const serviceMap = {
     };
   },
   '/correct-mistakes': data => {
+    let subjectErrors = '';
+    checkedErrors(data).forEach(element => {
+      (subjectErrors.length === 0 ? subjectErrors += element : subjectErrors += ' ' + element);
+    });
+
     const suffix = data.triage ? '-triage' : '';
     return {
       template: 'error' + suffix,
-      subject: 'Form submitted: Report a problem with your new BRP'
+      subject: 'Form submitted: Report a problem with your new BRP (' + subjectErrors + ')'
     };
   },
   '/lost-stolen': data => {
@@ -58,4 +76,6 @@ module.exports = superclass => class Emailer extends superclass {
       model.save(callback);
     });
   }
+  errorChecked;
+  checkedErrors;
 };

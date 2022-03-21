@@ -75,17 +75,17 @@ Feature: A user should access the correct mistakes service and be able to log an
     Then I check 'conditions-error-checkbox'
     Then I select 'Continue'
     Then I should be on the 'about-error' page showing 'What’s the problem with your BRP?'
-    Then I should see 'What is your correct family name?' on the page
-    Then I should see 'What are your correct given name(s)?' on the page
-    Then I should see 'What is your correct place of birth?' on the page
-    Then I should see 'Enter your date of birth' on the page
-    Then I should see 'What is your correct gender?' on the page
-    Then I should see 'What are the correct sponsor details?' on the page
-    Then I should see 'What is wrong with your signature?' on the page
-    Then I should see 'What is wrong with your photograph?' on the page
-    Then I should see 'What is your correct National Insurance number?' on the page
-    Then I should see 'What is wrong with your BRP?' on the page
-    Then I should see 'Tell us about the problem' on the page
+    Then I should see the 'What is your correct family name?' error
+    Then I should see the 'What are your correct given name(s)?' error
+    Then I should see the 'What is your correct place of birth?' error
+    Then I should see the 'Enter a valid date' error
+    Then I should see the 'What is your correct gender?' error
+    Then I should see the 'What are the correct sponsor details?' error
+    Then I should see the 'What is wrong with your signature?' error
+    Then I should see the 'What is wrong with your photograph?' error
+    Then I should see the 'What is your correct National Insurance number?' error
+    Then I should see the 'What is wrong with your BRP?' error
+    Then I should see the 'Tell us about the problem' error
 
     @validation
     Scenario: BRP number validation
