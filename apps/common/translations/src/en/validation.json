@@ -43,5 +43,8 @@
   "fullname": {
     "required": "Enter your full name",
     "notUrl": "Full name must not be a URL"
+  },
+  "previous-submission": {
+    "required": "Have you previously submitted this request?"
   }
 }
