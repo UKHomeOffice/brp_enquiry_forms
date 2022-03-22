@@ -16,6 +16,10 @@ module.exports = {
     }]
   },
   'submission-reference': {
-    validate: [ {type: 'regex', arguments: /^[A-Za-z0-9]{15}$|(^$)+/g }]
+    validate: [ {type: 'regex', arguments: /^[A-Za-z0-9]{15}$|(^$)+/g }],
+    dependent: {
+      field: 'previous-submission',
+      value: 'yes'
+    }
   }
 };
