@@ -5,6 +5,7 @@ const _ = require('underscore');
 const StatsD = require('hot-shots');
 const client = new StatsD();
 const Model = require('../models/email');
+const config = require('../../../config');
 
 const { customAlphabet } = require('nanoid');
 const alphabet = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
@@ -25,6 +26,9 @@ function checkedErrors(data) {
 }
 function setRef(data) {
   const submissionRef = (data['submission-reference'] ? data['submission-reference'] : nanoid());
+  if (data['submission-reference']) {
+    config.email.duplicate = true;
+  }
   return submissionRef;
 }
 
