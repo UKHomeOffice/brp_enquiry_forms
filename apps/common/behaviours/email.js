@@ -9,7 +9,7 @@ const config = require('../../../config');
 
 const { customAlphabet } = require('nanoid');
 const alphabet = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
-const nanoid = customAlphabet(alphabet, 15);
+const nanoid = customAlphabet(alphabet, 10);
 
 
 function errorChecked(key, data) {
