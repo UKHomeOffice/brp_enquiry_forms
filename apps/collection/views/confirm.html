@@ -44,37 +44,7 @@
             <tr>
               <td>{{#t}}journeys.collection.pages.check-details.tables.problem-details.reason.label{{/t}}</td>
               <td class="no-white-space">
-                {{#reason.which-post-office}}
-                  {{#t}}fields.reason-radio.options.which-post-office.label{{/t}}
-                {{/reason.which-post-office}}
-
-                {{#reason.under-age}}
-                  {{#t}}fields.reason-radio.options.under-age.label{{/t}}
-                {{/reason.under-age}}
-
-                {{#reason.non-identity}}
-                  {{#t}}fields.reason-radio.options.non-identity.label{{/t}}
-                {{/reason.non-identity}}
-
-                {{#reason.others-identity}}
-                  {{#t}}fields.reason-radio.options.others-identity.label{{/t}}
-                {{/reason.others-identity}}
-
-                {{#reason.passport-family}}
-                  {{#t}}fields.reason-radio.options.passport-family.label{{/t}}
-                {{/reason.passport-family}}
-
-                {{#reason.passport-lost}}
-                  {{#t}}fields.reason-radio.options.passport-lost.label{{/t}}
-                {{/reason.passport-lost}}
-
-                {{#reason.no-brp}}
-                  {{#t}}fields.reason-radio.options.no-brp.label{{/t}}
-                {{/reason.no-brp}}
-
-                {{#reason.other}}
-                  {{#t}}fields.reason-radio.options.other.label{{/t}}
-                {{/reason.other}}
+                {{#t}}fields.reason-radio.options.{{values.reason-radio}}.label{{/t}}
                 <br />
                 <span>
                   {{#values.which-post-office}}
