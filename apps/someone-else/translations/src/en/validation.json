@@ -65,5 +65,8 @@
   },
   "incapable-details": {
     "required": "Tell us about the problem"
+  },
+  "phone": {
+    "notUrl": "Phone number must not be a URL"
   }
 }

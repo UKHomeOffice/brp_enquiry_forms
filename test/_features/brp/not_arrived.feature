@@ -137,3 +137,65 @@ Feature: I should be able to log that my BRP has not arrived
     Then I fill 'email' with 'test@test.test'
     Then I select 'Continue'
     Then I should be on the 'confirm' page showing 'Check the details you have provided'
+
+    @validation
+    Scenario: Not Arrived application Contact Details not a URL validation
+      Given I start the 'not-arrived' application journey
+      Then I should be on the 'post-office-collect' page showing 'Were you due to collect your document from the Post Office?'
+      Then I check 'collection-no'
+      Then I select 'Continue'
+      Then I should be on the 'letter-received' page showing 'Have you received a letter from the Home Office?'
+      Then I check 'received-yes'
+      Then I fill the date 'delivery-date' with '24-5-2020'
+      Then I select 'Continue'
+      Then I should be on the 'same-address' page showing 'Would you like your BRP sent to the address that is on the letter from the Home Office?'
+      Then I check 'address-match-yes'
+      Then I fill 'delivery-details' text area with 'Watch out for the dog!'
+      Then I select 'Continue'
+      Then I should be on the 'personal-details' page showing 'What are your personal details?'
+      Then I fill 'fullname' with 'Ronald Testman'
+      Then I fill the date 'date-of-birth' with '24-5-1990'
+      Then I fill 'nationality' with 'British Overseas Citizen'
+      Then I fill 'passport' with '1234JA2345'
+      Then I select 'Continue'
+      Then I should be on the 'contact-details' page showing 'How should we contact you about your BRP?'
+      Then I check 'use-address'
+      Then I fill 'contact-address-house-number' with 'www.google.com'
+      Then I fill 'contact-address-street' with 'www.google.com'
+      Then I fill 'contact-address-town' with 'www.google.com'
+      Then I fill 'contact-address-county' with 'www.google.com'
+      Then I fill 'contact-address-postcode' with 'www.google.com'
+      Then I fill 'phone' with 'www.google.com'
+      Then I select 'Continue'
+      Then I should see 'Building name or number must not be a URL' on the page
+      Then I should see 'Street must not be a URL' on the page
+      Then I should see 'Town or City must not be a URL' on the page
+      Then I should see 'County must not be a URL' on the page
+      Then I should see 'Postcode must not be a URL' on the page
+      Then I should see 'Phone number must not be a URL' on the page
+
+    @validation
+    Scenario: Not Arrived application Same Address not a URL validation
+      Given I start the 'not-arrived' application journey
+      Then I should be on the 'post-office-collect' page showing 'Were you due to collect your document from the Post Office?'
+      Then I check 'collection-no'
+      Then I select 'Continue'
+      Then I should be on the 'letter-received' page showing 'Have you received a letter from the Home Office?'
+      Then I check 'received-yes'
+      Then I fill the date 'delivery-date' with '24-5-2020'
+      Then I select 'Continue'
+      Then I should be on the 'same-address' page showing 'Would you like your BRP sent to the address that is on the letter from the Home Office?'
+      Then I check 'address-match-no'
+      Then I fill 'address-house-number' with 'www.google.com'
+      Then I fill 'address-street' with 'www.google.com'
+      Then I fill 'address-town' with 'www.google.com'
+      Then I fill 'address-county' with 'www.google.com'
+      Then I fill 'address-postcode' with 'www.google.com'
+      Then I fill 'case-id' with 'www.google.com'
+      Then I select 'Continue'
+      Then I should see 'Building name or number must not be a URL' on the page
+      Then I should see 'Street must not be a URL' on the page
+      Then I should see 'Town or City must not be a URL' on the page
+      Then I should see 'County must not be a URL' on the page
+      Then I should see 'Postcode must not be a URL' on the page
+      Then I should see 'Case ID number must not be a URL' on the page

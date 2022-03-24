@@ -213,3 +213,35 @@ Feature: A user should access the collection problem service and be able to log 
     Then I select 'Continue'
     Then I should see 'Full name must not be a URL' on the page
     And I should see 'Passport Number must not be a URL' on the page
+
+    @validation
+  Scenario: Collection application Contact Details not a URL validation
+    Given I start the 'collection' application journey
+    Then I should be on the 'where' page showing 'From where were you asked to collect your BRP?'
+    Then I check 'collection-where-radio-Sponsor'
+    Then I fill the date 'collection-date' with '30-5-2021'
+    Then I select 'Continue'
+    Then I should be on the 'reasons' page showing 'Why couldn\'t you collect your BRP?'
+    Then I check 'reason-radio-no-brp'
+    Then I select 'Continue'
+    Then I should be on the 'personal-details' page showing 'What are your personal details?'
+    Then I fill 'fullname' with 'Ronald Testman'
+    Then I fill the date 'date-of-birth' with '24-5-1990'
+    Then I fill 'nationality' with 'British Overseas Citizen'
+    Then I fill 'passport' with '1234JA2345'
+    Then I select 'Continue'
+    Then I should be on the 'contact-details' page showing 'How should we contact you about your BRP?'
+    Then I check 'use-address'
+    Then I fill 'contact-address-house-number' with 'www.google.com'
+    Then I fill 'contact-address-street' with 'www.google.com'
+    Then I fill 'contact-address-town' with 'www.google.com'
+    Then I fill 'contact-address-county' with 'www.google.com'
+    Then I fill 'contact-address-postcode' with 'www.google.com'
+    Then I fill 'phone' with 'www.google.com'
+    Then I select 'Continue'
+    Then I should see 'Building name or number must not be a URL' on the page
+    Then I should see 'Street must not be a URL' on the page
+    Then I should see 'Town or City must not be a URL' on the page
+    Then I should see 'County must not be a URL' on the page
+    Then I should see 'Postcode must not be a URL' on the page
+    Then I should see 'Phone number must not be a URL' on the page

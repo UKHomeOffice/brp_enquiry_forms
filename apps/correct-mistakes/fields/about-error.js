@@ -41,7 +41,7 @@ module.exports = {
     toggle: 'birth-place-error-container'
   },
   'birth-place-error': {
-    validate: ['required'],
+    validate: ['required', 'notUrl'],
     dependent: {
       field: 'birth-place-error-checkbox',
       value: 'true'
@@ -66,7 +66,7 @@ module.exports = {
     toggle: 'sponsor-details-error-container'
   },
   'sponsor-details-error': {
-    validate: ['required'],
+    validate: ['required', 'notUrl'],
     dependent: {
       field: 'sponsor-details-error-checkbox',
       value: 'true'
@@ -109,7 +109,7 @@ module.exports = {
     toggle: 'national-insurance-error-container'
   },
   'national-insurance-error': {
-    validate: ['required'],
+    validate: ['required', 'notUrl'],
     dependent: {
       field: 'national-insurance-error-checkbox',
       value: 'true'

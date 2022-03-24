@@ -91,3 +91,34 @@ Feature: A user should be able to log a lost or stolen BRP
       Then I fill 'rep-name' with 'www.google.com'
       Then I submit the application
       Then I should see 'Full name must not be a URL' on the page
+
+@validation
+    Scenario: Lost or Stolen application Contact Details not a URL validation
+      Given I start the 'lost-stolen' application journey
+      Then I should be on the 'where' page showing 'Where are you now?'
+      Then I check 'inside-uk-yes'
+      Then I select 'Continue'
+      Then I should be on the 'date-lost' page showing 'When did you realise you no longer had your BRP?'
+      Then I fill the date 'date-lost' with '30-05-2021'
+      Then I select 'Continue'
+      Then I should be on the 'personal-details' page showing 'What are your personal details?'
+      Then I fill 'fullname' with 'Ronald Testman'
+      Then I fill the date 'date-of-birth' with '30-05-1990'
+      Then I fill 'nationality' with 'Namibia'
+      Then I fill 'brp-card' with 'ZRX000123'
+      Then I select 'Continue'
+      Then I should be on the 'contact-details' page showing 'How should we contact you to tell you what to do next?'
+      Then I check 'use-address'
+      Then I fill 'contact-address-house-number' with 'www.google.com'
+      Then I fill 'contact-address-street' with 'www.google.com'
+      Then I fill 'contact-address-town' with 'www.google.com'
+      Then I fill 'contact-address-county' with 'www.google.com'
+      Then I fill 'contact-address-postcode' with 'www.google.com'
+      Then I fill 'phone' with 'www.google.com'
+      Then I select 'Continue'
+      Then I should see 'Building name or number must not be a URL' on the page
+      Then I should see 'Street must not be a URL' on the page
+      Then I should see 'Town or City must not be a URL' on the page
+      Then I should see 'County must not be a URL' on the page
+      Then I should see 'Postcode must not be a URL' on the page
+      Then I should see 'Phone number must not be a URL' on the page

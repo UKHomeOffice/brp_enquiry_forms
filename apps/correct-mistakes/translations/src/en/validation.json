@@ -22,16 +22,23 @@
     "required": "Enter the postcode"
   },
   "same-address-house-number": {
-    "required": "Enter your building name or number"
+    "required": "Enter your building name or number",
+    "notUrl": "Building name or number must not be a URL"
   },
   "same-address-street": {
-    "required": "Enter your street"
+    "required": "Enter your street",
+    "notUrl": "Street must not be a URL"
   },
   "same-address-town": {
-    "required": "Enter the town or city"
+    "required": "Enter the town or city",
+    "notUrl": "Town or City must not be a URL"
+  },
+  "same-address-county": {
+    "notUrl": "County must not be a URL"
   },
   "same-address-postcode": {
-    "required": "Enter the postcode"
+    "required": "Enter the postcode",
+    "notUrl": "Postcode must not be a URL"
   },
   "fullname": {
     "required": "Enter your full name"
@@ -85,7 +92,8 @@
     "date": "Enter a valid date"
   },
   "birth-place-error": {
-    "required": "What is your correct place of birth?"
+    "required": "What is your correct place of birth?",
+    "notUrl": "Place of birth must not be a URL"
   },
   "gender-error": {
     "required": "What is your correct gender?"
@@ -109,7 +117,8 @@
     "required": "Tell us about the problem"
   },
   "national-insurance-error": {
-    "required": "What is your correct National Insurance number?"
+    "required": "What is your correct National Insurance number?",
+    "notUrl": "National Insurance number must not be a URL"
   },
   "photograph-error": {
     "required": "What is wrong with your photograph?"
@@ -122,7 +131,8 @@
     "equal": "Please pick a nationality from the list"
   },
   "sponsor-details-error": {
-    "required": "What are the correct sponsor details?"
+    "required": "What are the correct sponsor details?",
+    "notUrl": "Sponsor reference number must not be a URL"
   },
   "inside-uk": {
     "required": "Tell us where you are"
@@ -141,5 +151,8 @@
   },
   "org-type": {
     "required": "What type of organisation helped you complete this form?"
+  },
+  "phone": {
+    "notUrl": "Phone number must not be a URL"
   }
 }

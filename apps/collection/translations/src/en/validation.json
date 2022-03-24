@@ -58,5 +58,8 @@
   },
   "org-type": {
     "required": "Who has helped you fill in this form?"
+  },
+  "phone": {
+    "notUrl": "Phone number must not be a URL"
   }
 }

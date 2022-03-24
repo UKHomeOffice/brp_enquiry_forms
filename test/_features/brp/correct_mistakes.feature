@@ -203,3 +203,81 @@ Feature: A user should access the correct mistakes service and be able to log an
       Then I select 'Continue'
       Then I should see 'Family name must not be a URL' on the page
       Then I should see 'Given name(s) must not be a URL' on the page
+    
+    @validation
+    Scenario: Correct Mistakes Place of birth and Sponsor reference not a URL validation
+      Given I start the 'correct-mistakes' application journey
+      Then I should be on the 'location' page showing 'Where did you apply for your visa?'
+      Then I check 'location-applied-yes'
+      Then I select 'Continue'
+      Then I should be on the 'about-error' page showing 'What’s the problem with your BRP?'
+      Then I check 'birth-place-error-checkbox'
+      Then I fill 'birth-place-error' with 'wwww.google.com'
+      Then I check 'sponsor-details-error-checkbox'
+      Then I fill 'sponsor-details-error' with 'wwww.google.com'
+      Then I check 'national-insurance-error-checkbox'
+      Then I fill 'national-insurance-error' with 'wwww.google.com'
+      Then I select 'Continue'
+      Then I should see 'Place of birth must not be a URL' on the page
+      Then I should see 'Sponsor reference number must not be a URL' on the page
+      Then I should see 'National Insurance number must not be a URL' on the page
+
+
+     @validation
+     Scenario: Correct Mistakes Contact Details not a URL validation
+      Given I start the 'correct-mistakes' application journey
+      Then I should be on the 'location' page showing 'Where did you apply for your visa?'
+      Then I check 'location-applied-yes'
+      Then I select 'Continue'
+      Then I should be on the 'about-error' page showing 'What’s the problem with your BRP?'
+      Then I check 'last-name-error-checkbox'
+      Then I fill 'last-name-error' with 'Testman'
+      Then I select 'Continue'
+      Then I should be on the 'same-address' page showing 'Is your address the same as the address on the delivery letter?'
+      Then I check 'same-address-radio-yes'
+      Then I select 'Continue'
+      Then I should be on the 'personal-details' page showing 'How do your personal details appear on your BRP?'
+      Then I fill 'fullname' with 'Ronald Testman'
+      Then I fill the date 'date-of-birth' with '30-05-1990'
+      Then I fill 'nationality' with 'Namibia'
+      Then I fill 'brp-card' with 'XR1000123'
+      Then I select 'Continue'
+      Then I should be on the 'contact-details' page showing 'How should we contact you about your BRP?'
+      Then I check 'use-address'
+      Then I fill 'contact-address-house-number' with 'www.google.com'
+      Then I fill 'contact-address-street' with 'www.google.com'
+      Then I fill 'contact-address-town' with 'www.google.com'
+      Then I fill 'contact-address-county' with 'www.google.com'
+      Then I fill 'contact-address-postcode' with 'www.google.com'
+      Then I fill 'phone' with 'www.google.com'
+      Then I select 'Continue'
+      Then I should see 'Building name or number must not be a URL' on the page
+      Then I should see 'Street must not be a URL' on the page
+      Then I should see 'Town or City must not be a URL' on the page
+      Then I should see 'County must not be a URL' on the page
+      Then I should see 'Postcode must not be a URL' on the page
+      Then I should see 'Phone number must not be a URL' on the page  
+
+      @validation
+     Scenario: Correct Mistakes Contact Details not a URL validation
+      Given I start the 'correct-mistakes' application journey
+      Then I should be on the 'location' page showing 'Where did you apply for your visa?'
+      Then I check 'location-applied-yes'
+      Then I select 'Continue'
+      Then I should be on the 'about-error' page showing 'What’s the problem with your BRP?'
+      Then I check 'last-name-error-checkbox'
+      Then I fill 'last-name-error' with 'Testman'
+      Then I select 'Continue'
+      Then I should be on the 'same-address' page showing 'Is your address the same as the address on the delivery letter?'
+      Then I check 'same-address-radio-no'
+      Then I fill 'same-address-house-number' with 'www.google.com'
+      Then I fill 'same-address-street' with 'www.google.com'
+      Then I fill 'same-address-town' with 'www.google.com'
+      Then I fill 'same-address-county' with 'www.google.com'
+      Then I fill 'same-address-postcode' with 'www.google.com'
+      Then I select 'Continue'
+      Then I should see 'Building name or number must not be a URL' on the page
+      Then I should see 'Street must not be a URL' on the page
+      Then I should see 'Town or City must not be a URL' on the page
+      Then I should see 'County must not be a URL' on the page
+      Then I should see 'Postcode must not be a URL' on the page

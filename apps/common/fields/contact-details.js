@@ -13,7 +13,7 @@ module.exports = {
     toggle: 'address-group'
   },
   'contact-address-house-number': {
-    validate: ['required'],
+    validate: ['required', 'notUrl'],
     label: 'fields.address-house-number.label',
     dependent: {
       value: 'true',
@@ -21,7 +21,7 @@ module.exports = {
     }
   },
   'contact-address-street': {
-    validate: ['required'],
+    validate: ['required', 'notUrl'],
     label: 'fields.address-street.label',
     dependent: {
       value: 'true',
@@ -29,7 +29,7 @@ module.exports = {
     }
   },
   'contact-address-town': {
-    validate: ['required'],
+    validate: ['required', 'notUrl'],
     label: 'fields.address-town.label',
     dependent: {
       value: 'true',
@@ -37,14 +37,18 @@ module.exports = {
     }
   },
   'contact-address-county': {
+    validate: ['notUrl'],
     label: 'fields.address-county.label'
   },
   'contact-address-postcode': {
-    validate: ['required'],
+    validate: ['required', 'notUrl'],
     label: 'fields.address-postcode.label',
     dependent: {
       value: 'true',
       field: 'use-address'
     }
+  },
+  phone:{
+    validate: ['notUrl']
   }
 };

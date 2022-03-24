@@ -15,16 +15,23 @@
     "required": "A case ID number is required for your BRP to be sent to a different address"
   },
   "contact-address-house-number": {
-    "required": "Enter your building name or number"
+    "required": "Enter your building name or number",
+    "notUrl": "Building name or number must not be a URL"
   },
   "contact-address-street": {
-    "required": "Enter your street"
+    "required": "Enter your street",
+    "notUrl": "Street must not be a URL"
   },
   "contact-address-town": {
-    "required": "Enter the town or city"
+    "required": "Enter the town or city",
+    "notUrl": "Town or City must not be a URL"
+  },
+  "contact-address-county": {
+    "notUrl": "County must not be a URL"
   },
   "contact-address-postcode": {
-    "required": "Enter the postcode"
+    "required": "Enter the postcode",
+    "notUrl": "Postcode must not be a URL"
   },
   "org-help": {
     "required": "Did you have help completing this form?"

@@ -41,5 +41,42 @@
     "required": "Enter the date of the letter from the Home Office",
     "before": "The date is in the future",
     "date": "Enter the date in the correct format"
+  },
+  "address-house-number": {
+    "required": "Enter your building name or number",
+    "notUrl": "Building name or number must not be a URL"
+  },
+  "address-street": {
+    "required": "Enter your street",
+    "notUrl": "Street must not be a URL"
+  },
+  "address-town": {
+    "required": "Enter the town or city",
+    "notUrl": "Town or City must not be a URL"
+  },
+  "address-county": {
+    "notUrl": "County must not be a URL"
+  },
+  "address-postcode": {
+    "required": "Enter the postcode",
+    "notUrl": "Postcode must not be a URL"
+  },
+  "contact-address-street": {
+    "required": "Enter your street",
+    "notUrl": "Street must not be a URL"
+  },
+  "contact-address-town": {
+    "required": "Enter the town or city",
+    "notUrl": "Town or City must not be a URL"
+  },
+  "contact-address-county": {
+    "notUrl": "County must not be a URL"
+  },
+  "contact-address-postcode": {
+    "required": "Enter the postcode",
+    "notUrl": "Postcode must not be a URL"
+  },
+  "phone": {
+    "notUrl": "Phone number must not be a URL"
   }
 }
