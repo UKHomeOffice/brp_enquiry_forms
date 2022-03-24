@@ -20,10 +20,12 @@ function getReason(req) {
       reason[reasonType] = req.sessionModel.get(reasonType);
       return;
     }
+    if (reason[reasonType] === undefined || reason[reasonType] === '') {
+      reason[reasonType] = ' ';
+    }
     req.sessionModel.unset(r);
     delete req.form.values[r];
   });
-
   return reason;
 }
 
