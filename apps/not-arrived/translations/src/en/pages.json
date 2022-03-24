@@ -2,6 +2,9 @@
   "post-office-collect": {
     "header": "Were you due to collect your document from the Post Office?"
   },
+  "consignment-number": {
+    "header": "Do you have a consignment number?"
+  },
   "letter-received": {
     "header": "Have you received a letter from the Home Office?",
     "subheader": "This letter may tell you:",

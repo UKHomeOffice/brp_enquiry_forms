@@ -6,12 +6,24 @@ module.exports = {
   params: '/:action?',
   steps: {
     '/post-office-collect': {
-      next: '/letter-received',
+      next: '/consignment-number',
       behaviours: [require('./behaviours/change-path')],
       template: 'collection.html',
       fields: [
         'collection'
       ]
+    },
+    '/consignment-number': {
+      next: '/letter-received',
+      template: 'consignment-number.html',
+      fields: [
+        'consignment-number-radio', 
+        'consingment-number'
+      ],
+      condition: req => {
+        console.log(req);
+      },
+      backLink: 'post-office-collect',
     },
     '/letter-received': {
       behaviours: [require('./behaviours/letter-received')],
@@ -20,7 +32,7 @@ module.exports = {
         'delivery-date',
         'no-letter'
       ],
-      backLink: 'post-office-collect',
+      backLink: 'consignment-number',
       next: '/same-address',
       forks: [{
         target: '/letter-not-received',
