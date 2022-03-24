@@ -5,6 +5,12 @@ const _ = require('underscore');
 const StatsD = require('hot-shots');
 const client = new StatsD();
 const Model = require('../models/email');
+const config = require('../../../config');
+
+const { customAlphabet } = require('nanoid');
+const alphabet = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+const nanoid = customAlphabet(alphabet, 9);
+
 
 function errorChecked(key, data) {
   if (data[key + '-checkbox']) {
@@ -18,12 +24,19 @@ function checkedErrors(data) {
   });
   return checked;
 }
+function setRef(data) {
+  const submissionRef = (data['submission-reference'] ? data['submission-reference'] : nanoid());
+  if (data['submission-reference']) {
+    config.email.duplicate = true;
+  }
+  return submissionRef;
+}
 
 const serviceMap = {
-  '/not-arrived': () => {
+  '/not-arrived': data => {
     return {
       template: 'delivery',
-      subject: 'Form submitted: Your BRP hasn\'t arrived'
+      subject: 'Form submitted: Your BRP hasn\'t arrived. Ref: ' + setRef(data)
     };
   },
   '/correct-mistakes': data => {
@@ -31,30 +44,29 @@ const serviceMap = {
     checkedErrors(data).forEach(element => {
       (subjectErrors.length === 0 ? subjectErrors += element : subjectErrors += ' ' + element);
     });
-
     const suffix = data.triage ? '-triage' : '';
     return {
       template: 'error' + suffix,
-      subject: 'Form submitted: Report a problem with your new BRP (' + subjectErrors + ')'
+      subject: 'Form submitted: Report a problem with your new BRP (' + subjectErrors + ') Ref: ' + setRef(data)
     };
   },
   '/lost-stolen': data => {
     const suffix = (data['inside-uk'] === 'yes') ? '-uk' : '-abroad';
     return {
       template: 'lost-or-stolen' + suffix,
-      subject: 'Form submitted: Report a lost or stolen BRP'
+      subject: 'Form submitted: Report a lost or stolen BRP. Ref: ' + setRef(data)
     };
   },
-  '/collection': () => {
+  '/collection': data => {
     return {
       template: 'collection',
-      subject: 'Form submitted: Report a collection problem'
+      subject: 'Form submitted: Report a collection problem. Ref: ' + setRef(data)
     };
   },
-  '/someone-else': () => {
+  '/someone-else': data => {
     return {
       template: 'someone-else',
-      subject: 'Form submitted: Report someone else collecting your BRP'
+      subject: 'Form submitted: Report someone else collecting your BRP. Ref: ' + setRef(data)
     };
   }
 };

@@ -5,8 +5,16 @@ module.exports = {
   baseUrl: '/not-arrived',
   params: '/:action?',
   steps: {
+    '/previous-submission': {
+      fields: [
+        'previous-submission',
+        'submission-reference'
+      ],
+      next: '/post-office-collect'
+    },
     '/post-office-collect': {
       next: '/letter-received',
+      backLink: '/previous-submission',
       behaviours: [require('./behaviours/change-path')],
       template: 'collection.html',
       fields: [
@@ -31,8 +39,8 @@ module.exports = {
       }, {
         target: '/letter-lost',
         condition: {
-          field: 'delivery-date',
-          value: 'null'
+          field: 'no-letter',
+          value: 'true'
         }
       }]
     },

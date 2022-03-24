@@ -171,7 +171,7 @@ Emailer.prototype.send = function send(email, callback) {
     logger.info('Emailing caseworker: ', email.subject);
     this.transporter.sendMail({
       from: config.email.from,
-      to: config.email.caseworker[email.template],
+      to: config.email.duplicate ? config.email.caseworker.duplicate : config.email.caseworker[email.template],
       subject: email.subject,
       text: Hogan.compile(caseworkerPlainTextTemplates[email.template]).render(templateData),
       html: Hogan.compile(caseworkerHtmlTemplates[email.template]).render(templateData),
