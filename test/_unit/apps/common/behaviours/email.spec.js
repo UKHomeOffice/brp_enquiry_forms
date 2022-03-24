@@ -102,11 +102,11 @@ describe('apps/common/controllers/confirm', () => {
       req.baseUrl = '/correct-mistakes';
       req.sessionModel.set('test-error-checkbox', 'true');
       req.sessionModel.set('test-error', 'testerror');
-      req.sessionModel.set('submission-reference', 'fpgyxSgw7d6nuVU');
+      req.sessionModel.set('submission-reference', 'fpgyxSgw7');
       controller.saveValues(req, res, err => {
         expect(err).not.to.be.ok;
         setStub.should.have.been.calledWith('subject',
-          'Form submitted: Report a problem with your new BRP (test-error) Ref: fpgyxSgw7d6nuVU');
+          'Form submitted: Report a problem with your new BRP (test-error) Ref: fpgyxSgw7');
       });
     });
 
