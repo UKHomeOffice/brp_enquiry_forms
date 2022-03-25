@@ -24,7 +24,7 @@
   "author": "HomeOffice",
   "dependencies": {
     "express": "^4.17.1",
-    "hof": "^19.13.2",
+    "hof": "^19.13.9",
     "hogan.js": "^3.0.2",
     "hot-shots": "^5.9.0",
     "i18n-future": "^2.0.1",
@@ -32,6 +32,7 @@
     "lodash": "^4.17.21",
     "moment": "^2.29.1",
     "moment-business": "^2.0.0",
+    "nanoid": "^3.3.1",
     "nodemailer": "^6.4.16",
     "typeahead-aria": "^1.0.1",
     "underscore": "^1.13.1",

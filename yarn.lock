@@ -2794,10 +2794,10 @@ hmac-drbg@^1.0.1:
     minimalistic-assert "^1.0.0"
     minimalistic-crypto-utils "^1.0.1"
 
-hof@^19.13.2:
-  version "19.13.2"
-  resolved "https://registry.yarnpkg.com/hof/-/hof-19.13.2.tgz#9d4cfdbf781df367a118ce9206e690398cda3849"
-  integrity sha512-ZDsfeDOkRo0AQ/uv140/MW4bBXayU4RTszkPis1PSPP3wPP52s6LF2GKhxGdp6N6boTFLDea82zbsfquBxZupw==
+hof@^19.13.9:
+  version "19.13.9"
+  resolved "https://registry.yarnpkg.com/hof/-/hof-19.13.9.tgz#28f1385507ac0b2ade993682a76a7c358c76022d"
+  integrity sha512-lSIenKPI5rE1OgTCAJnnMv4mQPWxCXrxjBV5PrfqwDLkLpjz2zlP83xRg/X5jiU4WaRZf9bJfklNiI4NCaOuSQ==
   dependencies:
     aliasify "^2.1.0"
     bluebird "^3.7.2"
@@ -2851,7 +2851,7 @@ hof@^19.13.2:
     serve-static "^1.14.1"
     uglify-js "^3.14.3"
     underscore "^1.12.1"
-    urijs "^1.19.8"
+    urijs "^1.19.10"
     winston "^3.3.3"
 
 hogan-express-strict@^0.5.4:
@@ -3846,6 +3846,11 @@ nanoid@3.1.23:
   version "3.1.23"
   resolved "https://registry.yarnpkg.com/nanoid/-/nanoid-3.1.23.tgz#f744086ce7c2bc47ee0a8472574d5c78e4183a81"
   integrity sha512-FiB0kzdP0FFVGDKlRLEQ1BgDzU87dy5NnzjeW9YZNt+/c3+q82EQDUwniSAUxp/F0gFNI1ZhKU1FqYsMuqZVnw==
+
+nanoid@^3.3.1:
+  version "3.3.1"
+  resolved "https://registry.yarnpkg.com/nanoid/-/nanoid-3.3.1.tgz#6347a18cac88af88f58af0b3594b723d5e99bb35"
+  integrity sha512-n6Vs/3KGyxPQd6uO0eH4Bv0ojGSUvuLlIHtC3Y0kEO23YRge8H9x1GCzLn28YX0H66pMkxuaeESFq4tKISKwdw==
 
 natural-compare@^1.4.0:
   version "1.4.0"
@@ -5548,10 +5553,10 @@ uri-js@^4.2.2:
   dependencies:
     punycode "^2.1.0"
 
-urijs@^1.19.8:
-  version "1.19.8"
-  resolved "https://registry.yarnpkg.com/urijs/-/urijs-1.19.8.tgz#ee0407a18528934d3c383e691912f47043a58feb"
-  integrity sha512-iIXHrjomQ0ZCuDRy44wRbyTZVnfVNLVo3Ksz1yxNyE5wV1IDZW2S5Jszy45DTlw/UdsnRT7DyDhIz7Gy+vJumw==
+urijs@^1.19.10:
+  version "1.19.10"
+  resolved "https://registry.yarnpkg.com/urijs/-/urijs-1.19.10.tgz#8e2fe70a8192845c180f75074884278f1eea26cb"
+  integrity sha512-EzauQlgKuJgsXOqoMrCiePBf4At5jVqRhXykF3Wfb8ZsOBMxPcfiVBcsHXug4Aepb/ICm2PIgqAUGMelgdrWEg==
 
 url@0.10.3:
   version "0.10.3"

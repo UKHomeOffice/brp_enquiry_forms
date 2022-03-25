@@ -4,6 +4,9 @@ Feature: A user should access the correct mistakes service and be able to log an
   @in_uk
   Scenario: correct mistakes on brp form within the uk
     Given I start the 'correct-mistakes' application journey
+    Then I should be on the 'previous-submission' page showing 'Have you previously submitted this request?' 
+    Then I check 'previous-submission-no'
+    Then I select 'Continue'
     Then I should be on the 'location' page showing 'Where did you apply for your visa?'
     Then I check 'location-applied-yes'
     Then I select 'Continue'
@@ -28,6 +31,9 @@ Feature: A user should access the correct mistakes service and be able to log an
   @out_uk
   Scenario: correct mistakes on brp form outside the uk
     Given I start the 'correct-mistakes' application journey
+    Then I should be on the 'previous-submission' page showing 'Have you previously submitted this request?' 
+    Then I check 'previous-submission-no'
+    Then I select 'Continue'
     Then I should be on the 'location' page showing 'Where did you apply for your visa?'
     Then I check 'location-applied-no'
     Then I select 'Continue'
@@ -57,6 +63,9 @@ Feature: A user should access the correct mistakes service and be able to log an
   @validation
   Scenario: validation of about-error page
     Given I start the 'correct-mistakes' application journey
+    Then I should be on the 'previous-submission' page showing 'Have you previously submitted this request?' 
+    Then I check 'previous-submission-no'
+    Then I select 'Continue'
     Then I should be on the 'location' page showing 'Where did you apply for your visa?'
     Then I check 'location-applied-yes'
     Then I select 'Continue'
@@ -75,21 +84,24 @@ Feature: A user should access the correct mistakes service and be able to log an
     Then I check 'conditions-error-checkbox'
     Then I select 'Continue'
     Then I should be on the 'about-error' page showing 'What’s the problem with your BRP?'
-    Then I should see 'What is your correct family name?' on the page
-    Then I should see 'What are your correct given name(s)?' on the page
-    Then I should see 'What is your correct place of birth?' on the page
-    Then I should see 'Enter your date of birth' on the page
-    Then I should see 'What is your correct gender?' on the page
-    Then I should see 'What are the correct sponsor details?' on the page
-    Then I should see 'What is wrong with your signature?' on the page
-    Then I should see 'What is wrong with your photograph?' on the page
-    Then I should see 'What is your correct National Insurance number?' on the page
-    Then I should see 'What is wrong with your BRP?' on the page
-    Then I should see 'Tell us about the problem' on the page
+    Then I should see the 'What is your correct family name?' error
+    Then I should see the 'What are your correct given name(s)?' error
+    Then I should see the 'What is your correct place of birth?' error
+    Then I should see the 'Enter a valid date' error
+    Then I should see the 'What is your correct gender?' error
+    Then I should see the 'What are the correct sponsor details?' error
+    Then I should see the 'What is wrong with your signature?' error
+    Then I should see the 'What is wrong with your photograph?' error
+    Then I should see the 'What is your correct National Insurance number?' error
+    Then I should see the 'What is wrong with your BRP?' error
+    Then I should see the 'Tell us about the problem' error
 
     @validation
     Scenario: BRP number validation
       Given I start the 'correct-mistakes' application journey
+      Then I should be on the 'previous-submission' page showing 'Have you previously submitted this request?' 
+      Then I check 'previous-submission-no'
+      Then I select 'Continue'
       Then I should be on the 'location' page showing 'Where did you apply for your visa?'
       Then I check 'location-applied-no'
       Then I select 'Continue'
@@ -116,6 +128,9 @@ Feature: A user should access the correct mistakes service and be able to log an
     @validation
     Scenario: Correct Mistakes Personal Details not a URL validation
       Given I start the 'correct-mistakes' application journey
+      Then I should be on the 'previous-submission' page showing 'Have you previously submitted this request?' 
+      Then I check 'previous-submission-no'
+      Then I select 'Continue'
       Then I should be on the 'location' page showing 'Where did you apply for your visa?'
       Then I check 'location-applied-no'
       Then I select 'Continue'
@@ -142,6 +157,9 @@ Feature: A user should access the correct mistakes service and be able to log an
     @validation
     Scenario: Correct Mistakes Representative Personal Details not a URL validation
       Given I start the 'correct-mistakes' application journey
+      Then I should be on the 'previous-submission' page showing 'Have you previously submitted this request?' 
+      Then I check 'previous-submission-no'
+      Then I select 'Continue'
       Then I should be on the 'location' page showing 'Where did you apply for your visa?'
       Then I check 'location-applied-yes'
       Then I select 'Continue'
@@ -171,6 +189,9 @@ Feature: A user should access the correct mistakes service and be able to log an
     @validation
     Scenario: Correct Mistakes Family Name and Given Name(s) not a URL validation
       Given I start the 'correct-mistakes' application journey
+      Then I should be on the 'previous-submission' page showing 'Have you previously submitted this request?' 
+      Then I check 'previous-submission-no'
+      Then I select 'Continue'
       Then I should be on the 'location' page showing 'Where did you apply for your visa?'
       Then I check 'location-applied-yes'
       Then I select 'Continue'

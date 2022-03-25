@@ -3,13 +3,19 @@ Feature: I should be able to log that my BRP has not arrived
   
   Scenario: Due to collect the document from the postcode
     Given I start the 'not-arrived' application journey
+    Then I should be on the 'previous-submission' page showing 'Have you previously submitted this request?' 
+    Then I check 'previous-submission-no'
+    Then I select 'Continue'
     Then I should be on the 'post-office-collect' page showing 'Were you due to collect your document from the Post Office?'
     Then I check 'collection-yes'
     Then I select 'Continue'
-    Then I should be redirected to the 'collection' journey on the 'where' page showing 'From where were you asked to collect your BRP?'
+    Then I should be redirected to the 'collection' journey on the 'previous-submission' page showing 'Have you previously submitted this request?'
 
   Scenario: Letter not received from the home office
     Given I start the 'not-arrived' application journey
+    Then I should be on the 'previous-submission' page showing 'Have you previously submitted this request?' 
+    Then I check 'previous-submission-no'
+    Then I select 'Continue'
     Then I should be on the 'post-office-collect' page showing 'Were you due to collect your document from the Post Office?'
     Then I check 'collection-no'
     Then I select 'Continue'
@@ -20,6 +26,9 @@ Feature: I should be able to log that my BRP has not arrived
 
   Scenario: BRP resent to same address
     Given I start the 'not-arrived' application journey
+    Then I should be on the 'previous-submission' page showing 'Have you previously submitted this request?' 
+    Then I check 'previous-submission-no'
+    Then I select 'Continue'
     Then I should be on the 'post-office-collect' page showing 'Were you due to collect your document from the Post Office?'
     Then I check 'collection-no'
     Then I select 'Continue'
@@ -44,6 +53,9 @@ Feature: I should be able to log that my BRP has not arrived
 
   Scenario: BRP resent to different address
     Given I start the 'not-arrived' application journey
+    Then I should be on the 'previous-submission' page showing 'Have you previously submitted this request?' 
+    Then I check 'previous-submission-no'
+    Then I select 'Continue'
     Then I should be on the 'post-office-collect' page showing 'Were you due to collect your document from the Post Office?'
     Then I check 'collection-no'
     Then I select 'Continue'
@@ -77,6 +89,9 @@ Feature: I should be able to log that my BRP has not arrived
   @validation
   Scenario: Not Arrived application Personal Details not a URL validation
     Given I start the 'not-arrived' application journey
+    Then I should be on the 'previous-submission' page showing 'Have you previously submitted this request?' 
+    Then I check 'previous-submission-no'
+    Then I select 'Continue'
     Then I should be on the 'post-office-collect' page showing 'Were you due to collect your document from the Post Office?'
     Then I check 'collection-no'
     Then I select 'Continue'
@@ -98,6 +113,9 @@ Feature: I should be able to log that my BRP has not arrived
   @validation
   Scenario: Not Arrived application Representative Personal Details not a URL validation
     Given I start the 'not-arrived' application journey
+    Then I should be on the 'previous-submission' page showing 'Have you previously submitted this request?' 
+    Then I check 'previous-submission-no'
+    Then I select 'Continue'
     Then I should be on the 'post-office-collect' page showing 'Were you due to collect your document from the Post Office?'
     Then I check 'collection-no'
     Then I select 'Continue'

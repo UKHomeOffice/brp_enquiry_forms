@@ -36,7 +36,11 @@ module.exports = {
     ]
   },
   'delivery-date': date('delivery-date', {
-    validate: ['before']
+    validate: ['before'],
+    dependent: {
+      field: 'received',
+      value: 'yes'
+    }
   }),
   'no-letter': {
     className: 'form-checkbox',
