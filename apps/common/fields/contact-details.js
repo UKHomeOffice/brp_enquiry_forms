@@ -48,7 +48,7 @@ module.exports = {
       field: 'use-address'
     }
   },
-  phone:{
+  phone: {
     validate: ['notUrl']
   }
 };

@@ -33,7 +33,7 @@ module.exports = {
     }
   },
   'same-address-town': {
-    validate: ['required','notUrl'],
+    validate: ['required', 'notUrl'],
     label: 'fields.address-town.label',
     dependent: {
       value: 'no',
