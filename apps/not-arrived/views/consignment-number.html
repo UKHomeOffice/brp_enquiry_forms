@@ -25,29 +25,24 @@
   {{/header}}
 
   {{$content}}
-  {{<partials-form}}
-  {{$form}}
+    {{<partials-form}}
+      {{$form}}
 
-  {{#radio-group}}consignment-number-radio{{/radio-group}}
+        {{#radio-group}}consignment-number-radio{{/radio-group}}
   
-  <fieldset id="consignment-number-fieldset"
-    class="panel-indent js-hidden {{#errors.consignment-number}}validation-error{{/errors.consignment-number}}">
+        <fieldset id="consignment-number-fieldset" class="panel-indent">
+          <div class="form-group">
+            {{#input-text}}consignment-number{{/input-text}}
+          </div>
 
-    <legend class="visuallyhidden">
-        <span class="form-legend">
-          {{#t}}fields.consignment-number.legend{{/t}}
-        </span>
-    </legend>
+        </fieldset>
 
-    {{#input-text}}consignment-number{{/input-text}}
+        {{#input-submit}}continue{{/input-submit}}
 
-  </fieldset>
+      {{/form}}
 
-  {{#input-submit}}continue{{/input-submit}}
-  {{/form}}
+    {{/partials-form}}
 
-  {{/partials-form}}
   {{/content}}
-
 
 {{/layout}}

@@ -1,29 +1,26 @@
 'use strict';
 
-const date = require('hof').components.date;
-
 module.exports = {
   'consignment-number-radio': {
+    mixin: 'radio-group',
     validate: ['required'],
     className: ['inline', 'form-group'],
     legend: {
-      className: 'visuallyhidden',
-      value: 'pages.consignment-number.header'
+      className: 'visuallyhidden'
     },
     options: [
       {
         value: 'yes',
         toggle: 'consignment-number-fieldset'
       },
-      'no'
+      {value: 'no'}
     ]
   },
   'consignment-number': {
     validate: ['required'],
-    label: 'fields.consignment-number.label',
     dependent: {
-      value: 'yes',
-      field: 'consignment-number-radio'
+      field: 'consignment-number-radio',
+      value: 'yes'
     }
   }
 };

@@ -14,7 +14,7 @@ module.exports = {
     },
     '/post-office-collect': {
       next: '/consignment-number',
-      backLink: '/previous-submission',
+      backLink: 'previous-submission',
       behaviours: [require('./behaviours/change-path')],
       template: 'collection.html',
       fields: [
@@ -23,15 +23,11 @@ module.exports = {
     },
     '/consignment-number': {
       next: '/letter-received',
-      template: 'consignment-number.html',
       fields: [
-        'consignment-number-radio', 
-        'consingment-number'
+        'consignment-number-radio',
+        'consignment-number'
       ],
-      condition: req => {
-        console.log(req);
-      },
-      backLink: 'post-office-collect',
+      backLink: 'post-office-collect'
     },
     '/letter-received': {
       behaviours: [require('./behaviours/letter-received')],
