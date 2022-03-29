@@ -86,6 +86,7 @@ Feature: A user should access the correct mistakes service and be able to log an
     Then I should be on the 'about-error' page showing 'What’s the problem with your BRP?'
     Then I should see the 'What is your correct family name?' error
     Then I should see the 'What are your correct given name(s)?' error
+    Then I should see the 'What is your correct place of birth?' error
     Then I should see the 'Enter your date of birth' error
     Then I should see the 'What is your correct gender?' error
     Then I should see the 'What are the correct sponsor details?' error
