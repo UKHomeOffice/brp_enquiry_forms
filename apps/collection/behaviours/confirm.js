@@ -23,7 +23,6 @@ function getReason(req) {
     req.sessionModel.unset(r);
     delete req.form.values[r];
   });
-  
   return reason;
 }
 
