@@ -50,4 +50,7 @@ ignore:
     - hof > browserify > module-deps > subarg:
         reaason: Waiting for the package to be updated 1.2.6 in hof
         expires: '2022-04-20T10:38:20.144Z'
+    - hof > browserify > module-deps > detective:
+        reaason: Waiting for the package to be updated 1.2.6 in hof
+        expires: '2022-04-20T10:38:20.144Z'
 patch: {}
