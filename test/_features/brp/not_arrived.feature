@@ -141,10 +141,13 @@ Feature: I should be able to log that my BRP has not arrived
     @validation
     Scenario: Not Arrived application Contact Details not a URL validation
       Given I start the 'not-arrived' application journey
+      Then I should be on the 'previous-submission' page showing 'Have you previously submitted this request?'
+      Then I check 'previous-submission-no'
+      Then I select 'Continue'
       Then I should be on the 'post-office-collect' page showing 'Were you due to collect your document from the Post Office?'
       Then I check 'collection-no'
       Then I select 'Continue'
-      Then I should be on the 'letter-received' page showing 'Have you received a letter from the Home Office?'
+      Then I should be on the 'letter-received' page showing 'Have you received your decision by letter or email?'
       Then I check 'received-yes'
       Then I fill the date 'delivery-date' with '24-5-2020'
       Then I select 'Continue'
@@ -177,10 +180,13 @@ Feature: I should be able to log that my BRP has not arrived
     @validation
     Scenario: Not Arrived application Same Address not a URL validation
       Given I start the 'not-arrived' application journey
+      Then I should be on the 'previous-submission' page showing 'Have you previously submitted this request?'
+      Then I check 'previous-submission-no'
+      Then I select 'Continue'
       Then I should be on the 'post-office-collect' page showing 'Were you due to collect your document from the Post Office?'
       Then I check 'collection-no'
       Then I select 'Continue'
-      Then I should be on the 'letter-received' page showing 'Have you received a letter from the Home Office?'
+      Then I should be on the 'letter-received' page showing 'Have you received your decision by letter or email?'
       Then I check 'received-yes'
       Then I fill the date 'delivery-date' with '24-5-2020'
       Then I select 'Continue'

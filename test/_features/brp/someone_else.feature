@@ -160,6 +160,9 @@ Feature: I want someone else to collect my BRP
      @validation
   Scenario: Someone Else Application Contact Details not a URL validation
     Given I start the 'someone-else' application journey
+    Then I should be on the 'previous-submission' page showing 'Have you previously submitted this request?' 
+    Then I check 'previous-submission-no'
+    Then I select 'Continue'
     Then I should be on the 'arrange' page showing 'Who would you like to nominate?'
     Then I fill 'someone-else-fullname' with 'Donald Testman'
     Then I fill the date 'someone-else-date' with '24-5-1990'

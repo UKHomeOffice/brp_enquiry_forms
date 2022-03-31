@@ -87,7 +87,7 @@ Feature: A user should access the correct mistakes service and be able to log an
     Then I should see the 'What is your correct family name?' error
     Then I should see the 'What are your correct given name(s)?' error
     Then I should see the 'What is your correct place of birth?' error
-    Then I should see the 'Enter a valid date' error
+    Then I should see the 'Enter your date of birth' error
     Then I should see the 'What is your correct gender?' error
     Then I should see the 'What are the correct sponsor details?' error
     Then I should see the 'What is wrong with your signature?' error
@@ -207,6 +207,9 @@ Feature: A user should access the correct mistakes service and be able to log an
     @validation
     Scenario: Correct Mistakes Place of birth and Sponsor reference not a URL validation
       Given I start the 'correct-mistakes' application journey
+      Then I should be on the 'previous-submission' page showing 'Have you previously submitted this request?'
+      Then I check 'previous-submission-no'
+      Then I select 'Continue'
       Then I should be on the 'location' page showing 'Where did you apply for your visa?'
       Then I check 'location-applied-yes'
       Then I select 'Continue'
@@ -226,6 +229,9 @@ Feature: A user should access the correct mistakes service and be able to log an
      @validation
      Scenario: Correct Mistakes Contact Details not a URL validation
       Given I start the 'correct-mistakes' application journey
+      Then I should be on the 'previous-submission' page showing 'Have you previously submitted this request?'
+      Then I check 'previous-submission-no'
+      Then I select 'Continue'
       Then I should be on the 'location' page showing 'Where did you apply for your visa?'
       Then I check 'location-applied-yes'
       Then I select 'Continue'
@@ -258,9 +264,12 @@ Feature: A user should access the correct mistakes service and be able to log an
       Then I should see 'Postcode must not be a URL' on the page
       Then I should see 'Phone number must not be a URL' on the page  
 
-      @validation
-     Scenario: Correct Mistakes Contact Details not a URL validation
+     @validation
+     Scenario: Correct Mistakes Same Address not a URL validation
       Given I start the 'correct-mistakes' application journey
+      Then I should be on the 'previous-submission' page showing 'Have you previously submitted this request?'
+      Then I check 'previous-submission-no'
+      Then I select 'Continue'
       Then I should be on the 'location' page showing 'Where did you apply for your visa?'
       Then I check 'location-applied-yes'
       Then I select 'Continue'

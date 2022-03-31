@@ -214,9 +214,12 @@ Feature: A user should access the collection problem service and be able to log 
     Then I should see 'Full name must not be a URL' on the page
     And I should see 'Passport Number must not be a URL' on the page
 
-    @validation
+  @validation
   Scenario: Collection application Contact Details not a URL validation
     Given I start the 'collection' application journey
+    Then I should be on the 'previous-submission' page showing 'Have you previously submitted this request?' 
+    Then I check 'previous-submission-no'
+    Then I select 'Continue'
     Then I should be on the 'where' page showing 'From where were you asked to collect your BRP?'
     Then I check 'collection-where-radio-Sponsor'
     Then I fill the date 'collection-date' with '30-5-2021'

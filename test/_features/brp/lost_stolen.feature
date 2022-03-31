@@ -95,6 +95,9 @@ Feature: A user should be able to log a lost or stolen BRP
 @validation
     Scenario: Lost or Stolen application Contact Details not a URL validation
       Given I start the 'lost-stolen' application journey
+      Then I should be on the 'previous-submission' page showing 'Have you previously submitted this request?'
+      Then I check 'previous-submission-no'
+      Then I select 'Continue'
       Then I should be on the 'where' page showing 'Where are you now?'
       Then I check 'inside-uk-yes'
       Then I select 'Continue'
