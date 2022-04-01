@@ -86,7 +86,8 @@
         "delivery-date": "Date of letter",
         "no-letter": "You do not have the delivery letter",
         "delivery-details": "Delivery details",
-        "delivery-address": "Delivery address"
+        "delivery-address": "Delivery address",
+        "consignment-number": "Consingment Number"
       }
     },
     "org-help": {
