@@ -3,8 +3,8 @@
     "header": "Were you due to collect your document from the Post Office?"
   },
   "letter-received": {
-    "header": "Have you received a letter from the Home Office?",
-    "subheader": "This letter may tell you:",
+    "header": "Have you received your decision by letter or email?",
+    "subheader": "This letter or email may tell you:",
     "list": {
       "one": "your application to stay in the UK was successful",
       "two": "your biometric residence permit (BRP) is going to be delivered",
