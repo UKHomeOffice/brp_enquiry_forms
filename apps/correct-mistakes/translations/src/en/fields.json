@@ -167,7 +167,8 @@
     "label": "Length of stay"
   },
   "length-of-stay-error": {
-    "label": "Describe the problem"
+    "label": "Describe the problem",
+    "hint": "You do not need to report an error if your BRP expires on 31 December 2024 but your immigration status allows you to stay longer. You will not need a BRP from 1 January 2025. You’ll be able to prove your immigration status online, without a BRP. UKVI will update their information on how to prove your immigration status in early 2024. You do not need to do anything and your immigration status will not be affected."
   },
   "biographics-error-checkbox": {
     "label": "Biographics"
