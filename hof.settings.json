@@ -1,5 +1,5 @@
 {
-  "appName": "Biometric Residency Permit",
+  "appName": "Biometric Residence Permit",
   "theme": "govUK",
   "behaviours": [
     "hof/components/clear-session",
@@ -19,6 +19,6 @@
     "./apps/common/views"
   ],
   "session": {
-    "name": "biometric-residency-permit.hof.sid"
+    "name": "biometric-residence-permit.hof.sid"
   }
 }
