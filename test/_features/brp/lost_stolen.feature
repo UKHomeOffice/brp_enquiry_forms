@@ -91,3 +91,17 @@ Feature: A user should be able to log a lost or stolen BRP
       Then I fill 'rep-name' with 'www.google.com'
       Then I submit the application
       Then I should see 'Full name must not be a URL' on the page
+    
+  @validation_error
+    Scenario: Lost or stolen application - Preventing user from entering a date before 31st July 2015
+      Given I start the 'lost-stolen' application journey
+      Then I should be on the 'previous-submission' page showing 'Have you previously submitted this request?' 
+      Then I check 'previous-submission-no'
+      Then I select 'Continue'
+      Then I should be on the 'where' page showing 'Where are you now?'
+      Then I check 'inside-uk-yes'
+      Then I select 'Continue'
+      Then I should be on the 'date-lost' page showing 'When did you realise you no longer had your BRP?'
+      Then I fill the date 'date-lost' with '30-07-2015'
+      Then I select 'Continue'
+      Then I should see the 'Enter a date from 31/07/2015' error
