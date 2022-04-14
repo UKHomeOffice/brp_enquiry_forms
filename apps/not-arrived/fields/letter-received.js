@@ -22,6 +22,7 @@ module.exports = {
     ]
   },
   received: {
+    mixin: 'radio-group',
     validate: ['required'],
     className: ['inline', 'form-group'],
     legend: {

@@ -35,13 +35,13 @@
         <h2 class="details-header">{{#t}}pages.check-details.table.head.delivery-details{{/t}}</h2>
         <table id="delivery-details" class="table-details">
           <tbody>
-            {{^values.no-letter}}
+            {{#values.delivery-date}}
             <tr>
               <td>{{#t}}pages.check-details.table.headers.delivery-date{{/t}}</td>
               <td>{{#date}}{{values.delivery-date}}{{/date}}</td>
               <td><a href="letter-received/edit#delivery-date-day" class="button">{{#t}}buttons.change.delivery-date{{/t}}</a></td>
             </tr>
-            {{/values.no-letter}}
+            {{/values.delivery-date}}
 
             {{#values.no-letter}}
             <tr>

@@ -10,7 +10,7 @@
       "two": "your biometric residence permit (BRP) is going to be delivered",
       "three": "your documents are being returned"
     },
-    "date-question": "What is the date on the letter?"
+    "date-question": "What is the date on the letter?(optional)"
   },
   "letter-not-received": {
     "header": "Contact us",

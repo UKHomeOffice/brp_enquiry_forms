@@ -35,16 +35,4 @@ module.exports = superclass => class LetterRecieved extends superclass {
     }
     super.saveValues(req, res, next);
   }
-
-  validate(req, res, next) {
-    if (req.form.values.received === 'yes') {
-      // check that at least one field is completed
-      if (!req.form.values['delivery-date'] && !req.form.values['no-letter']) {
-        return next({
-          'delivery-date': new this.ValidationError('delivery-date', { type: 'required' })
-        });
-      }
-    }
-    super.validate(req, res, next);
-  }
 };

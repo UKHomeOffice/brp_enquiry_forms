@@ -19,21 +19,6 @@ describe('apps/not-arrived/behaviours/letter-received', () => {
     controller._configure(req, res, done);
   });
 
-  describe('validate', () => {
-    it('throws a `required` error if a letter has been received, but no other questions are answered', () => {
-      req.form.values = {
-        received: 'yes',
-        'delivery-date': '',
-        'no-letter': ''
-      };
-
-      controller.validate(req, res, err => {
-        err['delivery-date'].should.be.an.instanceOf(controller.ValidationError);
-        err['delivery-date'].type.should.equal('required');
-      });
-    });
-  });
-
   describe('saveValues', () => {
     let clock;
     let sandbox;
