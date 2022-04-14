@@ -26,7 +26,8 @@
   "date-lost": {
     "required": "When did you lose or have your BRP stolen?",
     "before": "The date is in the future",
-    "date": "Enter a valid date"
+    "date": "Enter a valid date",
+    "after": "Enter a date from 31/07/2015"
   },
   "brp-card": {
     "required": "What is your BRP number?",
