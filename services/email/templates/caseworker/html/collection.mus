@@ -71,7 +71,7 @@
                     <tr style="border-top: 1px solid #009390;">
                       <td colspan="2" width="100%">
                         <p style="font-size: 16px; color: #000; margin: 10px 0;">
-                          {{#reason-radio}}{{#t}}fields.reason-radio.options.non-identity.label{{/t}}{{/reason-radio}}
+                          {{#reason-radio}}{{#t}}fields.reason-radio.options.{{values.reason-radio}}.label{{/t}}{{/reason-radio}}
                         </p>
                       </td>
                     </tr>
