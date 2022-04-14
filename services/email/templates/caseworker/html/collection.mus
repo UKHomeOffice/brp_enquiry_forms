@@ -71,14 +71,7 @@
                     <tr style="border-top: 1px solid #009390;">
                       <td colspan="2" width="100%">
                         <p style="font-size: 16px; color: #000; margin: 10px 0;">
-                          {{#which-post-office}}{{#t}}fields.reason-radio.options.which-post-office.label{{/t}}{{/which-post-office}}
-                          {{#under-age}}{{#t}}fields.reason-radio.options.under-age.label{{/t}}{{/under-age}}
-                          {{#non-identity}}{{#t}}fields.reason-radio.options.non-identity.label{{/t}}{{/non-identity}}
-                          {{#others-identity}}{{#t}}fields.reason-radio.options.others-identity.label{{/t}}{{/others-identity}}
-                          {{#passport-family}}{{#t}}fields.reason-radio.options.passport-family.label{{/t}}{{/passport-family}}
-                          {{#passport-lost}}{{#t}}fields.reason-radio.options.passport-lost.label{{/t}}{{/passport-lost}}
-                          {{#no-brp}}{{#t}}fields.reason-radio.options.no-brp.label{{/t}}{{/no-brp}}
-                          {{#other}}{{#t}}fields.reason-radio.options.other.label{{/t}}{{/other}}
+                          {{#t}}fields.reason-radio.options[{{values}}].label{{/t}}
                         </p>
                       </td>
                     </tr>
