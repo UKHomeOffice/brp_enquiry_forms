@@ -41,4 +41,7 @@ ignore:
     - hof > browserify > subarg > minimist:
         reason: No update to browserify currently available
         expires: '2022-04-24T16:53:44.487Z'
+    - hof > browserify > deps-sort > subarg > minimist:
+        reason: No update to browserify currently available
+        expires: '2022-04-24T16:53:44.487Z'
 patch: {}
