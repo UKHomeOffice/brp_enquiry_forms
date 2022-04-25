@@ -3773,24 +3773,18 @@ module-not-found-error@^1.0.1:
   resolved "https://registry.yarnpkg.com/module-not-found-error/-/module-not-found-error-1.0.1.tgz#cf8b4ff4f29640674d6cdd02b0e3bc523c2bbdc0"
   integrity sha1-z4tP9PKWQGdNbN0CsOO8UjwrvcA=
 
-moment-business@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/moment-business/-/moment-business-2.0.0.tgz#3ddde84e529729c2222e8add8608b3a4e2e584e1"
-  integrity sha1-Pd3oTlKXKcIiLordhgizpOLlhOE=
+moment-business@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/moment-business/-/moment-business-3.0.1.tgz#df0de1a8a074060652b5688d3cc99c9d8b76dcc4"
+  integrity sha1-3w3hqKB0BgZStWiNPMmcnYt23MQ=
   dependencies:
     contained-periodic-values "^1.0.0"
-    moment "^2.9.0"
     skipped-periodic-values "^1.0.0"
 
 moment@^2.29.2:
   version "2.29.2"
   resolved "https://registry.yarnpkg.com/moment/-/moment-2.29.2.tgz#00910c60b20843bcba52d37d58c628b47b1f20e4"
   integrity sha512-UgzG4rvxYpN15jgCmVJwac49h9ly9NurikMWGPdVxm8GZD6XjkKPxDTjQQ43gtGgnV3X0cAyWDdP2Wexoquifg==
-
-moment@^2.9.0:
-  version "2.29.1"
-  resolved "https://registry.yarnpkg.com/moment/-/moment-2.29.1.tgz#b2be769fa31940be9eeea6469c075e35006fa3d3"
-  integrity sha512-kHmoybcPV8Sqy59DwNDY3Jefr64lK/by/da0ViFcuA4DH0vQg5Q6Ze5VimxkfQNSC+Mls/Kx53s7TjP1RhFEDQ==
 
 morgan@^1.10.0:
   version "1.10.0"
