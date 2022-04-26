@@ -4,5 +4,6 @@ const _ = require('underscore');
 
 module.exports = _.extend(
   require('./arrange'),
-  require('./reason')
+  require('./reason'),
+  require('./application-type')
 );
