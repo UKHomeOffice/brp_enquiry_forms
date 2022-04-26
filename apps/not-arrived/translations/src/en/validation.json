@@ -51,5 +51,11 @@
     "required": "Enter the date of the letter from the Home Office",
     "before": "The date is in the future",
     "date": "Enter the date in the correct format"
+  },
+  "application-type": {
+    "required": "Please select an option"
+  },
+  "application-type-other": {
+    "required": "Please describe the application type"
   }
 }
