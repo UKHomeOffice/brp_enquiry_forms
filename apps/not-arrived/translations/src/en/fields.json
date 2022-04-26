@@ -9,6 +9,20 @@
       }
     }
   },
+  "consignment-number-radio": {
+    "options": {
+      "yes": {
+        "label": "Yes"
+      },
+      "no": {
+        "label": "No"
+      }
+    }
+  },
+  "consignment-number": {
+    "legend": "Consignment number",
+    "label": "What is your consignment number?"
+  },
   "delivery-date": {
     "label": "Date",
     "legend": "Date on the letter",

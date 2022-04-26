@@ -2,6 +2,9 @@
   "address-match": {
     "required": "Tell us if your address is the same as on the letter from the Home Office"
   },
+  "consignment-number": {
+    "required": "Do you have a consignment number?"
+  },
   "email": {
     "required": "Enter your email address",
     "email": "Enter your email in the correct format for example, name@domain.com"

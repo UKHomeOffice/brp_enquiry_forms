@@ -1,22 +1,20 @@
 /* eslint-disable consistent-return */
 'use strict';
 
-require('moment-business');
+const momentBusiness = require('moment-business');
 const moment = require('moment');
 
 function isWithin(value, days) {
   if (value) {
-    const cutoff = moment(value)
-      .addWeekDays(days);
-    return cutoff.isAfter(moment());
+    const cutoff = momentBusiness.addWeekDays(moment(value), days);
+    return moment(cutoff).isAfter(moment());
   }
 }
 
 function weekDayRange(value, days) {
   if (value) {
     const dateReceived = moment(value);
-    const weekDaysSince = moment().weekDays(dateReceived);
-
+    const weekDaysSince = momentBusiness.weekDays(dateReceived, moment());
     return {
       weekDaysSince: weekDaysSince,
       weekDaysUntil: days - weekDaysSince
