@@ -56,6 +56,10 @@ module.exports = {
         'nationality',
         'passport'
       ],
+      next: '/application-type'
+    },
+    '/application-type': {
+      fields: ['application-type', 'application-type-other'],
       next: '/contact-details'
     },
     '/contact-details': {
@@ -69,7 +73,7 @@ module.exports = {
         'contact-address-postcode',
         'phone'
       ],
-      backLink: 'personal-details',
+      backLink: 'application-type',
       next: '/confirm'
     },
     '/confirm': {

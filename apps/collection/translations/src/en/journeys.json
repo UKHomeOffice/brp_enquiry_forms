@@ -37,6 +37,10 @@
           },
           "personal-details": {
             "title": "Your details"
+          },
+          "application-type": {
+            "title": "Application details",
+            "type": "Application type"
           }
         }
       },

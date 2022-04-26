@@ -102,5 +102,12 @@ module.exports = {
       value: 'true',
       field: 'use-address'
     }
+  },
+  'application-type-other': {
+    validate: ['required'],
+    dependent: {
+      field: 'application-type',
+      value: 'Other'
+    }
   }
 };

@@ -1,5 +1,5 @@
 {{<layout}}
-{{$step}}Step 6 of 6{{/step}}
+{{$step}}Step 7 of 7{{/step}}
 
 {{$journeyHeader}}
   {{#t}}journeys.collection.header{{/t}}
@@ -120,6 +120,27 @@
           </tbody>
         </table>
       {{/values.nominated-fullname}}
+
+      <h2 class="details-header">{{#t}}journeys.collection.pages.check-details.tables.application-type.title{{/t}}</h2>
+      <table id="application-details" class="table-details">
+        <tbody>
+          <tr>
+            <td>{{#t}}journeys.collection.pages.check-details.tables.application-type.type{{/t}}</td>
+            <td class="no-white-space">
+              {{#values.application-type}}
+              {{values.application-type}}
+              {{/values.application-type}}
+              <br />
+              <span>
+              {{#values.application-type-other}}
+              {{values.application-type-other}}
+              {{/values.application-type-other}}
+              </span>
+            </td>
+            <td><a href="application-type/edit#application-type" class="button">{{#t}}buttons.change.application-type{{/t}}</a></td>
+          </tr>
+        </tbody>
+      </table>
 
       <h2 class="details-header">{{#t}}journeys.collection.pages.check-details.tables.personal-details.title{{/t}}</h2>
       <table id="personal-details" class="table-details">
