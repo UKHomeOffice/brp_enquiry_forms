@@ -13,13 +13,21 @@ module.exports = {
       next: '/post-office-collect'
     },
     '/post-office-collect': {
-      next: '/letter-received',
-      backLink: '/previous-submission',
+      next: '/consignment-number',
+      backLink: 'previous-submission',
       behaviours: [require('./behaviours/change-path')],
       template: 'collection.html',
       fields: [
         'collection'
       ]
+    },
+    '/consignment-number': {
+      next: '/letter-received',
+      fields: [
+        'consignment-number-radio',
+        'consignment-number'
+      ],
+      backLink: 'post-office-collect'
     },
     '/letter-received': {
       behaviours: [require('./behaviours/letter-received')],
@@ -28,7 +36,7 @@ module.exports = {
         'delivery-date',
         'no-letter'
       ],
-      backLink: 'post-office-collect',
+      backLink: 'consignment-number',
       next: '/same-address',
       forks: [{
         target: '/letter-not-received',

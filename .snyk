@@ -19,12 +19,12 @@ ignore:
         reason: >-
           No update currently available - Will discuss adding resolution to hof
           framework as future proof fix
-        expires: '2022-04-20T10:38:20.144Z'
+        expires: '2022-05-20T10:38:20.144Z'
       hof > browserify > module-deps > cached-path-relative:
         reason: >-
           No update available - Will discuss adding resolution to hof framework
           as future proof fix
-        expires: '2022-04-24T16:53:44.487Z'
+        expires: '2022-05-24T16:53:44.487Z'
     - hof > browserify > module-deps > cached-path-relative:
         reason: No update currently available
         expires: '2022-02-20T10:38:20.144Z'
@@ -35,26 +35,20 @@ ignore:
         reason: No update currently available
         expires: '2022-02-20T10:38:20.144Z'
   SNYK-JS-MINIMIST-2429795:
-    - hof > minimist:
-        reaason: Waiting for the package to be updated 1.2.6 in hof
-        expires: '2022-04-20T10:38:20.144Z'
     - hof > mkdirp > minimist:
-        reaason: Waiting for the package to be updated 1.2.6 in hof
-        expires: '2022-04-20T10:38:20.144Z'
+        reason: mkdirp update currently crashing hof build
+        expires: '2022-05-20T10:38:20.144Z'
     - hof > browserify > subarg > minimist:
-        reaason: Waiting for the package to be updated 1.2.6 in hof
-        expires: '2022-04-20T10:38:20.144Z'
-    - hof > browserify > deps-sort > subarg:
-        reaason: Waiting for the package to be updated 1.2.6 in hof
-        expires: '2022-04-20T10:38:20.144Z'
-    - hof > browserify > module-deps > subarg:
-        reaason: Waiting for the package to be updated 1.2.6 in hof
-        expires: '2022-04-20T10:38:20.144Z'
-    - hof > browserify > module-deps > detective:
-        reaason: Waiting for the package to be updated 1.2.6 in hof
-        expires: '2022-04-20T10:38:20.144Z'
-  SNYK-JS-ASYNC-2441827:
-    - '*':
-        reason: Needs async to be upgraded to 3.2.2 or higher in hof
-        expires: '2022-04-20T10:38:20.144Z'
+        reason: No update to browserify currently available
+        expires: '2022-05-24T16:53:44.487Z'
+    - hof > browserify > deps-sort > subarg > minimist:
+        reason: No update to browserify currently available
+        expires: '2022-05-24T16:53:44.487Z'
+    - hof > browserify > module-deps > subarg > minimist:
+        reason: No update to browserify currently available
+        expires: '2022-05-24T16:53:44.487Z'
+    - hof > browserify > module-deps > detective > minimist:
+        reason: No update to browserify currently available
+        expires: '2022-05-24T16:53:44.487Z'
+
 patch: {}
