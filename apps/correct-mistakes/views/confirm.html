@@ -1,5 +1,5 @@
 {{<layout}}
-{{$step}}Step 6 of 6{{/step}}
+{{$step}}Step 7 of 7{{/step}}
 
 {{$journeyHeader}}
   {{#t}}journeys.error.header{{/t}}
@@ -222,6 +222,28 @@
         </tbody>
       </table>
       {{/values.uk-address-street}}
+
+      <h2 class="details-header">{{#t}}pages.check-details.table.headers.application-details{{/t}}</h2>
+      <table id="application-details" class="table-details">
+        <tbody>
+          <tr>
+            <td>{{#t}}pages.check-details.table.headers.application-type{{/t}}</td>
+            <td class="no-white-space">
+              {{#values.application-type}}
+              {{values.application-type}}
+              {{/values.application-type}}
+              <br />
+              <span>
+              {{#values.application-type-other}}
+              {{values.application-type-other}}
+              {{/values.application-type-other}}
+              </span>
+            </td>
+            <td><a href="application-type/edit#application-type" class="button">{{#t}}buttons.change.application-type{{/t}}</a></td>
+          </tr>
+        </tbody>
+      </table>
+      
       <h2 class="details-header">{{#t}}pages.check-details-error.personal-details-table.title{{/t}}</h2>
       <table id="personal-details" class="table-details">
         <tbody>
