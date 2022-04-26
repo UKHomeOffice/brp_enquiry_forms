@@ -86,5 +86,60 @@
         "label": "Support organisation"
       }
     }
+  },
+  "application-type": {
+    "options": {
+        "Work": {
+          "legend": "Work",
+          "label": "Work"
+        },
+        "Study/Academic Visit" : {
+          "legend": "Study/Academic Visit",
+          "label": "Study/Academic Visit"
+        },
+        "Graduate": {
+          "legend": "Graduate",
+          "label": "Graduate"
+        },
+        "Settlement": {
+          "legend": "Settlement",
+          "label": "Settlement"
+        },
+        "Asylum/Humanitarian Protection" : {
+          "legend": "Asylum/Humanitarian Protection",
+          "label": "Asylum/Humanitarian Protection"
+        },
+        "Joining Family/Human Rights": {
+          "legend": "Joining Family/Human Rights",
+          "label": "Joining Family/Human Rights"
+        },
+        "Marriage/Civil Partnership": {
+          "legend": "Marriage/Civil Partnership",
+          "label": "Marriage/Civil Partnership"
+        },
+        "Business": {
+          "legend": "Business",
+          "label": "Business"
+        },
+        "UK Ancestry/Youth Mobility" :{
+          "legend": "UK Ancestry/Youth Mobility",
+          "label": "UK Ancestry/Youth Mobility"
+        },
+        "Medical Treatment": {
+          "legend": "Medical Treatment",
+          "label":  "Medical Treatment"
+        },
+        "Dependant": {
+          "legend": "Dependant",
+          "label": "Dependant"
+        },
+        "Other": {
+          "legend":"Other",
+          "label": "Other"
+        }
+    }
+  },
+  "application-type-other": {
+    "label": "Describe the application type"
   }
 }

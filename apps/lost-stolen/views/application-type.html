@@ -1,5 +1,5 @@
 {{<layout}}
-  {{$step}}Step 1 of 6{{/step}}
+  {{$step}}Step 4 of 6{{/step}}
 
   {{$journeyHeader}}
     {{#t}}journeys.lost.header{{/t}}
@@ -14,35 +14,25 @@
   {{/propositionHeader}}
 
   {{$title}}
-    {{#t}}pages.inside-uk.header{{/t}}
+    {{#t}}pages.application-type.header{{/t}}
   {{/title}}
 
   {{$header}}
     {{<partials-page-header}}
       {{$page-header}}
-        {{#t}}pages.inside-uk.header{{/t}}
+        {{#t}}pages.application-type.header{{/t}}
       {{/page-header}}
     {{/partials-page-header}}
   {{/header}}
 
   {{$content}}
-
     {{<partials-form}}
 
       {{$form}}
-        {{#radio-group}}inside-uk{{/radio-group}}
-
-        <fieldset id="country-group" class="panel-indent {{#errors.country}}validation-error{{/errors.country}}">
-
-          <legend class="visuallyhidden">
-            <span class="form-label-bold">{{#t}}fields.country.label{{/t}}</span>
-          </legend>
-
-          {{#select}}country{{/select}}
-
-        </fieldset>
+        {{#radio-group}}application-type{{/radio-group}}
 
         {{#input-submit}}continue{{/input-submit}}
+
       {{/form}}
 
     {{/partials-form}}
