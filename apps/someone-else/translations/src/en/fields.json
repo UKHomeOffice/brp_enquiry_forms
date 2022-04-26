@@ -117,51 +117,51 @@
   },
   "application-type": {
     "options": {
-        "Work": {
+        "work": {
           "legend": "Work",
           "label": "Work"
         },
-        "Study/Academic Visit" : {
+        "study-academic-visit" : {
           "legend": "Study/Academic Visit",
           "label": "Study/Academic Visit"
         },
-        "Graduate": {
+        "graduate": {
           "legend": "Graduate",
           "label": "Graduate"
         },
-        "Settlement": {
+        "settlement": {
           "legend": "Settlement",
           "label": "Settlement"
         },
-        "Asylum/Humanitarian Protection" : {
+        "asylum-humanitarian-protection" : {
           "legend": "Asylum/Humanitarian Protection",
           "label": "Asylum/Humanitarian Protection"
         },
-        "Joining Family/Human Rights": {
+        "joining-family-human-rights": {
           "legend": "Joining Family/Human Rights",
           "label": "Joining Family/Human Rights"
         },
-        "Marriage/Civil Partnership": {
+        "marriage-civil-partnership": {
           "legend": "Marriage/Civil Partnership",
           "label": "Marriage/Civil Partnership"
         },
-        "Business": {
+        "business": {
           "legend": "Business",
           "label": "Business"
         },
-        "UK Ancestry/Youth Mobility" :{
+        "uk-ancestry-youth-mobility" :{
           "legend": "UK Ancestry/Youth Mobility",
           "label": "UK Ancestry/Youth Mobility"
         },
-        "Medical Treatment": {
+        "medical-treatment": {
           "legend": "Medical Treatment",
           "label":  "Medical Treatment"
         },
-        "Dependant": {
+        "dependant": {
           "legend": "Dependant",
           "label": "Dependant"
         },
-        "Other": {
+        "other": {
           "legend":"Other",
           "label": "Other"
         }

@@ -107,7 +107,7 @@ module.exports = {
     validate: ['required'],
     dependent: {
       field: 'application-type',
-      value: 'Other'
+      value: 'other'
     }
   }
 };
