@@ -1,6 +1,6 @@
 {{<layout}}
   {{$journeyHeader}}
-    {{#t}}journeys.collection.header{{/t}}
+    {{#t}}journeys.lost.header{{/t}}
   {{/journeyHeader}}
 
   {{$validationSummary}}
@@ -12,13 +12,13 @@
   {{/propositionHeader}}
 
   {{$title}}
-    {{#t}}pages.reasons.header{{/t}}
+    {{#t}}pages.application-type.header{{/t}}
   {{/title}}
 
   {{$header}}
     {{<partials-page-header}}
       {{$page-header}}
-        {{#t}}pages.reasons.header{{/t}}
+        {{#t}}pages.application-type.header{{/t}}
       {{/page-header}}
     {{/partials-page-header}}
   {{/header}}
@@ -27,7 +27,7 @@
     {{<partials-form}}
 
       {{$form}}
-        {{#radio-group}}reason-radio{{/radio-group}}
+        {{#radio-group}}application-type{{/radio-group}}
 
         {{#input-submit}}continue{{/input-submit}}
 

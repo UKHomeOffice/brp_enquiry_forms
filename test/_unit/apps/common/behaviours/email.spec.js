@@ -98,15 +98,72 @@ describe('apps/common/controllers/confirm', () => {
       });
     });
 
-    it('sets errors in the subject for the correct mistakes journey', () => {
+    it('sets errors and application type in the subject for the correct mistakes journey', () => {
       req.baseUrl = '/correct-mistakes';
       req.sessionModel.set('test-error-checkbox', 'true');
       req.sessionModel.set('test-error', 'testerror');
       req.sessionModel.set('submission-reference', 'fpgyxSgw7');
+      req.sessionModel.set('application-type', 'work');
       controller.saveValues(req, res, err => {
         expect(err).not.to.be.ok;
         setStub.should.have.been.calledWith('subject',
-          'Form submitted: Report a problem with your new BRP (test-error) Ref: fpgyxSgw7');
+          'Form submitted: Report a problem with your new BRP (test-error) Ref: fpgyxSgw7 (Application Type: Work)');
+      });
+    });
+
+    it('sets application type in the subject for the collection journey', () => {
+      req.baseUrl = '/collection';
+      req.sessionModel.set('submission-reference', 'fpgyxSgw7');
+      req.sessionModel.set('application-type', 'study-academic-visit');
+      controller.saveValues(req, res, err => {
+        expect(err).not.to.be.ok;
+        setStub.should.have.been.calledWith('subject',
+          'Form submitted: Report a collection problem. Ref: fpgyxSgw7 (Application Type: Study/Academic Visit)');
+      });
+    });
+
+    it('sets application type in the subject for the lost-stolen journey', () => {
+      req.baseUrl = '/lost-stolen';
+      req.sessionModel.set('submission-reference', 'fpgyxSgw7');
+      req.sessionModel.set('application-type', 'graduate');
+      controller.saveValues(req, res, err => {
+        expect(err).not.to.be.ok;
+        setStub.should.have.been.calledWith('subject',
+          'Form submitted: Report a lost or stolen BRP. Ref: fpgyxSgw7 (Application Type: Graduate)');
+      });
+    });
+
+    it('sets application type in the subject for the not-arrived journey', () => {
+      req.baseUrl = '/not-arrived';
+      req.sessionModel.set('submission-reference', 'fpgyxSgw7');
+      req.sessionModel.set('application-type', 'joining-family-human-rights');
+      controller.saveValues(req, res, err => {
+        expect(err).not.to.be.ok;
+        setStub.should.have.been.calledWith('subject',
+          'Form submitted: Your BRP hasn\'t arrived. Ref: fpgyxSgw7 (Application Type: Joining Family/Human Rights)');
+      });
+    });
+
+    it('sets application type in the subject for the someone-else journey', () => {
+      req.baseUrl = '/someone-else';
+      req.sessionModel.set('submission-reference', 'fpgyxSgw7');
+      req.sessionModel.set('application-type', 'business');
+      controller.saveValues(req, res, err => {
+        expect(err).not.to.be.ok;
+        setStub.should.have.been.calledWith('subject',
+          'Form submitted: Report someone else collecting your BRP. Ref: fpgyxSgw7 (Application Type: Business)');
+      });
+    });
+
+    it('sets freetext in the subject if the application type is `Other`', () => {
+      req.baseUrl = '/collection';
+      req.sessionModel.set('submission-reference', 'fpgyxSgw7');
+      req.sessionModel.set('application-type', 'application-type-other');
+      req.sessionModel.set('application-type-other', 'Test');
+      controller.saveValues(req, res, err => {
+        expect(err).not.to.be.ok;
+        setStub.should.have.been.calledWith('subject',
+          'Form submitted: Report a collection problem. Ref: fpgyxSgw7 (Application Type: Other - Test)');
       });
     });
 

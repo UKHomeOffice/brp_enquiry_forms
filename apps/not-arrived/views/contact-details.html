@@ -1,6 +1,4 @@
 {{<layout}}
-  {{$step}}Step 4 of 5{{/step}}
-
   {{$journeyHeader}}
     {{#t}}journeys.delivery.header{{/t}}
   {{/journeyHeader}}
@@ -33,6 +31,8 @@
 
         {{#input-text}}email{{/input-text}}
 
+        {{#input-phone}}phone{{/input-phone}}
+
         {{#checkbox}}use-address{{/checkbox}}
 
         <fieldset id="address-group" class="panel-indent js-hidden">
@@ -64,8 +64,6 @@
           </div>
 
         </fieldset>
-
-        {{#input-phone}}phone{{/input-phone}}
 
         {{#input-submit}}continue{{/input-submit}}
 

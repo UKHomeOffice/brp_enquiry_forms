@@ -1,4 +1,7 @@
 {
+  "application-type": {
+    "header": "What type of application have you made?"
+  },
   "contact-details": {
     "header": "How should we contact you about your BRP?",
     "address": {
@@ -31,7 +34,9 @@
         "passport": "Passport number",
         "email": "Email address",
         "phone": "Phone number",
-        "brp-card-number": "BRP number"
+        "brp-card-number": "BRP number",
+        "application-details": "Application details",
+        "application-type": "Application type"
       }
     },
     "org-help": {

@@ -88,5 +88,12 @@ module.exports = {
   },
   passport: {
     validate: ['required', 'notUrl']
+  },
+  'application-type-other': {
+    validate: ['required', {type: 'maxlength', arguments: 50}],
+    dependent: {
+      field: 'application-type',
+      value: 'application-type-other'
+    }
   }
 };

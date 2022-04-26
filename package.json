@@ -24,7 +24,7 @@
   "author": "HomeOffice",
   "dependencies": {
     "express": "^4.17.1",
-    "hof": "^19.13.12",
+    "hof": "^19.13.15",
     "hogan.js": "^3.0.2",
     "hot-shots": "^5.9.0",
     "i18n-future": "^2.0.1",
@@ -36,7 +36,7 @@
     "nodemailer": "^6.4.16",
     "typeahead-aria": "^1.0.1",
     "underscore": "^1.13.1",
-    "winston": "^1.0.1"
+    "winston": "^3.7.2"
   },
   "devDependencies": {
     "@cucumber/cucumber": "^7.3.0",

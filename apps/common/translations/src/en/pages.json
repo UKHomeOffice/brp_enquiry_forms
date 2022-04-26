@@ -2,5 +2,8 @@
 {
     "previous-submission": {
         "header": "Have you previously submitted this request?"
+    },
+    "application-type": {
+        "header": "What type of application have you made?"
     }
 } 

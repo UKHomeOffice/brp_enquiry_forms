@@ -1,6 +1,4 @@
 {{<layout}}
-  {{$step}}Step 5 of 5{{/step}}
-
   {{$journeyHeader}}
     {{#t}}journeys.delivery.header{{/t}}
   {{/journeyHeader}}
@@ -35,13 +33,13 @@
         <h2 class="details-header">{{#t}}pages.check-details.table.head.delivery-details{{/t}}</h2>
         <table id="delivery-details" class="table-details">
           <tbody>
-            {{^values.no-letter}}
+            {{#values.delivery-date}}
             <tr>
               <td>{{#t}}pages.check-details.table.headers.delivery-date{{/t}}</td>
               <td>{{#date}}{{values.delivery-date}}{{/date}}</td>
               <td><a href="letter-received/edit#delivery-date-day" class="button">{{#t}}buttons.change.delivery-date{{/t}}</a></td>
             </tr>
-            {{/values.no-letter}}
+            {{/values.delivery-date}}
 
             {{#values.no-letter}}
             <tr>
@@ -77,6 +75,25 @@
               <td><a href="same-address/edit#case-id" class="button">{{#t}}buttons.change.case-id{{/t}}</a></td>
             </tr>
             {{/values.address-street}}
+          </tbody>
+        </table>
+
+        <h2 class="details-header">{{#t}}pages.check-details.table.head.application-details{{/t}}</h2>
+        <table id="application-details" class="table-details">
+          <tbody>
+            <tr>
+              <td>{{#t}}pages.check-details.table.headers.application-type{{/t}}</td>
+              <td class="no-white-space">
+                {{#t}}fields.application-type.options.{{values.application-type}}.label{{/t}}
+                <br />
+                <span>
+                {{#values.application-type-other}}
+                {{values.application-type-other}}
+                {{/values.application-type-other}}
+                </span>
+              </td>
+              <td><a href="application-type/edit#application-type" class="button">{{#t}}buttons.change.application-type{{/t}}</a></td>
+            </tr>
           </tbody>
         </table>
 

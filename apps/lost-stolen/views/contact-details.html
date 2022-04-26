@@ -1,6 +1,4 @@
 {{<layout}}
-  {{$step}}Step 4 of 5{{/step}}
-
   {{$journeyHeader}}
     {{#t}}journeys.lost.header{{/t}}
   {{/journeyHeader}}
@@ -32,6 +30,8 @@
       {{$form}}
 
         {{#input-text}}email{{/input-text}}
+
+        {{#input-phone}}phone{{/input-phone}}
 
         {{#location.inside-uk}}
           {{#checkbox}}use-address{{/checkbox}}
@@ -66,8 +66,6 @@
 
           </fieldset>
         {{/location.inside-uk}}
-
-        {{#input-phone}}phone{{/input-phone}}
 
         {{#input-submit}}continue{{/input-submit}}
 

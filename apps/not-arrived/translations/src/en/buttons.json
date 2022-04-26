@@ -11,6 +11,7 @@
     "address": "Change <span class=\"visuallyhidden\">address</span>",
     "passport": "Change <span class=\"visuallyhidden\">passport number</span>",
     "email": "Change <span class=\"visuallyhidden\">email address</span>",
-    "phone": "Change <span class=\"visuallyhidden\">phone number</span>"
+    "phone": "Change <span class=\"visuallyhidden\">phone number</span>",
+    "application-type": "Change <span class=\"visuallyhidden\">application type</span>"
   }
 }
