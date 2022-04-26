@@ -50,5 +50,4 @@ ignore:
     - hof > browserify > module-deps > detective > minimist:
         reason: No update to browserify currently available
         expires: '2022-05-24T16:53:44.487Z'
-
 patch: {}
