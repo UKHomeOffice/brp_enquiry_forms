@@ -50,4 +50,8 @@ ignore:
     - hof > browserify > module-deps > detective > minimist:
         reason: No update to browserify currently available
         expires: '2022-05-24T16:53:44.487Z'
+  SNYK-JS-ASYNC-2441827:
+    - '*':
+        reason: needs async upgrade to 3.2.2 or higher in hof
+        expires: 2022-06-18T00:00:00.000Z
 patch: {}
