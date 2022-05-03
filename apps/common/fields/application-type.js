@@ -9,19 +9,53 @@ module.exports = {
       className: 'visuallyhidden'
     },
     options: [
-      { value: 'work' },
-      { value: 'study-academic-visit' },
-      { value: 'graduate' },
-      { value: 'settlement' },
-      { value: 'asylum-humanitarian-protection' },
-      { value: 'joining-family-human-rights' },
-      { value: 'marriage-civil-partnership' },
-      { value: 'business' },
-      { value: 'uk-ancestry-youth-mobility' },
-      { value: 'medical-treatment' },
-      { value: 'dependant' },
       {
-        value: 'other',
+        value: 'work',
+        label: 'Work'
+      },
+      {
+        value: 'study-academic-visit',
+        label: 'Study/Academic Visit'
+      },
+      {
+        value: 'graduate',
+        label: 'Graduate'
+      },
+      {
+        value: 'settlement',
+        label: 'Settlement'
+      },
+      {
+        value: 'asylum-humanitarian-protection',
+        label: 'Asylum/Humanitarian Protection'
+      },
+      {
+        value: 'joining-family-human-rights',
+        label: 'Joining Family/Human Rights'
+      },
+      {
+        value: 'marriage-civil-partnership',
+        label: 'Marriage/Civil Partnership'
+      },
+      {
+        value: 'business',
+        label: 'Business'
+      },
+      {
+        value: 'uk-ancestry-youth-mobility',
+        label: 'UK Ancestry/Youth Mobility'
+      },
+      {
+        value: 'medical-treatment',
+        label: 'Medical Treatment'
+      },
+      {
+        value: 'dependant',
+        label: 'Dependant'
+      },
+      {
+        value: 'application-type-other',
+        label: 'Other',
         toggle: 'application-type-other',
         child: 'input-text'
       }

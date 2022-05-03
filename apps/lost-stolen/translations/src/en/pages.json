@@ -35,6 +35,7 @@
         "email": "Email address",
         "phone": "Phone number",
         "brp-card-number": "BRP number",
+        "application-details": "Application details",
         "application-type": "Application type"
       }
     },

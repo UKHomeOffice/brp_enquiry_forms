@@ -133,7 +133,7 @@
           "legend": "Dependant",
           "label": "Dependant"
         },
-        "other": {
+        "application-type-other": {
           "legend":"Other",
           "label": "Other"
         }
