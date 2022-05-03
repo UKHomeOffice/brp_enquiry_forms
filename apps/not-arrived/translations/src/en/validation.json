@@ -5,6 +5,12 @@
   "consignment-number": {
     "required": "Do you have a consignment number?"
   },
+  "consignment-number-radio": {
+    "required": "Do you have a consignment number?"
+  },
+  "collection": {
+    "required": "Were you due to collect your document from the Post Office?"
+  },
   "email": {
     "required": "Enter your email address",
     "email": "Enter your email in the correct format for example, name@domain.com"
