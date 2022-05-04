@@ -17,7 +17,7 @@ module.exports = {
     ]
   },
   'consignment-number': {
-    validate: [{type: 'maxlength', arguments: 22}],
+    validate: [{type: 'maxlength', arguments: 22}, 'notUrl'],
     dependent: {
       field: 'consignment-number-radio',
       value: 'yes'

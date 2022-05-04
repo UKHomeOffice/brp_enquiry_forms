@@ -3,7 +3,8 @@
     "required": "Tell us if your address is the same as on the letter from the Home Office"
   },
   "consignment-number": {
-    "required": "Do you have a consignment number?"
+    "required": "Do you have a consignment number?",
+    "notUrl": "Consignment number must not be a URL"
   },
   "consignment-number-radio": {
     "required": "Do you have a consignment number?"
