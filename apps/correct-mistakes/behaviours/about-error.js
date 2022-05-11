@@ -34,7 +34,7 @@ function getTruncatedItems(req) {
 
   truncateConfigs.forEach(config => {
     if (isTooLong.call(this, config.id, config.max, req)) {
-      items.unshift({id: config.id});
+      items.unshift({id: config.id, max: config.max});
     }
   });
   return items;

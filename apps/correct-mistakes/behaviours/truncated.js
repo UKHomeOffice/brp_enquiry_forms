@@ -20,7 +20,8 @@ function truncatedItem(req) {
       pretty: prettyName(itemOne.id),
       value: req.form.values[itemOne.id],
       length: req.form.values[itemOne.id].length,
-      slice: req.form.values[itemOne.id].slice(0, 30)
+      slice: req.form.values[itemOne.id].slice(0, itemOne.max),
+      max: itemOne.max
     };
   }
 }
