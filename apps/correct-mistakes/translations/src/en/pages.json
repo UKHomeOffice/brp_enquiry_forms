@@ -109,7 +109,8 @@
         "parts": {
           "one": "Your",
           "two": "has",
-          "three": "letters. Your BRP can only show a maximum of 30 letters, so it is shortened to this on your BRP:"
+          "three": "letters. Your BRP can only show a maximum of ",
+          "four": " letters, so it is shortened to this on your BRP:"
         }
       },
       "three": {
