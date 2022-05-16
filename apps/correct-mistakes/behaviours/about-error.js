@@ -2,18 +2,26 @@
 'use strict';
 
 const _ = require('underscore');
+const fields = require('../translations/src/en/fields.json')
+const pages = require('../translations/src/en/pages.json')
 
 const truncateConfigs = [
   {
     id: 'first-name-error',
+    prettyName: fields['first-name-error-checkbox'].label,
+    translations: pages['exit-truncated']['first-name'],
     max: 30
   },
   {
     id: 'last-name-error',
+    prettyName: fields['last-name-error-checkbox'].label,
+    translations: pages['exit-truncated']['last-name'],
     max: 30
   },
   {
     id: 'birth-place-error',
+    prettyName: fields['birth-place-error-checkbox'].label,
+    translations: pages['exit-truncated']['birth-place'],
     max: 16
   }
 ];
@@ -34,7 +42,7 @@ function getTruncatedItems(req) {
 
   truncateConfigs.forEach(config => {
     if (isTooLong.call(this, config.id, config.max, req)) {
-      items.unshift({id: config.id, max: config.max});
+      items.unshift({id: config.id, max: config.max, prettyName: config.prettyName, translations: config.translations});
     }
   });
   return items;

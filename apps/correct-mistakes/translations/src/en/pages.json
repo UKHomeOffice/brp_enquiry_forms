@@ -97,7 +97,7 @@
     }
   },
   "truncated": {
-    "header": "Long names on BRPs",
+    "header": "Long information on BRPs",
     "paras": {
       "one": {
         "parts": {
@@ -122,10 +122,30 @@
     "reason-no": "Continue using this service. At the end you can check the spelling of your name, and we shall send you a replacement BRP"
   },
   "exit-truncated": {
-    "paras": {
-      "one": "Due to limitations, we can only print the first 30 characters of your name on your BRP.",
-      "two": "This is not an error and you will be able to use your BRP.",
-      "three": "You do not need to do anything else."
+    "title": "Please note the following information regarding the fields you have selected:",
+    "first-name": {
+      "paras": {
+        "one": "Due to limitations, we can only print the first ",
+        "two": " characters of your name on your BRP.",
+        "three": "This is not an error and you will be able to use your BRP.",
+        "four": "You do not need to do anything else."
+      }
+    },
+    "last-name": {
+      "paras": {
+        "one": "Due to limitations, we can only print the first ",
+        "two": " characters of your name on your BRP.",
+        "three": "This is not an error and you will be able to use your BRP.",
+        "four": "You do not need to do anything else."
+      }
+    },
+    "birth-place": {
+      "paras": {
+        "one": "Due to limitations, we can only print the first ",
+        "two": " characters of your birth place on your BRP.",
+        "three": "This is not an error and you will be able to use your BRP.",
+        "four": "You do not need to do anything else."
+      }
     }
   }
 }
