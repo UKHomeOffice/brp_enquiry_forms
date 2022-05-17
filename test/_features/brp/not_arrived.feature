@@ -27,6 +27,24 @@ Feature: I should be able to log that my BRP has not arrived
     Then I select 'Continue'
     Then I should be on the 'letter-not-received' page showing 'Contact us'
 
+  Scenario: I don't have the letter anymore
+    Given I start the 'not-arrived' application journey
+    Then I should be on the 'previous-submission' page showing 'Have you previously submitted this request?' 
+    Then I check 'previous-submission-no'
+    Then I select 'Continue'
+    Then I should be on the 'post-office-collect' page showing 'Were you due to collect your document from the Post Office?'
+    Then I check 'collection-no'
+    Then I select 'Continue'
+    Then I should be on the 'consignment-number' page showing 'Do you have a consignment number?'
+    Then I check 'consignment-number-radio-no'
+    Then I select 'Continue'
+    Then I should be on the 'letter-received' page showing 'Have you received your decision by letter or email?'
+    Then I check 'received-yes'
+    Then I fill the date 'delivery-date' with '24-5-2020'
+    Then I check 'no-letter'
+    Then I select 'Continue'
+    Then I should be on the 'letter-lost' page showing 'Contact us'
+
   Scenario: BRP resent to same address
     Given I start the 'not-arrived' application journey
     Then I should be on the 'previous-submission' page showing 'Have you previously submitted this request?' 
