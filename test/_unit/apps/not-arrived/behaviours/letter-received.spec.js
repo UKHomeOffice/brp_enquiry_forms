@@ -63,15 +63,6 @@ describe('apps/not-arrived/behaviours/letter-received', () => {
       });
     });
 
-    it('redirects to lost letter if no letter is set to true', () => {
-      req.form.values['delivery-date'] = '';
-      req.form.values['no-letter'] = 'true';
-
-      controller.saveValues(req, res, () => {
-        req.form.options.next.should.equal('/letter-lost');
-      });
-    });
-
     it('sets next step if no-delivery date is provided', () => {
       req.form.values['delivery-date'] = '';
       req.form.values['no-letter'] = '';

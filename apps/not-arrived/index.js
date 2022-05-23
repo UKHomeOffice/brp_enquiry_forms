@@ -44,9 +44,15 @@ module.exports = {
           field: 'received',
           value: 'no'
         }
+      }, {
+        target: '/letter-lost',
+        condition: {
+          field: 'no-letter',
+          value: 'true'
+        }
       }]
     },
-    '/letter-lost': {backLink: 'letter-received'},
+    '/letter-lost': {},
     '/letter-not-received': {},
     '/on-the-way': {
       prereqs: ['/letter-received']
