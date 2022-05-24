@@ -10,8 +10,8 @@ function getTruncatedItems(req) {
 }
 
 function truncatedItem(req) {
-  //Gets the first truncated item that has not yet been shown to the user
-  //If the value is set, we have warned the user about the truncation
+  // Gets the first truncated item that has not yet been shown to the user
+  // If the value is set, we have warned the user about the truncation
   const itemOne = getTruncatedItems(req).filter(item => {
     return item.value === undefined;
   })[0];
@@ -29,9 +29,9 @@ function truncatedItem(req) {
 }
 
 function updateTruncatedItems(req) {
-  //Called once the user confirms if their BRP shows the correctly truncated value
-  //Will update our session to show that we have informed the user that it should be truncated
-  //This is so we don't show this truncated item warning again
+  // Called once the user confirms if their BRP shows the correctly truncated value
+  // Will update our session to show that we have informed the user that it should be truncated
+  // This is so we don't show this truncated item warning again
   const values = req.form.values;
   let items = getTruncatedItems(req);
 
@@ -61,14 +61,14 @@ module.exports = superclass => class Truncated extends superclass {
   }
 
   saveValues(req, res, next) {
-    //We've shown the user a truncated item warning and they've confirmed how it appears on their BRP
+    // We've shown the user a truncated item warning and they've confirmed how it appears on their BRP
     updateTruncatedItems(req);
 
-    //Have we warned the user about all truncated items?
+    // Have we warned the user about all truncated items?
     if (identity(req, true, 'yes') === true) {
-      //Yes, show the exit-truncation page
-      //Set our data for the template
-      let truncatedDetail = getTruncatedItems(req).map(item => {
+      // Yes, show the exit-truncation page
+      // Set our data for the template
+      const truncatedDetail = getTruncatedItems(req).map(item => {
         return {
           id: item.id,
           prettyName: item.prettyName,
@@ -77,24 +77,24 @@ module.exports = superclass => class Truncated extends superclass {
         };
       });
       req.sessionModel.set('truncatedDetail', truncatedDetail);
-      
+
       req.form.options.next = '/exit-truncated';
     } else {
-      //We need to store the truncated value in session so we can display the truncated value on the confirmation page
+      // We need to store the truncated value in session so we can display the truncated value on the confirmation page
       getTruncatedItems(req).forEach(item => {
-        req.sessionModel.set(item.id + '-truncated', req.form.historicalValues[item.id].slice(0,item.max));
+        req.sessionModel.set(item.id + '-truncated', req.form.historicalValues[item.id].slice(0, item.max));
       });
     }
 
-    //Have we got any truncated items at all?
+    // Have we got any truncated items at all?
     if (identity(req, false, 'no') === true) {
-      //No we don't, so continue down the happy path
+      // No we don't, so continue down the happy path
       req.form.options.next = '/uk-address';
     }
 
-    //Do we still have truncated items that we need to warn the user about?
+    // Do we still have truncated items that we need to warn the user about?
     if (identity(req, false, undefined) === true) {
-      //Yes we do, loop back to the truncated page
+      // Yes we do, loop back to the truncated page
       req.form.options.next = '/truncated';
     }
 

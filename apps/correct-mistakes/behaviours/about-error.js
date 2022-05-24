@@ -2,8 +2,8 @@
 'use strict';
 
 const _ = require('underscore');
-const fields = require('../translations/src/en/fields.json')
-const pages = require('../translations/src/en/pages.json')
+const fields = require('../translations/src/en/fields.json');
+const pages = require('../translations/src/en/pages.json');
 
 const truncateConfigs = [
   {
