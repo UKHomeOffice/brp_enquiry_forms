@@ -11,7 +11,10 @@ describe('apps/correct-mistakes/behaviours/truncated', () => {
   beforeEach(done => {
     req = reqres.req();
     res = reqres.res();
-
+    req.form.historicalValues = {
+      'item-one': 'A really really long string',
+      'item-two': 'A really really long string'
+    };
     req.sessionModel.set('truncated-items', [{id: 'item-one', max: 30}, {id: 'item-two', max: 30}]);
 
     const TruncatedController = Behaviour(Controller);

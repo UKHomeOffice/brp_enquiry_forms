@@ -124,22 +124,25 @@
 
                     {{#first-name-error}}
                       <tr style="border-top: 1px solid #009390;">
-                        <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}fields.first-name-error-checkbox.label{{/t}}: </p></td>
-                        <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{#first-name-error}}{{first-name-error-truncated}}{{/first-name-error}}{{^first-name-error}}None Given{{/first-name-error}}</p></td>
+                        <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}fields.first-name-error-checkbox.label{{/t}}</p></td>
+                        <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;"><b>Original: </b>{{first-name-error}}</p></td>
+                        <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;"><b>Truncated: </b>{{first-name-error-truncated}}</p></td>
                       </tr>
                     {{/first-name-error}}
 
                     {{#last-name-error}}
                       <tr style="border-top: 1px solid #009390;">
-                        <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}fields.last-name-error-checkbox.label{{/t}}: </p></td>
-                        <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{#last-name-error}}{{last-name-error-truncated}}{{/last-name-error}}{{^last-name-error}}None Given{{/last-name-error}}</p></td>
+                        <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}fields.last-name-error-checkbox.label{{/t}}</p></td>
+                        <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;"><b>Original: </b>{{last-name-error}}</p></td>
+                        <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;"><b>Truncated: </b>{{last-name-error-truncated}}</p></td>
                       </tr>
                     {{/last-name-error}}
 
                     {{#birth-place-error}}
                       <tr style="border-top: 1px solid #009390;">
                         <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}fields.birth-place-error-checkbox.label{{/t}}</p></td>
-                        <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{birth-place-error-truncated}}</p></td>
+                        <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;"><b>Original: </b>{{birth-place-error}}</p></td>
+                        <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;"><b>Truncated: </b>{{birth-place-error-truncated}}</p></td>
                       </tr>
                     {{/birth-place-error}}
 
