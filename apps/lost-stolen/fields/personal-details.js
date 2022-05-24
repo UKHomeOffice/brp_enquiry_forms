@@ -11,7 +11,7 @@ const beforeTodayValidator = {
 
 module.exports = {
   fullname: {
-    validate: 'notUrl'
+    validate: ['required','notUrl'],
   },
   'brp-card': {
     validate: [{type: 'regex', arguments: /(^[a-z][a-z](\d|X)\d{6}$)|(^$)/gi }],
