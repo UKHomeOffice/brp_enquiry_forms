@@ -122,15 +122,26 @@
                   <p style="font-size: 19px; font-weight: bold; color: #000; line-height: 1.32; margin: 0 0 10px 0;">Reported errors</p>
                   <table width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#FFFFFF" style="margin: 0 0 20px 0;">
 
-                    <tr style="border-top: 1px solid #009390;">
-                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}fields.first-name-error-checkbox.label{{/t}}: </p></td>
-                      <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{#first-name-error}}{{first-name-error}}{{/first-name-error}}{{^first-name-error}}None Given{{/first-name-error}}</p></td>
-                    </tr>
+                    {{#first-name-error}}
+                      <tr style="border-top: 1px solid #009390;">
+                        <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}fields.first-name-error-checkbox.label{{/t}}: </p></td>
+                        <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{#first-name-error}}{{first-name-error-truncated}}{{/first-name-error}}{{^first-name-error}}None Given{{/first-name-error}}</p></td>
+                      </tr>
+                    {{/first-name-error}}
 
-                    <tr style="border-top: 1px solid #009390;">
-                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}fields.last-name-error-checkbox.label{{/t}}: </p></td>
-                      <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{#last-name-error}}{{last-name-error}}{{/last-name-error}}{{^last-name-error}}None Given{{/last-name-error}}</p></td>
-                    </tr>
+                    {{#last-name-error}}
+                      <tr style="border-top: 1px solid #009390;">
+                        <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}fields.last-name-error-checkbox.label{{/t}}: </p></td>
+                        <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{#last-name-error}}{{last-name-error-truncated}}{{/last-name-error}}{{^last-name-error}}None Given{{/last-name-error}}</p></td>
+                      </tr>
+                    {{/last-name-error}}
+
+                    {{#birth-place-error}}
+                      <tr style="border-top: 1px solid #009390;">
+                        <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}fields.birth-place-error-checkbox.label{{/t}}</p></td>
+                        <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{birth-place-error-truncated}}</p></td>
+                      </tr>
+                    {{/birth-place-error}}
 
                     <tr style="border-top: 1px solid #009390;">
                       <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}fields.birth-place-error-checkbox.label{{/t}}: </p></td>

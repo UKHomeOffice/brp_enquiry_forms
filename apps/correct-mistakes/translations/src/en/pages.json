@@ -52,6 +52,7 @@
   "check-details-error": {
     "header": "Check the details you have provided",
     "subheader": "If any information is incorrect, you can change it here.",
+    "limitations-info": "Due to limitations, we can only print the first 16 characters of your Place of Birth and the first 30 characters of you Given Name(s) and Family Name on your BRP.",
     "corrected-details-table": {
       "title": "Corrected BRP details"
     },
@@ -97,7 +98,7 @@
     }
   },
   "truncated": {
-    "header": "Long information on BRPs",
+    "header": "Long names and places of birth on BRPs",
     "paras": {
       "one": {
         "parts": {
@@ -115,7 +116,7 @@
       },
       "three": {
         "parts": {
-          "one": "Is this how it looks on your BRP?"
+          "one": "Is this how it looks on the BRP you've received?"
         }
       }
     },

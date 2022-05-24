@@ -63,20 +63,23 @@
   },
   "last-name-error": {
     "label": "What is your correct family name?",
-    "title": "This is the first line under 'name' on your BRP."
+    "title": "This is the first line under 'name' on your BRP.",
+    "hint": "Due to limitations, we can only print the first 30 characters of your Family Name on your BRP. This is not an error and you will be able to use your BRP."
   },
   "first-name-error-checkbox": {
     "label": "Given name(s)"
   },
   "first-name-error": {
     "label": "What are your correct given name(s)?",
-    "title": "This is the second line under 'name' on your BRP."
+    "title": "This is the second line under 'name' on your BRP.",
+    "hint": "Due to limitations, we can only print the first 30 characters of your Given Name(s) on your BRP. This is not an error and you will be able to use your BRP."
   },
   "birth-place-error-checkbox": {
     "label": "Place of birth"
   },
   "birth-place-error": {
-    "label": "What is your correct place of birth?"
+    "label": "What is your correct place of birth?",
+    "hint": "Due to limitations, we can only print the first 16 characters of your Place of Birth on your BRP. This is not an error and you will be able to use your BRP."
   },
   "date-of-birth-error-checkbox": {
     "label": "Date of birth"

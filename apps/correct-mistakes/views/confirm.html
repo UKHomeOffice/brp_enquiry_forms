@@ -27,11 +27,12 @@
 
 {{$content}}
   <p>{{#t}}pages.check-details-error.subheader{{/t}}</p>
-
+  <p>{{#t}}pages.check-details-error.limitations-info{{/t}}</p>
+  
   {{<partials-form}}
 
     {{$form}}
-
+    
       <h2 class="details-header">{{#t}}pages.check-details-error.corrected-details-table.title{{/t}}</h2>
       <table id="check-details" class="table-details">
         <tbody>
@@ -39,7 +40,7 @@
           <tr>
             <td>{{#t}}fields.first-name-error-checkbox.label{{/t}}</td>
             <td>
-              {{values.first-name-error}}
+              {{values.first-name-error-truncated}}
             </td>
             <td><a href="about-error/edit#first-name-error" class="button">{{#t}}buttons.change.first-name-error{{/t}}</a></td>
           </tr>
@@ -49,7 +50,7 @@
           <tr>
             <td>{{#t}}fields.last-name-error-checkbox.label{{/t}}</td>
             <td>
-              {{values.last-name-error}}
+              {{values.last-name-error-truncated}}
             </td>
             <td><a href="about-error/edit#last-name-error" class="button">{{#t}}buttons.change.last-name-error{{/t}}</a></td>
           </tr>
@@ -59,7 +60,7 @@
           <tr>
             <td>{{#t}}fields.birth-place-error-checkbox.label{{/t}}</td>
             <td>
-              {{values.birth-place-error}}
+              {{values.birth-place-error-truncated}}
             </td>
             <td><a href="about-error/edit#birth-place-error" class="button">{{#t}}buttons.change.birth-place-error{{/t}}</a></td>
           </tr>

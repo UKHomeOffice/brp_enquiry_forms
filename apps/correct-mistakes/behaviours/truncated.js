@@ -79,6 +79,11 @@ module.exports = superclass => class Truncated extends superclass {
       req.sessionModel.set('truncatedDetail', truncatedDetail);
       
       req.form.options.next = '/exit-truncated';
+    } else {
+      //We need to store the truncated value in session so we can display the truncated value on the confirmation page
+      getTruncatedItems(req).forEach(item => {
+        req.sessionModel.set(item.id + '-truncated', req.form.historicalValues[item.id].slice(0,item.max));
+      });
     }
 
     //Have we got any truncated items at all?
