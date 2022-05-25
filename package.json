@@ -24,7 +24,7 @@
   "author": "HomeOffice",
   "dependencies": {
     "express": "^4.17.1",
-    "hof": "^19.14.1",
+    "hof": "^19.14.2",
     "hogan.js": "^3.0.2",
     "hot-shots": "^5.9.0",
     "i18n-future": "^2.0.1",
