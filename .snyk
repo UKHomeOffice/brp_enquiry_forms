@@ -15,6 +15,11 @@ ignore:
         reason: No update currently available
         expires: '2022-09-18T12:35:24.867Z'
   SNYK-JS-CACHEDPATHRELATIVE-2342653:
+    - hof > browserify > module-deps > cached-path-relative:
+        reason: >-
+          No update currently available - Will discuss adding resolution to hof
+          framework as future proof fix
+        expires: '2022-11-01T17:02:21.865Z'
     - hof > browserify > cached-path-relative:
         reason: >-
           No update currently available - Will discuss adding resolution to hof
@@ -25,7 +30,7 @@ ignore:
           No update currently available - Will discuss adding resolution to hof
           framework as future proof fix
         expires: '2022-05-20T10:38:20.144Z'
-      hof > browserify > module-deps > cached-path-relative:
+    - hof > browserify > module-deps > cached-path-relative:
         reason: >-
           No update available - Will discuss adding resolution to hof framework
           as future proof fix
@@ -40,6 +45,10 @@ ignore:
         reason: No update currently available
         expires: '2022-02-20T10:38:20.144Z'
   SNYK-JS-MINIMIST-2429795:
+    - hof > browserify > subarg > minimist:
+      reason: >-
+          No update currently available for browserify.
+      expires: '2022-11-01T17:02:21.865Z'
     - hof > mkdirp > minimist:
         reason: mkdirp update currently crashing hof build
         expires: '2022-05-20T10:38:20.144Z'
