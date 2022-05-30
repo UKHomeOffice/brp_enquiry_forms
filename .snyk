@@ -45,6 +45,10 @@ ignore:
         reason: No update currently available
         expires: '2022-02-20T10:38:20.144Z'
   SNYK-JS-MINIMIST-2429795:
+    - hof > browserify > deps-sort > subarg > minimist:
+      reason: >-
+          No update currently available for browserify.
+      expires: '2022-11-01T17:02:21.865Z'
     - hof > browserify > subarg > minimist:
       reason: >-
           No update currently available for browserify.
