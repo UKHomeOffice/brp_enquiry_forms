@@ -88,7 +88,10 @@ module.exports = superclass => class AboutError extends superclass {
     // Regardless of whether we are truncating these fields
     // We still need to store them against the appropriate "-truncated" property for our confirm page
     truncateConfigs.forEach(config => {
-      req.sessionModel.set(config.id + '-truncated', req.form.values[config.id] ? req.form.values[config.id].slice(0, config.max) : '');
+      req.sessionModel.set(
+        config.id + '-truncated',
+        req.form.values[config.id] ? req.form.values[config.id].slice(0, config.max) : ''
+      );
     });
 
     super.saveValues(req, res, callback);
