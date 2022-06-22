@@ -74,12 +74,12 @@ spec:
               valueFrom:
                 secretKeyRef:
                   name: ses
-                  key: user
+                  key: smtp_username
             - name: SMTP_PASSWORD
               valueFrom:
                 secretKeyRef:
                   name: ses
-                  key: password
+                  key: smtp_password
             - name: NOTIFY_KEY
               {{ if eq .NOTIFY_STUB "stub" }}
               value: USE_MOCK
