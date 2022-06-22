@@ -73,12 +73,12 @@ spec:
             - name: SMTP_USER
               valueFrom:
                 secretKeyRef:
-                  name: smtp
+                  name: ses
                   key: user
             - name: SMTP_PASSWORD
               valueFrom:
                 secretKeyRef:
-                  name: smtp
+                  name: ses
                   key: password
             - name: NOTIFY_KEY
               {{ if eq .NOTIFY_STUB "stub" }}
