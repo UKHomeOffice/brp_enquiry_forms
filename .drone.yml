@@ -195,6 +195,8 @@ steps:
     commands:
       - export ACCEPTANCE_HOST_NAME=https://$${APP_NAME}-$${DRONE_SOURCE_BRANCH}.internal.$${BRANCH_ENV}.homeoffice.gov.uk
       - export CUCUMBER_PUBLISH_ENABLED=true
+      - export PROXY_HOST=zap-start
+      - export PROXY_PORT=8090
       - npx playwright install
       - npm run test:acceptance
     when:
@@ -466,6 +468,12 @@ services:
     volumes:
       - name: dockersock
         path: /var/run
+
+  - name: zap-start
+    image: owasp/zap2docker-stable
+    ports: 
+      - "8090:8090"
+    commands: 'zap.sh -daemon -port 8090 -host 0.0.0.0 -config api.disablekey=true -config api.addrs.addr.name=.* -config api.addrs.addr.regex=true -config anticsrf.tokens.token.name=x-csrf-token'
 
 volumes:
   - name: dockersock
