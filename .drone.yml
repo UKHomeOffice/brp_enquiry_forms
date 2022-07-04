@@ -474,7 +474,7 @@ services:
     environment:
       ZAP_PORT: 8090
     commands: 
-    [ zap.sh,
+    [ ./zap.sh,
      -daemon,
      -port 8090, 
      -host 0.0.0.0, 
