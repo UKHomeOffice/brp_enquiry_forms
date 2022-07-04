@@ -4,19 +4,20 @@ const { BrowserContext, Page, chromium} = require('playwright');
 World.context = BrowserContext;
 World.page = Page;
 
-const PROXY_HOST = process.env.PROXY_HOST || "localhost";
+const PROXY_HOST = process.env.PROXY_HOST || 'localhost';
 const PROXY_PORT = process.env.PROXY_PORT || 8090;
 
 BeforeAll(async () => {
-  const pwConfig = process.env.ACCEPTANCE_WITH_BROWSER ? { headless: false, slowMo: 500, proxy:{
+  const pwConfig = process.env.ACCEPTANCE_WITH_BROWSER ? { headless: false, slowMo: 500, proxy: {
     server: `http://${PROXY_HOST}:${PROXY_PORT}`,
-    bypass: '<-loopback>',
-  },
-} : {
-  proxy: {
-    server: `http://${PROXY_HOST}:${PROXY_PORT}`,
-    bypass: '<-loopback>',
-  },};
+    bypass: '<-loopback>'
+  }
+  } : {
+    proxy: {
+      server: `http://${PROXY_HOST}:${PROXY_PORT}`,
+      bypass: '<-loopback>'
+    }
+  };
   global.browser = await chromium.launch(pwConfig);
 });
 
