@@ -473,7 +473,7 @@ services:
     image: owasp/zap2docker-stable
     environment:
       ZAP_PORT: 8090
-    commands: [ ./zap.sh,
+    commands: [zap.sh,
      -daemon,
      -port 8090, 
      -host 0.0.0.0, 
