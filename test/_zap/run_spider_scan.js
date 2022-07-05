@@ -26,7 +26,7 @@ const runSpiderScan = async () => {
 
   while(percentageComplete < 100) {
     resp = await axios({url: `http://${ZAP_HOST}:${ZAP_PORT}/JSON/spider/view/status`, method: 'GET',
-      params: formData});
+      params: formData}).catch(err => console.log(err));
     console.log(`Spider scan percentage complete: ${percentageComplete}%`);
     percentageComplete = resp.data.status;
   }
@@ -45,4 +45,4 @@ const runSpiderScan = async () => {
   });
 };
 
-runSpiderScan().then(() => console.log('done')).catch(err => console.log(err));
+runSpiderScan().catch(err => console.log(err)).then(() => console.log('done')).catch(err => console.log(err));

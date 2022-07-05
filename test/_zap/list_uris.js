@@ -32,4 +32,4 @@ const listURIs = async () => {
   }
 };
 
-listURIs().then(() => console.log('done')).catch(err => console.log(err));
+listURIs().catch(err => console.log(err)).then(() => console.log('done')).catch(err => console.log(err));
