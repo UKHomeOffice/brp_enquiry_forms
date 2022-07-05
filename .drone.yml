@@ -203,6 +203,13 @@ steps:
       branch: master
       event: pull_request
 
+  - name: list_zap_visited_urls
+    image: node:14
+    commands: 
+    - export ZAP_HOST=zap-start
+    - export ZAP_PORT=8090
+    - node test/_zap/list_uris.js
+
   # Snyk & Anchore security scans which run after branch deployment to prevent blocking of PR UAT tests
   - name: snyk_scan
     pull: if-not-exists
