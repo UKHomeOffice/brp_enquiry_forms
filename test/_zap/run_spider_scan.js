@@ -45,4 +45,4 @@ const runSpiderScan = async () => {
   });
 };
 
-runSpiderScan();
+runSpiderScan().then(() => console.log('done')).catch(err => console.log(err));
