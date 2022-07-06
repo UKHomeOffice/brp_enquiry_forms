@@ -208,6 +208,7 @@ steps:
     commands: 
     - export ZAP_HOST=zap-start
     - export ZAP_PORT=8090
+    - export CONTEXT_NAME=poc
     - python test/_zap/list_uris.py
   
   - name: spider_scan
