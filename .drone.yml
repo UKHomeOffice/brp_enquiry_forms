@@ -204,27 +204,24 @@ steps:
       event: pull_request
 
   - name: list_zap_visited_urls
-    image: node:14
+    image: python
     commands: 
     - export ZAP_HOST=zap-start
     - export ZAP_PORT=8090
     - export CONTEXT_NAME=poc
-    - apt install python-pip
-    - python -m pip install requests
+    - pip install requests
     - python test/_zap/list_uris.py
-    - python -m pip unintsall requests
-    - apt remove python-pip
+    - pip unintsall requests
   
   - name: spider_scan
-    image: node:14
+    image: python
     commands: 
     - export ZAP_HOST=zap-start
     - export ZAP_PORT=8090
     - export CONTEXT_NAME=poc
-    - apt install python-pip
-    - python -m pip install requests
+    - pip install requests
     - python test/_zap/run_spider_scan.py
-    - apt remove python
+    - pip unintsall requests
 
   # Snyk & Anchore security scans which run after branch deployment to prevent blocking of PR UAT tests
   - name: snyk_scan
