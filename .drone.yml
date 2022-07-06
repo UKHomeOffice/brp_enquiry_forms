@@ -125,7 +125,6 @@ steps:
       DOCKER_PASSWORD:
         from_secret: DOCKER_PASSWORD
     commands:
-    - python -m pip install a
     - docker login -u="ukhomeofficedigital+drone" -p=$${DOCKER_PASSWORD} quay.io
     - docker tag $${IMAGE_REPO}:$${DRONE_COMMIT_SHA} $${IMAGE_URL}/$${IMAGE_REPO}:$${DRONE_COMMIT_SHA}
     - docker push $${IMAGE_URL}/$${IMAGE_REPO}:$${DRONE_COMMIT_SHA}
@@ -210,9 +209,9 @@ steps:
     - export ZAP_HOST=zap-start
     - export ZAP_PORT=8090
     - export CONTEXT_NAME=poc
-    - pip install requests
+    - python -m pip install requests
     - python test/_zap/list_uris.py
-    - pip unintsall requests
+    - python -m pip unintsall requests
   
   - name: spider_scan
     image: node:14
@@ -220,9 +219,9 @@ steps:
     - export ZAP_HOST=zap-start
     - export ZAP_PORT=8090
     - export CONTEXT_NAME=poc
-    - pip install requests
+    - python -m pip install requests
     - python test/_zap/run_spider_scan.py
-    - pip unintsall requests
+    - python -m pip unintsall requests
 
   # Snyk & Anchore security scans which run after branch deployment to prevent blocking of PR UAT tests
   - name: snyk_scan
