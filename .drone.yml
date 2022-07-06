@@ -209,7 +209,9 @@ steps:
     - export ZAP_HOST=zap-start
     - export ZAP_PORT=8090
     - export CONTEXT_NAME=poc
+    - pip install requests
     - python test/_zap/list_uris.py
+    - pip unintsall requests
   
   - name: spider_scan
     image: node:14
@@ -217,7 +219,9 @@ steps:
     - export ZAP_HOST=zap-start
     - export ZAP_PORT=8090
     - export CONTEXT_NAME=poc
+    - pip install requests
     - python test/_zap/run_spider_scan.py
+    - pip unintsall requests
 
   # Snyk & Anchore security scans which run after branch deployment to prevent blocking of PR UAT tests
   - name: snyk_scan
