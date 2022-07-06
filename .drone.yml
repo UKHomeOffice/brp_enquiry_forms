@@ -209,6 +209,7 @@ steps:
     - export ZAP_HOST=zap-start
     - export ZAP_PORT=8090
     - export CONTEXT_NAME=poc
+    - python -m ensurepip --upgrade
     - python -m pip install requests
     - python test/_zap/list_uris.py
     - python -m pip unintsall requests
@@ -219,6 +220,7 @@ steps:
     - export ZAP_HOST=zap-start
     - export ZAP_PORT=8090
     - export CONTEXT_NAME=poc
+    - python -m ensurepip --upgrade
     - python -m pip install requests
     - python test/_zap/run_spider_scan.py
     - python -m pip unintsall requests
