@@ -211,7 +211,6 @@ steps:
     - export CONTEXT_NAME=poc
     - pip install requests
     - python test/_zap/list_uris.py
-    - pip uninstall requests
   
   - name: spider_scan
     image: python
@@ -221,7 +220,6 @@ steps:
     - export CONTEXT_NAME=poc
     - pip install requests
     - python test/_zap/run_spider_scan.py
-    - pip uninstall requests
 
   # Snyk & Anchore security scans which run after branch deployment to prevent blocking of PR UAT tests
   - name: snyk_scan
