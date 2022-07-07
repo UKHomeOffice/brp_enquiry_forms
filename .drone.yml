@@ -229,6 +229,10 @@ steps:
     - export CONTEXT_NAME=poc
     - pip install requests
     - python test/_zap/generate_report.py
+
+  - name: see_report
+    image: python
+    commands:
     - cd test/_zap
     - ls
 
@@ -503,11 +507,10 @@ services:
     environment:
       ZAP_PORT: 8090
     commands:
-      - ls
       - zap.sh -daemon -port 8090 -host 0.0.0.0 -config api.disablekey=true -config api.addrs.addr.name=.* -config api.addrs.addr.regex=true -config anticsrf.tokens.token.name=x-csrf-token
     volumes:
       - name: ReportStorage
-        path: ${PWD}/test/_zap:/home/zap:rw
+        path: test/_zap:/home/zap:rw
 
 volumes:
   - name: dockersock
