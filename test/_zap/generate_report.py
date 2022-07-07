@@ -48,8 +48,9 @@ reportParams = {
 }
 
 try:
-    requests.get('http://' + ZAP_HOST + ':' + str(ZAP_PORT) +
-                 '/JSON/reports/action/generate/', params=reportParams, headers=header)
+    resp = requests.get('http://' + ZAP_HOST + ':' + str(ZAP_PORT) +
+                        '/JSON/reports/action/generate/', params=reportParams, headers=header)
+    print(resp.json())
 
 except requests.exceptions.RequestException as e:
     print(e)
