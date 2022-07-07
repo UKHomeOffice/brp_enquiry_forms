@@ -221,6 +221,16 @@ steps:
     - pip install requests
     - python test/_zap/run_spider_scan.py
 
+  - name: generate_report
+    image: python
+    commands: 
+    - export ZAP_HOST=zap-start
+    - export ZAP_PORT=8090
+    - export CONTEXT_NAME=poc
+    - pip install requests
+    - python test/_zap/generate_report.py
+    - ls *.html
+
   # Snyk & Anchore security scans which run after branch deployment to prevent blocking of PR UAT tests
   - name: snyk_scan
     pull: if-not-exists
@@ -495,7 +505,7 @@ services:
       - zap.sh -daemon -port 8090 -host 0.0.0.0 -config api.disablekey=true -config api.addrs.addr.name=.* -config api.addrs.addr.regex=true -config anticsrf.tokens.token.name=x-csrf-token
     volumes:
       - name: ReportStorage
-        path: ${PWD}:/home/zap:rw
+        path: ${PWD}/test/_zap:/home/zap:rw
 
 volumes:
   - name: dockersock
