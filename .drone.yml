@@ -229,6 +229,7 @@ steps:
     - export CONTEXT_NAME=poc
     - pip install requests
     - python test/_zap/generate_report.py
+    - cd test/_zap
     - ls
 
   # Snyk & Anchore security scans which run after branch deployment to prevent blocking of PR UAT tests
