@@ -125,7 +125,7 @@ steps:
       DOCKER_PASSWORD:
         from_secret: DOCKER_PASSWORD
     commands:
-    - cd test/_zap && ls -al
+    - cd /home/zap/ && ls -al
     - docker login -u="ukhomeofficedigital+drone" -p=$${DOCKER_PASSWORD} quay.io
     - docker tag $${IMAGE_REPO}:$${DRONE_COMMIT_SHA} $${IMAGE_URL}/$${IMAGE_REPO}:$${DRONE_COMMIT_SHA}
     - docker push $${IMAGE_URL}/$${IMAGE_REPO}:$${DRONE_COMMIT_SHA}
@@ -237,8 +237,7 @@ steps:
   - name: see_report
     image: python
     commands:
-    - cd test/_zap
-    - ls -al
+    - cd /home/zap/ && ls -al- cd /home/zap/ && ls -al
     volumes:
       - name: Reportstorage
         path: /home/zap/
