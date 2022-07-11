@@ -231,9 +231,6 @@ steps:
     - export CONTEXT_NAME=poc
     - pip install requests
     - python test/_zap/generate_report.py
-    volumes:
-      - name: ReportStorage
-        path: ./
 
   - name: see_report
     image: python
