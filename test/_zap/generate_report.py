@@ -44,7 +44,7 @@ reportParams = {
     str(date.day) + '-' + str(date.month) + '-' + str(date.year),
     # Not too relevant as we can use date lib in python
     'reportFileNamePattern': '',
-    'reportDir': '',
+    'reportDir': '/test/_zap',
     # Should we display the report after generating
     'display': True
 }
