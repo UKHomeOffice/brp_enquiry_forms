@@ -517,8 +517,8 @@ services:
     volumes:
       - name: dockersock
         path: /var/run
-      - name: ReportStorage
-        path: ./
+    #  - name: ReportStorage
+    #    path: ./
 
 volumes:
   - name: dockersock
