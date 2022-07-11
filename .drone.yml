@@ -508,13 +508,12 @@ services:
         path: /var/run
 
   - name: zap-start
-    image: owasp/zap2docker-stable
+    image: 340268328991.dkr.ecr.eu-west-2.amazonaws.com/acp/dind
     environment:
       ZAP_PORT: 8090
     commands:
       - sleep 15
-      - docker run -d -v ${PWD}/test/_zap:/home/zap:rw zap
-      - zap.sh -daemon -port 8090 -host 0.0.0.0 -config api.disablekey=true -config api.addrs.addr.name=.* -config api.addrs.addr.regex=true -config anticsrf.tokens.token.name=x-csrf-token
+      - docker run -v ${PWD}/test/_zap:/home/zap:rw -t owasp/zap2docker-stable bash -c "zap.sh -daemon -port 8090 -host 0.0.0.0 -config api.disablekey=true -config api.addrs.addr.name=.* -config api.addrs.addr.regex=true -config anticsrf.tokens.token.name=x-csrf-token"
     volumes:
       - name: dockersock
         path: /var/run
