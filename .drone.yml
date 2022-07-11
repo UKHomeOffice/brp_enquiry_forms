@@ -518,7 +518,7 @@ services:
       - name: dockersock
         path: /var/run
       - name: ReportStorage
-        path: ./home/zap
+        path: ./test/_zap
 
 volumes:
   - name: dockersock
