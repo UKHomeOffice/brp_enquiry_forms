@@ -133,6 +133,9 @@ steps:
     when:
       branch: master
       event: [push, pull_request]
+    volumes:
+      - name: ReportStrorage
+        path: /zap
 
   # Deploy to pull request UAT environment
   - name: deploy_to_branch
@@ -509,12 +512,12 @@ services:
     environment:
       ZAP_PORT: 8090
     commands:
-      - docker run --network="host" -v /drone/src/:/zap/:rw -t owasp/zap2docker-stable bash -c "zap.sh -daemon -port 8090 -host 0.0.0.0 -config api.disablekey=true -config api.addrs.addr.name=.* -config api.addrs.addr.regex=true -config anticsrf.tokens.token.name=x-csrf-token"
+      - docker run --network="host" -t owasp/zap2docker-stable bash -c "zap.sh -daemon -port 8090 -host 0.0.0.0 -config api.disablekey=true -config api.addrs.addr.name=.* -config api.addrs.addr.regex=true -config anticsrf.tokens.token.name=x-csrf-token"
     volumes:
       - name: dockersock
         path: /var/run
-    #  - name: ReportStorage
-    #    path: ./
+      - name: ReportStorage
+        path: /zap
 
 volumes:
   - name: dockersock
