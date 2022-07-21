@@ -1,0 +1,17 @@
+services:
+  redis:
+    image: redis
+  
+  app:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+    links:
+      - redis
+    ports:
+      - 8080:8080
+    volumes:
+      - "/app/public"
