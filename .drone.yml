@@ -127,8 +127,9 @@ steps:
       DOCKER_PASSWORD:
         from_secret: DOCKER_PASSWORD
     commands:
-    - touch test.txt
-    - ls -al
+    - cd Reoports
+    - ls
+    - cd ../
     - docker login -u="ukhomeofficedigital+drone" -p=$${DOCKER_PASSWORD} quay.io
     - docker tag $${IMAGE_REPO}:$${DRONE_COMMIT_SHA} $${IMAGE_URL}/$${IMAGE_REPO}:$${DRONE_COMMIT_SHA}
     - docker push $${IMAGE_URL}/$${IMAGE_REPO}:$${DRONE_COMMIT_SHA}
@@ -523,7 +524,7 @@ services:
       - name: dockersock
         path: /var/run
       - name: ReportStorage
-        path: /home/zap/Reports
+        path: /home/zap
 
 volumes:
   - name: dockersock
