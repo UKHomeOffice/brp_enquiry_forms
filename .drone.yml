@@ -109,16 +109,11 @@ steps:
   - name: build_image
     image: 340268328991.dkr.ecr.eu-west-2.amazonaws.com/acp/dind
     commands:
-      - cd Reports
-      - ls
-      - cd ../
       - n=0; while [ "$n" -lt 60 ] && [ ! docker stats --no-stream ]; do n=$(( n + 1 )); sleep 1; done
       - docker build --no-cache -t $${IMAGE_REPO}:$${DRONE_COMMIT_SHA} .
     volumes:
       - name: dockersock
         path: /var/run
-      - name: ReportStorage
-        path: /drone/src/Reports
     when:
       branch: master
       event: [push, pull_request]
@@ -130,12 +125,18 @@ steps:
       DOCKER_PASSWORD:
         from_secret: DOCKER_PASSWORD
     commands:
+    - cd Reports
+    - ls
+    - cd ../
     - docker login -u="ukhomeofficedigital+drone" -p=$${DOCKER_PASSWORD} quay.io
     - docker tag $${IMAGE_REPO}:$${DRONE_COMMIT_SHA} $${IMAGE_URL}/$${IMAGE_REPO}:$${DRONE_COMMIT_SHA}
     - docker push $${IMAGE_URL}/$${IMAGE_REPO}:$${DRONE_COMMIT_SHA}
     when:
       branch: master
       event: [push, pull_request]
+    volumes:
+    - name: ReportStorage
+      path: /drone/src/Reports
 
   # Deploy to pull request UAT environment
   - name: deploy_to_branch
@@ -514,11 +515,10 @@ services:
 
   - name: zap-start
     image: 340268328991.dkr.ecr.eu-west-2.amazonaws.com/acp/dind
-    privileged: true
     environment:
       ZAP_PORT: 8090
     commands:
-      - docker run --network="host" -v /drone/src/Reports:/home/zap/:rw -t owasp/zap2docker-stable bash -c "zap.sh -daemon -port 8090 -host 0.0.0.0 -config api.disablekey=true -config api.addrs.addr.name=.* -config api.addrs.addr.regex=true -config anticsrf.tokens.token.name=x-csrf-token"
+      - docker run --network="host" -v /drone/src/Reports:/zap/:rw -t owasp/zap2docker-stable bash -c "zap.sh -daemon -port 8090 -host 0.0.0.0 -config api.disablekey=true -config api.addrs.addr.name=.* -config api.addrs.addr.regex=true -config anticsrf.tokens.token.name=x-csrf-token"
     volumes:
       - name: dockersock
         path: /var/run
