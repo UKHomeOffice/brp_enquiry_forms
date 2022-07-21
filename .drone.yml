@@ -115,7 +115,7 @@ steps:
       - name: dockersock
         path: /var/run
       - name: ReportStorage
-        path: /Reports
+        path: /drone/src/Reports
     when:
       branch: master
       event: [push, pull_request]
@@ -137,7 +137,7 @@ steps:
       event: [push, pull_request]
     volumes:
       - name: ReportStrorage
-        path: /zap
+        path: /drone/src/Reports
 
   # Deploy to pull request UAT environment
   - name: deploy_to_branch
@@ -242,6 +242,9 @@ steps:
     commands:
     - sleep 20
     - ls
+    volumes:
+    - name: ReportStorage
+      path: /drone/src/Reports
 
   # Snyk & Anchore security scans which run after branch deployment to prevent blocking of PR UAT tests
   - name: snyk_scan
@@ -510,16 +513,16 @@ services:
         path: /var/run
 
   - name: zap-start
-    image: 340268328991.dkr.ecr.eu-west-2.amazonaws.com/acp/dind
+    image: owasp/zap2docker
     environment:
       ZAP_PORT: 8090
     commands:
-      - docker run --network="host" -t owasp/zap2docker-stable bash -c "zap.sh -daemon -port 8090 -host 0.0.0.0 -config api.disablekey=true -config api.addrs.addr.name=.* -config api.addrs.addr.regex=true -config anticsrf.tokens.token.name=x-csrf-token"
+      zap.sh -daemon -port 8090 -host 0.0.0.0 -config api.disablekey=true -config api.addrs.addr.name=.* -config api.addrs.addr.regex=true -config anticsrf.tokens.token.name=x-csrf-token
     volumes:
       - name: dockersock
         path: /var/run
       - name: ReportStorage
-        path: /Reports
+        path: /drone/src/Reports
 
 volumes:
   - name: dockersock
