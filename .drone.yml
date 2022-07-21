@@ -240,7 +240,8 @@ steps:
   - name: see_report
     image: python
     commands:
-    - sleep 20
+    - ls
+    - cd Reports
     - ls
     volumes:
     - name: ReportStorage
@@ -522,7 +523,7 @@ services:
       - name: dockersock
         path: /var/run
       - name: ReportStorage
-        path: /drone/src/Reports
+        path: /home/zap/Reports
 
 volumes:
   - name: dockersock
