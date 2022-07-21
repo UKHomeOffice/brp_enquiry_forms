@@ -496,7 +496,6 @@ steps:
 
 services:
   - name: docker
-    privileged: true
     image: 340268328991.dkr.ecr.eu-west-2.amazonaws.com/acp/dind
 
   # Anchore scanning needs background service to run
