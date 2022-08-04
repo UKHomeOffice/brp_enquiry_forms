@@ -4,9 +4,6 @@ Feature: A user should access the correct mistakes service and be able to log an
   @in_uk
   Scenario: correct mistakes on brp form within the uk
     Given I start the 'correct-mistakes' application journey
-    Then I should be on the 'previous-submission' page showing 'Have you previously submitted this request?' 
-    Then I check 'previous-submission-no'
-    Then I select 'Continue'
     Then I should be on the 'location' page showing 'Where did you apply for your visa?'
     Then I check 'location-applied-yes'
     Then I select 'Continue'
@@ -31,9 +28,6 @@ Feature: A user should access the correct mistakes service and be able to log an
   @out_uk
   Scenario: correct mistakes on brp form outside the uk
     Given I start the 'correct-mistakes' application journey
-    Then I should be on the 'previous-submission' page showing 'Have you previously submitted this request?' 
-    Then I check 'previous-submission-no'
-    Then I select 'Continue'
     Then I should be on the 'location' page showing 'Where did you apply for your visa?'
     Then I check 'location-applied-no'
     Then I select 'Continue'
@@ -63,9 +57,6 @@ Feature: A user should access the correct mistakes service and be able to log an
   @validation
   Scenario: validation of about-error page
     Given I start the 'correct-mistakes' application journey
-    Then I should be on the 'previous-submission' page showing 'Have you previously submitted this request?' 
-    Then I check 'previous-submission-no'
-    Then I select 'Continue'
     Then I should be on the 'location' page showing 'Where did you apply for your visa?'
     Then I check 'location-applied-yes'
     Then I select 'Continue'
@@ -99,9 +90,6 @@ Feature: A user should access the correct mistakes service and be able to log an
     @validation
     Scenario: BRP number validation
       Given I start the 'correct-mistakes' application journey
-      Then I should be on the 'previous-submission' page showing 'Have you previously submitted this request?' 
-      Then I check 'previous-submission-no'
-      Then I select 'Continue'
       Then I should be on the 'location' page showing 'Where did you apply for your visa?'
       Then I check 'location-applied-no'
       Then I select 'Continue'
@@ -128,9 +116,6 @@ Feature: A user should access the correct mistakes service and be able to log an
     @validation
     Scenario: Correct Mistakes Personal Details not a URL validation
       Given I start the 'correct-mistakes' application journey
-      Then I should be on the 'previous-submission' page showing 'Have you previously submitted this request?' 
-      Then I check 'previous-submission-no'
-      Then I select 'Continue'
       Then I should be on the 'location' page showing 'Where did you apply for your visa?'
       Then I check 'location-applied-no'
       Then I select 'Continue'
@@ -157,9 +142,6 @@ Feature: A user should access the correct mistakes service and be able to log an
     @validation
     Scenario: Correct Mistakes Representative Personal Details not a URL validation
       Given I start the 'correct-mistakes' application journey
-      Then I should be on the 'previous-submission' page showing 'Have you previously submitted this request?' 
-      Then I check 'previous-submission-no'
-      Then I select 'Continue'
       Then I should be on the 'location' page showing 'Where did you apply for your visa?'
       Then I check 'location-applied-yes'
       Then I select 'Continue'
@@ -189,9 +171,6 @@ Feature: A user should access the correct mistakes service and be able to log an
     @validation
     Scenario: Correct Mistakes Family Name and Given Name(s) not a URL validation
       Given I start the 'correct-mistakes' application journey
-      Then I should be on the 'previous-submission' page showing 'Have you previously submitted this request?' 
-      Then I check 'previous-submission-no'
-      Then I select 'Continue'
       Then I should be on the 'location' page showing 'Where did you apply for your visa?'
       Then I check 'location-applied-yes'
       Then I select 'Continue'

@@ -31,21 +31,6 @@
       }
     }
   },
-  "previous-submission": {
-    "label": "Have you previously submitted this request?",
-    "options": {
-      "yes": {
-        "label": "Yes"
-      },
-      "no": {
-        "label": "No"
-      }
-    }
-  },
-  "submission-reference": {
-    "label": "What is the reference for this request?",
-    "hint": "For example ZxeJ8vfBI"
-  },
   "rep-name": {
     "label": "Full name"
   },

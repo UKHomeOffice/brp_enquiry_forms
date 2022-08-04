@@ -5,13 +5,6 @@ module.exports = {
   baseUrl: '/someone-else',
   params: '/:action?',
   steps: {
-    '/previous-submission': {
-      fields: [
-        'previous-submission',
-        'submission-reference'
-      ],
-      next: '/arrange'
-    },
     '/arrange': {
       behaviours: [require('./behaviours/someone-else-brp')],
       fields: [
@@ -22,7 +15,6 @@ module.exports = {
         'someone-else-id-number'
       ],
       next: '/reason',
-      backLink: 'previous-submission'
     },
     '/reason': {
       fields: [
