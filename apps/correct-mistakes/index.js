@@ -11,7 +11,7 @@ module.exports = {
       fields: [
         'location-applied'
       ],
-      next: '/about-error',
+      next: '/about-error'
     },
     '/about-error': {
       behaviours: [require('./behaviours/about-error')],

@@ -7,7 +7,6 @@ const client = new StatsD();
 const Model = require('../models/email');
 
 
-
 function errorChecked(key, data) {
   if (data[key + '-checkbox']) {
     return key;
@@ -36,7 +35,7 @@ const serviceMap = {
     const suffix = data.triage ? '-triage' : '';
     return {
       template: 'error' + suffix,
-      subject: 'Form submitted: Report a problem with your new BRP (' + subjectErrors +')'
+      subject: 'Form submitted: Report a problem with your new BRP (' + subjectErrors + ')'
     };
   },
   '/lost-stolen': data => {
@@ -52,7 +51,7 @@ const serviceMap = {
       subject: 'Form submitted: Report a collection problem.'
     };
   },
-  '/someone-else':() => {
+  '/someone-else': () => {
     return {
       template: 'someone-else',
       subject: 'Form submitted: Report someone else collecting your BRP.'

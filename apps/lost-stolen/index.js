@@ -8,7 +8,7 @@ module.exports = {
   steps: {
     '/where': {
       fields: ['inside-uk', 'country'],
-      next: '/date-lost',
+      next: '/date-lost'
     },
     '/date-lost': {
       fields: [

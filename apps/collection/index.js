@@ -15,7 +15,7 @@ module.exports = {
         'collection-where-radio',
         'collection-date'
       ],
-      next: '/reasons',
+      next: '/reasons'
     },
     '/reasons': {
       behaviours: ReasonsBehaviour,

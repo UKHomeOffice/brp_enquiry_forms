@@ -14,7 +14,7 @@ module.exports = {
         'someone-else-id-type',
         'someone-else-id-number'
       ],
-      next: '/reason',
+      next: '/reason'
     },
     '/reason': {
       fields: [
