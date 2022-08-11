@@ -3,9 +3,6 @@ Feature: I want someone else to collect my BRP
 
   Scenario: I want someone else to collect my BRP because I have a medical condition
     Given I start the 'someone-else' application journey
-    Then I should be on the 'previous-submission' page showing 'Have you previously submitted this request?' 
-    Then I check 'previous-submission-no'
-    Then I select 'Continue'
     Then I should be on the 'arrange' page showing 'Who would you like to nominate?'
     Then I fill 'someone-else-fullname' with 'Donald Testman'
     Then I fill the date 'someone-else-date' with '24-5-1990'
@@ -33,9 +30,6 @@ Feature: I want someone else to collect my BRP
 
   Scenario: I need someone else to collect my BRP because I am under 18
     Given I start the 'someone-else' application journey
-    Then I should be on the 'previous-submission' page showing 'Have you previously submitted this request?' 
-    Then I check 'previous-submission-no'
-    Then I select 'Continue'
     Then I should be on the 'arrange' page showing 'Who would you like to nominate?'
     Then I fill 'someone-else-fullname' with 'Donald Testman'
     Then I fill the date 'someone-else-date' with '24-5-1990'
@@ -63,9 +57,6 @@ Feature: I want someone else to collect my BRP
   @validation
   Scenario: I need someone else to collect my BRP because I am under 18 but I enter an age over 18
     Given I start the 'someone-else' application journey
-    Then I should be on the 'previous-submission' page showing 'Have you previously submitted this request?' 
-    Then I check 'previous-submission-no'
-    Then I select 'Continue'
     Then I should be on the 'arrange' page showing 'Who would you like to nominate?'
     Then I fill 'someone-else-fullname' with 'Donald Testman'
     Then I fill the date 'someone-else-date' with '24-5-1990'
@@ -87,9 +78,6 @@ Feature: I want someone else to collect my BRP
   @validation
   Scenario: Someone Else Application Nominated Persons Personal Details not a URL validation
     Given I start the 'someone-else' application journey
-    Then I should be on the 'previous-submission' page showing 'Have you previously submitted this request?' 
-    Then I check 'previous-submission-no'
-    Then I select 'Continue'
     Then I should be on the 'arrange' page showing 'Who would you like to nominate?'
     Then I fill 'someone-else-fullname' with 'www.google.com'
     Then I fill 'someone-else-id-number' with 'www.google.com'
@@ -100,9 +88,6 @@ Feature: I want someone else to collect my BRP
   @validation
   Scenario: Someone Else Application Personal Details not a URL validation
     Given I start the 'someone-else' application journey
-    Then I should be on the 'previous-submission' page showing 'Have you previously submitted this request?' 
-    Then I check 'previous-submission-no'
-    Then I select 'Continue'
     Then I should be on the 'arrange' page showing 'Who would you like to nominate?'
     Then I fill 'someone-else-fullname' with 'Donald Testman'
     Then I fill the date 'someone-else-date' with '24-5-1990'
@@ -124,9 +109,6 @@ Feature: I want someone else to collect my BRP
   @validation
   Scenario: Someone Else Application Representative Personal Details not a URL validation
     Given I start the 'someone-else' application journey
-    Then I should be on the 'previous-submission' page showing 'Have you previously submitted this request?' 
-    Then I check 'previous-submission-no'
-    Then I select 'Continue'
     Then I should be on the 'arrange' page showing 'Who would you like to nominate?'
     Then I fill 'someone-else-fullname' with 'Donald Testman'
     Then I fill the date 'someone-else-date' with '24-5-1990'

@@ -29,12 +29,6 @@
   "org-help": {
     "required": "Did you have help completing this form?"
   },
-  "previous-submission": {
-    "required": "Have you previously submitted this request?"
-  },
-  "submission-reference": {
-    "regex": "Please enter a 9 digit reference code"
-  },
   "rep-name": {
     "required": "What is the name of the person who helped you complete this form?",
     "notUrl": "Full name must not be a URL"

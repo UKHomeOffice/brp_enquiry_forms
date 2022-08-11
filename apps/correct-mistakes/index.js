@@ -6,20 +6,12 @@ module.exports = {
   params: '/:action?',
   behaviours: [require('../common/behaviours/location')],
   steps: {
-    '/previous-submission': {
-      fields: [
-        'previous-submission',
-        'submission-reference'
-      ],
-      next: '/location'
-    },
     '/location': {
       template: 'location-applied',
       fields: [
         'location-applied'
       ],
-      next: '/about-error',
-      backLink: 'previous-submission'
+      next: '/about-error'
     },
     '/about-error': {
       behaviours: [require('./behaviours/about-error')],
