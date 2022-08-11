@@ -168,8 +168,7 @@ Emailer.prototype.send = function send(email, callback) {
       }
     }
 
-    logger.info(config.email.duplicate ? 'Emailing Caseworker Duplicate inbox: ' +
-        email.subject : 'Emailing caseworker: ' + email.subject);
+    logger.info('Emailing caseworker: ' + email.subject);
     this.transporter.sendMail({
       from: config.email.from,
       to: config.email.caseworker[email.template],
