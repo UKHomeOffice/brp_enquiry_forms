@@ -2843,10 +2843,10 @@ hmac-drbg@^1.0.1:
     minimalistic-assert "^1.0.0"
     minimalistic-crypto-utils "^1.0.1"
 
-hof@^19.14.13:
-  version "19.14.14"
-  resolved "https://registry.yarnpkg.com/hof/-/hof-19.14.14.tgz#557e1bfe3eb026c78b7d86dff1606693a182054d"
-  integrity sha512-QwwYXaDfvwyonQcMG5JKqwCE+sj94hyu4DMTU95iZyr0b70c8sPoE3llcOPn9p435XTanVOQr7cK96STufGJgQ==
+hof@^19.14.15:
+  version "19.14.15"
+  resolved "https://registry.yarnpkg.com/hof/-/hof-19.14.15.tgz#af180239cb92c38341c8ed24c2e7082178927572"
+  integrity sha512-GdZHQyqqgyzxfIta9PYHIw7aWTnyqpdeQnBFMdisrzDyLGwcWcYvLJ+y0BCY5wndhnuSApVX0pviPDNIAf9z2A==
   dependencies:
     aliasify "^2.1.0"
     bluebird "^3.7.2"
@@ -2901,6 +2901,7 @@ hof@^19.14.13:
     uglify-js "^3.14.3"
     underscore "^1.12.1"
     urijs "^1.19.11"
+    uuid "^8.3.2"
     winston "^3.7.2"
 
 hogan-express-strict@^0.5.4:
@@ -5518,7 +5519,7 @@ undeclared-identifiers@^1.1.2:
     simple-concat "^1.0.0"
     xtend "^4.0.1"
 
-underscore@^1.12.1, underscore@^1.13.1, underscore@^1.7.0, underscore@^1.8.2, underscore@^1.9.0, underscore@~1.7.0:
+underscore@^1.12.1, underscore@^1.7.0, underscore@^1.8.2, underscore@^1.9.0, underscore@~1.7.0:
   version "1.13.4"
   resolved "https://registry.yarnpkg.com/underscore/-/underscore-1.13.4.tgz#7886b46bbdf07f768e0052f1828e1dcab40c0dee"
   integrity sha512-BQFnUDuAQ4Yf/cYY5LNrK9NCJFKriaRbD9uR1fTeXnBeoa97W0i41qkZfGO9pSo8I5KzjAcSY2XYtdf0oKd7KQ==
