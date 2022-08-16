@@ -1,6 +1,6 @@
 @feature @not_arrived
 Feature: I should be able to log that my BRP has not arrived
-  
+
   Scenario: Due to collect the document from the postcode
     Given I start the 'not-arrived' application journey
     Then I should be on the 'post-office-collect' page showing 'Were you due to collect your document from the Post Office?'
@@ -134,3 +134,19 @@ Feature: I should be able to log that my BRP has not arrived
     Then I fill 'email' with 'test@test.test'
     Then I select 'Continue'
     Then I should be on the 'confirm' page showing 'Check the details you have provided'
+
+  @validation
+  Scenario: Not arrived application changing mind on letter recieved
+    Given I start the 'not-arrived' application journey
+    Then I should be on the 'post-office-collect' page showing 'Were you due to collect your document from the Post Office?'
+    Then I check 'collection-no'
+    Then I select 'Continue'
+    Then I should be on the 'consignment-number' page showing 'Do you have a consignment number?'
+    Then I check 'consignment-number-radio-no'
+    Then I select 'Continue'
+    Then I should be on the 'letter-received' page showing 'Have you received your decision by letter or email?'
+    Then I check 'received-yes'
+    Then I fill the date 'delivery-date' with '24-5-2020'
+    Then I check 'no-letter'
+    Then I select 'Continue'
+    Then I should be on the 'letter-lost' page showing 'Contact us'
