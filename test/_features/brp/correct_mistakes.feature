@@ -186,9 +186,6 @@ Feature: A user should access the correct mistakes service and be able to log an
     @truncatedfields
     Scenario: correct mistakes on brp form confirmed as correct should display confirmation for each field 
       Given I start the 'correct-mistakes' application journey
-      Then I should be on the 'previous-submission' page showing 'Have you previously submitted this request?' 
-      Then I check 'previous-submission-no'
-      Then I select 'Continue'
       Then I should be on the 'location' page showing 'Where did you apply for your visa?'
       Then I check 'location-applied-yes'
       Then I select 'Continue'
@@ -217,9 +214,6 @@ Feature: A user should access the correct mistakes service and be able to log an
 @truncatedfields
     Scenario: correct mistakes on brp form confirmed confirmed one truncated value as incorrect should display all 3 truncates values on confirm page 
       Given I start the 'correct-mistakes' application journey
-      Then I should be on the 'previous-submission' page showing 'Have you previously submitted this request?' 
-      Then I check 'previous-submission-no'
-      Then I select 'Continue'
       Then I should be on the 'location' page showing 'Where did you apply for your visa?'
       Then I check 'location-applied-yes'
       Then I select 'Continue'
