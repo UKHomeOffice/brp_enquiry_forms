@@ -31,6 +31,15 @@ linting: &linting
   commands:
     - yarn run test:lint
 
+debug: &debug
+  pull: if-not-exists
+  image: node:14
+  environment:
+    NOTIFY_KEY: USE_MOCK
+  commands:
+    - echo "Debug"
+    - node -v
+
 unit_tests: &unit_tests
   pull: if-not-exists
   image: node:14
@@ -172,6 +181,18 @@ steps:
           - feature/*
       event: pull_request
 
+  - name: debug_step
+    <<: *debug
+    commands:
+      - echo NodeVersion
+      - node -v
+    when:
+      branch:
+        include:
+          - master
+          - feature/*
+      event: pull_request
+
   - name: unit_tests_branch
     <<: *unit_tests
     when:
@@ -228,7 +249,7 @@ steps:
     when:
       branch: master
       event: pull_request
-
+  
   # Deploy to Master UAT environment
   - name: deploy_to_uat
     pull: if-not-exists
