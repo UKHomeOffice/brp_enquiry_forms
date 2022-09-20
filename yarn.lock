@@ -2882,9 +2882,10 @@ hmac-drbg@^1.0.1:
     minimalistic-assert "^1.0.0"
     minimalistic-crypto-utils "^1.0.1"
 
-"hof@https://github.com/UKHomeOfficeForms/hof.git#HOF-X-Update-Redis":
-  version "19.14.16"
-  resolved "https://github.com/UKHomeOfficeForms/hof.git#7cbf13e3134a0a534a2ca40d653c7968eff9414d"
+hof@19.14.16-redis-beta.0:
+  version "19.14.16-redis-beta.0"
+  resolved "https://registry.yarnpkg.com/hof/-/hof-19.14.16-redis-beta.0.tgz#a98ba120cb58349965f204d6abf7f1efbe441688"
+  integrity sha512-JrThA1TBj76j5w57WJdA//+K9i3cJxXv0xDH+Ty1I3GEtQgmdhaWHJwI1iWcLoqnS0CDh84mWZdsf7ExXw24eg==
   dependencies:
     aliasify "^2.1.0"
     bluebird "^3.7.2"
