@@ -172,6 +172,17 @@ steps:
           - feature/*
       event: pull_request
 
+  - name: debug_step
+    commands:
+      - echo NodeVersion
+      - node -v
+    when:
+      branch:
+        include:
+          - master
+          - feature/*
+      event: pull_request
+
   - name: unit_tests_branch
     <<: *unit_tests
     when:
