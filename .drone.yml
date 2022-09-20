@@ -31,6 +31,15 @@ linting: &linting
   commands:
     - yarn run test:lint
 
+debug: &debug
+  pull: if-not-exists
+  image: node:14
+  environment:
+    NOTIFY_KEY: USE_MOCK
+  commands:
+    - echo "Debug"
+    - node -v
+
 unit_tests: &unit_tests
   pull: if-not-exists
   image: node:14
@@ -173,6 +182,7 @@ steps:
       event: pull_request
 
   - name: debug_step
+    <<: *debug
     commands:
       - echo NodeVersion
       - node -v
