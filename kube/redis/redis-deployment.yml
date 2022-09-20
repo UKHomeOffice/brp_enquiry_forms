@@ -32,7 +32,7 @@ spec:
       containers:
         - name: redis
           # redis:v5.0.6-1
-          image: quay.io/ukhomeofficedigital/redis@sha256:4499ea7306de776dab2ba8befd723a419fd311519d6f91f7821ed1a7c589da3b
+          image: quay.io/ukhomeofficedigital/redis@sha256:0d46add108464a2dfe061ba7724e837b35e300fdfa99a1cc91c961b045750265
           ports:
             - containerPort: 6379
           volumeMounts:
