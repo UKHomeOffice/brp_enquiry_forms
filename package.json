@@ -55,7 +55,8 @@
     "snyk": "^1.675.0"
   },
   "resolutions": {
-    "underscore": "^1.12.1"
+    "underscore": "^1.12.1",
+    "minimist": "1.2.6"
   },
   "mocha": {
     "reporter": "spec",
