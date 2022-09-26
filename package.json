@@ -24,7 +24,7 @@
   "author": "HomeOffice",
   "dependencies": {
     "express": "^4.17.1",
-    "hof": "^19.14.15",
+    "hof": "19.14.16-minimist-beta.0",
     "hogan.js": "^3.0.2",
     "hot-shots": "^5.9.0",
     "i18n-future": "^2.0.1",
@@ -55,7 +55,8 @@
     "snyk": "^1.675.0"
   },
   "resolutions": {
-    "underscore": "^1.12.1"
+    "underscore": "^1.12.1",
+    "minimist": "1.2.6"
   },
   "mocha": {
     "reporter": "spec",
