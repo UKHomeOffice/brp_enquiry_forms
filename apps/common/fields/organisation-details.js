@@ -3,9 +3,8 @@
 module.exports = {
   'org-help': {
     validate: ['required'],
-    className: 'inline',
+    className: ['govuk-radios--inline'],
     legend: {
-      className: 'visuallyhidden',
       value: 'pages.check-details.org-help.title'
     },
     options: [
@@ -18,6 +17,7 @@ module.exports = {
   },
   'rep-name': {
     validate: ['required', 'notUrl'],
+    className: ['govuk-input', 'govuk-!-width-two-thirds'],
     dependent: {
       field: 'org-help',
       value: 'yes'
@@ -25,6 +25,7 @@ module.exports = {
   },
   'rep-email': {
     validate: ['email'],
+    className: ['govuk-input', 'govuk-!-width-two-thirds'],
     dependent: {
       field: 'org-help',
       value: 'yes'

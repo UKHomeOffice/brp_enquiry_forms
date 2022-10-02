@@ -11,6 +11,7 @@ module.exports = {
     toggle: 'first-name-error-container'
   },
   'first-name-error': {
+    className: ['govuk-input', 'govuk-!-width-two-thirds'],
     validate: ['required', 'notUrl'],
     dependent: {
       field: 'first-name-error-checkbox',
@@ -21,6 +22,7 @@ module.exports = {
     toggle: 'last-name-error-container'
   },
   'last-name-error': {
+    className: ['govuk-input', 'govuk-!-width-two-thirds'],
     validate: ['required', 'notUrl'],
     dependent: {
       field: 'last-name-error-checkbox',
@@ -41,6 +43,7 @@ module.exports = {
     toggle: 'birth-place-error-container'
   },
   'birth-place-error': {
+    className: ['govuk-input', 'govuk-!-width-two-thirds'],
     validate: ['required'],
     dependent: {
       field: 'birth-place-error-checkbox',
@@ -66,6 +69,7 @@ module.exports = {
     toggle: 'sponsor-details-error-container'
   },
   'sponsor-details-error': {
+    className: ['govuk-input', 'govuk-!-width-two-thirds'],
     validate: ['required'],
     dependent: {
       field: 'sponsor-details-error-checkbox',

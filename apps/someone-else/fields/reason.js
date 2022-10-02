@@ -9,11 +9,8 @@ module.exports = {
     }
   },
   'someone-else-reason-radio': {
+    isPageHeading: true,
     validate: ['required'],
-    legend: {
-      className: 'visuallyhidden',
-      value: ''
-    },
     options: [
       {
         value: 'incapable',

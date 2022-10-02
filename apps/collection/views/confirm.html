@@ -13,19 +13,10 @@
   {{> partials-navigation}}
 {{/propositionHeader}}
 
-{{$title}}
-  {{#t}}journeys.collection.pages.check-details.header{{/t}}
-{{/title}}
-
-{{$header}}
-  {{<partials-page-header}}
-    {{$page-header}}
-      {{#t}}journeys.collection.pages.check-details.header{{/t}}
-    {{/page-header}}
-  {{/partials-page-header}}
-{{/header}}
-
 {{$content}}
+
+<header><h1 class="govuk-heading-l">{{#t}}pages.check-details-error.header{{/t}}</h1></header>
+
   <p>{{#t}}journeys.collection.pages.check-details.subheader{{/t}}</p>
 
   {{<partials-form}}

@@ -16,9 +16,6 @@
       "title": "If you need a replacement BRP, we will post it to a UK address of your preference. If you don't have a suitable UK address, we will deliver it to a Post Office for collection."
     }
   },
-  "same-address": {
-    "header": "Is your address the same as the address on the delivery letter?"
-  },
   "personal-details": {
     "header": "How do your personal details appear on your BRP?",
     "subheader": "These must be entered exactly as they are printed on your BRP so we can review the problem."

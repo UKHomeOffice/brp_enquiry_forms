@@ -2,11 +2,9 @@
 
 module.exports = {
   'location-applied': {
+    isPageHeading: true,
     validate: ['required'],
-    legend: {
-      className: 'visuallyhidden'
-    },
-    className: ['inline', 'form-group'],
+    className: ['govuk-radios--inline', 'form-group'],
     options: ['yes', 'no']
   }
 };
