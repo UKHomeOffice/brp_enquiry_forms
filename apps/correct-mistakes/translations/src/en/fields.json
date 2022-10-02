@@ -1,7 +1,4 @@
 {
-  "location-applied": {
-    "legend": "Where did you make your application?"
-  },
   "date-of-birth": {
     "legend": "Date of birth",
     "hint": "For example, 31  3  1970"
@@ -16,6 +13,7 @@
     "label": "Year"
   },
   "same-address-radio": {
+    "legend": "Is your address the same as the address on the delivery letter?",
     "options": {
       "yes": {
         "label": "Yes"
@@ -193,6 +191,8 @@
     }
   },
   "location-applied": {
+    "legend": "Where did you apply for your visa?",
+    "hint": "Was the application made from in the UK or from outside the UK?",
     "options": {
       "yes": {
         "label": "UK"

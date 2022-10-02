@@ -12,23 +12,12 @@
     {{> partials-navigation}}
   {{/propositionHeader}}
 
-  {{$title}}
-    {{#t}}pages.collection.header{{/t}}
-  {{/title}}
-
-  {{$header}}
-    {{<partials-page-header}}
-      {{$page-header}}
-        {{#t}}pages.post-office-collect.header{{/t}}
-      {{/page-header}}
-    {{/partials-page-header}}
-  {{/header}}
 
   {{$content}}
   {{<partials-form}}
   {{$form}}
 
-  {{#radio-group}}collection{{/radio-group}}
+  {{#radio-group}}post-office-collect-radio{{/radio-group}}
   {{#input-submit}}continue{{/input-submit}}
   {{/form}}
 

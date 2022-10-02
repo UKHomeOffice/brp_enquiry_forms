@@ -26,10 +26,12 @@
   {{/header}}
 
   {{$content}}
+ 
 
     {{<partials-form}}
 
       {{$form}}
+      <header><h1 class="govuk-heading-l">{{#t}}pages.inside-uk.header{{/t}}</h1></header>
         {{#radio-group}}inside-uk{{/radio-group}}
 
         <fieldset id="country-group" class="panel-indent {{#errors.country}}validation-error{{/errors.country}}">

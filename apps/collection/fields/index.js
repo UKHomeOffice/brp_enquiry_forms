@@ -5,24 +5,21 @@ const countries = [''].concat(require('../../../assets/countries').allCountries)
 
 module.exports = {
   'collection-where-radio': {
+    isPageHeading: true,
     mixin: 'radio-group',
     validate: ['required'],
-    className: ['inline', 'form-group'],
-    legend: {
-      className: 'visuallyhidden'
-    },
+    className: ['govuk-radios--inline', 'govuk-form-group'],
     options: [{
       value: 'Post Office',
-      toggle: 'collection-date-group'
     }, {
       value: 'Sponsor',
-      toggle: 'collection-date-group'
     }]
   },
   'collection-date': date('collection-date', {
-    validate: ['before']
+    validate: ['before'],
   }),
   'reason-radio': {
+    isPageHeading: true,
     mixin: 'radio-group',
     validate: ['required'],
     options: [{
@@ -54,11 +51,9 @@ module.exports = {
     {
       value: 'no-brp'
     }],
-    legend: {
-      className: 'visuallyhidden'
-    }
   },
   'nominated-fullname': {
+    className: ['govuk-input', 'govuk-!-width-two-thirds'],
     validate: ['required']
   },
   'nominated-nationality': {
@@ -68,6 +63,7 @@ module.exports = {
     hint: 'fields.nominated-nationality.hint'
   },
   'nominated-id-number': {
+    className: ['govuk-input govuk-!-width-two-thirds'],
     validate: ['required']
   },
   'nominated-date': date('nominated-date', {
@@ -75,6 +71,7 @@ module.exports = {
     validate: ['required', 'before']
   }),
   fullname: {
+    className: ['govuk-input govuk-!-width-two-thirds'],
     validate: ['required', 'notUrl']
   },
   'date-of-birth': date('date-of-birth', {
@@ -87,6 +84,10 @@ module.exports = {
     hint: 'fields.nationality.hint'
   },
   passport: {
+    className: ['govuk-input', 'govuk-!-width-two-thirds'],
     validate: ['required', 'notUrl']
+  },
+  'org-help-radio': {
+    className: ['govuk-radios--inline']
   }
 };

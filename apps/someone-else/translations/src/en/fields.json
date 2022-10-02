@@ -37,6 +37,7 @@
     "label": "Nominated person's identity document number"
   },
   "someone-else-reason-radio": {
+    "legend": "Why do you need someone else to collect your BRP?",
     "options": {
       "incapable": {
         "label": "I have a medical condition"

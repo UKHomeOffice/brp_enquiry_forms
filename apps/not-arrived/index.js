@@ -8,9 +8,9 @@ module.exports = {
     '/post-office-collect': {
       next: '/consignment-number',
       behaviours: [require('./behaviours/change-path')],
-      template: 'collection.html',
+      //template: 'collection.html',
       fields: [
-        'collection'
+        'post-office-collect-radio'
       ]
     },
     '/consignment-number': {

@@ -1,5 +1,6 @@
 {
-  "collection": {
+  "post-office-collect-radio": {
+    "legend": "Were you due to collect your document from the Post Office?",
     "options": {
       "yes": {
         "label": "Yes"
@@ -10,6 +11,7 @@
     }
   },
   "consignment-number-radio": {
+    "legend": "Do you have a consignment number?",
     "options": {
       "yes": {
         "label": "Yes"
@@ -20,7 +22,6 @@
     }
   },
   "consignment-number": {
-    "legend": "Consignment number",
     "label": "What is your consignment number?"
   },
   "delivery-date": {

@@ -1,14 +1,11 @@
 {
   "reasons": {
-    "header": "Why couldn't you collect your BRP?"
   },
   "nominated": {
     "header": "Who was supposed to collect your BRP on your behalf?",
     "description": "Provide details of the person who tried to collect the BRP on your behalf"
   },
   "where": {
-    "header": "From where were you asked to collect your BRP?",
-    "description": "This could have been from a Post Office branch or a sponsor, such as your legal representative, employer, university or school.",
     "date-question": "If you have attempted to collect your BRP, when was it? (optional)"
   },
   "contact-details": {
@@ -23,7 +20,7 @@
     "subheader": "We need these details to process your request."
   },
   "check-details": {
-    "header": "Check the details you have provided",
+    "legend": "Check the details you have provided",
     "subheader": "If any information is incorrect, you can change it here.",
     "table": {
       "headers": {
@@ -46,6 +43,7 @@
     },
     "org-details-group": {
       "header": "What are your details?",
+      "subheader": "We will attempt to contact the BRP holder directly. We will only use these details to contact you if needed.",
       "type": "Type of support"
     },
     "footer": {
@@ -101,4 +99,5 @@
   "someone-else-confirmation": {
     "paragraph": "We will review the information you have provided and investigate the situation."
   }
+
 }

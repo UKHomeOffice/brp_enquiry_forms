@@ -2,9 +2,10 @@
 
 module.exports = {
   'consignment-number-radio': {
+    isPageHeading: true,
     mixin: 'radio-group',
     validate: ['required'],
-    className: ['inline', 'form-group'],
+    className: ['govuk-radios--inline', 'form-group'],
     legend: {
       className: 'visuallyhidden'
     },
@@ -17,6 +18,7 @@ module.exports = {
     ]
   },
   'consignment-number': {
+    className: ['govuk-input govuk-!-width-two-thirds'],
     validate: [{type: 'maxlength', arguments: 22}, 'notUrl'],
     dependent: {
       field: 'consignment-number-radio',

@@ -14,6 +14,8 @@
     "label": "Year"
   },
   "collection-where-radio": {
+    "legend": "From where were you asked to collect your BRP?",
+    "hint": "This could have been from a Post Office branch or a sponsor, such as your legal representative, employer, university or school.",
     "options": {
       "Post Office": {
         "label": "Post Office"
@@ -24,6 +26,7 @@
     }
   },
   "reason-radio": {
+    "legend": "Why couldn't you collect your BRP?",
     "options": {
       "under-age": {
         "legend": "I am under 18 and attempted collection without my responsible adult",
