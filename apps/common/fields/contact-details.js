@@ -45,7 +45,7 @@ module.exports = {
   },
   'contact-address-county': {
     label: 'fields.address-county.label',
-    className: ['govuk-input', 'govuk-!-width-two-thirds'],
+    className: ['govuk-input', 'govuk-!-width-two-thirds']
   },
   'contact-address-postcode': {
     validate: ['required'],

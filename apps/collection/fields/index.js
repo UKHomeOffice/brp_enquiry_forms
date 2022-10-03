@@ -10,13 +10,13 @@ module.exports = {
     validate: ['required'],
     className: ['govuk-radios--inline', 'govuk-form-group'],
     options: [{
-      value: 'Post Office',
+      value: 'Post Office'
     }, {
-      value: 'Sponsor',
+      value: 'Sponsor'
     }]
   },
   'collection-date': date('collection-date', {
-    validate: ['before'],
+    validate: ['before']
   }),
   'reason-radio': {
     isPageHeading: true,
@@ -50,7 +50,7 @@ module.exports = {
     },
     {
       value: 'no-brp'
-    }],
+    }]
   },
   'nominated-fullname': {
     className: ['govuk-input', 'govuk-!-width-two-thirds'],
