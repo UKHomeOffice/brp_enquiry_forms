@@ -2848,10 +2848,10 @@ hmac-drbg@^1.0.1:
     minimalistic-assert "^1.0.0"
     minimalistic-crypto-utils "^1.0.1"
 
-hof@20.0.0-beta.37:
-  version "20.0.0-beta.37"
-  resolved "https://registry.yarnpkg.com/hof/-/hof-20.0.0-beta.37.tgz#d08985eda91c7a3c7effc8db0deaf09b177ffa2b"
-  integrity sha512-dugv66jC6NuFBt+2NkTnO7BGRuXJpS6E2Jtezxn+dstzpTAi6pZa9r0U4WqrU8RGfTNHPd+kgqYc0yU1Vtgolw==
+hof@20.0.4:
+  version "20.0.4"
+  resolved "https://registry.yarnpkg.com/hof/-/hof-20.0.4.tgz#57bc266ec9dac407a485c440d651bcf8e333aca9"
+  integrity sha512-Mg+65IOJpZiHFvsTjWmDeJ7kkdV5YhBhMottANo6S9mElzD0U2xcdZbJt9L4ONkGbM4lEXpeb3Mqv/Ure9c4gQ==
   dependencies:
     aliasify "^2.1.0"
     bluebird "^3.7.2"
@@ -2890,7 +2890,7 @@ hof@20.0.0-beta.37:
     minimatch "^3.0.3"
     minimist "^1.2.6"
     mixwith "^0.1.1"
-    moment "^2.29.2"
+    moment "^2.29.4"
     morgan "^1.10.0"
     mustache "^2.3.0"
     nodemailer "^6.6.3"
@@ -2907,6 +2907,7 @@ hof@20.0.0-beta.37:
     uglify-js "^3.14.3"
     underscore "^1.12.1"
     urijs "^1.19.11"
+    uuid "^8.3.2"
     winston "^3.7.2"
 
 hogan-express-strict@^0.5.4:
@@ -3895,7 +3896,7 @@ moment-business@^3.0.1:
     contained-periodic-values "^1.0.0"
     skipped-periodic-values "^1.0.0"
 
-moment@2.29.4, moment@^2.29.2:
+moment@2.29.4, moment@^2.29.4:
   version "2.29.4"
   resolved "https://registry.yarnpkg.com/moment/-/moment-2.29.4.tgz#3dbe052889fe7c1b2ed966fcb3a77328964ef108"
   integrity sha512-5LC9SOxjSc2HF6vO2CyuTDNivEdoz2IvyJJGj6X8DJ0eFyfszE0QiEd+iXmBvUP3WHxSjFH/vIsA0EN00cgr8w==
