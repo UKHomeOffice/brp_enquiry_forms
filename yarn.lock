@@ -2887,10 +2887,10 @@ hmac-drbg@^1.0.1:
     minimalistic-assert "^1.0.0"
     minimalistic-crypto-utils "^1.0.1"
 
-hof@20.0.0-redis-beta.32-redis-beta:
-  version "20.0.0-redis-beta.32-redis-beta"
-  resolved "https://registry.yarnpkg.com/hof/-/hof-20.0.0-redis-beta.32-redis-beta.tgz#8a53fc7589d3fe3b2140c3a8827e7bf2f6d2e357"
-  integrity sha512-DbkU8UsfsVrt0vNTVn6LRXQWiOXwlbGHnC+fQARkzPsMfBTWFdpzZGybMZfyHRlHvdVpXy7g4oFY0VX+zM3T0w==
+hof@20.1.2-redis-beta.0:
+  version "20.1.2-redis-beta.0"
+  resolved "https://registry.yarnpkg.com/hof/-/hof-20.1.2-redis-beta.0.tgz#d8f4766d76c80804a5a4fb6efd980ea45641aec7"
+  integrity sha512-wbc5bYiKmMSRdvhesaNrevqp3JXos8D6rZBHg+BOtF/had5mxed7PUigc+s679UHAJxdz7iSfYVQ02jFh8/89A==
   dependencies:
     aliasify "^2.1.0"
     bluebird "^3.7.2"
