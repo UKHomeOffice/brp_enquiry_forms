@@ -47,6 +47,10 @@
       }
     }
   },
+  "case-id-number": {
+    "label": "Case ID Number",
+    "hint": "(Enter the case ID found on your visa decision letter.)"
+  },
   "no-letter": {
     "label": "I don't have the letter anymore"
   },

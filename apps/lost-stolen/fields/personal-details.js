@@ -22,5 +22,19 @@ module.exports = {
     validate: ['required', beforeTodayValidator],
     legend: 'fields.date-of-birth.legend',
     hint: 'fields.date-of-birth.hint'
-  })
+  }),
+  email: {
+    validate: ['required', 'email'],
+    type: 'email'
+  },
+  phone: {
+    label: 'fields.phone.label'
+  },
+  'contact-address-county': {
+    label: 'fields.address-county.label',
+    dependent: {
+      value: 'true',
+      field: 'use-address'
+    }
+  }
 };

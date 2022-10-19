@@ -7,7 +7,7 @@
 <!--[if !IE]><!--> <html>             <!--<![endif]-->
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
-  <meta content="utf-8" http-equiv="encoding">
+    <meta content="utf-8" http-equiv="encoding">
     <!-- Use title if it's in the page YAML frontmatter -->
     <title>{{subject}}</title>
 </head>
@@ -52,59 +52,62 @@
             </tr>
             <tr>
               <td width="75%" style="font-family: Helvetica, Arial, sans-serif;">
+
                 {{#data}}
-
                   <p style="font-size: 23px; color: #000; line-height: 1.32; margin: 0 0 20px 0;">{{#t}}emails.correct-mistakes.header{{/t}}</p>
-
                   <p style="font-size: 19px; font-weight: bold; color: #000; line-height: 1.32; margin: 0 0 10px 0;">BRP applicant's details</p>
                   <table width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#FFFFFF" style="margin: 0 0 20px 0;">
                     <tr style="border-top: 1px solid #009390;">
-                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.check-details-error.personal-details-table.headers.fullname{{/t}}</p></td>
+                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.check-details-error.personal-details-table.headers.fullname{{/t}}: </p></td>
                       <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{fullname}}</p></td>
                     </tr>
                     <tr style="border-top: 1px solid #009390;">
-                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.check-details-error.personal-details-table.headers.date-of-birth{{/t}}</p></td>
+                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.check-details-error.personal-details-table.headers.date-of-birth{{/t}}: </p></td>
                       <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{date-of-birth}}</p></td>
                     </tr>
                     <tr style="border-top: 1px solid #009390;">
-                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.check-details-error.personal-details-table.headers.nationality{{/t}}</p></td>
+                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.check-details-error.personal-details-table.headers.nationality{{/t}}: </p></td>
                       <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{nationality}}</p></td>
                     </tr>
-                    {{#brp-card}}
+
                     <tr style="border-top: 1px solid #009390;">
-                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.check-details-error.personal-details-table.headers.brp-card-number{{/t}}</p></td>
-                      <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{brp-card}}</p></td>
+                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.check-details-error.personal-details-table.headers.brp-card-number{{/t}}: </p></td>
+                      <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{#brp-card}}{{brp-card}}{{/brp-card}}{{^brp-card}}None Given{{/brp-card}}</p></td>
                     </tr>
-                    {{/brp-card}}
+
                     {{#same-address-street}}
+                    <tr style="border-top: 1px solid #009390;">
+                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.check-details.table.headers.address{{/t}}: </p></td>
+                      <td width="75%">
+                        <p style="font-size: 16px; color: #000; margin: 10px 0;">
+                          {{same-address-house-number}} {{same-address-street}},
+                          {{same-address-town}},
+                          {{#same-address-county}}{{same-address-county}},{{/same-address-county}}
+                          {{same-address-postcode}}
+                        </p>
+                      </td>
+                    </tr>
+                    {{/same-address-street}}
+                    {{^same-address-street}}
                       <tr style="border-top: 1px solid #009390;">
-                        <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.check-details.table.headers.address{{/t}}</p></td>
+                        <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.check-details.table.headers.address{{/t}}: </p></td>
                         <td width="75%">
                           <p style="font-size: 16px; color: #000; margin: 10px 0;">
-                            {{same-address-house-number}} {{same-address-street}},
-                            {{same-address-town}},
-                            {{#same-address-county}}{{same-address-county}},{{/same-address-county}}
-                            {{same-address-postcode}}
+                            {{#uk-address-street}}
+                              {{uk-address-house-number}} {{uk-address-street}},
+                              {{uk-address-town}},
+                              {{#uk-address-county}}{{uk-address-county}},{{/uk-address-county}}
+                              {{uk-address-postcode}}
+                            {{/uk-address-street}}
+                            {{^uk-address-street}}None Given{{/uk-address-street}}
                           </p>
                         </td>
                       </tr>
                     {{/same-address-street}}
-                    {{#uk-address-street}}
-                      <tr style="border-top: 1px solid #009390;">
-                        <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.check-details.table.headers.address{{/t}}</p></td>
-                        <td width="75%">
-                          <p style="font-size: 16px; color: #000; margin: 10px 0;">
-                            {{uk-address-house-number}} {{uk-address-street}},
-                            {{uk-address-town}},
-                            {{#uk-address-county}}{{uk-address-county}},{{/uk-address-county}}
-                            {{uk-address-postcode}}
-                          </p>
-                        </td>
-                      </tr>
-                    {{/uk-address-street}}
+
                     {{#org-type}}
                       <tr style="border-top: 1px solid #009390;">
-                        <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">Help from ({{#t}}fields.org-type.options[{{org-type}}].label{{/t}})</p></td>
+                        <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">Help from ({{#t}}fields.org-type.options[{{org-type}}].label{{/t}}): </p></td>
                         <td width="75%">
                           <p style="font-size: 16px; color: #000; margin: 10px 0;">
                             {{#rep-email}}<a href="mailto:{{rep-email}}">{{rep-name}} &lt;{{rep-email}}&gt;</a>{{/rep-email}}
@@ -117,140 +120,110 @@
 
                   <p style="font-size: 19px; font-weight: bold; color: #000; line-height: 1.32; margin: 0 0 10px 0;">Reported errors</p>
                   <table width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#FFFFFF" style="margin: 0 0 20px 0;">
-                    {{#first-name-error}}
-                      <tr style="border-top: 1px solid #009390;">
-                        <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}fields.first-name-error-checkbox.label{{/t}}</p></td>
-                        <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{first-name-error}}</p></td>
-                      </tr>
-                    {{/first-name-error}}
 
-                    {{#last-name-error}}
-                      <tr style="border-top: 1px solid #009390;">
-                        <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}fields.last-name-error-checkbox.label{{/t}}</p></td>
-                        <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{last-name-error}}</p></td>
-                      </tr>
-                    {{/last-name-error}}
+                    <tr style="border-top: 1px solid #009390;">
+                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}fields.first-name-error-checkbox.label{{/t}}: </p></td>
+                      <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{#first-name-error}}{{first-name-error}}{{/first-name-error}}{{^first-name-error}}None Given{{/first-name-error}}</p></td>
+                    </tr>
 
-                    {{#birth-place-error}}
-                      <tr style="border-top: 1px solid #009390;">
-                        <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}fields.birth-place-error-checkbox.label{{/t}}</p></td>
-                        <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{birth-place-error}}</p></td>
-                      </tr>
-                    {{/birth-place-error}}
+                    <tr style="border-top: 1px solid #009390;">
+                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}fields.last-name-error-checkbox.label{{/t}}: </p></td>
+                      <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{#last-name-error}}{{last-name-error}}{{/last-name-error}}{{^last-name-error}}None Given{{/last-name-error}}</p></td>
+                    </tr>
 
-                    {{#date-of-birth-error}}
-                      <tr style="border-top: 1px solid #009390;">
-                        <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}fields.date-of-birth-error-checkbox.label{{/t}}</p></td>
-                        <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{date-of-birth-error}}</p></td>
-                      </tr>
-                    {{/date-of-birth-error}}
+                    <tr style="border-top: 1px solid #009390;">
+                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}fields.birth-place-error-checkbox.label{{/t}}: </p></td>
+                      <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{#birth-place-error}}{{birth-place-error}}{{/birth-place-error}}{{^birth-place-error}}None Given{{/birth-place-error}}</p></td>
+                    </tr>
 
-                    {{#gender-error}}
-                      <tr style="border-top: 1px solid #009390;">
-                        <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}fields.gender-error-checkbox.label{{/t}}</p></td>
-                        <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{gender-error}}</p></td>
-                      </tr>
-                    {{/gender-error}}
+                    <tr style="border-top: 1px solid #009390;">
+                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}fields.date-of-birth-error-checkbox.label{{/t}}: </p></td>
+                      <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{#date-of-birth-error}}{{date-of-birth-error}}{{/date-of-birth-error}}{{^date-of-birth-error}}None Given{{/date-of-birth-error}}</p></td>
+                    </tr>
 
-                    {{#sponsor-details-error}}
-                      <tr style="border-top: 1px solid #009390;">
-                        <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}fields.sponsor-details-error-checkbox.label{{/t}}</p></td>
-                        <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{sponsor-details-error}}</p></td>
-                      </tr>
-                    {{/sponsor-details-error}}
+                    <tr style="border-top: 1px solid #009390;">
+                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}fields.gender-error-checkbox.label{{/t}}: </p></td>
+                      <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{#gender-error}}{{gender-error}}{{/gender-error}}{{^gender-error}}None Given{{/gender-error}}</p></td>
+                    </tr>
 
-                    {{#nationality-error}}
-                      <tr style="border-top: 1px solid #009390;">
-                        <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}fields.nationality-error-checkbox.label{{/t}}</p></td>
-                        <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{nationality-error}}</p></td>
-                      </tr>
-                    {{/nationality-error}}
+                    <tr style="border-top: 1px solid #009390;">
+                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}fields.sponsor-details-error-checkbox.label{{/t}}: </p></td>
+                      <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{#sponsor-details-error}}{{sponsor-details-error}}{{/sponsor-details-error}}{{^sponsor-details-error}}None Given{{/sponsor-details-error}}</p></td>
+                    </tr>
 
-                    {{#signature-error}}
-                      <tr style="border-top: 1px solid #009390;">
-                        <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}fields.signature-error-checkbox.label{{/t}}</p></td>
-                        <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{signature-error}}</p></td>
-                      </tr>
-                    {{/signature-error}}
+                    <tr style="border-top: 1px solid #009390;">
+                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}fields.nationality-error-checkbox.label{{/t}}: </p></td>
+                      <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{#nationality-error}}{{nationality-error}}{{/nationality-error}}{{^nationality-error}}None Given{{/nationality-error}}</p></td>
+                    </tr>
 
-                    {{#national-insurance-error}}
-                      <tr style="border-top: 1px solid #009390;">
-                        <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}fields.national-insurance-error-checkbox.label{{/t}}</p></td>
-                        <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{national-insurance-error}}</p></td>
-                      </tr>
-                    {{/national-insurance-error}}
+                    <tr style="border-top: 1px solid #009390;">
+                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}fields.signature-error-checkbox.label{{/t}}: </p></td>
+                      <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{#signature-error}}{{signature-error}}{{/signature-error}}{{^signature-error}}None Given{{/signature-error}}</p></td>
+                    </tr>
 
-                    {{#photograph-error}}
-                      <tr style="border-top: 1px solid #009390;">
-                        <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}fields.photograph-error-checkbox.label{{/t}}</p></td>
-                        <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{photograph-error}}</p></td>
-                      </tr>
-                    {{/photograph-error}}
+                    <tr style="border-top: 1px solid #009390;">
+                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}fields.national-insurance-error-checkbox.label{{/t}}: </p></td>
+                      <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{#national-insurance-error}}{{national-insurance-error}}{{/national-insurance-error}}{{^national-insurance-error}}None Given{{/national-insurance-error}}</p></td>
+                    </tr>
 
-                    {{#damaged-error}}
-                      <tr style="border-top: 1px solid #009390;">
-                        <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}fields.damaged-error-checkbox.label{{/t}}</p></td>
-                        <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{damaged-error}}</p></td>
-                      </tr>
-                    {{/damaged-error}}
+                    <tr style="border-top: 1px solid #009390;">
+                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}fields.photograph-error-checkbox.label{{/t}}: </p></td>
+                      <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{#photograph-error}}{{photograph-error}}{{/photograph-error}}{{^photograph-error}}None Given{{/photograph-error}}</p></td>
+                    </tr>
 
-                    {{#conditions-error}}
-                      <tr style="border-top: 1px solid #009390;">
-                        <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}fields.conditions-error-checkbox.label{{/t}}</p></td>
-                        <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{conditions-error}}</p></td>
-                      </tr>
-                    {{/conditions-error}}
+                    <tr style="border-top: 1px solid #009390;">
+                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}fields.damaged-error-checkbox.label{{/t}}: </p></td>
+                      <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{#damaged-error}}{{damaged-error}}{{/damaged-error}}{{^damaged-error}}None Given{{/damaged-error}}</p></td>
+                    </tr>
 
-                    {{#length-of-stay-error}}
-                      <tr style="border-top: 1px solid #009390;">
-                        <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}fields.length-of-stay-error-checkbox.label{{/t}}</p></td>
-                        <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{length-of-stay-error}}</p></td>
-                      </tr>
-                    {{/length-of-stay-error}}
+                    <tr style="border-top: 1px solid #009390;">
+                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}fields.conditions-error-checkbox.label{{/t}}: </p></td>
+                      <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{#conditions-error}}{{conditions-error}}{{/conditions-error}}{{^conditions-error}}None Given{{/conditions-error}}</p></td>
+                    </tr>
 
-                    {{#biographics-error}}
-                      <tr style="border-top: 1px solid #009390;">
-                        <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}fields.biographics-error-checkbox.label{{/t}}</p></td>
-                        <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{biographics-error}}</p></td>
-                      </tr>
-                    {{/biographics-error}}
+                    <tr style="border-top: 1px solid #009390;">
+                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}fields.length-of-stay-error-checkbox.label{{/t}}: </p></td>
+                      <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{#length-of-stay-error}}{{length-of-stay-error}}{{/length-of-stay-error}}{{^length-of-stay-error}}None Given{{/length-of-stay-error}}</p></td>
+                    </tr>
 
-                    {{#BRP-issue-error}}
-                      <tr style="border-top: 1px solid #009390;">
-                        <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}fields.BRP-issue-error-checkbox.label{{/t}}</p></td>
-                        <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{BRP-issue-error}}</p></td>
-                      </tr>
-                    {{/BRP-issue-error}}
+                    <tr style="border-top: 1px solid #009390;">
+                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}fields.biographics-error-checkbox.label{{/t}}: </p></td>
+                      <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{#biographics-error}}{{biographics-error}}{{/biographics-error}}{{^biographics-error}}None Given{{/biographics-error}}</p></td>
+                    </tr>
 
+                    <tr style="border-top: 1px solid #009390;">
+                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}fields.BRP-issue-error-checkbox.label{{/t}}: </p></td>
+                      <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{#BRP-issue-error}}{{BRP-issue-error}}{{/BRP-issue-error}}{{^BRP-issue-error}}None Given{{/BRP-issue-error}}</p></td>
+                    </tr>
                   </table>
 
                   <p style="font-size: 19px; font-weight: bold; color: #000; line-height: 1.32; margin: 0 0 10px 0;">Contact details</p>
                   <table width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#FFFFFF" style="margin: 0 0 20px 0;">
-                    {{#contact-address-street}}
                       <tr style="border-top: 1px solid #009390;">
-                        <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.check-details.table.headers.contact-address{{/t}}</p></td>
+                        <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.check-details.table.headers.contact-address{{/t}}: </p></td>
                         <td width="75%">
                           <p style="font-size: 16px; color: #000; margin: 10px 0;">
-                            {{contact-address-house-number}} {{contact-address-street}},
-                            {{contact-address-town}},
-                            {{#contact-address-county}}{{contact-address-county}},{{/contact-address-county}}
-                            {{contact-address-postcode}}
+                            {{#contact-address-street}}
+                              {{contact-address-house-number}} {{contact-address-street}},
+                              {{contact-address-town}},
+                              {{#contact-address-county}}{{contact-address-county}},{{/contact-address-county}}
+                              {{contact-address-postcode}}
+                            {{/contact-address-street}}
+                            {{^contact-address-street}}None Given{{/contact-address-street}}
                           </p>
                         </td>
                       </tr>
-                    {{/contact-address-street}}
-                    {{#email}}
+
                       <tr style="border-top: 1px solid #009390;">
-                        <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}fields.email.label{{/t}}</p></td>
-                        <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{email}}</p></td>
+                        <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}fields.email.label{{/t}}: </p></td>
+                        <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{#email}}{{email}}{{/email}}{{^email}}None Given{{/email}}</p></td>
                       </tr>
-                    {{/email}}
-                    {{#phone}}
+
                       <tr style="border-top: 1px solid #009390;">
-                        <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}fields.phone.label{{/t}}</p></td>
-                        <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{phone}}</p></td>
+                        <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}fields.phone.label{{/t}}: </p></td>
+                        <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{#phone}}{{phone}}{{/phone}}{{^phone}}None Given{{/phone}}</p></td>
                       </tr>
-                    {{/phone}}
+
                   </table>
                 {{/data}}
               </td>

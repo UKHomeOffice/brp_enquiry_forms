@@ -15,6 +15,12 @@
             "where-radio": {
               "label": "Attempted collection"
             },
+            "attempted-collection-date": {
+              "label": "Date"
+            },
+            "describe-problem": {
+              "label": "Describe the problem"
+            },
             "reason": {
               "label": "Reason",
               "under-age": "Under age"

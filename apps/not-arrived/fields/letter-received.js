@@ -46,8 +46,14 @@ module.exports = {
   'no-letter': {
     className: 'form-checkbox',
     dependent: {
-      value: 'yes',
-      field: 'received'
+      field: 'received',
+      value: 'yes'
+    }
+  },
+  'case-id-number': {
+    dependent: {
+      field: 'received',
+      value: 'yes'
     }
   }
 };

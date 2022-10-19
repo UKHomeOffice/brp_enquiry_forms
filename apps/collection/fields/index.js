@@ -88,5 +88,19 @@ module.exports = {
   },
   passport: {
     validate: ['required', 'notUrl']
+  },
+  email: {
+    validate: ['email'],
+    type: 'email'
+  },
+  phone: {
+    label: 'fields.phone.label'
+  },
+  'contact-address-county': {
+    label: 'fields.address-county.label',
+    dependent: {
+      value: 'true',
+      field: 'use-address'
+    }
   }
 };
