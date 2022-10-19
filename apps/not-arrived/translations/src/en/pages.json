@@ -84,6 +84,7 @@
         "email": "Email address",
         "phone": "Phone number",
         "delivery-date": "Date of letter",
+        "case-id-number": "Case ID Number",
         "no-letter": "You do not have the delivery letter",
         "delivery-details": "Delivery details",
         "delivery-address": "Delivery address",

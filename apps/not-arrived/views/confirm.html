@@ -50,6 +50,14 @@
             </tr>
             {{/values.no-letter}}
 
+            {{#values.case-id-number}}
+            <tr>
+              <td>{{#t}}pages.check-details.table.headers.case-id-number{{/t}}</td>
+              <td>{{values.case-id-number}}</td>
+              <td><a href="letter-received/edit#case-id-number" class="button">{{#t}}buttons.change.case-id-number{{/t}}</a></td>
+            </tr>
+            {{/values.case-id-number}}
+
             {{^values.address-street}}
             {{#values.delivery-details}}
             <tr>

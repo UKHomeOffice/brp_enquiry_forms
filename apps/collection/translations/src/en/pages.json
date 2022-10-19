@@ -28,6 +28,7 @@
     "table": {
       "headers": {
         "date-lost": "Date lost",
+        "case-id-number": "Case ID Number",
         "contact-address": "Contact address",
         "address": "New address",
         "delivery-address": "Delivery address",
