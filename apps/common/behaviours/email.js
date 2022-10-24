@@ -8,15 +8,20 @@ const Model = require('../models/email');
 
 
 function errorChecked(key, data) {
+  // console.log('>>>>> checkbox >>>>>>>: ', data[key + '-checkbox']);
   if (data[key + '-checkbox']) {
+    // console.log('>>>>>>>>>> returning errorChecked Key >>>>>>>: ', key);
     return key;
   }
 }
 
 function checkedErrors(data) {
   const checked = _.filter(_.keys(data), valueKey => {
+    // console.log('>>>>>>>>>> checkedErrors >>>>>>>: ', _.keys(data));
+    // console.log('>>>>>>>>>> checkedErrors >>>>>>>: ', valueKey);
     return errorChecked(valueKey, data);
   });
+  // console.log('>>>>>>>>>> checkedErrors checked >>>>>>>: ', checked);
   return checked;
 }
 
