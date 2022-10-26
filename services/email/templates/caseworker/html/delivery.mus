@@ -7,7 +7,7 @@
 <!--[if !IE]><!--> <html>             <!--<![endif]-->
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
-  <meta content="utf-8" http-equiv="encoding">
+    <meta content="utf-8" http-equiv="encoding">
     <!-- Use title if it's in the page YAML frontmatter -->
     <title>{{subject}}</title>
 </head>
@@ -60,46 +60,43 @@
 
                   <table width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#FFFFFF" style="margin: 0 0 20px 0;">
                     <tr style="border-top: 1px solid #009390;">
-                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.check-details-error.personal-details-table.headers.fullname{{/t}}</p></td>
+                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.check-details-error.personal-details-table.headers.fullname{{/t}}: </p></td>
                       <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{fullname}}</p></td>
                     </tr>
                     <tr style="border-top: 1px solid #009390;">
-                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.check-details-error.personal-details-table.headers.date-of-birth{{/t}}</p></td>
+                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.check-details-error.personal-details-table.headers.date-of-birth{{/t}}: </p></td>
                       <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{date-of-birth}}</p></td>
                     </tr>
                     <tr style="border-top: 1px solid #009390;">
-                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.check-details-error.personal-details-table.headers.nationality{{/t}}</p></td>
+                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.check-details-error.personal-details-table.headers.nationality{{/t}}: </p></td>
                       <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{nationality}}</p></td>
                     </tr>
-                    {{#passport}}
-                      <tr style="border-top: 1px solid #009390;">
-                        <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.check-details.table.headers.passport{{/t}}</p></td>
-                        <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{passport}}</p></td>
-                      </tr>
-                    {{/passport}}
-                    {{#consignment-number}}
-                      <tr style="border-top: 1px solid #009390;">
-                        <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.check-details.table.headers.consignment-number{{/t}}</p></td>
-                        <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{consignment-number}}</p></td>
-                      </tr>
-                    {{/consignment-number}}
+                    <tr style="border-top: 1px solid #009390;">
+                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.check-details.table.headers.passport{{/t}}: </p></td>
+                      <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{#passport}}{{passport}}{{/passport}}{{^passport}}None Given{{/passport}}</p></td>
+                    </tr>
+                    <tr style="border-top: 1px solid #009390;">
+                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.check-details.table.headers.consignment-number{{/t}}: </p></td>
+                      <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{#consignment-number}}{{consignment-number}}{{/consignment-number}}{{^consignment-number}}None Given{{/consignment-number}}</p></td>
+                    </tr>
 
-                    {{#address-street}}
-                      <tr style="border-top: 1px solid #009390;">
-                        <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.check-details.table.headers.address{{/t}}</p></td>
-                        <td width="75%">
-                          <p style="font-size: 16px; color: #000; margin: 10px 0;">
+                    <tr style="border-top: 1px solid #009390;">
+                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.check-details.table.headers.address{{/t}}: </p></td>
+                      <td width="75%">
+                        <p style="font-size: 16px; color: #000; margin: 10px 0;">
+                          {{#address-street}}
                             {{address-house-number}} {{address-street}},
                             {{address-town}},
                             {{#address-county}}{{address-county}},{{/address-county}}
                             {{address-postcode}}
-                          </p>
-                        </td>
-                      </tr>
-                    {{/address-street}}
+                          {{/address-street}}
+                          {{^address-street}}None Given{{/address-street}}
+                        </p>
+                      </td>
+                    </tr>
                     {{#org-type}}
                       <tr style="border-top: 1px solid #009390;">
-                        <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">Help from ({{#t}}fields.org-type.options[{{org-type}}].label{{/t}})</p></td>
+                        <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">Help from ({{#t}}fields.org-type.options[{{org-type}}].label{{/t}}): </p></td>
                         <td width="75%">
                           <p style="font-size: 16px; color: #000; margin: 10px 0;">
                             {{#rep-email}}<a href="mailto:{{rep-email}}">{{rep-name}} &lt;{{rep-email}}&gt;</a>{{/rep-email}}
@@ -113,84 +110,83 @@
                   <p style="font-size: 19px; font-weight: bold; color: #000; line-height: 1.32; margin: 0 0 10px 0;">Contact Details</p>
 
                   <table width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#FFFFFF" style="margin: 0 0 20px 0;">
-                    {{#contact-address-street}}
-                      <tr style="border-top: 1px solid #009390;">
-                        <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.check-details.table.headers.contact-address{{/t}}</p></td>
-                        <td width="75%">
-                          <p style="font-size: 16px; color: #000; margin: 10px 0;">
+                    <tr style="border-top: 1px solid #009390;">
+                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.check-details.table.headers.contact-address{{/t}}: </p></td>
+                      <td width="75%">
+                        <p style="font-size: 16px; color: #000; margin: 10px 0;">
+                          {{#contact-address-street}}
                             {{contact-address-house-number}} {{contact-address-street}},
                             {{contact-address-town}},
                             {{#contact-address-county}}{{contact-address-county}},{{/contact-address-county}}
                             {{contact-address-postcode}}
-                          </p>
-                        </td>
-                      </tr>
-                    {{/contact-address-street}}
-                    {{#phone}}
-                      <tr style="border-top: 1px solid #009390;">
-                        <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}emails.phone{{/t}}</p></td>
-                        <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{phone}}</p></td>
-                      </tr>
-                    {{/phone}}
-                    {{#email}}
-                      <tr style="border-top: 1px solid #009390;">
-                        <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}fields.email.label{{/t}}</p></td>
-                        <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{email}}</p></td>
-                      </tr>
-                    {{/email}}
+                          {{/contact-address-street}}
+                          {{^contact-address-street}}None Given{{/contact-address-street}}
+                        </p>
+                      </td>
+                    </tr>
+                    <tr style="border-top: 1px solid #009390;">
+                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}emails.phone{{/t}}: </p></td>
+                      <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{#phone}}{{phone}}{{/phone}}{{^phone}}None Given{{/phone}}</p></td>
+                    </tr>
+                    <tr style="border-top: 1px solid #009390;">
+                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}fields.email.label{{/t}}: </p></td>
+                      <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{#email}}{{email}}{{/email}}{{^email}}None Given{{/email}}</p></td>
+                    </tr>
                   </table>
 
                    <p style="font-size: 19px; font-weight: bold; color: #000; line-height: 1.32; margin: 0 0 10px 0;">Delivery Details</p>
 
                   <table width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#FFFFFF" style="margin: 0 0 20px 0;">
-                    {{#delivery-date}}
                       <tr style="border-top: 1px solid #009390;">
-                        <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.check-details.table.headers.delivery-date{{/t}}</p></td>
+                        <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.check-details.table.headers.delivery-date{{/t}}: </p></td>
                         <td width="75%">
                           <p style="font-size: 16px; color: #000; margin: 10px 0;">
-                            {{delivery-date}}
+                            {{#delivery-date}}{{delivery-date}}{{/delivery-date}}{{^delivery-date}}None Given{{/delivery-date}}
                           </p>
                         </td>
                       </tr>
-                    {{/delivery-date}}
-
-                    {{^address-street}}
-                      {{#delivery-details}}
                       <tr style="border-top: 1px solid #009390;">
-                        <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.check-details.table.headers.delivery-details{{/t}}</p>
-                        </td>
-                        <td width="75%">
-                          <p style="font-size: 16px; color: #000; margin: 10px 0;">{{delivery-details}}
-                          </p>
-                        </td>
-                      </tr>
-                      {{/delivery-details}}
-                      {{/address-street}}
-
-                      {{#address-street}}
-                      <tr style="border-top: 1px solid #009390;">
-                        <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.check-details.table.headers.delivery-address{{/t}}
-                          </p>
-                        </td>
+                        <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.check-details.table.headers.case-id-number{{/t}}: </p></td>
                         <td width="75%">
                           <p style="font-size: 16px; color: #000; margin: 10px 0;">
-                          {{address-house-number}} {{address-street}},
-                          {{address-town}},
-                          {{#address-county}}{{address-county}},{{/address-county}}
-                          {{address-postcode}}
+                            {{#case-id-number}}{{case-id-number}}{{/case-id-number}}{{^case-id-number}}None Given{{/case-id-number}}
                           </p>
                         </td>
                       </tr>
+
                       <tr style="border-top: 1px solid #009390;">
-                        <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}fields.case-id.label{{/t}}</p></td>
+                        <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.check-details.table.headers.delivery-details{{/t}}: </p>
+                        </td>
                         <td width="75%">
-                          <p style="font-size: 16px; color: #000; margin: 10px 0;">{{case-id}}</p>
+                          <p style="font-size: 16px; color: #000; margin: 10px 0;">{{#delivery-details}}{{delivery-details}}{{/delivery-details}}{{^delivery-details}}None Given{{/delivery-details}}
+                          </p>
                         </td>
                       </tr>
-                    {{/address-street}}
 
+                      <tr style="border-top: 1px solid #009390;">
+                        <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.check-details.table.headers.delivery-address{{/t}}: </p>
+                          </td>
+                          <td width="75%">
+                            <p style="font-size: 16px; color: #000; margin: 10px 0;">
+                            {{#address-street}}
+                              {{address-house-number}} {{address-street}},
+                              {{address-town}},
+                              {{#address-county}}{{address-county}},{{/address-county}}
+                              {{address-postcode}}
+                            {{/address-street}}
+                            {{^address-street}}
+                              None Given
+                            {{/address-street}}
+                            </p>
+                          </td>
+                      </tr>
+                      <tr style="border-top: 1px solid #009390;">
+                        <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}fields.case-id.label{{/t}}: </p></td>
+                        <td width="75%">
+                          <p style="font-size: 16px; color: #000; margin: 10px 0;">{{#case-id}}{{case-id}}{{/case-id}}{{^case-id}}None Given{{/case-id}}</p>
+                        </td>
+                      </tr>
                   </table>
-
                 {{/data}}
               </td>
               <td width="25%">&nbsp;</td>
@@ -199,6 +195,5 @@
         </td>
       </tr>
     </table>
-
   </body>
 </html>

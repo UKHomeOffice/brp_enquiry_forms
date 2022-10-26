@@ -7,7 +7,7 @@
 <!--[if !IE]><!--> <html>             <!--<![endif]-->
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
-  <meta content="utf-8" http-equiv="encoding">
+    <meta content="utf-8" http-equiv="encoding">
     <!-- Use title if it's in the page YAML frontmatter -->
     <title>{{subject}}</title>
 </head>
@@ -58,7 +58,7 @@
 
                   <table width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#FFFFFF" style="margin: 0 0 20px 0;">
                     <tr style="border-top: 1px solid #009390;">
-                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}emails.caseworker.country{{/t}}</p></td>
+                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}emails.caseworker.country{{/t}}: </p></td>
                       <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">
                       {{#country}}
                         {{country}}
@@ -69,7 +69,7 @@
                       </p></td>
                     </tr>
                     <tr style="border-top: 1px solid #009390;">
-                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}emails.caseworker.date-lost{{/t}}</p></td>
+                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}emails.caseworker.date-lost{{/t}}: </p></td>
                       <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{date-lost}}</p></td>
                     </tr>
                   </table>
@@ -78,26 +78,24 @@
 
                   <table width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#FFFFFF" style="margin: 0 0 20px 0;">
                     <tr style="border-top: 1px solid #009390;">
-                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.check-details.table.headers.fullname{{/t}}</p></td>
-                      <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{fullname}}</p></td>
+                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.check-details.table.headers.fullname{{/t}}: </p></td>
+                      <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{#fullname}}{{fullname}}{{/fullname}}{{^fullname}}None Given{{/fullname}}</p></td>
                     </tr>
                     <tr style="border-top: 1px solid #009390;">
-                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.check-details.table.headers.date-of-birth{{/t}}</p></td>
+                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.check-details.table.headers.date-of-birth{{/t}}: </p></td>
                       <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{date-of-birth}}</p></td>
                     </tr>
                     <tr style="border-top: 1px solid #009390;">
-                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.check-details.table.headers.nationality{{/t}}</p></td>
+                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.check-details.table.headers.nationality{{/t}}: </p></td>
                       <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{nationality}}</p></td>
                     </tr>
-                    {{#brp-card}}
-                      <tr style="border-top: 1px solid #009390;">
-                        <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.check-details.table.headers.brp-card-number{{/t}}</p></td>
-                        <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{brp-card}}</p></td>
-                      </tr>
-                    {{/brp-card}}
+                    <tr style="border-top: 1px solid #009390;">
+                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.check-details.table.headers.brp-card-number{{/t}}: </p></td>
+                      <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{#brp-card}}{{brp-card}}{{/brp-card}}{{^brp-card}}None Given{{/brp-card}}</p></td>
+                    </tr>
                     {{#org-type}}
                       <tr style="border-top: 1px solid #009390;">
-                        <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">Help from ({{#t}}fields.org-type.options[{{org-type}}].label{{/t}})</p></td>
+                        <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">Help from ({{#t}}fields.org-type.options[{{org-type}}].label{{/t}}): </p></td>
                         <td width="75%">
                           <p style="font-size: 16px; color: #000; margin: 10px 0;">
                             {{#rep-email}}<a href="mailto:{{rep-email}}">{{rep-name}} &lt;{{rep-email}}&gt;</a>{{/rep-email}}
@@ -108,35 +106,34 @@
                     {{/org-type}}
                   </table>
 
-
                   <p style="font-size: 19px; font-weight: bold; color: #000; line-height: 1.32; margin: 0 0 10px 0;">Contact details</p>
 
                   <table width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#FFFFFF" style="margin: 0 0 20px 0;">
-                    {{#contact-address-street}}
-                      <tr style="border-top: 1px solid #009390;">
-                        <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}emails.address{{/t}}</p></td>
-                        <td width="75%">
-                          <p style="font-size: 16px; color: #000; margin: 10px 0;">
+                    <tr style="border-top: 1px solid #009390;">
+                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}emails.address{{/t}}: </p></td>
+                      <td width="75%">
+                        <p style="font-size: 16px; color: #000; margin: 10px 0;">
+                          {{#contact-address-street}}
                             {{contact-address-house-number}} {{contact-address-street}},
                             {{contact-address-town}},
                             {{#contact-address-county}}{{contact-address-county}},{{/contact-address-county}}
                             {{contact-address-postcode}}
-                          </p>
-                        </td>
-                      </tr>
-                    {{/contact-address-street}}
-                    {{#phone}}
-                      <tr style="border-top: 1px solid #009390;">
-                        <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}emails.phone{{/t}}</p></td>
-                        <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{phone}}</p></td>
-                      </tr>
-                    {{/phone}}
-                    {{#email}}
-                      <tr style="border-top: 1px solid #009390;">
-                        <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}fields.email.label{{/t}}</p></td>
-                        <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{email}}</p></td>
-                      </tr>
-                    {{/email}}
+                          {{/contact-address-street}}
+                          {{^contact-address-street}}None Given{{/contact-address-street}}
+                        </p>
+                      </td>
+                    </tr>
+
+                    <tr style="border-top: 1px solid #009390;">
+                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}emails.phone{{/t}}: </p></td>
+                      <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{#phone}}{{phone}}{{/phone}}{{^phone}}None Given{{/phone}}</p></td>
+                    </tr>
+
+                    <tr style="border-top: 1px solid #009390;">
+                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}fields.email.label{{/t}}: </p></td>
+                      <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{#email}}{{email}}{{/email}}{{^email}}None Given{{/email}}</p></td>
+                    </tr>
+
                   </table>
                 {{/data}}
               </td>

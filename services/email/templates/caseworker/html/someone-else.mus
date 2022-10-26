@@ -63,53 +63,51 @@
 
                   <table width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#FFFFFF" style="margin: 0 0 20px 0;">
                     <tr style="border-top: 1px solid #009390;">
-                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.check-details.table.headers.fullname{{/t}}</p></td>
+                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.check-details.table.headers.fullname{{/t}}: </p></td>
                       <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{fullname}}</p></td>
                     </tr>
                     <tr style="border-top: 1px solid #009390;">
-                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.check-details.table.headers.date-of-birth{{/t}}</p></td>
+                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.check-details.table.headers.date-of-birth{{/t}}: </p></td>
                       <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{#date-of-birth}}{{date-of-birth}}{{/date-of-birth}}</p></td>
                     </tr>
                     <tr style="border-top: 1px solid #009390;">
-                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.check-details.table.headers.nationality{{/t}}</p></td>
+                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.check-details.table.headers.nationality{{/t}}: </p></td>
                       <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{nationality}}</p></td>
                     </tr>
-                    {{#passport}}
-                      <tr style="border-top: 1px solid #009390;">
-                        <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.check-details.table.headers.passport{{/t}}</p></td>
-                        <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{passport}}</p></td>
-                      </tr>
-                    {{/passport}}
-                    {{#email}}
-                      <tr style="border-top: 1px solid #009390;">
-                        <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.check-details.table.headers.email{{/t}}</p></td>
-                        <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{email}}</p></td>
-                      </tr>
-                    {{/email}}
-                    {{#phone}}
-                      <tr style="border-top: 1px solid #009390;">
-                        <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.check-details.table.headers.phone{{/t}}</p></td>
-                        <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{phone}}</p></td>
-                      </tr>
-                    {{/phone}}
-                    {{^email}}
-                    {{#contact-address-street}}
-                      <tr style="border-top: 1px solid #009390;">
-                        <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.check-details.table.headers.contact-address{{/t}}</p></td>
-                        <td width="75%">
-                          <p style="font-size: 16px; color: #000; margin: 10px 0;">
+
+                    <tr style="border-top: 1px solid #009390;">
+                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.check-details.table.headers.passport{{/t}}: </p></td>
+                      <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{#passport}}{{passport}}{{/passport}}{{^passport}}None Given{{/passport}}</p></td>
+                    </tr>
+
+                    <tr style="border-top: 1px solid #009390;">
+                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.check-details.table.headers.email{{/t}}: </p></td>
+                      <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{#email}}{{email}}{{/email}}{{^email}}None Given{{/email}}</p></td>
+                    </tr>
+
+                    <tr style="border-top: 1px solid #009390;">
+                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.check-details.table.headers.phone{{/t}}: </p></td>
+                      <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{#phone}}{{phone}}{{/phone}}{{^phone}}None Given{{/phone}}</p></td>
+                    </tr>
+
+                    <tr style="border-top: 1px solid #009390;">
+                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.check-details.table.headers.contact-address{{/t}}: </p></td>
+                      <td width="75%">
+                        <p style="font-size: 16px; color: #000; margin: 10px 0;">
+                         {{#contact-address-street}}
                             {{contact-address-house-number}} {{contact-address-street}},
                             {{contact-address-town}},
                             {{#contact-address-county}}{{contact-address-county}},{{/contact-address-county}}
                             {{contact-address-postcode}}
-                          </p>
-                        </td>
-                      </tr>
-                    {{/contact-address-street}}
-                    {{/email}}
+                          {{/contact-address-street}}
+                          {{^contact-address-street}}None Given{{/contact-address-street}}
+                        </p>
+                      </td>
+                    </tr>
+
                     {{#someone-else-reason-radio}}
                       <tr style="border-top: 1px solid #009390;">
-                        <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}emails.someone-else.tables.personal-details.reason{{/t}}</p></td>
+                        <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}emails.someone-else.tables.personal-details.reason{{/t}}: </p></td>
                         <td width="75%">
                           <p style="font-size: 16px; color: #000; margin: 10px 0;">
                             {{#t}}fields.someone-else-reason-radio.options.{{someone-else-reason-radio}}.label{{/t}}
@@ -122,9 +120,10 @@
                         </td>
                       </tr>
                     {{/someone-else-reason-radio}}
+
                     {{#org-type}}
                       <tr style="border-top: 1px solid #009390;">
-                        <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">Help from ({{#t}}fields.org-type.options[{{org-type}}].label{{/t}})</p></td>
+                        <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">Help from ({{#t}}fields.org-type.options[{{org-type}}].label{{/t}}): </p></td>
                         <td width="75%">
                           <p style="font-size: 16px; color: #000; margin: 10px 0;">
                             {{#rep-email}}<a href="mailto:{{rep-email}}">{{rep-name}} &lt;{{rep-email}}&gt;</a>{{/rep-email}}
@@ -140,23 +139,23 @@
 
                   <table width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#FFFFFF" style="margin: 0 0 20px 0;">
                     <tr style="border-top: 1px solid #009390;">
-                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.check-details.table.headers.fullname{{/t}}</p></td>
+                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.check-details.table.headers.fullname{{/t}}: </p></td>
                       <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{someone-else-fullname}}</p></td>
                     </tr>
                     <tr style="border-top: 1px solid #009390;">
-                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.check-details.table.headers.date-of-birth{{/t}}</p></td>
+                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.check-details.table.headers.date-of-birth{{/t}}: </p></td>
                       <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{someone-else-date}}</p></td>
                     </tr>
                     <tr style="border-top: 1px solid #009390;">
-                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.check-details.table.headers.nationality{{/t}}</p></td>
+                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.check-details.table.headers.nationality{{/t}}: </p></td>
                       <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{someone-else-nationality}}</p></td>
                     </tr>
                     <tr style="border-top: 1px solid #009390;">
-                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}fields.someone-else-id-type.legend{{/t}}</p></td>
+                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}fields.someone-else-id-type.legend{{/t}}: </p></td>
                       <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{#t}}fields.someone-else-id-type.options.{{someone-else-id-type}}.label{{/t}}</p></td>
                     </tr>
                     <tr style="border-top: 1px solid #009390;">
-                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.check-details.table.headers.id-number{{/t}}</p></td>
+                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.check-details.table.headers.id-number{{/t}}: </p></td>
                       <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{someone-else-id-number}}</p></td>
                     </tr>
                   </table>
@@ -169,6 +168,5 @@
         </td>
       </tr>
     </table>
-
   </body>
 </html>

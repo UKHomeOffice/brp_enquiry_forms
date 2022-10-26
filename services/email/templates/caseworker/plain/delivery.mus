@@ -3,10 +3,10 @@
 
 Personal Details
 
-{{#t}}pages.check-details-error.personal-details-table.headers.fullname{{/t}}
+{{#t}}pages.check-details-error.personal-details-table.headers.fullname{{/t}}:
 {{fullname}}
 
-{{#t}}pages.check-details-error.personal-details-table.headers.date-of-birth{{/t}}
+{{#t}}pages.check-details-error.personal-details-table.headers.date-of-birth{{/t}}:
 {{date-of-birth}}
 
 {{#t}}pages.check-details-error.personal-details-table.headers.nationality{{/t}}
@@ -54,6 +54,11 @@ Delivery Details
 {{#t}}pages.check-details.table.headers.delivery-date{{/t}}
 {{delivery-date}}
 {{/delivery-date}}
+
+{{#case-id-number}}
+{{#t}}pages.check-details.table.headers.case-id-number{{/t}}
+{{case-id-number}}
+{{/case-id-number}}
 
 {{^address-street}}
 {{#delivery-details}}

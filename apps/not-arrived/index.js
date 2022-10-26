@@ -26,7 +26,8 @@ module.exports = {
       fields: [
         'received',
         'delivery-date',
-        'no-letter'
+        'no-letter',
+        'case-id-number'
       ],
       backLink: 'consignment-number',
       next: '/same-address',
