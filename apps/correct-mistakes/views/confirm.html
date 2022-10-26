@@ -13,26 +13,16 @@
   {{> partials-navigation}}
 {{/propositionHeader}}
 
-{{$title}}
-  {{#t}}pages.check-details-error.header{{/t}}
-{{/title}}
-
-{{$header}}
-  {{<partials-page-header}}
-    {{$page-header}}
-      {{#t}}pages.check-details-error.header{{/t}}
-    {{/page-header}}
-  {{/partials-page-header}}
-{{/header}}
-
 {{$content}}
+<header><h1 class="govuk-heading-l">{{#t}}pages.check-details-error.header{{/t}}</h1></header>
+
   <p>{{#t}}pages.check-details-error.subheader{{/t}}</p>
 
   {{<partials-form}}
 
     {{$form}}
 
-      <h2 class="details-header">{{#t}}pages.check-details-error.corrected-details-table.title{{/t}}</h2>
+      <h1 class="details-header">{{#t}}pages.check-details-error.corrected-details-table.title{{/t}}</h1>
       <table id="check-details" class="table-details">
         <tbody>
         {{#values.first-name-error}}

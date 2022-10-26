@@ -7,6 +7,7 @@ module.exports = {
   behaviours: [require('../common/behaviours/location')],
   steps: {
     '/where': {
+      isPageHeading: true,
       fields: ['inside-uk', 'country'],
       next: '/date-lost'
     },

@@ -13,19 +13,8 @@
     {{> partials-navigation}}
   {{/propositionHeader}}
 
-  {{$title}}
-    {{#t}}pages.arrange-collection.header{{/t}}
-  {{/title}}
-
-  {{$header}}
-    {{<partials-page-header}}
-      {{$page-header}}
-        {{#t}}pages.arrange-collection.header{{/t}}
-      {{/page-header}}
-    {{/partials-page-header}}
-  {{/header}}
-
   {{$content}}
+  <header><h1 class="govuk-heading-l">{{#t}}pages.arrange-collection.header{{/t}}</h1></header>
     {{<partials-form}}
 
       {{$form}}
