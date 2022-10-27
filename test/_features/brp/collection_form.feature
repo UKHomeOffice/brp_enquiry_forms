@@ -4,6 +4,9 @@ Feature: A user should access the collection problem service and be able to log 
   @unprovenIdentity
   Scenario: collection application to be contacted via email
     Given I start the 'collection' application journey
+    Then I should be on the 'previous-submission' page showing 'Have you previously submitted this request?'
+    Then I check 'previous-submission-no'
+    Then I select 'Continue'
     Then I should be on the 'where' page showing 'From where were you asked to collect your BRP?'
     Then I check 'collection-where-radio-Sponsor'
     Then I fill the date 'collection-date' with '30-5-2021'
@@ -26,6 +29,9 @@ Feature: A user should access the collection problem service and be able to log 
   @unprovenIdentity
   Scenario: collection application to be contacted via post
     Given I start the 'collection' application journey
+    Then I should be on the 'previous-submission' page showing 'Have you previously submitted this request?'
+    Then I check 'previous-submission-no'
+    Then I select 'Continue'
     Then I should be on the 'where' page showing 'From where were you asked to collect your BRP?'
     Then I check 'collection-where-radio-Post\ Office'
     Then I fill the date 'collection-date' with '30-5-2021'
@@ -54,6 +60,9 @@ Feature: A user should access the collection problem service and be able to log 
   @lostPassport
   Scenario: collection application to be contacted via post
     Given I start the 'collection' application journey
+    Then I should be on the 'previous-submission' page showing 'Have you previously submitted this request?'
+    Then I check 'previous-submission-no'
+    Then I select 'Continue'
     Then I should be on the 'where' page showing 'From where were you asked to collect your BRP?'
     Then I check 'collection-where-radio-Post\ Office'
     Then I fill the date 'collection-date' with '30-5-2021'
@@ -82,6 +91,9 @@ Feature: A user should access the collection problem service and be able to log 
   @lostPassport
   Scenario: collection application to be contacted via email
     Given I start the 'collection' application journey
+    Then I should be on the 'previous-submission' page showing 'Have you previously submitted this request?'
+    Then I check 'previous-submission-no'
+    Then I select 'Continue'
     Then I should be on the 'where' page showing 'From where were you asked to collect your BRP?'
     Then I check 'collection-where-radio-Sponsor'
     Then I fill the date 'collection-date' with '30-5-2021'
@@ -104,6 +116,9 @@ Feature: A user should access the collection problem service and be able to log 
   @noBrp
   Scenario: collection application to be contacted via post
     Given I start the 'collection' application journey
+    Then I should be on the 'previous-submission' page showing 'Have you previously submitted this request?'
+    Then I check 'previous-submission-no'
+    Then I select 'Continue'
     Then I should be on the 'where' page showing 'From where were you asked to collect your BRP?'
     Then I check 'collection-where-radio-Post\ Office'
     Then I fill the date 'collection-date' with '30-5-2021'
@@ -131,6 +146,9 @@ Feature: A user should access the collection problem service and be able to log 
   @noBrp
   Scenario: collection application to be contacted via email
     Given I start the 'collection' application journey
+    Then I should be on the 'previous-submission' page showing 'Have you previously submitted this request?'
+    Then I check 'previous-submission-no'
+    Then I select 'Continue'
     Then I should be on the 'where' page showing 'From where were you asked to collect your BRP?'
     Then I check 'collection-where-radio-Sponsor'
     Then I fill the date 'collection-date' with '30-5-2021'
@@ -149,10 +167,12 @@ Feature: A user should access the collection problem service and be able to log 
     Then I select 'Continue'
     Then I should be on the 'confirm' page showing 'Check the details you have provided'
 
-
   @noBrp
   Scenario: collection application to be contacted via email
     Given I start the 'collection' application journey
+    Then I should be on the 'previous-submission' page showing 'Have you previously submitted this request?'
+    Then I check 'previous-submission-no'
+    Then I select 'Continue'
     Then I should be on the 'where' page showing 'From where were you asked to collect your BRP?'
     Then I check 'collection-where-radio-Sponsor'
     Then I fill the date 'collection-date' with '30-5-2021'
@@ -174,6 +194,9 @@ Feature: A user should access the collection problem service and be able to log 
   @validation
   Scenario: Collection application Personal Details not a URL validation
     Given I start the 'collection' application journey
+    Then I should be on the 'previous-submission' page showing 'Have you previously submitted this request?'
+    Then I check 'previous-submission-no'
+    Then I select 'Continue'
     Then I should be on the 'where' page showing 'From where were you asked to collect your BRP?'
     Then I check 'collection-where-radio-Sponsor'
     Then I fill the date 'collection-date' with '30-5-2021'

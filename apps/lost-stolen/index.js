@@ -6,8 +6,16 @@ module.exports = {
   params: '/:action?',
   behaviours: [require('../common/behaviours/location')],
   steps: {
+    '/previous-submission': {
+      fields: [
+        'previous-submission',
+        'submission-reference'
+      ],
+      next: '/where'
+    },
     '/where': {
       fields: ['inside-uk', 'country'],
+      backLink: '/previous-submission',
       next: '/date-lost'
     },
     '/date-lost': {

@@ -5,7 +5,15 @@ module.exports = {
   baseUrl: '/not-arrived',
   params: '/:action?',
   steps: {
+    '/previous-submission': {
+      fields: [
+        'previous-submission',
+        'submission-reference'
+      ],
+      next: '/post-office-collect'
+    },
     '/post-office-collect': {
+      backLink: '/previous-submission',
       next: '/consignment-number',
       behaviours: [require('./behaviours/change-path')],
       template: 'collection.html',
@@ -90,7 +98,7 @@ module.exports = {
       next: '/confirm'
     },
     '/confirm': {
-      behaviours: [ require('../common/behaviours/email')],
+      behaviours: ['complete',require('../common/behaviours/email')],
       fields: [
         'org-help',
         'rep-name',
