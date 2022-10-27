@@ -98,7 +98,7 @@ module.exports = {
       next: '/confirm'
     },
     '/confirm': {
-      behaviours: ['complete',require('../common/behaviours/email')],
+      behaviours: ['complete', require('../common/behaviours/email')],
       fields: [
         'org-help',
         'rep-name',
