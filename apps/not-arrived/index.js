@@ -13,7 +13,7 @@ module.exports = {
       next: '/post-office-collect'
     },
     '/post-office-collect': {
-      backLink: '/previous-submission',
+      backLink: 'previous-submission',
       next: '/consignment-number',
       behaviours: [require('./behaviours/change-path')],
       template: 'collection.html',

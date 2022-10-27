@@ -18,7 +18,7 @@ module.exports = {
       fields: [
         'location-applied'
       ],
-      backLink: '/previous-submission',
+      backLink: 'previous-submission',
       next: '/about-error'
     },
     '/about-error': {

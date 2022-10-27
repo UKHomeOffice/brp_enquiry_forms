@@ -21,7 +21,7 @@ module.exports = {
         'someone-else-id-type',
         'someone-else-id-number'
       ],
-      backLink: '/previous-submission',
+      backLink: 'previous-submission',
       next: '/reason'
     },
     '/reason': {

@@ -15,7 +15,7 @@ module.exports = {
     },
     '/where': {
       fields: ['inside-uk', 'country'],
-      backLink: '/previous-submission',
+      backLink: 'previous-submission',
       next: '/date-lost'
     },
     '/date-lost': {
