@@ -35,7 +35,7 @@
         <table id="personal-details" class="table-details">
           <tr data-id="date-lost">
             <td>{{#t}}pages.check-details.table.headers.date-lost{{/t}}</td>
-            <td>{{values.date-lost}}</td>
+            <td>{{#date}}{{values.date-lost}}{{/date}}</td>
             <td><a href="date-lost/edit#date-lost-day" id='date-lost-change' class="button">{{#t}}buttons.change.date-lost{{/t}}</a></td>
           </tr>
           <tr data-id="fullname">
