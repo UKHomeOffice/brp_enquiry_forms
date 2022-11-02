@@ -70,7 +70,7 @@
                     </tr>
                     <tr style="border-top: 1px solid #009390;">
                       <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}emails.caseworker.date-lost{{/t}}: </p></td>
-                      <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{#date-lost}}{{date-lost}}{{/date-lost}}</p></td>
+                      <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{date-lost}}</p></td>
                     </tr>
                   </table>
 
@@ -83,7 +83,7 @@
                     </tr>
                     <tr style="border-top: 1px solid #009390;">
                       <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.check-details.table.headers.date-of-birth{{/t}}: </p></td>
-                      <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{#date-of-birth}}{{date-of-birth}}{{/date-of-birth}}</p></td>
+                      <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{date-of-birth}}</p></td>
                     </tr>
                     <tr style="border-top: 1px solid #009390;">
                       <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.check-details.table.headers.nationality{{/t}}: </p></td>

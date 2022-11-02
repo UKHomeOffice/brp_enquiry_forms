@@ -1,6 +1,7 @@
 /* eslint-disable consistent-return */
 'use strict';
 
+const moment = require('moment')
 const _ = require('underscore');
 const StatsD = require('hot-shots');
 const client = new StatsD();
@@ -63,6 +64,8 @@ module.exports = superclass => class Emailer extends superclass {
   saveValues(req, res, callback) {
     super.saveValues(req, res, () => {
       const data = _.pick(req.sessionModel.toJSON(), _.identity);
+      data['date-lost'] = moment(data['date-lost']).format("DD MMMM YYYY")
+      data['date-of-birth'] = moment(data['date-of-birth']).format("DD MMMM YYYY")
       const service = serviceMap[req.baseUrl] && serviceMap[req.baseUrl](data);
 
       if (!service) {
