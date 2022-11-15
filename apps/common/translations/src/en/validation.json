@@ -1,4 +1,10 @@
 {
+  "previous-submission": {
+    "required": "Have you previously submitted this request?"
+  },
+  "submission-reference": {
+    "regex": "Please enter a 9 digit reference code"
+  },
   "address-house-number": {
     "required": "Enter your building name or number"
   },

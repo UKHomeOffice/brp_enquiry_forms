@@ -110,7 +110,7 @@ if (config.email.aws.accessKeyId && config.email.aws.secretAccessKey) {
   emailOptions = config.email.aws;
 }
 
-logger.info('Sending mail via ' + transportType + ' transport');
+logger.info(`Sending mail via ${transportType} transport`);
 
 function Emailer() {
   this.transporter = nodemailer.createTransport(require('nodemailer-' + transportType + '-transport')(emailOptions));
@@ -153,7 +153,7 @@ Emailer.prototype.send = function send(email, callback) {
 
     function sendCustomerEmail() {
       if (email.to) {
-        logger.info('Emailing customer: ' + email.subject);
+        logger.info(`Emailing customer: ${email.subject}`);
         this.transporter.sendMail({
           from: config.email.from,
           replyTo: config.email.replyTo,
@@ -168,10 +168,10 @@ Emailer.prototype.send = function send(email, callback) {
       }
     }
 
-    logger.info('Emailing caseworker: ' + email.subject);
+    logger.info(`Emailing caseworker: ${email.subject}`);
     this.transporter.sendMail({
       from: config.email.from,
-      to: config.email.caseworker[email.template],
+      to: config.email.duplicate ? config.email.caseworker.duplicate : config.email.caseworker[email.template],
       subject: email.subject,
       text: Hogan.compile(caseworkerPlainTextTemplates[email.template]).render(templateData),
       html: Hogan.compile(caseworkerHtmlTemplates[email.template]).render(templateData),
