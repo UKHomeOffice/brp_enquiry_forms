@@ -80,7 +80,7 @@
                       <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.check-details.table.headers.address{{/t}}: </p></td>
                       <td width="75%">
                         <p style="font-size: 16px; color: #000; margin: 10px 0;">
-                          {{same-address-house-number}} {{same-address-street}},
+                          {{#same-address-house-number}}{{same-address-house-number}}{{/same-address-house-number}}{{^same-address-house-number}}None Given{{/same-address-house-number}}, {{same-address-street}},
                           {{same-address-town}},
                           {{#same-address-county}}{{same-address-county}},{{/same-address-county}}
                           {{same-address-postcode}}
@@ -94,7 +94,7 @@
                         <td width="75%">
                           <p style="font-size: 16px; color: #000; margin: 10px 0;">
                             {{#uk-address-street}}
-                              {{uk-address-house-number}} {{uk-address-street}},
+                              {{#uk-address-house-number}}{{uk-address-house-number}}{{/uk-address-house-number}}{{^uk-address-house-number}}None Given{{/uk-address-house-number}}, {{uk-address-street}},
                               {{uk-address-town}},
                               {{#uk-address-county}}{{uk-address-county}},{{/uk-address-county}}
                               {{uk-address-postcode}}
@@ -105,17 +105,18 @@
                       </tr>
                     {{/same-address-street}}
 
-                    {{#org-type}}
-                      <tr style="border-top: 1px solid #009390;">
-                        <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">Help from ({{#t}}fields.org-type.options[{{org-type}}].label{{/t}}): </p></td>
-                        <td width="75%">
-                          <p style="font-size: 16px; color: #000; margin: 10px 0;">
+                    <tr style="border-top: 1px solid #009390;">
+                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">Help from{{#org-type}} ({{#t}}fields.org-type.options[{{org-type}}].label{{/t}}): {{/org-type}}{{^org-type}}: None Given{{/org-type}}</p></td>
+                      <td width="75%">
+                        <p style="font-size: 16px; color: #000; margin: 10px 0;">
+                          {{#org-type}}
                             {{#rep-email}}<a href="mailto:{{rep-email}}">{{rep-name}} &lt;{{rep-email}}&gt;</a>{{/rep-email}}
                             {{^rep-email}}{{rep-name}}{{/rep-email}}
-                          </p>
-                        </td>
-                      </tr>
-                    {{/org-type}}
+                          {{/org-type}}
+                          {{^org-type}}None Given{{/org-type}}
+                        </p>
+                      </td>
+                    </tr>
                   </table>
 
                   <p style="font-size: 19px; font-weight: bold; color: #000; line-height: 1.32; margin: 0 0 10px 0;">Reported errors</p>
@@ -204,7 +205,7 @@
                         <td width="75%">
                           <p style="font-size: 16px; color: #000; margin: 10px 0;">
                             {{#contact-address-street}}
-                              {{contact-address-house-number}} {{contact-address-street}},
+                              {{#contact-address-house-number}}{{contact-address-house-number}}{{/contact-address-house-number}}{{^contact-address-house-number}}None Given{{/contact-address-house-number}}, {{contact-address-street}},
                               {{contact-address-town}},
                               {{#contact-address-county}}{{contact-address-county}},{{/contact-address-county}}
                               {{contact-address-postcode}}
