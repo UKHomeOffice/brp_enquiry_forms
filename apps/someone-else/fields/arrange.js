@@ -4,6 +4,7 @@ const date = require('hof').components.date;
 
 module.exports = {
   'someone-else-fullname': {
+    className: ['govuk-input', 'govuk-!-width-two-thirds'],
     validate: ['required', 'notUrl']
   },
   'someone-else-date': date('someone-else-date', {
@@ -26,6 +27,7 @@ module.exports = {
     ]
   },
   'someone-else-id-number': {
+    className: ['govuk-input', 'govuk-!-width-two-thirds'],
     validate: ['required', 'notUrl']
   }
 };

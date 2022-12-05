@@ -37,6 +37,7 @@
     "label": "Phone number (optional)"
   },
   "inside-uk": {
+    "legend": "Where are you now?",
     "options": {
       "yes": {
         "label": "UK"

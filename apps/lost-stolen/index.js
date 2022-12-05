@@ -14,6 +14,7 @@ module.exports = {
       next: '/where'
     },
     '/where': {
+      isPageHeading: true,
       fields: ['inside-uk', 'country'],
       backLink: 'previous-submission',
       next: '/date-lost'

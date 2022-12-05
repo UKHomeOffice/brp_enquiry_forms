@@ -1,0 +1,20 @@
+<div id="{{toggle}}" class="panel-indent{{#errors.collection-date}}validation-error{{/errors.collection-date}}">
+
+    <legend class="visuallyhidden">
+      <span class="form-label-bold">{{#t}}fields.collection-date.legend{{/t}}</span>
+    </legend>
+    <fieldset>
+      {{#errors.collection-date}}
+      <span id="collection-date-error" class="error-message">
+        {{errors.collection-date.message}}
+      </span>
+    {{/errors.collection-date}}
+
+    <div class="form-group form-date">
+      <p>{{#t}}pages.where.date-question{{/t}}</p>
+      <p id="collection-date-hint" class="form-hint">{{#t}}fields.collection-date.hint{{/t}}</p>
+      {{#input-date}}collection-date{{/input-date}}
+    </div>
+    </fieldset>
+
+  </div>"

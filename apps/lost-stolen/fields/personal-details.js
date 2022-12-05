@@ -11,9 +11,11 @@ const beforeTodayValidator = {
 
 module.exports = {
   fullname: {
+    className: ['govuk-input', 'govuk-!-width-two-thirds'],
     validate: 'notUrl'
   },
   'brp-card': {
+    className: ['govuk-input', 'govuk-!-width-two-thirds'],
     validate: [{type: 'regex', arguments: /(^[a-z][a-z](\d|X)\d{6}$)|(^$)/gi }],
     formatter: ['uppercase'],
     hint: 'fields.brp-card.hint'
