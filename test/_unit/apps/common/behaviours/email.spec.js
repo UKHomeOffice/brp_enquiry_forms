@@ -127,7 +127,7 @@ describe('apps/common/controllers/confirm', () => {
       req.sessionModel.set('previous-submission', 'yes');
       req.sessionModel.set('submission-reference', '123456');
 
-      controller.saveValues(() => {
+      controller.saveValues(req, res, err => {
         setStub.should.have.been.calledWith('subject',
           'Form submitted: Report a collection problem. Ref: 123456');
         constructorStub.should.have.been.calledWith({
@@ -136,6 +136,7 @@ describe('apps/common/controllers/confirm', () => {
           'submission-reference': '123456',
           'is-resubmission': true
         });
+        expect(err).not.to.be.ok;
       });
     });
 
@@ -144,7 +145,7 @@ describe('apps/common/controllers/confirm', () => {
       req.baseUrl = '/collection';
       req.sessionModel.set('previous-submission', 'yes');
 
-      controller.saveValues(() => {
+      controller.saveValues(req, res, err => {
         setStub.should.have.been.calledWith('subject',
           'Form submitted: Report a collection problem. Ref: fpgyxSgw7');
         constructorStub.should.have.been.calledWith({
@@ -152,6 +153,7 @@ describe('apps/common/controllers/confirm', () => {
           'previous-submission': 'yes',
           'is-resubmission': true
         });
+        expect(err).not.to.be.ok;
       });
     });
 
@@ -159,7 +161,7 @@ describe('apps/common/controllers/confirm', () => {
       req.baseUrl = '/collection';
       req.sessionModel.set('previous-submission', 'no');
 
-      controller.saveValues(() => {
+      controller.saveValues(req, res, err => {
         setStub.should.have.been.calledWith('subject',
           'Form submitted: Report a collection problem. Ref: fpgyxSgw7');
         constructorStub.should.have.been.calledWith({
@@ -167,6 +169,7 @@ describe('apps/common/controllers/confirm', () => {
           'previous-submission': 'no',
           'is-resubmission': false
         });
+        expect(err).not.to.be.ok;
       });
     });
   });
