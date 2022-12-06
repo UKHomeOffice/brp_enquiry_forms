@@ -23,7 +23,10 @@ describe('apps/common/controllers/confirm', () => {
           set: setStub,
           save: saveStub.yieldsAsync()
         }),
-        'hot-shots': sinon.stub().returns({ increment: sinon.stub() })
+        'hot-shots': sinon.stub().returns({ increment: sinon.stub() }),
+        nanoid: {
+          customAlphabet: sinon.stub().returns(function () { return 'fpgyxSgw7'; })
+        }
       });
 
       req = reqres.req({
@@ -42,7 +45,9 @@ describe('apps/common/controllers/confirm', () => {
       req.baseUrl = '/collection';
       controller.saveValues(req, res, err => {
         expect(err).not.to.be.ok;
-        constructorStub.should.have.been.calledWith({ foo: 'bar' });
+        constructorStub.should.have.been.calledWith(
+          { foo: 'bar', 'is-resubmission': false, 'submission-reference': 'fpgyxSgw7' }
+        );
         saveStub.should.have.been.called;
       });
     });
@@ -115,6 +120,60 @@ describe('apps/common/controllers/confirm', () => {
       controller.saveValues(req, res, err => {
         err.should.be.an('error');
         err.message.should.equal('no service found');
+      });
+    });
+
+    it('correctly marks an email as a resubmission with the correct reference '
+      + 'in the email subject when a reference is supplied', () => {
+      req.baseUrl = '/collection';
+      req.sessionModel.set('previous-submission', 'yes');
+      req.sessionModel.set('submission-reference', '123456');
+
+      controller.saveValues(req, res, err => {
+        setStub.should.have.been.calledWith('subject',
+          'Form submitted: Report a collection problem. Ref: 123456');
+        constructorStub.should.have.been.calledWith({
+          foo: 'bar',
+          'previous-submission': 'yes',
+          'submission-reference': '123456',
+          'is-resubmission': true
+        });
+        expect(err).not.to.be.ok;
+      });
+    });
+
+    it('correctly marks an email as a resubmission but does not include a reference number in'
+      + 'the email subject when a previous reference is not supplied', () => {
+      req.baseUrl = '/collection';
+      req.sessionModel.set('previous-submission', 'yes');
+
+      controller.saveValues(req, res, err => {
+        setStub.should.have.been.calledWith('subject',
+          'Form submitted: Report a collection problem.');
+        constructorStub.should.have.been.calledWith({
+          foo: 'bar',
+          'previous-submission': 'yes',
+          'is-resubmission': true,
+          'submission-reference': undefined
+        });
+        expect(err).not.to.be.ok;
+      });
+    });
+
+    it('correctly marks an email as a not a resubmission with a new random reference in the email subject', () => {
+      req.baseUrl = '/collection';
+      req.sessionModel.set('previous-submission', 'no');
+
+      controller.saveValues(req, res, err => {
+        setStub.should.have.been.calledWith('subject',
+          'Form submitted: Report a collection problem. Ref: fpgyxSgw7');
+        constructorStub.should.have.been.calledWith({
+          foo: 'bar',
+          'previous-submission': 'no',
+          'is-resubmission': false,
+          'submission-reference': 'fpgyxSgw7'
+        });
+        expect(err).not.to.be.ok;
       });
     });
   });
