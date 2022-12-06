@@ -12,12 +12,12 @@ describe('apps/common/controllers/confirm', () => {
     let setStub;
     let saveStub;
     let constructorStub;
- 
+
     beforeEach(done => {
       constructorStub = sinon.stub();
       setStub = sinon.stub();
       saveStub = sinon.stub();
-      
+
       Behaviour = proxyquire('../apps/common/behaviours/email', {
         '../models/email': constructorStub.returns({
           set: setStub,
@@ -25,7 +25,7 @@ describe('apps/common/controllers/confirm', () => {
         }),
         'hot-shots': sinon.stub().returns({ increment: sinon.stub() }),
         nanoid: {
-          customAlphabet: sinon.stub().returns(function () { return 'fpgyxSgw7' })
+          customAlphabet: sinon.stub().returns(function () { return 'fpgyxSgw7'; })
         }
       });
 
@@ -121,12 +121,13 @@ describe('apps/common/controllers/confirm', () => {
       });
     });
 
-    it('correctly marks an email as a resubmission with the correct reference in the email subject when a reference is supplied', () => {
+    it('correctly marks an email as a resubmission with the correct reference '
+      + 'in the email subject when a reference is supplied', () => {
       req.baseUrl = '/collection';
       req.sessionModel.set('previous-submission', 'yes');
       req.sessionModel.set('submission-reference', '123456');
-      
-      controller.saveValues(req, res, err => {
+
+      controller.saveValues(() => {
         setStub.should.have.been.calledWith('subject',
           'Form submitted: Report a collection problem. Ref: 123456');
         constructorStub.should.have.been.calledWith({
@@ -138,11 +139,12 @@ describe('apps/common/controllers/confirm', () => {
       });
     });
 
-    it('correctly marks an email as a resubmission with a new random reference in the email subject when a previous reference is not supplied', () => {
+    it('correctly marks an email as a resubmission with a new random reference in '
+      + 'the email subject when a previous reference is not supplied', () => {
       req.baseUrl = '/collection';
       req.sessionModel.set('previous-submission', 'yes');
 
-      controller.saveValues(req, res, err => {
+      controller.saveValues(() => {
         setStub.should.have.been.calledWith('subject',
           'Form submitted: Report a collection problem. Ref: fpgyxSgw7');
         constructorStub.should.have.been.calledWith({
@@ -157,7 +159,7 @@ describe('apps/common/controllers/confirm', () => {
       req.baseUrl = '/collection';
       req.sessionModel.set('previous-submission', 'no');
 
-      controller.saveValues(req, res, err => {
+      controller.saveValues(() => {
         setStub.should.have.been.calledWith('subject',
           'Form submitted: Report a collection problem. Ref: fpgyxSgw7');
         constructorStub.should.have.been.calledWith({
