@@ -19,9 +19,7 @@ function errorChecked(key, data) {
 
 function setRef(data) {
   const submissionRef = (data['submission-reference'] ? data['submission-reference'] : nanoid());
-  if (data['submission-reference']) {
-    config.email.duplicate = true;
-  }
+  data['is-resubmission'] = data['previous-submission'] === 'yes' ? true : false;
   return submissionRef;
 }
 
@@ -76,7 +74,7 @@ module.exports = superclass => class Emailer extends superclass {
     super.saveValues(req, res, () => {
       const data = _.pick(req.sessionModel.toJSON(), _.identity);
       const service = serviceMap[req.baseUrl] && serviceMap[req.baseUrl](data);
-
+      
       if (!service) {
         return callback(new Error('no service found'));
       }

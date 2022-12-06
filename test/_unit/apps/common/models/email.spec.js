@@ -16,7 +16,8 @@ describe('apps/common/models/email', () => {
         email: 'email@email.com',
         subject: 'email subject',
         name: 'dave',
-        other: 'data'
+        other: 'data',
+        'is-resubmission': false
       });
     });
 
@@ -30,11 +31,13 @@ describe('apps/common/models/email', () => {
           template: 'test_template',
           to: 'email@email.com',
           subject: 'email subject',
+          isResubmission: false,
           dataToSend: {
             email: 'email@email.com',
             name: 'dave',
             other: 'data',
-            subject: 'email subject'
+            subject: 'email subject',
+            'is-resubmission': false
           }
         });
       });
