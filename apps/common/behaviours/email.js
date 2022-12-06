@@ -5,7 +5,6 @@ const _ = require('underscore');
 const StatsD = require('hot-shots');
 const client = new StatsD();
 const Model = require('../models/email');
-const config = require('../../../config');
 
 const {customAlphabet} = require('nanoid');
 const alphabet = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
@@ -74,7 +73,7 @@ module.exports = superclass => class Emailer extends superclass {
     super.saveValues(req, res, () => {
       const data = _.pick(req.sessionModel.toJSON(), _.identity);
       const service = serviceMap[req.baseUrl] && serviceMap[req.baseUrl](data);
-      
+
       if (!service) {
         return callback(new Error('no service found'));
       }
