@@ -167,7 +167,7 @@ Feature: A user should access the collection problem service and be able to log 
     Then I select 'Continue'
     Then I should be on the 'confirm' page showing 'Check the details you have provided'
 
-  @noBrp
+  @noBrp @martintest
   Scenario: collection application to be contacted via email
     Given I start the 'collection' application journey
     Then I should be on the 'previous-submission' page showing 'Have you previously submitted this request?'
