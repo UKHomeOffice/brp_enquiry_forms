@@ -45,7 +45,7 @@ describe('apps/common/controllers/confirm', () => {
       req.baseUrl = '/collection';
       controller.saveValues(req, res, err => {
         expect(err).not.to.be.ok;
-        constructorStub.should.have.been.calledWith({ foo: 'bar', 'is-resubmission': false });
+        constructorStub.should.have.been.calledWith({ foo: 'bar', 'is-resubmission': false, 'submission-reference': 'fpgyxSgw7' });
         saveStub.should.have.been.called;
       });
     });
@@ -140,18 +140,19 @@ describe('apps/common/controllers/confirm', () => {
       });
     });
 
-    it('correctly marks an email as a resubmission with a new random reference in '
+    it('correctly marks an email as a resubmission but does not include a reference number in'
       + 'the email subject when a previous reference is not supplied', () => {
       req.baseUrl = '/collection';
       req.sessionModel.set('previous-submission', 'yes');
 
       controller.saveValues(req, res, err => {
         setStub.should.have.been.calledWith('subject',
-          'Form submitted: Report a collection problem. Ref: fpgyxSgw7');
+          'Form submitted: Report a collection problem.');
         constructorStub.should.have.been.calledWith({
           foo: 'bar',
           'previous-submission': 'yes',
-          'is-resubmission': true
+          'is-resubmission': true,
+          'submission-reference': undefined
         });
         expect(err).not.to.be.ok;
       });
@@ -167,7 +168,8 @@ describe('apps/common/controllers/confirm', () => {
         constructorStub.should.have.been.calledWith({
           foo: 'bar',
           'previous-submission': 'no',
-          'is-resubmission': false
+          'is-resubmission': false,
+          'submission-reference': 'fpgyxSgw7'
         });
         expect(err).not.to.be.ok;
       });
