@@ -21,11 +21,12 @@ function setSubmissionReference(data) {
 
   // Did the user say this is a resubmission?
   if (data['previous-submission'] === 'yes') {
-    //Yes they did - Mark this as a resubmission for easier assessment when sending the email to caseworkers
+    // Yes they did - Mark this as a resubmission for easier assessment when sending the email to caseworkers
     data['is-resubmission'] = true;
     // Did the user provide a reference for their previous submission?
     // If they did, we should keep it the same
-    // If they did not, we should not populate the reference in the emails that are sent out so ensure this remains undefined
+    // If they did not, we should not populate the reference in
+    // the emails that are sent out so ensure this remains undefined
     data['submission-reference'] = (data['submission-reference'] ? data['submission-reference'] : undefined);
   } else {
     data['is-resubmission'] = false;

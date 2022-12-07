@@ -45,7 +45,9 @@ describe('apps/common/controllers/confirm', () => {
       req.baseUrl = '/collection';
       controller.saveValues(req, res, err => {
         expect(err).not.to.be.ok;
-        constructorStub.should.have.been.calledWith({ foo: 'bar', 'is-resubmission': false, 'submission-reference': 'fpgyxSgw7' });
+        constructorStub.should.have.been.calledWith(
+          { foo: 'bar', 'is-resubmission': false, 'submission-reference': 'fpgyxSgw7' }
+        );
         saveStub.should.have.been.called;
       });
     });
