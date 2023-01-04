@@ -27,6 +27,7 @@ module.exports = {
     },
     '/contact-details': {
       fields: [
+        'has-email-radio',
         'email',
         'use-address',
         'contact-address-house-number',

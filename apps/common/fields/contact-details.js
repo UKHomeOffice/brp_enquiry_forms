@@ -8,9 +8,24 @@ module.exports = {
       value: '',
       field: 'use-address'
     }
-  },
-  'use-address': {
-    toggle: 'address-group'
+  }, 
+  'has-email-radio': {
+    mixin: 'radio-group',
+    validate: ['required'],
+    className: ['form-group'],
+    legend: {
+      className: 'visuallyhidden'
+    },
+    options: [{
+      value: 'has-email-yes',
+      toggle: 'email',
+      label: 'Email Address',
+      child: 'partials/email-address'
+    }, {
+      value: 'has-email-no',
+      toggle: 'address-group',
+      label: 'I don\'t have an email address'
+    }]
   },
   'contact-address-house-number': {
     validate: ['required'],
