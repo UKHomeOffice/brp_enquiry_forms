@@ -10,19 +10,11 @@ module.exports = {
   baseUrl: '/collection',
   params: '/:action?',
   steps: {
-    '/previous-submission': {
-      fields: [
-        'previous-submission',
-        'submission-reference'
-      ],
-      next: '/where'
-    },
     '/where': {
       fields: [
         'collection-where-radio',
         'collection-date'
       ],
-      backLink: 'previous-submission',
       next: '/reasons'
     },
     '/reasons': {
