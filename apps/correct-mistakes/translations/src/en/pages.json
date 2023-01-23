@@ -52,7 +52,7 @@
   "check-details-error": {
     "header": "Check the details you have provided",
     "subheader": "If any information is incorrect, you can change it here.",
-    "limitations-info": "Due to limitations, we can only print the first 16 characters of your Place of Birth and the first 30 characters of you Given Name(s) and Family Name on your BRP.",
+    "limitations-info": "Due to limitations, we can only print the first 16 characters of your Place of Birth and the first 30 characters of your Given Name(s) and Family Name on your BRP.",
     "corrected-details-table": {
       "title": "Corrected BRP details"
     },

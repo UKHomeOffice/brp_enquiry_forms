@@ -247,7 +247,7 @@ Feature: A user should access the correct mistakes service and be able to log an
       Then I fill 'email' with 'test@dtest.testemail'
       Then I select 'Continue'
       Then I should be on the 'confirm' page showing 'Check the details you have provided'
-      Then I should see 'Due to limitations, we can only print the first 16 characters of your Place of Birth and the first 30 characters of you Given Name(s) and Family Name on your BRP.' on the page
+      Then I should see 'Due to limitations, we can only print the first 16 characters of your Place of Birth and the first 30 characters of your Given Name(s) and Family Name on your BRP.' on the page
       Then I should see 'ThisIsAVeryVeryVeryLongGivenNa' on the page
       Then I should see 'ThisIsAVeryVeryVeryLongFamilyN' on the page
       Then I should see 'ThisIsAVeryLongP' on the page
