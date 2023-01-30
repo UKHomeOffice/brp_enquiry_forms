@@ -27,6 +27,9 @@
     "label": "BRP number  (optional)",
     "hint": "For example, ZR1000452"
   },
+  "passport": {
+    "label": "Passport number  (optional)"
+  },
   "email": {
     "label": "Email address"
   },
