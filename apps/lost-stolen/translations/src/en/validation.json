@@ -29,6 +29,9 @@
     "date": "Enter a valid date",
     "after": "Enter a date from 31/07/2015"
   },
+  "passport": {
+    "required": "What is your passport number?"
+  },
   "brp-card": {
     "required": "What is your BRP number?",
     "regex": "Enter your BRP number in the correct format; for example, ‘ZUX123456 or ZU1234567’"
