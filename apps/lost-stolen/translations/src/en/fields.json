@@ -28,7 +28,7 @@
     "hint": "For example, ZR1000452"
   },
   "passport": {
-    "label": "Passport number  (optional)"
+    "label": "Passport number"
   },
   "email": {
     "label": "Email address"
