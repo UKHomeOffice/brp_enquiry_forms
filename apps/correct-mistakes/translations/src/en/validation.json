@@ -82,7 +82,8 @@
     "required": "Enter your date of birth",
     "numeric": "Date must only contain numbers",
     "future": "The date is in the future",
-    "date": "Enter a valid date"
+    "date": "Enter a valid date",
+    "before": "The date is in the future"
   },
   "birth-place-error": {
     "required": "What is your correct place of birth?"
