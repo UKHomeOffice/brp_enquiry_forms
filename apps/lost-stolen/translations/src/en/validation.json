@@ -30,7 +30,8 @@
     "after": "Enter a date from 31/07/2015"
   },
   "passport": {
-    "required": "What is your passport number?"
+    "required": "What is your passport number?",
+    "notUrl": "Enter a valid passport number"
   },
   "brp-card": {
     "required": "What is your BRP number?",
