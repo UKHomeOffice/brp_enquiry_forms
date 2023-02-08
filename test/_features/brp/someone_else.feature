@@ -21,7 +21,8 @@ Feature: I want someone else to collect my BRP
     Then I fill 'passport' with '1234JA2345'
     Then I select 'Continue'
     Then I should be on the 'contact-details' page showing 'How should we contact you about your BRP?'
-    Then I fill 'email' with 'test@test.test'
+    Then I check 'has-email-radio-has-email-yes'
+    Then I fill 'contact-details-email' with 'test@test.test'
     Then I select 'Continue'
     Then I should be on the 'confirm' page showing 'Check the details you have provided'
     Then I should see 'Details of person nominated to collect BRP' on the page
@@ -47,7 +48,8 @@ Feature: I want someone else to collect my BRP
     Then I fill 'passport' with '1234JA2345'
     Then I select 'Continue'
     Then I should be on the 'contact-details' page showing 'How should we contact you about your BRP?'
-    Then I fill 'email' with 'test@test.test'
+    Then I check 'has-email-radio-has-email-yes'
+    Then I fill 'contact-details-email' with 'test@test.test'
     Then I select 'Continue'
     Then I should be on the 'confirm' page showing 'Check the details you have provided'
     Then I should see 'Details of person nominated to collect BRP' on the page
@@ -127,7 +129,8 @@ Feature: I want someone else to collect my BRP
     Then I fill 'passport' with '1234JA2345'
     Then I select 'Continue'
     Then I should be on the 'contact-details' page showing 'How should we contact you about your BRP?'
-    Then I fill 'email' with 'test@test.test'
+    Then I check 'has-email-radio-has-email-yes'
+    Then I fill 'contact-details-email' with 'test@test.test'
     Then I select 'Continue'
     Then I should be on the 'confirm' page showing 'Check the details you have provided'
     Then I should see 'Details of person nominated to collect BRP' on the page
