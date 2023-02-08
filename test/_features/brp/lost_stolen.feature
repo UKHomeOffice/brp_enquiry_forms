@@ -20,6 +20,7 @@ Feature: A user should be able to log a lost or stolen BRP
     Then I fill 'contact-details-email' with 'test@dtest.testemail'
     Then I select 'Continue'
     Then I should be on the 'confirm' page showing 'Check the details you have provided'
+    And I should see 'test@dtest.testemail' on the page
 
   Scenario: Lost brp outside the UK
     Given I start the 'lost-stolen' application journey
@@ -41,6 +42,7 @@ Feature: A user should be able to log a lost or stolen BRP
     Then I fill 'contact-details-email' with 'test@dtest.testemail'
     Then I select 'Continue'
     Then I should be on the 'confirm' page showing 'Check the details you have provided'
+    And I should see 'test@dtest.testemail' on the page
 
   @validation
   Scenario: Lost or Stolen application Personal Details not a URL validation

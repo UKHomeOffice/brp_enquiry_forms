@@ -49,6 +49,7 @@ Feature: I should be able to log that my BRP has not arrived
     Then I fill 'contact-details-email' with 'test@test.test'
     Then I select 'Continue'
     Then I should be on the 'confirm' page showing 'Check the details you have provided'
+    And I should see 'test@test.test' on the page
 
   Scenario: BRP resent to different address
     Given I start the 'not-arrived' application journey
@@ -141,6 +142,7 @@ Feature: I should be able to log that my BRP has not arrived
     Then I fill 'contact-details-email' with 'test@test.test'
     Then I select 'Continue'
     Then I should be on the 'confirm' page showing 'Check the details you have provided'
+    And I should see 'test@test.test' on the page
 
   @validation
   Scenario: Not arrived application changing mind on letter recieved

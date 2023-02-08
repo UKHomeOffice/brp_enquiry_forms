@@ -23,6 +23,7 @@ Feature: A user should access the collection problem service and be able to log 
     Then I fill 'contact-details-email' with 'test@test.test'
     Then I select 'Continue'
     Then I should be on the 'confirm' page showing 'Check the details you have provided'
+    And I should see 'test@test.test' on the page
 
   @unprovenIdentity
   Scenario: collection application to be contacted via post
@@ -51,6 +52,7 @@ Feature: A user should access the collection problem service and be able to log 
     Then I fill 'phone' with '071234567890'
     Then I select 'Continue'
     Then I should be on the 'confirm' page showing 'Check the details you have provided'
+    And I should see 'RH17 5BE' on the page
 
   @lostPassport
   Scenario: collection application to be contacted via post
@@ -79,6 +81,7 @@ Feature: A user should access the collection problem service and be able to log 
     Then I fill 'phone' with '071234567890'
     Then I select 'Continue'
     Then I should be on the 'confirm' page showing 'Check the details you have provided'
+    And I should see 'RH17 5BE' on the page
 
   @lostPassport
   Scenario: collection application to be contacted via email
@@ -102,6 +105,7 @@ Feature: A user should access the collection problem service and be able to log 
     Then I fill 'contact-details-email' with 'test@test.test'
     Then I select 'Continue'
     Then I should be on the 'confirm' page showing 'Check the details you have provided'
+    And I should see 'test@test.test' on the page
 
   @noBrp
   Scenario: collection application to be contacted via post
@@ -129,6 +133,7 @@ Feature: A user should access the collection problem service and be able to log 
     Then I fill 'phone' with '071234567890'
     Then I select 'Continue'
     Then I should be on the 'confirm' page showing 'Check the details you have provided'
+    And I should see 'RH17 5BE' on the page
 
   @noBrp
   Scenario: collection application to be contacted via email
@@ -151,7 +156,7 @@ Feature: A user should access the collection problem service and be able to log 
     Then I fill 'contact-details-email' with 'test@test.test'
     Then I select 'Continue'
     Then I should be on the 'confirm' page showing 'Check the details you have provided'
-
+    And I should see 'test@test.test' on the page
 
   @noBrp
   Scenario: collection application to be contacted via email
@@ -174,6 +179,7 @@ Feature: A user should access the collection problem service and be able to log 
     Then I fill 'contact-details-email' with 'test@test.test'
     Then I select 'Continue'
     Then I should be on the 'confirm' page showing 'Check the details you have provided'
+    And I should see 'test@test.test' on the page
 
   @validation
   Scenario: Collection application Personal Details not a URL validation

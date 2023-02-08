@@ -28,6 +28,7 @@ Feature: I want someone else to collect my BRP
     Then I should see 'Details of person nominated to collect BRP' on the page
     Then I should see 'Your details' on the page
     Then I should see 'Are you completing this form on behalf of the BRP holder?' on the page
+    And I should see 'test@test.test' on the page
 
   Scenario: I need someone else to collect my BRP because I am under 18
     Given I start the 'someone-else' application journey
@@ -55,6 +56,7 @@ Feature: I want someone else to collect my BRP
     Then I should see 'Details of person nominated to collect BRP' on the page
     Then I should see 'Your details' on the page
     Then I should see 'Are you completing this form on behalf of the BRP holder?' on the page
+    And I should see 'test@test.test' on the page
 
   @validation
   Scenario: I need someone else to collect my BRP because I am under 18 but I enter an age over 18

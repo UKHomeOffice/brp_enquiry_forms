@@ -25,6 +25,7 @@ Feature: A user should access the correct mistakes service and be able to log an
     Then I fill 'contact-details-email' with 'test@dtest.testemail'
     Then I select 'Continue'
     Then I should be on the 'confirm' page showing 'Check the details you have provided'
+    And I should see 'test@dtest.testemail' on the page
 
   @out_uk
   Scenario: correct mistakes on brp form outside the uk
@@ -55,6 +56,7 @@ Feature: A user should access the correct mistakes service and be able to log an
     Then I fill 'contact-details-email' with 'christopher.medland@digital.homeoffice.gov.uk'
     Then I select 'Continue'
     Then I should be on the 'confirm' page showing 'Check the details you have provided'
+    And I should see 'christopher.medland@digital.homeoffice.gov.uk' on the page
 
   @validation
   Scenario: validation of about-error page
