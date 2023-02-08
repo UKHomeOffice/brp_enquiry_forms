@@ -5,7 +5,7 @@ module.exports = {
     validate: ['required', 'email'],
     type: 'email',
     dependent: {
-      value: 'has-email-yes',
+      value: 'true',
       field: 'has-email-radio'
     }
   }, 
@@ -17,12 +17,12 @@ module.exports = {
       className: 'visuallyhidden'
     },
     options: [{
-      value: 'has-email-yes',
+      value: 'true',
       toggle: 'contact-details-email',
       label: 'Email Address',
       child: 'partials/email-address'
     }, {
-      value: 'has-email-no',
+      value: 'false',
       toggle: 'address-group',
       label: 'I don\'t have an email address'
     }]
@@ -31,7 +31,7 @@ module.exports = {
     validate: ['required'],
     label: 'fields.address-house-number.label',
     dependent: {
-      value: 'has-email-no',
+      value: 'false',
       field: 'has-email-radio'
     }
   },
@@ -39,7 +39,7 @@ module.exports = {
     validate: ['required'],
     label: 'fields.address-street.label',
     dependent: {
-      value: 'has-email-no',
+      value: 'false',
       field: 'has-email-radio'
     }
   },
@@ -47,7 +47,7 @@ module.exports = {
     validate: ['required'],
     label: 'fields.address-town.label',
     dependent: {
-      value: 'has-email-no',
+      value: 'false',
       field: 'has-email-radio'
     }
   },
@@ -58,7 +58,7 @@ module.exports = {
     validate: ['required'],
     label: 'fields.address-postcode.label',
     dependent: {
-      value: 'has-email-no',
+      value: 'false',
       field: 'has-email-radio'
     }
   }
