@@ -52,5 +52,8 @@
         "label": "Support organisation"
       }
     }
+  },
+  "contact-details-email": {
+    "label": "Email Address"
   }
 }

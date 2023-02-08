@@ -46,5 +46,9 @@
   },
   "has-email-radio": {
     "required": "Please select an option"
+  },
+  "contact-details-email": {
+    "required": "An email address is required",
+    "email": "Enter the email in the correct format for example, name@domain.com"
   }
 }

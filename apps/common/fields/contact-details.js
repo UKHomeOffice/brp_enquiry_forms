@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = {
-  email: {
+  'contact-details-email': {
     validate: ['required', 'email'],
     type: 'email',
     dependent: {
@@ -18,7 +18,7 @@ module.exports = {
     },
     options: [{
       value: 'has-email-yes',
-      toggle: 'email',
+      toggle: 'contact-details-email',
       label: 'Email Address',
       child: 'partials/email-address'
     }, {
@@ -31,24 +31,24 @@ module.exports = {
     validate: ['required'],
     label: 'fields.address-house-number.label',
     dependent: {
-      value: 'true',
-      field: 'use-address'
+      value: 'has-email-no',
+      field: 'has-email-radio'
     }
   },
   'contact-address-street': {
     validate: ['required'],
     label: 'fields.address-street.label',
     dependent: {
-      value: 'true',
-      field: 'use-address'
+      value: 'has-email-no',
+      field: 'has-email-radio'
     }
   },
   'contact-address-town': {
     validate: ['required'],
     label: 'fields.address-town.label',
     dependent: {
-      value: 'true',
-      field: 'use-address'
+      value: 'has-email-no',
+      field: 'has-email-radio'
     }
   },
   'contact-address-county': {
@@ -58,8 +58,8 @@ module.exports = {
     validate: ['required'],
     label: 'fields.address-postcode.label',
     dependent: {
-      value: 'true',
-      field: 'use-address'
+      value: 'has-email-no',
+      field: 'has-email-radio'
     }
   }
 };
