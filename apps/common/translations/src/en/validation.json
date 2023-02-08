@@ -43,5 +43,8 @@
   "fullname": {
     "required": "Enter your full name",
     "notUrl": "Full name must not be a URL"
+  },
+  "has-email-radio": {
+    "required": "Please select an option"
   }
 }

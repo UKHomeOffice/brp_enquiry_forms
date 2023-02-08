@@ -5,8 +5,8 @@ module.exports = {
     validate: ['required', 'email'],
     type: 'email',
     dependent: {
-      value: '',
-      field: 'use-address'
+      value: 'has-email-yes',
+      field: 'has-email-radio'
     }
   }, 
   'has-email-radio': {
