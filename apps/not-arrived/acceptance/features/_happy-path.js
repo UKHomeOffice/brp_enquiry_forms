@@ -10,7 +10,6 @@ const values = {
   'no-letter': 'false',
   'delivery-date-month': '6',
   'delivery-date-year': yearString(),
-  'use-address': 'true',
   'org-help': 'yes'
 };
 

@@ -30,9 +30,6 @@
   "email": {
     "label": "Email address"
   },
-  "use-address": {
-    "label": "I want to be contacted by post"
-  },
   "phone": {
     "label": "Phone number (optional)"
   },

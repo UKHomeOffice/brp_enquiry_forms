@@ -9,7 +9,6 @@ const values = {
   'date-of-birth-day': '1',
   'date-of-birth-month': '1',
   'date-of-birth-year': yearString(),
-  'use-address': 'true',
   'org-help': 'yes'
 };
 

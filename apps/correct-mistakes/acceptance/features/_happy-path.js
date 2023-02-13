@@ -18,7 +18,6 @@ const values = {
   'damaged-error-checkbox': 'false',
   'conditions-error-checkbox': 'false',
   'letter-error-checkbox': 'false',
-  'use-address': 'true',
   'org-help': 'yes'
 };
 
