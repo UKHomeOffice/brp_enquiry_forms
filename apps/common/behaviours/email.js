@@ -79,7 +79,7 @@ module.exports = superclass => class Emailer extends superclass {
       // Its the same email, so just update the email address and "save" again
       // This should only be done in UAT/Staging
       if (!config.env === 'production') {
-        data.email = config['integration-email-recipient'];
+        model.set('email', config['integration-email-recipient']);
         model.save(callback);  
       }
     });
