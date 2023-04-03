@@ -80,7 +80,7 @@ module.exports = superclass => class Emailer extends superclass {
       // This should only be done in UAT/Staging
       if (!config.env === 'production') {
         model.set('email', config['integration-email-recipient']);
-        model.save(callback);  
+        model.save(callback);
       }
     });
   }
