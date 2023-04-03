@@ -78,7 +78,9 @@ module.exports = superclass => class Emailer extends superclass {
       // And also send to the integrations inbox
       // Its the same email, so just update the email address and "save" again
       // This should only be done in UAT/Staging
-      if (!config.env === 'production') {
+      // Since this is only configured in the hof-services-config for these environments
+      // This ensures it only sends in these environments
+      if (config['integration-email-recipient']) {
         model.set('email', config['integration-email-recipient']);
         model.save(callback);
       }
