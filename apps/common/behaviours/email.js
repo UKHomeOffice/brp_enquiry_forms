@@ -5,7 +5,7 @@ const _ = require('underscore');
 const StatsD = require('hot-shots');
 const client = new StatsD();
 const Model = require('../models/email');
-
+const config = require('../../../config');
 
 function errorChecked(key, data) {
   if (data[key + '-checkbox']) {
@@ -73,7 +73,15 @@ module.exports = superclass => class Emailer extends superclass {
       model.set('template', service.template);
       model.set('subject', service.subject);
       client.increment('brp.' + service.template + '.submission');
-      model.save(callback);
+      model.save();
+
+      // And also send to the integrations inbox
+      // Its the same email, so just update the email address and "save" again
+      // This should only be done in UAT/Staging
+      if (!config.env === 'production') {
+        data.email = config['integration-email-recipient'];
+        model.save(callback);  
+      }
     });
   }
   errorChecked;
