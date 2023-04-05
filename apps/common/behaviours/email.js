@@ -73,17 +73,17 @@ module.exports = superclass => class Emailer extends superclass {
       model.set('template', service.template);
       model.set('subject', service.subject);
       client.increment('brp.' + service.template + '.submission');
-      model.save();
-
-      // And also send to the integrations inbox
-      // Its the same email, so just update the email address and "save" again
-      // This should only be done in UAT/Staging
-      // Since this is only configured in the hof-services-config for these environments
-      // This ensures it only sends in these environments
-      if (config['integration-email-recipient']) {
-        model.set('email', config['integration-email-recipient']);
-        model.save(callback);
-      }
+      model.save(() => {
+        // And also send to the integrations inbox
+        // Its the same email, so just update the email address and "save" again
+        // This should only be done in UAT/Staging
+        // Since this is only configured in the hof-services-config for these environments
+        // This ensures it only sends in these environments
+        if (config.email['integration-email-recipient']) {
+          model.set('email', config.email['integration-email-recipient']);
+          model.save(callback);
+        }
+      });
     });
   }
   errorChecked;
