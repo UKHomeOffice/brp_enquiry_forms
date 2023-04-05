@@ -8,7 +8,7 @@ module.exports = {
       value: 'true',
       field: 'has-email-radio'
     }
-  }, 
+  },
   'has-email-radio': {
     mixin: 'radio-group',
     validate: ['required'],
