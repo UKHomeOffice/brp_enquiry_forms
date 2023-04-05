@@ -13,13 +13,11 @@ describe('apps/common/controllers/confirm', () => {
     let setStub;
     let saveStub;
     let constructorStub;
-    let configStub;
 
     beforeEach(done => {
       constructorStub = sinon.stub();
       setStub = sinon.stub();
       saveStub = sinon.stub();
-      configStub = sinon.stub();
 
       Behaviour = proxyquire('../apps/common/behaviours/email', {
         '../models/email': constructorStub.returns({
