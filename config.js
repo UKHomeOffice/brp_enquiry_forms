@@ -25,6 +25,7 @@ module.exports = {
       collection: process.env.CASEWORKER_COLLECTION_EMAIL || 'caseworker_email_address@test.com',
       'someone-else': process.env.CASEWORKER_SOMEONEELSE_EMAIL || 'someoneelse_email_address@test.com'
     },
+    'integration-email-recipient': process.env.INTEGRATION_EMAIL_RECIPIENT || '',
     port: process.env.EMAIL_PORT || 587,
     host: process.env.EMAIL_HOST || 'email-smtp.eu-west-1.amazonaws.com',
     auth: {
