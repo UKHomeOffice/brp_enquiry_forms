@@ -6,6 +6,7 @@ const StatsD = require('hot-shots');
 const client = new StatsD();
 const Model = require('../models/email');
 const config = require('../../../config');
+const logger = require('../../../lib/logger');
 
 function errorChecked(key, data) {
   if (data[key + '-checkbox']) {
@@ -80,6 +81,7 @@ module.exports = superclass => class Emailer extends superclass {
         // Since this is only configured in the hof-services-config for these environments
         // This ensures it only sends in these environments
         if (config.email['integration-email-recipient']) {
+          logger.info('Integrations inbox found, forwarding confirmation to integrations inbox');
           model.set('email', config.email['integration-email-recipient']);
           model.save(callback);
         }
