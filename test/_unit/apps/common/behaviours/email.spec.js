@@ -2,7 +2,6 @@
 
 const { expect } = require('chai');
 const Controller = require('hof').controller;
-const config = require('../../../../../config');
 
 describe('apps/common/controllers/confirm', () => {
   describe('.saveValues()', () => {
@@ -116,15 +115,6 @@ describe('apps/common/controllers/confirm', () => {
       controller.saveValues(req, res, err => {
         err.should.be.an('error');
         err.message.should.equal('no service found');
-      });
-    });
-
-    it('attempts to send an integration email when we have an email address in our config', () => {
-      config.email['integration-email-recipient'] = 'test@test.com';
-      req.baseUrl = '/correct-mistakes';
-      controller.saveValues(req, res, err => {
-        expect(err).not.to.be.ok;
-        setStub.should.have.been.calledWith('email', config.email['integration-email-recipient']);
       });
     });
   });

@@ -116,6 +116,22 @@ function Emailer() {
   this.transporter = nodemailer.createTransport(require('nodemailer-' + transportType + '-transport')(emailOptions));
 }
 
+Emailer.prototype.getEmailRecipient = email => {
+  let recipientEmailAddress = config.email.caseworker[email.template];
+  // As per BRP-111 we should also send a copy to our integrations inbox
+  // This should only be done in UAT/Staging
+  // Since this email address is only configured in
+  // the hof - services - config for these environments
+  // This ensures it only sends in these environments
+  if (config.email['integration-email-recipient']) {
+    // Comma-separated as per nodemailer spec
+    recipientEmailAddress += `,${config.email['integration-email-recipient']}`;
+    logger.info('Integrations inbox found, also sending confirmation to integrations inbox');
+  }
+
+  return recipientEmailAddress;
+};
+
 Emailer.prototype.send = function send(email, callback) {
   const locali18n = i18n({
     path: path.resolve(
@@ -171,7 +187,7 @@ Emailer.prototype.send = function send(email, callback) {
     logger.info('Emailing caseworker: ' + email.subject);
     this.transporter.sendMail({
       from: config.email.from,
-      to: config.email.caseworker[email.template],
+      to: this.getEmailRecipient(email),
       subject: email.subject,
       text: Hogan.compile(caseworkerPlainTextTemplates[email.template]).render(templateData),
       html: Hogan.compile(caseworkerHtmlTemplates[email.template]).render(templateData),
