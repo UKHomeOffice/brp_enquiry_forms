@@ -111,7 +111,7 @@ describe('apps/common/controllers/confirm', () => {
       controller.saveValues(req, res, err => {
         expect(err).not.to.be.ok;
         setStub.should.have.been.calledWith('subject',
-          'Form submitted: Report a problem with your new BRP (test-error)');
+          'Form submitted: Report a problem with your new BRP (test-error). Ref: fpgyxSgw7');
       });
     });
 
