@@ -5,7 +5,7 @@
   "description": "A Home Office application for Biometric Residence Permit covering lost and stolen, error on card and delivery error services.",
   "license": "GPL-2.0",
   "engines": {
-    "node": "^14.15.0"
+    "node": ">=18.12.1"
   },
   "scripts": {
     "start": "node server.js",
@@ -24,7 +24,7 @@
   "author": "HomeOffice",
   "dependencies": {
     "express": "^4.17.1",
-    "hof": "^19.14.17",
+    "hof": "^20.2.10",
     "hogan.js": "^3.0.2",
     "hot-shots": "^5.9.0",
     "i18n-future": "^2.0.1",
