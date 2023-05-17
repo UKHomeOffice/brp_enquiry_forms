@@ -182,3 +182,72 @@ Feature: A user should access the correct mistakes service and be able to log an
       Then I select 'Continue'
       Then I should see 'Family name must not be a URL' on the page
       Then I should see 'Given name(s) must not be a URL' on the page
+
+    @truncatedfields
+    Scenario: correct mistakes on brp form confirmed as correct should display confirmation for each field 
+      Given I start the 'correct-mistakes' application journey
+      Then I should be on the 'location' page showing 'Where did you apply for your visa?'
+      Then I check 'location-applied-yes'
+      Then I select 'Continue'
+      Then I should be on the 'about-error' page showing 'What’s the problem with your BRP?'
+      Then I check 'last-name-error-checkbox'
+      Then I fill 'last-name-error' with 'ThisIsAVeryVeryVeryLongFamilyName'
+      Then I check 'first-name-error-checkbox'
+      Then I fill 'first-name-error' with 'ThisIsAVeryVeryVeryLongGivenNames'
+      Then I check 'birth-place-error-checkbox'
+      Then I fill 'birth-place-error' with 'ThisIsAVeryLongPlaceOfBirth'
+      Then I select 'Continue'
+      Then I should be on the 'truncated' page showing 'Your birth place has 27 letters. Your BRP can only show a maximum of 16 letters, so it is shortened to this on your BRP'
+      Then I check 'truncated-yes'
+      Then I submit the application
+      Then I should be on the 'truncated' page showing 'Your last name has 33 letters. Your BRP can only show a maximum of 30 letters, so it is shortened to this on your BRP'
+      Then I check 'truncated-yes'
+      Then I submit the application
+      Then I should be on the 'truncated' page showing 'Your first name has 33 letters. Your BRP can only show a maximum of 30 letters, so it is shortened to this on your BRP'
+      Then I check 'truncated-yes'
+      Then I submit the application
+      Then I should be on the 'exit-truncated' page showing 'Please note the following information regarding the fields you have selected'
+      Then I should see 'Place of birth' on the page
+      Then I should see 'Family name' on the page
+      Then I should see 'Given name(s)' on the page
+
+@truncatedfields
+    Scenario: correct mistakes on brp form confirmed confirmed one truncated value as incorrect should display all 3 truncates values on confirm page 
+      Given I start the 'correct-mistakes' application journey
+      Then I should be on the 'location' page showing 'Where did you apply for your visa?'
+      Then I check 'location-applied-yes'
+      Then I select 'Continue'
+      Then I should be on the 'about-error' page showing 'What’s the problem with your BRP?'
+      Then I check 'last-name-error-checkbox'
+      Then I fill 'last-name-error' with 'ThisIsAVeryVeryVeryLongFamilyName'
+      Then I check 'first-name-error-checkbox'
+      Then I fill 'first-name-error' with 'ThisIsAVeryVeryVeryLongGivenNames'
+      Then I check 'birth-place-error-checkbox'
+      Then I fill 'birth-place-error' with 'ThisIsAVeryLongPlaceOfBirth'
+      Then I select 'Continue'
+      Then I should be on the 'truncated' page showing 'Your birth place has 27 letters. Your BRP can only show a maximum of 16 letters, so it is shortened to this on your BRP'
+      Then I check 'truncated-no'
+      Then I submit the application
+      Then I should be on the 'truncated' page showing 'Your last name has 33 letters. Your BRP can only show a maximum of 30 letters, so it is shortened to this on your BRP'
+      Then I check 'truncated-yes'
+      Then I submit the application
+      Then I should be on the 'truncated' page showing 'Your first name has 33 letters. Your BRP can only show a maximum of 30 letters, so it is shortened to this on your BRP'
+      Then I check 'truncated-no'
+      Then I submit the application
+      Then I should be on the 'uk-address' page showing 'Is there a suitable UK address we can deliver your BRP to?'
+      Then I check 'uk-address-radio-no'
+      Then I select 'Continue'
+      Then I should be on the 'personal-details' page showing 'How do your personal details appear on your BRP?'
+      Then I fill 'fullname' with 'Ronald Testman'
+      Then I fill the date 'date-of-birth' with '30-05-1990'
+      Then I fill 'nationality' with 'Namibia'
+      Then I fill 'brp-card' with 'XR1000123'
+      Then I select 'Continue'
+      Then I should be on the 'contact-details' page showing 'How should we contact you about your BRP?'
+      Then I fill 'email' with 'test@dtest.testemail'
+      Then I select 'Continue'
+      Then I should be on the 'confirm' page showing 'Check the details you have provided'
+      Then I should see 'Due to limitations, we can only print the first 16 characters of your Place of Birth and the first 30 characters of your Given Name(s) and Family Name on your BRP.' on the page
+      Then I should see 'ThisIsAVeryVeryVeryLongGivenNa' on the page
+      Then I should see 'ThisIsAVeryVeryVeryLongFamilyN' on the page
+      Then I should see 'ThisIsAVeryLongP' on the page

@@ -11,8 +11,11 @@ describe('apps/correct-mistakes/behaviours/truncated', () => {
   beforeEach(done => {
     req = reqres.req();
     res = reqres.res();
-
-    req.sessionModel.set('truncated-items', [{id: 'item-one'}, {id: 'item-two'}]);
+    req.form.historicalValues = {
+      'item-one': 'A really really long string',
+      'item-two': 'A really really long string'
+    };
+    req.sessionModel.set('truncated-items', [{id: 'item-one', max: 30}, {id: 'item-two', max: 30}]);
 
     const TruncatedController = Behaviour(Controller);
     controller = new TruncatedController({ template: 'index', route: '/index' });
@@ -44,7 +47,9 @@ describe('apps/correct-mistakes/behaviours/truncated', () => {
         truncated: 'no'
       };
       controller.saveValues(req, res, () => {
-        req.sessionModel.get('truncated-items').should.eql([{id: 'item-one', value: 'no'}, {id: 'item-two'}]);
+        req.sessionModel.get('truncated-items').should.eql([
+          {id: 'item-one', value: 'no', max: 30}, {id: 'item-two', max: 30}
+        ]);
       });
     });
 
