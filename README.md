@@ -76,7 +76,7 @@ $ yarn start
 Start the application with [Nodemon](https://www.npmjs.com/package/nodemon) in development mode.
 Debug is switched on and the server restarts when the JS or Sass are recompiled.
 ```bash
-$ npm run dev
+$ yarn run dev
 ```
 
 Run the unit tests
