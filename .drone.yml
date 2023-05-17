@@ -39,12 +39,6 @@ unit_tests: &unit_tests
   commands:
     - yarn run test:unit
 
-sonar_scanner: &sonar_scanner
-  pull: if-not-exists
-  image: quay.io/ukhomeofficedigital/sonar-scanner-node:latest
-  commands:
-    - sonar-scanner -Dproject.settings=./sonar-project.properties
-
 acceptance_tests: &acceptance_tests
   pull: if-not-exists
   image: mcr.microsoft.com/playwright:v1.12.3-focal
@@ -92,14 +86,6 @@ steps:
 
   - name: unit_tests_deploy
     <<: *unit_tests
-    when:
-      branch:
-        include:
-          - master
-      event: push
-
-  - name: sonar_scanner_deploy
-    <<: *sonar_scanner
     when:
       branch:
         include:
@@ -174,15 +160,6 @@ steps:
 
   - name: unit_tests_branch
     <<: *unit_tests
-    when:
-      branch:
-        include:
-          - master
-          - feature/*
-      event: pull_request
-
-  - name: sonar_scanner_branch
-    <<: *sonar_scanner
     when:
       branch:
         include:
