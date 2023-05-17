@@ -52,6 +52,7 @@
   "check-details-error": {
     "header": "Check the details you have provided",
     "subheader": "If any information is incorrect, you can change it here.",
+    "limitations-info": "Due to limitations, we can only print the first 16 characters of your Place of Birth and the first 30 characters of your Given Name(s) and Family Name on your BRP.",
     "corrected-details-table": {
       "title": "Corrected BRP details"
     },
@@ -97,7 +98,7 @@
     }
   },
   "truncated": {
-    "header": "Long names on BRPs",
+    "header": "Long names and places of birth on BRPs",
     "paras": {
       "one": {
         "parts": {
@@ -109,22 +110,43 @@
         "parts": {
           "one": "Your",
           "two": "has",
-          "three": "letters. Your BRP can only show a maximum of 30 letters, so it is shortened to this on your BRP:"
+          "three": "letters. Your BRP can only show a maximum of ",
+          "four": " letters, so it is shortened to this on your BRP:"
         }
       },
       "three": {
         "parts": {
-          "one": "Is this how it looks on your BRP?"
+          "one": "Is this how it looks on the BRP you've received?"
         }
       }
     },
     "reason-no": "Continue using this service. At the end you can check the spelling of your name, and we shall send you a replacement BRP"
   },
   "exit-truncated": {
-    "paras": {
-      "one": "Due to limitations, we can only print the first 30 characters of your name on your BRP.",
-      "two": "This is not an error and you will be able to use your BRP.",
-      "three": "You do not need to do anything else."
+    "title": "Please note the following information regarding the fields you have selected:",
+    "first-name": {
+      "paras": {
+        "one": "Due to limitations, we can only print the first ",
+        "two": " characters of your name on your BRP.",
+        "three": "This is not an error and you will be able to use your BRP.",
+        "four": "You do not need to do anything else."
+      }
+    },
+    "last-name": {
+      "paras": {
+        "one": "Due to limitations, we can only print the first ",
+        "two": " characters of your name on your BRP.",
+        "three": "This is not an error and you will be able to use your BRP.",
+        "four": "You do not need to do anything else."
+      }
+    },
+    "birth-place": {
+      "paras": {
+        "one": "Due to limitations, we can only print the first ",
+        "two": " characters of your birth place on your BRP.",
+        "three": "This is not an error and you will be able to use your BRP.",
+        "four": "You do not need to do anything else."
+      }
     }
   }
 }
