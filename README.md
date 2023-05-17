@@ -70,7 +70,7 @@ Run the app like normal and you should see all emails going to http://localhost:
 Start the application in default mode (production).
 We use Nginx to serve our static resources in production and ci.
 ```bash
-$ npm start
+$ yarn start
 ```
 
 Start the application with [Nodemon](https://www.npmjs.com/package/nodemon) in development mode.
