@@ -81,7 +81,7 @@ $ yarn run dev
 
 Run the unit tests
 ```bash
-$ npm run test
+$ yarn run test
 ```
 
 Run the EcmaScript (ES) linter.  Rules are defined in [.eslintrc](./.eslintrc)
