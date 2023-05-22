@@ -86,7 +86,7 @@ $ yarn run test
 
 Run the EcmaScript (ES) linter.  Rules are defined in [.eslintrc](./.eslintrc)
 ```bash
-$ npm run lint
+$ yarn run lint
 ```
 
 Run the jscs style checker. Rules are defined in [.jscsrc.json](./.jscsrc.json)
