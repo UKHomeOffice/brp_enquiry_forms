@@ -102,3 +102,4 @@ $ npm run sass
 ## Acceptance tests
 
 For details on [Acceptance tests](https://github.com/UKHomeOffice/brp_app/tree/master/acceptance_tests)
+
