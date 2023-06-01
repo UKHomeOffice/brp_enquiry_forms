@@ -172,7 +172,7 @@ Emailer.prototype.send = function send(email, callback) {
 
     function sendCustomerEmail() {
       if (email.to) {
-        logger.info('Emailing customer: ' + email.subject);
+        logger.info(`Emailing customer: ${email.subject}`);
         this.transporter.sendMail({
           from: config.email.from,
           replyTo: config.email.replyTo,
@@ -187,7 +187,7 @@ Emailer.prototype.send = function send(email, callback) {
       }
     }
 
-    logger.info('Emailing caseworker: ' + email.subject);
+    logger.info(`Emailing caseworker: ${email.subject}`);
     this.transporter.sendMail({
       from: config.email.from,
       to: this.getEmailRecipient(email),

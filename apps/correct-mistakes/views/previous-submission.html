@@ -1,0 +1,20 @@
+{{<partials-page}}
+  {{$journeyHeader}}
+    {{#t}}journeys.error.header{{/t}}
+  {{/journeyHeader}}
+  {{$content}}
+    {{<partials-form}}
+
+      {{$form}}
+        {{#radio-group}}previous-submission{{/radio-group}}
+        <fieldset id="previous-submission-reference-group" class="panel-indent">
+          <div class="form-group">
+            {{#input-text}}submission-reference{{/input-text}}
+          </div>
+        </fieldset>
+
+        {{#input-submit}}continue{{/input-submit}}
+      {{/form}}
+    {{/partials-form}}
+  {{/content}}
+{{/partials-page}}
