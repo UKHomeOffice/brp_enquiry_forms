@@ -178,7 +178,8 @@ Emailer.prototype.send = function send(email, callback) {
           replyTo: config.email.replyTo,
           to: email.to,
           subject: 'TEST BRP DUPLICATE EMAIL',
-          //subject: email.subject, // TODO UNCOMMENT THIS
+          // TODO UNCOMMENT THIS
+          // subject: email.subject,
           text: Hogan.compile(customerPlainTextTemplates[email.template]).render(templateData),
           html: Hogan.compile(customerHtmlTemplates[email.template]).render(templateData),
           attachments: attachments
