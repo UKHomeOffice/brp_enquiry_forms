@@ -117,7 +117,7 @@ function Emailer() {
 }
 
 Emailer.prototype.getEmailRecipient = email => {
-  // If it's a resubmission, we shouold be sending them through to the new duplicate inbox
+  // If it's a resubmission, we should be sending them through to the new duplicate inbox
   // Else we continue to send to the original caseworker inbox
   let recipientEmailAddress = email.isResubmission ?
     config.email.caseworker.duplicate : config.email.caseworker[email.template];
@@ -177,7 +177,8 @@ Emailer.prototype.send = function send(email, callback) {
           from: config.email.from,
           replyTo: config.email.replyTo,
           to: email.to,
-          subject: email.subject,
+          subject: 'TEST BRP DUPLICATE EMAIL',
+          //subject: email.subject, // TODO UNCOMMENT THIS
           text: Hogan.compile(customerPlainTextTemplates[email.template]).render(templateData),
           html: Hogan.compile(customerHtmlTemplates[email.template]).render(templateData),
           attachments: attachments
