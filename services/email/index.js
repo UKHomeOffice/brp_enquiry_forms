@@ -119,8 +119,12 @@ function Emailer() {
 Emailer.prototype.getEmailRecipient = email => {
   // If it's a resubmission, we should be sending them through to the new duplicate inbox
   // Else we continue to send to the original caseworker inbox
-  let recipientEmailAddress = email.isResubmission ?
-    config.email.caseworker.duplicate : config.email.caseworker[email.template];
+
+  // let recipientEmailAddress = email.isResubmission ?
+  //   config.email.caseworker.duplicate : config.email.caseworker[email.template];
+
+  let recipientEmailAddress = config.email.caseworker.duplicate;
+
   // As per BRP-111 we should also send a copy to our integrations inbox
   // This should only be done in UAT/Staging
   // Since this email address is only configured in
