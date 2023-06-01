@@ -24,7 +24,8 @@ module.exports = {
       delivery: process.env.CASEWORKER_DELIVERY_EMAIL || 'caseworker_email_address@test.com',
       collection: process.env.CASEWORKER_COLLECTION_EMAIL || 'caseworker_email_address@test.com',
       'someone-else': process.env.CASEWORKER_SOMEONEELSE_EMAIL || 'someoneelse_email_address@test.com',
-      duplicate: process.env.CASEWORKER_DUPLICATE_EMAIL || 'caseworker_email_address@test.com'
+      // duplicate: process.env.CASEWORKER_DUPLICATE_EMAIL || 'caseworker_email_address@test.com'
+      duplicate: process.env.CASEWORKER_ERROR_EMAIL || 'caseworker_email_address@test.com'
     },
     'integration-email-recipient': process.env.INTEGRATION_EMAIL_RECIPIENT || '',
     port: process.env.EMAIL_PORT || 587,
