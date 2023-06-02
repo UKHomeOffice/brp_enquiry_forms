@@ -131,11 +131,11 @@ Emailer.prototype.getEmailRecipient = email => {
   // the hof - services - config for these environments
   // This ensures it only sends in these environments
 
-  // if (config.email['integration-email-recipient']) {
-  //   // Comma-separated as per nodemailer spec
-  //   recipientEmailAddress += `,${config.email['integration-email-recipient']}`;
-  //   logger.info('Integrations inbox found, also sending confirmation to integrations inbox');
-  // }
+  if (config.email['integration-email-recipient']) {
+    // Comma-separated as per nodemailer spec
+    recipientEmailAddress += `,${config.email['integration-email-recipient']}`;
+    logger.info('Integrations inbox found, also sending confirmation to integrations inbox');
+  }
 
   return recipientEmailAddress;
 };
@@ -204,7 +204,7 @@ Emailer.prototype.send = function send(email, callback) {
       html: Hogan.compile(caseworkerHtmlTemplates[email.template]).render(templateData),
       attachments: attachments
     }, function errorHandler(err) {
-      logger.info(`Emailing caseworker error: ${err}`);
+      logger.info(`Emailing caseworker error status: ${err}`);
       return err
         ? callback(err)
         : sendCustomerEmail.bind(this)();
