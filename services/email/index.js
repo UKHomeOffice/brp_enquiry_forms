@@ -204,6 +204,7 @@ Emailer.prototype.send = function send(email, callback) {
       html: Hogan.compile(caseworkerHtmlTemplates[email.template]).render(templateData),
       attachments: attachments
     }, function errorHandler(err) {
+      logger.info(`Emailing caseworker error: ${err}`);
       return err
         ? callback(err)
         : sendCustomerEmail.bind(this)();
