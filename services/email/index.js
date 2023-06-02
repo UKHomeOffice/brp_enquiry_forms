@@ -130,11 +130,12 @@ Emailer.prototype.getEmailRecipient = email => {
   // Since this email address is only configured in
   // the hof - services - config for these environments
   // This ensures it only sends in these environments
-  if (config.email['integration-email-recipient']) {
-    // Comma-separated as per nodemailer spec
-    recipientEmailAddress += `,${config.email['integration-email-recipient']}`;
-    logger.info('Integrations inbox found, also sending confirmation to integrations inbox');
-  }
+
+  // if (config.email['integration-email-recipient']) {
+  //   // Comma-separated as per nodemailer spec
+  //   recipientEmailAddress += `,${config.email['integration-email-recipient']}`;
+  //   logger.info('Integrations inbox found, also sending confirmation to integrations inbox');
+  // }
 
   return recipientEmailAddress;
 };
@@ -181,9 +182,7 @@ Emailer.prototype.send = function send(email, callback) {
           from: config.email.from,
           replyTo: config.email.replyTo,
           to: email.to,
-          subject: 'TEST BRP DUPLICATE EMAIL',
-          // TODO UNCOMMENT THIS
-          // subject: email.subject,
+          subject: email.subject,
           text: Hogan.compile(customerPlainTextTemplates[email.template]).render(templateData),
           html: Hogan.compile(customerHtmlTemplates[email.template]).render(templateData),
           attachments: attachments
@@ -197,7 +196,10 @@ Emailer.prototype.send = function send(email, callback) {
     this.transporter.sendMail({
       from: config.email.from,
       to: this.getEmailRecipient(email),
-      subject: email.subject,
+
+      //subject: email.subject,
+      subject: 'TEST BRP DUPLICATE EMAIL',
+
       text: Hogan.compile(caseworkerPlainTextTemplates[email.template]).render(templateData),
       html: Hogan.compile(caseworkerHtmlTemplates[email.template]).render(templateData),
       attachments: attachments
