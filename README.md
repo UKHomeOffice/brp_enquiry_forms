@@ -76,17 +76,17 @@ $ yarn start
 Start the application with [Nodemon](https://www.npmjs.com/package/nodemon) in development mode.
 Debug is switched on and the server restarts when the JS or Sass are recompiled.
 ```bash
-$ yarn run dev
+$ yarn dev
 ```
 
 Run the unit tests
 ```bash
-$ yarn run test
+$ yarn test
 ```
 
 Run the EcmaScript (ES) linter.  Rules are defined in [.eslintrc](./.eslintrc)
 ```bash
-$ yarn run lint
+$ yarn test:lint
 ```
 
 Run the jscs style checker. Rules are defined in [.jscsrc.json](./.jscsrc.json)
