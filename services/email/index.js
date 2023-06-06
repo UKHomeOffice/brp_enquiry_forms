@@ -119,18 +119,14 @@ function Emailer() {
 Emailer.prototype.getEmailRecipient = email => {
   // If it's a resubmission, we should be sending them through to the new duplicate inbox
   // Else we continue to send to the original caseworker inbox
-
-  // let recipientEmailAddress = email.isResubmission ?
-  //   config.email.caseworker.duplicate : config.email.caseworker[email.template];
-
-  let recipientEmailAddress = config.email.caseworker.duplicate;
+  let recipientEmailAddress = email.isResubmission ?
+    config.email.caseworker.duplicate : config.email.caseworker[email.template];
 
   // As per BRP-111 we should also send a copy to our integrations inbox
   // This should only be done in UAT/Staging
   // Since this email address is only configured in
   // the hof - services - config for these environments
   // This ensures it only sends in these environments
-
   if (config.email['integration-email-recipient']) {
     // Comma-separated as per nodemailer spec
     recipientEmailAddress += `,${config.email['integration-email-recipient']}`;
@@ -196,10 +192,7 @@ Emailer.prototype.send = function send(email, callback) {
     this.transporter.sendMail({
       from: config.email.from,
       to: this.getEmailRecipient(email),
-
-      //subject: email.subject,
-      subject: 'TEST BRP DUPLICATE EMAIL',
-
+      subject: email.subject,
       text: Hogan.compile(caseworkerPlainTextTemplates[email.template]).render(templateData),
       html: Hogan.compile(caseworkerHtmlTemplates[email.template]).render(templateData),
       attachments: attachments
