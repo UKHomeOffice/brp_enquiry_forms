@@ -10,7 +10,19 @@ settings = Object.assign({}, settings, {
   routes: settings.routes.map(require),
   views: settings.views.map(view => path.resolve(__dirname, view)),
   getTerms: false,
-  getCookies: false
+  getCookies: false,
+  csp: {
+    imgSrc: [
+      'www.google-analytics.com',
+      'ssl.gstatic.com',
+      'www.google.co.uk/ads/ga-audiences'
+    ],
+    connectSrc: [
+      'https://www.google-analytics.com',
+      'https://region1.google-analytics.com',
+      'https://region1.analytics.google.com'
+    ]
+  }
 });
 
 const app = hof(settings);
