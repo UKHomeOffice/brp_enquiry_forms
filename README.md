@@ -51,7 +51,7 @@ See the [development documentation](./documentation/DEVELOPMENT.md) for a comple
 Run the following docker command to run maildev
 
 ```bash
-docker run -p 1080:80 -p 1025:25 djfarrelly/maildev
+docker run -p 1080:1080 -p 1025:1025 maildev/maildev
 ```
 
 set the following local environment variables
