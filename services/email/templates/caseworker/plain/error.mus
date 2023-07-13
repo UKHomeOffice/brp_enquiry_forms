@@ -39,16 +39,19 @@
   {{#first-name-error}}
     {{#t}}fields.first-name-error-checkbox.label{{/t}}
     {{first-name-error}}
+    This text will be truncated to: {{first-name-error-truncated}}
   {{/first-name-error}}
 
   {{#last-name-error}}
     {{#t}}fields.last-name-error-checkbox.label{{/t}}
     {{last-name-error}}
+    This text will be truncated to: {{last-name-error-truncated}}
   {{/last-name-error}}
 
   {{#birth-place-error}}
     {{#t}}fields.birth-place-error-checkbox.label{{/t}}
     {{birth-place-error}}
+    This text will be truncated to: {{birth-place-error-truncated}}
   {{/birth-place-error}}
 
   {{#date-of-birth-error-day}}

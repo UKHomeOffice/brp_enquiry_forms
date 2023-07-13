@@ -25,5 +25,9 @@ ignore:
   SNYK-JS-REQUEST-3361831:
     - hof > request:
         reason: No current upgrade available
-        expires: '2023-05-05T10:44:27.223Z'
+        expires: '2024-05-05T10:44:27.223Z'
+  SNYK-JS-XML2JS-5414874:
+     - '*':
+        reason: No current upgrade available
+        expires: '2024-05-05T10:44:27.223Z'
 patch: {}

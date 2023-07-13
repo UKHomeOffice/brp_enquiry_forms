@@ -70,23 +70,23 @@ Run the app like normal and you should see all emails going to http://localhost:
 Start the application in default mode (production).
 We use Nginx to serve our static resources in production and ci.
 ```bash
-$ npm start
+$ yarn start
 ```
 
 Start the application with [Nodemon](https://www.npmjs.com/package/nodemon) in development mode.
 Debug is switched on and the server restarts when the JS or Sass are recompiled.
 ```bash
-$ npm run dev
+$ yarn dev
 ```
 
 Run the unit tests
 ```bash
-$ npm run test
+$ yarn test
 ```
 
 Run the EcmaScript (ES) linter.  Rules are defined in [.eslintrc](./.eslintrc)
 ```bash
-$ npm run lint
+$ yarn test:lint
 ```
 
 Run the jscs style checker. Rules are defined in [.jscsrc.json](./.jscsrc.json)

@@ -28,6 +28,11 @@
     {{brp-card}}
   {{/brp-card}}
 
+  {{#passport}}
+    {{#t}}pages.check-details.table.headers.passport{{/t}}
+    {{passport}}
+  {{/passport}}
+
   Contact details
 
   {{#contact-address-street}}
