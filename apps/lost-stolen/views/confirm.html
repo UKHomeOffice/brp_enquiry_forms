@@ -74,6 +74,13 @@
               <td><a href="personal-details/edit#brp-card"  id='brp-card-change' class="button">{{#t}}buttons.change.brp-card{{/t}}</a></td>
             </tr>
           {{/values.brp-card}}
+          {{#values.passport}}
+            <tr data-id="passport">
+              <td>{{#t}}pages.check-details.table.headers.passport{{/t}}</td>
+              <td>{{values.passport}}</td>
+              <td><a href="personal-details/edit#passport"  id='passport-change' class="button">{{#t}}buttons.change.passport{{/t}}</a></td>
+            </tr>
+          {{/values.passport}}
           {{#values.email}}
             <tr date-id='email'>
               <td>{{#t}}pages.check-details.table.headers.email{{/t}}</td>

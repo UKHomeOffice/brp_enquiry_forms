@@ -85,7 +85,8 @@ describe('apps/correct-mistakes/behaviours/about-error', () => {
       });
       it('returns baseUrl and "/truncated"', () => {
         controller.getNextStep(req, res, () => {}).should.equal('/foo/truncated');
-        req.sessionModel.get('truncated-items').should.eql([{id: 'first-name-error'}]);
+        req.sessionModel.get('truncated-items')[0].id.should.eql('first-name-error');
+        req.sessionModel.get('truncated-items')[0].max.should.eql(30);
       });
     });
 
@@ -96,7 +97,8 @@ describe('apps/correct-mistakes/behaviours/about-error', () => {
       });
       it('returns baseUrl and "/truncated"', () => {
         controller.getNextStep(req, res, () => {}).should.equal('/foo/truncated');
-        req.sessionModel.get('truncated-items').should.eql([{id: 'last-name-error'}]);
+        req.sessionModel.get('truncated-items')[0].id.should.eql('last-name-error');
+        req.sessionModel.get('truncated-items')[0].max.should.eql(30);
       });
     });
 
@@ -107,7 +109,8 @@ describe('apps/correct-mistakes/behaviours/about-error', () => {
       });
       it('returns baseUrl and "/truncated"', () => {
         controller.getNextStep(req, res, () => {}).should.equal('/foo/truncated');
-        req.sessionModel.get('truncated-items').should.eql([{id: 'birth-place-error'}]);
+        req.sessionModel.get('truncated-items')[0].id.should.eql('birth-place-error');
+        req.sessionModel.get('truncated-items')[0].max.should.eql(16);
       });
     });
   });

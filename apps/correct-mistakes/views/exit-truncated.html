@@ -21,13 +21,18 @@
   {{/header}}
 
   {{$content}}
+    <p>{{#t}}pages.exit-truncated.title{{/t}}</p>
 
-    <p>{{#t}}pages.exit-truncated.paras.one{{/t}}</p>
+    {{#values.truncatedDetail}}
+      <p><strong>{{prettyName}}</strong></p>
+     
+      <p>{{translations.paras.one}}{{max}}{{translations.paras.two}}</p>
 
-    <p>{{#t}}pages.exit-truncated.paras.two{{/t}}</p>
+      <p>{{translations.paras.three}}</p>
 
-    <p>{{#t}}pages.exit-truncated.paras.three{{/t}}</p>
-
+      <p>{{translations.paras.four}}</p>
+    {{/values.truncatedDetail}}
+    
     <a href='https://www.gov.uk/done/brp-report-problem' class='button'>{{#t}}buttons.close{{/t}}</a>
 
   {{/content}}

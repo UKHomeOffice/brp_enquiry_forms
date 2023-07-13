@@ -36,5 +36,8 @@ module.exports = {
       value: 'true',
       field: 'use-address'
     }
+  },
+  passport: {
+    validate: ['required', 'notUrl']
   }
 };

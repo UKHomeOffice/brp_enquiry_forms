@@ -14,6 +14,7 @@ Feature: A user should be able to log a lost or stolen BRP
     Then I fill the date 'date-of-birth' with '30-05-1990'
     Then I fill 'nationality' with 'Namibia'
     Then I fill 'brp-card' with 'ZRX000123'
+    Then I fill 'passport' with '123456'
     Then I select 'Continue'
     Then I should be on the 'contact-details' page showing 'How should we contact you to tell you what to do next?'
     Then I fill 'email' with 'test@dtest.testemail'
@@ -34,6 +35,7 @@ Feature: A user should be able to log a lost or stolen BRP
     Then I fill the date 'date-of-birth' with '30-05-1990'
     Then I fill 'nationality' with 'Namibia'
     Then I fill 'brp-card' with 'ZRX000123'
+    Then I fill 'passport' with '123456'
     Then I select 'Continue'
     Then I should be on the 'contact-details' page showing 'How should we contact you to tell you what to do next?'
     Then I fill 'email' with 'test@dtest.testemail'
@@ -69,6 +71,7 @@ Feature: A user should be able to log a lost or stolen BRP
       Then I fill the date 'date-of-birth' with '30-05-1990'
       Then I fill 'nationality' with 'Namibia'
       Then I fill 'brp-card' with 'ZRX000123'
+      Then I fill 'passport' with '123456'
       Then I select 'Continue'
       Then I should be on the 'contact-details' page showing 'How should we contact you to tell you what to do next?'
       Then I fill 'email' with 'test@dtest.testemail'
@@ -90,3 +93,18 @@ Feature: A user should be able to log a lost or stolen BRP
       Then I fill the date 'date-lost' with '30-07-2015'
       Then I select 'Continue'
       Then I should see the 'Enter a date from 31/07/2015' error
+
+  @validation
+  Scenario: Lost or Stolen application Personal Details must provide a Passport Number
+    Given I start the 'lost-stolen' application journey
+    Then I should be on the 'where' page showing 'Where are you now?'
+    Then I check 'inside-uk-no'
+    Then I fill 'country' with 'Bahamas'
+    Then I select 'Continue'
+    Then I should be on the 'date-lost' page showing 'When did you realise you no longer had your BRP?'
+    Then I fill the date 'date-lost' with '30-05-2021'
+    Then I select 'Continue'
+    Then I should be on the 'personal-details' page showing 'What are your personal details?'
+    Then I fill 'fullname' with 'www.google.com'
+    Then I select 'Continue'
+    Then I should see 'What is your passport number?' on the page
