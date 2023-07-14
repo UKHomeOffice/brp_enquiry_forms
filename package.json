@@ -20,12 +20,12 @@
     "test:snyk": "snyk config set api=SNYK_TOKEN && snyk test",
     "build": "hof-build",
     "postinstall": "yarn run build",
-    "mail:dev": "docker run --rm -d -p 1080:1080 -p 1025:1025 maildev/maildev"
+    "mail:dev": "docker run --rm -p 1080:1080 -p 1025:1025 maildev/maildev"
   },
   "author": "HomeOffice",
   "dependencies": {
     "express": "^4.17.1",
-    "hof": "20.2.11-upgrade-redis-beta",
+    "hof": "20.3.11",
     "hogan.js": "^3.0.2",
     "hot-shots": "^5.9.0",
     "i18n-future": "^2.0.1",
