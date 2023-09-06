@@ -31,6 +31,10 @@ module.exports = {
         'nationality',
         'passport'
       ],
+      next: '/application-type'
+    },
+    '/application-type': {
+      fields: ['application-type', 'application-type-other'],
       next: '/contact-details'
     },
     '/contact-details': {

@@ -44,6 +44,9 @@ Feature: I should be able to log that my BRP has not arrived
     Then I fill 'nationality' with 'British Overseas Citizen'
     Then I fill 'passport' with '1234JA2345'
     Then I select 'Continue'
+    Then I should be on the 'application-type' page showing 'What type of application have you made?'
+    Then I check 'application-type-work'
+    Then I select 'Continue'
     Then I should be on the 'contact-details' page showing 'How should we contact you about your BRP?'
     Then I fill 'email' with 'test@test.test'
     Then I select 'Continue'
@@ -77,11 +80,15 @@ Feature: I should be able to log that my BRP has not arrived
     Then I fill 'nationality' with 'British Overseas Citizen'
     Then I fill 'passport' with '1234JA2345'
     Then I select 'Continue'
+    Then I should be on the 'application-type' page showing 'What type of application have you made?'
+    Then I check 'application-type-work'
+    Then I select 'Continue'
     Then I should be on the 'contact-details' page showing 'How should we contact you about your BRP?'
     Then I fill 'email' with 'test@test.test'
     Then I select 'Continue'
     Then I should be on the 'confirm' page showing 'Check the details you have provided'
     Then I should see 'Delivery details' on the page
+    Then I should see 'Application details' on the page
     Then I should see 'Personal details' on the page
     Then I should see 'Are you completing this form on behalf of the BRP holder?' on the page
 
@@ -133,6 +140,9 @@ Feature: I should be able to log that my BRP has not arrived
     Then I fill the date 'date-of-birth' with '24-5-1990'
     Then I fill 'nationality' with 'British Overseas Citizen'
     Then I fill 'passport' with '1234JA2345'
+    Then I select 'Continue'
+    Then I should be on the 'application-type' page showing 'What type of application have you made?'
+    Then I check 'application-type-work'
     Then I select 'Continue'
     Then I should be on the 'contact-details' page showing 'How should we contact you about your BRP?'
     Then I fill 'email' with 'test@test.test'

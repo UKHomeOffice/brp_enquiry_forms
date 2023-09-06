@@ -5,6 +5,7 @@ const _ = require('underscore');
 const StatsD = require('hot-shots');
 const client = new StatsD();
 const Model = require('../models/email');
+const applicationTypeOptions = require('../fields/application-type.js')['application-type'].options;
 
 function errorChecked(key, data) {
   if (data[key + '-checkbox']) {
@@ -18,12 +19,22 @@ function checkedErrors(data) {
   });
   return checked;
 }
+function appType(data) {
+  const apptype = data['application-type'];
+  const otherFreetext = data['application-type-other'];
+  let applicationType = _.get( _.find(applicationTypeOptions, a => a.value === apptype), 'label', '');
+  if (apptype === 'application-type-other') {
+    applicationType = _.get( _.find(applicationTypeOptions, a => a.value === apptype), 'label', '') +
+    ' - ' + otherFreetext;
+  }
+  return applicationType;
+}
 
 const serviceMap = {
-  '/not-arrived': () => {
+  '/not-arrived': data => {
     return {
       template: 'delivery',
-      subject: 'Form submitted: Your BRP hasn\'t arrived.'
+      subject: 'Form submitted: Your BRP hasn\'t arrived. Application Type: ' + appType(data)
     };
   },
   '/correct-mistakes': data => {
@@ -34,26 +45,27 @@ const serviceMap = {
     const suffix = data.triage ? '-triage' : '';
     return {
       template: 'error' + suffix,
-      subject: 'Form submitted: Report a problem with your new BRP (' + subjectErrors + ')'
+      subject: 'Form submitted: Report a problem with your new BRP (' + subjectErrors + ') Application Type: '
+      + appType(data)
     };
   },
   '/lost-stolen': data => {
     const suffix = (data['inside-uk'] === 'yes') ? '-uk' : '-abroad';
     return {
       template: 'lost-or-stolen' + suffix,
-      subject: 'Form submitted: Report a lost or stolen BRP.'
+      subject: 'Form submitted: Report a lost or stolen BRP. Application Type: ' + appType(data)
     };
   },
-  '/collection': () => {
+  '/collection': data => {
     return {
       template: 'collection',
-      subject: 'Form submitted: Report a collection problem.'
+      subject: 'Form submitted: Report a collection problem. Application Type: ' + appType(data)
     };
   },
-  '/someone-else': () => {
+  '/someone-else': data => {
     return {
       template: 'someone-else',
-      subject: 'Form submitted: Report someone else collecting your BRP.'
+      subject: 'Form submitted: Report someone else collecting your BRP. Application Type: ' + appType(data)
     };
   }
 };

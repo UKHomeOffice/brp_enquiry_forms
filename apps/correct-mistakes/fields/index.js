@@ -8,5 +8,6 @@ module.exports = _.extend(
   require('./uk-address'),
   require('./location-applied'),
   require('./personal-details'),
-  require('./same-address')
+  require('./same-address'),
+  require('./application-type')
 );

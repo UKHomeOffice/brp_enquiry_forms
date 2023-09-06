@@ -1,6 +1,4 @@
 {{<layout}}
-{{$step}}Step 5 of 5{{/step}}
-
   {{$journeyHeader}}
     {{#t}}journeys.lost.header{{/t}}
   {{/journeyHeader}}
@@ -75,7 +73,7 @@
             </tr>
           {{/values.brp-card}}
           {{#values.email}}
-            <tr date-id='email'>
+            <tr data-id='email'>
               <td>{{#t}}pages.check-details.table.headers.email{{/t}}</td>
               <td>{{values.email}}</td>
               <td><a href="contact-details/edit#email" id='email-change' class="button">{{#t}}buttons.change.email{{/t}}</a></td>
@@ -88,6 +86,27 @@
               <td><a href="contact-details/edit#phone" id='phone-change' class="button">{{#t}}buttons.change.phone{{/t}}</a></td>
             </tr>
           {{/values.phone}}
+        </table>
+
+        <h2 class="details-header">{{#t}}pages.check-details.table.headers.application-details{{/t}}</h2>
+        <table id="application-details" class="table-details">
+          <tbody>
+            {{#values.application-type}}
+            <tr data-id='application-type'>
+              <td>{{#t}}pages.check-details.table.headers.application-type{{/t}}</td>
+              <td class="no-white-space">
+                {{#t}}fields.application-type.options.{{values.application-type}}.label{{/t}}
+                <br />
+                <span>
+                  {{#values.application-type-other}}
+                  {{values.application-type-other}}
+                  {{/values.application-type-other}}
+                </span>
+              </td>
+              <td><a href="application-type/edit#application-type" id='application-type-change' class="button">{{#t}}buttons.change.application-type{{/t}}</a></td>
+            </tr>
+            {{/values.application-type}}
+          </tbody>
         </table>
 
         {{<partials-org-type}}{{/partials-org-type}}

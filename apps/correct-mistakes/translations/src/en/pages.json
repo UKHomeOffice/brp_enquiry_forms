@@ -36,7 +36,9 @@
         "passport": "Passport number",
         "email": "Email address",
         "phone": "Phone number",
-        "delivery-details": "Delivery address"
+        "delivery-details": "Delivery address",
+        "application-details": "Application details",
+        "application-type": "Application type"
       }
     },
     "org-help": {
@@ -126,5 +128,8 @@
       "two": "This is not an error and you will be able to use your BRP.",
       "three": "You do not need to do anything else."
     }
+  },
+  "application-type": {
+    "header": "What type of application have you made?"
   }
 }

@@ -17,6 +17,9 @@
     "header": "You don't need to use this service",
     "subheader": "You do not need to cancel your request for a nominated person to collect your BRP. If you are still unable to collect your BRP yourself, you can nominate a new person to collect it for you."
   },
+  "application-type": {
+    "header": "What type of application have you made?"
+  },
   "contact-details": {
     "header": "How should we contact you about your BRP?",
     "address": {
@@ -37,7 +40,8 @@
         "passport": "Passport number",
         "email": "Email address",
         "phone": "Phone number",
-        "id-number": "Identity document number"
+        "id-number": "Identity document number",
+        "application-type": "Application type"
       }
     },
     "org-help": {
@@ -63,6 +67,9 @@
       },
       "personal-details": {
         "title": "Your details"
+      },
+      "application-details": {
+        "title": "Application details"
       }
     }
   },

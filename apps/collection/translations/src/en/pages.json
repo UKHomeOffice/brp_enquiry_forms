@@ -11,6 +11,9 @@
     "description": "This could have been from a Post Office branch or a sponsor, such as your legal representative, employer, university or school.",
     "date-question": "If you have attempted to collect your BRP, when was it? (optional)"
   },
+  "application-type": {
+    "header": "What type of application have you made?"
+  },
   "contact-details": {
     "header": "How should we contact you about your BRP?",
     "address": {
