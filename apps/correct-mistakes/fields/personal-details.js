@@ -19,7 +19,7 @@ module.exports = {
         value: 'none',
         toggle: 'no-reference',
         child: 'input-text'
-      },
+      }
     ]
   }
 };
