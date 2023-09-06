@@ -20,7 +20,33 @@ module.exports = {
   passport: {
     validate: ['required', 'notUrl']
   },
-  'brp-card': {
-    hint: 'fields.brp-card.hint'
+  'brp-card-number': {
+    validate: ['required', 'notUrl', {type: 'regex', arguments: /^[a-z][a-z](\d|X)\d{6}$/gi }],
+    legend: 'fields.brp-card-number.legend',
+    label: 'fields.brp-card-number.label',
+    dependent: {
+      field: 'reference-number-radio',
+      value: 'brp-card'
+    },
+    formatter: ['uppercase']
+  },
+  'gwf-number': {
+    validate: ['required', 'notUrl', { type: 'maxlength', arguments: 100 }],
+    legend: 'fields.gwf-number.legend',
+    label: 'fields.gwf-number.label',
+    dependent: {
+      field: 'reference-number-radio',
+      value: 'gwf'
+    },
+    formatter: ['uppercase']
+  },
+  'no-reference': {
+    validate: ['required', 'notUrl', { type: 'maxlength', arguments: 100 }],
+    legend: 'fields.no-reference.legend',
+    label: 'fields.no-reference.label',
+    dependent: {
+      field: 'reference-number-radio',
+      value: 'none'
+    }
   }
 };

@@ -1,9 +1,25 @@
 'use strict';
 
 module.exports = {
-  'brp-card': {
-    validate: ['required', {type: 'regex', arguments: /^[a-z][a-z](\d|X)\d{6}$/gi }],
-    formatter: ['uppercase'],
-    hint: 'fields.brp-card.hint'
+  'reference-number-radio': {
+    validate: ['required'],
+    className: ['form-group'],
+    options: [
+      {
+        value: 'brp-card',
+        toggle: 'brp-card-number',
+        child: 'input-text'
+      },
+      {
+        value: 'gwf',
+        toggle: 'gwf-number',
+        child: 'input-text'
+      },
+      {
+        value: 'none',
+        toggle: 'no-reference',
+        child: 'input-text'
+      },
+    ]
   }
 };

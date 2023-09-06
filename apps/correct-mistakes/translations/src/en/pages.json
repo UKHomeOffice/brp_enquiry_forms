@@ -62,6 +62,7 @@
         "date-of-birth": "Date of birth",
         "nationality": "Nationality",
         "brp-card-number": "BRP number",
+        "gwf-number": "GWF number",
         "email": "Email address",
         "phone": "Phone number",
         "passport": "Passport number"

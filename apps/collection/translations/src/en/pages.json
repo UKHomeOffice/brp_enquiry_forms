@@ -67,7 +67,7 @@
         "fullname": "Full name",
         "date-of-birth": "Date of birth",
         "nationality": "Nationality",
-        "brp-card-number": "BRP number",
+        "reference-number": "BRP number",
         "email": "Email address",
         "phone": "Phone number",
         "passport": "Passport number"
