@@ -2,18 +2,26 @@
 'use strict';
 
 const _ = require('underscore');
+const fields = require('../translations/src/en/fields.json');
+const pages = require('../translations/src/en/pages.json');
 
 const truncateConfigs = [
   {
     id: 'first-name-error',
+    prettyName: fields['first-name-error-checkbox'].label,
+    translations: pages['exit-truncated']['first-name'],
     max: 30
   },
   {
     id: 'last-name-error',
+    prettyName: fields['last-name-error-checkbox'].label,
+    translations: pages['exit-truncated']['last-name'],
     max: 30
   },
   {
     id: 'birth-place-error',
+    prettyName: fields['birth-place-error-checkbox'].label,
+    translations: pages['exit-truncated']['birth-place'],
     max: 16
   }
 ];
@@ -34,7 +42,7 @@ function getTruncatedItems(req) {
 
   truncateConfigs.forEach(config => {
     if (isTooLong.call(this, config.id, config.max, req)) {
-      items.unshift({id: config.id});
+      items.unshift({id: config.id, max: config.max, prettyName: config.prettyName, translations: config.translations});
     }
   });
   return items;
@@ -76,6 +84,15 @@ module.exports = superclass => class AboutError extends superclass {
     });
 
     req.sessionModel.unset(diff);
+
+    // Regardless of whether we are truncating these fields
+    // We still need to store them against the appropriate "-truncated" property for our confirm page
+    truncateConfigs.forEach(config => {
+      req.sessionModel.set(
+        config.id + '-truncated',
+        req.form.values[config.id] ? req.form.values[config.id].slice(0, config.max) : ''
+      );
+    });
 
     super.saveValues(req, res, callback);
   }
