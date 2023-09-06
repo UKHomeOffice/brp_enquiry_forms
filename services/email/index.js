@@ -117,7 +117,11 @@ function Emailer() {
 }
 
 Emailer.prototype.getEmailRecipient = email => {
-  let recipientEmailAddress = config.email.caseworker[email.template];
+  // If it's a resubmission, we should be sending them through to the new duplicate inbox
+  // Else we continue to send to the original caseworker inbox
+  let recipientEmailAddress = email.isResubmission ?
+    config.email.caseworker.duplicate : config.email.caseworker[email.template];
+
   // As per BRP-111 we should also send a copy to our integrations inbox
   // This should only be done in UAT/Staging
   // Since this email address is only configured in
@@ -169,7 +173,7 @@ Emailer.prototype.send = function send(email, callback) {
 
     function sendCustomerEmail() {
       if (email.to) {
-        logger.info('Emailing customer: ' + email.subject);
+        logger.info(`Emailing customer: ${email.subject}`);
         this.transporter.sendMail({
           from: config.email.from,
           replyTo: config.email.replyTo,
@@ -184,7 +188,7 @@ Emailer.prototype.send = function send(email, callback) {
       }
     }
 
-    logger.info('Emailing caseworker: ' + email.subject);
+    logger.info(`Emailing caseworker: ${email.subject}`);
     this.transporter.sendMail({
       from: config.email.from,
       to: this.getEmailRecipient(email),
@@ -193,6 +197,7 @@ Emailer.prototype.send = function send(email, callback) {
       html: Hogan.compile(caseworkerHtmlTemplates[email.template]).render(templateData),
       attachments: attachments
     }, function errorHandler(err) {
+      logger.info(`Emailing caseworker error status: ${err}`);
       return err
         ? callback(err)
         : sendCustomerEmail.bind(this)();
