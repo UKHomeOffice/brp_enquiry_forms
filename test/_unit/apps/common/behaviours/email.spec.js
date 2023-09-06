@@ -2,6 +2,7 @@
 
 const { expect } = require('chai');
 const Controller = require('hof').controller;
+const moment = require('moment');
 
 describe('apps/common/controllers/confirm', () => {
   describe('.saveValues()', () => {
@@ -28,7 +29,9 @@ describe('apps/common/controllers/confirm', () => {
 
       req = reqres.req({
         session: {
-          foo: 'bar'
+          foo: 'bar',
+          'date-lost': '01 November 2022',
+          'date-of-birth': '01 November 2022'
         }
       });
       res = reqres.res();
@@ -42,7 +45,11 @@ describe('apps/common/controllers/confirm', () => {
       req.baseUrl = '/collection';
       controller.saveValues(req, res, err => {
         expect(err).not.to.be.ok;
-        constructorStub.should.have.been.calledWith({ foo: 'bar' });
+        const data = req.sessionModel.attributes;
+        constructorStub.should.have.been.calledWith({
+          foo: 'bar',
+          'date-lost': moment(data['date-lost']).format('DD MMMM YYYY'),
+          'date-of-birth': moment(data['date-of-birth']).format('DD MMMM YYYY')});
         saveStub.should.have.been.called;
       });
     });
