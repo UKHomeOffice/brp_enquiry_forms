@@ -14,7 +14,6 @@ const values = {
   nationality: 'United Arab Emirates',
   'brp-card': '123',
   'phone:': '0123',
-  'use-address': 'true',
   'org-help': 'yes'
 };
 

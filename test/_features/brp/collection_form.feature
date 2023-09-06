@@ -19,9 +19,11 @@ Feature: A user should access the collection problem service and be able to log 
     Then I fill 'passport' with '1234JA2345'
     Then I select 'Continue'
     Then I should be on the 'contact-details' page showing 'How should we contact you about your BRP?'
-    Then I fill 'email' with 'test@test.test'
+    Then I check 'has-email-radio-true'
+    Then I fill 'contact-details-email' with 'test@test.test'
     Then I select 'Continue'
     Then I should be on the 'confirm' page showing 'Check the details you have provided'
+    And I should see 'test@test.test' on the page
 
   @unprovenIdentity
   Scenario: collection application to be contacted via post
@@ -41,7 +43,7 @@ Feature: A user should access the collection problem service and be able to log 
     Then I fill 'passport' with '1234JA2345'
     Then I select 'Continue'
     Then I should be on the 'contact-details' page showing 'How should we contact you about your BRP?'
-    Then I check 'use-address'
+    Then I check 'has-email-radio-false'
     Then I fill 'contact-address-house-number' with '17'
     Then I fill 'contact-address-street' with 'test avenue'
     Then I fill 'contact-address-town' with 'Rotherham'
@@ -50,6 +52,7 @@ Feature: A user should access the collection problem service and be able to log 
     Then I fill 'phone' with '071234567890'
     Then I select 'Continue'
     Then I should be on the 'confirm' page showing 'Check the details you have provided'
+    And I should see 'RH17 5BE' on the page
 
   @lostPassport
   Scenario: collection application to be contacted via post
@@ -69,7 +72,7 @@ Feature: A user should access the collection problem service and be able to log 
     Then I fill 'passport' with '1234JA2345'
     Then I select 'Continue'
     Then I should be on the 'contact-details' page showing 'How should we contact you about your BRP?'
-    Then I check 'use-address'
+    Then I check 'has-email-radio-false'
     Then I fill 'contact-address-house-number' with '17'
     Then I fill 'contact-address-street' with 'test avenue'
     Then I fill 'contact-address-town' with 'Rotherham'
@@ -78,6 +81,7 @@ Feature: A user should access the collection problem service and be able to log 
     Then I fill 'phone' with '071234567890'
     Then I select 'Continue'
     Then I should be on the 'confirm' page showing 'Check the details you have provided'
+    And I should see 'RH17 5BE' on the page
 
   @lostPassport
   Scenario: collection application to be contacted via email
@@ -97,9 +101,11 @@ Feature: A user should access the collection problem service and be able to log 
     Then I fill 'passport' with '1234JA2345'
     Then I select 'Continue'
     Then I should be on the 'contact-details' page showing 'How should we contact you about your BRP?'
-    Then I fill 'email' with 'test@test.test'
+    Then I check 'has-email-radio-true'
+    Then I fill 'contact-details-email' with 'test@test.test'
     Then I select 'Continue'
     Then I should be on the 'confirm' page showing 'Check the details you have provided'
+    And I should see 'test@test.test' on the page
 
   @noBrp
   Scenario: collection application to be contacted via post
@@ -118,7 +124,7 @@ Feature: A user should access the collection problem service and be able to log 
     Then I fill 'passport' with '1234JA2345'
     Then I select 'Continue'
     Then I should be on the 'contact-details' page showing 'How should we contact you about your BRP?'
-    Then I check 'use-address'
+    Then I check 'has-email-radio-false'
     Then I fill 'contact-address-house-number' with '17'
     Then I fill 'contact-address-street' with 'test avenue'
     Then I fill 'contact-address-town' with 'Rotherham'
@@ -127,6 +133,7 @@ Feature: A user should access the collection problem service and be able to log 
     Then I fill 'phone' with '071234567890'
     Then I select 'Continue'
     Then I should be on the 'confirm' page showing 'Check the details you have provided'
+    And I should see 'RH17 5BE' on the page
 
   @noBrp
   Scenario: collection application to be contacted via email
@@ -145,10 +152,11 @@ Feature: A user should access the collection problem service and be able to log 
     Then I fill 'passport' with '1234JA2345'
     Then I select 'Continue'
     Then I should be on the 'contact-details' page showing 'How should we contact you about your BRP?'
-    Then I fill 'email' with 'test@test.test'
+    Then I check 'has-email-radio-true'
+    Then I fill 'contact-details-email' with 'test@test.test'
     Then I select 'Continue'
     Then I should be on the 'confirm' page showing 'Check the details you have provided'
-
+    And I should see 'test@test.test' on the page
 
   @noBrp
   Scenario: collection application to be contacted via email
@@ -167,9 +175,11 @@ Feature: A user should access the collection problem service and be able to log 
     Then I fill 'passport' with '1234JA2345'
     Then I select 'Continue'
     Then I should be on the 'contact-details' page showing 'How should we contact you about your BRP?'
-    Then I fill 'email' with 'test@test.test'
+    Then I check 'has-email-radio-true'
+    Then I fill 'contact-details-email' with 'test@test.test'
     Then I select 'Continue'
     Then I should be on the 'confirm' page showing 'Check the details you have provided'
+    And I should see 'test@test.test' on the page
 
   @validation
   Scenario: Collection application Personal Details not a URL validation

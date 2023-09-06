@@ -5,7 +5,6 @@ Feature('Lost or Stolen - Happy path');
 
 const values = {
   'inside-uk': 'yes',
-  'use-address': 'true',
   'org-help': 'yes'
 };
 

@@ -16,9 +16,11 @@ Feature: A user should be able to log a lost or stolen BRP
     Then I fill 'brp-card' with 'ZRX000123'
     Then I select 'Continue'
     Then I should be on the 'contact-details' page showing 'How should we contact you to tell you what to do next?'
-    Then I fill 'email' with 'test@dtest.testemail'
+    Then I check 'has-email-radio-true'
+    Then I fill 'contact-details-email' with 'test@dtest.testemail'
     Then I select 'Continue'
     Then I should be on the 'confirm' page showing 'Check the details you have provided'
+    And I should see 'test@dtest.testemail' on the page
 
   Scenario: Lost brp outside the UK
     Given I start the 'lost-stolen' application journey
@@ -36,9 +38,11 @@ Feature: A user should be able to log a lost or stolen BRP
     Then I fill 'brp-card' with 'ZRX000123'
     Then I select 'Continue'
     Then I should be on the 'contact-details' page showing 'How should we contact you to tell you what to do next?'
-    Then I fill 'email' with 'test@dtest.testemail'
+    Then I check 'has-email-radio-true'
+    Then I fill 'contact-details-email' with 'test@dtest.testemail'
     Then I select 'Continue'
     Then I should be on the 'confirm' page showing 'Check the details you have provided'
+    And I should see 'test@dtest.testemail' on the page
 
   @validation
   Scenario: Lost or Stolen application Personal Details not a URL validation
@@ -71,7 +75,8 @@ Feature: A user should be able to log a lost or stolen BRP
       Then I fill 'brp-card' with 'ZRX000123'
       Then I select 'Continue'
       Then I should be on the 'contact-details' page showing 'How should we contact you to tell you what to do next?'
-      Then I fill 'email' with 'test@dtest.testemail'
+      Then I check 'has-email-radio-true'
+      Then I fill 'contact-details-email' with 'test@dtest.testemail'
       Then I select 'Continue'
       Then I should be on the 'confirm' page showing 'Check the details you have provided'
       Then I check 'org-help-yes'

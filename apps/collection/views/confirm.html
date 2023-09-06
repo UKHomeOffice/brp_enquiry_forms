@@ -145,7 +145,7 @@
             <td><a href="personal-details/edit#nationality" class="button">{{#t}}buttons.change.nationality{{/t}}</a></td>
           </tr>
           {{/values.nationality}}
-          {{#values.use-address}}
+          {{^values.contact-details-email}}
           {{#values.contact-address-street}}
             <tr>
               <td>{{#t}}pages.check-details.table.headers.contact-address{{/t}}</td>
@@ -158,7 +158,7 @@
               <td><a href="contact-details/edit#address-group" class="button">{{#t}}buttons.change.address{{/t}}</a></td>
             </tr>
           {{/values.contact-address-street}}
-          {{/values.use-address}}
+          {{/values.contact-details-email}}
           {{#values.passport}}
           <tr>
             <td>{{#t}}pages.check-details.table.headers.passport{{/t}}</td>
@@ -166,13 +166,13 @@
             <td><a href="personal-details/edit#passport" class="button">{{#t}}buttons.change.passport{{/t}}</a></td>
           </tr>
           {{/values.passport}}
-          {{#values.email}}
+          {{#values.contact-details-email}}
           <tr>
             <td>{{#t}}pages.check-details.table.headers.email{{/t}}</td>
-            <td>{{values.email}}</td>
+            <td>{{values.contact-details-email}}</td>
             <td><a href="contact-details/edit#email" class="button">{{#t}}buttons.change.email{{/t}}</a></td>
           </tr>
-          {{/values.email}}
+          {{/values.contact-details-email}}
           {{#values.phone}}
             <tr>
               <td>{{#t}}pages.check-details.table.headers.phone{{/t}}</td>

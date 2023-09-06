@@ -118,8 +118,8 @@ module.exports = {
     },
     '/contact-details': {
       fields: [
-        'email',
-        'use-address',
+        'has-email-radio',
+        'contact-details-email',
         'contact-address-house-number',
         'contact-address-street',
         'contact-address-town',

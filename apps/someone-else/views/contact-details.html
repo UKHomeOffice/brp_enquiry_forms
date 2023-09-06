@@ -31,11 +31,7 @@
 
     {{$form}}
 
-      {{#input-text}}email{{/input-text}}
-
-      {{#input-phone}}phone{{/input-phone}}
-
-      {{#checkbox}}use-address{{/checkbox}}
+      {{#radio-group}}has-email-radio{{/radio-group}}
 
       <fieldset id="address-group" class="panel-indent js-hidden">
         <legend class="visuallyhidden">
@@ -45,6 +41,15 @@
         </legend>
 
         <p>{{#t}}pages.contact-details.address.title{{/t}}</p>
+
+        <div class="notice">
+          <i class="icon icon-important">
+            <span class="visuallyhidden">Warning</span>
+          </i>
+          <strong class="bold-small">
+            {{#t}}pages.contact-details.delay{{/t}}
+          </strong>
+        </div>
 
         {{#input-text}}contact-address-house-number{{/input-text}}
 
@@ -56,16 +61,9 @@
 
         {{#input-text-code}}contact-address-postcode{{/input-text-code}}
 
-        <div class="notice">
-          <i class="icon icon-important">
-            <span class="visuallyhidden">Warning</span>
-          </i>
-          <strong class="bold-small">
-            {{#t}}pages.contact-details.delay{{/t}}
-          </strong>
-        </div>
-
       </fieldset>
+
+      {{#input-phone}}phone{{/input-phone}}
 
       {{#input-submit}}continue{{/input-submit}}
 

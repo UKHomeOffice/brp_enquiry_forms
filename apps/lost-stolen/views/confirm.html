@@ -53,7 +53,7 @@
             <td>{{values.nationality}}</td>
             <td><a href="personal-details/edit#nationality" id='nationality-change' class="button">{{#t}}buttons.change.nationality{{/t}}</a></td>
           </tr>
-          {{#values.use-address}}
+          {{^values.contact-details-email}}
           {{#values.contact-address-street}}
             <tr data-id="address">
               <td>{{#t}}pages.check-details.table.headers.contact-address{{/t}}</td>
@@ -66,7 +66,7 @@
               <td><a href="contact-details/edit#address-group" id='address-change'class="button">{{#t}}buttons.change.address{{/t}}</a></td>
             </tr>
           {{/values.contact-address-street}}
-          {{/values.use-address}}
+          {{/values.contact-details-email}}
           {{#values.brp-card}}
             <tr data-id="brp-card">
               <td>{{#t}}pages.check-details.table.headers.brp-card-number{{/t}}</td>
@@ -74,13 +74,13 @@
               <td><a href="personal-details/edit#brp-card"  id='brp-card-change' class="button">{{#t}}buttons.change.brp-card{{/t}}</a></td>
             </tr>
           {{/values.brp-card}}
-          {{#values.email}}
+          {{#values.contact-details-email}}
             <tr date-id='email'>
               <td>{{#t}}pages.check-details.table.headers.email{{/t}}</td>
-              <td>{{values.email}}</td>
+              <td>{{values.contact-details-email}}</td>
               <td><a href="contact-details/edit#email" id='email-change' class="button">{{#t}}buttons.change.email{{/t}}</a></td>
             </tr>
-          {{/values.email}}
+          {{/values.contact-details-email}}
           {{#values.phone}}
             <tr data-id="phone">
               <td>{{#t}}pages.check-details.table.headers.phone{{/t}}</td>

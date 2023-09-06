@@ -63,10 +63,6 @@ module.exports = {
     label: 'fields.phone.label'
   },
   'contact-address-county': {
-    label: 'fields.address-county.label',
-    dependent: {
-      value: 'true',
-      field: 'use-address'
-    }
+    label: 'fields.address-county.label'
   }
 };
