@@ -21,7 +21,15 @@ module.exports = {
       next: '/personal-details'
     },
     '/personal-details': {
-      fields: ['fullname', 'date-of-birth', 'nationality', 'brp-card'],
+      fields: [
+        'fullname',
+        'date-of-birth',
+        'nationality',
+        'reference-number-radio',
+        'brp-card-number',
+        'gwf-number',
+        'no-reference'
+      ],
       backLink: 'date-lost',
       next: '/contact-details'
     },

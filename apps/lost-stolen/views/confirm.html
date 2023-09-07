@@ -67,13 +67,27 @@
             </tr>
           {{/values.contact-address-street}}
           {{/values.use-address}}
-          {{#values.brp-card}}
-            <tr data-id="brp-card">
-              <td>{{#t}}pages.check-details.table.headers.brp-card-number{{/t}}</td>
-              <td>{{values.brp-card}}</td>
-              <td><a href="personal-details/edit#brp-card"  id='brp-card-change' class="button">{{#t}}buttons.change.brp-card{{/t}}</a></td>
-            </tr>
-          {{/values.brp-card}}
+          {{#values.brp-card-number}}
+          <tr>
+            <td>{{#t}}pages.check-details.table.headers.brp-card-number{{/t}}</td>
+            <td>{{values.brp-card-number}}</td>
+            <td><a href="personal-details/edit#brp-card" id='brp-card-change' class="button">{{#t}}buttons.change.brp-card{{/t}}</a></td>
+          </tr>
+          {{/values.brp-card-number}}
+          {{#values.gwf-number}}
+          <tr>
+            <td>{{#t}}pages.check-details.table.headers.gwf-number{{/t}}</td>
+            <td>{{values.gwf-number}}</td>
+            <td><a href="personal-details/edit#gwf" id='gwf-change' class="button">{{#t}}buttons.change.gwf{{/t}}</a></td>
+          </tr>
+          {{/values.gwf-number}}
+          {{#values.no-reference}}
+          <tr>
+            <td>{{#t}}pages.check-details.table.headers.passport{{/t}}</td>
+            <td>{{values.no-reference}}</td>
+            <td><a href="personal-details/edit#passport" class="button">{{#t}}buttons.change.passport{{/t}}</a></td>
+          </tr>
+          {{/values.no-reference}}
           {{#values.email}}
             <tr date-id='email'>
               <td>{{#t}}pages.check-details.table.headers.email{{/t}}</td>

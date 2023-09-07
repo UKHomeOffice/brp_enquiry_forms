@@ -6,6 +6,8 @@
     "nationality": "Change <span class=\"visuallyhidden\">nationality</span>",
     "address": "Change <span class=\"visuallyhidden\">address</span>",
     "brp-card": "Change <span class=\"visuallyhidden\">brp number</span>",
+    "gwf": "Change <span class=\"visuallyhidden\">gwf number</span>",
+    "passport": "Change <span class=\"visuallyhidden\">passport number</span>",
     "email": "Change <span class=\"visuallyhidden\">email address</span>",
     "phone": "Change <span class=\"visuallyhidden\">phone number</span>"
   }
