@@ -110,7 +110,7 @@ Feature: A user should be able to log a lost or stolen BRP
     Then I check 'reference-number-radio-brp-card'
     Then I fill 'brp-card-number' with 'ZR000123'
     Then I select 'Continue'
-    Then I should see 'Enter your BRP number in the correct format; for example, ‘ZUX123456 or ZU1234567’' on the page
+    Then I should see 'Enter your BRP number in the correct format; for example, ‘RZX123456 or RZ1234567’' on the page
 
   @validation_error
   Scenario: GWF number validation
@@ -129,6 +129,9 @@ Feature: A user should be able to log a lost or stolen BRP
     Then I fill 'gwf-number' with ''
     Then I select 'Continue'
     Then I should see 'What is your GWF number?' on the page
+    Then I fill 'gwf-number' with ' 8GWF01234567'
+    Then I select 'Continue'
+    Then I should see the 'Enter your GWF number in the correct format; for example, ‘GWF012345678’' error
 
   @validation_error
   Scenario: Passport number validation

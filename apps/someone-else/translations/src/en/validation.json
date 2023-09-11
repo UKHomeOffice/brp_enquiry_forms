@@ -37,7 +37,7 @@
   },
   "someone-else-id-number": {
     "required": "What is the nominated person's identity document number?",
-    "brp-valid": "BRP number must be in the correct format; for example, ‘ZUX123456 or ZU1234567’",
+    "brp-valid": "BRP number must be in the correct format; for example, ‘RZX123456 or RZ1234567’",
     "notUrl": "The nominatated person's identity document number must not be a URL"
   },
   "someone-else-reason-radio": {

@@ -65,7 +65,7 @@
   },
   "brp-card-number": {
     "required": "What is your BRP number?",
-    "regex": "Enter your BRP number in the correct format; for example, ‘ZUX123456 or ZU1234567’"
+    "regex": "Enter your BRP number in the correct format; for example, ‘RZX123456 or RZ1234567’"
   },
   "gwf-number": {
     "required": "What is your GWF number?",

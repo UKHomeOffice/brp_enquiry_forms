@@ -21,7 +21,7 @@ module.exports = {
     validate: ['required', 'notUrl']
   },
   'brp-card-number': {
-    validate: ['required', 'notUrl', {type: 'regex', arguments: /^[a-z][a-z](\d|X)\d{6}$/gi }],
+    validate: ['required', 'notUrl', {type: 'regex', arguments: /^r[a-z](\d|X)\d{6}$/gi }],
     legend: 'fields.brp-card-number.legend',
     label: 'fields.brp-card-number.label',
     dependent: {
@@ -31,7 +31,7 @@ module.exports = {
     formatter: ['uppercase']
   },
   'gwf-number': {
-    validate: ['required', 'notUrl', { type: 'maxlength', arguments: 100 }],
+    validate: ['required', 'notUrl', { type: 'regex', arguments: /^GWF[0-9]{9}$/ }],
     legend: 'fields.gwf-number.legend',
     label: 'fields.gwf-number.label',
     dependent: {
