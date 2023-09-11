@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = {
-  'consignment-number-radio': {
+  'tracking-number-radio': {
     mixin: 'radio-group',
     validate: ['required'],
     className: ['inline', 'form-group'],
@@ -11,15 +11,15 @@ module.exports = {
     options: [
       {
         value: 'yes',
-        toggle: 'consignment-number-fieldset'
+        toggle: 'tracking-number-fieldset'
       },
       {value: 'no'}
     ]
   },
-  'consignment-number': {
-    validate: [{type: 'maxlength', arguments: 22}, 'notUrl'],
+  'tracking-number': {
+    validate: ['required', {type: 'maxlength', arguments: 22}, 'notUrl'],
     dependent: {
-      field: 'consignment-number-radio',
+      field: 'tracking-number-radio',
       value: 'yes'
     }
   }

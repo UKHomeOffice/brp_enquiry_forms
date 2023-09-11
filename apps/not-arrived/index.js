@@ -6,18 +6,18 @@ module.exports = {
   params: '/:action?',
   steps: {
     '/post-office-collect': {
-      next: '/consignment-number',
+      next: '/tracking-number',
       behaviours: [require('./behaviours/change-path')],
       template: 'collection.html',
       fields: [
         'collection'
       ]
     },
-    '/consignment-number': {
+    '/tracking-number': {
       next: '/letter-received',
       fields: [
-        'consignment-number-radio',
-        'consignment-number'
+        'tracking-number-radio',
+        'tracking-number'
       ],
       backLink: 'post-office-collect'
     },
@@ -29,7 +29,7 @@ module.exports = {
         'no-letter',
         'case-id-number'
       ],
-      backLink: 'consignment-number',
+      backLink: 'tracking-number',
       next: '/same-address',
       forks: [{
         target: '/letter-not-received',
