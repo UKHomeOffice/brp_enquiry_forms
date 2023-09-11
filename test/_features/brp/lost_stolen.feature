@@ -14,7 +14,7 @@ Feature: A user should be able to log a lost or stolen BRP
     Then I fill the date 'date-of-birth' with '30-05-1990'
     Then I fill 'nationality' with 'Namibia'
     Then I check 'reference-number-radio-brp-card'
-    Then I fill 'brp-card-number' with 'ZRX000123'
+    Then I fill 'brp-card-number' with 'RZX000123'
     Then I select 'Continue'
     Then I should be on the 'contact-details' page showing 'How should we contact you to tell you what to do next?'
     Then I fill 'email' with 'test@dtest.testemail'
