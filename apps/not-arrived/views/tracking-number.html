@@ -13,13 +13,13 @@
   {{/propositionHeader}}
 
   {{$title}}
-    {{#t}}pages.consignment-number.header{{/t}}
+    {{#t}}pages.tracking-number.header{{/t}}
   {{/title}}
 
   {{$header}}
     {{<partials-page-header}}
       {{$page-header}}
-        {{#t}}pages.consignment-number.header{{/t}}
+        {{#t}}pages.tracking-number.header{{/t}}
       {{/page-header}}
     {{/partials-page-header}}
   {{/header}}
@@ -28,11 +28,11 @@
     {{<partials-form}}
       {{$form}}
 
-        {{#radio-group}}consignment-number-radio{{/radio-group}}
-  
-        <fieldset id="consignment-number-fieldset" class="panel-indent">
+        {{#radio-group}}tracking-number-radio{{/radio-group}}
+
+        <fieldset id="tracking-number-fieldset" class="panel-indent">
           <div class="form-group">
-            {{#input-text}}consignment-number{{/input-text}}
+            {{#input-text}}tracking-number{{/input-text}}
           </div>
 
         </fieldset>

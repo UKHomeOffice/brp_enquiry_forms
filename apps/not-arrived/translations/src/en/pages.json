@@ -2,8 +2,8 @@
   "post-office-collect": {
     "header": "Were you due to collect your document from the Post Office?"
   },
-  "consignment-number": {
-    "header": "Do you have a consignment number?"
+  "tracking-number": {
+    "header": "Do you have a tracking number?"
   },
   "letter-received": {
     "header": "Have you received your decision by letter or email?",
@@ -88,7 +88,7 @@
         "no-letter": "You do not have the delivery letter",
         "delivery-details": "Delivery details",
         "delivery-address": "Delivery address",
-        "consignment-number": "Consingment Number"
+        "tracking-number": "Tracking Number"
       }
     },
     "org-help": {
