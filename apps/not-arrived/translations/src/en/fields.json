@@ -21,7 +21,8 @@
   },
   "tracking-number": {
     "legend": "Tracking number",
-    "label": "What is your tracking number?"
+    "label": "What is your tracking number?",
+    "hint": "If applicable, the consignment number may also be added here"
   },
   "delivery-date": {
     "label": "Date",
