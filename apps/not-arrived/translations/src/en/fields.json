@@ -9,7 +9,7 @@
       }
     }
   },
-  "consignment-number-radio": {
+  "tracking-number-radio": {
     "options": {
       "yes": {
         "label": "Yes"
@@ -19,9 +19,10 @@
       }
     }
   },
-  "consignment-number": {
-    "legend": "Consignment number",
-    "label": "What is your consignment number?"
+  "tracking-number": {
+    "legend": "Tracking number",
+    "label": "What is your tracking number?",
+    "hint": "If applicable, the consignment number may also be added here"
   },
   "delivery-date": {
     "label": "Date",

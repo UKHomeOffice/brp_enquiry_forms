@@ -2,12 +2,12 @@
   "address-match": {
     "required": "Tell us if your address is the same as on the letter from the Home Office"
   },
-  "consignment-number": {
-    "required": "Do you have a consignment number?",
-    "notUrl": "Consignment number must not be a URL"
+  "tracking-number": {
+    "required": "Enter your tracking number?",
+    "notUrl": "Tracking number must not be a URL"
   },
-  "consignment-number-radio": {
-    "required": "Do you have a consignment number?"
+  "tracking-number-radio": {
+    "required": "Do you have a tracking number?"
   },
   "collection": {
     "required": "Were you due to collect your document from the Post Office?"
