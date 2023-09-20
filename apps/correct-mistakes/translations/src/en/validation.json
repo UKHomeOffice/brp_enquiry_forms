@@ -63,9 +63,16 @@
   "passport": {
     "required": "What is your passport number?"
   },
-  "brp-card": {
+  "brp-card-number": {
     "required": "What is your BRP number?",
-    "regex": "Enter your BRP number in the correct format; for example, ‘ZUX123456 or ZU1234567’"
+    "regex": "Enter your BRP number in the correct format; for example, ‘RZX123456 or RZ1234567’"
+  },
+  "gwf-number": {
+    "required": "What is your GWF number?",
+    "regex": "Enter your GWF number in the correct format; for example, ‘GWF012345678’"
+  },
+  "no-reference": {
+    "required": "What is your passport number?"
   },
   "error-selection": {
     "required": "Tick one or more boxes"

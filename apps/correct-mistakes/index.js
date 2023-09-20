@@ -112,7 +112,13 @@ module.exports = {
     '/personal-details': {
       template: 'personal-details-brp',
       fields: [
-        'fullname', 'date-of-birth', 'nationality', 'brp-card'
+        'fullname',
+        'date-of-birth',
+        'nationality',
+        'reference-number-radio',
+        'brp-card-number',
+        'gwf-number',
+        'no-reference'
       ],
       next: '/contact-details'
     },

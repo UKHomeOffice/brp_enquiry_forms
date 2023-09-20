@@ -1,6 +1,14 @@
 {
   "location-applied": {
-    "legend": "Where did you make your application?"
+    "legend": "Where did you make your application?",
+    "options": {
+      "yes": {
+        "label": "UK"
+      },
+      "no": {
+        "label": "Outside UK"
+      }
+    }
   },
   "date-of-birth": {
     "legend": "Date of birth",
@@ -45,9 +53,34 @@
   "passport": {
     "label": "Passport number"
   },
-  "brp-card": {
-    "label": "BRP number",
+  "reference-number-radio": {
+    "hint": "Select one ",
+    "legend": "Reference Number",
+    "options": {
+      "brp-card": {
+        "label": "BRP number"
+      },
+      "gwf": {
+        "label": "GWF number"
+      },
+      "none": {
+        "label": "I don’t have any of these"
+      }
+    },
+    "validation": {
+      "required": "Select whether or not you have a reference number"
+    }
+  },
+  "brp-card-number": {
+    "label": "Enter BRP Number",
     "hint": "For example, RZ1000452"
+  },
+  "gwf-number": {
+    "label": "Enter GWF Number",
+    "hint": "For example, GWF012345678."
+  },
+  "no-reference": {
+    "label": "Enter Passport Number"
   },
   "email": {
     "label": "Email address"
@@ -189,16 +222,6 @@
       },
       "no": {
         "label": "No"
-      }
-    }
-  },
-  "location-applied": {
-    "options": {
-      "yes": {
-        "label": "UK"
-      },
-      "no": {
-        "label": "Outside UK"
       }
     }
   },

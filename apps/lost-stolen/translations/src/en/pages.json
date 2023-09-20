@@ -31,7 +31,8 @@
         "passport": "Passport number",
         "email": "Email address",
         "phone": "Phone number",
-        "brp-card-number": "BRP number"
+        "brp-card-number": "BRP number",
+        "gwf-number": "GWF number"
       }
     },
     "org-help": {

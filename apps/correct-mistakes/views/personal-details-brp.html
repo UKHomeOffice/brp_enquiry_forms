@@ -56,7 +56,37 @@
 
       {{#select}}nationality{{/select}}
 
-      {{#input-text}}brp-card{{/input-text}}
+      {{#radio-group}}reference-number-radio{{/radio-group}}
+
+      <!--<fieldset id="brp-card-reference" class="panel-indent js-hidden {{#errors.brp-card-reference}}validation-error{{/errors.brp-card-reference}}">
+        <legend class="visuallyhidden">
+          <span class="form-legend">
+            {{#t}}fields.brp-card-reference.legend{{/t}}
+          </span>
+        </legend>
+
+        {{#input-text}}brp-card-reference{{/input-text}}
+      </fieldset>
+
+      <fieldset id="gwf-reference" class="panel-indent js-hidden {{#errors.gwf-reference}}validation-error{{/errors.gwf-reference}}">
+        <legend class="visuallyhidden">
+          <span class="form-legend">
+            {{#t}}fields.gwf-reference.legend{{/t}}
+          </span>
+        </legend>
+
+        {{#input-text}}gwf-reference{{/input-text}}
+      </fieldset>
+
+      <fieldset id="no-reference" class="panel-indent js-hidden {{#errors.no-reference}}validation-error{{/errors.no-reference}}">
+        <legend class="visuallyhidden">
+          <span class="form-legend">
+            {{#t}}fields.no-reference.legend{{/t}}
+          </span>
+        </legend>
+
+        {{#input-text}}no-reference{{/input-text}}
+      </fieldset>-->
 
       {{#input-submit}}continue{{/input-submit}}
 

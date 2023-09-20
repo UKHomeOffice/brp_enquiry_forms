@@ -18,7 +18,8 @@ Feature: A user should access the correct mistakes service and be able to log an
     Then I fill 'fullname' with 'Ronald Testman'
     Then I fill the date 'date-of-birth' with '30-05-1990'
     Then I fill 'nationality' with 'Namibia'
-    Then I fill 'brp-card' with 'XR1000123'
+    Then I check 'reference-number-radio-brp-card'
+    Then I fill 'brp-card-number' with 'RX1000123'
     Then I select 'Continue'
     Then I should be on the 'contact-details' page showing 'How should we contact you about your BRP?'
     Then I fill 'email' with 'test@dtest.testemail'
@@ -47,7 +48,8 @@ Feature: A user should access the correct mistakes service and be able to log an
     Then I fill 'fullname' with 'Ronald Testman'
     Then I fill the date 'date-of-birth' with '30-05-1990'
     Then I fill 'nationality' with 'Namibia'
-    Then I fill 'brp-card' with 'ZRX000123'
+    Then I check 'reference-number-radio-brp-card'
+    Then I fill 'brp-card-number' with 'RZX000123'
     Then I select 'Continue'
     Then I should be on the 'contact-details' page showing 'How should we contact you about your BRP?'
     Then I fill 'email' with 'christopher.medland@digital.homeoffice.gov.uk'
@@ -109,9 +111,67 @@ Feature: A user should access the correct mistakes service and be able to log an
       Then I fill 'fullname' with 'Ronald Testman'
       Then I fill the date 'date-of-birth' with '30-05-1990'
       Then I fill 'nationality' with 'Namibia'
-      Then I fill 'brp-card' with 'ZR000123'
+      Then I check 'reference-number-radio-brp-card'
+      Then I fill 'brp-card-number' with 'ZR000123'
       Then I select 'Continue'
-      Then I should see 'Enter your BRP number in the correct format; for example, ‘ZUX123456 or ZU1234567’' on the page
+      Then I should see 'Enter your BRP number in the correct format; for example, ‘RZX123456 or RZ1234567’' on the page
+
+    @validation
+    Scenario: GWF number validation
+      Given I start the 'correct-mistakes' application journey
+      Then I should be on the 'location' page showing 'Where did you apply for your visa?'
+      Then I check 'location-applied-no'
+      Then I select 'Continue'
+      Then I should be on the 'about-error' page showing 'What’s the problem with your BRP?'
+      Then I check 'first-name-error-checkbox'
+      Then I fill 'first-name-error' with 'Ronald'
+      Then I select 'Continue'
+      Then I should be on the 'uk-address' page showing 'Is there a suitable UK address we can deliver your BRP to?'
+      Then I check 'uk-address-radio-yes'
+      Then I fill 'uk-address-house-number' with '17'
+      Then I fill 'uk-address-street' with 'test avenue'
+      Then I fill 'uk-address-town' with 'Rotherham'
+      Then I fill 'uk-address-county' with 'South Yorkshire'
+      Then I fill 'uk-address-postcode' with 'RH17 5BE'
+      Then I select 'Continue'
+      Then I should be on the 'personal-details' page showing 'How do your personal details appear on your BRP?'
+      Then I fill 'fullname' with 'Ronald Testman'
+      Then I fill the date 'date-of-birth' with '30-05-1990'
+      Then I fill 'nationality' with 'Namibia'
+      Then I check 'reference-number-radio-gwf'
+      Then I fill 'gwf-number' with ''
+      Then I select 'Continue'
+      Then I should see 'What is your GWF number?' on the page
+      Then I fill 'gwf-number' with ' 8GWF01234567'
+      Then I select 'Continue'
+      Then I should see the 'Enter your GWF number in the correct format; for example, ‘GWF012345678’' error
+
+    @validation
+    Scenario: Passport number validation
+      Given I start the 'correct-mistakes' application journey
+      Then I should be on the 'location' page showing 'Where did you apply for your visa?'
+      Then I check 'location-applied-no'
+      Then I select 'Continue'
+      Then I should be on the 'about-error' page showing 'What’s the problem with your BRP?'
+      Then I check 'first-name-error-checkbox'
+      Then I fill 'first-name-error' with 'Ronald'
+      Then I select 'Continue'
+      Then I should be on the 'uk-address' page showing 'Is there a suitable UK address we can deliver your BRP to?'
+      Then I check 'uk-address-radio-yes'
+      Then I fill 'uk-address-house-number' with '17'
+      Then I fill 'uk-address-street' with 'test avenue'
+      Then I fill 'uk-address-town' with 'Rotherham'
+      Then I fill 'uk-address-county' with 'South Yorkshire'
+      Then I fill 'uk-address-postcode' with 'RH17 5BE'
+      Then I select 'Continue'
+      Then I should be on the 'personal-details' page showing 'How do your personal details appear on your BRP?'
+      Then I fill 'fullname' with 'Ronald Testman'
+      Then I fill the date 'date-of-birth' with '30-05-1990'
+      Then I fill 'nationality' with 'Namibia'
+      Then I check 'reference-number-radio-none'
+      Then I fill 'no-reference' with ''
+      Then I select 'Continue'
+      Then I should see 'What is your passport number?' on the page
 
     @validation
     Scenario: Correct Mistakes Personal Details not a URL validation
@@ -135,7 +195,8 @@ Feature: A user should access the correct mistakes service and be able to log an
       Then I fill 'fullname' with 'www.google.com'
       Then I fill the date 'date-of-birth' with '30-05-1990'
       Then I fill 'nationality' with 'Namibia'
-      Then I fill 'brp-card' with 'ZR000123'
+      Then I check 'reference-number-radio-brp-card'
+      Then I fill 'brp-card-number' with 'ZR000123'
       Then I select 'Continue'
       Then I should see 'Full name must not be a URL' on the page
 
@@ -156,7 +217,8 @@ Feature: A user should access the correct mistakes service and be able to log an
       Then I fill 'fullname' with 'Ronald Testman'
       Then I fill the date 'date-of-birth' with '30-05-1990'
       Then I fill 'nationality' with 'Namibia'
-      Then I fill 'brp-card' with 'XR1000123'
+      Then I check 'reference-number-radio-brp-card'
+      Then I fill 'brp-card-number' with 'RX1000123'
       Then I select 'Continue'
       Then I should be on the 'contact-details' page showing 'How should we contact you about your BRP?'
       Then I fill 'email' with 'test@dtest.testemail'

@@ -23,9 +23,34 @@
     "label": "Country of nationality<span class='screenreader-punctuation'>.</span>",
     "hint": "Start typing your nationality to create a short list of options. Then press up or down to navigate between options."
   },
-  "brp-card": {
-    "label": "BRP number  (optional)",
-    "hint": "For example, ZR1000452"
+  "reference-number-radio": {
+    "hint": "Select one ",
+    "legend": "Reference Number",
+    "options": {
+      "brp-card": {
+        "label": "BRP number"
+      },
+      "gwf": {
+        "label": "GWF number"
+      },
+      "none": {
+        "label": "I don’t have any of these"
+      }
+    },
+    "validation": {
+      "required": "Select whether or not you have a reference number"
+    }
+  },
+  "brp-card-number": {
+    "label": "Enter BRP Number",
+    "hint": "For example, RZ1000452"
+  },
+  "gwf-number": {
+    "label": "Enter GWF Number",
+    "hint": "For example, GWF012345678."
+  },
+  "no-reference": {
+    "label": "Enter Passport Number"
   },
   "email": {
     "label": "Email address"

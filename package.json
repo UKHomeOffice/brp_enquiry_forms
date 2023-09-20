@@ -10,7 +10,7 @@
   "scripts": {
     "start": "node server.js",
     "start:dev": "hof-build watch",
-    "dev": "NODE_ENV=development hof-build watch",
+    "dev": "NODE_ENV=development hof-build watch --env",
     "test": "yarn run test:lint && yarn run test:unit",
     "test:lint": "eslint . --config ./node_modules/eslint-config-hof/default.js",
     "test:unit": "nyc _mocha \"test/_unit/**/*.spec.js\"",
@@ -19,7 +19,8 @@
     "test:cucumber": "cucumber-js -f @cucumber/pretty-formatter \"test/_features/**/*.feature\" --require test/_features/test.setup.js --require \"test/_features/step_definitions/**/*.js\" --tags $TAGS",
     "test:snyk": "snyk config set api=SNYK_TOKEN && snyk test",
     "build": "hof-build",
-    "postinstall": "yarn run build"
+    "postinstall": "yarn run build",
+    "mail:dev": "docker run --rm -d -p 1080:1080 -p 1025:1025 maildev/maildev"
   },
   "author": "HomeOffice",
   "dependencies": {

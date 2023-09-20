@@ -154,7 +154,7 @@
             <td><a href="about-error/edit#conditions-error" class="button">{{#t}}buttons.change.conditions-error{{/t}}</a></td>
           </tr>
         {{/values.conditions-error}}
-        
+
         {{#values.length-of-stay-error}}
           <tr>
             <td>{{#t}}fields.length-of-stay-error-checkbox.label{{/t}}</td>
@@ -189,7 +189,7 @@
       </table>
       {{#values.same-address-street}}
       <h2 class="details-header">{{#t}}pages.check-details.table.headers.delivery-details{{/t}}</h2>
-      <table id="delivery-details" class="table-details">
+      <table id="same-address-delivery-details" class="table-details">
         <tbody>
           <tr>
             <td>{{#t}}pages.check-details.table.headers.address{{/t}}</td>
@@ -207,7 +207,7 @@
 
       {{#values.uk-address-street}}
       <h2 class="details-header">{{#t}}pages.check-details.table.headers.delivery-details{{/t}}</h2>
-      <table id="delivery-details" class="table-details">
+      <table id="uk-address-delivery-details" class="table-details">
         <tbody>
           <tr>
             <td>{{#t}}pages.check-details.table.headers.address{{/t}}</td>
@@ -259,14 +259,27 @@
           <td><a href="contact-details/edit#address-group" class="button">{{#t}}buttons.change.address{{/t}}</a></td>
         </tr>
         {{/values.contact-address-street}}
-
-        {{#values.brp-card}}
+        {{#values.brp-card-number}}
         <tr>
           <td>{{#t}}pages.check-details-error.personal-details-table.headers.brp-card-number{{/t}}</td>
-          <td>{{values.brp-card}}</td>
+          <td>{{values.brp-card-number}}</td>
           <td><a href="personal-details/edit#brp-card" class="button">{{#t}}buttons.change.brp-card{{/t}}</a></td>
         </tr>
-        {{/values.brp-card}}
+        {{/values.brp-card-number}}
+        {{#values.gwf-number}}
+        <tr>
+          <td>{{#t}}pages.check-details-error.personal-details-table.headers.gwf-number{{/t}}</td>
+          <td>{{values.gwf-number}}</td>
+          <td><a href="personal-details/edit#gwf" class="button">{{#t}}buttons.change.gwf{{/t}}</a></td>
+        </tr>
+        {{/values.gwf-number}}
+        {{#values.no-reference}}
+        <tr>
+          <td>{{#t}}pages.check-details.table.headers.passport{{/t}}</td>
+          <td>{{values.no-reference}}</td>
+          <td><a href="personal-details/edit#passport" class="button">{{#t}}buttons.change.passport{{/t}}</a></td>
+        </tr>
+        {{/values.no-reference}}
         {{#values.email}}
         <tr>
           <td>{{#t}}pages.check-details-error.personal-details-table.headers.email{{/t}}</td>

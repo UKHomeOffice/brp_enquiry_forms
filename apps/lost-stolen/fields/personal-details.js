@@ -10,13 +10,26 @@ const beforeTodayValidator = {
 };
 
 module.exports = {
-  fullname: {
-    validate: ['required', 'notUrl']
-  },
-  'brp-card': {
-    validate: [{type: 'regex', arguments: /(^[a-z][a-z](\d|X)\d{6}$)|(^$)/gi }],
-    formatter: ['uppercase'],
-    hint: 'fields.brp-card.hint'
+  'reference-number-radio': {
+    validate: ['required'],
+    className: ['form-group'],
+    options: [
+      {
+        value: 'brp-card',
+        toggle: 'brp-card-number',
+        child: 'input-text'
+      },
+      {
+        value: 'gwf',
+        toggle: 'gwf-number',
+        child: 'input-text'
+      },
+      {
+        value: 'none',
+        toggle: 'no-reference',
+        child: 'input-text'
+      }
+    ]
   },
   'date-of-birth': date('date-of-birth', {
     validate: ['required', beforeTodayValidator],
