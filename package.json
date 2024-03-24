@@ -29,7 +29,7 @@
     "hogan.js": "^3.0.2",
     "hot-shots": "^5.9.0",
     "i18n-future": "^2.0.1",
-    "jquery": "^3.6.0",
+    "jquery": "^3.7.1",
     "lodash": "^4.17.21",
     "moment": "2.29.4",
     "moment-business": "^3.0.1",
