@@ -2,24 +2,6 @@
 version: v1.22.1
 # ignores vulnerabilities until expiry date; change duration by modifying expiry date
 ignore:
-  SNYK-JS-REQUEST-3361831:
-    - '*':
-        reason: HOF framework needs updating to remove request.js
-        expires: 2024-03-01T00:00:00.000Z
-        created: 2023-08-09T13:22:47.350Z
-  SNYK-JS-TOUGHCOOKIE-5672873:
-    - '*':
-        reason: HOF framework needs updating to remove request.js of which this is a dependency
-        expires: 2024-03-01T00:00:00.000Z
-        created: 2023-08-09T13:22:47.350Z
-  SNYK-JS-REQUEST-1314897:
-    - hof > request:
-        reason: Need to replace request in HOF
-        expires: '2024-01-01T14:58:46.388Z'
-  SNYK-JS-JSONSCHEMA-1920922:
-    - hof > request > http-signature > jsprim > json-schema:
-        reason: Need to replace Request
-        expires: '2024-09-18T12:35:24.867Z'
   SNYK-JS-SHELLQUOTE-1766506:
     - hof > browserify > shell-quote:
         reason: No update currently available
@@ -32,4 +14,45 @@ ignore:
     - '*':
         reason: No direct upgrade or patch
         expires: '2024-11-01T17:02:21.865Z'
+  SNYK-JS-AXIOS-6032459:
+    - hof > notifications-node-client > axios:
+        reason: Need to update notifications-node-client in HOF to version 8.0.0
+        expires: '2024-07-09T00:00:00.000Z'
+  SNYK-JS-AXIOS-6124857:
+    - hof > notifications-node-client > axios:
+      reason: Need to update notifications-node-client in HOF to version 8.0.0.
+      expires: '2024-07-09T00:00:00.000Z'
+  SNYK-JS-AXIOS-6144788:
+    - hof > notifications-node-client > axios:
+      reason: Need to update notifications-node-client in HOF to version 8.0.0.
+      expires: '2024-07-09T00:00:00.000Z'
+  SNYK-JS-FOLLOWREDIRECTS-6444610:
+    - '*':
+      reason: Need to update follow-redirects in HOF to version 1.15.6.
+      expires: '2024-07-09T00:00:00.000Z'
+  SNYK-JS-FOLLOWREDIRECTS-6141137:
+    - '*':
+      reason: Need to update follow-redirects in HOF to version 1.15.6.
+      expires: '2024-07-09T00:00:00.000Z'
+  SNYK-JS-INFLIGHT-6095116:
+    - '*':
+      reason: No update available.
+      expires: '2024-07-09T00:00:00.000Z'
+  SNYK-JS-EXPRESS-6474509:
+    - '*':
+      reason: Need to update express to version 4.19.2.
+      expires: '2024-07-09T00:00:00.000Z'
+  SNYK-JS-MARKDOWNIT-6483324:
+    - hof > markdown-it:
+      reason: Need to update markdown-it in HOF to version 13.0.2.
+      expires: '2024-07-09T00:00:00.000Z'
+  SNYK-JS-BROWSERIFYSIGN-6037026:
+    - hof > browserify > crypto-browserify > browserify-sign:
+      reason: Need to update browserify-sign in HOF to version 4.2.2.
+      expires: '2024-07-09T00:00:00.000Z'
+  SNYK-JS-NODEMAILER-6219989:
+    - hof > nodemailer:
+      reason: Need to update nodemailer in HOF to version 6.9.9.
+      expires: '2024-07-09T00:00:00.000Z'
+  
 patch: {}
