@@ -1,19 +1,7 @@
-{{<layout}}
-
-{{$title}}
-  {{title}}
-{{/title}}
-
-{{$header}}
-  {{<partials-page-header}}
-    {{$page-header}}
-      {{title}}
-    {{/page-header}}
-  {{/partials-page-header}}
-{{/header}}
-
-{{$content}}
+{{<partials-page}} 
+{{$header}}{{title}}{{/header}}
+{{$page-content}}
   <p>{{description}}</p>
-{{/content}}
-
-{{/layout}}
+  <a href="/" class="govuk-button" role="button">{{#t}}buttons.start-again{{/t}}</a>
+  {{/page-content}}
+{{/partials-page}}

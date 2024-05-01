@@ -1,19 +1,17 @@
 {{<partials-page}}
-  {{$pageTitle}}{{#t}}pages.confirm.header{{/t}} – GOV.UK{{/pageTitle}}
   {{$journeyHeader}}
-    {{#t}}journeys.someone-else.header{{/t}}
+    {{#t}}journey.someone-else.header{{/t}}
   {{/journeyHeader}}
-  {{$step}}Step 5 of 5{{/step}}
   {{$page-content}}
-    <p class="govuk-body">{{#t}}pages.confirm.subheader{{/t}}</p>
-    <table class="table-details">
-      <tbody>
+    <p>{{#t}}pages.confirm.subheader{{/t}}</p>
         {{#rows}}
           {{> partials-summary-table}}
         {{/rows}}
-      </tbody>
-    </table>
-    {{#renderField}}org-help{{/renderField}}
-    {{#input-submit}}continue{{/input-submit}}
+        <h2>{{#t}}fields.org-help.legend{{/t}}</h2>
+        {{#radio-group}}org-help{{/radio-group}}
+        {{> partials-org-type}}
+        <h2>{{#t}}footer.title{{/t}}</h2>
+        <p>{{#t}}footer.explanation{{/t}}</p> 
+    {{#input-submit}}send{{/input-submit}}
   {{/page-content}}
 {{/partials-page}}

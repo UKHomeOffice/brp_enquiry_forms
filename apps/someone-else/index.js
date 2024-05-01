@@ -1,5 +1,6 @@
 'use strict';
-const SummaryPageBehaviour = require('hof').components.summary;
+const hof = require('hof');
+const Summary = hof.components.summary;
 
 module.exports = {
   name: 'someone-else',
@@ -24,6 +25,7 @@ module.exports = {
         'someone-else-reason-radio',
         'incapable-details'
       ],
+      locals: { captionHeading: 'Step 2 of 5' },
       next: '/personal-details'
     },
     '/personal-details': {
@@ -34,23 +36,25 @@ module.exports = {
         'nationality',
         'passport'
       ],
+      locals: { captionHeading: 'Step 3 of 5' },
       next: '/contact-details'
     },
     '/contact-details': {
       fields: [
         'email',
+        'phone',
         'use-address',
         'contact-address-house-number',
         'contact-address-street',
         'contact-address-town',
         'contact-address-county',
-        'contact-address-postcode',
-        'phone'
+        'contact-address-postcode'
       ],
+      locals: { captionHeading: 'Step 4 of 5' },
       next: '/confirm'
     },
     '/confirm': {
-      behaviours: [SummaryPageBehaviour, 'complete', require('../common/behaviours/email')],
+      behaviours: [Summary, 'complete', require('../common/behaviours/email')],
       sections: require('./sections/summary-data-sections'),
       fields: [
         'org-help',
@@ -58,6 +62,7 @@ module.exports = {
         'rep-email',
         'org-type'
       ],
+      locals: { captionHeading: 'Step 5 of 5' },
       next: '/confirmation'
     },
     '/confirmation': {

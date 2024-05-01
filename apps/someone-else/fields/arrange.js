@@ -14,6 +14,7 @@ module.exports = {
     ]
   }),
   'someone-else-nationality': {
+    mixin: 'select',
     validate: ['required'],
     className: ['typeahead', 'js-hidden'],
     options: [''].concat(require('../../../assets/countries').allCountries)

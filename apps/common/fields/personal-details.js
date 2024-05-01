@@ -15,8 +15,7 @@ module.exports = {
   nationality: {
     validate: ['required'],
     className: ['typeahead', 'js-hidden'],
-    options: [''].concat(require('../../../assets/countries').allCountries),
-    hint: 'fields.nationality.hint'
+    options: [''].concat(require('../../../assets/countries').allCountries)
   },
   passport: {
     validate: ['required', 'notUrl']

@@ -1,27 +1,8 @@
-{{<layout}}
-
+{{<partials-page}}
   {{$journeyHeader}}
-    {{#t}}journeys.error.header{{/t}}
-  {{/journeyHeader}}
-
-  {{$propositionHeader}}
-    {{> partials-navigation}}
-  {{/propositionHeader}}
-
-  {{$title}}
-    {{#t}}pages.truncated.header{{/t}}
-  {{/title}}
-
-  {{$header}}
-    {{<partials-page-header}}
-      {{$page-header}}
-        {{#t}}pages.truncated.header{{/t}}
-      {{/page-header}}
-    {{/partials-page-header}}
-  {{/header}}
-
-  {{$content}}
-
+  {{#t}}journey.error.header{{/t}}
+    {{/journeyHeader}}
+  {{$page-content}}
     <p>{{#t}}pages.truncated.paras.one.parts.one{{/t}} {{truncatedItem.pretty}} {{#t}}pages.truncated.paras.one.parts.two{{/t}}:</p>
 
     <p><strong>{{truncatedItem.value}}</strong></p>
@@ -32,24 +13,11 @@
 
     <p>{{#t}}pages.truncated.paras.three.parts.one{{/t}}</p>
 
-    {{<partials-form}}
-
-      {{$form}}
-
-        <input type="hidden" name="truncation-page" value="{{truncatedItem.id}}">
-
-        {{#radio-group}}truncated{{/radio-group}}
-
-        <div id="truncated-reason-no" class="panel-indent js-hidden">
-          <p>{{#t}}pages.truncated.reason-no{{/t}}</p>
-        </div>
-
-        {{#input-submit}}continue{{/input-submit}}
-
-      {{/form}}
-
-    {{/partials-form}}
-
-  {{/content}}
-
-{{/layout}}
+    <input type="hidden" name="truncation-page" value="{{truncatedItem.id}}">
+    {{#radio-group}}truncated{{/radio-group}}
+    <div id="truncated-reason-no" class="govuk-radios__conditional govuk-radios__conditional--hidden">
+      <p>{{#t}}pages.truncated.reason-no{{/t}}</p>
+    </div>
+    {{#input-submit}}continue{{/input-submit}}
+  {{/page-content}}
+{{/partials-page}}

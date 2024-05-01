@@ -1,42 +1,9 @@
-{{<layout}}
-  {{$step}}Step 2 of 6{{/step}}
-
+{{<partials-page}}
   {{$journeyHeader}}
-    {{#t}}journeys.collection.header{{/t}}
+    {{#t}}journey.collection.header{{/t}}
   {{/journeyHeader}}
-
-  {{$validationSummary}}
-    {{> partials-validation-summary}}
-  {{/validationSummary}}
-
-  {{$propositionHeader}}
-    {{> partials-navigation}}
-  {{/propositionHeader}}
-
-  {{$title}}
-    {{#t}}pages.reasons.header{{/t}}
-  {{/title}}
-
-  {{$header}}
-    {{<partials-page-header}}
-      {{$page-header}}
-        {{#t}}pages.reasons.header{{/t}}
-      {{/page-header}}
-    {{/partials-page-header}}
-  {{/header}}
-
-  {{$content}}
-    {{<partials-form}}
-
-      {{$form}}
-        {{#radio-group}}reason-radio{{/radio-group}}
-
-        {{#input-submit}}continue{{/input-submit}}
-
-      {{/form}}
-
-    {{/partials-form}}
-
-  {{/content}}
-
-{{/layout}}
+  {{$page-content}}
+    {{#renderField}}reason-radio{{/renderField}}
+    {{#input-submit}}continue{{/input-submit}}
+  {{/page-content}}
+{{/partials-page}}

@@ -1,4 +1,6 @@
 'use strict';
+const hof = require('hof');
+const Summary = hof.components.summary;
 
 module.exports = {
   name: 'correct-mistakes',
@@ -11,6 +13,7 @@ module.exports = {
       fields: [
         'location-applied'
       ],
+      locals: { captionHeading: 'Step 1 of 6' },
       next: '/about-error'
     },
     '/about-error': {
@@ -51,6 +54,7 @@ module.exports = {
         'letter-error'
       ],
       backLink: 'location',
+      locals: { captionHeading: 'Step 2 of 6' },
       next: '/uk-address',
       forks: [{
         target: '/same-address',
@@ -95,6 +99,7 @@ module.exports = {
         'uk-address-postcode'
       ],
       backLink: 'about-error',
+      locals: { captionHeading: 'Step 3 of 6' },
       next: '/personal-details'
     },
     '/same-address': {
@@ -107,6 +112,7 @@ module.exports = {
         'same-address-postcode'
       ],
       backLink: 'about-error',
+      locals: { captionHeading: 'Step 3 of 6' },
       next: '/personal-details'
     },
     '/personal-details': {
@@ -120,28 +126,32 @@ module.exports = {
         'gwf-number',
         'no-reference'
       ],
+      locals: { captionHeading: 'Step 4 of 6' },
       next: '/contact-details'
     },
     '/contact-details': {
       fields: [
         'email',
+        'phone',
         'use-address',
         'contact-address-house-number',
         'contact-address-street',
         'contact-address-town',
         'contact-address-county',
-        'contact-address-postcode',
-        'phone'
+        'contact-address-postcode'
       ],
       backLink: 'personal-details',
+      locals: { captionHeading: 'Step 5 of 6' },
       next: '/confirm'
     },
     '/confirm': {
-      behaviours: ['complete', require('../common/behaviours/email')],
+      behaviours: [Summary, 'complete', require('../common/behaviours/email')],
+      sections: require('./sections/summary-data-sections'),
       fields: [
         'org-help', 'rep-name', 'rep-email', 'org-type'
       ],
       backLink: 'contact-details',
+      locals: { captionHeading: 'Step 6 of 6' },
       next: '/confirmation'
     },
     '/confirmation': {
