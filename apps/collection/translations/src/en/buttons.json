@@ -1,17 +1,17 @@
 {
   "change": {
-    "attempted-location": "Change <span class=\"visuallyhidden\">attempted collection location</span>",
-    "reason": "Change <span class=\"visuallyhidden\">reason for nomination</span>",
-    "nominated-full-name": "Change <span class=\"visuallyhidden\">nominated person's full name</span>",
-    "nominated-dob": "Change <span class=\"visuallyhidden\">nominated person's date of birth</span>",
-    "nominated-nationality": "Change <span class=\"visuallyhidden\">nominated person's nationality</span>",
-    "nominated-id-number": "Change <span class=\"visuallyhidden\">nominated person's id number</span>",
-    "fullname": "Change <span class=\"visuallyhidden\">full name</span>",
-    "date-of-birth": "Change <span class=\"visuallyhidden\">date of birth</span>",
-    "nationality": "Change <span class=\"visuallyhidden\">nationality</span>",
-    "address": "Change <span class=\"visuallyhidden\">address</span>",
-    "passport": "Change <span class=\"visuallyhidden\">passport number</span>",
-    "email": "Change <span class=\"visuallyhidden\">email address</span>",
-    "phone": "Change <span class=\"visuallyhidden\">phone number</span>"
+    "attempted-location": "Change<span class=\"visuallyhidden\">attempted collection location</span>",
+    "reason": "Change<span class=\"visuallyhidden\">reason for nomination</span>",
+    "nominated-full-name": "Change<span class=\"visuallyhidden\">nominated person's full name</span>",
+    "nominated-dob": "Change<span class=\"visuallyhidden\">nominated person's date of birth</span>",
+    "nominated-nationality": "Change<span class=\"visuallyhidden\">nominated person's nationality</span>",
+    "nominated-id-number": "Change<span class=\"visuallyhidden\">nominated person's id number</span>",
+    "fullname": "Change<span class=\"visuallyhidden\">full name</span>",
+    "date-of-birth": "Change<span class=\"visuallyhidden\">date of birth</span>",
+    "nationality": "Change<span class=\"visuallyhidden\">nationality</span>",
+    "address": "Change<span class=\"visuallyhidden\">address</span>",
+    "passport": "Change<span class=\"visuallyhidden\">passport number</span>",
+    "email": "Change<span class=\"visuallyhidden\">email address</span>",
+    "phone": "Change<span class=\"visuallyhidden\">phone number</span>"
   }
 }

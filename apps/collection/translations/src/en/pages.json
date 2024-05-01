@@ -1,13 +1,9 @@
 {
-  "reasons": {
-    "header": "Why couldn't you collect your BRP?"
-  },
-  "nominated": {
+  "nominated-person": {
     "header": "Who was supposed to collect your BRP on your behalf?",
     "description": "Provide details of the person who tried to collect the BRP on your behalf"
   },
   "where": {
-    "header": "From where were you asked to collect your BRP?",
     "description": "This could have been from a Post Office branch or a sponsor, such as your legal representative, employer, university or school.",
     "date-question": "If you have attempted to collect your BRP, when was it? (optional)"
   },
@@ -23,59 +19,55 @@
     "subheader": "We need these details to process your request."
   },
   "check-details": {
-    "header": "Check the details you have provided",
-    "subheader": "If any information is incorrect, you can change it here.",
-    "table": {
-      "headers": {
-        "date-lost": "Date lost",
-        "case-id-number": "Case ID Number",
-        "contact-address": "Contact address",
-        "address": "New address",
-        "delivery-address": "Delivery address",
-        "delivery-details": "Delivery details",
-        "fullname": "Full name",
-        "date-of-birth": "Date of birth",
-        "nationality": "Nationality",
-        "passport": "Passport number",
-        "email": "Email address",
-        "phone": "Phone number"
-      }
-    },
-    "org-help": {
-      "title": "Are you completing this form on behalf of the BRP holder?",
-      "explanation": "Friends, relatives, employers, charity workers and lawyers, for example, can complete this form on behalf of the BRP holder."
-    },
     "org-details-group": {
       "header": "What are your details?",
-      "subheader": "We will attempt to contact the BRP holder directly. We will only use these details to contact you if needed.",
-      "type": "Type of support"
-    },
-    "footer": {
-      "title": "Terms and conditions",
-      "explanation": "By sending this report you confirm the information provided is accurate, and you accept our <a target='_blank' href='/terms-and-conditions'>terms and conditions</a>."
+      "subheader": "We will attempt to contact the BRP holder directly. We will only use these details to contact you if needed."
     }
   },
-  "check-details-error": {
+  "confirm": {
     "header": "Check the details you have provided",
     "subheader": "If any information is incorrect, you can change it here.",
-    "corrected-details-table": {
-      "title": "Corrected BRP details"
+    "sections": {
+      "problem-details": {
+        "header": "Problem details"
+      },
+      "others-details": {
+        "header": "Details of the person who attempted to collect your BRP"
+      },
+      "personal-details": {
+        "header": "Your details"
+      }
     },
-    "personal-details-table": {
-      "title": "Your personal and contact details",
-      "headers": {
-        "fullname": "Full name",
-        "date-of-birth": "Date of birth",
-        "nationality": "Nationality",
-        "brp-card-number": "BRP number",
-        "email": "Email address",
-        "phone": "Phone number",
-        "passport": "Passport number"
+    "fields": {
+      "collection-where-radio": {
+        "label": "Attempted collection"
+      },
+      "attempted-collection-date": {
+        "label": "Date"
+      },
+      "describe-problem": {
+        "label": "Describe the problem"
+      },
+      "reason-radio": {
+        "label": "Reason",
+        "under-age": "Under age"
+      },
+      "nominated-nationality": {
+        "label": "Nationality"
+      },
+      "nationality": {
+        "label": "Nationality"
+      },
+      "use-address": {
+        "label": "Contact Address"
+      },
+      "phone": {
+        "label": "Phone number"
       }
     }
   },
   "confirmation": {
-    "header": "Thank you, we have received your information.",
+    "title": "Thank you, we have received your information.",
     "email": "We have sent an email to",
     "email_part_two": "to confirm receipt of your enquiry.",
     "next": {

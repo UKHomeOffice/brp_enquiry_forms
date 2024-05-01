@@ -1,44 +1,12 @@
-{{<layout}}
-
-{{$journeyHeader}}
-  {{#t}}journeys.error.header{{/t}}
-{{/journeyHeader}}
-
-{{$step}}Step 1 of 6{{/step}}
-
-{{$validationSummary}}
-  {{> partials-validation-summary}}
-{{/validationSummary}}
-
-{{$propositionHeader}}
-  {{> partials-navigation}}
-{{/propositionHeader}}
-
-  {{$title}}
-    {{#t}}journeys.error.location-applied.header{{/t}}
-  {{/title}}
-  
-  {{$header}}
-    {{<partials-page-header}}
-      {{$page-header}}
-        {{#t}}journeys.error.location-applied.header{{/t}}
-      {{/page-header}}
-    {{/partials-page-header}}
-  {{/header}}
-
-  {{$content}}
-
-    <p>{{#t}}journeys.error.location-applied.subheader{{/t}}</p>
-    {{<partials-form}}
-
-      {{$form}}
-        {{#radio-group}}location-applied{{/radio-group}}
-
-        {{#input-submit}}continue{{/input-submit}}
-      {{/form}}
-
-    {{/partials-form}}
-
-  {{/content}}
-
-{{/layout}}
+{{<partials-page}}
+  {{$journeyHeader}}
+    {{#t}}journey.error.header{{/t}}
+  {{/journeyHeader}}
+  {{$page-content}}
+    <p>{{#t}}pages.location.subheader{{/t}}</p>
+    {{#fields}}
+      {{#renderField}}{{/renderField}}
+    {{/fields}}
+    {{#input-submit}}continue{{/input-submit}}
+  {{/page-content}}
+{{/partials-page}}

@@ -1,84 +1,19 @@
-{{<layout}}
-  {{$step}}Step 1 of 5{{/step}}
-
+{{<partials-page}}
   {{$journeyHeader}}
-    {{#t}}journeys.someone-else.header{{/t}}
+    {{#t}}journey.someone-else.header{{/t}}
   {{/journeyHeader}}
-
-  {{$validationSummary}}
-    {{> partials-validation-summary}}
-  {{/validationSummary}}
-
-  {{$propositionHeader}}
-    {{> partials-navigation}}
-  {{/propositionHeader}}
-
-  {{$title}}
-    {{#t}}pages.arrange-collection.header{{/t}}
-  {{/title}}
-
-  {{$header}}
-    {{<partials-page-header}}
-      {{$page-header}}
-        {{#t}}pages.arrange-collection.header{{/t}}
-      {{/page-header}}
-    {{/partials-page-header}}
-  {{/header}}
-
-  {{$content}}
-    {{<partials-form}}
-
-      {{$form}}
-
-        <div>
-          <p>{{#t}}pages.someone-else.someone-else-group.title{{/t}}</p>
-
-          {{#input-text}}someone-else-fullname{{/input-text}}
-
-          <fieldset id="someone-else-date-group" class="{{#errors.someone-else-date}}validation-error{{/errors.someone-else-date}} form-group">
-
-            <legend class=visuallyhidden>
-              <span class="form-label-bold">{{#t}}fields.someone-else-date.legend{{/t}}</span>
-            </legend>
-
-            <div class="form-group form-date">
-              {{#t}}fields.someone-else-date.legend{{/t}}
-              {{#errors.someone-else-date}}
-                <span id="nominated-date-error" class="error-message">
-                  {{errors.someone-else-date.message}}
-                </span>
-              {{/errors.someone-else-date}}
-              <p id="nominated-date-hint" class="form-hint">
-                {{#t}}fields.nominated-date.hint{{/t}}
-              </p>
-              {{#input-date}}someone-else-date{{/input-date}}
-            </div>
-
-          </fieldset>
-
-          {{#select}}someone-else-nationality{{/select}}
-
-          {{#radio-group}}someone-else-id-type{{/radio-group}}
-
-          {{#input-text}}someone-else-id-number{{/input-text}}
-
-          <div class="notice">
-            <i class="icon icon-important">
-              <span class="visuallyhidden">Warning</span>
-            </i>
-            <strong class="bold-small">
-              {{#t}}pages.someone-else.someone-else-id-type.title{{/t}}
-            </strong>
-          </div>
-
-        </div>
-
-
-        {{#input-submit}}continue{{/input-submit}}
-      {{/form}}
-
-    {{/partials-form}}
-
-  {{/content}}
-
-{{/layout}}
+  {{$page-content}}
+    <p>{{#t}}pages.someone-else.someone-else-group.title{{/t}}</p>
+    {{#fields}}
+      {{#renderField}}{{/renderField}}
+    {{/fields}}
+    <div class="govuk-warning-text">
+      <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+      <strong class="govuk-warning-text__text">
+        <span class="govuk-warning-text__assistive">Warning</span>
+        {{#t}}pages.someone-else.someone-else-id-type.title{{/t}}
+      </strong>
+    </div>
+    {{#input-submit}}continue{{/input-submit}}
+  {{/page-content}}
+{{/partials-page}}

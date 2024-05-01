@@ -2,17 +2,16 @@
 'use strict';
 
 require('hof/frontend/themes/gov-uk/client-js');
-
-var $ = require('jquery');
-var typeahead = require('typeahead-aria');
-var Bloodhound = require('typeahead-aria').Bloodhound;
-
+const govuk = require('govuk-frontend');
+const $ = require('jquery');
+const typeahead = require('typeahead-aria');
+const Bloodhound = require('typeahead-aria').Bloodhound;
+const inlineRadioToggle = require('./inline-radio-toggle');
 typeahead.loadjQueryPlugin();
 
 $('.typeahead').each(function applyTypeahead() {
   var $el = $(this);
   var $parent = $el.parent();
-  $parent.addClass('hidden-hint');
   var attributes = $el.prop('attributes');
   var $input = $('<input/>');
   var selectedValue = $el.val();
@@ -71,3 +70,18 @@ $('.typeahead').each(function applyTypeahead() {
     limit: 100
   });
 });
+
+$('h2.section-header:contains(Lost/stolen details)').css('display', 'none')
+$('a[href^="#error-selection"]').prop('href', '#last-name-error-checkbox');
+
+$('input[type=submit].govuk-button').attr('data-module', 'govuk-button');
+
+// Stop users from accidentally sending information more than once by adding
+// the data-prevent-double-click attribute to the form submission button
+if ($('input[type=submit].govuk-button').attr('value') === 'Send') {
+  const sendButton = $('input[type=submit].govuk-button')
+  sendButton.attr('data-prevent-double-click', 'true');
+};
+
+govuk.initAll();
+inlineRadioToggle.init();

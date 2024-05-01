@@ -16,7 +16,7 @@
 
 Install the dependencies and build the project resources
 ```bash
-$ npm install
+$ yarn install
 ```
 
 Install `Redis` and make sure you have a running redis instance in the background.
@@ -25,7 +25,7 @@ Tested running on redis server version v6.0.9, and npm version v8.10.0.
 
 Initiate the server in development mode (Express is used to serve the static resources in development).
 ```bash
-$ npm run dev
+$ yarn run dev
 ```
 
 ## User journeys
@@ -70,33 +70,33 @@ Run the app like normal and you should see all emails going to http://localhost:
 Start the application in default mode (production).
 We use Nginx to serve our static resources in production and ci.
 ```bash
-$ npm start
+$ yarn start
 ```
 
 Start the application with [Nodemon](https://www.npmjs.com/package/nodemon) in development mode.
 Debug is switched on and the server restarts when the JS or Sass are recompiled.
 ```bash
-$ npm run dev
+$ yarn run dev
 ```
 
 Run the unit tests
 ```bash
-$ npm run test
+$ yarn run test
 ```
 
 Run the EcmaScript (ES) linter.  Rules are defined in [.eslintrc](./.eslintrc)
 ```bash
-$ npm run lint
+$ yarn run lint
 ```
 
 Run the jscs style checker. Rules are defined in [.jscsrc.json](./.jscsrc.json)
 ```bash
-$ npm run style
+$ yarn run style
 ```
 
 Compile the Sass to CSS
 ```bash
-$ npm run sass
+$ yarn run sass
 ```
 
 ## Acceptance tests

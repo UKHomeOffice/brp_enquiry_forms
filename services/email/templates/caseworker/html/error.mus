@@ -13,20 +13,59 @@
 </head>
 
   <body style="font-family: Helvetica, Arial, sans-serif;font-size: 16px;margin: 0;color:#0b0c0c">
-        <table width="100%" cellpadding="0" cellspacing="0" border="0">
-      <tr>
-        <td width="100%" height="53px" bgcolor="#0b0c0c">
-          <table width="580" cellpadding="0" cellspacing="0" border="0" align="center">
-            <tr>
-              <td width="100%" bgcolor="#0b0c0c" valign="middle">
-                <img width="152" height="31" src="cid:govuk_logotype_email" alt="GOV.UK" border="0" />
-              </td>
-            </tr>
-          </table>
-        </td>
-      </tr>
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse; min-width:100%; width:100%!important">
+      <tbody>
+        <tr>
+          <td width="100%" height="53" bgcolor="#0b0c0c">
+            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" align="center" style="border-collapse:collapse; max-width:580px">
+              <tbody>
+                <tr>
+                  <td width="70" bgcolor="#0b0c0c" valign="middle">
+                    <a href="https://www.gov.uk/">
+                      <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse">
+                        <tbody>
+                          <tr>
+                            <td style="padding-left:10px">
+                              <img data-imagetype="External" src="https://static.notifications.service.gov.uk/images/govuk-logotype-tudor-crown.png" alt="" height="32" border="0" style="margin-top:2px">
+                            </td>
+                            <td style="font-size:28px; line-height:1.315789474; margin-top:4px; padding-left:8px">
+                              <span style="font-family:Helvetica,Arial,sans-serif; font-weight:700; color:#ffffff; text-decoration:none; vertical-align:middle; display:inline-block">GOV.UK</span>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <table role="presentation" class="x_content" align="center" cellpadding="0" cellspacing="0" border="0" width="100%" style="border-collapse:collapse; max-width:580px; width:100%!important">
+      <tbody>
+        <tr>
+          <td width="10" height="10" valign="middle"></td>
+          <td>
+            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse">
+              <tbody>
+                <tr>
+                  <td bgcolor="#1D70B8" width="100%" height="10"></td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+          <td width="10" valign="middle" height="10"></td>
+        </tr>
+      </tbody>
     </table>
     <table width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#FFFFFF">
+      <tr>
+        <td height="30">
+          <br>
+        </td>
+      </tr>
       <tr>
         <td width="100%">
           <table width="580" cellpadding="0" cellspacing="0" border="0" align="center">
@@ -58,36 +97,36 @@
                   <p style="font-size: 19px; font-weight: bold; color: #000; line-height: 1.32; margin: 0 0 10px 0;">BRP applicant's details</p>
                   <table width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#FFFFFF" style="margin: 0 0 20px 0;">
                     <tr style="border-top: 1px solid #009390;">
-                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.check-details-error.personal-details-table.headers.fullname{{/t}}: </p></td>
+                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}fields.fullname.label{{/t}}: </p></td>
                       <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{fullname}}</p></td>
                     </tr>
                     <tr style="border-top: 1px solid #009390;">
-                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.check-details-error.personal-details-table.headers.date-of-birth{{/t}}: </p></td>
+                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}fields.date-of-birth.legend{{/t}}: </p></td>
                       <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{date-of-birth}}</p></td>
                     </tr>
                     <tr style="border-top: 1px solid #009390;">
-                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.check-details-error.personal-details-table.headers.nationality{{/t}}: </p></td>
+                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.confirm.fields.nationality.label{{/t}}: </p></td>
                       <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{nationality}}</p></td>
                     </tr>
 
                     <tr style="border-top: 1px solid #009390;">
-                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.check-details-error.personal-details-table.headers.brp-card-number{{/t}}: </p></td>
+                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.confirm.fields.brp-card-number.label{{/t}}: </p></td>
                       <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{#brp-card-number}}{{brp-card-number}}{{/brp-card-number}}{{^brp-card-number}}None Given{{/brp-card-number}}</p></td>
                     </tr>
 
                     <tr style="border-top: 1px solid #009390;">
-                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.check-details-error.personal-details-table.headers.gwf-number{{/t}}: </p></td>
+                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.confirm.fields.gwf-number.label{{/t}}: </p></td>
                       <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{#gwf-number}}{{gwf-number}}{{/gwf-number}}{{^gwf-number}}None Given{{/gwf-number}}</p></td>
                     </tr>
 
                     <tr style="border-top: 1px solid #009390;">
-                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.check-details.table.headers.passport{{/t}}: </p></td>
+                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.confirm.fields.no-reference.label{{/t}}: </p></td>
                       <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{#no-reference}}{{no-reference}}{{/no-reference}}{{^no-reference}}None Given{{/no-reference}}</p></td>
                     </tr>
 
                     {{#same-address-street}}
                     <tr style="border-top: 1px solid #009390;">
-                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.check-details.table.headers.address{{/t}}: </p></td>
+                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.confirm.fields.same-address-radio.label{{/t}}: </p></td>
                       <td width="75%">
                         <p style="font-size: 16px; color: #000; margin: 10px 0;">
                           {{#same-address-house-number}}{{same-address-house-number}}{{/same-address-house-number}}{{^same-address-house-number}}None Given{{/same-address-house-number}}, {{same-address-street}},
@@ -100,7 +139,7 @@
                     {{/same-address-street}}
                     {{^same-address-street}}
                       <tr style="border-top: 1px solid #009390;">
-                        <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.check-details.table.headers.address{{/t}}: </p></td>
+                        <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.confirm.fields.uk-address-radio.label{{/t}}: </p></td>
                         <td width="75%">
                           <p style="font-size: 16px; color: #000; margin: 10px 0;">
                             {{#uk-address-street}}
@@ -120,7 +159,7 @@
                       <td width="75%">
                         <p style="font-size: 16px; color: #000; margin: 10px 0;">
                           {{#org-type}}
-                            {{#rep-email}}<a href="mailto:{{rep-email}}">{{rep-name}} &lt;{{rep-email}}&gt;</a>{{/rep-email}}
+                            {{#rep-email}}<a href="mailto:{{rep-email}}" style="color:#1D70B8" role="link" class="govuk-link">{{rep-name}} &lt;{{rep-email}}&gt;</a>{{/rep-email}}
                             {{^rep-email}}{{rep-name}}{{/rep-email}}
                           {{/org-type}}
                           {{^org-type}}None Given{{/org-type}}
@@ -133,77 +172,77 @@
                   <table width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#FFFFFF" style="margin: 0 0 20px 0;">
 
                     <tr style="border-top: 1px solid #009390;">
-                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}fields.first-name-error-checkbox.label{{/t}}: </p></td>
+                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.confirm.fields.first-name-error.label{{/t}}: </p></td>
                       <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{#first-name-error}}{{first-name-error}}{{/first-name-error}}{{^first-name-error}}None Given{{/first-name-error}}</p></td>
                     </tr>
 
                     <tr style="border-top: 1px solid #009390;">
-                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}fields.last-name-error-checkbox.label{{/t}}: </p></td>
+                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.confirm.fields.last-name-error.label{{/t}}: </p></td>
                       <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{#last-name-error}}{{last-name-error}}{{/last-name-error}}{{^last-name-error}}None Given{{/last-name-error}}</p></td>
                     </tr>
 
                     <tr style="border-top: 1px solid #009390;">
-                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}fields.birth-place-error-checkbox.label{{/t}}: </p></td>
+                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.confirm.fields.birth-place-error.label{{/t}}: </p></td>
                       <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{#birth-place-error}}{{birth-place-error}}{{/birth-place-error}}{{^birth-place-error}}None Given{{/birth-place-error}}</p></td>
                     </tr>
 
                     <tr style="border-top: 1px solid #009390;">
-                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}fields.date-of-birth-error-checkbox.label{{/t}}: </p></td>
+                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.confirm.fields.date-of-birth-error.label{{/t}}: </p></td>
                       <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{#date-of-birth-error}}{{date-of-birth-error}}{{/date-of-birth-error}}{{^date-of-birth-error}}None Given{{/date-of-birth-error}}</p></td>
                     </tr>
 
                     <tr style="border-top: 1px solid #009390;">
-                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}fields.gender-error-checkbox.label{{/t}}: </p></td>
+                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.confirm.fields.gender-error.label{{/t}}: </p></td>
                       <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{#gender-error}}{{gender-error}}{{/gender-error}}{{^gender-error}}None Given{{/gender-error}}</p></td>
                     </tr>
 
                     <tr style="border-top: 1px solid #009390;">
-                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}fields.sponsor-details-error-checkbox.label{{/t}}: </p></td>
+                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.confirm.fields.sponsor-details-error.label{{/t}}: </p></td>
                       <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{#sponsor-details-error}}{{sponsor-details-error}}{{/sponsor-details-error}}{{^sponsor-details-error}}None Given{{/sponsor-details-error}}</p></td>
                     </tr>
 
                     <tr style="border-top: 1px solid #009390;">
-                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}fields.nationality-error-checkbox.label{{/t}}: </p></td>
+                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.confirm.fields.nationality-error.label{{/t}}: </p></td>
                       <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{#nationality-error}}{{nationality-error}}{{/nationality-error}}{{^nationality-error}}None Given{{/nationality-error}}</p></td>
                     </tr>
 
                     <tr style="border-top: 1px solid #009390;">
-                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}fields.signature-error-checkbox.label{{/t}}: </p></td>
+                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.confirm.fields.signature-error.label{{/t}}: </p></td>
                       <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{#signature-error}}{{signature-error}}{{/signature-error}}{{^signature-error}}None Given{{/signature-error}}</p></td>
                     </tr>
 
                     <tr style="border-top: 1px solid #009390;">
-                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}fields.national-insurance-error-checkbox.label{{/t}}: </p></td>
+                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.confirm.fields.national-insurance-error.label{{/t}}: </p></td>
                       <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{#national-insurance-error}}{{national-insurance-error}}{{/national-insurance-error}}{{^national-insurance-error}}None Given{{/national-insurance-error}}</p></td>
                     </tr>
 
                     <tr style="border-top: 1px solid #009390;">
-                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}fields.photograph-error-checkbox.label{{/t}}: </p></td>
+                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.confirm.fields.photograph-error.label{{/t}}: </p></td>
                       <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{#photograph-error}}{{photograph-error}}{{/photograph-error}}{{^photograph-error}}None Given{{/photograph-error}}</p></td>
                     </tr>
 
                     <tr style="border-top: 1px solid #009390;">
-                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}fields.damaged-error-checkbox.label{{/t}}: </p></td>
+                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.confirm.fields.damaged-error.label{{/t}}: </p></td>
                       <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{#damaged-error}}{{damaged-error}}{{/damaged-error}}{{^damaged-error}}None Given{{/damaged-error}}</p></td>
                     </tr>
 
                     <tr style="border-top: 1px solid #009390;">
-                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}fields.conditions-error-checkbox.label{{/t}}: </p></td>
+                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.confirm.fields.conditions-error.label{{/t}}: </p></td>
                       <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{#conditions-error}}{{conditions-error}}{{/conditions-error}}{{^conditions-error}}None Given{{/conditions-error}}</p></td>
                     </tr>
 
                     <tr style="border-top: 1px solid #009390;">
-                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}fields.length-of-stay-error-checkbox.label{{/t}}: </p></td>
+                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.confirm.fields.length-of-stay-error.label{{/t}}: </p></td>
                       <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{#length-of-stay-error}}{{length-of-stay-error}}{{/length-of-stay-error}}{{^length-of-stay-error}}None Given{{/length-of-stay-error}}</p></td>
                     </tr>
 
                     <tr style="border-top: 1px solid #009390;">
-                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}fields.biographics-error-checkbox.label{{/t}}: </p></td>
+                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.confirm.fields.biographics-error.label{{/t}}: </p></td>
                       <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{#biographics-error}}{{biographics-error}}{{/biographics-error}}{{^biographics-error}}None Given{{/biographics-error}}</p></td>
                     </tr>
 
                     <tr style="border-top: 1px solid #009390;">
-                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}fields.BRP-issue-error-checkbox.label{{/t}}: </p></td>
+                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.confirm.fields.BRP-issue-error.label{{/t}}: </p></td>
                       <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{#BRP-issue-error}}{{BRP-issue-error}}{{/BRP-issue-error}}{{^BRP-issue-error}}None Given{{/BRP-issue-error}}</p></td>
                     </tr>
                   </table>
@@ -211,7 +250,7 @@
                   <p style="font-size: 19px; font-weight: bold; color: #000; line-height: 1.32; margin: 0 0 10px 0;">Contact details</p>
                   <table width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#FFFFFF" style="margin: 0 0 20px 0;">
                       <tr style="border-top: 1px solid #009390;">
-                        <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.check-details.table.headers.contact-address{{/t}}: </p></td>
+                        <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.confirm.fields.use-address.label{{/t}}: </p></td>
                         <td width="75%">
                           <p style="font-size: 16px; color: #000; margin: 10px 0;">
                             {{#contact-address-street}}

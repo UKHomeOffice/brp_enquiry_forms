@@ -1,4 +1,6 @@
 'use strict';
+const hof = require('hof');
+const Summary = hof.components.summary;
 
 module.exports = {
   name: 'lost-stolen',
@@ -8,16 +10,15 @@ module.exports = {
   steps: {
     '/where': {
       fields: ['inside-uk', 'country'],
+      locals: { captionHeading: 'Step 1 of 5' },
       next: '/date-lost'
     },
     '/date-lost': {
       fields: [
-        'date-lost',
-        'date-lost-day',
-        'date-lost-month',
-        'date-lost-year'
+        'date-lost'
       ],
       backLink: 'where',
+      locals: { captionHeading: 'Step 2 of 5' },
       next: '/personal-details'
     },
     '/personal-details': {
@@ -31,26 +32,30 @@ module.exports = {
         'no-reference'
       ],
       backLink: 'date-lost',
+      locals: { captionHeading: 'Step 3 of 5' },
       next: '/contact-details'
     },
     '/contact-details': {
       fields: [
         'email',
+        'phone',
         'use-address',
         'contact-address-house-number',
         'contact-address-street',
         'contact-address-town',
         'contact-address-county',
-        'contact-address-postcode',
-        'phone'
+        'contact-address-postcode'
       ],
       backLink: 'personal-details',
+      locals: { captionHeading: 'Step 4 of 5' },
       next: '/confirm'
     },
     '/confirm': {
-      behaviours: ['complete', require('../common/behaviours/email')],
+      behaviours: [Summary, 'complete', require('../common/behaviours/email')],
+      sections: require('./sections/summary-data-sections'),
       fields: ['org-help', 'rep-name', 'rep-email', 'org-type'],
       backLink: 'contact-details',
+      locals: { captionHeading: 'Step 5 of 5' },
       next: '/confirmation'
     },
     '/confirmation': {

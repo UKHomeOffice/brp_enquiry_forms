@@ -1,9 +1,16 @@
 'use strict';
+const countries = [''].concat(require('../../../assets/countries').allCountries);
 
 module.exports = {
-  'reference-number-radio': {
+  nationality: {
+    mixin: 'select',
     validate: ['required'],
-    className: ['form-group'],
+    className: ['typeahead', 'js-hidden'],
+    options: countries
+  },
+  'reference-number-radio': {
+    mixin: 'radio-group',
+    validate: ['required'],
     options: [
       {
         value: 'brp-card',

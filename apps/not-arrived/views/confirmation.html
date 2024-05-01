@@ -1,51 +1,35 @@
-{{<layout}}
+{{<partials-page}}
+    {{$journeyHeader}}
+        {{#t}}journey.delivery.header{{/t}}
+    {{/journeyHeader}}
+    {{$pageTitle}}{{#t}}pages.confirmation.title{{/t}} – GOV.UK{{/pageTitle}}
+    {{$page-content}}
+        {{> partials-confirmation-banner}}
+        <hr>
+        <h2>{{#t}}pages.confirmation.next.header{{/t}}</h2>
+        <p>{{#t}}pages.confirmation.next.not-specified.para.one{{/t}}</p>
+        <p>{{#t}}pages.confirmation.next.not-specified.para.two{{/t}}</p>
+        <p>{{#t}}pages.confirmation.next.not-specified.para.three{{/t}}</p>
+        
+        <h2>{{#t}}pages.confirmation.status.header{{/t}}</h2>
+        <p>{{#t}}pages.confirmation.status.para.one{{/t}}</p>
+        <p>{{#t}}pages.confirmation.status.para.two{{/t}}</p>
 
-  {{$journeyHeader}}
-    {{#t}}journeys.delivery.header{{/t}}
-  {{/journeyHeader}}
+        <h2>{{#t}}pages.confirmation.right-to-work.header{{/t}}</h2>
+        <p>{{#t}}pages.confirmation.right-to-work.para.one{{/t}}</p>
+        <p>{{#t}}pages.confirmation.right-to-work.para.two{{/t}}</p>
 
-  {{$propositionHeader}}
-    {{> partials-navigation}}
-  {{/propositionHeader}}
+        <h2>{{#t}}pages.confirmation.right-to-rent.header{{/t}}</h2>
+        <p>{{#t}}pages.confirmation.right-to-rent.para.one{{/t}}</p>
+        <p>{{#t}}pages.confirmation.right-to-rent.para.two{{/t}}</p>
+        <p>{{#t}}pages.confirmation.right-to-rent.para.three{{/t}}</p>
 
-  {{$content}}
-    {{> partials-confirmation-banner}}
+        <h2>{{#t}}pages.confirmation.prove-status.header{{/t}}</h2>
+        <p>{{#t}}pages.confirmation.prove-status.para.one{{/t}}</p>
 
-    <hr>
-
-    <h2>{{#t}}pages.confirmation.next.header{{/t}}</h2>
-
-    <p>{{#t}}pages.confirmation.next.not-specified.para.one{{/t}}</p>
-    <p>{{#t}}pages.confirmation.next.not-specified.para.two{{/t}}</p>
-    <p>{{#t}}pages.confirmation.next.not-specified.para.three{{/t}}</p>
-
-    <h2>{{#t}}pages.confirmation.status.header{{/t}}</h2>
-
-    <p>{{#t}}pages.confirmation.status.para.one{{/t}}</p>
-    <p>{{#t}}pages.confirmation.status.para.two{{/t}}</p>
-
-    <h2>{{#t}}pages.confirmation.right-to-work.header{{/t}}</h2>
-
-    <p>{{#t}}pages.confirmation.right-to-work.para.one{{/t}}</p>
-    <p>{{#t}}pages.confirmation.right-to-work.para.two{{/t}}</p>
-
-    <h2>{{#t}}pages.confirmation.right-to-rent.header{{/t}}</h2>
-
-    <p>{{#t}}pages.confirmation.right-to-rent.para.one{{/t}}</p>
-    <p>{{#t}}pages.confirmation.right-to-rent.para.two{{/t}}</p>
-    <p>{{#t}}pages.confirmation.right-to-rent.para.three{{/t}}</p>
-
-    <h2>{{#t}}pages.confirmation.prove-status.header{{/t}}</h2>
-
-    <p>{{#t}}pages.confirmation.prove-status.para.one{{/t}}</p>
-
-    <h2>{{#t}}pages.confirmation.banks.header{{/t}}</h2>
-
-    <p>{{#t}}pages.confirmation.banks.para.one{{/t}}</p>
-    <hr>
-
-    <a href='https://www.gov.uk/done/brp-not-arrived' class='button'>{{#t}}buttons.close{{/t}}</a>
-
-  {{/content}}
-
-{{/layout}}
+        <h2>{{#t}}pages.confirmation.banks.header{{/t}}</h2>
+        <p>{{#t}}pages.confirmation.banks.para.one{{/t}}</p>
+        <hr>
+        <a href='https://www.gov.uk/done/brp-not-arrived' class='button'>{{#t}}buttons.close{{/t}}</a>
+    {{/page-content}}
+{{/partials-page}}

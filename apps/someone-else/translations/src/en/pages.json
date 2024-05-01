@@ -1,5 +1,5 @@
 {
-  "arrange-collection": {
+  "arrange": {
     "header": "Who would you like to nominate?"
   },
   "someone-else": {
@@ -10,12 +10,13 @@
       "title": "Provide details of the person you want to collect your BRP. The nominated person must be over 18 years old and hold a valid passport, EU national ID card or BRP.​"
     }
   },
-  "someone-else-reason": {
-    "header": "Why do you need someone else to collect your BRP?"
-  },
   "exit-cancel-request": {
     "header": "You don't need to use this service",
     "subheader": "You do not need to cancel your request for a nominated person to collect your BRP. If you are still unable to collect your BRP yourself, you can nominate a new person to collect it for you."
+  },
+  "personal-details": {
+    "header": "What are your personal details?",
+    "subheader": "We need these details so we know which BRP to give to the person collecting on your behalf."
   },
   "contact-details": {
     "header": "How should we contact you about your BRP?",
@@ -25,25 +26,6 @@
     "delay": "Asking to be contacted by post will add a further 2 days on to our response time. If you provide an email address we can get back to you sooner."
   },
   "check-details": {
-    "header": "Check the details you have provided",
-    "subheader": "If any information is incorrect, you can change it here.",
-    "table": {
-      "headers": {
-        "contact-address": "Contact address",
-        "address": "New address",
-        "fullname": "Full name",
-        "date-of-birth": "Date of birth",
-        "nationality": "Nationality",
-        "passport": "Passport number",
-        "email": "Email address",
-        "phone": "Phone number",
-        "id-number": "Identity document number"
-      }
-    },
-    "org-help": {
-      "title": "Are you completing this form on behalf of the BRP holder?",
-      "explanation": "Friends, relatives, employers, charity workers and lawyers, for example, can complete this form on behalf of the BRP holder."
-    },
     "org-details-group": {
       "header": "What are your details?",
       "subheader": "We will attempt to contact the BRP holder directly. We will only use these details to contact you if needed.",
@@ -69,8 +51,52 @@
   "someone-else-confirmation": {
     "paragraph": "We will review the information you have given. Once we've done this, we will send you a letter saying that your nominated person can collect your BRP from the Post Office. Do not send them to collect the BRP without the letter."
   },
+  "confirm": {
+    "header": "Check the details you have provided",
+    "subheader": "If any information is incorrect, you can change it here.",
+    "sections": {
+      "nominee-information": {
+        "header": "Details of person nominated to collect BRP"
+      },
+      "personal-details": {
+        "header": "Your details"
+      }
+    },
+    "fields": {
+      "someone-else-reason-radio": {
+        "label": "Reason for nominating"
+      },
+      "incapable-details": {
+        "label": "Further details"
+      },
+      "someone-else-fullname": {
+        "label": "Full name"
+      },
+      "someone-else-date": {
+        "label": "Date of birth"
+      },
+      "someone-else-nationality": {
+        "label": "Nationality"
+      },
+      "someone-else-id-type": {
+        "label": "Nominated person's identity document type (to be shown at collection)"
+      },
+      "someone-else-id-number": {
+        "label": "Identity document number"
+      },
+      "nationality": {
+        "label": "Nationality"
+      },
+      "use-address": {
+        "label": "Contact address"
+      },
+      "phone": {
+        "label": "Phone number"
+      }
+    }
+  },
   "confirmation": {
-    "header": "Thank you, we have received your information.",
+    "title": "Thank you, we have received your information.",
     "email": "We have sent an email to",
     "email_part_two": "to confirm receipt of your enquiry.",
     "next": {
