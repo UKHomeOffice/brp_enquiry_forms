@@ -9,6 +9,7 @@ module.exports = {
     }
   },
   'someone-else-reason-radio': {
+    mixin: 'radio-group',
     validate: ['required'],
     legend: {
       className: 'visuallyhidden',

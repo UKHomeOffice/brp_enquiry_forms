@@ -33,26 +33,7 @@
       {{$form}}
         {{#input-text}}fullname{{/input-text}}
 
-        <fieldset id="date-of-birth-group" class="{{#errors.date-of-birth}}validation-error{{/errors.date-of-birth}}">
-
-          <legend>
-            <span class="form-label-bold">{{#t}}fields.date-of-birth.legend{{/t}}</span>
-          </legend>
-
-          {{#errors.date-of-birth}}
-            <span id="date-of-birth-error" class="error-message">
-              {{errors.date-of-birth.message}}
-            </span>
-          {{/errors.date-of-birth}}
-
-          <div class="form-group form-date">
-            <p id="date-of-birth-hint" class="form-hint">
-              {{#t}}fields.date-of-birth.hint{{/t}}
-            </p>
-            {{#input-date}}date-of-birth{{/input-date}}
-          </div>
-
-        </fieldset>
+        {{#renderField}}date-of-birth{{/renderField}}
 
         {{#select}}nationality{{/select}}
 

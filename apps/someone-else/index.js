@@ -1,9 +1,11 @@
 'use strict';
+const SummaryPageBehaviour = require('hof').components.summary;
 
 module.exports = {
   name: 'someone-else',
   baseUrl: '/someone-else',
   params: '/:action?',
+  confirmStep: '/confirm',
   steps: {
     '/arrange': {
       behaviours: [require('./behaviours/someone-else-brp')],
@@ -14,6 +16,7 @@ module.exports = {
         'someone-else-id-type',
         'someone-else-id-number'
       ],
+      locals: { captionHeading: 'Step 1 of 5' },
       next: '/reason'
     },
     '/reason': {
@@ -47,7 +50,8 @@ module.exports = {
       next: '/confirm'
     },
     '/confirm': {
-      behaviours: ['complete', require('../common/behaviours/email')],
+      behaviours: [SummaryPageBehaviour, 'complete', require('../common/behaviours/email')],
+      sections: require('./sections/summary-data-sections'),
       fields: [
         'org-help',
         'rep-name',

@@ -1,5 +1,5 @@
 {
-  "arrange-collection": {
+  "arrange": {
     "header": "Who would you like to nominate?"
   },
   "someone-else": {
@@ -10,12 +10,15 @@
       "title": "Provide details of the person you want to collect your BRP. The nominated person must be over 18 years old and hold a valid passport, EU national ID card or BRP.​"
     }
   },
-  "someone-else-reason": {
+  "reason": {
     "header": "Why do you need someone else to collect your BRP?"
   },
   "exit-cancel-request": {
     "header": "You don't need to use this service",
     "subheader": "You do not need to cancel your request for a nominated person to collect your BRP. If you are still unable to collect your BRP yourself, you can nominate a new person to collect it for you."
+  },
+  "personal-details": {
+    "header": "What are your personal details?"
   },
   "contact-details": {
     "header": "How should we contact you about your BRP?",
@@ -68,6 +71,38 @@
   },
   "someone-else-confirmation": {
     "paragraph": "We will review the information you have given. Once we've done this, we will send you a letter saying that your nominated person can collect your BRP from the Post Office. Do not send them to collect the BRP without the letter."
+  },
+  "confirm": {
+    "header": "Check the details you have provided",
+    "subheader": "If any information is incorrect, you can change it here.",
+    "sections": {
+      "nominee-information": {
+        "header": "Details of person nominated to collect BRP"
+      }
+    },
+    "fields": {
+      "someone-else-reason-radio": {
+        "label": "Reason for nominating"
+      },
+      "incapable-details": {
+        "label": "Further details"
+      },
+      "someone-else-fullname": {
+        "label": "Full name"
+      },
+      "someone-else-date": {
+        "label": "Date of birth"
+      },
+      "someone-else-nationality": {
+        "label": "Nationality"
+      },
+      "someone-else-id-type": {
+        "label": "Nominated person's identity document type (to be shown at collection)"
+      },
+      "someone-else-id-number": {
+        "label": "Identity document number"
+      }
+    }
   },
   "confirmation": {
     "header": "Thank you, we have received your information.",

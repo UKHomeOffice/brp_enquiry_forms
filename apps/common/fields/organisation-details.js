@@ -2,6 +2,7 @@
 
 module.exports = {
   'org-help': {
+    mixin: 'radio-group',
     validate: ['required'],
     className: 'inline',
     legend: {
@@ -31,6 +32,7 @@ module.exports = {
     }
   },
   'org-type': {
+    mixin: 'radio-group',
     validate: ['required'],
     dependent: {
       field: 'org-help',

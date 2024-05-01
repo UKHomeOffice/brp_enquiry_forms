@@ -30,27 +30,7 @@
     {{<partials-form}}
 
       {{$form}}
-
-        <fieldset id="date-lost-group" class="panel-indent {{#errors.date-lost}}validation-error{{/errors.date-lost}}">
-
-          <legend class="visuallyhidden">
-            <span class="form-label-bold">{{#t}}pages.date-lost.header{{/t}}</span>
-          </legend>
-
-          {{#errors.date-lost}}
-            <span id="date-lost-error" class="error-message">
-              {{errors.date-lost.message}}
-            </span>
-          {{/errors.date-lost}}
-
-          <div class="form-group form-date">
-            <p id="date-lost-hint" class="form-hint">
-              {{#t}}fields.date-lost.hint{{/t}}
-            </p>
-            {{#input-date}}date-lost{{/input-date}}
-          </div>
-
-        </fieldset>
+        {{#renderField}}date-lost{{/renderField}}
 
         {{#input-submit}}continue{{/input-submit}}
       {{/form}}

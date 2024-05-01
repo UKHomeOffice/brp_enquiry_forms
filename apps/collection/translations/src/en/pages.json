@@ -74,6 +74,9 @@
       }
     }
   },
+  "confirm": {
+    "header": "Check the details you have provided"
+  },
   "confirmation": {
     "header": "Thank you, we have received your information.",
     "email": "We have sent an email to",

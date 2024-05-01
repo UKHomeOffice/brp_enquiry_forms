@@ -78,7 +78,8 @@ module.exports = {
     validate: ['required', 'notUrl']
   },
   'date-of-birth': date('date-of-birth', {
-    validate: ['required', 'before']
+    mixin: 'input-date',
+    validate: ['date', 'required', 'before']
   }),
   nationality: {
     validate: ['required'],

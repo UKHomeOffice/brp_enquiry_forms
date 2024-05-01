@@ -7,6 +7,7 @@ module.exports = {
     validate: ['required', 'notUrl']
   },
   'someone-else-date': date('someone-else-date', {
+    mixin: 'input-date',
     validate: [
       'required',
       { type: 'before', arguments: [18, 'years'] }
@@ -18,6 +19,7 @@ module.exports = {
     options: [''].concat(require('../../../assets/countries').allCountries)
   },
   'someone-else-id-type': {
+    mixin: 'radio-group',
     validate: ['required'],
     options: [
       'passport',

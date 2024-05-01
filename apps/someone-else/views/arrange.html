@@ -1,5 +1,4 @@
 {{<layout}}
-  {{$step}}Step 1 of 5{{/step}}
 
   {{$journeyHeader}}
     {{#t}}journeys.someone-else.header{{/t}}
@@ -13,17 +12,7 @@
     {{> partials-navigation}}
   {{/propositionHeader}}
 
-  {{$title}}
-    {{#t}}pages.arrange-collection.header{{/t}}
-  {{/title}}
-
-  {{$header}}
-    {{<partials-page-header}}
-      {{$page-header}}
-        {{#t}}pages.arrange-collection.header{{/t}}
-      {{/page-header}}
-    {{/partials-page-header}}
-  {{/header}}
+  {{$pageTitle}}{{#t}}pages.arrange.header{{/t}} – GOV.UK{{/pageTitle}}
 
   {{$content}}
     {{<partials-form}}
@@ -35,26 +24,7 @@
 
           {{#input-text}}someone-else-fullname{{/input-text}}
 
-          <fieldset id="someone-else-date-group" class="{{#errors.someone-else-date}}validation-error{{/errors.someone-else-date}} form-group">
-
-            <legend class=visuallyhidden>
-              <span class="form-label-bold">{{#t}}fields.someone-else-date.legend{{/t}}</span>
-            </legend>
-
-            <div class="form-group form-date">
-              {{#t}}fields.someone-else-date.legend{{/t}}
-              {{#errors.someone-else-date}}
-                <span id="nominated-date-error" class="error-message">
-                  {{errors.someone-else-date.message}}
-                </span>
-              {{/errors.someone-else-date}}
-              <p id="nominated-date-hint" class="form-hint">
-                {{#t}}fields.nominated-date.hint{{/t}}
-              </p>
-              {{#input-date}}someone-else-date{{/input-date}}
-            </div>
-
-          </fieldset>
+          {{#renderField}}someone-else-date{{/renderField}}
 
           {{#select}}someone-else-nationality{{/select}}
 

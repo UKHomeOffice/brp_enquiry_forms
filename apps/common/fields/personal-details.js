@@ -7,6 +7,7 @@ module.exports = {
     validate: ['required', 'notUrl']
   },
   'date-of-birth': date('date-of-birth', {
+    mixin: 'input-date',
     validate: ['required', 'before'],
     legend: 'fields.date-of-birth.legend',
     hint: 'fields.date-of-birth.hint'

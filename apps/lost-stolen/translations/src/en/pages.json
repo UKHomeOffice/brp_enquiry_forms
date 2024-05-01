@@ -16,6 +16,9 @@
     "header": "What are your personal details?",
     "subheader": "We need these details to review the problem with your BRP."
   },
+  "confirm": {
+    "header": "Check the details you have provided"
+  },
   "check-details": {
     "header": "Check the details you have provided",
     "subheader": "If any information is incorrect, you can change it here.",
@@ -45,8 +48,9 @@
       "type": "Type of support"
     }
   },
-  "inside-uk": {
-    "header": "Where are you now?"
+  "where": {
+    "header": "Where are you now?",
+    "title": "Where are you now?"
   },
   "date-lost": {
     "header": "When did you realise you no longer had your BRP?"
