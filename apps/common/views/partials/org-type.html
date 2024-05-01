@@ -1,13 +1,8 @@
-<h2>{{#t}}pages.check-details.org-help.title{{/t}}</h2>
-<p>{{#t}}pages.check-details.org-help.explanation{{/t}}</p>
 
-{{#radio-group}}org-help{{/radio-group}}
-
-<div id="org-details-group" class="panel-indent">
+<fieldset id="org-details-group" class="govuk-radios__conditional govuk-radios__conditional--hidden">
   <h3>{{#t}}pages.check-details.org-details-group.header{{/t}}</h3>
   <p>{{#t}}pages.check-details.org-details-group.subheader{{/t}}</p>
   {{#input-text}}rep-name{{/input-text}}
   {{#input-text}}rep-email{{/input-text}}
-  <p>{{#t}}pages.check-details.org-details-group.type{{/t}}</p>
   {{#radio-group}}org-type{{/radio-group}}
-</div>
+</fieldset>

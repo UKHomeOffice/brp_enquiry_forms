@@ -30,7 +30,7 @@ module.exports = {
       {
         step: '/arrange',
         field: 'someone-else-id-number'
-      },
+      }
     ]
   }
 };

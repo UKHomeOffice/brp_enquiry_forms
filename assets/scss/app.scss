@@ -4,6 +4,17 @@
 @import "./icons.scss";
 // @import "./validation.scss";
 
+a {
+  @extend .govuk-link;
+}
+
+p {
+  @extend .govuk-body;
+}
+
+fieldset {
+  @extend .govuk-fieldset;
+}
 
 #banner-content {
   @extend #content;
@@ -205,4 +216,10 @@ h1 {
   p {
     margin-bottom: 0;
   }
+}
+
+.wrap-table-cell,
+.confirm-row {
+  white-space: pre-wrap;
+  word-wrap: break-word;
 }

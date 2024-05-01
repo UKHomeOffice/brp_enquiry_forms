@@ -5,24 +5,25 @@ const countries = [''].concat(require('../../../assets/countries').allCountries)
 
 module.exports = {
   'collection-where-radio': {
+    isPageHeading: true,
     mixin: 'radio-group',
+    className: ['govuk-radios', 'govuk-radios--inline'],
     validate: ['required'],
-    className: ['inline', 'form-group'],
-    legend: {
-      className: 'visuallyhidden'
-    },
     options: [{
       value: 'Post Office',
       toggle: 'collection-date-group'
-    }, {
+    },
+    {
       value: 'Sponsor',
       toggle: 'collection-date-group'
     }]
   },
   'collection-date': date('collection-date', {
-    validate: ['before']
+    mixin: 'input-date',
+    validate: ['date', 'before']
   }),
   'reason-radio': {
+    isPageHeading: true,
     mixin: 'radio-group',
     validate: ['required'],
     options: [{
@@ -53,15 +54,13 @@ module.exports = {
     },
     {
       value: 'no-brp'
-    }],
-    legend: {
-      className: 'visuallyhidden'
-    }
+    }]
   },
   'nominated-fullname': {
     validate: ['required']
   },
   'nominated-nationality': {
+    mixin: 'select',
     validate: ['required'],
     className: ['typeahead', 'js-hidden'],
     options: countries,
@@ -72,6 +71,7 @@ module.exports = {
   },
   'nominated-date': date('nominated-date', {
     // TODO confirm with BA on over18 check 'over18' validation
+    mixin: 'input-date',
     validate: ['required', 'before']
   }),
   fullname: {
@@ -82,6 +82,7 @@ module.exports = {
     validate: ['date', 'required', 'before']
   }),
   nationality: {
+    mixin: 'select',
     validate: ['required'],
     className: ['typeahead', 'js-hidden'],
     options: countries,
@@ -95,10 +96,12 @@ module.exports = {
     type: 'email'
   },
   phone: {
-    label: 'fields.phone.label'
+    label: 'fields.phone.label',
+    className: ['govuk-input', 'govuk-input--width-20']
   },
   'contact-address-county': {
     label: 'fields.address-county.label',
+    className: ['govuk-input', 'govuk-!-width-two-thirds'],
     dependent: {
       value: 'true',
       field: 'use-address'

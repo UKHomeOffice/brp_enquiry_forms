@@ -4,7 +4,7 @@ module.exports = {
   'org-help': {
     mixin: 'radio-group',
     validate: ['required'],
-    className: 'inline',
+    className: ['govuk-radios', 'govuk-radios--inline'],
     legend: {
       className: 'visuallyhidden',
       value: 'pages.check-details.org-help.title'

@@ -38,6 +38,7 @@
     "label": "E-mail"
   },
   "org-type": {
+    "legend": "Type of support",
     "options": {
       "pbs": {
         "label": "PBS sponsor"
