@@ -1,27 +1,15 @@
-{{<layout}}
-
-  {{$journeyHeader}}
-    {{#t}}journeys.collection.header{{/t}}
-  {{/journeyHeader}}
-
-  {{$propositionHeader}}
-    {{> partials-navigation}}
-  {{/propositionHeader}}
-
-  {{$content}}
-    {{> partials-confirmation-banner}}
-
+{{<partials-page}}
+{{$journeyHeader}}
+{{#t}}journey.collection.header{{/t}}
+{{/journeyHeader}}
+{{$pageTitle}}{{#t}}pages.confirmation.title{{/t}} – GOV.UK{{/pageTitle}}
+{{$page-content}}
+{{> partials-confirmation-banner}}
     <hr>
-
     <h2>{{#t}}pages.confirmation.next.header{{/t}}</h2>
-
     <p>{{#t}}pages.someone-else-confirmation.paragraph{{/t}}</p>
     <p>{{#t}}pages.confirmation.next.not-specified.para.two{{/t}}</p>
-
     <hr>
-
-    <a href='https://www.gov.uk/done/brp-collection-problem' class='button'>{{#t}}buttons.close{{/t}}</a>
-
-  {{/content}}
-
-{{/layout}}
+<a href='https://www.gov.uk/done/brp-collection-problem' class='govuk-button'>{{#t}}buttons.close{{/t}}</a>
+{{/page-content}}
+{{/partials-page}}

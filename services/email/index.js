@@ -151,11 +151,6 @@ Emailer.prototype.send = function send(email, callback) {
     };
     const attachments = [
       {
-        filename: 'govuk_logotype_email.png',
-        path: path.resolve(__dirname, './images/govuk_logotype_email.png'),
-        cid: 'govuk_logotype_email'
-      },
-      {
         filename: 'ho_crest_27px.png',
         path: path.resolve(__dirname, './images/ho_crest_27px.png'),
         cid: 'ho_crest_27px'

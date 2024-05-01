@@ -4,51 +4,51 @@
 
 {{#t}}emails.someone-else.caseworker.nominating{{/t}} ({{nominating}})
 
-{{#t}}pages.check-details.table.headers.fullname{{/t}}
+{{#t}}fields.fullname.label{{/t}}
 {{fullname}}
 
-{{#t}}pages.check-details.table.headers.date-of-birth{{/t}}
+{{#t}}fields.date-of-birth.legend{{/t}}
 {{date-of-birth}}
 
-{{#t}}pages.check-details.table.headers.nationality{{/t}}
+{{#t}}pages.confirm.fields.nationality.label{{/t}}
 {{nationality}}
 
 {{#passport}}
-{{#t}}pages.check-details.table.headers.passport{{/t}}
+{{#t}}fields.passport.label{{/t}}
 {{passport}}
 {{/passport}}
 
 {{#phone}}
-{{#t}}pages.check-details.table.headers.phone{{/t}}
+{{#t}}pages.comfirm.fields.phone.label{{/t}}
 {{phone}}
 {{/phone}}
 
 {{#email}}
-{{#t}}pages.check-details.table.headers.email{{/t}}
+{{#t}}fields.email.label{{/t}}
 {{email}}
 {{/email}}
 
 {{#t}}pages.someone-else-check-details.tables.other-person.title{{/t}}
 
-{{#t}}pages.check-details.table.headers.fullname{{/t}}
+{{#t}}pages.confirm.fields.someone-else-fullname.label{{/t}}
 {{someone-else-fullname}}
 
-{{#t}}pages.check-details.table.headers.date-of-birth{{/t}}
+{{#t}}pages.confirm.fields.someone-else-date.label{{/t}}
 {{someone-else-date}}
 
-{{#t}}pages.check-details.table.headers.nationality{{/t}}
+{{#t}}pages.comfirm.fields.someone-else.nationality.label{{/t}}
 {{someone-else-nationality}}
 
 {{#t}}fields.someone-else-id-type.legend{{/t}}
 {{#t}}fields.someone-else-id-type.options.{{someone-else-id-type}}.label{{/t}}
 
-{{#t}}pages.check-details.table.headers.id-number{{/t}}
+{{#t}}fields.someone-else-id-number.label{{/t}}
 {{someone-else-id-number}}
 
 {{#t}}pages.someone-else-check-details.tables.other-person.title{{/t}}
 
 {{#contact-address-street}}
-{{#t}}pages.check-details.table.headers.contact-address{{/t}}
+{{#t}}pages.confirm.fields.use-address{{/t}}
 {{contact-address-house-number}} {{contact-address-street}},
 {{contact-address-town}},
 {{#contact-address-county}}

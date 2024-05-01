@@ -1,17 +1,12 @@
-{{<layout}}
+{{<partials-page}}
+{{$journeyHeader}}
+{{#t}}journey.delivery.header{{/t}}
+{{/journeyHeader}}
+{{$pageTitle}}{{#t}}pages.confirmation.title{{/t}} – GOV.UK{{/pageTitle}}
+{{$page-content}}
+{{> partials-confirmation-banner}}
 
-  {{$journeyHeader}}
-    {{#t}}journeys.delivery.header{{/t}}
-  {{/journeyHeader}}
-
-  {{$propositionHeader}}
-    {{> partials-navigation}}
-  {{/propositionHeader}}
-
-  {{$content}}
-    {{> partials-confirmation-banner}}
-
-    <hr>
+<hr>
 
     <h2>{{#t}}pages.confirmation.next.header{{/t}}</h2>
 
@@ -46,6 +41,5 @@
 
     <a href='https://www.gov.uk/done/brp-not-arrived' class='button'>{{#t}}buttons.close{{/t}}</a>
 
-  {{/content}}
-
-{{/layout}}
+{{/page-content}}
+{{/partials-page}}

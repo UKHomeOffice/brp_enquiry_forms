@@ -2,7 +2,7 @@
 
 const date = require('hof').components.date;
 const moment = require('moment');
-
+const countries = [''].concat(require('../../../assets/countries').allCountries);
 const todaysDate = moment().format('YYYY[-]MM[-]DD');
 const beforeTodayValidator = {
   type: 'before',
@@ -11,6 +11,7 @@ const beforeTodayValidator = {
 
 module.exports = {
   'reference-number-radio': {
+    mixin: 'radio-group',
     validate: ['required'],
     className: ['form-group'],
     options: [
@@ -33,10 +34,14 @@ module.exports = {
   },
   'date-of-birth': date('date-of-birth', {
     mixin: 'input-date',
-    validate: ['required', beforeTodayValidator],
-    legend: 'fields.date-of-birth.legend',
-    hint: 'fields.date-of-birth.hint'
+    validate: ['required', beforeTodayValidator]
   }),
+  nationality: {
+    mixin: 'select',
+    validate: ['required'],
+    className: ['typeahead', 'js-hidden'],
+    options: countries
+  },
   email: {
     validate: ['required', 'email'],
     type: 'email'
@@ -46,6 +51,7 @@ module.exports = {
   },
   'contact-address-county': {
     label: 'fields.address-county.label',
+    className: ['govuk-input', 'govuk-!-width-two-thirds'],
     dependent: {
       value: 'true',
       field: 'use-address'

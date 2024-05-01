@@ -1,42 +1,9 @@
-{{<layout}}
-  {{$step}}Step 2 of 5{{/step}}
-
-  {{$journeyHeader}}
-    {{#t}}journeys.lost.header{{/t}}
-  {{/journeyHeader}}
-
-  {{$validationSummary}}
-    {{> partials-validation-summary}}
-  {{/validationSummary}}
-
-  {{$propositionHeader}}
-    {{> partials-navigation}}
-  {{/propositionHeader}}
-
-  {{$title}}
-    {{#t}}pages.date-lost.header{{/t}}
-  {{/title}}
-  
-  {{$header}}
-    {{<partials-page-header}}
-      {{$page-header}}
-        {{#t}}pages.date-lost.header{{/t}}
-      {{/page-header}}
-    {{/partials-page-header}}
-  {{/header}}
-
-  {{$content}}
-
-    {{<partials-form}}
-
-      {{$form}}
-        {{#renderField}}date-lost{{/renderField}}
-
-        {{#input-submit}}continue{{/input-submit}}
-      {{/form}}
-
-    {{/partials-form}}
-
-  {{/content}}
-
-{{/layout}}
+{{<partials-page}}
+{{$journeyHeader}}
+{{#t}}journey.lost.header{{/t}}
+{{/journeyHeader}}
+{{$page-content}}
+{{#renderField}}date-lost{{/renderField}}
+{{#input-submit}}continue{{/input-submit}}
+{{/page-content}}
+{{/partials-page}}

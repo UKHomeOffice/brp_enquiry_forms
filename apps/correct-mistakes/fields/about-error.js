@@ -8,6 +8,7 @@ module.exports = {
     /* this is here so we can display an error message if no error is selected */
   },
   'first-name-error-checkbox': {
+    mixin: 'checkbox',
     toggle: 'first-name-error-container'
   },
   'first-name-error': {
@@ -18,6 +19,7 @@ module.exports = {
     }
   },
   'last-name-error-checkbox': {
+    mixin: 'checkbox',
     toggle: 'last-name-error-container'
   },
   'last-name-error': {
@@ -28,16 +30,19 @@ module.exports = {
     }
   },
   'date-of-birth-error-checkbox': {
+    mixin: 'checkbox',
     toggle: 'date-of-birth-error-container'
   },
   'date-of-birth-error': date('date-of-birth-error', {
+    mixin: 'input-date',
     validate: ['required', 'before'],
-    dependent: {
+    validationLink: {
       field: 'date-of-birth-error-checkbox',
       value: 'true'
     }
   }),
   'birth-place-error-checkbox': {
+    mixin: 'checkbox',
     toggle: 'birth-place-error-container'
   },
   'birth-place-error': {
@@ -48,21 +53,20 @@ module.exports = {
     }
   },
   'gender-error-checkbox': {
+    mixin: 'checkbox',
     toggle: 'gender-error-group'
   },
   'gender-error': {
+    mixin: 'radio-group',
     validate: ['required'],
-    className: 'panel-indent block',
     dependent: {
       field: 'gender-error-checkbox',
       value: 'true'
     },
-    legend: {
-      className: 'visuallyhidden'
-    },
     options: ['female', 'male', 'unspecified']
   },
   'sponsor-details-error-checkbox': {
+    mixin: 'checkbox',
     toggle: 'sponsor-details-error-container'
   },
   'sponsor-details-error': {
@@ -73,19 +77,21 @@ module.exports = {
     }
   },
   'nationality-error-checkbox': {
+    mixin: 'checkbox',
     toggle: 'nationality-error-container'
   },
   'nationality-error': {
+    mixin: 'select',
     validate: ['required'],
     dependent: {
       field: 'nationality-error-checkbox',
       value: 'true'
     },
     className: ['typeahead', 'js-hidden'],
-    options: [''].concat(require('../../../assets/countries').allCountries),
-    hint: 'fields.nationality-error.hint'
+    options: [''].concat(require('../../../assets/countries').allCountries)
   },
   'signature-error-checkbox': {
+    mixin: 'checkbox',
     toggle: 'signature-error-container'
   },
   'signature-error': {
@@ -96,6 +102,7 @@ module.exports = {
     }
   },
   'photograph-error-checkbox': {
+    mixin: 'checkbox',
     toggle: 'photograph-error-container'
   },
   'photograph-error': {
@@ -106,6 +113,7 @@ module.exports = {
     }
   },
   'national-insurance-error-checkbox': {
+    mixin: 'checkbox',
     toggle: 'national-insurance-error-container'
   },
   'national-insurance-error': {
@@ -116,6 +124,7 @@ module.exports = {
     }
   },
   'damaged-error-checkbox': {
+    mixin: 'checkbox',
     toggle: 'damaged-error-container'
   },
   'damaged-error': {
@@ -126,6 +135,7 @@ module.exports = {
     }
   },
   'conditions-error-checkbox': {
+    mixin: 'checkbox',
     toggle: 'conditions-error-container'
   },
   'conditions-error': {
@@ -136,6 +146,7 @@ module.exports = {
     }
   },
   'length-of-stay-error-checkbox': {
+    mixin: 'checkbox',
     toggle: 'length-of-stay-error-container'
   },
   'length-of-stay-error': {
@@ -146,6 +157,7 @@ module.exports = {
     }
   },
   'biographics-error-checkbox': {
+    mixin: 'checkbox',
     toggle: 'biographics-error-container'
   },
   'biographics-error': {
@@ -156,6 +168,7 @@ module.exports = {
     }
   },
   'BRP-issue-error-checkbox': {
+    mixin: 'checkbox',
     toggle: 'BRP-issue-error-container'
   },
   'BRP-issue-error': {

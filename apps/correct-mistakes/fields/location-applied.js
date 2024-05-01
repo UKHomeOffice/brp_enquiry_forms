@@ -2,11 +2,12 @@
 
 module.exports = {
   'location-applied': {
+    mixin: 'radio-group',
     validate: ['required'],
     legend: {
       className: 'visuallyhidden'
     },
-    className: ['inline', 'form-group'],
+    className: ['govuk-radios', 'govuk-radios--inline'],
     options: ['yes', 'no']
   }
 };

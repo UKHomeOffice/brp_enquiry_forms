@@ -1,54 +1,19 @@
-{{<layout}}
-
-  {{$journeyHeader}}
-    {{#t}}journeys.someone-else.header{{/t}}
-  {{/journeyHeader}}
-
-  {{$validationSummary}}
-    {{> partials-validation-summary}}
-  {{/validationSummary}}
-
-  {{$propositionHeader}}
-    {{> partials-navigation}}
-  {{/propositionHeader}}
-
-  {{$pageTitle}}{{#t}}pages.arrange.header{{/t}} – GOV.UK{{/pageTitle}}
-
-  {{$content}}
-    {{<partials-form}}
-
-      {{$form}}
-
-        <div>
-          <p>{{#t}}pages.someone-else.someone-else-group.title{{/t}}</p>
-
-          {{#input-text}}someone-else-fullname{{/input-text}}
-
-          {{#renderField}}someone-else-date{{/renderField}}
-
-          {{#select}}someone-else-nationality{{/select}}
-
-          {{#radio-group}}someone-else-id-type{{/radio-group}}
-
-          {{#input-text}}someone-else-id-number{{/input-text}}
-
-          <div class="notice">
-            <i class="icon icon-important">
-              <span class="visuallyhidden">Warning</span>
-            </i>
-            <strong class="bold-small">
-              {{#t}}pages.someone-else.someone-else-id-type.title{{/t}}
-            </strong>
-          </div>
-
-        </div>
-
-
-        {{#input-submit}}continue{{/input-submit}}
-      {{/form}}
-
-    {{/partials-form}}
-
-  {{/content}}
-
-{{/layout}}
+{{<partials-page}}
+{{$journeyHeader}}
+{{#t}}journey.someone-else.header{{/t}}
+{{/journeyHeader}}
+{{$page-content}}
+<p>{{#t}}pages.someone-else.someone-else-group.title{{/t}}</p>
+{{#fields}}
+{{#renderField}}{{/renderField}}
+{{/fields}}
+<div class="govuk-warning-text">
+  <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+  <strong class="govuk-warning-text__text">
+    <span class="govuk-warning-text__assistive">Warning</span>
+    {{#t}}pages.someone-else.someone-else-id-type.title{{/t}}
+  </strong>
+</div>
+{{#input-submit}}continue{{/input-submit}}
+{{/page-content}}
+{{/partials-page}}

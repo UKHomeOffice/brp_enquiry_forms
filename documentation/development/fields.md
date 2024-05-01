@@ -2,7 +2,7 @@
 
 Each field consists of a key and object value containing a set of properties. The object value includes properties such as `label` and `validate`.
 
-More of the properties are documented at [HMPO Form Wizard](https://github.com/UKHomeOffice/passports-form-wizard), and [HMPO Form Controller](https://github.com/UKHomeOffice/passports-form-controller#validators)
+More of the properties are documented at [HOF(Home Office Forms)](https://github.com/UKHomeOfficeForms/hof/blob/master)
 
 ### Radio control
 
@@ -10,6 +10,7 @@ Open `./routes/fields.js` and append the following before the closing brace;
 
 ```js
 'options-radio': {
+  mixin: 'radio-group',
   options: [{
     value: 'yes',
     label: 'Yes'
@@ -18,7 +19,7 @@ Open `./routes/fields.js` and append the following before the closing brace;
     label: 'No'
   }],
   validate: ['required'],
-  className: ['inline']
+  className: ['govuk-radios, govuk-radios--inline']
 }
 ```
 
@@ -28,7 +29,7 @@ From the example above it's fairly easy to see we have configured a radio form c
 - The name 'options-radio' will be mapped to the `name` property of each HTML radio control.
 - Each item in `options` corresponds to a radio control, and the fields within each option are mapped to the appropriate HTML radio control.
 - As you might imagine, `value` and `label` properties are mapped to the value and label attributes of the HTML.
-- `validate` takes a list of one or more, optional validators, [listed here](https://github.com/UKHomeOffice/passports-form-controller/blob/master/lib/validation/validators.js).
+- `validate` takes a list of one or more, optional validators, [listed here](https://github.com/UKHomeOfficeForms/hof/blob/master/controller/validation/validators.js).
 - `className` takes a list of classNames that will be mapped to the corresponding HTML element.
 
 ###  Date control
@@ -36,22 +37,12 @@ From the example above it's fairly easy to see we have configured a radio form c
 In `./routes/fields.js` append the following before the closing brace;
 
 ```js
-'dob-date': {
-  legend: 'Date of birth',
-  hint: 'For example, 31 3 1970'
-},
-'dob-day': {
-  validate: ['required', 'numeric'],
-  label: 'Day'
-},
-'dob-month': {
-  validate: ['required', 'numeric'],
-  label: 'Month'
-},
-'dob-year': {
-  validate: ['required', 'numeric'],
-  label: 'Year'
-}
+const date = require('hof').components.date;
+
+'dob-date': date('dob-date', {
+  mixin: 'input-date',
+  validate: ['date', 'before']
+})
 ```
 
 #### Explanation

@@ -4,22 +4,22 @@
 
   BRP applicant's details
 
-  {{#t}}pages.check-details-error.personal-details-table.headers.fullname{{/t}}
+  {{#t}}fields.fullname.label{{/t}}
   {{fullname}}
 
-  {{#t}}pages.check-details-error.personal-details-table.headers.date-of-birth{{/t}}
+  {{#t}}fields.date-of-birth.legend{{/t}}
   {{date-of-birth}}
 
-  {{#t}}pages.check-details-error.personal-details-table.headers.nationality{{/t}}
+  {{#t}}pages.confirm.fields.nationality.label{{/t}}
   {{nationality}}
 
   {{#brp-card}}
-    {{#t}}pages.check-details-error.personal-details-table.headers.brp-card-number{{/t}}
+    {{#t}}pages.confirm.fields.brp-card-number.label{{/t}}
     {{brp-card}}
   {{/brp-card}}
 
   {{#same-address-street}}
-    {{#t}}pages.check-details.table.headers.address{{/t}}
+    {{#t}}pages.confirm.fields.same-address-radio.label{{/t}}
     {{same-address-house-number}} {{same-address-street}},
     {{same-address-town}},
     {{#same-address-county}}{{same-address-county}},{{/same-address-county}}
@@ -27,7 +27,7 @@
   {{/same-address-street}}
 
   {{#uk-address-street}}
-    {{#t}}pages.check-details.table.headers.address{{/t}}
+    {{#t}}pages.confirm.fields.uk-address-radio.label{{/t}}
     {{uk-address-house-number}} {{uk-address-street}},
     {{uk-address-town}},
     {{#uk-address-county}}{{uk-address-county}},{{/uk-address-county}}
@@ -37,84 +37,84 @@
   Reported errors
 
   {{#first-name-error}}
-    {{#t}}fields.first-name-error-checkbox.label{{/t}}
+    {{#t}}pages.confirm.fields.first-name-error.label{{/t}}
     {{first-name-error}}
   {{/first-name-error}}
 
   {{#last-name-error}}
-    {{#t}}fields.last-name-error-checkbox.label{{/t}}
+    {{#t}}pages.confirm.fields.last-name-error.label{{/t}}
     {{last-name-error}}
   {{/last-name-error}}
 
   {{#birth-place-error}}
-    {{#t}}fields.birth-place-error-checkbox.label{{/t}}
+    {{#t}}pages.confirm.fields.birth-place-error.label{{/t}}
     {{birth-place-error}}
   {{/birth-place-error}}
 
   {{#date-of-birth-error-day}}
-    {{#t}}fields.date-of-birth-error-checkbox.label{{/t}}
+    {{#t}}pages.confirm.fields.date-of-birth-error.label{{/t}}
     {{date-of-birth-error}}
   {{/date-of-birth-error-day}}
 
   {{#gender-error}}
-    {{#t}}fields.gender-error-checkbox.label{{/t}}
+    {{#t}}pages.confirm.fields.gender-error.label{{/t}}
     {{gender-error}}
   {{/gender-error}}
 
   {{#sponsor-details-error}}
-    {{#t}}fields.sponsor-details-error-checkbox.label{{/t}}
+    {{#t}}pages.confirm.fields.sponsor-details-error.label{{/t}}
     {{sponsor-details-error}}
   {{/sponsor-details-error}}
 
   {{#nationality-error}}
-    {{#t}}fields.nationality-error-checkbox.label{{/t}}
+    {{#t}}pages.confirm.fields.nationality-error.label{{/t}}
     {{nationality-error}}
   {{/nationality-error}}
 
   {{#signature-error}}
-    {{#t}}fields.signature-error-checkbox.label{{/t}}
+    {{#t}}pages.confirm.fields.signature-error.label{{/t}}
     {{signature-error}}
   {{/signature-error}}
 
   {{#national-insurance-error}}
-    {{#t}}fields.national-insurance-error-checkbox.label{{/t}}
+    {{#t}}pages.confirm.fields.national-insurance-error.label{{/t}}
     {{national-insurance-error}}
   {{/national-insurance-error}}
 
   {{#photograph-error}}
-    {{#t}}fields.photograph-error-checkbox.label{{/t}}
+    {{#t}}pages.confirm.fields.photograph-error.label{{/t}}
     {{photograph-error}}
   {{/photograph-error}}
 
   {{#damaged-error}}
-    {{#t}}fields.damaged-error-checkbox.label{{/t}}
+    {{#t}}pages.confirm.fields.damaged-error.label{{/t}}
     {{damaged-error}}
   {{/damaged-error}}
 
   {{#conditions-error}}
-    {{#t}}fields.conditions-error-checkbox.label{{/t}}
+    {{#t}}pages.confirm.fields.conditons-error.label{{/t}}
     {{conditions-error}}
   {{/conditions-error}}
 
   {{#length-of-stay-error}}
-    {{#t}}fields.length-of-stay-error-checkbox.label{{/t}}
+    {{#t}}pages.confirm.fields.length-of-stay-error.label{{/t}}
     {{length-of-stay-error}}
   {{/length-of-stay-error}}
 
   {{#biographics-error}}
-    {{#t}}fields.biographics-error-checkbox.label{{/t}}
+    {{#t}}pages.confirm.fields.biographics-error.label{{/t}}
     {{biographics-error}}
   {{/biographics-error}}
 
   {{#BRP-issue-error}}
-    {{#t}}fields.BRP-issue-error-checkbox.label{{/t}}
+    {{#t}}pages.confirm.fields.BRP-issue-error.label{{/t}}
     {{BRP-issue-error}}
   {{/BRP-issue-error}}
 
   Contact details
 
   {{#contact-address-street}}
-    {{#t}}pages.check-details.table.headers.address{{/t}}
+    {{#t}}pages.confirm.fields.use-address.label{{/t}}
     {{contact-address-house-number}} {{contact-address-street}},
     {{contact-address-town}},
     {{#contact-address-county}}{{contact-address-county}},{{/contact-address-county}}

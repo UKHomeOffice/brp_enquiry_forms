@@ -1,50 +1,12 @@
-{{<layout}}
-  {{$step}}Step 4 of 6{{/step}}
-
-  {{$journeyHeader}}
-    {{#t}}journeys.collection.header{{/t}}
-  {{/journeyHeader}}
-
-  {{$validationSummary}}
-    {{> partials-validation-summary}}
-  {{/validationSummary}}
-
-  {{$propositionHeader}}
-    {{> partials-navigation}}
-  {{/propositionHeader}}
-
-  {{$title}}
-    {{#t}}journeys.collection.pages.personal-details.header{{/t}}
-  {{/title}}
-
-  {{$header}}
-    {{<partials-page-header}}
-      {{$page-header}}
-        {{#t}}journeys.collection.pages.personal-details.header{{/t}}
-      {{/page-header}}
-    {{/partials-page-header}}
-  {{/header}}
-
-  {{$content}}
-    <p>{{#t}}journeys.collection.pages.personal-details.subheader{{/t}}</p>
-
-    {{<partials-form}}
-
-      {{$form}}
-        {{#input-text}}fullname{{/input-text}}
-
-        {{#renderField}}date-of-birth{{/renderField}}
-
-        {{#select}}nationality{{/select}}
-
-        {{#input-text}}passport{{/input-text}}
-
-        {{#input-submit}}continue{{/input-submit}}
-
-      {{/form}}
-
-    {{/partials-form}}
-
-  {{/content}}
-
-{{/layout}}
+{{<partials-page}}
+{{$journeyHeader}}
+{{#t}}journey.collection.header{{/t}}
+{{/journeyHeader}}
+{{$page-content}}
+<p>{{#t}}pages.personal-details.subheader{{/t}}</p>
+{{#fields}}
+{{#renderField}}{{/renderField}}
+{{/fields}}
+{{#input-submit}}continue{{/input-submit}}
+{{/page-content}}
+{{/partials-page}}

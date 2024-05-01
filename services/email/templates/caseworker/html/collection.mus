@@ -13,20 +13,59 @@
 </head>
 
   <body style="font-family: Helvetica, Arial, sans-serif; font-size:16px; margin:0; color:#0b0c0c">
-        <table width="100%" cellpadding="0" cellspacing="0" border="0">
-      <tr>
-        <td width="100%" height="53px" bgcolor="#0b0c0c">
-          <table width="580" cellpadding="0" cellspacing="0" border="0" align="center">
-            <tr>
-              <td width="100%" bgcolor="#0b0c0c" valign="middle">
-                <img width="152" height="31" src="cid:govuk_logotype_email" alt="GOV.UK" border="0" />
-              </td>
-            </tr>
-          </table>
-        </td>
-      </tr>
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse; min-width:100%; width:100%!important">
+      <tbody>
+        <tr>
+          <td width="100%" height="53" bgcolor="#0b0c0c">
+            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" align="center" style="border-collapse:collapse; max-width:580px">
+              <tbody>
+                <tr>
+                  <td width="70" bgcolor="#0b0c0c" valign="middle">
+                    <a href="https://www.gov.uk/">
+                      <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse">
+                        <tbody>
+                          <tr>
+                            <td style="padding-left:10px">
+                              <img data-imagetype="External" src="https://static.notifications.service.gov.uk/images/govuk-logotype-tudor-crown.png" alt="" height="32" border="0" style="margin-top:2px">
+                            </td>
+                            <td style="font-size:28px; line-height:1.315789474; margin-top:4px; padding-left:8px">
+                              <span style="font-family:Helvetica,Arial,sans-serif; font-weight:700; color:#ffffff; text-decoration:none; vertical-align:middle; display:inline-block">GOV.UK</span>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <table role="presentation" class="x_content" align="center" cellpadding="0" cellspacing="0" border="0" width="100%" style="border-collapse:collapse; max-width:580px; width:100%!important">
+      <tbody>
+        <tr>
+          <td width="10" height="10" valign="middle"></td>
+          <td>
+            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse">
+              <tbody>
+                <tr>
+                  <td bgcolor="#1D70B8" width="100%" height="10"></td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+          <td width="10" valign="middle" height="10"></td>
+        </tr>
+      </tbody>
     </table>
     <table width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#FFFFFF">
+      <tr>
+        <td height="30">
+          <br>
+        </td>
+      </tr>
       <tr>
         <td width="100%">
           <table width="580" cellpadding="0" cellspacing="0" border="0" align="center">
@@ -57,20 +96,20 @@
                   <p style="font-size: 23px; color: #000; line-height: 1.32; margin: 0 0 20px 0;">{{#t}}emails.collection.header{{/t}}</p>
 
                   <!-- PROBLEM DETAILS TABLE -->
-                  <p style="font-size: 19px; font-weight: bold; color: #000; line-height: 1.32; margin: 0 0 10px 0;">{{#t}}journeys.collection.pages.check-details.tables.problem-details.title{{/t}}</p>
+                  <p style="font-size: 19px; font-weight: bold; color: #000; line-height: 1.32; margin: 0 0 10px 0;">{{#t}}pages.confirm.sections.problem-details.header{{/t}}</p>
 
                   <table width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#FFFFFF" style="margin: 0 0 20px 0;">
                     <tr style="border-top: 1px solid #009390;">
-                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}journeys.collection.pages.check-details.tables.problem-details.where-radio.label{{/t}}: </p></td>
+                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.confirm.fields.collection-where-radio.label{{/t}}: </p></td>
                       <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{collection-where-radio}}</p></td>
                     </tr>
                     <tr style="border-top: 1px solid #009390;">
-                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}journeys.collection.pages.check-details.tables.problem-details.attempted-collection-date.label{{/t}}: </p></td>
+                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.confirm.fields.attempted-collection-date.label{{/t}}: </p></td>
                       <td colspan="2"width="100%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{#collection-date}}{{collection-date}}{{/collection-date}}{{^collection-date}}None Given{{/collection-date}}</p></td>
                     </tr>
 
                     <tr style="border-top: 1px solid #009390;">
-                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}journeys.collection.pages.check-details.tables.problem-details.reason.label{{/t}}: </p></td>
+                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.confirm.fields.reason-radio.label{{/t}}: </p></td>
                       <td colspan="2" width="100%">
                         <p style="font-size: 16px; color: #000; margin: 10px 0;">
                           {{#reason-radio}}{{#t}}fields.reason-radio.options.{{reason-radio}}.label{{/t}}{{/reason-radio}}
@@ -78,7 +117,7 @@
                       </td>
                     </tr>
                     <tr style="border-top: 1px solid #009390;">
-                     <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}journeys.collection.pages.check-details.tables.problem-details.describe-problem.label{{/t}}: </p></td>
+                     <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.confirm.fields.describe-problem.label{{/t}}: </p></td>
                       <td colspan="2" width="100%">
                         <p style="font-size: 16px; color: #000; margin: 10px 0;">
                           {{#which-post-office}}{{which-post-office}}{{/which-post-office}}
@@ -107,58 +146,58 @@
                   </table>
 
                   <!-- OTHER PERSONS DETAILS TABLE -->
-                  <p style="font-size: 19px; font-weight: bold; color: #000; line-height: 1.32; margin: 0 0 10px 0;">{{#t}}journeys.collection.pages.check-details.tables.others-details.title{{/t}}: </p>
+                  <p style="font-size: 19px; font-weight: bold; color: #000; line-height: 1.32; margin: 0 0 10px 0;">{{#t}}pages.confirm.sections.others-details.header{{/t}}: </p>
 
                   <table width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#FFFFFF" style="margin: 0 0 20px 0;">
                     <tr style="border-top: 1px solid #009390;">
-                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}journeys.collection.pages.check-details.tables.others-details.fullname{{/t}}: </p></td>
+                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}fields.nominated-fullname.label{{/t}}: </p></td>
                       <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{#nominated-fullname}}{{nominated-fullname}}{{/nominated-fullname}}{{^nominated-fullname}}None Given{{/nominated-fullname}}</p></td>
                     </tr>
                     <tr style="border-top: 1px solid #009390;">
-                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}journeys.collection.pages.check-details.tables.others-details.date-of-birth{{/t}}: </p></td>
+                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}fields.nominated-date.legend{{/t}}: </p></td>
                       <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{#nominated-date}}{{nominated-date}}{{/nominated-date}}{{^nominated-date}}None Given{{/nominated-date}}</p></td>
                     </tr>
                     <tr style="border-top: 1px solid #009390;">
-                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}journeys.collection.pages.check-details.tables.others-details.nationality{{/t}}: </p></td>
+                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.confirm.fields.nominated-nationality.label{{/t}}: </p></td>
                       <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{#nominated-nationality}}{{nominated-nationality}}{{/nominated-nationality}}{{^nominated-nationality}}None Given{{/nominated-nationality}}</p></td>
                     </tr>
                     <tr style="border-top: 1px solid #009390;">
-                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}journeys.collection.pages.check-details.tables.others-details.id-number{{/t}}: </p></td>
+                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}fields.nominated-id-number.label{{/t}}: </p></td>
                       <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{#nominated-id-number}}{{nominated-id-number}}{{/nominated-id-number}}{{^nominated-id-number}}None Given{{/nominated-id-number}}</p></td>
                     </tr>
                   </table>
 
                   <!-- PERSONAL DETAILS TABLE -->
-                  <p style="font-size: 19px; font-weight: bold; color: #000; line-height: 1.32; margin: 0 0 10px 0;">{{#t}}journeys.collection.pages.check-details.tables.personal-details.title{{/t}}</p>
+                  <p style="font-size: 19px; font-weight: bold; color: #000; line-height: 1.32; margin: 0 0 10px 0;">{{#t}}pages.confirm.sections.personal-details.header{{/t}}</p>
 
                   <table width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#FFFFFF" style="margin: 0 0 20px 0;">
                     <tr style="border-top: 1px solid #009390;">
-                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.check-details.table.headers.fullname{{/t}}: </p></td>
+                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}fields.fullname.label{{/t}}: </p></td>
                       <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{#fullname}}{{fullname}}{{/fullname}}{{^fullname}}None Given{{/fullname}}</p></td>
                     </tr>
                     <tr style="border-top: 1px solid #009390;">
-                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.check-details.table.headers.date-of-birth{{/t}}: </p></td>
+                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}fields.date-of-birth.legend{{/t}}: </p></td>
                       <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{#date-of-birth}}{{date-of-birth}}{{/date-of-birth}}{{^date-of-birth}}None Given{{/date-of-birth}}</p></td>
                     </tr>
                     <tr style="border-top: 1px solid #009390;">
-                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.check-details.table.headers.nationality{{/t}}: </p></td>
+                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.confirm.fields.nationality.label{{/t}}: </p></td>
                       <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{#nationality}}{{nationality}}{{/nationality}}{{^nationality}}None Given{{/nationality}}</p></td>
                     </tr>
                     <tr style="border-top: 1px solid #009390;">
-                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.check-details.table.headers.passport{{/t}}: </p></td>
+                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}fields.passport.label{{/t}}: </p></td>
                       <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{#passport}}{{passport}}{{/passport}}{{^passport}}None Given{{/passport}}</p></td>
                     </tr>
                     <tr style="border-top: 1px solid #009390;">
-                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.check-details.table.headers.email{{/t}}: </p></td>
+                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}fields.email.label{{/t}}: </p></td>
                       <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{#email}}{{email}}{{/email}}{{^email}}None Given{{/email}}</p></td>
                     </tr>
                     <tr style="border-top: 1px solid #009390;">
-                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.check-details.table.headers.phone{{/t}}: </p></td>
+                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.confirm.fields.phone.label{{/t}}: </p></td>
                       <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{#phone}}{{phone}}{{/phone}}{{^phone}}None Given{{/phone}}</p></td>
                     </tr>
 
                     <tr style="border-top: 1px solid #009390;">
-                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.check-details.table.headers.contact-address{{/t}}: </p></td>
+                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.confirm.fields.use-address.label{{/t}}: </p></td>
                       <td width="75%">
                         <p style="font-size: 16px; color: #000; margin: 10px 0;">
                           {{#contact-address-street}}

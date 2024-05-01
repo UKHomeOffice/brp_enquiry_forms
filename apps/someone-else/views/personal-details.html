@@ -1,40 +1,12 @@
-{{<layout}}
-  {{$step}}Step 3 of 5{{/step}}
-
-  {{$journeyHeader}}
-    {{#t}}journeys.someone-else.header{{/t}}
-  {{/journeyHeader}}
-
-  {{$validationSummary}}
-    {{> partials-validation-summary}}
-  {{/validationSummary}}
-
-  {{$propositionHeader}}
-    {{> partials-navigation}}
-  {{/propositionHeader}}
-
-  {{$pageTitle}}{{#t}}pages.personal-details.header{{/t}} – GOV.UK{{/pageTitle}}
-
-  {{$content}}
-    <p>{{#t}}journeys.someone-else.personal-details.subheader{{/t}}</p>
-
-    {{<partials-form}}
-
-      {{$form}}
-        {{#input-text}}fullname{{/input-text}}
-
-        {{#renderField}}date-of-birth{{/renderField}}
-
-        {{#select}}nationality{{/select}}
-
-        {{#input-text}}passport{{/input-text}}
-
-        {{#input-submit}}continue{{/input-submit}}
-
-      {{/form}}
-
-    {{/partials-form}}
-
-  {{/content}}
-
-{{/layout}}
+{{<partials-page}}
+{{$journeyHeader}}
+{{#t}}journey.someone-else.header{{/t}}
+{{/journeyHeader}}
+{{$page-content}}
+<p>{{#t}}pages.personal-details.subheader{{/t}}</p>
+{{#fields}}
+{{#renderField}}{{/renderField}}
+{{/fields}}
+{{#input-submit}}continue{{/input-submit}}
+{{/page-content}}
+{{/partials-page}}

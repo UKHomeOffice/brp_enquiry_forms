@@ -2,25 +2,26 @@
 
 module.exports = {
   'address-match': {
+    isPageHeading: true,
+    mixin: 'radio-group',
+    className: ['govuk-radios', 'govuk-radios--inline'],
     validate: ['required'],
-    className: ['inline', 'form-group'],
-    legend: {
-      className: 'visuallyhidden',
-      value: 'journeys.delivery.same-address.header'
-    },
     options: [{
       value: 'yes',
-      label: 'fields.address-match.options.yes.label',
-      toggle: 'delivery-details-fieldset'
+      toggle: 'delivery-details',
+      child: 'textarea'
     }, {
       value: 'no',
-      label: 'fields.address-match.options.no.label',
-      toggle: 'new-address-fieldset'
+      toggle: 'new-address-fieldset',
+      child: 'partials/new-address'
     }]
   },
   'delivery-details': {
-    legend: 'fields.delivery-details.legend',
-    label: 'fields.delivery-details.label'
+    mixin: 'textarea',
+    dependent: {
+      value: 'yes',
+      field: 'address-match'
+    }
   },
   'address-house-number': {
     validate: ['required'],
@@ -41,6 +42,7 @@ module.exports = {
   'address-town': {
     validate: ['required'],
     label: 'fields.address-town.label',
+    className: ['govuk-input', 'govuk-!-width-two-thirds'],
     dependent: {
       value: 'no',
       field: 'address-match'
@@ -48,6 +50,7 @@ module.exports = {
   },
   'address-county': {
     label: 'fields.address-county.label',
+    className: ['govuk-input', 'govuk-!-width-two-thirds'],
     dependent: {
       value: 'no',
       field: 'address-match'
@@ -56,6 +59,7 @@ module.exports = {
   'address-postcode': {
     validate: ['required'],
     label: 'fields.address-postcode.label',
+    className: ['govuk-input', 'govuk-input--width-10'],
     dependent: {
       value: 'no',
       field: 'address-match'
@@ -63,8 +67,6 @@ module.exports = {
   },
   'case-id': {
     validate: ['required'],
-    label: 'fields.case-id.label',
-    hint: 'fields.case-id.hint',
     dependent: {
       value: 'no',
       field: 'address-match'
@@ -79,6 +81,7 @@ module.exports = {
   },
   'contact-address-county': {
     label: 'fields.address-county.label',
+    className: ['govuk-input', 'govuk-!-width-two-thirds'],
     dependent: {
       value: 'true',
       field: 'use-address'

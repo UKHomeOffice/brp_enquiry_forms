@@ -1,31 +1,10 @@
-{{<layout}}
-
-  {{$journeyHeader}}
-    {{#t}}journeys.someone-else.header{{/t}}
-  {{/journeyHeader}}
-
-  {{$propositionHeader}}
-    {{> partials-navigation}}
-  {{/propositionHeader}}
-
-  {{$title}}
-    {{#t}}pages.exit-cancel-request.header{{/t}}
-  {{/title}}
-
-  {{$header}}
-    {{<partials-page-header}}
-      {{$page-header}}
-        {{#t}}pages.exit-cancel-request.header{{/t}}
-      {{/page-header}}
-    {{/partials-page-header}}
-  {{/header}}
-
-  {{$content}}
-
-    <p>{{#t}}pages.exit-cancel-request.subheader{{/t}}</p>
-
-    <a class="button" href='https://www.gov.uk/done/someone-else-collect-brp'>{{#t}}buttons.close{{/t}}</a>
-
-  {{/content}}
-
-{{/layout}}
+{{<partials-page}}
+{{$journeyHeader}}
+{{#t}}journey.someone-else.header{{/t}}
+{{/journeyHeader}}
+{{$page-content}}
+  <p>{{#t}}pages.exit-cancel-request.subheader{{/t}}</p>
+  <a class="govuk-button" href='https://www.gov.uk/done/someone-else-collect-brp'>{{#t}}buttons.close{{/t}}</a>
+{{#input-submit}}continue{{/input-submit}}
+{{/page-content}}
+{{/partials-page}}

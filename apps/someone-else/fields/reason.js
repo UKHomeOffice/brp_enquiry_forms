@@ -1,27 +1,25 @@
 'use strict';
 
 module.exports = {
+  'someone-else-reason-radio': {
+    isPageHeading: true,
+    mixin: 'radio-group',
+    validate: ['required'],
+    options: [
+      {
+        value: 'incapable',
+        toggle: 'incapable-details',
+        child: 'textarea'
+      },
+      'under-age'
+    ]
+  },
   'incapable-details': {
     validate: ['required'],
     dependent: {
       value: 'incapable',
       field: 'someone-else-reason-radio'
     }
-  },
-  'someone-else-reason-radio': {
-    mixin: 'radio-group',
-    validate: ['required'],
-    legend: {
-      className: 'visuallyhidden',
-      value: ''
-    },
-    options: [
-      {
-        value: 'incapable',
-        toggle: 'incapable-details'
-      },
-      'under-age'
-    ]
   },
   email: {
     validate: ['required', 'email'],
@@ -32,6 +30,7 @@ module.exports = {
   },
   'contact-address-county': {
     label: 'fields.address-county.label',
+    className: ['govuk-input', 'govuk-!-width-two-thirds'],
     dependent: {
       value: 'true',
       field: 'use-address'

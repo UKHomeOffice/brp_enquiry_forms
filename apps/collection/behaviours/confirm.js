@@ -1,4 +1,4 @@
-/* eslint-disable consistent-return */
+/* eslint-disable consistent-return,  max-len  */
 'use strict';
 
 function getReason(req) {
@@ -32,6 +32,15 @@ module.exports = superclass => class Confirm extends superclass {
     const locals = super.locals(req, res);
     const reason = getReason(req);
     req.sessionModel.set(reason);
+    if (locals.route === 'confirm') {
+      locals.rows = locals.rows.map(row => {
+        if (req.sessionModel.get('nominated-fullname') && row.section === 'Details of the person who attempted to collect your BRP') {
+          row.section = `${req.sessionModel.get('nominated-fullname')}\n\nDetails of the person who attempted to collect your BRP`;
+          return row;
+        }
+        return row;
+      });
+    }
     return Object.assign({}, locals, {
       reason
     });
