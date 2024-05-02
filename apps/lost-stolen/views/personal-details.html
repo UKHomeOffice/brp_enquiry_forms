@@ -1,51 +1,12 @@
-{{<layout}}
-{{$step}}Step 3 of 5{{/step}}
-
+{{<partials-page}}
 {{$journeyHeader}}
-  {{#t}}journeys.lost.header{{/t}}
+{{#t}}journey.lost.header{{/t}}
 {{/journeyHeader}}
-
-{{$validationSummary}}
-  {{> partials-validation-summary}}
-{{/validationSummary}}
-
-{{$propositionHeader}}
-  {{> partials-navigation}}
-{{/propositionHeader}}
-
-{{$title}}
-  {{#t}}journeys.lost.personal-details.header{{/t}}
-{{/title}}
-
-{{$header}}
-  {{<partials-page-header}}
-    {{$page-header}}
-      {{#t}}journeys.lost.personal-details.header{{/t}}
-    {{/page-header}}
-  {{/partials-page-header}}
-{{/header}}
-
-{{$content}}
-  <p>{{#t}}journeys.lost.personal-details.subheader{{/t}}</p>
-
-  {{<partials-form}}
-
-    {{$form}}
-
-      {{#input-text}}fullname{{/input-text}}
-
-      {{#renderField}}date-of-birth{{/renderField}}
-
-      {{#select}}nationality{{/select}}
-
-      {{#radio-group}}reference-number-radio{{/radio-group}}
-
-      {{#input-submit}}continue{{/input-submit}}
-
-    {{/form}}
-
-  {{/partials-form}}
-
-{{/content}}
-
-{{/layout}}
+{{$page-content}}
+<p>{{#t}}journey.lost.personal-details.subheader{{/t}}</p>
+{{#fields}}
+{{#renderField}}{{/renderField}}
+{{/fields}}
+{{#input-submit}}continue{{/input-submit}}
+{{/page-content}}
+{{/partials-page}}

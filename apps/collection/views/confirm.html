@@ -1,17 +1,12 @@
 {{<partials-page}}
-  {{$pageTitle}}{{#t}}pages.confirm.header{{/t}} – GOV.UK{{/pageTitle}}
   {{$journeyHeader}}
     {{#t}}journey.collection.header{{/t}}
   {{/journeyHeader}}
   {{$page-content}}
     <p>{{#t}}pages.confirm.subheader{{/t}}</p>
-    <table class="table-details">
-      <tbody>
         {{#rows}}
           {{> partials-summary-table}}
         {{/rows}}
-      </tbody>
-    </table>
     <h2>{{#t}}fields.org-help.legend{{/t}}</h2>
     {{#renderField}}org-help{{/renderField}}
     {{> partials-org-type}}

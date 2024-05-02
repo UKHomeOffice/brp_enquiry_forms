@@ -1,20 +1,25 @@
 {
+  "inside-uk": {
+    "legend": "Where are you now?",
+    "options": {
+      "yes": {
+        "label": "UK"
+      },
+      "no": {
+        "label": "Outside UK"
+      }
+    }
+  },
   "country": {
-    "legend": "Inside the UK",
     "label": "Which country are you in?"
+  },
+  "date-lost": {
+    "legend": "When did you realise you no longer had your BRP?",
+    "hint": "For example: 11 8 2015"
   },
   "date-of-birth": {
     "legend": "Date of birth",
     "hint": "For example, 31  3  1970"
-  },
-  "date-of-birth-day": {
-    "label": "Day"
-  },
-  "date-of-birth-month": {
-    "label": "Month"
-  },
-  "date-of-birth-year": {
-    "label": "Year"
   },
   "fullname": {
     "label": "Full name"
@@ -61,29 +66,9 @@
   "phone": {
     "label": "Phone number (optional)"
   },
-  "inside-uk": {
-    "options": {
-      "yes": {
-        "label": "UK"
-      },
-      "no": {
-        "label": "Outside UK"
-      }
-    }
-  },
-  "date-lost": {
-    "hint": "For example: 11 8 2015"
-  },
-  "date-lost-day": {
-    "label": "Day"
-  },
-  "date-lost-month": {
-    "label": "Month"
-  },
-  "date-lost-year": {
-    "label": "Year"
-  },
   "org-help": {
+    "legend": "Are you completing this form on behalf of the BRP holder?",
+    "hint": "Friends, relatives, employers, charity workers and lawyers, for example, can complete this form on behalf of the BRP holder.",
     "options": {
       "yes": {
         "label": "Yes"
