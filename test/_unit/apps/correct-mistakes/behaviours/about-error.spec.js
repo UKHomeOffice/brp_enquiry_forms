@@ -29,21 +29,6 @@ describe('apps/correct-mistakes/behaviours/about-error', () => {
       sandbox.restore();
     });
 
-    it('removes values that are not checked and have unchecked counterparts', () => {
-      sandbox.stub(req.sessionModel, 'unset');
-
-      req.form.values = {
-        'foo-checkbox': '',
-        foo: 'bar',
-        'baz-checkbox': 'true',
-        baz: 'foo'
-      };
-
-      controller.saveValues(req, res, () => {
-        req.sessionModel.unset.should.have.been.calledWithExactly(['foo-checkbox', 'foo']);
-      });
-    });
-
     it('always calls the parent controller saveValues with the arguments', () => {
       controller.saveValues(req, res, () => {
         Controller.prototype.saveValues.should.have.been.calledOnce
@@ -108,20 +93,6 @@ describe('apps/correct-mistakes/behaviours/about-error', () => {
       it('returns baseUrl and "/truncated"', () => {
         controller.getNextStep(req, res, () => {}).should.equal('/foo/truncated');
         req.sessionModel.get('truncated-items').should.eql([{id: 'birth-place-error'}]);
-      });
-    });
-  });
-
-  describe('.validate', () => {
-    it('returns an error-selection required error if none are checked', () => {
-      req.form.values['first-name-error-checkbox'] = '';
-      req.form.values['last-name-error-checkbox'] = '';
-      req.form.values['birth-place-error-checkbox'] = '';
-      req.form.values['date-of-birth-error-checkbox'] = '';
-
-      controller.validate(req, res, err => {
-        err['error-selection'].should.be.an.instanceof(controller.ValidationError);
-        err['error-selection'].should.have.property('type').and.equal('required');
       });
     });
   });

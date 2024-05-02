@@ -2,17 +2,16 @@
 
 module.exports = {
   'same-address-radio': {
+    mixin: 'radio-group',
+    isPageHeading: true,
     validate: ['required'],
-    className: ['inline', 'form-group'],
-    legend: {
-      className: 'visuallyhidden',
-      value: 'pages.same-address.address.title'
-    },
+    className: ['govuk-radios', 'govuk-radios--inline'],
     options: [
       'yes',
       {
         value: 'no',
-        toggle: 'same-address-fieldset'
+        toggle: 'same-address-fieldset',
+        child: 'partials/same-address'
       }
     ]
   },
@@ -35,17 +34,24 @@ module.exports = {
   'same-address-town': {
     validate: ['required'],
     label: 'fields.address-town.label',
+    className: ['govuk-input', 'govuk-!-width-two-thirds'],
     dependent: {
       value: 'no',
       field: 'same-address-radio'
     }
   },
   'same-address-county': {
-    label: 'fields.address-county.label'
+    label: 'fields.address-county.label',
+    className: ['govuk-input', 'govuk-!-width-two-thirds'],
+    dependent: {
+      value: 'no',
+      field: 'same-address-radio'
+    }
   },
   'same-address-postcode': {
     validate: ['required'],
     label: 'fields.address-postcode.label',
+    className: ['govuk-input', 'govuk-input--width-10'],
     dependent: {
       value: 'no',
       field: 'same-address-radio'

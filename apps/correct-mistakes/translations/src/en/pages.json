@@ -14,67 +14,108 @@
     },
     "delay": "Asking to be contacted by post will add a further 2 days on to our response time. If you provide an email address we can get back to you sooner."
   },
-  "uk-address": {
-    "header": "Is there a suitable UK address we can deliver your BRP to?",
-    "address": {
-      "title": "If you need a replacement BRP, we will post it to a UK address of your preference. If you don't have a suitable UK address, we will deliver it to a Post Office for collection."
-    }
-  },
-  "same-address": {
-    "header": "Is your address the same as the address on the delivery letter?"
-  },
   "personal-details": {
     "header": "How do your personal details appear on your BRP?",
     "subheader": "These must be entered exactly as they are printed on your BRP so we can review the problem."
   },
   "check-details": {
-    "header": "Check the details you have provided",
-    "subheader": "If any information is incorrect, you can change it here.",
-    "table": {
-      "headers": {
-        "contact-address": "Contact address",
-        "address": "Address",
-        "fullname": "Full name",
-        "date-of-birth": "Date of birth",
-        "nationality": "Nationality",
-        "passport": "Passport number",
-        "email": "Email address",
-        "phone": "Phone number",
-        "delivery-details": "Delivery address"
-      }
-    },
-    "org-help": {
-      "title": "Are you completing this form on behalf of the BRP holder?",
-      "explanation": "Friends, relatives, employers, charity workers and lawyers, for example, can complete this form on behalf of the BRP holder."
-    },
     "org-details-group": {
       "header": "What are your details?",
       "subheader": "We will attempt to contact the BRP holder directly. We will only use these details to contact you if needed.",
       "type": "Type of support"
     }
   },
-  "check-details-error": {
+  "confirm": {
     "header": "Check the details you have provided",
     "subheader": "If any information is incorrect, you can change it here.",
-    "corrected-details-table": {
-      "title": "Corrected BRP details"
+    "sections": {
+      "check-details": {
+        "header": "Corrected BRP details"
+      },
+      "delivery-details": {
+        "header": "Delivery address"
+      },
+      "personal-details": {
+        "header": "Your details as they appear on your BRP"
+      }
     },
-    "personal-details-table": {
-      "title": "Your details as they appear on your BRP",
-      "headers": {
-        "fullname": "Full name",
-        "date-of-birth": "Date of birth",
-        "nationality": "Nationality",
-        "brp-card-number": "BRP number",
-        "gwf-number": "GWF number",
-        "email": "Email address",
-        "phone": "Phone number",
-        "passport": "Passport number"
+    "fields": {
+      "last-name-error": {
+        "label": "Family name"
+      },
+      "first-name-error": {
+        "label": "Given name(s)"
+      },
+      "birth-place-error": {
+        "label": "Place of birth"
+      },
+      "date-of-birth-error": {
+        "label": "Date of birth"
+      },
+      "gender-error": {
+        "label": "Gender"
+      },
+      "sponsor-details-error": {
+        "label": "Sponsor reference"
+      },
+      "nationality-error": {
+        "label": "Nationality"
+       },
+      "signature-error": {
+        "label": "Signature"
+      },
+      "photograph-error": {
+        "label": "Photograph"
+      },
+      "national-insurance-error": {
+        "label": "National Insurance number"
+      },
+      "damaged-error": {
+        "label": "Faulty or damaged BRP"
+      },
+      "conditions-error": {
+        "label": "Conditions"
+      },
+      "length-of-stay-error": {
+        "label": "Length of stay"
+      },
+      "biographics-error": {
+        "label": "Biographics"
+      },
+      "BRP-issue-error": {
+        "label": "My BRP doesn't work"
+      },
+      "brp-card-number": {
+        "label": "BRP number"
+      },
+      "gwf-number": {
+        "label": "GWF number"
+      },
+      "no-reference": {
+        "label": "Passport number"
+      },
+      "nationality": {
+        "label": "Nationality"
+      },
+      "same-address-radio": {
+        "label": "Address"
+      },
+      "uk-address-radio": {
+        "label": "Address"
+      },
+      "use-address": {
+        "label": "Contact Address"
+      },
+      "phone":{
+        "label": "Phone number"
+      },
+      "error-selection": {
+        "label": "fields.error-selection.options.last-name-error-checkbox.label"
       }
     }
   },
   "confirmation": {
-    "header": "Thank you, we have received your information.",
+    "title": "Thank you, we have received your information.",
     "email": "We have sent an email to",
     "email_part_two": "to confirm receipt of your enquiry.",
     "next": {

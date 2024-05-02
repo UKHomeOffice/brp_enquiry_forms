@@ -24,6 +24,7 @@
     "label": "Year"
   },
   "same-address-radio": {
+    "legend": "Is your address the same as the address on the delivery letter?",
     "options": {
       "yes": {
         "label": "Yes"
@@ -34,6 +35,8 @@
     }
   },
   "uk-address-radio": {
+    "legend": "Is there a suitable UK address we can deliver your BRP to?",
+    "hint": "If you need a replacement BRP, we will post it to a UK address of your preference. If you don't have a suitable UK address, we will deliver it to a Post Office for collection.",
     "options": {
       "yes": {
         "label": "Yes"
@@ -47,7 +50,7 @@
     "label": "Full name"
   },
   "nationality": {
-    "label": "Country of nationality<span class='screenreader-punctuation'>.</span>",
+    "label": "Country of nationality",
     "hint": "Start typing your nationality to create a short list of options. Then press up or down to navigate between options."
   },
   "passport": {
@@ -91,48 +94,74 @@
   "phone": {
     "label": "Phone number (optional)"
   },
-  "last-name-error-checkbox": {
-    "label": "Family name"
+  "error-selection": {
+    "legend": "What’s the problem with your BRP?",
+    "hint": "You can select more than one option.",
+    "options": {
+      "last-name-error-checkbox": {
+        "label": "Family name"
+      },
+      "first-name-error-checkbox": {
+        "label": "Given name(s)"
+      },
+      "birth-place-error-checkbox": {
+        "label": "Place of birth"
+      },
+      "date-of-birth-error-checkbox": {
+        "label": "Date of birth"
+      },
+      "gender-error-checkbox": {
+        "label": "Gender"
+      },
+      "sponsor-details-error-checkbox": {
+        "label": "Sponsor reference"
+      },
+      "nationality-error-checkbox": {
+        "label": "Nationality"
+      },
+      "signature-error-checkbox": {
+        "label": "Signature"
+      },
+      "photograph-error-checkbox": {
+        "label": "Photograph"
+      },
+      "national-insurance-error-checkbox": {
+        "label": "National Insurance number"
+      },
+      "damaged-error-checkbox": {
+        "label": "Faulty or damaged BRP"
+      },
+      "conditions-error-checkbox": {
+        "label": "Conditions"
+      },
+      "length-of-stay-error-checkbox": {
+        "label": "Length of stay"
+      },
+      "biographics-error-checkbox": {
+        "label": "Biographics"
+      },
+      "BRP-issue-error-checkbox": {
+        "label": "My BRP doesn't work"
+      }
+    }
   },
   "last-name-error": {
     "label": "What is your correct family name?",
-    "title": "This is the first line under 'name' on your BRP."
-  },
-  "first-name-error-checkbox": {
-    "label": "Given name(s)"
+    "hint": "This is the first line under 'name' on your BRP."
   },
   "first-name-error": {
     "label": "What are your correct given name(s)?",
-    "title": "This is the second line under 'name' on your BRP."
-  },
-  "birth-place-error-checkbox": {
-    "label": "Place of birth"
+    "hint": "This is the second line under 'name' on your BRP."
   },
   "birth-place-error": {
     "label": "What is your correct place of birth?"
-  },
-  "date-of-birth-error-checkbox": {
-    "label": "Date of birth"
   },
   "date-of-birth-error": {
     "label": "What is your correct date of birth?",
     "hint": "For example: 31  3  1970"
   },
-  "date-of-birth-error-day": {
-    "label": "Day"
-  },
-  "date-of-birth-error-month": {
-    "label": "Month"
-  },
-  "date-of-birth-error-year": {
-    "label": "Year"
-  },
-  "gender-error-checkbox": {
-    "label": "Gender"
-  },
   "gender-error": {
     "legend": "Gender",
-    "title": "What is your correct gender?",
     "hint": "What is your correct gender?",
     "options": {
       "male": {
@@ -146,71 +175,41 @@
       }
     }
   },
-  "sponsor-details-error-checkbox": {
-    "label": "Sponsor reference"
-  },
   "sponsor-details-error": {
     "legend": "Sponsor reference",
-    "title": "This is the third line under 'remarks' on your BRP. This is the reference number of your employer, university or college.",
+    "hint": "This is the third line under 'remarks' on your BRP. This is the reference number of your employer, university or college.",
     "label": "What is the correct sponsor reference number?"
-  },
-  "nationality-error-checkbox": {
-    "label": "Nationality"
   },
   "nationality-error": {
     "legend": "Nationality",
-    "label": "What is your correct nationality?<span class='screenreader-punctuation'>.</span>",
+    "label": "What is your correct nationality?",
     "hint": "Start typing your nationality to create a short list of options. Then press up or down to navigate between options."
-  },
-  "signature-error-checkbox": {
-    "label": "Signature"
   },
   "signature-error": {
     "legend": "Signature",
     "label": "What is wrong with your signature?"
   },
-  "photograph-error-checkbox": {
-    "label": "Photograph"
-  },
   "photograph-error": {
     "legend": "Photograph",
     "label": "What is wrong with your photograph?"
-  },
-  "national-insurance-error-checkbox": {
-    "label": "National Insurance number"
   },
   "national-insurance-error": {
     "legend": "National Insurance Number",
     "label": "What is your correct National Insurance number?"
   },
-  "damaged-error-checkbox": {
-    "label": "Faulty or damaged BRP"
-  },
   "damaged-error": {
     "legend": "Faulty or damaged BRP",
     "label": "Describe the problem"
   },
-  "conditions-error-checkbox": {
-    "label": "Conditions"
-  },
   "conditions-error": {
     "label": "Describe the problem"
-  },
-  "length-of-stay-error-checkbox": {
-    "label": "Length of stay"
   },
   "length-of-stay-error": {
     "label": "Describe the problem",
     "hint": "You do not need to report an error if your BRP expires on 31 December 2024 but your immigration status allows you to stay longer. You will not need a BRP from 1 January 2025. You’ll be able to prove your immigration status online, without a BRP. UKVI will update their information on how to prove your immigration status in early 2024. You do not need to do anything and your immigration status will not be affected."
   },
-  "biographics-error-checkbox": {
-    "label": "Biographics"
-  },
   "biographics-error": {
     "label": "Describe the problem"
-  },
-  "BRP-issue-error-checkbox": {
-    "label": "My BRP doesn't work"
   },
   "BRP-issue-error": {
     "label": "Describe the problem"
@@ -226,6 +225,8 @@
     }
   },
   "org-help": {
+    "legend": "Are you completing this form on behalf of the BRP holder?",
+    "hint": "Friends, relatives, employers, charity workers and lawyers, for example, can complete this form on behalf of the BRP holder.",
     "options": {
       "yes": {
         "label": "Yes"

@@ -1,6 +1,6 @@
 'use strict';
 const moment = require('moment');
-const PRETTY_DATE_FORMAT = 'DD MMMM YYYY';
+const PRETTY_DATE_FORMAT = 'D MMMM YYYY';
 
 module.exports = {
   'problem-details': {
@@ -57,10 +57,6 @@ module.exports = {
       {
         step: '/personal-details',
         field: 'nationality'
-      },
-      {
-        step: '/contact-details',
-        field: 'address-group'
       },
       {
         step: '/contact-details',
