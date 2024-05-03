@@ -1,10 +1,6 @@
 {
   "lost": {
     "header": "Report a lost or stolen BRP",
-    "personal-details": {
-      "header": "What are your personal details?",
-      "subheader": "We need these details to cancel your lost or stolen BRP."
-    },
     "contact-details": {
       "header": "How should we contact you to tell you what to do next?"
     }

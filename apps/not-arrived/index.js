@@ -1,4 +1,6 @@
 'use strict';
+const hof = require('hof');
+const Summary = hof.components.summary;
 
 module.exports = {
   name: 'not-arrived',
@@ -30,6 +32,7 @@ module.exports = {
         'case-id-number'
       ],
       backLink: 'tracking-number',
+      locals: { captionHeading: 'Step 1 of 5' },
       next: '/same-address',
       forks: [{
         target: '/letter-not-received',
@@ -63,6 +66,7 @@ module.exports = {
         'case-id'
       ],
       backLink: 'letter-received',
+      locals: { captionHeading: 'Step 2 of 5' },
       next: '/personal-details'
     },
     '/personal-details': {
@@ -73,24 +77,27 @@ module.exports = {
         'passport'
       ],
       backLink: 'same-address',
+      locals: { captionHeading: 'Step 3 of 5' },
       next: '/contact-details'
     },
     '/contact-details': {
       fields: [
         'email',
+        'phone',
         'use-address',
         'contact-address-house-number',
         'contact-address-street',
         'contact-address-town',
         'contact-address-county',
-        'contact-address-postcode',
-        'phone'
+        'contact-address-postcode'
       ],
       backLink: 'personal-details',
+      locals: { captionHeading: 'Step 4 of 5' },
       next: '/confirm'
     },
     '/confirm': {
-      behaviours: [ require('../common/behaviours/email')],
+      behaviours: [Summary,  require('../common/behaviours/email')],
+      sections: require('./sections/summary-data-sections'),
       fields: [
         'org-help',
         'rep-name',
@@ -98,6 +105,7 @@ module.exports = {
         'org-type'
       ],
       backLink: 'contact-details',
+      locals: { captionHeading: 'Step 5 of 5' },
       next: '/confirmation'
     },
     '/confirmation': {

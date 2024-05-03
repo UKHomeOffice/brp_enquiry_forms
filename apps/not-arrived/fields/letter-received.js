@@ -4,53 +4,50 @@ const date = require('hof').components.date;
 
 module.exports = {
   collection: {
+    isPageHeading: true,
     mixin: 'radio-group',
+    className: ['govuk-radios', 'govuk-radios--inline'],
     validate: ['required'],
-    className: ['inline', 'form-group'],
-    legend: {
-      className: 'visuallyhidden'
-    },
     options: [
       {
-        value: 'yes',
-        label: 'fields.collection.options.yes.label'
+        value: 'yes'
       },
       {
-        value: 'no',
-        label: 'fields.collection.options.no.label'
+        value: 'no'
       }
     ]
   },
   received: {
+    isPageHeading: true,
     mixin: 'radio-group',
+    className: ['govuk-radios', 'govuk-radios--inline'],
     validate: ['required'],
-    className: ['inline', 'form-group'],
-    legend: {
-      className: 'visuallyhidden'
-    },
     options: [
       {
         value: 'yes',
-        toggle: 'delivery-date-group'
+        toggle: 'letter-received-details-fieldset',
+        child: 'partials/letter-received-details'
       },
       'no'
     ]
   },
   'delivery-date': date('delivery-date', {
+    mixin: 'input-date',
     validate: ['before'],
-    dependent: {
+    validationLink: {
       field: 'received',
       value: 'yes'
     }
   }),
   'no-letter': {
-    className: 'form-checkbox',
+    mixin: 'checkbox',
     dependent: {
       field: 'received',
       value: 'yes'
     }
   },
   'case-id-number': {
+    mixin: 'input-text',
     dependent: {
       field: 'received',
       value: 'yes'

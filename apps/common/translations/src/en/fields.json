@@ -19,7 +19,7 @@
   },
   "case-id": {
     "label": "Case ID number",
-    "hint": "(Enter the case ID found on your visa decision letter.)"
+    "hint": "Enter the case ID found on your visa decision letter."
   },
   "org-help": {
     "options": {

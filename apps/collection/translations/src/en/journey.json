@@ -2,14 +2,6 @@
   "collection": {
     "header": "Collection problem",
     "pages": {
-      "personal-details": {
-        "header": "What are your personal details?",
-        "subheader": "We need these details to process your request."
-      },
-      "check-details": {
-        "header": "Check the details you have provided",
-        "subheader": "If any information is incorrect, you can change it here."
-      },
       "confirmation": {
         "next": {
           "paragraphs": {
