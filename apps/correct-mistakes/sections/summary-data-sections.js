@@ -1,3 +1,4 @@
+/* eslint-disable max-len  */
 'use strict';
 const moment = require('moment');
 const PRETTY_DATE_FORMAT = 'D MMMM YYYY';
@@ -77,10 +78,13 @@ module.exports = {
           if (!req.sessionModel.get('same-address-radio') || req.sessionModel.get('same-address-radio') === 'yes') {
             return null;
           }
-          return `${req.sessionModel.get('same-address-house-number')} \n` +
-            `${req.sessionModel.get('same-address-street')} \n` +
-            `${req.sessionModel.get('same-address-town')} \n` +
-            `${req.sessionModel.get('same-address-county')} \n` +
+          return req.sessionModel.get('same-address-county') ? `${req.sessionModel.get('same-address-house-number')} ${req.sessionModel.get('same-address-street')}, \n` +
+            `${req.sessionModel.get('same-address-town')}, \n` +
+            `${req.sessionModel.get('same-address-county')}, \n` +
+            `${req.sessionModel.get('same-address-postcode')}` :
+
+            `${req.sessionModel.get('same-address-house-number')} ${req.sessionModel.get('same-address-street')}, \n` +
+            `${req.sessionModel.get('same-address-town')}, \n` +
             `${req.sessionModel.get('same-address-postcode')}`;
         }
       },
@@ -91,10 +95,13 @@ module.exports = {
           if (!req.sessionModel.get('uk-address-radio') || req.sessionModel.get('uk-address-radio') === 'no') {
             return null;
           }
-          return `${req.sessionModel.get('uk-address-house-number')} \n` +
-            `${req.sessionModel.get('uk-address-street')} \n` +
-            `${req.sessionModel.get('uk-address-town')} \n` +
-            `${req.sessionModel.get('uk-address-county')} \n` +
+          return req.sessionModel.get('uk-address-county') ? `${req.sessionModel.get('uk-address-house-number')} ${req.sessionModel.get('uk-address-street')}, \n` +
+            `${req.sessionModel.get('uk-address-town')}, \n` +
+            `${req.sessionModel.get('uk-address-county')}, \n` +
+            `${req.sessionModel.get('uk-address-postcode')}` :
+
+            `${req.sessionModel.get('uk-address-house-number')} ${req.sessionModel.get('uk-address-street')}, \n` +
+            `${req.sessionModel.get('uk-address-town')}, \n` +
             `${req.sessionModel.get('uk-address-postcode')}`;
         }
       }
@@ -122,10 +129,13 @@ module.exports = {
           if (!req.sessionModel.get('use-address')) {
             return null;
           }
-          return `${req.sessionModel.get('contact-address-house-number')} \n` +
-            `${req.sessionModel.get('contact-address-street')} \n` +
-            `${req.sessionModel.get('contact-address-town')} \n` +
-            `${req.sessionModel.get('contact-address-county')} \n` +
+          return req.sessionModel.get('contact-address-county') ? `${req.sessionModel.get('contact-address-house-number')} ${req.sessionModel.get('contact-address-street')}, \n` +
+            `${req.sessionModel.get('contact-address-town')}, \n` +
+            `${req.sessionModel.get('contact-address-county')}, \n` +
+            `${req.sessionModel.get('contact-address-postcode')}` :
+
+            `${req.sessionModel.get('contact-address-house-number')} ${req.sessionModel.get('contact-address-street')}, \n` +
+            `${req.sessionModel.get('contact-address-town')}, \n` +
             `${req.sessionModel.get('contact-address-postcode')}`;
         }
       },

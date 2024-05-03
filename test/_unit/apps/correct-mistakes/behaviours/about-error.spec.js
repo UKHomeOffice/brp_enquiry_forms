@@ -95,5 +95,20 @@ describe('apps/correct-mistakes/behaviours/about-error', () => {
         req.sessionModel.get('truncated-items').should.eql([{id: 'birth-place-error'}]);
       });
     });
+
+    describe('org type group toggled options should be checked if selected', () => {
+      it('locals should have femaleChecked property as true if female has been selected', () => {
+        req.form.values['gender-error'] = 'female';
+        controller.locals(req, res).should.have.property('femaleChecked').and.deep.equal(true);
+      });
+      it('locals should have maleChecked property as true if male has been selected', () => {
+        req.form.values['gender-error'] = 'male';
+        controller.locals(req, res).should.have.property('maleChecked').and.deep.equal(true);
+      });
+      it('locals should have unspecifiedChecked property as true if unspecified has been selected', () => {
+        req.form.values['gender-error'] = 'unspecified';
+        controller.locals(req, res).should.have.property('unspecifiedChecked').and.deep.equal(true);
+      });
+    });
   });
 });

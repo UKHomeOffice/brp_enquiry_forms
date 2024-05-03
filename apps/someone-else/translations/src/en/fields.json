@@ -7,8 +7,7 @@
     "hint": "For example, 31  3  1970"
   },
   "someone-else-nationality": {
-    "label": "Nominated person's country of nationality",
-    "hint": "Start typing your nationality to create a short list of options. Then press up or down to navigate between options."
+    "label": "Nominated person's country of nationality"
   },
   "someone-else-id-type": {
     "legend": "Nominated person's identity document type (to be shown at collection)",
@@ -63,8 +62,7 @@
     "label": "Full name"
   },
   "nationality": {
-    "label": "Country of nationality",
-    "hint": "Start typing your nationality to create a short list of options. Then press up or down to navigate between options."
+    "label": "Country of nationality"
   },
   "passport": {
     "label": "Passport number"

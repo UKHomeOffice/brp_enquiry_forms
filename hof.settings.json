@@ -3,7 +3,8 @@
   "theme": "govUK",
   "behaviours": [
     "hof/components/clear-session",
-    "./apps/common/behaviours/country-select"
+    "./apps/common/behaviours/country-select",
+    "./apps/common/behaviours/organisation-details"
   ],
   "fields": "./apps/common/fields",
   "routes": [

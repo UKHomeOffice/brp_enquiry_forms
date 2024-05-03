@@ -1,4 +1,6 @@
+/* eslint-disable max-len  */
 'use strict';
+
 const moment = require('moment');
 const PRETTY_DATE_FORMAT = 'D MMMM YYYY';
 
@@ -31,10 +33,13 @@ module.exports = {
           if (!req.sessionModel.get('use-address')) {
             return null;
           }
-          return `${req.sessionModel.get('contact-address-house-number')} \n` +
-            `${req.sessionModel.get('contact-address-street')} \n` +
-            `${req.sessionModel.get('contact-address-town')} \n` +
-            `${req.sessionModel.get('contact-address-county')} \n` +
+          return req.sessionModel.get('contact-address-county') ? `${req.sessionModel.get('contact-address-house-number')} ${req.sessionModel.get('contact-address-street')}, \n` +
+            `${req.sessionModel.get('contact-address-town')}, \n` +
+            `${req.sessionModel.get('contact-address-county')}, \n` +
+            `${req.sessionModel.get('contact-address-postcode')}` :
+
+            `${req.sessionModel.get('contact-address-house-number')} ${req.sessionModel.get('contact-address-street')}, \n` +
+            `${req.sessionModel.get('contact-address-town')}, \n` +
             `${req.sessionModel.get('contact-address-postcode')}`;
         }
       },

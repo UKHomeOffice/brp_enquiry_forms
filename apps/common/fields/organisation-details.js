@@ -38,10 +38,6 @@ module.exports = {
       field: 'org-help',
       value: 'yes'
     },
-    legend: {
-      className: 'visuallyhidden',
-      value: 'pages.check-details.org-details-group.type'
-    },
     options: [
       'pbs',
       'legal',

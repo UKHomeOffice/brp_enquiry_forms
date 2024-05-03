@@ -1,8 +1,47 @@
-
-<fieldset id="org-details-group" class="govuk-radios__conditional govuk-radios__conditional--hidden">
-  <h3>{{#t}}pages.check-details.org-details-group.header{{/t}}</h3>
-  <p>{{#t}}pages.check-details.org-details-group.subheader{{/t}}</p>
-  {{#input-text}}rep-name{{/input-text}}
-  {{#input-text}}rep-email{{/input-text}}
-  {{#radio-group}}org-type{{/radio-group}}
-</fieldset>
+<div id="org-details-group"
+  class="govuk-form-group govuk-radios__conditional govuk-radios__conditional--hidden">
+  <fieldset class="govuk-fieldset">
+    <h3>{{#t}}pages.check-details.org-details-group.header{{/t}}</h3>
+    <p>{{#t}}pages.check-details.org-details-group.subheader{{/t}}</p>
+    {{#input-text}}rep-name{{/input-text}}
+    {{#input-text}}rep-email{{/input-text}}
+    <div id="org-type-group" class="govuk-form-group govuk-radios {{#errors.org-type}}govuk-form-group--error{{/errors.org-type}}">
+      <fieldset class="govuk-fieldset">
+        <legend class="govuk-fieldset__legend">
+          {{#t}}fields.org-type.legend{{/t}}
+          {{#errors.org-type}}
+          <p class="govuk-error-message">
+            {{errors.org-type.message}}
+          </p>
+          {{/errors.org-type}}
+        </legend>
+        <div class="govuk-radios" data-module="govuk-radios">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" type="radio" name="org-type" id="org-type-pbs" value="pbs" {{#sponsorChecked}} checked="checked"{{/sponsorChecked}}>
+            <label class="govuk-label govuk-radios__label" for="org-type-pbs">
+              {{#t}}fields.org-type.options.pbs{{/t}}
+            </label>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" type="radio" name="org-type" id="org-type-legal" value="legal" {{#legalChecked}} checked="checked"{{/legalChecked}}>
+            <label class="govuk-label govuk-radios__label" for="org-type-legal">
+              {{#t}}fields.org-type.options.legal{{/t}}
+            </label>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" type="radio" name="org-type" id="org-type-relative" value="relative" {{#relativeChecked}} checked="checked"{{/relativeChecked}}>
+            <label class="govuk-label govuk-radios__label" for="org-type-relative">
+              {{#t}}fields.org-type.options.relative{{/t}}
+            </label>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" type="radio" name="org-type" id="org-type-support" value="support" {{#supportChecked}} checked="checked"{{/supportChecked}}>
+            <label class="govuk-label govuk-radios__label" for="org-type-support">
+              {{#t}}fields.org-type.options.support{{/t}}
+            </label>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+  </fieldset>
+</div>

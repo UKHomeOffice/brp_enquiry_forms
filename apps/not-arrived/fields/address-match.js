@@ -8,12 +8,10 @@ module.exports = {
     validate: ['required'],
     options: [{
       value: 'yes',
-      label: 'fields.address-match.options.yes.label',
       toggle: 'delivery-details',
       child: 'textarea'
     }, {
       value: 'no',
-      label: 'fields.address-match.options.no.label',
       toggle: 'new-address-fieldset',
       child: 'partials/new-address'
     }]

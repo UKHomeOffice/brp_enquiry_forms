@@ -63,8 +63,7 @@ module.exports = {
     mixin: 'select',
     validate: ['required'],
     className: ['typeahead', 'js-hidden'],
-    options: countries,
-    hint: 'fields.nominated-nationality.hint'
+    options: countries
   },
   'nominated-id-number': {
     validate: ['required']
@@ -85,8 +84,7 @@ module.exports = {
     mixin: 'select',
     validate: ['required'],
     className: ['typeahead', 'js-hidden'],
-    options: countries,
-    hint: 'fields.nationality.hint'
+    options: countries
   },
   passport: {
     validate: ['required', 'notUrl']

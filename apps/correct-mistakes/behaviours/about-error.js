@@ -54,4 +54,19 @@ module.exports = superclass => class AboutError extends superclass {
     }
     return next;
   }
+  locals(req, res) {
+    const locals = super.locals(req, res);
+
+    // set gender options
+    if (req.form.values['gender-error'] && req.form.values['gender-error'] === 'female') {
+      locals.femaleChecked = true;
+    }
+    if (req.form.values['gender-error'] && req.form.values['gender-error'] === 'male') {
+      locals.maleChecked = true;
+    }
+    if (req.form.values['gender-error'] && req.form.values['gender-error'] === 'unspecified') {
+      locals.unspecifiedChecked = true;
+    }
+    return locals;
+  }
 };

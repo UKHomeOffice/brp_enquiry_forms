@@ -30,8 +30,8 @@ module.exports = {
     },
     {
       value: 'gender-error-checkbox',
-      toggle: 'gender-error-group',
-      child: 'radio-group'
+      toggle: 'gender-error',
+      child: 'partials/gender'
     },
     {
       value: 'sponsor-details-error-checkbox',
@@ -116,13 +116,9 @@ module.exports = {
   'gender-error': {
     mixin: 'radio-group',
     validate: ['required'],
-    className: 'panel-indent block',
     dependent: {
       field: 'error-selection',
       value: 'gender-error-checkbox'
-    },
-    legend: {
-      className: 'visuallyhidden'
     },
     options: ['female', 'male', 'unspecified']
   },

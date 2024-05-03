@@ -79,8 +79,7 @@
     "label": "Full name"
   },
   "nominated-nationality": {
-    "label": "Country of nationality",
-    "hint": "Start typing your nationality to create a short list of options. Then press up or down to navigate between options."
+    "label": "Country of nationality"
   },
   "nominated-id-number": {
     "label": "Identity document number"
@@ -100,8 +99,7 @@
     "label": "Full name"
   },
   "nationality": {
-    "label": "Country of nationality",
-    "hint": "Start typing your nationality to create a short list of options. Then press up or down to navigate between options."
+    "label": "Country of nationality"
   },
   "passport": {
     "label": "Passport number"
