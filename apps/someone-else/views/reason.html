@@ -1,43 +1,11 @@
-{{<layout}}
-
+{{<partials-page}}
 {{$journeyHeader}}
-  {{#t}}journeys.someone-else.header{{/t}}
+{{#t}}journey.someone-else.header{{/t}}
 {{/journeyHeader}}
-
-{{$step}}Step 2 of 5{{/step}}
-
-{{$validationSummary}}
-  {{> partials-validation-summary}}
-{{/validationSummary}}
-
-{{$propositionHeader}}
-  {{> partials-navigation}}
-{{/propositionHeader}}
-
-{{$pageTitle}}
-  {{#t}}pages.reason.header{{/t}}
-{{/pageTitle}}
-
-  {{$content}}
-
-    {{<partials-form}}
-
-      {{$form}}
-
-        {{#radio-group}}someone-else-reason-radio{{/radio-group}}
-
-        <fieldset id="incapable-details" class="panel-indent js-hidden">
-
-          {{#textarea}}incapable-details{{/textarea}}
-
-        </fieldset>
-
-        {{#input-submit}}continue{{/input-submit}}
-
-      {{/form}}
-
-    {{/partials-form}}
-
-  {{/content}}
-
-{{/layout}}
+{{$page-content}}
+{{#fields}}
+{{#renderField}}{{/renderField}}
+{{/fields}}
+{{#input-submit}}continue{{/input-submit}}
+{{/page-content}}
+{{/partials-page}}

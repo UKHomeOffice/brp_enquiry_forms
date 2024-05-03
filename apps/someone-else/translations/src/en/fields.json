@@ -6,17 +6,8 @@
     "legend": "Nominated person's date of birth",
     "hint": "For example, 31  3  1970"
   },
-  "someone-else-date-day": {
-    "label": "Day"
-  },
-  "someone-else-date-month": {
-    "label": "Month"
-  },
-  "someone-else-date-year": {
-    "label": "Year"
-  },
   "someone-else-nationality": {
-    "label": "Nominated person's country of nationality <span class='screenreader-punctuation'>.</span>",
+    "label": "Nominated person's country of nationality",
     "hint": "Start typing your nationality to create a short list of options. Then press up or down to navigate between options."
   },
   "someone-else-id-type": {
@@ -37,6 +28,7 @@
     "label": "Nominated person's identity document number"
   },
   "someone-else-reason-radio": {
+    "legend": "Why do you need someone else to collect your BRP?",
     "options": {
       "incapable": {
         "label": "I have a medical condition"
@@ -71,7 +63,7 @@
     "label": "Full name"
   },
   "nationality": {
-    "label": "Country of nationality<span class='screenreader-punctuation'>.</span>",
+    "label": "Country of nationality",
     "hint": "Start typing your nationality to create a short list of options. Then press up or down to navigate between options."
   },
   "passport": {
@@ -87,6 +79,8 @@
     "label": "Phone number (optional)"
   },
   "org-help": {
+    "legend": "Are you completing this form on behalf of the BRP holder?",
+    "hint": "Friends, relatives, employers, charity workers and lawyers, for example, can complete this form on behalf of the BRP holder.",
     "options": {
       "yes": {
         "label": "Yes"

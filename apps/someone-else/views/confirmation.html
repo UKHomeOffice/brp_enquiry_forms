@@ -1,28 +1,22 @@
-{{<layout}}
+{{<partials-page}}
+{{$journeyHeader}}
+{{#t}}journey.someone-else.header{{/t}}
+{{/journeyHeader}}
+{{$pageTitle}}{{#t}}pages.confirmation.title{{/t}} – GOV.UK{{/pageTitle}}
+{{$page-content}}
+{{> partials-confirmation-banner}}
 
-  {{$journeyHeader}}
-    {{#t}}journeys.someone-else.header{{/t}}
-  {{/journeyHeader}}
+<hr>
 
-  {{$propositionHeader}}
-    {{> partials-navigation}}
-  {{/propositionHeader}}
+<h2>{{#t}}pages.confirmation.next.header{{/t}}</h2>
 
-  {{$content}}
-    {{> partials-confirmation-banner}}
+<p>{{#t}}pages.confirmation.next.not-specified.para.one{{/t}}</p>
+<p>{{#t}}pages.confirmation.next.not-specified.para.two{{/t}}</p>
+<p>{{#t}}pages.confirmation.next.not-specified.para.three{{/t}}</p>
 
-    <hr>
+<hr>
 
-    <h2>{{#t}}pages.confirmation.next.header{{/t}}</h2>
+<a href='https://www.gov.uk/done/someone-else-collect-brp' class='button'>{{#t}}buttons.close{{/t}}</a>
 
-    <p>{{#t}}pages.confirmation.next.not-specified.para.one{{/t}}</p>
-    <p>{{#t}}pages.confirmation.next.not-specified.para.two{{/t}}</p>
-    <p>{{#t}}pages.confirmation.next.not-specified.para.three{{/t}}</p>
-
-    <hr>
-
-    <a href='https://www.gov.uk/done/someone-else-collect-brp' class='button'>{{#t}}buttons.close{{/t}}</a>
-
-  {{/content}}
-
-{{/layout}}
+{{/page-content}}
+{{/partials-page}}

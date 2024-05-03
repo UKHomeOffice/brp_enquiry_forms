@@ -1,22 +1,25 @@
-<fieldset id="address-group" class="govuk-radios__conditional govuk-radios__conditional" aria-hidden="false">
-  <br><br>
-  <p>{{#t}}pages.contact-details.address.title{{/t}}</p>
+<div>
+  <fieldset id="address-group" class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden"
+    aria-hidden="false">
+    <br><br>
+    <p>{{#t}}pages.contact-details.address.title{{/t}}</p>
 
-  {{#input-text}}contact-address-house-number{{/input-text}}
+    {{#input-text}}contact-address-house-number{{/input-text}}
 
-  {{#input-text}}contact-address-street{{/input-text}}
+    {{#input-text}}contact-address-street{{/input-text}}
 
-  {{#input-text}}contact-address-town{{/input-text}}
+    {{#input-text}}contact-address-town{{/input-text}}
 
-  {{#input-text}}contact-address-county{{/input-text}}
+    {{#input-text}}contact-address-county{{/input-text}}
 
-  {{#input-text}}contact-address-postcode{{/input-text}}
+    {{#input-text}}contact-address-postcode{{/input-text}}
 
-  <div class="govuk-warning-text">
-    <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
-    <strong class="govuk-warning-text__text">
-      <span class="govuk-warning-text__assistive">Warning</span>
-      {{#t}}pages.contact-details.delay{{/t}}
-    </strong>
-  </div>
-</fieldset>
+    <div class="govuk-warning-text">
+      <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+      <strong class="govuk-warning-text__text">
+        <span class="govuk-warning-text__assistive">Warning</span>
+        {{#t}}pages.contact-details.delay{{/t}}
+      </strong>
+    </div>
+  </fieldset>
+</div>
