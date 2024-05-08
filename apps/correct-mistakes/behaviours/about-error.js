@@ -1,6 +1,8 @@
 /* eslint-disable consistent-return */
 'use strict';
 
+const _ = require('underscore');
+
 const truncateConfigs = [
   {
     id: 'first-name-error',
@@ -38,6 +40,13 @@ function getTruncatedItems(req) {
   return items;
 }
 
+function anyChecked(req) {
+  const checked = _.filter(_.keys(req.form.values), valueKey => {
+    return isChecked(valueKey, req);
+  });
+  return checked.length > 0;
+}
+
 module.exports = superclass => class AboutError extends superclass {
   getNextStep(req, res) {
     let next = super.getNextStep(req, res);
@@ -54,19 +63,29 @@ module.exports = superclass => class AboutError extends superclass {
     }
     return next;
   }
-  locals(req, res) {
-    const locals = super.locals(req, res);
 
-    // set gender options
-    if (req.form.values['gender-error'] && req.form.values['gender-error'] === 'female') {
-      locals.femaleChecked = true;
+  saveValues(req, res, callback) {
+    const formData = _.clone(req.form.values);
+
+    req.form.values = _.pick(formData, function (value, key) {
+      return isChecked.call(this, key, req);
+    }.bind(this));
+
+    const diff = _.filter(_.keys(formData), key => {
+      return !_.has(req.form.values, key);
+    });
+
+    req.sessionModel.unset(diff);
+
+    super.saveValues(req, res, callback);
+  }
+
+  validate(req, res, next) {
+    if (!anyChecked(req)) {
+      return next({
+        'error-selection': new this.ValidationError('error-selection', { type: 'required' })
+      });
     }
-    if (req.form.values['gender-error'] && req.form.values['gender-error'] === 'male') {
-      locals.maleChecked = true;
-    }
-    if (req.form.values['gender-error'] && req.form.values['gender-error'] === 'unspecified') {
-      locals.unspecifiedChecked = true;
-    }
-    return locals;
+    super.validate(req, res, next);
   }
 };

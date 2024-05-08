@@ -3,7 +3,96 @@
 {{#t}}journey.error.header{{/t}}
 {{/journeyHeader}}
 {{$page-content}}
-{{#renderField}}error-selection{{/renderField}}
+<p>{{#t}}pages.about-error.subheader{{/t}}</p>
+
+{{#renderField}}last-name-error-checkbox{{/renderField}}
+<div id="last-name-error-container" class="govuk-form-group govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden">
+  {{#input-text}}last-name-error{{/input-text}}
+</div>
+
+{{#renderField}}first-name-error-checkbox{{/renderField}}
+<div id="first-name-error-container" class="govuk-form-group govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden">
+  {{#input-text}}first-name-error{{/input-text}}
+</div>
+
+{{#renderField}}birth-place-error-checkbox{{/renderField}}
+<div id="birth-place-error-container" class="govuk-form-group govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden">
+  {{#input-text}}birth-place-error{{/input-text}}
+</div>
+
+{{#renderField}}date-of-birth-error-checkbox{{/renderField}}
+<div id="date-of-birth-error-container" class="govuk-form-group govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden">
+  <div class="govuk-form-group govuk-date-input {{#errors.date-of-birth-error}}govuk-form-group--error{{/errors.date-of-birth-error}}">
+    <fieldset class="govuk-fieldset" role="group" aria-describedby="date-of-birth-error-hint">
+      <legend class="govuk-fieldset__legend">
+        {{#t}}fields.date-of-birth-error.legend{{/t}}
+      </legend>
+      <p id="date-of-birth-error-hint" class="govuk-hint">{{#t}}fields.date-of-birth-error.hint{{/t}}</p>
+      {{#errors.date-of-birth-error}}
+        <p id="date-of-birth-error" class="govuk-error-message">
+          {{errors.date-of-birth-error.message}}
+        </p>
+      {{/errors.date-of-birth-error}}
+      {{#input-date}}date-of-birth-error{{/input-date}}
+    </fieldset>
+  </div>
+</div>
+
+{{#renderField}}gender-error-checkbox{{/renderField}}
+<div id="gender-error-group" class="govuk-form-group govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden">
+  {{#radio-group}}gender-error{{/radio-group}}
+</div>
+
+{{#renderField}}sponsor-details-error-checkbox{{/renderField}}
+<div id="sponsor-details-error-container" class="govuk-form-group govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden">
+  {{#input-text}}sponsor-details-error{{/input-text}}
+</div>
+
+{{#renderField}}nationality-error-checkbox{{/renderField}}
+<div id="nationality-error-container" class="govuk-form-group govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden">
+  {{#select}}nationality-error{{/select}}
+</div>
+
+{{#renderField}}signature-error-checkbox{{/renderField}}
+<div id="signature-error-container" class="govuk-form-group govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden">
+  {{#textarea}}signature-error{{/textarea}}
+</div>
+
+{{#renderField}}photograph-error-checkbox{{/renderField}}
+<div id="photograph-error-container" class="govuk-form-group govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden">
+  {{#textarea}}photograph-error{{/textarea}}
+</div>
+
+{{#renderField}}national-insurance-error-checkbox{{/renderField}}
+<div id="national-insurance-error-container" class="govuk-form-group govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden">
+  {{#textarea}}national-insurance-error{{/textarea}}
+</div>
+
+{{#renderField}}damaged-error-checkbox{{/renderField}}
+<div id="damaged-error-container" class="govuk-form-group govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden">
+  {{#textarea}}damaged-error{{/textarea}}
+</div>
+
+{{#renderField}}conditions-error-checkbox{{/renderField}}
+<div id="conditions-error-container" class="govuk-form-group govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden">
+  {{#textarea}}conditions-error{{/textarea}}
+</div>
+
+{{#renderField}}length-of-stay-error-checkbox{{/renderField}}
+<div id="length-of-stay-error-container" class="govuk-form-group govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden">
+  {{#textarea}}length-of-stay-error{{/textarea}}
+</div>
+
+{{#renderField}}biographics-error-checkbox{{/renderField}}
+<div id="biographics-error-container" class="govuk-form-group govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden">
+  {{#textarea}}biographics-error{{/textarea}}
+</div>
+
+{{#renderField}}BRP-issue-error-checkbox{{/renderField}}
+<div id="BRP-issue-error-container" class="govuk-form-group govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden">
+  {{#textarea}}BRP-issue-error{{/textarea}}
+</div>
+
 {{#input-submit}}continue{{/input-submit}}
 {{/page-content}}
 {{/partials-page}}

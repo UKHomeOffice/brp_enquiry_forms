@@ -29,6 +29,21 @@ describe('apps/correct-mistakes/behaviours/about-error', () => {
       sandbox.restore();
     });
 
+    it('removes values that are not checked and have unchecked counterparts', () => {
+      sandbox.stub(req.sessionModel, 'unset');
+
+      req.form.values = {
+        'foo-checkbox': '',
+        foo: 'bar',
+        'baz-checkbox': 'true',
+        baz: 'foo'
+      };
+
+      controller.saveValues(req, res, () => {
+        req.sessionModel.unset.should.have.been.calledWithExactly(['foo-checkbox', 'foo']);
+      });
+    });
+
     it('always calls the parent controller saveValues with the arguments', () => {
       controller.saveValues(req, res, () => {
         Controller.prototype.saveValues.should.have.been.calledOnce
@@ -95,19 +110,18 @@ describe('apps/correct-mistakes/behaviours/about-error', () => {
         req.sessionModel.get('truncated-items').should.eql([{id: 'birth-place-error'}]);
       });
     });
+  });
 
-    describe('org type group toggled options should be checked if selected', () => {
-      it('locals should have femaleChecked property as true if female has been selected', () => {
-        req.form.values['gender-error'] = 'female';
-        controller.locals(req, res).should.have.property('femaleChecked').and.deep.equal(true);
-      });
-      it('locals should have maleChecked property as true if male has been selected', () => {
-        req.form.values['gender-error'] = 'male';
-        controller.locals(req, res).should.have.property('maleChecked').and.deep.equal(true);
-      });
-      it('locals should have unspecifiedChecked property as true if unspecified has been selected', () => {
-        req.form.values['gender-error'] = 'unspecified';
-        controller.locals(req, res).should.have.property('unspecifiedChecked').and.deep.equal(true);
+  describe('.validate', () => {
+    it('returns an error-selection required error if none are checked', () => {
+      req.form.values['first-name-error-checkbox'] = '';
+      req.form.values['last-name-error-checkbox'] = '';
+      req.form.values['birth-place-error-checkbox'] = '';
+      req.form.values['date-of-birth-error-checkbox'] = '';
+
+      controller.validate(req, res, err => {
+        err['error-selection'].should.be.an.instanceof(controller.ValidationError);
+        err['error-selection'].should.have.property('type').and.equal('required');
       });
     });
   });
