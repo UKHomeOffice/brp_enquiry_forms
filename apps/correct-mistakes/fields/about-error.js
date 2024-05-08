@@ -9,24 +9,24 @@ module.exports = {
     mixin: 'checkbox-group',
     validate: ['required'],
     options: [{
+      value: 'last-name-error-checkbox',
+      toggle: 'last-name-error',
+      child: 'input-text'
+    },
+    {
       value: 'first-name-error-checkbox',
       toggle: 'first-name-error',
       child: 'input-text'
     },
     {
-      value: 'last-name-error-checkbox',
-      toggle: 'last-name-error',
+      value: 'birth-place-error-checkbox',
+      toggle: 'birth-place-error',
       child: 'input-text'
     },
     {
       value: 'date-of-birth-error-checkbox',
       toggle: 'date-of-birth-error',
       child: 'input-date'
-    },
-    {
-      value: 'birth-place-error-checkbox',
-      toggle: 'birth-place-error',
-      child: 'input-text'
     },
     {
       value: 'gender-error-checkbox',

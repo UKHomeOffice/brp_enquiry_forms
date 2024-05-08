@@ -6,8 +6,7 @@ const govuk = require('govuk-frontend');
 const $ = require('jquery');
 const typeahead = require('typeahead-aria');
 const Bloodhound = require('typeahead-aria').Bloodhound;
-const sameAddress = require('./same-address');
-const trackingNumber = require('./tracking-number');
+const inlineRadioToggle = require('./inline-radio-toggle');
 typeahead.loadjQueryPlugin();
 
 $('.typeahead').each(function applyTypeahead() {
@@ -72,6 +71,7 @@ $('.typeahead').each(function applyTypeahead() {
   });
 });
 
+$('h2.section-header:contains(Lost/stolen details)').css('display', 'none')
+
 govuk.initAll();
-sameAddress.init();
-trackingNumber.init();
+inlineRadioToggle.init();

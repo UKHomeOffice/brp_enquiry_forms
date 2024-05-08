@@ -78,8 +78,20 @@
       }
     },
     "fields": {
+      "tracking-number": {
+        "label": "Tracking number"
+      },
+      "delivery-date": {
+        "label": "Date of letter"
+      },
+      "delivery-details": {
+        "label": "Delivery details"
+      },
       "address-match": {
         "label": "Delivery address"
+      },
+      "new-address": {
+        "label": "New address"
       },
       "nationality": {
         "label": "Nationality"

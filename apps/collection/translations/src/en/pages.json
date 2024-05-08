@@ -52,6 +52,12 @@
         "label": "Reason",
         "under-age": "Under age"
       },
+      "nominated-nationality": {
+        "label": "Nationality"
+      },
+      "nationality": {
+        "label": "Nationality"
+      },
       "use-address": {
         "label": "Contact Address"
       },

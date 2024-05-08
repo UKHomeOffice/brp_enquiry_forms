@@ -8,11 +8,20 @@ module.exports = {
   'delivery-details': {
     steps: [
       {
+        step: '/letter-received',
+        field: 'delivery-date',
+        parse: d => d && moment(d).format(PRETTY_DATE_FORMAT)
+      },
+      {
+        step: '/letter-received',
+        field: 'case-id'
+      },
+      {
         step: '/same-address',
         field: 'address-match',
         parse: (list, req) => {
           if (req.sessionModel.get('address-match') === 'yes') {
-            return req.sessionModel.get('delivery-details');
+            return null;
           }
           return req.sessionModel.get('address-county') ? `${req.sessionModel.get('address-house-number')} ${req.sessionModel.get('address-street')}, \n` +
             `${req.sessionModel.get('address-town')}, \n` +
@@ -23,6 +32,11 @@ module.exports = {
             `${req.sessionModel.get('address-town')}, \n` +
             `${req.sessionModel.get('address-postcode')}`;
         }
+      },
+      {
+        step: '/same-address',
+        field: 'delivery-details',
+        dependsOn: 'address-match'
       },
       {
         step: '/same-address',
@@ -46,10 +60,6 @@ module.exports = {
         field: 'nationality'
       },
       {
-        step: '/personal-details',
-        field: 'passport'
-      },
-      {
         step: '/contact-details',
         field: 'use-address',
         parse: (list, req) => {
@@ -65,6 +75,10 @@ module.exports = {
             `${req.sessionModel.get('contact-address-town')}, \n` +
             `${req.sessionModel.get('contact-address-postcode')}`;
         }
+      },
+      {
+        step: '/personal-details',
+        field: 'passport'
       },
       {
         step: '/contact-details',

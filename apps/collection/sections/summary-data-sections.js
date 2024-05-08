@@ -20,7 +20,23 @@ module.exports = {
       },
       {
         step: '/reason',
-        field: 'reason-radio'
+        field: 'reason-radio',
+        parse: (list, req) => {
+          if (req.sessionModel.get('which-post-office')) {
+            return `${list}\n${req.sessionModel.get('which-post-office')}`;
+          } else if (req.sessionModel.get('under-age')) {
+            return `${list}\n${req.sessionModel.get('under-age')}`;
+          } else if (req.sessionModel.get('non-identity')) {
+            return `${list}\n${req.sessionModel.get('non-identity')}`;
+          } else if (req.sessionModel.get('others-identity')) {
+            return `${list}\n${req.sessionModel.get('others-identity')}`;
+          } else if (req.sessionModel.get('passport-family')) {
+            return `${list}\n${req.sessionModel.get('passport-family')}`;
+          } else if (req.sessionModel.get('passport-lost')) {
+            return `${list}\n${req.sessionModel.get('passport-lost')}`;
+          }
+          return list;
+        }
       }
     ]
   },

@@ -28,8 +28,8 @@
     "header": "Check the details you have provided",
     "subheader": "If any information is incorrect, you can change it here.",
     "sections": {
-      "check-details": {
-        "header": " "
+      "steps": {
+        "header": "Lost/stolen details"
       }
     },
     "fields": {

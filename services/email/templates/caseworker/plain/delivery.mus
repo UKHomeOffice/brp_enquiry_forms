@@ -3,22 +3,22 @@
 
 Personal Details
 
-{{#t}}pages.check-details-error.personal-details-table.headers.fullname{{/t}}:
+{{#t}}fields.fullname.label{{/t}}:
 {{fullname}}
 
-{{#t}}pages.check-details-error.personal-details-table.headers.date-of-birth{{/t}}:
+{{#t}}fields.date-of-birth.legend{{/t}}:
 {{date-of-birth}}
 
-{{#t}}pages.check-details-error.personal-details-table.headers.nationality{{/t}}
+{{#t}}pages.confirm.fields.nationality.label{{/t}}
 {{nationality}}
 
 {{#passport}}
-{{#t}}pages.check-details.table.headers.passport{{/t}}
+{{#t}}fields.passport.label{{/t}}
 {{passport}}
 {{/passport}}
 
 {{#address-street}}
-{{#t}}pages.check-details.table.headers.address{{/t}}
+{{#t}}pages.confirm.fields.new-address.label{{/t}}
 {{address-house-number}} {{address-street}},
 {{address-town}},
 {{#address-county}}{{address-county}},{{/address-county}}
@@ -31,7 +31,7 @@ Personal Details
 Contact Details
 
 {{#contact-address-street}}
-{{#t}}pages.check-details.table.headers.address{{/t}}
+{{#t}}pages.confirm.fields.use-address.label{{/t}}
 {{contact-address-house-number}} {{contact-address-street}},
 {{contact-address-town}},
 {{#contact-address-county}}{{contact-address-county}},{{/contact-address-county}}
@@ -51,24 +51,24 @@ Contact Details
 Delivery Details
 
 {{#delivery-date}}
-{{#t}}pages.check-details.table.headers.delivery-date{{/t}}
+{{#t}}pages.confirm.fields.delivery-date.label{{/t}}
 {{delivery-date}}
 {{/delivery-date}}
 
 {{#case-id-number}}
-{{#t}}pages.check-details.table.headers.case-id-number{{/t}}
+{{#t}}fields.case-id-number.label{{/t}}
 {{case-id-number}}
 {{/case-id-number}}
 
 {{^address-street}}
 {{#delivery-details}}
-{{#t}}pages.check-details.table.headers.delivery-details{{/t}}
+{{#t}}pages.confirm.fields.delivery-details.label{{/t}}
 {{delivery-details}}
 {{/delivery-details}}
 {{/address-street}}
 
 {{#address-street}}
-{{#t}}pages.check-details.table.headers.delivery-address{{/t}}
+{{#t}}pages.confirm.fields.address-match.label{{/t}}
 {{address-house-number}} {{address-street}},
 {{address-town}},
 {{#address-county}}{{address-county}},{{/address-county}}
