@@ -2,22 +2,24 @@
 
 module.exports = {
   'tracking-number-radio': {
+    isPageHeading: true,
     mixin: 'radio-group',
+    className: ['govuk-radios', 'govuk-radios--inline'],
     validate: ['required'],
-    className: ['inline', 'form-group'],
-    legend: {
-      className: 'visuallyhidden'
-    },
     options: [
       {
         value: 'yes',
-        toggle: 'tracking-number-fieldset'
+        toggle: 'tracking-number',
+        child: 'input-text'
       },
-      {value: 'no'}
+      {
+        value: 'no'
+      }
     ]
   },
   'tracking-number': {
-    validate: ['required', {type: 'maxlength', arguments: 22}, 'notUrl'],
+    mixin: 'input-text',
+    validate: ['required', { type: 'maxlength', arguments: 22 }, 'notUrl'],
     dependent: {
       field: 'tracking-number-radio',
       value: 'yes'

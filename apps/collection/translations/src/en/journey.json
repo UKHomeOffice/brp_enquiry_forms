@@ -1,0 +1,14 @@
+{
+  "collection": {
+    "header": "Collection problem",
+    "pages": {
+      "confirmation": {
+        "next": {
+          "paragraphs": {
+            "one": "We will review the information you have given us to find out why there was a problem with your BRP collection."
+          }
+        }
+      }
+    }
+  }
+}

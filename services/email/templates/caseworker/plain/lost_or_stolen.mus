@@ -14,17 +14,17 @@
 
   BRP applicant's details
 
-  {{#t}}pages.check-details.table.headers.fullname{{/t}}
+  {{#t}}fields.fullname.label{{/t}}
   {{fullname}}
 
-  {{#t}}pages.check-details.table.headers.date-of-birth{{/t}}
+  {{#t}}fields.date-of-birth.legend{{/t}}
   {{date-of-birth}}
 
-  {{#t}}pages.check-details.table.headers.nationality{{/t}}
+  {{#t}}pages.confirm.fields.nationality.label{{/t}}
   {{nationality}}
 
   {{#brp-card}}
-    {{#t}}pages.check-details.table.headers.brp-card-number{{/t}}
+    {{#t}}pages.confirm.fields.brp-card-number.label{{/t}}
     {{brp-card}}
   {{/brp-card}}
 

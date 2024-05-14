@@ -4,6 +4,17 @@
 @import "./icons.scss";
 // @import "./validation.scss";
 
+a {
+  @extend .govuk-link;
+}
+
+p {
+  @extend .govuk-body;
+}
+
+fieldset {
+  @extend .govuk-fieldset;
+}
 
 #banner-content {
   @extend #content;
@@ -74,11 +85,6 @@ h1 {
 
 .twitter-typeahead {
   width: 100%;
-}
-
-.hidden-hint .screenreader-punctuation,
-.hidden-hint .form-hint, {
-  @extend .visuallyhidden;
 }
 
 //custom form styling
@@ -205,4 +211,17 @@ h1 {
   p {
     margin-bottom: 0;
   }
+}
+
+.wrap-table-cell,
+.confirm-row,
+.section-header {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+#collection-date-group {
+  @extend .govuk-radios__conditional;
+}
+#country-group {
+  @extend .govuk-radios__conditional;
 }

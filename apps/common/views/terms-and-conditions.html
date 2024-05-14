@@ -1,26 +1,5 @@
-{{<layout}}
-
-{{$journeyHeader}}
-  Biometric Residence Permit
-{{/journeyHeader}}
-
-{{$propositionHeader}}
-  {{> partials-navigation}}
-{{/propositionHeader}}
-
-{{$title}}
-  Terms and conditions
-{{/title}}
-
-{{$header}}
-  {{<partials-page-header}}
-    {{$page-header}}
-      Terms and conditions
-    {{/page-header}}
-  {{/partials-page-header}}
-{{/header}}
-
-{{$content}}
+{{<partials-page}} 
+  {{$page-content}} 
   <h2>How we use your information</h2>
   <p>The data you provide is used in accordance with the <a href="https://www.gov.uk/government/organisations/home-office/about/personal-information-charter" rel="external">Home Office's personal information charter</a>. This includes information about the applicant and any person sponsoring their application. The Home Office is the data controller, which means that it decides how this information will be used and stored. The information will be held in confidence and handled in accordance with the Data Protection Act 1998.</p>
 
@@ -41,6 +20,5 @@
 
   <h2>References to countries and nationalities</h2>
   <p>A country or territory may be listed as a nationality or country because it has a passport-issuing authority.</p>
-{{/content}}
-
-{{/layout}}
+  {{/page-content}}
+{{/partials-page}}

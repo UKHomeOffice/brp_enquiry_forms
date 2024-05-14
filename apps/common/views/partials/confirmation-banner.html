@@ -1,10 +1,10 @@
-<div class="alert-complete" role="alert">
-  <span class="icon icon-complete" role="presentation"></span>
-  <div class="alert-message">
-    <h1>{{#t}}pages.confirmation.header{{/t}}</h1>
-
+<div class="govuk-panel govuk-panel--confirmation">
+<h1 class="govuk-panel__title">
+    {{#t}}pages.confirmation.title{{/t}}
+  </h1>
+  <div class="govuk-panel__body">
     {{#values.email}}
-      <p>{{#t}}pages.confirmation.email{{/t}} <strong>{{values.email}}</strong> {{#t}}pages.confirmation.email_part_two{{/t}}</p>
+      {{#t}}pages.confirmation.email{{/t}} <strong>{{values.email}}</strong> {{#t}}pages.confirmation.email_part_two{{/t}}
     {{/values.email}}
   </div>
 </div>

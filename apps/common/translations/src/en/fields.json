@@ -19,7 +19,7 @@
   },
   "case-id": {
     "label": "Case ID number",
-    "hint": "(Enter the case ID found on your visa decision letter.)"
+    "hint": "Enter the case ID found on your visa decision letter."
   },
   "org-help": {
     "options": {
@@ -38,6 +38,7 @@
     "label": "E-mail"
   },
   "org-type": {
+    "legend": "Type of support",
     "options": {
       "pbs": {
         "label": "PBS sponsor"

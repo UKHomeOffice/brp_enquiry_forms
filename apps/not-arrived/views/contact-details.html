@@ -1,78 +1,11 @@
-{{<layout}}
-  {{$step}}Step 4 of 5{{/step}}
-
+{{<partials-page}}
   {{$journeyHeader}}
-    {{#t}}journeys.delivery.header{{/t}}
+    {{#t}}journey.delivery.header{{/t}}
   {{/journeyHeader}}
-
-  {{$validationSummary}}
-    {{> partials-validation-summary}}
-  {{/validationSummary}}
-
-  {{$propositionHeader}}
-    {{> partials-navigation}}
-  {{/propositionHeader}}
-
-  {{$title}}
-    {{#t}}pages.contact-details.header{{/t}}
-  {{/title}}
-
-  {{$header}}
-    {{<partials-page-header}}
-      {{$page-header}}
-        {{#t}}pages.contact-details.header{{/t}}
-      {{/page-header}}
-    {{/partials-page-header}}
-  {{/header}}
-
-  {{$content}}
-
-    {{<partials-form}}
-
-      {{$form}}
-
-        {{#input-text}}email{{/input-text}}
-
-        {{#input-phone}}phone{{/input-phone}}
-
-        {{#checkbox}}use-address{{/checkbox}}
-
-        <fieldset id="address-group" class="panel-indent js-hidden">
-          <legend class="visuallyhidden">
-              <span class="form-legend">
-                {{#t}}fields.address.legend{{/t}}
-              </span>
-          </legend>
-
-          <p>{{#t}}pages.contact-details.address.title{{/t}}</p>
-
-          {{#input-text}}contact-address-house-number{{/input-text}}
-
-          {{#input-text}}contact-address-street{{/input-text}}
-
-          {{#input-text}}contact-address-town{{/input-text}}
-
-          {{#input-text}}contact-address-county{{/input-text}}
-
-          {{#input-text-code}}contact-address-postcode{{/input-text-code}}
-
-          <div class="notice">
-            <i class="icon icon-important">
-              <span class="visuallyhidden">Warning</span>
-            </i>
-            <strong class="bold-small">
-              {{#t}}pages.contact-details.delay{{/t}}
-            </strong>
-          </div>
-
-        </fieldset>
-
-        {{#input-submit}}continue{{/input-submit}}
-
-      {{/form}}
-
-    {{/partials-form}}
-
-  {{/content}}
-
-{{/layout}}
+  {{$page-content}}
+    {{#fields}}
+      {{#renderField}}{{/renderField}}
+    {{/fields}}
+    {{#input-submit}}continue{{/input-submit}}
+  {{/page-content}}
+{{/partials-page}}

@@ -1,6 +1,6 @@
 {
   "contact-details": {
-    "header": "How should we contact you about your BRP?",
+    "header": "How should we contact you to tell you what to do next?",
     "address": {
       "title": "What address should we contact you at?"
     },
@@ -17,42 +17,47 @@
     "subheader": "We need these details to review the problem with your BRP."
   },
   "check-details": {
-    "header": "Check the details you have provided",
-    "subheader": "If any information is incorrect, you can change it here.",
     "warn-card-cancelled": "Once you have submitted this information, we will cancel your BRP. If you find the BRP you reported as lost or stolen, you will not be able to use it and may need to apply for a replacement.",
-    "table": {
-      "headers": {
-        "date-lost":"Date lost",
-        "contact-address": "Contact address",
-        "address": "New address",
-        "fullname": "Full name",
-        "date-of-birth": "Date of birth",
-        "nationality": "Nationality",
-        "passport": "Passport number",
-        "email": "Email address",
-        "phone": "Phone number",
-        "brp-card-number": "BRP number",
-        "gwf-number": "GWF number"
-      }
-    },
-    "org-help": {
-      "title": "Are you completing this form on behalf of the BRP holder?",
-      "explanation": "Friends, relatives, employers, charity workers and lawyers, for example, can complete this form on behalf of the BRP holder."
-    },
     "org-details-group": {
       "header": "What are your details?",
       "subheader": "We will attempt to contact the BRP holder directly. We will only use these details to contact you if needed.",
       "type": "Type of support"
     }
   },
-  "inside-uk": {
-    "header": "Where are you now?"
-  },
-  "date-lost": {
-    "header": "When did you realise you no longer had your BRP?"
+  "confirm": {
+    "header": "Check the details you have provided",
+    "subheader": "If any information is incorrect, you can change it here.",
+    "sections": {
+      "steps": {
+        "header": "Lost/stolen details"
+      }
+    },
+    "fields": {
+      "date-lost": {
+        "label": "Date lost"
+      },
+      "nationality": {
+        "label": "Nationality"
+      },
+      "use-address": {
+        "label": "Contact Address"
+      },
+      "brp-card-number": {
+        "label": "BRP number"
+      },
+      "gwf-number": {
+        "label": "GWF number"
+      },
+      "no-reference": {
+        "label": "Passport number"
+      },
+      "phone":{
+        "label": "Phone number"
+      }
+    }
   },
   "confirmation": {
-    "header": "Thank you, we have received your information.",
+    "title": "Thank you, we have received your information.",
     "email": "We have sent an email to",
     "email_part_two": "to confirm receipt of your enquiry.",
     "next": {

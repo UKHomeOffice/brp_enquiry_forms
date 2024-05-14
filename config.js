@@ -5,39 +5,39 @@
 /* eslint camelcase: 0*/
 module.exports = {
   env: process.env.NODE_ENV,
-  port: process.env.PORT || 8080,
-  listen_host: process.env.LISTEN_HOST || '0.0.0.0',
+  port: process.env.PORT,
+  listen_host: process.env.LISTEN_HOST,
   gaTag: process.env.GA_TAG || false,
   session: {
-    secret: process.env.SESSION_SECRET || 'howdoesyourgardengrow',
-    ttl: process.env.SESSION_TTL || 1800 /* 30 mins timeout */
+    secret: process.env.SESSION_SECRET,
+    ttl: process.env.SESSION_TTL
   },
   redis: {
     password: process.env.REDIS_PASSWORD
   },
   email: {
     caseworker: {
-      error: process.env.CASEWORKER_ERROR_EMAIL || 'caseworker_email_address@test.com',
-      'error-triage': process.env.CASEWORKER_ERROR_TRIAGE_EMAIL || 'triage_email_address@test.com',
-      'lost-or-stolen-uk': process.env.CASEWORKER_LOSTSTOLEN_EMAIL || 'caseworker_email_address@test.com',
-      'lost-or-stolen-abroad': process.env.CASEWORKER_LOSTSTOLEN_EMAIL || 'caseworker_email_address@test.com',
-      delivery: process.env.CASEWORKER_DELIVERY_EMAIL || 'caseworker_email_address@test.com',
-      collection: process.env.CASEWORKER_COLLECTION_EMAIL || 'caseworker_email_address@test.com',
-      'someone-else': process.env.CASEWORKER_SOMEONEELSE_EMAIL || 'someoneelse_email_address@test.com'
+      error: process.env.CASEWORKER_ERROR_EMAIL,
+      'error-triage': process.env.CASEWORKER_ERROR_TRIAGE_EMAIL,
+      'lost-or-stolen-uk': process.env.CASEWORKER_LOSTSTOLEN_EMAIL,
+      'lost-or-stolen-abroad': process.env.CASEWORKER_LOSTSTOLEN_EMAIL,
+      delivery: process.env.CASEWORKER_DELIVERY_EMAIL,
+      collection: process.env.CASEWORKER_COLLECTION_EMAIL,
+      'someone-else': process.env.CASEWORKER_SOMEONEELSE_EMAIL
     },
-    'integration-email-recipient': process.env.INTEGRATION_EMAIL_RECIPIENT || '',
-    port: process.env.EMAIL_PORT || 587,
-    host: process.env.EMAIL_HOST || 'email-smtp.eu-west-1.amazonaws.com',
+    'integration-email-recipient': process.env.INTEGRATION_EMAIL_RECIPIENT,
+    port: process.env.EMAIL_PORT,
+    host: process.env.EMAIL_HOST,
     auth: {
-      user: process.env.SMTP_USER || '',
-      pass: process.env.SMTP_PASSWORD || ''
+      user: process.env.SMTP_USER,
+      pass: process.env.SMTP_PASSWORD
     },
     aws: {
-      region: process.env.AWS_REGION || 'eu-west-1',
-      accessKeyId: process.env.AWS_USER || '',
-      secretAccessKey: process.env.AWS_PASSWORD || ''
+      region: process.env.AWS_REGION,
+      accessKeyId: process.env.AWS_USER,
+      secretAccessKey: process.env.AWS_PASSWORD
     },
-    from: process.env.FROM_ADDRESS || 'brp@dsp.notprod.homeoffice.gov.uk',
+    from: process.env.FROM_ADDRESS,
     ignoreTLS: process.env.EMAIL_IGNORE_TLS === 'true',
     secure: process.env.EMAIL_SECURE === 'true'
   },

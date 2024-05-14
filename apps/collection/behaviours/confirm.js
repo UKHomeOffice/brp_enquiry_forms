@@ -1,5 +1,7 @@
-/* eslint-disable consistent-return */
+/* eslint-disable consistent-return,  max-len  */
 'use strict';
+
+const NOMINATED_BRP_DETAILS_SECTION = 'Details of the person who attempted to collect your BRP';
 
 function getReason(req) {
   const reasons = [
@@ -32,6 +34,15 @@ module.exports = superclass => class Confirm extends superclass {
     const locals = super.locals(req, res);
     const reason = getReason(req);
     req.sessionModel.set(reason);
+    if (locals.route === 'confirm') {
+      locals.rows = locals.rows.map(row => {
+        if (req.sessionModel.get('nominated-fullname') && row.section === NOMINATED_BRP_DETAILS_SECTION) {
+          row.section = `${req.sessionModel.get('nominated-fullname')}\n\n${NOMINATED_BRP_DETAILS_SECTION}`;
+          return row;
+        }
+        return row;
+      });
+    }
     return Object.assign({}, locals, {
       reason
     });

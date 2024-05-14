@@ -5,7 +5,7 @@ This document intends to detail the configuration steps required to support and 
 For instances when this document does not provide enough support, we suggest that the developer becomes familiar with the following application dependencies:
 
 - [Express](https://www.npmjs.com/package/express) - Server
-- [HOF (Home Office Forms)](https://www.npmjs.com/package/hmpo-form-wizard) - Create and orchestrate forms
+- [HOF (Home Office Forms)](https://www.npmjs.com/package/hof) - Create and orchestrate forms
 - [Mustache](https://www.npmjs.com/package/mustache) - A logic-less Javascript template system.
 - [Connect Redis Crypto](https://www.npmjs.com/package/connect-redis-crypto) - Encrypted session storage.
 - [Browserify](https://www.npmjs.com/package/browserify) - Node-style dependency injection in the browser.

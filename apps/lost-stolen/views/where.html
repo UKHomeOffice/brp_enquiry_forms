@@ -1,52 +1,12 @@
-{{<layout}}
-  {{$step}}Step 1 of 5{{/step}}
-
+{{<partials-page}}
   {{$journeyHeader}}
-    {{#t}}journeys.lost.header{{/t}}
+    {{#t}}journey.lost.header{{/t}}
   {{/journeyHeader}}
+  {{$page-content}}
+    {{#fields}}
+      {{#renderField}}{{/renderField}}
+    {{/fields}}
+    {{#input-submit}}continue{{/input-submit}}
+  {{/page-content}}
+{{/partials-page}}
 
-  {{$validationSummary}}
-    {{> partials-validation-summary}}
-  {{/validationSummary}}
-
-  {{$propositionHeader}}
-    {{> partials-navigation}}
-  {{/propositionHeader}}
-
-  {{$title}}
-    {{#t}}pages.inside-uk.header{{/t}}
-  {{/title}}
-
-  {{$header}}
-    {{<partials-page-header}}
-      {{$page-header}}
-        {{#t}}pages.inside-uk.header{{/t}}
-      {{/page-header}}
-    {{/partials-page-header}}
-  {{/header}}
-
-  {{$content}}
-
-    {{<partials-form}}
-
-      {{$form}}
-        {{#radio-group}}inside-uk{{/radio-group}}
-
-        <fieldset id="country-group" class="panel-indent {{#errors.country}}validation-error{{/errors.country}}">
-
-          <legend class="visuallyhidden">
-            <span class="form-label-bold">{{#t}}fields.country.label{{/t}}</span>
-          </legend>
-
-          {{#select}}country{{/select}}
-
-        </fieldset>
-
-        {{#input-submit}}continue{{/input-submit}}
-      {{/form}}
-
-    {{/partials-form}}
-
-  {{/content}}
-
-{{/layout}}
