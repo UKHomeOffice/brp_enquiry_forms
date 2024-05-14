@@ -1,9 +1,14 @@
 'use strict';
 
 const date = require('hof').components.date;
-const moment = require('moment');
 const countries = [''].concat(require('../../../assets/countries').allCountries);
-const todaysDate = moment().format('YYYY[-]MM[-]DD');
+function formatDate(d) {
+  const day = d.getDate();
+  const month = d.getMonth() + 1;
+  const year = d.getFullYear();
+  return Date.parse(`${year}-${month}-${day}`);
+}
+const todaysDate = formatDate(new Date());
 const beforeTodayValidator = {
   type: 'before',
   arguments: [todaysDate]

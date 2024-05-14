@@ -1,4 +1,5 @@
 module.exports = superclass => class extends superclass {
+  // remove govuk-radios--inline class when toggling inline radio buttons to fix alignment
   locals(req, res) {
     const locals = super.locals(req, res);
     if (locals.route === 'tracking-number') {

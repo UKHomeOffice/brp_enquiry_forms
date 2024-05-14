@@ -1,6 +1,8 @@
 /* eslint-disable consistent-return,  max-len  */
 'use strict';
 
+const NOMINATED_BRP_DETAILS_SECTION = 'Details of the person who attempted to collect your BRP';
+
 function getReason(req) {
   const reasons = [
     'which-post-office',
@@ -34,8 +36,8 @@ module.exports = superclass => class Confirm extends superclass {
     req.sessionModel.set(reason);
     if (locals.route === 'confirm') {
       locals.rows = locals.rows.map(row => {
-        if (req.sessionModel.get('nominated-fullname') && row.section === 'Details of the person who attempted to collect your BRP') {
-          row.section = `${req.sessionModel.get('nominated-fullname')}\n\nDetails of the person who attempted to collect your BRP`;
+        if (req.sessionModel.get('nominated-fullname') && row.section === NOMINATED_BRP_DETAILS_SECTION) {
+          row.section = `${req.sessionModel.get('nominated-fullname')}\n\n${NOMINATED_BRP_DETAILS_SECTION}`;
           return row;
         }
         return row;

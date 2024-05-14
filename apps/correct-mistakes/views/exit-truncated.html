@@ -1,15 +1,15 @@
 {{<partials-page}}
-{{$journeyHeader}}
-{{#t}}journey.error.header{{/t}}
-{{/journeyHeader}}
-{{$page-content}}
-    <p>{{#t}}pages.exit-truncated.paras.one{{/t}}</p>
+    {{$journeyHeader}}
+        {{#t}}journey.error.header{{/t}}
+    {{/journeyHeader}}
+    {{$page-content}}
+        <p>{{#t}}pages.exit-truncated.paras.one{{/t}}</p>
 
-    <p>{{#t}}pages.exit-truncated.paras.two{{/t}}</p>
+        <p>{{#t}}pages.exit-truncated.paras.two{{/t}}</p>
 
-    <p>{{#t}}pages.exit-truncated.paras.three{{/t}}</p>
+        <p>{{#t}}pages.exit-truncated.paras.three{{/t}}</p>
 
-    <a href='https://www.gov.uk/done/brp-report-problem' class='govuk-button'>{{#t}}buttons.close{{/t}}</a>
-{{#input-submit}}continue{{/input-submit}}
-{{/page-content}}
+        <a href='https://www.gov.uk/done/brp-report-problem' class='govuk-button'>{{#t}}buttons.close{{/t}}</a>
+    {{#input-submit}}continue{{/input-submit}}
+    {{/page-content}}
 {{/partials-page}}

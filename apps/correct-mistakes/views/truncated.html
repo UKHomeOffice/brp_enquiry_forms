@@ -1,23 +1,23 @@
 {{<partials-page}}
-{{$journeyHeader}}
-{{#t}}journey.error.header{{/t}}
-{{/journeyHeader}}
-{{$page-content}}
-<p>{{#t}}pages.truncated.paras.one.parts.one{{/t}} {{truncatedItem.pretty}} {{#t}}pages.truncated.paras.one.parts.two{{/t}}:</p>
+  {{$journeyHeader}}
+  {{#t}}journey.error.header{{/t}}
+    {{/journeyHeader}}
+  {{$page-content}}
+    <p>{{#t}}pages.truncated.paras.one.parts.one{{/t}} {{truncatedItem.pretty}} {{#t}}pages.truncated.paras.one.parts.two{{/t}}:</p>
 
-<p><strong>{{truncatedItem.value}}</strong></p>
+    <p><strong>{{truncatedItem.value}}</strong></p>
 
-<p>{{#t}}pages.truncated.paras.two.parts.one{{/t}} {{truncatedItem.pretty}} {{#t}}pages.truncated.paras.two.parts.two{{/t}} {{truncatedItem.length}} {{#t}}pages.truncated.paras.two.parts.three{{/t}}</p>
+    <p>{{#t}}pages.truncated.paras.two.parts.one{{/t}} {{truncatedItem.pretty}} {{#t}}pages.truncated.paras.two.parts.two{{/t}} {{truncatedItem.length}} {{#t}}pages.truncated.paras.two.parts.three{{/t}}</p>
 
-<p><strong>{{truncatedItem.slice}}</strong></p>
+    <p><strong>{{truncatedItem.slice}}</strong></p>
 
-<p>{{#t}}pages.truncated.paras.three.parts.one{{/t}}</p>
+    <p>{{#t}}pages.truncated.paras.three.parts.one{{/t}}</p>
 
-<input type="hidden" name="truncation-page" value="{{truncatedItem.id}}">
-{{#radio-group}}truncated{{/radio-group}}
-<div id="truncated-reason-no" class="govuk-radios__conditional govuk-radios__conditional--hidden">
-  <p>{{#t}}pages.truncated.reason-no{{/t}}</p>
-</div>
-{{#input-submit}}continue{{/input-submit}}
-{{/page-content}}
+    <input type="hidden" name="truncation-page" value="{{truncatedItem.id}}">
+    {{#radio-group}}truncated{{/radio-group}}
+    <div id="truncated-reason-no" class="govuk-radios__conditional govuk-radios__conditional--hidden">
+      <p>{{#t}}pages.truncated.reason-no{{/t}}</p>
+    </div>
+    {{#input-submit}}continue{{/input-submit}}
+  {{/page-content}}
 {{/partials-page}}

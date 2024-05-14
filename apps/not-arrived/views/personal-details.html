@@ -1,12 +1,12 @@
 {{<partials-page}}
-{{$journeyHeader}}
-{{#t}}journey.delivery.header{{/t}}
-{{/journeyHeader}}
-{{$page-content}}
-<p>{{#t}}pages.personal-details.subheader{{/t}}</p>
-{{#fields}}
-{{#renderField}}{{/renderField}}
-{{/fields}}
-{{#input-submit}}continue{{/input-submit}}
-{{/page-content}}
+  {{$journeyHeader}}
+    {{#t}}journey.delivery.header{{/t}}
+  {{/journeyHeader}}
+  {{$page-content}}
+    <p>{{#t}}pages.personal-details.subheader{{/t}}</p>
+    {{#fields}}
+      {{#renderField}}{{/renderField}}
+    {{/fields}}
+    {{#input-submit}}continue{{/input-submit}}
+  {{/page-content}}
 {{/partials-page}}

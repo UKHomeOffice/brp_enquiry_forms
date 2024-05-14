@@ -1,8 +1,12 @@
 /* eslint-disable max-len  */
 'use strict';
 
-const moment = require('moment');
-const PRETTY_DATE_FORMAT = 'D MMMM YYYY';
+function formatDate(date) {
+  const day = date.getDate();
+  const month = date.toLocaleString('default', { month: 'long' });
+  const year = date.getFullYear();
+  return `${day} ${month} ${year}`;
+}
 
 module.exports = {
   'nominee-information': {
@@ -46,7 +50,7 @@ module.exports = {
       {
         step: '/personal-details',
         field: 'date-of-birth',
-        parse: d => d && moment(d).format(PRETTY_DATE_FORMAT)
+        parse: d => d && formatDate(new Date(d))
       },
       {
         step: '/personal-details',
