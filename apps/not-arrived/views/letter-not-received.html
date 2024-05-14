@@ -1,9 +1,10 @@
 {{<partials-page}}
-{{$journeyHeader}} {{#t}}journey.delivery.header{{/t}}
-{{/journeyHeader}} 
-{{$page-content}}
-  <p>{{#t}}pages.letter-not-received.para.one{{/t}}</p>
-  <p>{{#t}}pages.letter-not-received.para.two{{/t}}</p>
-  <a class="button" href='https://www.gov.uk/done/brp-not-arrived'>{{#t}}buttons.close{{/t}}</a>
+  {{$journeyHeader}}
+    {{#t}}journey.delivery.header{{/t}}
+  {{/journeyHeader}} 
+  {{$page-content}}
+    <p>{{#t}}pages.letter-not-received.para.one{{/t}}</p>
+    <p>{{#t}}pages.letter-not-received.para.two{{/t}}</p>
+    <a class="button" href='https://www.gov.uk/done/brp-not-arrived'>{{#t}}buttons.close{{/t}}</a>
   {{/page-content}}
-  {{/partials-page}}
+{{/partials-page}}
