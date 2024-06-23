@@ -2,7 +2,6 @@
 
 @import "./alert.scss";
 @import "./icons.scss";
-// @import "./validation.scss";
 
 a {
   @extend .govuk-link;
@@ -10,6 +9,11 @@ a {
 
 p {
   @extend .govuk-body;
+}
+
+ul {
+  @extend .govuk-list;
+  @extend .govuk-list--bullet;
 }
 
 fieldset {
@@ -24,28 +28,6 @@ fieldset {
 
 .phase-banner {
   @include phase-banner(beta);
-}
-
-#step {
-  a {
-    display: inline-block;
-    margin-top: $gutter-half;
-    padding-left: 14px;
-    border-bottom: $black 1px solid;
-    color: $black;
-    text-decoration: none;
-    background: url("../images/icons/icon-caret-left.png") no-repeat 0 4px;
-    @include media(mobile) {
-      background-position: 0 1px;
-    }
-    margin-right: 14px;
-  }
-
-  span {
-    display: inline-block;
-    margin-top: $gutter-half;
-    color: $secondary-text-colour;
-  }
 }
 
 h1 {
@@ -108,20 +90,20 @@ h1 {
 
 // GOVUK Elements `.form-date` overrides
 .form-date {
-    border-left: none;
-    padding-left: 0;
+  border-left: none;
+  padding-left: 0;
 
-    label {
-        @include core-19();
-    }
+  label {
+    @include core-19();
+  }
 
-    .form-group {
-        input {
-            &[id$="-year"] {
-                width: 70px;
-            }
-        }
+  .form-group {
+    input {
+      &[id$="-year"] {
+        width: 70px;
+      }
     }
+  }
 }
 
 #delivery-details {
@@ -138,9 +120,11 @@ h1 {
     td:nth-child(1) {
       width: 20%;
     }
+
     td:nth-child(2) {
       width: 60%;
     }
+
     td:nth-child(3) {
       text-align: right;
       padding-right: 0;
@@ -163,11 +147,13 @@ h1 {
   position: relative;
   padding: 20px;
   float: left;
+
   strong {
     display: block;
     padding-left: 65px;
     margin-left: -15px;
   }
+
   .icon {
     position: absolute;
     left: 15px;
@@ -177,12 +163,14 @@ h1 {
     background-position: 0 0;
     background-repeat: no-repeat;
   }
+
   .icon-important {
     width: 35px;
     height: 35px;
     background-image: url("../images/icons/icon-important.png");
     background-size: 100%;
   }
+
   .bold-small {
     font-family: "nta", Arial, sans-serif;
     font-size: 16px;
@@ -219,9 +207,19 @@ h1 {
   white-space: pre-wrap;
   word-wrap: break-word;
 }
+
 #collection-date-group {
   @extend .govuk-radios__conditional;
 }
+
 #country-group {
   @extend .govuk-radios__conditional;
+}
+
+
+.govuk-panel {
+  @media (min-width: 40.0625em){
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  }
 }

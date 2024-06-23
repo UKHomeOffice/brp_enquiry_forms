@@ -52,7 +52,8 @@ module.exports = {
     type: 'email'
   },
   phone: {
-    label: 'fields.phone.label'
+    label: 'fields.phone.label',
+    className: ['govuk-input', 'govuk-input--width-20']
   },
   'contact-address-county': {
     label: 'fields.address-county.label',

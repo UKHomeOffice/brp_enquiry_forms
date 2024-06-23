@@ -7,7 +7,7 @@
     "paragraph-one": "Thank you for contacting the BRP management unit about your BRP mistakes.",
     "paragraph-two-triage": "Somebody from the BRP management unit will contact you within 5 working days about the issue you have reported.",
     "paragraph-two": "Somebody from the BRP management unit will contact you within 5 working days about the issue you have reported.",
-    "paragraph-three": "If you have an issue with multiple BRPs, for example your spouse's BRP or your child's BRP, then you must report the issues with each BRP separately at www.gov.uk/brp",
+    "paragraph-three": "If you have an issue with multiple BRPs, for example your spouse's BRP or your child's BRP, then you must report the issues with each BRP separately at <a href=\"www.gov.uk/brp\" style=\"color:#1D70B8\" role=\"link\" class=\"govuk-link\">www.gov.uk/brp</a>",
     "paragraph-four": "This is an automated email, so please don't reply.",
     "thanks": "Thanks,",
     "signature": "The BRP management unit"

@@ -18,7 +18,7 @@
       "line-five": "BS20 1AB"
     },
     "header-two": "What to do next",
-    "paragraph-one": "To return to the UK you must apply for a Replacement BRP visa. More information can be found on the <a href=\"https://www.gov.uk/biometric-residence-permits/replace\">GOV.UK website</a>.",
+    "paragraph-one": "To return to the UK you must apply for a Replacement BRP visa. More information can be found on the <a href=\"https://www.gov.uk/biometric-residence-permits/replace\" style=\"color:#1D70B8\" role=\"link\" class=\"govuk-link\">GOV.UK website</a>.",
     "paragraph-two": "You should not make arrangements to travel back to the UK until you receive your replacement BRP visa.",
     "paragraph-three": "This office can’t help you with the Replacement BRP Visa application process and won’t respond to enquiries.",
     "paragraph-four": "Don’t reply to this email for help regarding your replacement BRP visa. Instead, you should direct enquiries to your local <a href=\"https://ukvi-international.faq-help.com\">Visa Application Centre</a>.",
@@ -35,7 +35,7 @@
       "one": "up to eight weeks of receipt if you hold limited leave to enter or remain",
       "two": "up to six months of receipt if you hold indefinite leave to enter or remain"
     },
-    "paragraph-nine": "If you require a replacement BRP urgently, you can book an appointment to apply in person at a <a href=\"https://www.gov.uk/ukvi-premium-service-centres\">Premium Service Centre</a>.",
+    "paragraph-nine": "If you require a replacement BRP urgently, you can book an appointment to apply in person at a <a href=\"https://www.gov.uk/ukvi-premium-service-centres\" style=\"color:#1D70B8\" role=\"link\" class=\"govuk-link\">Premium Service Centre</a>.",
     "eea-deps-header": "Dependents of EEA Nationals",
     "paragraph-eea-deps-one": "If you’re using your EEA treaty rights to stay in the UK as a dependent of an EEA National, you can choose whether or not to replace your residence card. You will not receive a penalty if you don’t replace it.",
     "paragraph-eea-deps-two": "If you apply for a replacement EEA treaty rights residence card and later have an urgent need to travel, you should phone the European Enquiries contact centre on 0300 123 2253.",
@@ -44,7 +44,7 @@
     "paragraph-eleven": "Once you have returned to the UK, if you submit a replacement BRP application and then need to travel urgently, you must either:",
     "paragraph-eleven-bullets": {
       "one": "withdraw the application and make a new one at a Premium Service Centre, or",
-      "two": "leave the UK and apply for a Replacement BRP Visa at a <a href=\"https://ukvi-international.faq-help.com\">Visa Application Centre</a> while you are overseas"
+      "two": "leave the UK and apply for a Replacement BRP Visa at a <a href=\"https://ukvi-international.faq-help.com\"  style=\"color:#1D70B8\" role=\"link\" class=\"govuk-link\">Visa Application Centre</a> while you are overseas"
     },
     "paragraph-eleven-eea": "If you apply for a replacement EEA treaty rights residence card and later have an urgent need to travel, you can discuss your options with the European Enquiries contact centre on 0300 123 2253.",
     "paragraph-twelve": "If you apply for a replacement EEA treaty rights residence card and later have an urgent need to travel, you can discuss your options with the European Enquiries contact centre on 0300 123 2253.",

@@ -115,7 +115,7 @@
                       <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{#passport}}{{passport}}{{/passport}}{{^passport}}None Given{{/passport}}</p></td>
                     </tr>
                     <tr style="border-top: 1px solid #009390;">
-                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages/confirm.fields.tracking-number.label{{/t}}: </p></td>
+                      <td width="25%"><p style="font-size: 16px; color: #6f777b; margin: 10px 0;">{{#t}}pages.confirm.fields.tracking-number.label{{/t}}: </p></td>
                       <td width="75%"><p style="font-size: 16px; color: #000; margin: 10px 0;">{{#tracking-number}}{{tracking-number}}{{/tracking-number}}{{^tracking-number}}None Given{{/tracking-number}}</p></td>
                     </tr>
 
@@ -139,7 +139,7 @@
                       <td width="75%">
                         <p style="font-size: 16px; color: #000; margin: 10px 0;">
                           {{#org-type}}
-                            {{#rep-email}}<a href="mailto:{{rep-email}}">{{rep-name}} &lt;{{rep-email}}&gt;</a>{{/rep-email}}
+                            {{#rep-email}}<a href="mailto:{{rep-email}}" style="color:#1D70B8" role="link" class="govuk-link">{{rep-name}} &lt;{{rep-email}}&gt;</a>{{/rep-email}}
                             {{^rep-email}}{{rep-name}}{{/rep-email}}
                           {{/org-type}}
                           {{^org-type}}None Given{{/org-type}}

@@ -216,7 +216,7 @@
                       <td width="75%">
                         <p style="font-size: 16px; color: #000; margin: 10px 0;">
                           {{#org-type}}
-                            {{#rep-email}}<a href="mailto:{{rep-email}}">{{rep-name}} &lt;{{rep-email}}&gt;</a>{{/rep-email}}
+                            {{#rep-email}}<a href="mailto:{{rep-email}}" style="color:#1D70B8" role="link" class="govuk-link">{{rep-name}} &lt;{{rep-email}}&gt;</a>{{/rep-email}}
                             {{^rep-email}}{{rep-name}}{{/rep-email}}
                           {{/org-type}}
                           {{^org-type}}None Given{{/org-type}}

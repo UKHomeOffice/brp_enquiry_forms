@@ -1,17 +1,17 @@
 {
   "change": {
-    "delivery-date": "Change <span class=\"visuallyhidden\">date on letter</span>",
-    "case-id-number": "Change <span class=\"visuallyhidden\">case id number</span>",
-    "no-letter": "Change <span class=\"visuallyhidden\">no letter</span>",
-    "delivery-details": "Change <span class=\"visuallyhidden\">delivery details</span>",
-    "new-address": "Change <span class=\"visuallyhidden\">delivery address</span>",
-    "case-id": "Change <span class=\"visuallyhidden\">case id number</span>",
-    "fullname": "Change <span class=\"visuallyhidden\">full name</span>",
-    "date-of-birth": "Change <span class=\"visuallyhidden\">date of birth</span>",
-    "nationality": "Change <span class=\"visuallyhidden\">nationality</span>",
-    "address": "Change <span class=\"visuallyhidden\">address</span>",
-    "passport": "Change <span class=\"visuallyhidden\">passport number</span>",
-    "email": "Change <span class=\"visuallyhidden\">email address</span>",
-    "phone": "Change <span class=\"visuallyhidden\">phone number</span>"
+    "delivery-date": "Change<span class=\"visuallyhidden\">date on letter</span>",
+    "case-id-number": "Change<span class=\"visuallyhidden\">case id number</span>",
+    "no-letter": "Change<span class=\"visuallyhidden\">no letter</span>",
+    "delivery-details": "Change<span class=\"visuallyhidden\">delivery details</span>",
+    "new-address": "Change<span class=\"visuallyhidden\">delivery address</span>",
+    "case-id": "Change<span class=\"visuallyhidden\">case id number</span>",
+    "fullname": "Change<span class=\"visuallyhidden\">full name</span>",
+    "date-of-birth": "Change<span class=\"visuallyhidden\">date of birth</span>",
+    "nationality": "Change<span class=\"visuallyhidden\">nationality</span>",
+    "address": "Change<span class=\"visuallyhidden\">address</span>",
+    "passport": "Change<span class=\"visuallyhidden\">passport number</span>",
+    "email": "Change<span class=\"visuallyhidden\">email address</span>",
+    "phone": "Change<span class=\"visuallyhidden\">phone number</span>"
   }
 }
