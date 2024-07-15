@@ -65,7 +65,7 @@ EMAIL_IGNORE_TLS='true'
 ```
 Run the app like normal and you should see all emails going to http://localhost:1080/
 
-## NPM scripts
+## NPM scripts 
 
 Start the application in default mode (production).
 We use Nginx to serve our static resources in production and ci.
