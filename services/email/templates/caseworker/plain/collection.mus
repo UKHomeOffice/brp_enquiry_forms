@@ -2,15 +2,15 @@
 
   {{#t}}emails.collection.header{{/t}}
 
-  {{#t}}journeys.collection.pages.check-details.tables.problem-details.title{{/t}}
+  {{#t}}pages.confirm.sections.problem-details.header{{/t}}
 
-  {{#t}}journeys.collection.pages.check-details.tables.problem-details.where-radio.label{{/t}}
+  {{#t}}pages.confirm.fields.collection-where-radio.label{{/t}}
   {{collection-where-radio}}
   {{#collection-date}}
   {{collection-date}}
   {{/collection-date}}
 
-  {{#t}}journeys.collection.pages.check-details.tables.problem-details.reason.label{{/t}}
+  {{#t}}pages.confirm.fields.reason-radio.label{{/t}}
   {{#which-post-office}}{{#t}}fields.reason-radio.options.which-post-office.label{{/t}}{{/which-post-office}}
   {{#under-age}}{{#t}}fields.reason-radio.options.under-age.label{{/t}}{{/under-age}}
   {{#non-identity}}{{#t}}fields.reason-radio.options.non-identity.label{{/t}}{{/non-identity}}
@@ -30,24 +30,24 @@
 
 
   {{#nominated-fullname}}
-  {{#t}}journeys.collection.pages.check-details.tables.others-details.title{{/t}}
-  {{#t}}journeys.collection.pages.check-details.tables.others-details.fullname{{/t}}
+  {{#t}}pages.confirm.sections.others-details.header{{/t}}
+  {{#t}}fields.nominated-fullname.label{{/t}}
   {{nominated-fullname}}
 
-  {{#t}}journeys.collection.pages.check-details.tables.others-details.date-of-birth{{/t}}
+  {{#t}}fields.nominated-date.legend{{/t}}
   {{nominated-date}}
 
-  {{#t}}journeys.collection.pages.check-details.tables.others-details.nationality{{/t}}
+  {{#t}}pages.confirm.fields.nominated-nationality.label{{/t}}
   {{nominated-nationality}}
 
-  {{#t}}journeys.collection.pages.check-details.tables.others-details.id-number{{/t}}
+  {{#t}}fields.nominated-id-number.label{{/t}}
   {{nominated-id-number}}
   {{/nominated-fullname}}
 
 
-  {{#t}}journeys.collection.pages.check-details.tables.personal-details.title{{/t}}
+  {{#t}}pages.confirm.sections.personal-details.header{{/t}}
   {{#contact-address-street}}
-  {{#t}}pages.check-details.table.headers.contact-address{{/t}}
+  {{#t}}pages.confirm.fields.use-address.label{{/t}}
   {{contact-address-house-number}} {{contact-address-street}},
   {{contact-address-town}},
   {{#contact-address-county}}
@@ -56,27 +56,27 @@
   {{contact-address-postcode}}
   {{/contact-address-street}}
 
-  {{#t}}pages.check-details.table.headers.fullname{{/t}}
+  {{#t}}fields.fullname.label{{/t}}
   {{fullname}}
 
-  {{#t}}pages.check-details.table.headers.date-of-birth{{/t}}
+  {{#t}}fields.date-of-birth.legend{{/t}}
   {{date-of-birth}}
 
-  {{#t}}pages.check-details.table.headers.nationality{{/t}}
+  {{#t}}pages.confirm.fields.nationality.label{{/t}}
   {{nationality}}
 
   {{#passport}}
-  {{#t}}pages.check-details.table.headers.passport{{/t}}
+  {{#t}}fields.passport.label{{/t}}
   {{passport}}
   {{/passport}}
 
   {{#phone}}
-  {{#t}}pages.check-details.table.headers.phone{{/t}}
+  {{#t}}pages.confirm.fields.phone.label{{/t}}
   {{phone}}
   {{/phone}}
 
   {{#email}}
-  {{#t}}pages.check-details.table.headers.email{{/t}}
+  {{#t}}fields.email.label{{/t}}
   {{email}}
   {{/email}}
 

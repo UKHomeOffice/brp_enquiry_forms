@@ -13,20 +13,59 @@
 </head>
 
   <body style="font-family: Helvetica, Arial, sans-serif;font-size: 16px;margin: 0;color:#0b0c0c">
-        <table width="100%" cellpadding="0" cellspacing="0" border="0">
-      <tr>
-        <td width="100%" height="53px" bgcolor="#0b0c0c">
-          <table width="580" cellpadding="0" cellspacing="0" border="0" align="center">
-            <tr>
-              <td width="100%" bgcolor="#0b0c0c" valign="middle">
-                <img width="152" height="31" src="cid:govuk_logotype_email" alt="GOV.UK" border="0" />
-              </td>
-            </tr>
-          </table>
-        </td>
-      </tr>
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse; min-width:100%; width:100%!important">
+      <tbody>
+        <tr>
+          <td width="100%" height="53" bgcolor="#0b0c0c">
+            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" align="center" style="border-collapse:collapse; max-width:580px">
+              <tbody>
+                <tr>
+                  <td width="70" bgcolor="#0b0c0c" valign="middle">
+                    <a href="https://www.gov.uk/">
+                      <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse">
+                        <tbody>
+                          <tr>
+                            <td style="padding-left:10px">
+                              <img data-imagetype="External" src="https://static.notifications.service.gov.uk/images/govuk-logotype-tudor-crown.png" alt="" height="32" border="0" style="margin-top:2px">
+                            </td>
+                            <td style="font-size:28px; line-height:1.315789474; margin-top:4px; padding-left:8px">
+                              <span style="font-family:Helvetica,Arial,sans-serif; font-weight:700; color:#ffffff; text-decoration:none; vertical-align:middle; display:inline-block">GOV.UK</span>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <table role="presentation" class="x_content" align="center" cellpadding="0" cellspacing="0" border="0" width="100%" style="border-collapse:collapse; max-width:580px; width:100%!important">
+      <tbody>
+        <tr>
+          <td width="10" height="10" valign="middle"></td>
+          <td>
+            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse">
+              <tbody>
+                <tr>
+                  <td bgcolor="#1D70B8" width="100%" height="10"></td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+          <td width="10" valign="middle" height="10"></td>
+        </tr>
+      </tbody>
     </table>
     <table width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#FFFFFF">
+      <tr>
+        <td height="30">
+          <br>
+        </td>
+      </tr>
       <tr>
         <td width="100%">
           <table width="580" cellpadding="0" cellspacing="0" border="0" align="center">
@@ -60,11 +99,11 @@
 
                   <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">It is taking significantly longer than usual to resolve requests and it may take up to 40 working days to respond. We are working hard to reduce these waiting times.</p>
 
-                  <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">If your BRP has been successfully delivered to the address you provided in your application we will not respond to your enquiry. If you have your TNT tracking reference you can track your package here: <a href="https://delivery.tnt.com/tracking">https://delivery.tnt.com/tracking</a>, alternatively you can call TNT on 0345 608 0630.</p>
+                  <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">If your BRP has been successfully delivered to the address you provided in your application we will not respond to your enquiry. If you have your TNT tracking reference you can track your package here: <a href="https://delivery.tnt.com/tracking" style="color:#1D70B8" role="link" class="govuk-link">https://delivery.tnt.com/tracking</a>, alternatively you can call TNT on 0345 608 0630.</p>
 
-                  <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">If you have changed address since making your application and did not inform us you will need to make contact with your previous address to obtain your BRP, or you will need to report it lost and apply for a replacement BRP here: <a href="https://www.gov.uk/biometric-residence-permits/not-arrived">https://www.gov.uk/biometric-residence-permits/lost-stolen-damaged</a>.</p>
+                  <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">If you have changed address since making your application and did not inform us you will need to make contact with your previous address to obtain your BRP, or you will need to report it lost and apply for a replacement BRP here: <a href="https://www.gov.uk/biometric-residence-permits/not-arrived" style="color:#1D70B8" role="link" class="govuk-link">https://www.gov.uk/biometric-residence-permits/lost-stolen-damaged</a>.</p>
 
-                  <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">If you have an issue with multiple BRPs, for example your spouse's BRP or your child's BRP, then you must report the issues with each BRP separately at <a href="www.gov.uk/brp">www.gov.uk/brp</a></p>
+                  <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">If you have an issue with multiple BRPs, for example your spouse's BRP or your child's BRP, then you must report the issues with each BRP separately at <a href="www.gov.uk/brp" style="color:#1D70B8" role="link" class="govuk-link">www.gov.uk/brp</a></p>
 
                   <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;"><strong>How long must I wait for a reply?</strong></p>
                   <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">If you have not received a response from us after 40 working days and still have not received your BRP please complete the form again.</p>
@@ -74,13 +113,13 @@
                   <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">New arrivals to the United Kingdom who are experiencing delays in receiving their BRP can evidence their right to work or rent using the short validity vignette in their passport or travel document that they used to travel to the UK.</p>
 
                   <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;"><strong>If you need to prove your right to work</strong></p>
-                  <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">For employers, the vignette proves that you have a right to work for the period that it remains valid. This provides your employer/prospective employer with the ability to be able to employ you before they have to carry out a check with the <a href="https://www.gov.uk/employee-immigration-employment-status">Employer Checking Service.</a> </p>
-                  <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">Where the vignette has expired, you have not yet received your BRP and you need to prove your right to work, please ask your employer/prospective employer to contact the <a href="https://www.gov.uk/employee-immigration-employment-status">Employer Checking Service.</a> The Home Office will confirm your right to work to the employer.</p>
+                  <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">For employers, the vignette proves that you have a right to work for the period that it remains valid. This provides your employer/prospective employer with the ability to be able to employ you before they have to carry out a check with the <a href="https://www.gov.uk/employee-immigration-employment-status" style="color:#1D70B8" role="link" class="govuk-link">Employer Checking Service.</a> </p>
+                  <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">Where the vignette has expired, you have not yet received your BRP and you need to prove your right to work, please ask your employer/prospective employer to contact the <a href="https://www.gov.uk/employee-immigration-employment-status" style="color:#1D70B8" role="link" class="govuk-link">Employer Checking Service.</a> The Home Office will confirm your right to work to the employer.</p>
 
                   <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;"><strong>If you need to prove your right to rent</strong></p>
                   <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">For landlords, when presented with a valid vignette in your passport or travel document, they can accept this as proof of your right to rent. This will provide the landlord with a statutory excuse against liability for a civil penalty for a year.</p>
-                  <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">Where the vignette has expired and  you need to prove your right to rent in England, please ask your landlord/prospective landlord to contact the <a href="https://eforms.homeoffice.gov.uk/outreach/lcs-application.ofml?_ga=2.91303706.1863575889.1611667351-589306876.1597332961">Landlord Checking Service.</a> The Home Office will confirm your right to rent to the landlord.</p>
-                  <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">Once in receipt of your BRP, you can choose to demonstrate your right to work or rent by either presenting your BRP or providing a share-code to enable your employer or landlord to use the respective Home Office online services <a href="https://www.gov.uk/view-right-to-work">‘view a job applicants right to work details’</a>  or <a href="https://www.gov.uk/view-right-to-rent">‘view a tenants right to rent in England’</a></p>
+                  <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">Where the vignette has expired and  you need to prove your right to rent in England, please ask your landlord/prospective landlord to contact the <a href="https://eforms.homeoffice.gov.uk/outreach/lcs-application.ofml?_ga=2.91303706.1863575889.1611667351-589306876.1597332961" style="color:#1D70B8" role="link" class="govuk-link">Landlord Checking Service.</a> The Home Office will confirm your right to rent to the landlord.</p>
+                  <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">Once in receipt of your BRP, you can choose to demonstrate your right to work or rent by either presenting your BRP or providing a share-code to enable your employer or landlord to use the respective Home Office online services <a href="https://www.gov.uk/view-right-to-work" style="color:#1D70B8" role="link" class="govuk-link">‘view a job applicants right to work details’</a>  or <a href="https://www.gov.uk/view-right-to-rent" style="color:#1D70B8" role="link" class="govuk-link">‘view a tenants right to rent in England’</a></p>
 
 
                   <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;"><strong>If you need to prove your status to a Government Department</strong></p>

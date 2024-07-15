@@ -1,99 +1,12 @@
-{{<layout}}
-{{$step}}Step 4 of 6{{/step}}
-
-{{$journeyHeader}}
-  {{#t}}journeys.error.header{{/t}}
-{{/journeyHeader}}
-
-{{$validationSummary}}
-  {{> partials-validation-summary}}
-{{/validationSummary}}
-
-{{$propositionHeader}}
-  {{> partials-navigation}}
-{{/propositionHeader}}
-
-{{$title}}
-  {{#t}}pages.personal-details.header{{/t}}
-{{/title}}
-
-{{$header}}
-  {{<partials-page-header}}
-    {{$page-header}}
-      {{#t}}pages.personal-details.header{{/t}}
-    {{/page-header}}
-  {{/partials-page-header}}
-{{/header}}
-
-{{$content}}
-  <p>{{#t}}pages.personal-details.subheader{{/t}}</p>
-
-  {{<partials-form}}
-
-    {{$form}}
-
-      {{#input-text}}fullname{{/input-text}}
-
-      <fieldset id="date-of-birth-group" class="{{#errors.date-of-birth}}validation-error{{/errors.date-of-birth}} form-group">
-        <legend>
-          <span class="form-label-bold">{{#t}}fields.date-of-birth.legend{{/t}}</span>
-        </legend>
-
-        {{#errors.date-of-birth}}
-          <span id="date-of-birth-error" class="error-message">
-            {{errors.date-of-birth.message}}
-          </span>
-        {{/errors.date-of-birth}}
-
-        <div class="form-group form-date">
-          <p id="date-hint" class="form-hint">
-            {{#t}}fields.date-of-birth.hint{{/t}}
-          </p>
-          {{#input-date}}date-of-birth{{/input-date}}
-        </div>
-
-      </fieldset>
-
-      {{#select}}nationality{{/select}}
-
-      {{#radio-group}}reference-number-radio{{/radio-group}}
-
-      <!--<fieldset id="brp-card-reference" class="panel-indent js-hidden {{#errors.brp-card-reference}}validation-error{{/errors.brp-card-reference}}">
-        <legend class="visuallyhidden">
-          <span class="form-legend">
-            {{#t}}fields.brp-card-reference.legend{{/t}}
-          </span>
-        </legend>
-
-        {{#input-text}}brp-card-reference{{/input-text}}
-      </fieldset>
-
-      <fieldset id="gwf-reference" class="panel-indent js-hidden {{#errors.gwf-reference}}validation-error{{/errors.gwf-reference}}">
-        <legend class="visuallyhidden">
-          <span class="form-legend">
-            {{#t}}fields.gwf-reference.legend{{/t}}
-          </span>
-        </legend>
-
-        {{#input-text}}gwf-reference{{/input-text}}
-      </fieldset>
-
-      <fieldset id="no-reference" class="panel-indent js-hidden {{#errors.no-reference}}validation-error{{/errors.no-reference}}">
-        <legend class="visuallyhidden">
-          <span class="form-legend">
-            {{#t}}fields.no-reference.legend{{/t}}
-          </span>
-        </legend>
-
-        {{#input-text}}no-reference{{/input-text}}
-      </fieldset>-->
-
-      {{#input-submit}}continue{{/input-submit}}
-
-    {{/form}}
-
-  {{/partials-form}}
-
-{{/content}}
-
-{{/layout}}
+{{<partials-page}}
+  {{$journeyHeader}}
+    {{#t}}journey.error.header{{/t}}
+  {{/journeyHeader}}
+  {{$page-content}}
+    <p>{{#t}}pages.personal-details.subheader{{/t}}</p>
+    {{#fields}}
+      {{#renderField}}{{/renderField}}
+    {{/fields}}
+    {{#input-submit}}continue{{/input-submit}}
+  {{/page-content}}
+{{/partials-page}}

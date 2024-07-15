@@ -14,6 +14,7 @@
     "label": "Year"
   },
   "collection-where-radio": {
+    "legend": "From where were you asked to collect your BRP?",
     "options": {
       "Post Office": {
         "label": "Post Office"
@@ -24,6 +25,7 @@
     }
   },
   "reason-radio": {
+    "legend": "Why couldn't you collect your BRP?",
     "options": {
       "under-age": {
         "legend": "I am under 18 and attempted collection without my responsible adult",
@@ -77,38 +79,18 @@
     "label": "Full name"
   },
   "nominated-nationality": {
-    "label": "Country of nationality<span class='screenreader-punctuation'>.</span>",
-    "hint": "Start typing your nationality to create a short list of options. Then press up or down to navigate between options."
+    "label": "Country of nationality"
   },
   "nominated-id-number": {
     "label": "Identity document number"
   },
   "nominated-date": {
-    "label": "Date",
     "legend": "Date of birth",
     "hint": "For example, 31  3  1970"
-  },
-  "nominated-date-day": {
-    "label": "Day"
-  },
-  "nominated-date-month": {
-    "label": "Month"
-  },
-  "nominated-date-year": {
-    "label": "Year"
   },
   "date-of-birth": {
     "legend": "Date of birth",
     "hint": "For example, 31  3  1970"
-  },
-  "date-of-birth-day": {
-    "label": "Day"
-  },
-  "date-of-birth-month": {
-    "label": "Month"
-  },
-  "date-of-birth-year": {
-    "label": "Year"
   },
   "delivery-details": {
     "label": "If the courier could have problems delivering to this address, for example there's no door number, then let us know and we'll contact them. (optional)"
@@ -117,8 +99,7 @@
     "label": "Full name"
   },
   "nationality": {
-    "label": "Country of nationality<span class='screenreader-punctuation'>.</span>",
-    "hint": "Start typing your nationality to create a short list of options. Then press up or down to navigate between options."
+    "label": "Country of nationality"
   },
   "passport": {
     "label": "Passport number"
@@ -137,6 +118,8 @@
     "label": "Which country are you in?"
   },
   "org-help": {
+    "legend": "Are you completing this form on behalf of the BRP holder?",
+    "hint": "Friends, relatives, employers, charity workers and lawyers, for example, can complete this form on behalf of the BRP holder.",
     "options": {
       "yes": {
         "label": "Yes"
@@ -150,6 +133,7 @@
     "label": "Full name"
   },
   "org-type": {
+    "legend": "Type of support",
     "options": {
       "pbs": {
         "label": "Sponsor"

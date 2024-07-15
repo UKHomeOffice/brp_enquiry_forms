@@ -10,7 +10,9 @@ module.exports = {
     }
   },
   'use-address': {
-    toggle: 'address-group'
+    mixin: 'checkbox',
+    toggle: 'address-group',
+    child: 'partials/address-details'
   },
   'contact-address-house-number': {
     validate: ['required'],
@@ -31,17 +33,20 @@ module.exports = {
   'contact-address-town': {
     validate: ['required'],
     label: 'fields.address-town.label',
+    className: ['govuk-input', 'govuk-!-width-two-thirds'],
     dependent: {
       value: 'true',
       field: 'use-address'
     }
   },
   'contact-address-county': {
-    label: 'fields.address-county.label'
+    label: 'fields.address-county.label',
+    className: ['govuk-input', 'govuk-!-width-two-thirds']
   },
   'contact-address-postcode': {
     validate: ['required'],
     label: 'fields.address-postcode.label',
+    className: ['govuk-input', 'govuk-input--width-10'],
     dependent: {
       value: 'true',
       field: 'use-address'

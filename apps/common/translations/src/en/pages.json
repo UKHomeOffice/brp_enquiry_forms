@@ -1,0 +1,11 @@
+{
+  "accessibility": {
+    "header": "Accessibility statement"
+  },
+  "cookies": {
+    "header": "Cookies"
+  },
+  "terms-and-conditions" : {
+    "header": "Terms and conditions"
+  }
+}

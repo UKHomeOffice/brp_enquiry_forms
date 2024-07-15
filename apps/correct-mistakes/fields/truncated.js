@@ -3,7 +3,7 @@
 module.exports = {
   truncated: {
     validate: ['required'],
-    className: 'inline',
+    className: ['govuk-radios', 'govuk-radios--inline'],
     legend: {
       value: '',
       className: 'visuallyhidden'

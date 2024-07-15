@@ -2,33 +2,25 @@
 
 module.exports = {
   'inside-uk': {
+    mixin: 'radio-group',
+    isPageHeading: true,
     validate: ['required'],
-    legend: {
-      className: 'visuallyhidden',
-      value: 'pages.inside-uk.header'
-    },
-    className: ['inline', 'form-group'],
+    className: ['govuk-radios', 'govuk-radios--inline'],
     options: [{
-      value: 'yes',
-      label: 'fields.inside-uk.options.yes.label'
+      value: 'yes'
     }, {
       value: 'no',
-      label: 'fields.inside-uk.options.no.label',
       toggle: 'country-group'
     }]
   },
   country: {
+    mixin: 'select',
     className: ['typeahead', 'js-hidden'],
     options: [''].concat(require('../../../assets/countries').allCountries),
-    dependent: {
+    validationLink: {
       field: 'inside-uk',
       value: 'no'
     },
-    legend: {
-      className: 'visuallyhidden',
-      value: 'fields.country.label'
-    },
-    validate: ['required'],
-    label: 'fields.country.label'
+    validate: ['required']
   }
 };

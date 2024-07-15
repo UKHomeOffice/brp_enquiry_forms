@@ -1,5 +1,6 @@
 {
   "collection": {
+    "legend": "Were you due to collect your document from the Post Office?",
     "options": {
       "yes": {
         "label": "Yes"
@@ -10,6 +11,7 @@
     }
   },
   "tracking-number-radio": {
+    "legend": "Do you have a tracking number?",
     "options": {
       "yes": {
         "label": "Yes"
@@ -20,25 +22,11 @@
     }
   },
   "tracking-number": {
-    "legend": "Tracking number",
     "label": "What is your tracking number?",
     "hint": "If applicable, the consignment number may also be added here"
   },
-  "delivery-date": {
-    "label": "Date",
-    "legend": "Date on the letter",
-    "hint": "For example, 11  6  2015"
-  },
-  "delivery-date-day": {
-    "label": "Day"
-  },
-  "delivery-date-month": {
-    "label": "Month"
-  },
-  "delivery-date-year": {
-    "label": "Year"
-  },
   "received": {
+    "legend": "Have you received your decision by letter or email?",
     "options": {
       "yes": {
         "label": "Yes"
@@ -48,9 +36,13 @@
       }
     }
   },
+  "delivery-date": {
+    "legend": "What is the date on the letter?(optional)",
+    "hint": "For example, 11  6  2015"
+  },
   "case-id-number": {
     "label": "Case ID Number",
-    "hint": "(Enter the case ID found on your visa decision letter.)"
+    "hint": "Enter the case ID found on your visa decision letter."
   },
   "no-letter": {
     "label": "I don't have the letter anymore"
@@ -72,6 +64,7 @@
     "label": "Year"
   },
   "address-match": {
+    "legend": "Would you like your BRP sent to the address that is on the letter from the Home Office?",
     "options": {
       "yes": {
         "label": "Yes"
@@ -85,8 +78,7 @@
     "label": "Full name"
   },
   "nationality": {
-    "label": "Country of nationality<span class='screenreader-punctuation'>.</span>",
-    "hint": "Start typing your nationality to create a short list of options. Then press up or down to navigate between options."
+    "label": "Country of nationality"
   },
   "passport": {
     "label": "Passport number"
@@ -105,6 +97,8 @@
     "label": "Phone number (optional)"
   },
   "org-help": {
+    "legend": "Are you completing this form on behalf of the BRP holder?",
+    "hint": "Friends, relatives, employers, charity workers and lawyers, for example, can complete this form on behalf of the BRP holder.",
     "options": {
       "yes": {
         "label": "Yes"

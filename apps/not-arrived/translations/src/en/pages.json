@@ -1,19 +1,11 @@
 {
-  "post-office-collect": {
-    "header": "Were you due to collect your document from the Post Office?"
-  },
-  "tracking-number": {
-    "header": "Do you have a tracking number?"
-  },
   "letter-received": {
-    "header": "Have you received your decision by letter or email?",
     "subheader": "This letter or email may tell you:",
     "list": {
       "one": "your application to stay in the UK was successful",
       "two": "your biometric residence permit (BRP) is going to be delivered",
       "three": "your documents are being returned"
-    },
-    "date-question": "What is the date on the letter?(optional)"
+    }
   },
   "letter-not-received": {
     "header": "Contact us",
@@ -56,7 +48,6 @@
     }
   },
   "same-address": {
-    "header": "Did you expect your BRP to be delivered to the same address as the one on the letter from the Home Office?",
     "address": {
       "title": "Tell us the address and we will organise another delivery."
     }
@@ -66,65 +57,55 @@
     "subheader": "We need these details to review the problem with your BRP."
   },
   "check-details": {
-    "header": "Check the details you have provided",
-    "subheader": "If any information is incorrect, you can change it here.",
-    "table": {
-      "head": {
-        "delivery-details": "Delivery details",
-        "personal-details": "Personal details",
-        "contact-details": "Contact details"
-      },
-      "headers": {
-        "contact-address": "Contact address",
-        "address": "New address",
-        "fullname": "Full name",
-        "date-of-birth": "Date of birth",
-        "nationality": "Nationality",
-        "passport": "Passport number",
-        "email": "Email address",
-        "phone": "Phone number",
-        "delivery-date": "Date of letter",
-        "case-id-number": "Case ID Number",
-        "no-letter": "You do not have the delivery letter",
-        "delivery-details": "Delivery details",
-        "delivery-address": "Delivery address",
-        "tracking-number": "Tracking Number"
-      }
-    },
-    "org-help": {
-      "title": "Are you completing this form on behalf of the BRP holder?",
-      "explanation": "Friends, relatives, employers, charity workers and lawyers, for example, can complete this form on behalf of the BRP holder."
-    },
     "org-details-group": {
       "header": "What are your details?",
       "subheader": "We will attempt to contact the BRP holder directly. We will only use these details to contact you if needed.",
       "type": "Type of support"
     }
   },
-  "check-details-error": {
-    "header": "Check the details you have provided",
-    "subheader": "If any information is incorrect, you can change it here.",
-    "corrected-details-table": {
-      "title": "Corrected BRP details"
-    },
-    "personal-details-table": {
-      "title": "Your personal and contact details",
-      "headers": {
-        "fullname": "Full name",
-        "date-of-birth": "Date of birth",
-        "nationality": "Nationality",
-        "brp-card-number": "BRP number",
-        "email": "Email address",
-        "phone": "Phone number",
-        "passport": "Passport number"
-      }
-    }
-  },
   "inside-uk": {
     "header": "Where are you now?"
   },
+  "confirm": {
+    "header": "Check the details you have provided",
+    "subheader": "If any information is incorrect, you can change it here.",
+    "sections": {
+      "delivery-details": {
+        "header": "Delivery details"
+      },
+      "personal-details": {
+        "header": "Personal details"
+      }
+    },
+    "fields": {
+      "tracking-number": {
+        "label": "Tracking number"
+      },
+      "delivery-date": {
+        "label": "Date of letter"
+      },
+      "delivery-details": {
+        "label": "Delivery details"
+      },
+      "address-match": {
+        "label": "Delivery address"
+      },
+      "new-address": {
+        "label": "New address"
+      },
+      "nationality": {
+        "label": "Nationality"
+      },
+      "use-address": {
+        "label": "Contact Address"
+      },
+      "phone": {
+        "label": "Phone number"
+      }
+    }
+  },
   "confirmation": {
-    "header": "Thank you, we have received your information.",
+    "title": "Thank you, we have received your information.",
     "email": "We have sent an email to",
     "email_part_two": "to confirm receipt of your enquiry.",
     "next": {
@@ -179,7 +160,7 @@
     },
     "banks": {
       "header": "Banks",
-      "para" : {
+      "para": {
         "one": "The decision to open a bank account is a commercial decision for the bank in question. The absence of your BRP should not impact your ability to open a bank account."
       }
     }

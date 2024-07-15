@@ -1,28 +1,16 @@
-{{<layout}}
-
+{{<partials-page}}
   {{$journeyHeader}}
-    {{#t}}journeys.someone-else.header{{/t}}
+    {{#t}}journey.someone-else.header{{/t}}
   {{/journeyHeader}}
-
-  {{$propositionHeader}}
-    {{> partials-navigation}}
-  {{/propositionHeader}}
-
-  {{$content}}
+  {{$pageTitle}}{{#t}}pages.confirmation.title{{/t}} – GOV.UK{{/pageTitle}}
+  {{$page-content}}
     {{> partials-confirmation-banner}}
-
     <hr>
-
     <h2>{{#t}}pages.confirmation.next.header{{/t}}</h2>
-
     <p>{{#t}}pages.confirmation.next.not-specified.para.one{{/t}}</p>
     <p>{{#t}}pages.confirmation.next.not-specified.para.two{{/t}}</p>
     <p>{{#t}}pages.confirmation.next.not-specified.para.three{{/t}}</p>
-
     <hr>
-
     <a href='https://www.gov.uk/done/someone-else-collect-brp' class='button'>{{#t}}buttons.close{{/t}}</a>
-
-  {{/content}}
-
-{{/layout}}
+  {{/page-content}}
+{{/partials-page}}

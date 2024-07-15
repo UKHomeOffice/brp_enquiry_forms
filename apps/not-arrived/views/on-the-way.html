@@ -1,31 +1,10 @@
-{{<layout}}
-
-  {{$journeyHeader}}
-    {{#t}}journeys.delivery.header{{/t}}
-  {{/journeyHeader}}
-
-  {{$propositionHeader}}
-    {{> partials-navigation}}
-  {{/propositionHeader}}
-
-  {{$title}}
-    {{#t}}pages.on-the-way.header{{/t}}
-  {{/title}}
-
-  {{$header}}
-    {{<partials-page-header}}
-      {{$page-header}}
-        {{#t}}pages.on-the-way.header{{/t}}
-      {{/page-header}}
-    {{/partials-page-header}}
-  {{/header}}
-
-  {{$content}}
-
-    <p>{{#t}}pages.on-the-way.para.one.first{{/t}}{{values.week-day-range.weekDaysSince}}{{#t}}pages.on-the-way.para.one.second{{/t}}</p>
-    <p>{{#t}}pages.on-the-way.para.two.first{{/t}}{{values.week-day-range.weekDaysUntil}}{{#t}}pages.on-the-way.para.two.second{{/t}}</p>
-    <a class="button" href='https://www.gov.uk/done/brp-not-arrived'>{{#t}}buttons.close{{/t}}</a>
-
-  {{/content}}
-
-{{/layout}}
+{{<partials-page}}
+    {{$journeyHeader}}
+        {{#t}}journey.delivery.header{{/t}}
+    {{/journeyHeader}}
+    {{$page-content}}
+        <p>{{#t}}pages.on-the-way.para.one.first{{/t}}{{values.week-day-range.weekDaysSince}}{{#t}}pages.on-the-way.para.one.second{{/t}}</p>
+        <p>{{#t}}pages.on-the-way.para.two.first{{/t}}{{values.week-day-range.weekDaysUntil}}{{#t}}pages.on-the-way.para.two.second{{/t}}</p>
+        <a class="govuk-button" href='https://www.gov.uk/done/brp-not-arrived'>{{#t}}buttons.close{{/t}}</a>
+    {{/page-content}}
+{{/partials-page}}

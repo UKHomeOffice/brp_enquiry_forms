@@ -4,7 +4,8 @@ const ReasonsBehaviour = require('./behaviours/reason');
 const PersonalDetailsBehaviour = require('./behaviours/personal-details');
 const ConfirmBehaviour = require('./behaviours/confirm');
 const EmailBehaviour = require('../common/behaviours/email');
-
+const hof = require('hof');
+const Summary = hof.components.summary;
 module.exports = {
   name: 'collection',
   baseUrl: '/collection',
@@ -15,6 +16,7 @@ module.exports = {
         'collection-where-radio',
         'collection-date'
       ],
+      locals: { captionHeading: 'Step 1 of 6' },
       next: '/reasons'
     },
     '/reasons': {
@@ -28,6 +30,7 @@ module.exports = {
         'passport-family',
         'passport-lost'
       ],
+      locals: { captionHeading: 'Step 2 of 6' },
       next: '/personal-details',
       backLink: 'where',
       forks: [{
@@ -45,6 +48,7 @@ module.exports = {
         'nominated-nationality',
         'nominated-id-number'
       ],
+      locals: { captionHeading: 'Step 3 of 6' },
       next: '/personal-details',
       backLink: 'reasons'
     },
@@ -56,24 +60,27 @@ module.exports = {
         'nationality',
         'passport'
       ],
+      locals: { captionHeading: 'Step 4 of 6' },
       next: '/contact-details'
     },
     '/contact-details': {
       fields: [
         'email',
+        'phone',
         'use-address',
         'contact-address-house-number',
         'contact-address-street',
         'contact-address-town',
         'contact-address-county',
-        'contact-address-postcode',
-        'phone'
+        'contact-address-postcode'
       ],
       backLink: 'personal-details',
+      locals: { captionHeading: 'Step 5 of 6' },
       next: '/confirm'
     },
     '/confirm': {
-      behaviours: ['complete', ConfirmBehaviour, EmailBehaviour],
+      behaviours: [Summary, 'complete', ConfirmBehaviour, EmailBehaviour],
+      sections: require('./sections/summary-data-sections'),
       fields: [
         'org-help',
         'rep-name',
@@ -81,6 +88,7 @@ module.exports = {
         'org-type'
       ],
       backLink: 'contact-details',
+      locals: { captionHeading: 'Step 6 of 6' },
       next: '/confirmation'
     },
     '/confirmation': {
