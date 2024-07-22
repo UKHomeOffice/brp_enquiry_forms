@@ -78,7 +78,8 @@ module.exports = {
   },
   phone: {
     label: 'fields.phone.label',
-    className: ['govuk-input', 'govuk-input--width-20']
+    className: ['govuk-input', 'govuk-input--width-20'],
+    type: 'tel'
   },
   'contact-address-county': {
     label: 'fields.address-county.label',
