@@ -1,56 +1,64 @@
 {{#data}}
 {{#t}}emails.lost-stolen.header{{/t}}
 
-{{#t}}emails.lost-stolen.subheading{{/t}}
-
-{{#t}}emails.lost-stolen.subheading-address.line-one{{/t}}
-{{#t}}emails.lost-stolen.subheading-address.line-two{{/t}}
-{{#t}}emails.lost-stolen.subheading-address.line-three{{/t}}
-{{#t}}emails.lost-stolen.subheading-address.line-four{{/t}}
-{{#t}}emails.lost-stolen.subheading-address.line-five{{/t}}
-
-* {{#t}}emails.lost-stolen.header-two{{/t}} *
-
 {{#t}}emails.lost-stolen.paragraph-one{{/t}}
-
 {{#t}}emails.lost-stolen.paragraph-two{{/t}}
 
+{{#t}}emails.lost-stolen.paragraph-three{{/t}}
+
+* {{#t}}emails.lost-stolen.header-two{{/t}} *
 {{#t}}emails.lost-stolen.paragraph-four{{/t}}
 
-* {{#t}}emails.lost-stolen.eea-header{{/t}} *
-
-{{#t}}emails.lost-stolen.paragraph-eea{{/t}}
-
-* {{#t}}emails.lost-stolen.header-three{{/t}} *
+{{#t}}emails.lost-stolen.paragraph-five{{/t}}
 
 {{#t}}emails.lost-stolen.paragraph-six{{/t}}
  * {{#t}}emails.lost-stolen.paragraph-six-bullets.one{{/t}}
  * {{#t}}emails.lost-stolen.paragraph-six-bullets.two{{/t}}
 
+* {{#t}}emails.lost-stolen.header-three{{/t}} *
+
+{{#t}}emails.lost-stolen.paragraph-seven{{/t}}
+
 {{#t}}emails.lost-stolen.paragraph-eight{{/t}}
- * {{#t}}emails.lost-stolen.paragraph-eight-bullets.one{{/t}}
- * {{#t}}emails.lost-stolen.paragraph-eight-bullets.two{{/t}}
-
-{{#t}}emails.lost-stolen.paragraph-nine{{/t}}
-
-* {{#t}}emails.lost-stolen.eea-deps-header{{/t}} *
-
-{{#t}}emails.lost-stolen.paragraph-eea-deps-one{{/t}}
-
-{{#t}}emails.lost-stolen.paragraph-eea-deps-two{{/t}}
 
 * {{#t}}emails.lost-stolen.header-four{{/t}} *
+
+{{#t}}emails.lost-stolen.paragraph-nine{{/t}}
 
 {{#t}}emails.lost-stolen.paragraph-ten{{/t}}
 
 {{#t}}emails.lost-stolen.paragraph-eleven{{/t}}
- * {{#t}}emails.lost-stolen.paragraph-eleven-bullets.one{{/t}}
- * {{#t}}emails.lost-stolen.paragraph-eleven-bullets.twp{{/t}}
-{{#t}}emails.lost-stolen.paragraph-eleven-eea{{/t}}
+
+* {{#t}}emails.lost-stolen.header-five{{/t}} *
 
 {{#t}}emails.lost-stolen.paragraph-twelve{{/t}}
 
-{{#t}}emails.lost-stolen.thanks{{/t}}
+{{#t}}emails.lost-stolen.paragraph-thirteen{{/t}}
+ * {{#t}}emails.lost-stolen.paragraph-thirteen-bullets.one{{/t}}
+ * {{#t}}emails.lost-stolen.paragraph-thirteen-bullets.two{{/t}}
+
+{{#t}}emails.lost-stolen.paragraph-fourteen{{/t}}
+
+{{#t}}emails.lost-stolen.paragraph-fifteen{{/t}}
+
+{{#t}}emails.lost-stolen.paragraph-sixteen{{/t}}
+
+* {{#t}}emails.lost-stolen.header-six{{/t}} *
+
+{{#t}}emails.lost-stolen.paragraph-seventeen{{/t}}
+ * {{#t}}emails.lost-stolen.subheading-address.line-one{{/t}}
+ * {{#t}}emails.lost-stolen.subheading-address.line-two{{/t}}
+ * {{#t}}emails.lost-stolen.subheading-address.line-three{{/t}}
+ * {{#t}}emails.lost-stolen.subheading-address.line-four{{/t}}
+ * {{#t}}emails.lost-stolen.subheading-address.line-five{{/t}}
+
+* {{#t}}emails.lost-stolen.header-seven{{/t}} *
+
+{{#t}}emails.lost-stolen.paragraph-eighteen{{/t}}
+
+{{#t}}emails.lost-stolen.paragraph-nineteen{{/t}}
+
+{{#t}}emails.lost-stolen.from{{/t}}
 {{#t}}emails.lost-stolen.signature{{/t}}
 {{#t}}emails.lost-stolen.fake-email{{/t}}
 {{/data}}
