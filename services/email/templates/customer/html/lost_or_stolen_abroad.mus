@@ -95,69 +95,77 @@
 
                   <p style="font-size: 23px; color: #000; line-height: 1.32; margin: 0 0 20px 0;">{{#t}}emails.lost-stolen.header{{/t}}</p>
 
-                  <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">{{#t}}emails.lost-stolen.subheading{{/t}}</p>
-
-                  <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 10px 0;">{{#t}}emails.lost-stolen.subheading-address.line-one{{/t}}<br />
-                  {{#t}}emails.lost-stolen.subheading-address.line-two{{/t}}<br />
-                  {{#t}}emails.lost-stolen.subheading-address.line-three{{/t}}<br />
-                  {{#t}}emails.lost-stolen.subheading-address.line-four{{/t}}<br />
-                  {{#t}}emails.lost-stolen.subheading-address.line-five{{/t}}
-                  </p>
-
-                  <p style="font-size: 23px; color: #000; line-height: 1.32; margin: 0 0 20px 0;">{{#t}}emails.lost-stolen.header-two{{/t}}</p>
-
                   <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">{{#t}}emails.lost-stolen.paragraph-one{{/t}}</p>
 
                   <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">{{#t}}emails.lost-stolen.paragraph-two{{/t}}</p>
 
+                  <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">{{#t}}emails.lost-stolen.paragraph-three{{/t}}</p>
+
+                  <p style="font-size: 23px; color: #000; line-height: 1.32; margin: 0 0 20px 0;">{{#t}}emails.lost-stolen.header-two{{/t}}</p>
+
                   <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">{{#t}}emails.lost-stolen.paragraph-four{{/t}}</p>
 
-                  <p style="font-size: 23px; color: #000; line-height: 1.32; margin: 0 0 20px 0;">{{#t}}emails.lost-stolen.eea-header{{/t}}</p>
-
-                  <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">{{#t}}emails.lost-stolen.paragraph-eea{{/t}}</p>
-
-                  <p style="font-size: 23px; color: #000; line-height: 1.32; margin: 0 0 20px 0;">{{#t}}emails.lost-stolen.header-three{{/t}}</p>
+                  <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">{{#t}}emails.lost-stolen.paragraph-five{{/t}}</p>
 
                   <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">{{#t}}emails.lost-stolen.paragraph-six{{/t}}</p>
                   <ul>
-                    <li style="font-size: 16px; color: #6f777b; line-height: 1.125; margin: 0 0 10px 0;">{{#t}}emails.lost-stolen.paragraph-six-bullets.one{{/t}}</li>
-                    <li style="font-size: 16px; color: #6f777b; line-height: 1.125; margin: 0 0 10px 0;">{{#t}}emails.lost-stolen.paragraph-six-bullets.two{{/t}}</li>
+                    <li style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 10px 0;">{{#t}}emails.lost-stolen.paragraph-six-bullets.one{{/t}}</li>
+                    <li style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 10px 0;">{{#t}}emails.lost-stolen.paragraph-six-bullets.two{{/t}}</li>
                   </ul>
+
+                  <p style="font-size: 23px; color: #000; line-height: 1.32; margin: 0 0 20px 0;">{{#t}}emails.lost-stolen.header-three{{/t}}</p>
+
+                  <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">{{#t}}emails.lost-stolen.paragraph-seven{{/t}}</p>
 
                   <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">{{#t}}emails.lost-stolen.paragraph-eight{{/t}}</p>
-                  <ul>
-                    <li style="font-size: 16px; color: #6f777b; line-height: 1.125; margin: 0 0 10px 0;">{{#t}}emails.lost-stolen.paragraph-eight-bullets.one{{/t}}</li>
-                    <li style="font-size: 16px; color: #6f777b; line-height: 1.125; margin: 0 0 10px 0;">{{#t}}emails.lost-stolen.paragraph-eight-bullets.two{{/t}}</li>
-                  </ul>
-
-                  <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">{{#t}}emails.lost-stolen.paragraph-nine{{/t}}</p>
-
-                  <p style="font-size: 23px; color: #000; line-height: 1.32; margin: 0 0 20px 0;">{{#t}}emails.lost-stolen.eea-deps-header{{/t}}</p>
-
-                  <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">{{#t}}emails.lost-stolen.paragraph-eea-deps-one{{/t}}</p>
-
-                  <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">{{#t}}emails.lost-stolen.paragraph-eea-deps-two{{/t}}</p>
 
                   <p style="font-size: 23px; color: #000; line-height: 1.32; margin: 0 0 20px 0;">{{#t}}emails.lost-stolen.header-four{{/t}}</p>
+
+                  <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">{{#t}}emails.lost-stolen.paragraph-nine{{/t}}</p>
 
                   <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">{{#t}}emails.lost-stolen.paragraph-ten{{/t}}</p>
 
                   <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">{{#t}}emails.lost-stolen.paragraph-eleven{{/t}}</p>
-                  <ul>
-                    <li style="font-size: 16px; color: #6f777b; line-height: 1.125; margin: 0 0 10px 0;">{{#t}}emails.lost-stolen.paragraph-eleven-bullets.one{{/t}}</li>
-                    <li style="font-size: 16px; color: #6f777b; line-heleven: 1.125; margin: 0 0 10px 0;">{{#t}}emails.lost-stolen.paragraph-eleven-bullets.two{{/t}}</li>
-                  </ul>
 
-                  <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">{{#t}}emails.lost-stolen.paragraph-eleven-eea{{/t}}</p>
+                  <p style="font-size: 23px; color: #000; line-height: 1.32; margin: 0 0 20px 0;">{{#t}}emails.lost-stolen.header-five{{/t}}</p>
 
                   <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">{{#t}}emails.lost-stolen.paragraph-twelve{{/t}}</p>
+                  
+                  <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">{{#t}}emails.lost-stolen.paragraph-thirteen{{/t}}</p>
 
-                  <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">{{#t}}emails.lost-stolen.thanks{{/t}}</p>
+                  <ul>
+                    <li style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 10px 0;">{{#t}}emails.lost-stolen.paragraph-thirteen-bullets.one{{/t}}</li>
+                    <li style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 10px 0;">{{#t}}emails.lost-stolen.paragraph-thirteen-bullets.two{{/t}}</li>
+                  </ul>
+
+                  <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">{{#t}}emails.lost-stolen.paragraph-fourteen{{/t}}</p>
+
+                  <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">{{#t}}emails.lost-stolen.paragraph-fifteen{{/t}}</p>
+
+                  <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">{{#t}}emails.lost-stolen.paragraph-sixteen{{/t}}</p>
+
+                  <p style="font-size: 23px; color: #000; line-height: 1.32; margin: 0 0 20px 0;">{{#t}}emails.lost-stolen.header-six{{/t}}</p>
+
+                  <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">{{#t}}emails.lost-stolen.paragraph-seventeen{{/t}}</p>
+
+                  <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 10px 0;">{{#t}}emails.lost-stolen.subheading-address.line-one{{/t}}<br />
+                    {{#t}}emails.lost-stolen.subheading-address.line-two{{/t}}<br />
+                    {{#t}}emails.lost-stolen.subheading-address.line-three{{/t}}<br />
+                    {{#t}}emails.lost-stolen.subheading-address.line-four{{/t}}<br />
+                    {{#t}}emails.lost-stolen.subheading-address.line-five{{/t}}
+                  </p>
+
+                  <p style="font-size: 23px; color: #000; line-height: 1.32; margin: 0 0 20px 0;">{{#t}}emails.lost-stolen.header-seven{{/t}}</p>
+
+                  <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">{{#t}}emails.lost-stolen.paragraph-eighteen{{/t}}</p>
+
+                  <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">{{#t}}emails.lost-stolen.paragraph-nineteen{{/t}}</p>
+
+                  <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">{{#t}}emails.lost-stolen.from{{/t}}</p>
 
                   <p style="font-size: 16px; color: #000; line-height: 1.125; margin: 0 0 20px 0;">{{#t}}emails.lost-stolen.signature{{/t}}</p>
 
                 {{/data}}
-
 
                 <p style="font-size: 16px; color: #6f777b; line-height: 1.125; margin: 0 0 30px 0;">{{#t}}emails.lost-stolen.fake-email{{/t}}</p>
               </td>

@@ -8,54 +8,63 @@
     "heading": "BRP reported as lost or stolen"
   },
   "lost-stolen": {
-    "header": "Thank you for reporting that your biometric residence permit (BRP) has been lost or stolen. We will now cancel your BRP and it can’t be reactivated.",
-    "subheading": "If you find your BRP, you must return it to the address below as soon as possible after you return to the UK",
+    "header": "Your biometric residence permit or card has been cancelled",
+    "paragraph-one": "Dear BRP or BRC holder",
+    "paragraph-two": "You have told us that your biometric residence permit (BRP) or biometric residence card (BRC) has been lost or stolen.",
+    "paragraph-three": "We have now cancelled your BRP or BRC. It cannot be used again if you find it later.",
+    "header-two": "If you want to travel to the UK",
+    "paragraph-four": "Physical documents like BRPs and BRCs are being replaced with an eVisa. An <a href=\"https://www.gov.uk/guidance/online-immigration-status-evisa\">eVisa is an online record of your immigration status.</a>",
+    "paragraph-five": "If you have an eVisa, you will also have been asked to create a UKVI account to access it. Your eVisa is linked to the information held in your UKVI account.",
+    "paragraph-six": "To travel on an eVisa <a href=\"https://www.gov.uk/update-uk-visas-immigration-account-details\">your UKVI account must be up to date</a> with:",
+    "paragraph-six-bullets": {
+      "one": "your personal details",
+      "two": "any new passport or travel documents"
+    },
+    "header-three": "If you are outside the UK  and you do not have eVisa or are unable to travel with one",
+    "paragraph-seven": "You will need to <a href=\"https://visas-immigration.service.gov.uk/country-selection\">apply for a ‘Replacement BRP visa’</a>. This visa will allow you to re-enter the UK only once. It costs £154.",
+    "paragraph-eight": "You will need to apply for another ‘Replacement BRP visa’ if you leave the UK again.",
+    "header-four": "If you have pre-settled or settled status under the EU Settlement Scheme",
+    "paragraph-nine": "If you have pre-settled or settled status under the EU Settlement Scheme, you will be able to use your eVisa (online immigration status) to travel to and from the UK. You do not need a BRC.",
+    "paragraph-ten": "You must make sure your current travel document is <a href=\"https://www.gov.uk/update-uk-visas-immigration-account-details\">linked to your UKVI account</a>.",
+    "paragraph-eleven": "If you are not able to update your UKVI account while you’re outside the UK, you should get an <a href=\"https://www.gov.uk/euss-travel-permit\">EU Settlement Scheme travel permit</a>.",
+    "header-five": "When you return to the UK",
+    "paragraph-twelve": "If you do not already have an eVisa, you will need to <a href=\"https://www.gov.uk/get-access-evisa\">set up access to your eVisa</a> on the GOV.UK website.",
+    "paragraph-thirteen": "If you do not already have a UK Visas and Immigration (UKVI) account, you will be asked to",
+    "paragraph-thirteen-bullets": {
+      "one": "create a UKVI account",
+      "two": "confirm your identity using the ‘UK Immigration ID Check’ app"
+    },
+    "paragraph-fourteen": "Your eVisa will be linked to your travel documents in your UKVI account.",
+    "paragraph-fifteen": "You must keep your passport or ID card details up to date in your <a href=\"https://www.gov.uk/update-uk-visas-immigration-account-details\">UKVI account</a> and tell us about any changes. This is so that your immigration status can be easily identified at the UK border. You’ll still need to carry your current passport with you.",
+    "paragraph-sixteen": "You will not need a BRP or BRC to leave the UK, you will be able to travel on your eVisa.",
+    "header-six": "If you find your biometric residence permit or card",
+    "paragraph-seventeen": "If you find your BRP or BRC, you must return it by post when you return to the UK to:",
     "subheading-address": {
       "line-one": "Freepost RRYX-GLYU-GXHZ",
       "line-two": "Returns Unit",
-      "line-three": "PO Box 163",
+      "line-three": "PO Box 195",
       "line-four": "Bristol",
-      "line-five": "BS20 1AB"
+      "line-five": "BS20 1BT"
     },
-    "header-two": "What to do next",
-    "paragraph-one": "To return to the UK you must apply for a Replacement BRP visa. More information can be found on the <a href=\"https://www.gov.uk/biometric-residence-permits/replace\" style=\"color:#1D70B8\" role=\"link\" class=\"govuk-link\">GOV.UK website</a>.",
-    "paragraph-two": "You should not make arrangements to travel back to the UK until you receive your replacement BRP visa.",
-    "paragraph-three": "This office can’t help you with the Replacement BRP Visa application process and won’t respond to enquiries.",
-    "paragraph-four": "Don’t reply to this email for help regarding your replacement BRP visa. Instead, you should direct enquiries to your local <a href=\"https://ukvi-international.faq-help.com\">Visa Application Centre</a>.",
-    "eea-header": "Dependents of EEA Nationals",
-    "paragraph-eea": "If you’re using your EEA treaty rights to stay in the UK as a dependent of an EEA National and have lost your residence card outside of the UK, you must ask your local <a href=\"https://ukvi-international.faq-help.com\">Visa Application Centre</a>.",
-    "header-three": "When you return to the UK",
-    "paragraph-six": "When you return to the UK, you must apply for a replacement <a href=\"https://visas-immigration.service.gov.uk/product/biometric-residence-permit-replacement-service\">BRP</a>. You can’t apply for a replacement while you are outside of the UK. You must make your application within 3 months of returning to the UK, otherwise you may:",
-    "paragraph-six-bullets": {
-      "one": "receive a fine of up to £1,000",
-      "two": "have your permission to stay in the UK taken away"
-    },
-    "paragraph-eight": "Applications for a replacement BRPs take the following times to consider:",
-    "paragraph-eight-bullets": {
-      "one": "up to eight weeks of receipt if you hold limited leave to enter or remain",
-      "two": "up to six months of receipt if you hold indefinite leave to enter or remain"
-    },
-    "paragraph-nine": "If you require a replacement BRP urgently, you can book an appointment to apply in person at a <a href=\"https://www.gov.uk/ukvi-premium-service-centres\" style=\"color:#1D70B8\" role=\"link\" class=\"govuk-link\">Premium Service Centre</a>.",
-    "eea-deps-header": "Dependents of EEA Nationals",
-    "paragraph-eea-deps-one": "If you’re using your EEA treaty rights to stay in the UK as a dependent of an EEA National, you can choose whether or not to replace your residence card. You will not receive a penalty if you don’t replace it.",
-    "paragraph-eea-deps-two": "If you apply for a replacement EEA treaty rights residence card and later have an urgent need to travel, you should phone the European Enquiries contact centre on 0300 123 2253.",
-    "header-four": "Leaving the UK again",
-    "paragraph-ten": "You do not need a BRP to leave the UK, but you will need a BRP or a Replacement BRP visa to return.",
-    "paragraph-eleven": "Once you have returned to the UK, if you submit a replacement BRP application and then need to travel urgently, you must either:",
-    "paragraph-eleven-bullets": {
-      "one": "withdraw the application and make a new one at a Premium Service Centre, or",
-      "two": "leave the UK and apply for a Replacement BRP Visa at a <a href=\"https://ukvi-international.faq-help.com\"  style=\"color:#1D70B8\" role=\"link\" class=\"govuk-link\">Visa Application Centre</a> while you are overseas"
-    },
-    "paragraph-eleven-eea": "If you apply for a replacement EEA treaty rights residence card and later have an urgent need to travel, you can discuss your options with the European Enquiries contact centre on 0300 123 2253.",
-    "paragraph-twelve": "If you apply for a replacement EEA treaty rights residence card and later have an urgent need to travel, you can discuss your options with the European Enquiries contact centre on 0300 123 2253.",
-    "thanks": "Thank you,",
+    "header-seven": "If you need further help or advice",
+    "paragraph-eighteen": "<a href=\"https://www.gov.uk/find-a-visa-application-centre\">Contact your local Visa Application Centre</a> for help.",
+    "paragraph-nineteen": "Do not reply to this email for help regarding your replacement BRP visa.",
+    "from": "From",
     "signature": "BRP lost and stolen team",
     "fake-email": "If you receive an email about UK Visas and Immigration and are unsure of its authenticity, do not reply to it or click on any of the links."
   },
   "lost-stolen-uk": {
-    "paragraph-one": "You must apply for a replacement BRP within 3 months. If you don’t you may:",
-    "eea-header": "EEA Nationals",
-    "eea-paragraph-one": "If you’re exercising EEA treaty rights in the UK, you can choose whether or not to replace your residence card. You will not receive a penalty if you don’t replace it.",
-    "eea-paragraph-two": "If you apply for a replacement EEA treaty rights residence card and later have an urgent need to travel, you can discuss your options with the European Enquiries contact centre on 0300 123 2253."
+    "header-one": "If you want to travel outside of the UK",
+    "paragraph-one": "You can no longer ask for a replacement BRP or BRC.",
+    "paragraph-two": "You can <a href=\"https://www.gov.uk/get-access-evisa\">set up access to your eVisa</a> on the GOV.UK website.",
+    "paragraph-three": "If you do not already have a UK Visas and Immigration (UKVI) account, you will be asked to:",
+    "paragraph-three-bullets": {
+      "one": "create a UKVI account",
+      "two": "confirm your identity using the ‘UK Immigration ID Check’ app"
+    },
+    "paragraph-four": "Your eVisa is linked to the information in your UKVI account.",
+    "paragraph-five": "If you have pre-settled or settled status under the EU Settlement Scheme, you will be able to use your eVisa (online immigration status) to travel to and from the UK.",
+    "paragraph-six": "If you find your BRP or BRC, you must return it by post to:",
+    "paragraph-seven": "<a href=\"https://www.gov.uk/contact-ukvi-inside-outside-uk\">Contact UK Visas and Immigration</a> for help."
   }
 }
