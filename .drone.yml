@@ -165,8 +165,10 @@ steps:
     commands:
       - bin/deploy.sh $${BRANCH_ENV}
     when:
-      branch: master
-      event: pull_request
+      # branch: master
+      event:
+      - pull_request
+      - push
 
   - name: setup_branch
     pull: if-not-exists

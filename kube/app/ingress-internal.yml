@@ -3,11 +3,14 @@ apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
   {{ if eq .KUBE_NAMESPACE .BRANCH_ENV }}
-  name: {{ .APP_NAME }}-internal-{{ .DRONE_SOURCE_BRANCH }}
+    name: redirect-ingress
+    annotations:
+      nginx.ingress.kubernetes.io/permanent-redirect: "www.report-error-evisa.homeoffice.gov.uk"
+      kubernetes.io/ingress.class: nginx
   {{ else }}
   name: {{ .APP_NAME }}-internal
   {{ end }}
-{{ file .INGRESS_INTERNAL_ANNOTATIONS | indent 2 }}
+# {{ file .INGRESS_INTERNAL_ANNOTATIONS | indent 2 }}
 spec:
   tls:
     - hosts:
@@ -37,6 +40,7 @@ spec:
       http:
         paths:
           - path: /
+            pathType: Prefix
             backend:
               {{ if eq .KUBE_NAMESPACE .BRANCH_ENV }}
               serviceName: {{ .APP_NAME }}-{{ .DRONE_SOURCE_BRANCH }}
