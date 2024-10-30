@@ -9,7 +9,7 @@ environment:
   STG_ENV: brp-stg
   UAT_ENV: brp-uat
   BRANCH_ENV: brp-branch
-  PRODUCTION_URL:  www.report-error-evisa.homeoffice.gov.uk 
+  PRODUCTION_URL: www.biometric-residence-permit.service.gov.uk
   IMAGE_URL: quay.io/ukhomeofficedigital
   IMAGE_REPO: brpapp
   GIT_REPO: UKHomeOffice/brp_enquiry_forms
