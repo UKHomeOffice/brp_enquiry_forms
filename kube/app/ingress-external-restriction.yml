@@ -3,9 +3,9 @@ apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
   {{ if eq .KUBE_NAMESPACE .BRANCH_ENV }}
-  name: {{ .APP_NAME }}-external-{{ .DRONE_SOURCE_BRANCH }}
+  name: {{ .APP_NAME }}-external-{{ .DRONE_SOURCE_BRANCH }}-correct-mistakes
   {{ else }}
-  name: {{ .APP_NAME }}-external
+  name: {{ .APP_NAME }}-external-correct-mistakes
   {{ end }}
 {{ file .INGRESS_EXTERNAL_RESTRICTED_ANNOTATIONS | indent 2 }}
 
