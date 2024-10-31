@@ -7,7 +7,7 @@ metadata:
   {{ else }}
   name: {{ .APP_NAME }}-external
   {{ end }}
-{{ file .INGRESS_EXTERNAL_ANNOTATIONS | indent 2 }}
+{{ file .INGRESS_EXTERNAL_RESTRICTED_ANNOTATIONS | indent 2 }}
 
 spec:
   tls:
@@ -35,7 +35,8 @@ spec:
     {{ end }}
       http:
         paths:
-          - path: /
+          - path: /correct-mistakes
+            pathType: Prefix
             backend:
               {{ if eq .KUBE_NAMESPACE .BRANCH_ENV }}
               serviceName: {{ .APP_NAME }}-{{ .DRONE_SOURCE_BRANCH }}

@@ -4,6 +4,8 @@ set -e
 export INGRESS_INTERNAL_ANNOTATIONS=$HOF_CONFIG/ingress-internal-annotations.yaml
 #Whitelist updated with POISE IPs
 export INGRESS_EXTERNAL_ANNOTATIONS=$HOF_CONFIG/ingress-external-annotations.yaml
+export INGRESS_EXTERNAL_RESTRICTED_ANNOTATIONS=$HOF_CONFIG/ingress-external-restricted-annotation.yaml
+
 export CONFIGMAP_VALUES=$HOF_CONFIG/configmap-values.yaml
 export NGINX_SETTINGS=$HOF_CONFIG/nginx-settings.yaml
 
