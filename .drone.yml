@@ -166,7 +166,8 @@ steps:
       - bin/deploy.sh $${BRANCH_ENV}
     when:
       branch: master
-      event: pull_request
+      event:
+      - pull_request
 
   - name: setup_branch
     pull: if-not-exists

@@ -4,6 +4,8 @@ set -e
 export INGRESS_INTERNAL_ANNOTATIONS=$HOF_CONFIG/ingress-internal-annotations.yaml
 #Whitelist updated with POISE IPs
 export INGRESS_EXTERNAL_ANNOTATIONS=$HOF_CONFIG/ingress-external-annotations.yaml
+export INGRESS_EXTERNAL_RESTRICTED_ANNOTATIONS=$HOF_CONFIG/ingress-external-restricted-annotation.yaml
+
 export CONFIGMAP_VALUES=$HOF_CONFIG/configmap-values.yaml
 export NGINX_SETTINGS=$HOF_CONFIG/nginx-settings.yaml
 
@@ -34,7 +36,7 @@ elif [[ ${KUBE_NAMESPACE} == ${STG_ENV} ]]; then
   $kd -f kube/redis -f kube/app/deployment.yml
 elif [[ ${KUBE_NAMESPACE} == ${PROD_ENV} ]]; then
   $kd -f kube/configmaps/configmap.yml -f kube/app/service.yml
-  $kd -f kube/app/networkpolicy-external.yml -f kube/app/ingress-external.yml
+  $kd -f kube/app/networkpolicy-external.yml -f kube/app/ingress-external.yml -f kube/app/ingress-external-restriction.yml
   $kd -f kube/redis -f kube/app/deployment.yml
 fi
 

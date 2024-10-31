@@ -37,6 +37,7 @@ spec:
       http:
         paths:
           - path: /
+            pathType: Prefix
             backend:
               {{ if eq .KUBE_NAMESPACE .BRANCH_ENV }}
               serviceName: {{ .APP_NAME }}-{{ .DRONE_SOURCE_BRANCH }}
