@@ -44,5 +44,6 @@ module.exports = {
   hosts: {
     acceptanceTests: process.env.ACCEPTANCE_HOST_NAME || `http://localhost:${process.env.PORT || 8080}`
   },
-  govukLandingPageUrl: new URL('https://www.gov.uk/biometric-residence-permits')
+  govukLandingPageUrl: new URL('https://www.gov.uk/biometric-residence-permits'),
+  feedbackUrl: process.env.FEEDBACK_URL
 };
