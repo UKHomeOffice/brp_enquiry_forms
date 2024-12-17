@@ -2,6 +2,7 @@
 
 const path = require('path');
 const hof = require('hof');
+const config = require('./config');
 
 let settings = require('./hof.settings');
 
@@ -47,7 +48,7 @@ app.use((req, res, next) => {
     { path: '/terms-and-conditions', property: 'base.terms' },
     { path: '/accessibility', property: 'base.accessibility' }
   ];
-  res.locals.feedbackUrl = 'https://eforms.homeoffice.gov.uk/outreach/feedback.ofml';
+  res.locals.feedbackUrl = config.feedbackUrl;
   next();
 });
 
