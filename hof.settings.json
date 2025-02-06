@@ -3,6 +3,7 @@
   "theme": "govUK",
   "behaviours": [
     "hof/components/clear-session",
+    "hof/components/session-timeout-warning",
     "./apps/common/behaviours/country-select"
   ],
   "fields": "./apps/common/fields",

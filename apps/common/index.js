@@ -12,6 +12,8 @@ module.exports = {
     },
     '/terms-and-conditions': {
       behaviours: [SetContinueLink]
-    }
+    },
+    '/session-timeout': {},
+    '/exit': {}
   }
 };

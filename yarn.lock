@@ -2023,6 +2023,11 @@ detective@^5.2.0:
     defined "^1.0.0"
     minimist "^1.2.6"
 
+dialog-polyfill@^0.5.6:
+  version "0.5.6"
+  resolved "https://registry.yarnpkg.com/dialog-polyfill/-/dialog-polyfill-0.5.6.tgz#7507b4c745a82fcee0fa07ce64d835979719599a"
+  integrity sha512-ZbVDJI9uvxPAKze6z146rmfUZjBqNEwcnFTVamQzXH+svluiV7swmVIGr7miwADgfgt1G2JQIytypM9fbyhX4w==
+
 diff@5.0.0:
   version "5.0.0"
   resolved "https://registry.yarnpkg.com/diff/-/diff-5.0.0.tgz#7ed6ad76d859d030787ec35855f5b1daf31d852b"
@@ -3331,10 +3336,10 @@ hmac-drbg@^1.0.1:
     minimalistic-assert "^1.0.0"
     minimalistic-crypto-utils "^1.0.1"
 
-hof@~21.1.0:
-  version "21.1.1"
-  resolved "https://registry.yarnpkg.com/hof/-/hof-21.1.1.tgz#1f70c0a4c30ac82293761541c0524032042da11b"
-  integrity sha512-zQwFIrr4s9ev2ag5Aq4XZUb1agZC8Zw7DzzSqVX/gCen+hseC+swV8jIo5psvjUN8moAVaDDQG1Lwi4j54XzYg==
+hof@~22.0.0:
+  version "22.0.1"
+  resolved "https://registry.yarnpkg.com/hof/-/hof-22.0.1.tgz#68b3a73fb64d21a9f63353560c235dcab5f6ee57"
+  integrity sha512-WMwXFKoRdEZfrXPMiJ33j0Envg5iB7xscbYDp6oa68KzBmIoUDNTtbl2Ek/IRMI0WbZeynR9DH2IRyjL3UKp7w==
   dependencies:
     aliasify "^2.1.0"
     axios "^1.5.1"
@@ -3350,6 +3355,7 @@ hof@~21.1.0:
     csrf "^3.1.0"
     debug "^4.3.1"
     deprecate "^1.0.0"
+    dialog-polyfill "^0.5.6"
     dotenv "^4.0.0"
     duplexify "^3.5.0"
     express "^4.17.1"
