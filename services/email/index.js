@@ -113,7 +113,7 @@ if (config.email.aws.accessKeyId && config.email.aws.secretAccessKey) {
 logger.info('Sending mail via ' + transportType + ' transport');
 
 function Emailer() {
-  this.transporter = nodemailer.createTransport(require('nodemailer-' + transportType + '-transport')(emailOptions));
+  this.transporter = nodemailer.createTransport(emailOptions);
 }
 
 Emailer.prototype.getEmailRecipient = email => {

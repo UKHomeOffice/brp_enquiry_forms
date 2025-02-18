@@ -1,7 +1,15 @@
-{{<partials-page}} 
-{{$header}}{{title}}{{/header}}
-{{$page-content}}
-  <p>{{description}}</p>
-  <a href="/" class="govuk-button" role="button">{{#t}}buttons.start-again{{/t}}</a>
-  {{/page-content}}
-{{/partials-page}}
+{{<layout}}
+  {{$journeyHeader}}
+    {{#t}}journey.header{{/t}}
+  {{/journeyHeader}}
+
+  {{$propositionHeader}}
+    {{> partials-navigation}}
+  {{/propositionHeader}}
+
+  {{$header}}{{{title}}}{{/header}}
+  {{$content}}
+    <p>{{description}}</p>
+    <a href="/" class="govuk-button" role="button">{{#t}}buttons.start-again{{/t}}</a>
+  {{/content}}
+{{/layout}}

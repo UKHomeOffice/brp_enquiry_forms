@@ -114,6 +114,7 @@ module.exports = {
     '/confirmation': {
       backLink: false,
       clearSession: true
-    }
+    },
+    '/exit': {}
   }
 };
