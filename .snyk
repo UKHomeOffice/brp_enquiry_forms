@@ -29,6 +29,14 @@ ignore:
   SNYK-JS-ELLIPTIC-8187303:
     - '*':
       reason: No direct upgrade or patch available
-      expires: '2025-01-16T00:00:00.000Z'
+      expires: '2025-06-16T00:00:00.000Z'
+  SNYK-JS-AXIOS-9292519:
+    - '*':
+      reason: upgrade HOF to @22.2.2 to fix
+      expires: '2025-06-16T00:00:00.000Z'
+  SNYK-JS-AXIOS-9403194:
+    - '*':
+      reason: No direct upgrade or patch available; fixed in Axios@1.8.3
+      expires: '2025-06-16T00:00:00.000Z'
 
 patch: {}
