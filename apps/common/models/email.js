@@ -11,6 +11,7 @@ module.exports = class Email extends Model {
       template: this.get('template'),
       to: this.get('email'),
       subject: this.get('subject'),
+      isResubmission: this.get('is-resubmission'),
       dataToSend: _.omit(this.toJSON(), ['steps', 'csrf-secret', 'template'])
     }, callback);
   }
