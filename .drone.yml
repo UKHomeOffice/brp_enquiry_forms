@@ -48,9 +48,6 @@ sonar_scanner: &sonar_scanner
 acceptance_tests: &acceptance_tests
   pull: if-not-exists
   image: mcr.microsoft.com/playwright:v1.48.2-jammy
-  environment:
-    CUCUMBER_PUBLISH_TOKEN:
-      from_secret: CUCUMBER_PUBLISH_TOKEN
 
 steps:
   - name: clone_repos
@@ -216,7 +213,7 @@ steps:
     commands:
       - export DRONE_SOURCE_BRANCH=$(echo $DRONE_SOURCE_BRANCH | tr '[:upper:]' '[:lower:]' | tr '/' '-')
       - export ACCEPTANCE_HOST_NAME=https://$${APP_NAME}-$${DRONE_SOURCE_BRANCH}.internal.$${BRANCH_ENV}.homeoffice.gov.uk
-      - export CUCUMBER_PUBLISH_ENABLED=true
+      - export CUCUMBER_PUBLISH_ENABLED=false
       - npx playwright install
       - npm run test:acceptance
     when:
