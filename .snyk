@@ -38,5 +38,9 @@ ignore:
     - '*':
       reason: No direct upgrade or patch available; fixed in Axios@1.8.3
       expires: '2025-06-16T00:00:00.000Z'
+  SNYK-JS-NODEMAILER-13378253:
+    - '*':
+      reason: HOF framework needs updating to use nodemailer@7.0.7
+      expires: '2025-12-31T00:00:00.000Z'
 
 patch: {}
