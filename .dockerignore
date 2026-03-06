@@ -8,6 +8,7 @@ CONTRIBUTING.md
 Dockerfile
 .dockerignore
 docker-compose.yml
+documentation
 .devcontainer
 .cache
 .drone.yml
