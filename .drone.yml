@@ -190,7 +190,7 @@ steps:
     when:
       event: [push, pull_request]
     depends_on:
-      - build_image_for_trivy
+      - build_image_for
 
   # Deploy to pull request UAT environment
   - name: deploy_to_branch
