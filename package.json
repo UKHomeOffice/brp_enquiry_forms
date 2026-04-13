@@ -23,19 +23,19 @@
   },
   "author": "HomeOffice",
   "dependencies": {
-    "express": "^5.1.0",
+    "express": "^5.2.1",
     "hof": "~22.10.4",
     "hogan.js": "^3.0.2",
     "hot-shots": "^11.2.0",
     "i18n-future": "^2.0.1",
-    "jquery": "^3.6.0",
-    "lodash": "^4.17.21",
+    "jquery": "^4.0.0",
+    "lodash": "^4.18.1",
     "moment": "2.30.1",
     "moment-business": "^3.0.1",
     "nodemailer": "^7.0.10",
-    "typeahead-aria": "^1.0.1",
-    "underscore": "^1.13.7",
-    "winston": "^3.18.3"
+    "underscore": "^1.13.8",
+    "winston": "^3.18.3",
+    "accessible-autocomplete":"^3.0.1"
   },
   "devDependencies": {
     "@cucumber/cucumber": "^12.0.0",
