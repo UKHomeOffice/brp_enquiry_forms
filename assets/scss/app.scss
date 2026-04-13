@@ -2,6 +2,7 @@
 
 @import "./alert.scss";
 @import "./icons.scss";
+@import "./autocomplete";
 
 a {
   @extend .govuk-link;
@@ -40,29 +41,6 @@ h1 {
 
 .form-label-bold {
   @include core-19;
-}
-
-//autocomplete styling
-.tt-menu {
-  background-color: #fff;
-  border: 1px solid #ccc;
-  width: 65%;
-  max-height: 220px;
-  overflow-y: scroll;
-}
-
-.tt-suggestion {
-  padding: 0.5em;
-
-  &:hover,
-  &.tt-cursor {
-    color: #fff;
-    background-color: #0097cf;
-  }
-
-  &:hover {
-    cursor: pointer;
-  }
 }
 
 .twitter-typeahead {
