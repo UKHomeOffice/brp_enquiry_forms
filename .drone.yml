@@ -25,7 +25,7 @@ trigger:
 
 linting: &linting
   pull: if-not-exists
-  image: node:20
+  image: quay.io/ukhomeofficedigital/hof-nodejs:20.20.2-alpine3.23@sha256:bcd17b68a0f1910f1670b07f6a47d1e2c28291bafc219807c494dc62b57ea25e
   environment:
     NOTIFY_KEY: USE_MOCK
   commands:
@@ -33,18 +33,17 @@ linting: &linting
 
 unit_tests: &unit_tests
   pull: if-not-exists
-  image: node:20
+  image: quay.io/ukhomeofficedigital/hof-nodejs:20.20.2-alpine3.23@sha256:bcd17b68a0f1910f1670b07f6a47d1e2c28291bafc219807c494dc62b57ea25e
   environment:
     NOTIFY_KEY: USE_MOCK
   commands:
     - yarn run test:unit
 
 sonar_scanner: &sonar_scanner
-  pull: if-not-exists
-  image: quay.io/ukhomeofficedigital/sonar-scanner-nodejs:latest
+  pull: always
+  image: quay.io/ukhomeofficedigital/sonar-scanner:latest
   commands:
     - sonar-scanner -Dproject.settings=./sonar-project.properties
-
 acceptance_tests: &acceptance_tests
   pull: if-not-exists
   image: mcr.microsoft.com/playwright:v1.48.2-focal-amd64
@@ -67,7 +66,7 @@ steps:
 
   - name: setup_deploy
     pull: if-not-exists
-    image: node:20
+    image: quay.io/ukhomeofficedigital/hof-nodejs:20.20.2-alpine3.23@sha256:bcd17b68a0f1910f1670b07f6a47d1e2c28291bafc219807c494dc62b57ea25e
     environment:
       NOTIFY_KEY: USE_MOCK
     commands:
@@ -168,7 +167,7 @@ steps:
 
   - name: setup_branch
     pull: if-not-exists
-    image: node:20
+    image: quay.io/ukhomeofficedigital/hof-nodejs:20.20.2-alpine3.23@sha256:bcd17b68a0f1910f1670b07f6a47d1e2c28291bafc219807c494dc62b57ea25e
     environment:
       NOTIFY_KEY: USE_MOCK
     commands:
@@ -223,7 +222,7 @@ steps:
   # Snyk security scans which run after branch deployment to prevent blocking of PR UAT tests
   - name: snyk_scan
     pull: if-not-exists
-    image: node:20
+    image: quay.io/ukhomeofficedigital/hof-nodejs:20.20.2-alpine3.23@sha256:bcd17b68a0f1910f1670b07f6a47d1e2c28291bafc219807c494dc62b57ea25e
     environment:
       SNYK_TOKEN:
         from_secret: snyk_token
@@ -397,7 +396,7 @@ steps:
 
   - name: cron_snyk_scan
     pull: if-not-exists
-    image: node:20
+    image: quay.io/ukhomeofficedigital/hof-nodejs:20.20.2-alpine3.23@sha256:bcd17b68a0f1910f1670b07f6a47d1e2c28291bafc219807c494dc62b57ea25e
     environment:
       SNYK_TOKEN:
         from_secret: snyk_token

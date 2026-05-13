@@ -1,11 +1,12 @@
-FROM node:20.17.0-alpine3.20@sha256:2cc3d19887bfea8bf52574716d5f16d4668e35158de866099711ddfb2b16b6e0
+FROM quay.io/ukhomeofficedigital/hof-nodejs:20.20.2-alpine3.23@sha256:bcd17b68a0f1910f1670b07f6a47d1e2c28291bafc219807c494dc62b57ea25e
 
 USER root
 
 # Update packages as a result of Anchore security vulnerability checks
-RUN apk update && \
-    apk add --upgrade gnutls binutils nodejs npm apk-tools libjpeg-turbo libcurl libx11 libxml2
-
+RUN echo "http://uk.alpinelinux.org/alpine/v3.23/main" > /etc/apk/repositories ; \
+    echo "http://uk.alpinelinux.org/alpine/v3.23/community" >> /etc/apk/repositories ; \
+    apk update && apk upgrade --no-cache
+    
 # Setup nodejs group & nodejs user
 RUN addgroup --system nodejs --gid 998 && \
     adduser --system nodejs --uid 999 --home /app/ && \
@@ -17,7 +18,7 @@ WORKDIR /app
 
 COPY --chown=999:998 . /app
 
-RUN yarn install --frozen-lockfile --production --ignore-optional && \
+RUN yarn install --frozen-lockfile --production && \
     yarn run postinstall
 
 HEALTHCHECK --interval=5m --timeout=3s \
