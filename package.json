@@ -25,7 +25,7 @@
   "author": "HomeOffice",
   "dependencies": {
     "express": "^5.1.0",
-    "hof": "~22.10.4",
+    "hof": "23.0.5-aws-sdk-v2-beta",
     "hogan.js": "^3.0.2",
     "hot-shots": "^11.2.0",
     "i18n-future": "^2.0.1",
