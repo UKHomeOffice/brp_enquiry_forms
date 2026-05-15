@@ -22,6 +22,6 @@ module.exports = superclass => class extends superclass {
       }
     });
 
-    next();
+    return super.configure(req, res, next);
   }
 };

@@ -15,6 +15,6 @@ module.exports = superclass => class Reason extends superclass {
       options = options.filter(obj => _.includes(sponsorOptions, obj.value));
       req.form.options.fields['reason-radio'].options = options;
     }
-    next();
+    return super.configure(req, res, next);
   }
 };

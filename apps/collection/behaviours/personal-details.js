@@ -13,6 +13,6 @@ module.exports = superclass => class PersonalDetails extends superclass {
         arguments: [18, 'years']
       });
     }
-    next();
+    return super.configure(req, res, next);
   }
 };

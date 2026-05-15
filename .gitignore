@@ -1,6 +1,5 @@
 #ide specific
 .idea/
-
 node_modules
 public
 reports
