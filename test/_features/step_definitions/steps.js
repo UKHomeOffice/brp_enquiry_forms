@@ -39,7 +39,22 @@ Then('I submit the application', { timeout: 4 * 5000 }, async function () {
 }.bind(World));
 
 Then('I fill {string} with {string}', async function (field, value) {
-  await this.page.fill(`input[name="${field}"]`, value);
+  const namedInput = this.page.locator(`input[name="${field}"]`).first();
+
+  if (await namedInput.count()) {
+    await namedInput.fill(value);
+    return;
+  }
+
+  const autocompleteInput = this.page.locator(`input#${field}`).first();
+
+  if (await autocompleteInput.count()) {
+    await autocompleteInput.fill(value);
+    await autocompleteInput.press('Tab');
+    return;
+  }
+
+  throw new Error(`Unable to find an input for field "${field}"`);
 }.bind(World));
 
 Then('I fill {string} text area with {string}', async function (field, value) {
