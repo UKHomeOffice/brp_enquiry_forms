@@ -25,7 +25,7 @@
   "dependencies": {
     "accessible-autocomplete": "^3.0.1",
     "express": "^5.2.1",
-    "hof": "~22.10.4",
+    "hof": "~23.1.0",
     "hogan.js": "^3.0.2",
     "hot-shots": "^11.2.0",
     "i18n-future": "^2.0.1",

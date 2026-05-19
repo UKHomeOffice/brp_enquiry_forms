@@ -89,13 +89,11 @@ spec:
                   name: notify-key
                   key: notify-key
               {{ end }}
-            {{ if not (eq .KUBE_NAMESPACE .BRANCH_ENV) }}
             - name: SESSION_SECRET
               valueFrom:
                 secretKeyRef:
                   name: brp-session
                   key: token
-            {{ end }}
           {{ if not (eq .KUBE_NAMESPACE .BRANCH_ENV) }}
           livenessProbe:
             httpGet:
