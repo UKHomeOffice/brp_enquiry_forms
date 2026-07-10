@@ -1,9 +1,17 @@
 const { Given, Then } = require('@cucumber/cucumber');
-const expect = require('chai').expect;
 const World = require('../test.setup.js');
 const config = require('../../../config');
 
 const domain = config.hosts.acceptanceTests;
+let chaiExpect;
+
+async function getExpect() {
+  if (!chaiExpect) {
+    ({ expect: chaiExpect } = await import('chai'));
+  }
+
+  return chaiExpect;
+}
 
 Given('I start the {string} application journey', async function (subApp) {
   this.subApp = subApp === 'base' ? '' : `/${subApp}`;
@@ -83,6 +91,7 @@ Then('I enter a {string} date of birth for a {int} year old', async function (fi
 }.bind(World));
 
 Then('I should be on the {string} page showing {string}', async function (uri, heading) {
+  const expect = await getExpect();
   await this.page.waitForSelector('body', { timeout: 15000 });
   expect(new URL(await this.page.url()).pathname).to.eql(`${this.subApp}/${uri}`);
   expect(await this.page.innerText('body')).to.include(heading);
@@ -91,6 +100,7 @@ Then('I should be on the {string} page showing {string}', async function (uri, h
 Then(
   'I should be redirected to the {string} journey on the {string} page showing {string}',
   async function (subApp, uri, heading) {
+    const expect = await getExpect();
     this.subApp = subApp === 'base' ? '' : `/${subApp}`;
     await this.page.goto(`${domain}${this.subApp}/${uri}`);
     await this.page.waitForSelector('body', { timeout: 15000 });
@@ -102,11 +112,13 @@ Then(
 );
 
 Then('I should see {string} on the page', async function (content) {
+  const expect = await getExpect();
   await this.page.waitForSelector('body', { timeout: 15000 });
   expect(await this.page.innerText('body')).to.include(content);
 }.bind(World));
 
 Then('I should see the {string} error', async function (content) {
+  const expect = await getExpect();
   await this.page.waitForSelector('body', { timeout: 15000 });
   expect(await this.page.innerText('.govuk-error-summary')).to.include(content);
 }.bind(World));
