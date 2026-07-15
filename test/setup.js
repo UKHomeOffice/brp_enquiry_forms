@@ -2,9 +2,14 @@
 
 process.env.NODE_ENV = 'test';
 
-global.chai = require('chai').use(require('sinon-chai'));
+const chai = require('chai');
+const sinonChai = require('sinon-chai');
+
+chai.use(sinonChai.default || sinonChai);
+global.chai = chai;
 global.should = chai.should();
 global.expect = chai.expect;
+
 global.sinon = require('sinon');
 global.proxyquire = require('proxyquire');
 require('moment-business');
