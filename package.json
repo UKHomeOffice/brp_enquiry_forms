@@ -33,7 +33,7 @@
     "lodash": "^4.18.1",
     "moment": "2.30.1",
     "moment-business": "^3.0.1",
-    "nodemailer": "^8.0.11",
+    "nodemailer": "^9.0.3",
     "underscore": "^1.13.8",
     "winston": "^3.19.0"
   },
