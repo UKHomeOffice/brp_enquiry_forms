@@ -27,7 +27,7 @@ sanitize_branch_name() {
 }
 
 set_redis_persistence() {
-  if [[ ${KUBE_NAMESPACE} == ${BRANCH_ENV} || ${KUBE_NAMESPACE} == ${STG_ENV} || ${KUBE_NAMESPACE} == ${PROD_ENV} ]]; then
+  if [[ ${KUBE_NAMESPACE} == ${STG_ENV} || ${KUBE_NAMESPACE} == ${PROD_ENV} ]]; then
     export REDIS_PERSISTENCE_ENABLED=${REDIS_PERSISTENCE_ENABLED:-true}
   else
     export REDIS_PERSISTENCE_ENABLED=false
