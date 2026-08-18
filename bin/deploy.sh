@@ -60,9 +60,6 @@ delete_redis() {
 deploy_namespace() {
   if [[ ${KUBE_NAMESPACE} == ${BRANCH_ENV} ]]; then
     $kd -f kube/configmaps -f kube/certs
-    if should_create_redis_pvc; then
-      $kd -f $redis_storage_files
-    fi
     $kd -f $redis_runtime_files
     $kd -f kube/app
   elif [[ ${KUBE_NAMESPACE} == ${UAT_ENV} ]]; then
