@@ -194,6 +194,11 @@ h1 {
   @extend .govuk-radios__conditional;
 }
 
+@media (min-width: 40.0625em) {
+  .govuk-radios--inline .govuk-radios__conditional {
+    clear: both;
+  }
+}
 
 .govuk-panel {
   @media (min-width: 40.0625em){

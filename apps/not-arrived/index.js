@@ -1,7 +1,6 @@
 'use strict';
 const hof = require('hof');
 const Summary = hof.components.summary;
-const RadioToggle = require('./behaviours/radio-toggle');
 
 module.exports = {
   name: 'not-arrived',
@@ -18,7 +17,6 @@ module.exports = {
     },
     '/tracking-number': {
       next: '/letter-received',
-      behaviours: [RadioToggle],
       fields: [
         'tracking-number-radio',
         'tracking-number'
@@ -57,7 +55,6 @@ module.exports = {
     },
     '/same-address': {
       template: 'same-address-details.html',
-      behaviours: [RadioToggle],
       fields: [
         'address-match',
         'delivery-details',
