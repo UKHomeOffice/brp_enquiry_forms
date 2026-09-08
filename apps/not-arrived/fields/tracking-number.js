@@ -4,7 +4,7 @@ module.exports = {
   'tracking-number-radio': {
     isPageHeading: true,
     mixin: 'radio-group',
-    className: ['govuk-radios'],
+    className: ['govuk-radios', 'govuk-radios--inline'],
     validate: ['required'],
     options: [
       {
