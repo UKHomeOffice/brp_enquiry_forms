@@ -113,5 +113,12 @@ deploy_namespace
 sleep $READY_FOR_TEST_DELAY
 
 if [[ ${KUBE_NAMESPACE} == ${BRANCH_ENV} ]]; then
-  echo "Branch - $APP_NAME-$DRONE_SOURCE_BRANCH.internal.$BRANCH_ENV.homeoffice.gov.uk"
+  branch_host="$APP_NAME-$DRONE_SOURCE_BRANCH.internal.$BRANCH_ENV.homeoffice.gov.uk"
+  if [[ -d /root/.dockersock ]]; then
+    case "$branch_host" in
+      *internal*) printf '%s\n' "$branch_host" > /root/.dockersock/branch_url.txt ;;
+      *) echo "Refusing to publish non-internal branch host: $branch_host" && exit 1 ;;
+    esac
+  fi
+  echo "Branch - $branch_host"
 fi
