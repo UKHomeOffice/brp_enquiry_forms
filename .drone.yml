@@ -63,7 +63,7 @@ acceptance_tests: &acceptance_tests
 
 github_app_token_step: &github_app_token_step
   pull: if-not-exists
-  image: *node_image
+  image: *node_image_name
   volumes:
     - name: dockersock
       path: /root/.dockersock
@@ -324,7 +324,7 @@ steps:
 
   - name: publish_e2e_report_to_pr
     pull: if-not-exists
-    image: *node_image
+    image: *node_image_name
     volumes:
       - name: dockersock
         path: /root/.dockersock
