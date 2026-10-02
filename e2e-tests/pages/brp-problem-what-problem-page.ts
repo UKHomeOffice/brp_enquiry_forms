@@ -1,5 +1,4 @@
 import { Locator, Page } from '@playwright/test';
-import { ConstantsLib } from '../utility-helper/constants-lib';
 import { basePage } from './base-page';
 
 export class brpProblemWhatProblemPage extends basePage {
@@ -46,59 +45,68 @@ export class brpProblemWhatProblemPage extends basePage {
     await this.clickContinueBrp();
   }
 
-  async answerFamilyName() { await this.answerProblem(ConstantsLib.PROBLEM_FAMILY_NAME, this.familyTextBox, ConstantsLib.FAMILY_NAME); }
-  async answerGivenName() { await this.answerProblem(ConstantsLib.PROBLEM_GIVEN_NAME, this.nameTextBox, ConstantsLib.GIVEN_NAME); }
-  async answerPlaceBirth() { await this.answerProblem(ConstantsLib.PROBLEM_PLACE_OF_BIRTH, this.placeBirthTextBox, ConstantsLib.NATIONALITY); }
-  async answerDOB() {
-    await this.selectCheckboxOptionWithText(ConstantsLib.PROBLEM_DATE_OF_BIRTH);
-    await this.enterDateOrDob(ConstantsLib.DATE_OF_BIRTH, 'date-of-birth-error');
+  async answerFamilyName(problemOption: string, detail: string) {
+    await this.answerProblem(problemOption, this.familyTextBox, detail);
+  }
+
+  async answerGivenName(problemOption: string, detail: string) {
+    await this.answerProblem(problemOption, this.nameTextBox, detail);
+  }
+
+  async answerPlaceBirth(problemOption: string, detail: string) {
+    await this.answerProblem(problemOption, this.placeBirthTextBox, detail);
+  }
+
+  async answerDOB(problemOption: string, dateOfBirth: string) {
+    await this.selectCheckboxOptionWithText(problemOption);
+    await this.enterDateOrDob(dateOfBirth);
     await this.clickContinueBrp();
   }
-  async answerGender() {
-    await this.selectCheckboxOptionWithText(ConstantsLib.PROBLEM_GENDER);
-    await this.selectRadioOptionWithText(ConstantsLib.FEMALE_OPTION);
+
+  async answerGender(problemOption: string, gender: string) {
+    await this.selectCheckboxOptionWithText(problemOption);
+    await this.selectRadioOptionWithText(gender);
     await this.clickContinueBrp();
   }
-  async answerSponsorRef() {
-    await this.answerProblem(ConstantsLib.PROBLEM_SPONSOR_REFERENCE, this.sponsorRefTextBox, ConstantsLib.SPONSOR_REFERENCE);
+
+  async answerSponsorRef(problemOption: string, detail: string) {
+    await this.answerProblem(problemOption, this.sponsorRefTextBox, detail);
   }
 
-  async answerNationality() {
-    await this.answerProblem(ConstantsLib.PROBLEM_NATIONALITY, this.nationalityTextBox, ConstantsLib.ALTERNATIVE_NATIONALITY);
+  async answerNationality(problemOption: string, detail: string) {
+    await this.answerProblem(problemOption, this.nationalityTextBox, detail);
   }
 
-  async answerSignature() {
-    await this.answerProblem(ConstantsLib.PROBLEM_SIGNATURE, this.signatureTextBox, ConstantsLib.SIGNATURE_DETAILS);
-
+  async answerSignature(problemOption: string, detail: string) {
+    await this.answerProblem(problemOption, this.signatureTextBox, detail);
   }
 
-  async answerPhoto() {
-    await this.answerProblem(ConstantsLib.PROBLEM_PHOTOGRAPH, this.photographTextBox, ConstantsLib.PHOTOGRAPH_DETAILS);
+  async answerPhoto(problemOption: string, detail: string) {
+    await this.answerProblem(problemOption, this.photographTextBox, detail);
   }
 
-  async answerNINum() {
-    await this.answerProblem(ConstantsLib.PROBLEM_NATIONAL_INSURANCE, this.niNumTextBox, ConstantsLib.NATIONAL_INSURANCE_NUMBER);
-
+  async answerNINum(problemOption: string, detail: string) {
+    await this.answerProblem(problemOption, this.niNumTextBox, detail);
   }
 
-  async answerFaultyBrp() {
-    await this.answerProblem(ConstantsLib.PROBLEM_DAMAGED_BRP, this.faultyBrpTextBox, ConstantsLib.DAMAGED_BRP_DETAILS);
+  async answerFaultyBrp(problemOption: string, detail: string) {
+    await this.answerProblem(problemOption, this.faultyBrpTextBox, detail);
   }
 
-  async answerCondition() {
-    await this.answerProblem(ConstantsLib.PROBLEM_CONDITIONS, this.conditionTextBox, ConstantsLib.PROBLEM_DETAILS);
+  async answerCondition(problemOption: string, detail: string) {
+    await this.answerProblem(problemOption, this.conditionTextBox, detail);
   }
 
-  async answerLengthStay() {
-    await this.answerProblem(ConstantsLib.PROBLEM_LENGTH_OF_STAY, this.conditionStayTextBox, ConstantsLib.PROBLEM_DETAILS);
+  async answerLengthStay(problemOption: string, detail: string) {
+    await this.answerProblem(problemOption, this.conditionStayTextBox, detail);
   }
 
-  async answerBiography() {
-    await this.answerProblem(ConstantsLib.PROBLEM_BIOGRAPHICS, this.biographicTextBox, ConstantsLib.PROBLEM_DETAILS);
+  async answerBiography(problemOption: string, detail: string) {
+    await this.answerProblem(problemOption, this.biographicTextBox, detail);
   }
 
-  async answerBrpDoesnWork() {
-    await this.answerProblem(ConstantsLib.PROBLEM_BRP_NOT_WORKING, this.brpDoesWorkTextBox, ConstantsLib.PROBLEM_DETAILS);
+  async answerBrpDoesnWork(problemOption: string, detail: string) {
+    await this.answerProblem(problemOption, this.brpDoesWorkTextBox, detail);
   }
 
 }

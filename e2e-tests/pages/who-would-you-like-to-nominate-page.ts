@@ -1,5 +1,4 @@
 import { Locator, Page } from '@playwright/test';
-import { ConstantsLib } from '../utility-helper/constants-lib';
 import { basePage } from './base-page';
 
 export class whoWouldYouLikeToNominatePage extends basePage {
@@ -18,12 +17,12 @@ export class whoWouldYouLikeToNominatePage extends basePage {
     return 'Who would you like to nominate? - Biometric Residence Permit - GOV.UK';
   }
 
-  async enterDetailsOfPersonNominated() {
-    await this.clearAndEnterTextInElement(this.fullNameTextBox, ConstantsLib.NOMINATED_FULL_NAME);
-    await this.enterDateOrDob(ConstantsLib.DATE_OF_BIRTH);
-    await this.fillById('someone-else-nationality', ConstantsLib.NATIONALITY);
-    await this.selectRadioByValue(ConstantsLib.PASSPORT_OPTION);
-    await this.clearAndEnterTextInElement(this.idNumberTextBox, ConstantsLib.PASSPORT_NUMBER);
+  async enterDetailsOfPersonNominated(fullName: string, dateOfBirth: string, nationality: string, idType: string, idNumber: string) {
+    await this.clearAndEnterTextInElement(this.fullNameTextBox, fullName);
+    await this.enterDateOrDob(dateOfBirth);
+    await this.fillById('someone-else-nationality', nationality);
+    await this.selectRadioByValue(idType);
+    await this.clearAndEnterTextInElement(this.idNumberTextBox, idNumber);
     await this.clickContinueBrp();
   }
 }

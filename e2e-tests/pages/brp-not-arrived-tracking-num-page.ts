@@ -1,5 +1,4 @@
 import { Locator, Page } from '@playwright/test';
-import { ConstantsLib } from '../utility-helper/constants-lib';
 import { basePage } from './base-page';
 
 export class brpNotArrivedTrackingNumPage extends basePage {
@@ -14,14 +13,14 @@ export class brpNotArrivedTrackingNumPage extends basePage {
     return 'Do you have a tracking number? - Biometric Residence Permit - GOV.UK';
   }
 
-  async yesTrackingNum() {
-    await this.selectRadioByValue(ConstantsLib.YES_OPTION);
-    await this.clearAndEnterTextInElement(this.trackingNumber, ConstantsLib.TRACKING_NUMBER);
+  async yesTrackingNum(yesOption: string, trackingNumber: string) {
+    await this.selectRadioByValue(yesOption);
+    await this.clearAndEnterTextInElement(this.trackingNumber, trackingNumber);
     await this.clickContinueBrp();
   }
 
-  async NoTrackingNum() {
-    await this.selectRadioByValue(ConstantsLib.NO_OPTION);
+  async NoTrackingNum(noOption: string) {
+    await this.selectRadioByValue(noOption);
     await this.clickContinueBrp();
   }
 }

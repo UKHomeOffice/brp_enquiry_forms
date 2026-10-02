@@ -1,5 +1,4 @@
 import { Locator, Page } from '@playwright/test';
-import { ConstantsLib } from '../utility-helper/constants-lib';
 import { basePage } from './base-page';
 
 export class brpWhyCouldNotCollectPostOfficePage extends basePage {
@@ -24,44 +23,44 @@ export class brpWhyCouldNotCollectPostOfficePage extends basePage {
     return "Why couldn't you collect your BRP? - Biometric Residence Permit - GOV.UK";
   }
 
-  async answerWhichPostOfficeINeedToCollect() {
-    await this.selectRadioByValue(ConstantsLib.UNKNOWN_POST_OFFICE_OPTION);
-    await this.clearAndEnterTextInElement(this.whichPostOffice, ConstantsLib.UNKNOWN_POST_OFFICE_DETAILS);
+  async answerWhichPostOfficeINeedToCollect(option: string, details: string) {
+    await this.selectRadioByValue(option);
+    await this.clearAndEnterTextInElement(this.whichPostOffice, details);
     await this.clickContinueBrp();
   }
 
-  async answerUnder18AndAttemptedCollection() {
-    await this.selectRadioByValue(ConstantsLib.UNDER_18_OPTION);
-    await this.clearAndEnterTextInElement(this.underAge, ConstantsLib.UNDER_18_COLLECTION_DETAILS);
+  async answerUnder18AndAttemptedCollection(option: string, details: string) {
+    await this.selectRadioByValue(option);
+    await this.clearAndEnterTextInElement(this.underAge, details);
     await this.clickContinueBrp();
   }
 
-  async answerICouldNotProveMyIdentity() {
-    await this.selectRadioByValue(ConstantsLib.IDENTITY_PROBLEM_OPTION);
-    await this.clearAndEnterTextInElement(this.nonIdentity, ConstantsLib.IDENTITY_PROBLEM_DETAILS);
+  async answerICouldNotProveMyIdentity(option: string, details: string) {
+    await this.selectRadioByValue(option);
+    await this.clearAndEnterTextInElement(this.nonIdentity, details);
     await this.clickContinueBrp();
   }
 
-  async answerSomeoneAttemptedToCollect() {
-    await this.selectRadioByValue(ConstantsLib.OTHER_COLLECTOR_OPTION);
-    await this.clearAndEnterTextInElement(this.othersIdentity, ConstantsLib.OTHER_COLLECTOR_DETAILS);
+  async answerSomeoneAttemptedToCollect(option: string, details: string) {
+    await this.selectRadioByValue(option);
+    await this.clearAndEnterTextInElement(this.othersIdentity, details);
     await this.clickContinueBrp();
   }
 
-  async answerTheVignette() {
-    await this.selectRadioByValue(ConstantsLib.VIGNETTE_PROBLEM_OPTION);
-    await this.clearAndEnterTextInElement(this.passportFamily, ConstantsLib.VIGNETTE_PROBLEM_DETAILS);
+  async answerTheVignette(option: string, details: string) {
+    await this.selectRadioByValue(option);
+    await this.clearAndEnterTextInElement(this.passportFamily, details);
     await this.clickContinueBrp();
   }
 
-  async answerIHaveLostMyPassport() {
-    await this.selectRadioByValue(ConstantsLib.LOST_PASSPORT_OPTION);
-    await this.clearAndEnterTextInElement(this.passportLost, ConstantsLib.LOST_PASSPORT_DETAILS);
+  async answerIHaveLostMyPassport(option: string, details: string) {
+    await this.selectRadioByValue(option);
+    await this.clearAndEnterTextInElement(this.passportLost, details);
     await this.clickContinueBrp();
   }
 
-  async answerMyBRPWasNotThere() {
-    await this.selectRadioByValue(ConstantsLib.NO_BRP_OPTION);
+  async answerMyBRPWasNotThere(option: string) {
+    await this.selectRadioByValue(option);
     await this.clickContinueBrp();
   }
 }

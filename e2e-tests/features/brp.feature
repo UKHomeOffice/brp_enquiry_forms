@@ -6,6 +6,7 @@ Feature: BRP- Biometric Residence Permit Collection
   Scenario Outline: BRP - Biometric Residence Permit - Collection Process
     Given I visit the Biometric Residence Permit collection page
     When I fill out the answers to the BRP collection form pertaining to "<BRP Journey Test>"
+    Then I should see the BRP confirmation page
     Examples:
       | BRP Journey Test                                                               |
       | T1: Post Office - I don't know which Post Office I need to collect my BRP from |
@@ -16,24 +17,17 @@ Feature: BRP- Biometric Residence Permit Collection
   Scenario Outline: BRP - Biometric Residence Permit - Lost Stolen Process
     Given I visit the Biometric Residence Permit lost stolen page
     When I fill out the answers to the BRP lost stolen form pertaining to "<BRP Journey Test>"
+    Then I should see the BRP confirmation page
     Examples:
       | BRP Journey Test     |
       | T1: UK route         |
       | T2: Outside UK route |
 
 
-  Scenario Outline: BRP - Biometric Residence Permit - BRP Not Delivered Process
-    Given I visit the Biometric Residence Permit not delivered page
-    When I fill out the answers to the BRP not delivered form pertaining to "<BRP Journey Test>"
-    Examples:
-      | BRP Journey Test                                           |
-      | T1: Not collected from Post Office with tracking number    |
-      | T2: Not collected from Post Office without tracking number |
-
-
   Scenario Outline: BRP - Biometric Residence Permit - Report Problem Process
     Given I visit the Biometric Residence Permit report problem page
     When I fill out the answers to the BRP report problem form pertaining to "<BRP Journey Test>"
+    Then I should see the BRP confirmation page
     Examples:
       | BRP Journey Test                              |
       | T1: UK route - Family name problem            |
@@ -45,7 +39,26 @@ Feature: BRP- Biometric Residence Permit Collection
   Scenario Outline: BRP - Biometric Residence Permit - Someone Else Process
     Given I visit the Biometric Residence Permit someone else applicant page
     When I fill out the answers to the BRP someone else applicant form pertaining to "<BRP Journey Test>"
+    Then I should see the BRP confirmation page
     Examples:
       | BRP Journey Test |
       | T1: Medical help |
       | T2: Under 18     |
+
+
+  Scenario: BRP - Biometric Residence Permit - BRP Not collected from Post Office without tracking number
+    Given I visit the Biometric Residence Permit not delivered page
+    When I fill out the answers to the BRP not delivered form pertaining to "T2: Not collected from Post Office without tracking number"
+    Then I should see the BRP confirmation page
+    Examples:
+      | BRP Journey Test                                           |
+      | T1: Not collected from Post Office without tracking number |      
+
+
+  Scenario Outline: BRP - Biometric Residence Permit - BRP Not collected from Post Office with tracking number
+    Given I visit the Biometric Residence Permit not delivered page
+    When I fill out the answers to the BRP not delivered form pertaining to "T1: Not collected from Post Office with tracking number"
+    Then I should see the BRP Contact Us page
+    Examples:
+      | BRP Journey Test                                           |
+      | T1: Not collected from Post Office with tracking number    |      

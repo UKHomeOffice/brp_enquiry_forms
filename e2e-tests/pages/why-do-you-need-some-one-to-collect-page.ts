@@ -1,5 +1,4 @@
 import { Locator, Page } from '@playwright/test';
-import { ConstantsLib } from '../utility-helper/constants-lib';
 import { basePage } from './base-page';
 
 export class whyDoYouNeedSomeOneToCollectPage extends basePage {
@@ -14,14 +13,14 @@ export class whyDoYouNeedSomeOneToCollectPage extends basePage {
     return 'Why do you need someone else to collect your BRP? - Biometric Residence Permit - GOV.UK';
   }
 
-  async medicalReasonForSomeOneElseToCollect() {
-    await this.selectRadioByValue(ConstantsLib.INCAPABLE_OPTION);
-    await this.clearAndEnterTextInElement(this.situationTextBox, ConstantsLib.SITUATION);
+  async medicalReasonForSomeOneElseToCollect(option: string, situation: string) {
+    await this.selectRadioByValue(option);
+    await this.clearAndEnterTextInElement(this.situationTextBox, situation);
     await this.clickContinueBrp();
   }
 
-  async ageReasonForSomeOneElseToCollect() {
-    await this.selectRadioByValue(ConstantsLib.UNDER_18_OPTION);
+  async ageReasonForSomeOneElseToCollect(option: string) {
+    await this.selectRadioByValue(option);
     await this.clickContinueBrp();
   }
 }

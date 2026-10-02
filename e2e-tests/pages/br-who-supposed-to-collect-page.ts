@@ -1,5 +1,4 @@
 import { Locator, Page } from '@playwright/test';
-import { ConstantsLib } from '../utility-helper/constants-lib';
 import { basePage } from './base-page';
 
 export class brWhoSupposedToCollectPage extends basePage {
@@ -18,11 +17,11 @@ export class brWhoSupposedToCollectPage extends basePage {
     return 'Who was supposed to collect your BRP on your behalf? - Biometric Residence Permit - GOV.UK';
   }
 
-  async enterCollectingPersonPersonalDetails() {
-    await this.clearAndEnterTextInElement(this.nominatedFullName, ConstantsLib.NOMINATED_FULL_NAME);
-    await this.enterDateOrDob(ConstantsLib.DATE_OF_BIRTH, 'nominated-date');
-    await this.fillById('nominated-nationality', ConstantsLib.NATIONALITY);
-    await this.clearAndEnterTextInElement(this.nominatedIdNumber, ConstantsLib.PASSPORT_NUMBER);
+  async enterCollectingPersonPersonalDetails(fullName: string, dateOfBirth: string, nationality: string, passportNumber: string) {
+    await this.clearAndEnterTextInElement(this.nominatedFullName, fullName);
+    await this.enterDateOrDob(dateOfBirth);
+    await this.fillById('nominated-nationality', nationality);
+    await this.clearAndEnterTextInElement(this.nominatedIdNumber, passportNumber);
     await this.clickContinueBrp();
   }
 }

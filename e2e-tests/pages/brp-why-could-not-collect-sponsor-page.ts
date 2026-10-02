@@ -1,5 +1,4 @@
 import { Locator, Page } from '@playwright/test';
-import { ConstantsLib } from '../utility-helper/constants-lib';
 import { basePage } from './base-page';
 
 export class brpWhyCouldNotCollectSponsorPage extends basePage {
@@ -18,15 +17,15 @@ export class brpWhyCouldNotCollectSponsorPage extends basePage {
     return "Why couldn't you collect your BRP? - Biometric Residence Permit - GOV.UK";
   }
 
-  async answerICouldNotProveMyIdentity() {
-    await this.selectRadioByValue(ConstantsLib.IDENTITY_PROBLEM_OPTION);
-    await this.clearAndEnterTextInElement(this.nonIdentity, ConstantsLib.IDENTITY_PROBLEM_DETAILS);
+  async answerICouldNotProveMyIdentity(option: string, details: string) {
+    await this.selectRadioByValue(option);
+    await this.clearAndEnterTextInElement(this.nonIdentity, details);
     await this.clickContinueBrp();
   }
 
-  async answerIHaveLostMyPassport() {
-    await this.selectRadioByValue(ConstantsLib.LOST_PASSPORT_OPTION);
-    await this.clearAndEnterTextInElement(this.passportLost, ConstantsLib.LOST_PASSPORT_DETAILS);
+  async answerIHaveLostMyPassport(option: string, details: string) {
+    await this.selectRadioByValue(option);
+    await this.clearAndEnterTextInElement(this.passportLost, details);
     await this.clickContinueBrp();
   }
 }

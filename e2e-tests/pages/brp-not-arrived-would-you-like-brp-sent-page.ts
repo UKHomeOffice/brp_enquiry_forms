@@ -1,4 +1,3 @@
-import { ConstantsLib } from '../utility-helper/constants-lib';
 import { basePage } from './base-page';
 
 export class brpNotArrivedWouldYouLikeBrpSentPage extends basePage {
@@ -6,9 +5,9 @@ export class brpNotArrivedWouldYouLikeBrpSentPage extends basePage {
     return 'Would you like your BRP sent to the address on your letter? - Biometric Residence Permit - GOV.UK';
   }
 
-  async yesBrpSent() {
-    await this.selectRadioByValue(ConstantsLib.YES_OPTION);
-    await this.clearAndEnterTextInElement(this.page.locator('#delivery-details'), ConstantsLib.DELIVERY_DETAILS);
+  async yesBrpSent(yesOption: string, deliveryDetails: string) {
+    await this.selectRadioByValue(yesOption);
+    await this.clearAndEnterTextInElement(this.page.locator('#delivery-details'), deliveryDetails);
     await this.clickContinueBrp();
   }
 

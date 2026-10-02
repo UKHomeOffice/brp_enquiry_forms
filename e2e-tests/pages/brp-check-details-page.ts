@@ -16,7 +16,7 @@ export class brpCheckDetailsPage extends basePage {
       : 'Check the details you have provided - GOV.UK';
   }
 
-  async answerNo() {
+  async answerNoAndSelectSendbutton() {
     await this.noButton.check({ force: true });
     await this.send.first().click();
   }

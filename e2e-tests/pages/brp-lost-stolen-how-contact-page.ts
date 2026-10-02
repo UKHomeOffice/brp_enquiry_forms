@@ -1,5 +1,4 @@
 import { Locator, Page } from '@playwright/test';
-import { ConstantsLib } from '../utility-helper/constants-lib';
 import { basePage } from './base-page';
 
 export class brpLostStolenHowContactPage extends basePage {
@@ -16,9 +15,9 @@ export class brpLostStolenHowContactPage extends basePage {
     return 'How should we contact you to tell you what to do next? - Biometric Residence Permit - GOV.UK';
   }
 
-  async answerHowContact() {
-    await this.clearAndEnterTextInElement(this.email, ConstantsLib.EMAIL);
-    await this.clearAndEnterTextInElement(this.phone, ConstantsLib.PHONE);
+  async answerHowContact(email: string, phone: string) {
+    await this.clearAndEnterTextInElement(this.email, email);
+    await this.clearAndEnterTextInElement(this.phone, phone);
     await this.clickContinueBrp();
   }
 }

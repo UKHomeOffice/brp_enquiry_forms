@@ -1,5 +1,4 @@
 import { Locator, Page } from '@playwright/test';
-import { ConstantsLib } from '../utility-helper/constants-lib';
 import { basePage } from './base-page';
 
 export class brpProblemAddressSameAsDeliveryPage extends basePage {
@@ -22,18 +21,18 @@ export class brpProblemAddressSameAsDeliveryPage extends basePage {
     return 'Is your address the same as the address on the delivery letter? - Biometric Residence Permit - GOV.UK';
   }
 
-  async answerYes() {
-    await this.selectRadioByValue(ConstantsLib.YES_OPTION);
+  async answerYes(yesOption: string) {
+    await this.selectRadioByValue(yesOption);
     await this.clickContinueBrp();
   }
 
-  async answerNo() {
-    await this.selectRadioByValue(ConstantsLib.NO_OPTION);
-    await this.clearAndEnterTextInElement(this.houseNumber, ConstantsLib.HOUSE_NUMBER);
-    await this.clearAndEnterTextInElement(this.street, ConstantsLib.STREET);
-    await this.clearAndEnterTextInElement(this.town, ConstantsLib.TOWN);
-    await this.clearAndEnterTextInElement(this.county, ConstantsLib.COUNTY);
-    await this.clearAndEnterTextInElement(this.postcode, ConstantsLib.POSTCODE);
+  async answerNo(noOption: string, houseNumber: string, street: string, town: string, county: string, postcode: string) {
+    await this.selectRadioByValue(noOption);
+    await this.clearAndEnterTextInElement(this.houseNumber, houseNumber);
+    await this.clearAndEnterTextInElement(this.street, street);
+    await this.clearAndEnterTextInElement(this.town, town);
+    await this.clearAndEnterTextInElement(this.county, county);
+    await this.clearAndEnterTextInElement(this.postcode, postcode);
     await this.clickContinueBrp();
   }
 }

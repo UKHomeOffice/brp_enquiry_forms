@@ -1,5 +1,4 @@
 import { Page } from '@playwright/test';
-import { ConstantsLib } from '../utility-helper/constants-lib';
 import { basePage } from './base-page';
 
 export class brpNotArrivedWhereYouDueToCollectFromPOPage extends basePage {
@@ -11,8 +10,8 @@ export class brpNotArrivedWhereYouDueToCollectFromPOPage extends basePage {
     return 'Were you due to collect your document from the Post Office? - Biometric Residence Permit - GOV.UK';
   }
 
-  async NotCollectFromPO() {
-    await this.selectRadioByValue(ConstantsLib.NO_OPTION);
+  async NotCollectFromPO(noOption: string) {
+    await this.selectRadioByValue(noOption);
     await this.clickContinueBrp();
   }
 }

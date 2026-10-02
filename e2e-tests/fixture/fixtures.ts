@@ -29,6 +29,7 @@ import { brpWhyCouldNotCollectSponsorPage } from '../pages/brp-why-could-not-col
 import { brWhoSupposedToCollectPage } from '../pages/br-who-supposed-to-collect-page';
 import { whoWouldYouLikeToNominatePage } from '../pages/who-would-you-like-to-nominate-page';
 import { whyDoYouNeedSomeOneToCollectPage } from '../pages/why-do-you-need-some-one-to-collect-page';
+import { brpConfirmationPage } from '../pages/brp-confirmation-page';
 
 export type Pages = {
   brpCheckDetailsPage: brpCheckDetailsPage;
@@ -61,6 +62,7 @@ export type Pages = {
   whoWouldYouLikeToNominatePage: whoWouldYouLikeToNominatePage;
   whyDoYouNeedSomeOneToCollectPage: whyDoYouNeedSomeOneToCollectPage;
   brpSomeoneElsePersonalDetailsPage: brpSomeoneElsePersonalDetailsPage;
+  brpConfirmationPage: brpConfirmationPage;
 };
 
 export const test = base.extend<{ pages: Pages }>({
@@ -96,6 +98,7 @@ export const test = base.extend<{ pages: Pages }>({
       whoWouldYouLikeToNominatePage: new whoWouldYouLikeToNominatePage(page),
       whyDoYouNeedSomeOneToCollectPage: new whyDoYouNeedSomeOneToCollectPage(page),
       brpSomeoneElsePersonalDetailsPage: new brpSomeoneElsePersonalDetailsPage(page),
+      brpConfirmationPage: new brpConfirmationPage(page),
     });
   },
 });

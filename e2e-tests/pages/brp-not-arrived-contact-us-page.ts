@@ -12,8 +12,4 @@ export class brpNotArrivedContactUsPage extends basePage {
   async expectedPageTitle(): Promise<string> {
     return 'Contact us - Biometric Residence Permit - GOV.UK';
   }
-
-  async noLetter() {
-    await this.close.click();
-  }
 }

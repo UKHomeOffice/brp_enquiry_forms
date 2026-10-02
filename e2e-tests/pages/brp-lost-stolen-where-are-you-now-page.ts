@@ -1,5 +1,4 @@
 import { Locator, Page } from '@playwright/test';
-import { ConstantsLib } from '../utility-helper/constants-lib';
 import { basePage } from './base-page';
 
 export class brpLostStolenWhereAreYouNowPage extends basePage {
@@ -14,14 +13,14 @@ export class brpLostStolenWhereAreYouNowPage extends basePage {
     return 'Where are you now? - Biometric Residence Permit - GOV.UK';
   }
 
-  async answerWhereAreYouInUk() {
-    await this.selectRadioByValue(ConstantsLib.YES_OPTION);
+  async answerWhereAreYouInUk(yesOption: string) {
+    await this.selectRadioByValue(yesOption);
     await this.clickContinueBrp();
   }
 
-  async answerWhereAreYouOutsideUk() {
-    await this.selectRadioByValue(ConstantsLib.NO_OPTION);
-    await this.fillById('country', ConstantsLib.NATIONALITY);
+  async answerWhereAreYouOutsideUk(noOption: string, country: string) {
+    await this.selectRadioByValue(noOption);
+    await this.fillById('country', country);
     await this.clickContinueBrp();
   }
 }

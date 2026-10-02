@@ -1,5 +1,4 @@
 import { Page } from '@playwright/test';
-import { ConstantsLib } from '../utility-helper/constants-lib';
 import { basePage } from './base-page';
 
 export class brpProblemWhereApplyPage extends basePage {
@@ -11,13 +10,13 @@ export class brpProblemWhereApplyPage extends basePage {
     return 'Where did you apply for your visa? - Biometric Residence Permit - GOV.UK';
   }
 
-  async answerUkButton() {
-    await this.selectRadioByValue(ConstantsLib.YES_OPTION);
+  async answerUkButton(yesOption: string) {
+    await this.selectRadioByValue(yesOption);
     await this.clickContinueBrp();
   }
 
-  async answerOutsideUkButton() {
-    await this.selectRadioByValue(ConstantsLib.NO_OPTION);
+  async answerOutsideUkButton(noOption: string) {
+    await this.selectRadioByValue(noOption);
     await this.clickContinueBrp();
   }
 }

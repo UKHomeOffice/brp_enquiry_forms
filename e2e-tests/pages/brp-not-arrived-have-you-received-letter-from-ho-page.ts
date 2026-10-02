@@ -1,5 +1,4 @@
 import { Locator, Page } from '@playwright/test';
-import { ConstantsLib } from '../utility-helper/constants-lib';
 import { basePage } from './base-page';
 
 export class brpNotArrivedHaveYouReceivedLetterFromHOPage extends basePage {
@@ -14,15 +13,15 @@ export class brpNotArrivedHaveYouReceivedLetterFromHOPage extends basePage {
     return 'Have you received your decision by letter or email? - Biometric Residence Permit - GOV.UK';
   }
 
-  async answerYesReceivedLetterHO() {
-    await this.selectRadioByValue(ConstantsLib.YES_OPTION);
-    await this.enterDateOrDob(ConstantsLib.COLLECTION_DATE);
-    await this.clearAndEnterTextInElement(this.caseIdBox, ConstantsLib.CASE_ID);
+  async answerYesReceivedLetterHO(yesOption: string, collectionDate: string, caseId: string) {
+    await this.selectRadioByValue(yesOption);
+    await this.enterDateOrDob(collectionDate);
+    await this.clearAndEnterTextInElement(this.caseIdBox, caseId);
     await this.clickContinueBrp();
   }
 
-  async answerNotReceivedLetterHO() {
-    await this.selectRadioByValue(ConstantsLib.NO_OPTION);
+  async answerNotReceivedLetterHO(noOption: string) {
+    await this.selectRadioByValue(noOption);
     await this.clickContinueBrp();
   }
 }

@@ -1,5 +1,4 @@
 import { Locator, Page } from '@playwright/test';
-import { ConstantsLib } from '../utility-helper/constants-lib';
 import { basePage } from './base-page';
 
 export class brpHowPersonalDetailsAppearPage extends basePage {
@@ -18,12 +17,12 @@ export class brpHowPersonalDetailsAppearPage extends basePage {
     return 'How do your personal details appear on your BRP? - Biometric Residence Permit - GOV.UK';
   }
 
-  async answerHowDoPersonalDetailAppearOnBrp() {
-    await this.clearAndEnterTextInElement(this.fullNameTextBox, ConstantsLib.FULL_NAME);
-    await this.enterDateOrDob(ConstantsLib.DATE_OF_BIRTH);
-    await this.fillById('nationality', ConstantsLib.NATIONALITY);
-    await this.selectRadioByValue(ConstantsLib.BRP_CARD_OPTION);
-    await this.clearAndEnterTextInElement(this.brpNumberTextBox, ConstantsLib.BRP_NUMBER);
+  async answerHowDoPersonalDetailAppearOnBrp(fullName: string, dateOfBirth: string, nationality: string, cardOption: string, brpNumber: string) {
+    await this.clearAndEnterTextInElement(this.fullNameTextBox, fullName);
+    await this.enterDateOrDob(dateOfBirth);
+    await this.fillById('nationality', nationality);
+    await this.selectRadioByValue(cardOption);
+    await this.clearAndEnterTextInElement(this.brpNumberTextBox, brpNumber);
     await this.clickContinueBrp();
   }
 }
