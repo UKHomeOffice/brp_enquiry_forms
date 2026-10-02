@@ -48,7 +48,7 @@ Feature: BRP- Biometric Residence Permit Collection
 
   Scenario: BRP - Biometric Residence Permit - BRP Not collected from Post Office without tracking number
     Given I visit the Biometric Residence Permit not delivered page
-    When I fill out the answers to the BRP not delivered form pertaining to "T2: Not collected from Post Office without tracking number"
+    When I fill out the answers to the BRP not delivered form pertaining to "<BRP Journey Test>"
     Then I should see the BRP confirmation page
     Examples:
       | BRP Journey Test                                           |
@@ -57,7 +57,7 @@ Feature: BRP- Biometric Residence Permit Collection
 
   Scenario Outline: BRP - Biometric Residence Permit - BRP Not collected from Post Office with tracking number
     Given I visit the Biometric Residence Permit not delivered page
-    When I fill out the answers to the BRP not delivered form pertaining to "T1: Not collected from Post Office with tracking number"
+    When I fill out the answers to the BRP not delivered form pertaining to "<BRP Journey Test>"
     Then I should see the BRP Contact Us page
     Examples:
       | BRP Journey Test                                           |
