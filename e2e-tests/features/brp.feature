@@ -1,9 +1,9 @@
 @BrpRegression
 @BrpRegressionCI
-Feature: BRP- Biometric Residence Permit Collection
+Feature: BRP - Biometric Residence Permit Collection
 
 
-  Scenario Outline: BRP - Biometric Residence Permit - Collection Process
+  Scenario Outline: BRP - Collection Process
     Given I visit the Biometric Residence Permit collection page
     When I fill out the answers to the BRP collection form pertaining to "<BRP Journey Test>"
     Then I should see the BRP confirmation page
@@ -14,7 +14,7 @@ Feature: BRP- Biometric Residence Permit Collection
       | T3: Sponsor - I could not prove my identity                                    |
 
 
-  Scenario Outline: BRP - Biometric Residence Permit - Lost Stolen Process
+  Scenario Outline: BRP - Lost Stolen Process
     Given I visit the Biometric Residence Permit lost stolen page
     When I fill out the answers to the BRP lost stolen form pertaining to "<BRP Journey Test>"
     Then I should see the BRP confirmation page
@@ -24,7 +24,7 @@ Feature: BRP- Biometric Residence Permit Collection
       | T2: Outside UK route |
 
 
-  Scenario Outline: BRP - Biometric Residence Permit - Report Problem Process
+  Scenario Outline: BRP - Report Problem Process
     Given I visit the Biometric Residence Permit report problem page
     When I fill out the answers to the BRP report problem form pertaining to "<BRP Journey Test>"
     Then I should see the BRP confirmation page
@@ -36,7 +36,7 @@ Feature: BRP- Biometric Residence Permit Collection
       | T4: Outside UK route - Date of birth problem  |
 
 
-  Scenario Outline: BRP - Biometric Residence Permit - Someone Else Process
+  Scenario Outline: BRP - Someone Else Process
     Given I visit the Biometric Residence Permit someone else applicant page
     When I fill out the answers to the BRP someone else applicant form pertaining to "<BRP Journey Test>"
     Then I should see the BRP confirmation page
@@ -46,7 +46,7 @@ Feature: BRP- Biometric Residence Permit Collection
       | T2: Under 18     |
 
 
-  Scenario: BRP - Biometric Residence Permit - BRP Not collected from Post Office without tracking number
+  Scenario: BRP - Not collected from Post Office without tracking number
     Given I visit the Biometric Residence Permit not delivered page
     When I fill out the answers to the BRP not delivered form pertaining to "<BRP Journey Test>"
     Then I should see the BRP confirmation page
@@ -55,7 +55,7 @@ Feature: BRP- Biometric Residence Permit Collection
       | T1: Not collected from Post Office without tracking number |      
 
 
-  Scenario Outline: BRP - Biometric Residence Permit - BRP Not collected from Post Office with tracking number
+  Scenario Outline: BRP - Not collected from Post Office with tracking number
     Given I visit the Biometric Residence Permit not delivered page
     When I fill out the answers to the BRP not delivered form pertaining to "<BRP Journey Test>"
     Then I should see the BRP Contact Us page
