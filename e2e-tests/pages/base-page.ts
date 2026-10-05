@@ -83,13 +83,6 @@ export class basePage {
     await this.clearAndEnterTextInElement(locator.first(), value);
   }
 
-  // async enterDateOrDob(inputDate: string, prefix = 'date-of-birth') {
-  //   const [day, month, year] = inputDate.split('/');
-  //   await this.fillById(`${prefix}-day`, day);
-  //   await this.fillById(`${prefix}-month`, month);
-  //   await this.fillById(`${prefix}-year`, year);
-  // }
-
   convertTextToDate(dateValue: string | null): string | null {
     if (dateValue == null) return null;
 
