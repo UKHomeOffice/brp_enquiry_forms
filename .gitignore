@@ -12,5 +12,8 @@ apps/**/translations/en
 dump.rdb
 coverage
 .nyc_output
+.features-gen
+playwright-report
+test-results
 codecept.conf.js
 .env
