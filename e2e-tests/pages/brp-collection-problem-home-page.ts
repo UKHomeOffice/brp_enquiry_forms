@@ -10,7 +10,7 @@ export class brpCollectionProblemHomePage extends basePage {
     super(page);
     this.acceptCookieButton = page.locator('#accept-cookies-button');
     this.rejectCookieButton = page.locator('#reject-cookies-button');
-    this.startButton = page.getByRole('link', { name: 'Start now' }).or(page.locator('a:has-text("Start now")'));
+    this.startButton = page.getByRole('link', { name: 'Start now' });
   }
 
   async expectedPageTitle(): Promise<string> {
