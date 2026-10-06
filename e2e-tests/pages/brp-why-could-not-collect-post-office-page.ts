@@ -20,7 +20,7 @@ export class brpWhyCouldNotCollectPostOfficePage extends basePage {
   }
 
   async expectedPageTitle(): Promise<string> {
-    return "Why couldn't you collect your BRP? - Biometric Residence Permit - GOV.UK";
+    return "Why couldn't you collect your BRP? – Biometric Residence Permit – GOV.UK";
   }
 
   async answerWhichPostOfficeINeedToCollect(option: string, details: string) {
@@ -63,4 +63,5 @@ export class brpWhyCouldNotCollectPostOfficePage extends basePage {
     await this.selectRadioByValue(option);
     await this.clickContinueBrp();
   }
+
 }

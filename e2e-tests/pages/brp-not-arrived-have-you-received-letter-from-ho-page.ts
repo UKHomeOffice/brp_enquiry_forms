@@ -10,7 +10,7 @@ export class brpNotArrivedHaveYouReceivedLetterFromHOPage extends basePage {
   }
 
   async expectedPageTitle(): Promise<string> {
-    return 'Have you received your decision by letter or email? - Biometric Residence Permit - GOV.UK';
+    return 'Have you received your decision by letter or email? – Biometric Residence Permit – GOV.UK';
   }
 
   async answerYesReceivedLetterHO(yesOption: string, collectionDate: string, caseId: string) {
@@ -24,4 +24,5 @@ export class brpNotArrivedHaveYouReceivedLetterFromHOPage extends basePage {
     await this.selectRadioByValue(noOption);
     await this.clickContinueBrp();
   }
+
 }

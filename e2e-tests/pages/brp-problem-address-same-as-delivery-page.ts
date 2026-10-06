@@ -18,7 +18,7 @@ export class brpProblemAddressSameAsDeliveryPage extends basePage {
   }
 
   async expectedPageTitle(): Promise<string> {
-    return 'Is your address the same as the address on the delivery letter? - Biometric Residence Permit - GOV.UK';
+    return 'Is your address the same as the address on the delivery letter? – Biometric Residence Permit – GOV.UK';
   }
 
   async answerYes(yesOption: string) {
@@ -35,4 +35,5 @@ export class brpProblemAddressSameAsDeliveryPage extends basePage {
     await this.clearAndEnterTextInElement(this.postcode, postcode);
     await this.clickContinueBrp();
   }
+
 }

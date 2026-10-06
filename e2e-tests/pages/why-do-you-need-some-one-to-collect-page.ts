@@ -10,7 +10,7 @@ export class whyDoYouNeedSomeOneToCollectPage extends basePage {
   }
 
   async expectedPageTitle(): Promise<string> {
-    return 'Why do you need someone else to collect your BRP? - Biometric Residence Permit - GOV.UK';
+    return 'Why do you need someone else to collect your BRP? – Biometric Residence Permit – GOV.UK';
   }
 
   async medicalReasonForSomeOneElseToCollect(option: string, situation: string) {
@@ -23,4 +23,5 @@ export class whyDoYouNeedSomeOneToCollectPage extends basePage {
     await this.selectRadioByValue(option);
     await this.clickContinueBrp();
   }
+
 }

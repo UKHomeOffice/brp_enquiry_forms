@@ -10,4 +10,5 @@ export class brpConfirmationPage extends basePage {
   async expectedPageTitle(): Promise<string> {
     return 'Thank you, we have received your information. – GOV.UK';
   }
+
 }

@@ -14,7 +14,7 @@ export class whoWouldYouLikeToNominatePage extends basePage {
   }
 
   async expectedPageTitle(): Promise<string> {
-    return 'Who would you like to nominate? - Biometric Residence Permit - GOV.UK';
+    return 'Who would you like to nominate? – Biometric Residence Permit – GOV.UK';
   }
 
   async enterDetailsOfPersonNominated(fullName: string, dateOfBirth: string, nationality: string, idType: string, idNumber: string) {
@@ -25,4 +25,5 @@ export class whoWouldYouLikeToNominatePage extends basePage {
     await this.clearAndEnterTextInElement(this.idNumberTextBox, idNumber);
     await this.clickContinueBrp();
   }
+
 }

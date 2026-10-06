@@ -10,7 +10,7 @@ export class brpNotArrivedTrackingNumPage extends basePage {
   }
 
   async expectedPageTitle(): Promise<string> {
-    return 'Do you have a tracking number? - Biometric Residence Permit - GOV.UK';
+    return 'Do you have a tracking number? – Biometric Residence Permit – GOV.UK';
   }
 
   async yesTrackingNum(yesOption: string, trackingNumber: string) {
@@ -23,4 +23,5 @@ export class brpNotArrivedTrackingNumPage extends basePage {
     await this.selectRadioByValue(noOption);
     await this.clickContinueBrp();
   }
+
 }

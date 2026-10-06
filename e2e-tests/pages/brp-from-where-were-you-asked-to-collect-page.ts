@@ -10,7 +10,7 @@ export class brpFromWhereWereYouAskedToCollectPage extends basePage {
   }
 
   async expectedPageTitle(): Promise<string> {
-    return 'From where were you asked to collect your BRP? - Biometric Residence Permit - GOV.UK';
+    return 'From where were you asked to collect your BRP? – Biometric Residence Permit – GOV.UK';
   }
 
   async enterDate(collectionDate: string) {
@@ -28,4 +28,5 @@ export class brpFromWhereWereYouAskedToCollectPage extends basePage {
     await this.enterDate(collectionDate);
     await this.clickContinueBrp();
   }
+
 }

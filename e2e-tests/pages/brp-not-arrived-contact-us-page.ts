@@ -10,6 +10,7 @@ export class brpNotArrivedContactUsPage extends basePage {
   }
 
   async expectedPageTitle(): Promise<string> {
-    return 'Contact us - Biometric Residence Permit - GOV.UK';
+    return 'Contact us – Biometric Residence Permit – GOV.UK';
   }
+
 }

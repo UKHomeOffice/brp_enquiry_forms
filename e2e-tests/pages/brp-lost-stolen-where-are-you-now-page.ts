@@ -10,7 +10,7 @@ export class brpLostStolenWhereAreYouNowPage extends basePage {
   }
 
   async expectedPageTitle(): Promise<string> {
-    return 'Where are you now? - Biometric Residence Permit - GOV.UK';
+    return 'Where are you now? – Biometric Residence Permit – GOV.UK';
   }
 
   async answerWhereAreYouInUk(yesOption: string) {
@@ -23,4 +23,5 @@ export class brpLostStolenWhereAreYouNowPage extends basePage {
     await this.fillById('country', country);
     await this.clickContinueBrp();
   }
+
 }

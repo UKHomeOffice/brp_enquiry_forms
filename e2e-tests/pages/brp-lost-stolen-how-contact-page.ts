@@ -12,7 +12,7 @@ export class brpLostStolenHowContactPage extends basePage {
   }
 
   async expectedPageTitle(): Promise<string> {
-    return 'How should we contact you to tell you what to do next? - Biometric Residence Permit - GOV.UK';
+    return 'How should we contact you to tell you what to do next? – Biometric Residence Permit – GOV.UK';
   }
 
   async answerHowContact(email: string, phone: string) {
@@ -20,4 +20,5 @@ export class brpLostStolenHowContactPage extends basePage {
     await this.clearAndEnterTextInElement(this.phone, phone);
     await this.clickContinueBrp();
   }
+
 }

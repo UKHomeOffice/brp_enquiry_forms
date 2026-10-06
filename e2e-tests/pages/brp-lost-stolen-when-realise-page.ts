@@ -7,11 +7,12 @@ export class brpLostStolenWhenRealisePage extends basePage {
   }
 
   async expectedPageTitle(): Promise<string> {
-    return 'When did you realise you no longer had your BRP? - Biometric Residence Permit - GOV.UK';
+    return 'When did you realise you no longer had your BRP? – Biometric Residence Permit – GOV.UK';
   }
 
   async answerWhenRealise(lostDate: string) {
     await this.enterDateOrDob(lostDate, 'date-lost');
     await this.clickContinueBrp();
   }
+
 }

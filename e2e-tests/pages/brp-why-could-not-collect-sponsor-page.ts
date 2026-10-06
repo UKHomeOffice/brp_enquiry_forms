@@ -14,7 +14,7 @@ export class brpWhyCouldNotCollectSponsorPage extends basePage {
   }
 
   async expectedPageTitle(): Promise<string> {
-    return "Why couldn't you collect your BRP? - Biometric Residence Permit - GOV.UK";
+    return "Why couldn't you collect your BRP? – Biometric Residence Permit – GOV.UK";
   }
 
   async answerICouldNotProveMyIdentity(option: string, details: string) {
@@ -28,4 +28,5 @@ export class brpWhyCouldNotCollectSponsorPage extends basePage {
     await this.clearAndEnterTextInElement(this.passportLost, details);
     await this.clickContinueBrp();
   }
+
 }

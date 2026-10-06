@@ -36,7 +36,7 @@ export class brpProblemWhatProblemPage extends basePage {
   }
 
   async expectedPageTitle(): Promise<string> {
-    return "What's the problem with your BRP? - Biometric Residence Permit - GOV.UK";
+    return "What’s the problem with your BRP? – Biometric Residence Permit – GOV.UK";
   }
 
   async answerProblem(value: string, detailLocator: Locator, detail: string) {

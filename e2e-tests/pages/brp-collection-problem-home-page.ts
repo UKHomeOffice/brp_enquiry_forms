@@ -24,4 +24,5 @@ export class brpCollectionProblemHomePage extends basePage {
     }
     await this.clickStartNowIfPresent(this.startButton);
   }
+
 }

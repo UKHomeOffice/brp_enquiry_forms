@@ -7,11 +7,12 @@ export class brpNotArrivedWhereYouDueToCollectFromPOPage extends basePage {
   }
 
   async expectedPageTitle(): Promise<string> {
-    return 'Were you due to collect your document from the Post Office? - Biometric Residence Permit - GOV.UK';
+    return 'Were you due to collect your document from the Post Office? – Biometric Residence Permit – GOV.UK';
   }
 
   async NotCollectFromPO(noOption: string) {
     await this.selectRadioByValue(noOption);
     await this.clickContinueBrp();
   }
+
 }

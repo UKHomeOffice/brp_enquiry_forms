@@ -11,19 +11,8 @@ export class basePage {
     this.noButton = page.locator('input[type="radio"][value="no"], input[type="radio"][value="No"]').first();
   }
 
-  async expectedPageTitle(): Promise<string> {
-    return this.page.title();
-  }
-
-  async assertPageTitle() {
-    const expectedTitle = await this.expectedPageTitle();
-    if (expectedTitle) {
-      await expect.poll(async () => this.normaliseTitle(await this.page.title())).toBe(this.normaliseTitle(expectedTitle));
-    }
-  }
-
-  normaliseTitle(title: string) {
-    return title.replaceAll('–', '-').replaceAll('’', "'");
+  async assertPageTitle(page: Page, title: string) {
+    await expect(page).toHaveTitle(title);
   }
 
   async clickContinueBrp() {

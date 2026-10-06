@@ -24,4 +24,5 @@ export class brpLostStolenHomePage extends basePage {
     }
     await this.clickStartNowIfPresent(this.startButton);
   }
+
 }

@@ -14,7 +14,7 @@ export class brpNotArrivedPersonalDetailsPage extends basePage {
   }
 
   async expectedPageTitle(): Promise<string> {
-    return 'What are your personal details? - Biometric Residence Permit - GOV.UK';
+    return 'What are your personal details? – Biometric Residence Permit – GOV.UK';
   }
 
   async enterDetailsND(fullName: string, dateOfBirth: string, nationality: string, passportNumber: string) {
@@ -24,4 +24,5 @@ export class brpNotArrivedPersonalDetailsPage extends basePage {
     await this.clearAndEnterTextInElement(this.passportNumTextBoxNotDelivered, passportNumber);
     await this.clickContinueBrp();
   }
+
 }

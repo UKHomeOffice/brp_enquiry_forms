@@ -18,7 +18,7 @@ export class brpProblemIsThereSuitableUkAddressPage extends basePage {
   }
 
   async expectedPageTitle(): Promise<string> {
-    return 'Is there a suitable UK address we can deliver your BRP to? - Biometric Residence Permit - GOV.UK';
+    return 'Is there a suitable UK address we can deliver your BRP to? – Biometric Residence Permit – GOV.UK';
   }
 
   async answerYes(yesOption: string, houseNumber: string, street: string, town: string, county: string, postcode: string) {
@@ -35,4 +35,5 @@ export class brpProblemIsThereSuitableUkAddressPage extends basePage {
     await this.selectRadioByValue(noOption);
     await this.clickContinueBrp();
   }
+
 }

@@ -24,4 +24,5 @@ export class brpNotDeliveredHomePage extends basePage {
     }
     await this.clickStartNowIfPresent(this.startButton);
   }
+
 }

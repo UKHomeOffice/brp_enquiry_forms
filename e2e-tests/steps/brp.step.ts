@@ -103,11 +103,11 @@ When('I fill out the answers to the BRP someone else applicant form pertaining t
 });
 
 Then('I should see the BRP confirmation page', async ({ pages }) => {
-  await pages.brpConfirmationPage.assertPageTitle();
+  await pages.brpConfirmationPage.assertPageTitle(pages.brpConfirmationPage.page, await pages.brpConfirmationPage.expectedPageTitle());
 });
 
 Then('I should see the BRP Contact Us page', async ({ pages }) => {
-      await pages.brpNotArrivedContactUsPage.assertPageTitle();
+      await pages.brpNotArrivedContactUsPage.assertPageTitle(pages.brpNotArrivedContactUsPage.page, await pages.brpNotArrivedContactUsPage.expectedPageTitle());
 });
 
 
@@ -119,9 +119,9 @@ class BrpStepLib {
   constructor(private readonly pages: Pages) { }
 
   async answerPostOfficeCollectionRoute(reason: string) {
-    await this.pages.brpFromWhereWereYouAskedToCollectPage.assertPageTitle();
+    await this.pages.brpFromWhereWereYouAskedToCollectPage.assertPageTitle(this.pages.brpFromWhereWereYouAskedToCollectPage.page, await this.pages.brpFromWhereWereYouAskedToCollectPage.expectedPageTitle());
     await this.pages.brpFromWhereWereYouAskedToCollectPage.answerPostOffice(c.POST_OFFICE_OPTION, c.BRP_COLLECTION_DATE);
-    await this.pages.brpWhyCouldNotCollectPostOfficePage.assertPageTitle();
+    await this.pages.brpWhyCouldNotCollectPostOfficePage.assertPageTitle(this.pages.brpWhyCouldNotCollectPostOfficePage.page, await this.pages.brpWhyCouldNotCollectPostOfficePage.expectedPageTitle());
     switch (reason) {
       case c.COLLECTION_REASON_UNKNOWN_POST_OFFICE:
         await this.pages.brpWhyCouldNotCollectPostOfficePage.answerWhichPostOfficeINeedToCollect(c.UNKNOWN_POST_OFFICE_OPTION, c.UNKNOWN_POST_OFFICE_DETAILS);
@@ -154,9 +154,9 @@ class BrpStepLib {
   }
 
   async answerSponsorCollectionRoute(reason: string) {
-    await this.pages.brpFromWhereWereYouAskedToCollectPage.assertPageTitle();
+    await this.pages.brpFromWhereWereYouAskedToCollectPage.assertPageTitle(this.pages.brpFromWhereWereYouAskedToCollectPage.page, await this.pages.brpFromWhereWereYouAskedToCollectPage.expectedPageTitle());
     await this.pages.brpFromWhereWereYouAskedToCollectPage.answerSponsor(c.SPONSOR_OPTION, c.BRP_COLLECTION_DATE);
-    await this.pages.brpWhyCouldNotCollectSponsorPage.assertPageTitle();
+    await this.pages.brpWhyCouldNotCollectSponsorPage.assertPageTitle(this.pages.brpWhyCouldNotCollectSponsorPage.page, await this.pages.brpWhyCouldNotCollectSponsorPage.expectedPageTitle());
     switch (reason) {
       case c.COLLECTION_REASON_IDENTITY:
         await this.pages.brpWhyCouldNotCollectSponsorPage.answerICouldNotProveMyIdentity(c.IDENTITY_PROBLEM_OPTION, c.IDENTITY_PROBLEM_DETAILS);
@@ -171,33 +171,33 @@ class BrpStepLib {
       default:
         throw new Error(`Unexpected collection Sponsor reason: ${reason}`);
     }
-    await this.pages.brpCollectionPersonalDetailsPage.assertPageTitle();
+    await this.pages.brpCollectionPersonalDetailsPage.assertPageTitle(this.pages.brpCollectionPersonalDetailsPage.page, await this.pages.brpCollectionPersonalDetailsPage.expectedPageTitle());
     await this.pages.brpCollectionPersonalDetailsPage.enterDetails(c.FULL_NAME, c.ALTERNATIVE_DATE_OF_BIRTH, c.NATIONALITY, c.COLLECTION_PASSPORT_NUMBER);
-    await this.pages.brpHowContactAboutBrpPage.assertPageTitle();
+    await this.pages.brpHowContactAboutBrpPage.assertPageTitle(this.pages.brpHowContactAboutBrpPage.page, await this.pages.brpHowContactAboutBrpPage.expectedPageTitle());
     await this.pages.brpHowContactAboutBrpPage.answerHowContact(c.EMAIL, c.PHONE);
-    await this.pages.brpCheckDetailsPage.assertPageTitle();
+    await this.pages.brpCheckDetailsPage.assertPageTitle(this.pages.brpCheckDetailsPage.page, await this.pages.brpCheckDetailsPage.expectedPageTitle());
     await this.pages.brpCheckDetailsPage.answerNoAndSelectSendbutton();
   }
 
   async answerLostStolenProcess(whereAreYouNow: typeof c.UK_ROUTE | typeof c.OUTSIDE_UK_ROUTE) {
-    await this.pages.brpLostStolenWhereAreYouNowPage.assertPageTitle();
+    await this.pages.brpLostStolenWhereAreYouNowPage.assertPageTitle(this.pages.brpLostStolenWhereAreYouNowPage.page, await this.pages.brpLostStolenWhereAreYouNowPage.expectedPageTitle());
     if (whereAreYouNow === c.OUTSIDE_UK_ROUTE) {
       await this.pages.brpLostStolenWhereAreYouNowPage.answerWhereAreYouOutsideUk(c.NO_OPTION, c.NATIONALITY);
     } else {
       await this.pages.brpLostStolenWhereAreYouNowPage.answerWhereAreYouInUk(c.YES_OPTION);
     }
-    await this.pages.brpLostStolenWhenRealisePage.assertPageTitle();
+    await this.pages.brpLostStolenWhenRealisePage.assertPageTitle(this.pages.brpLostStolenWhenRealisePage.page, await this.pages.brpLostStolenWhenRealisePage.expectedPageTitle());
     await this.pages.brpLostStolenWhenRealisePage.answerWhenRealise(c.BRP_LOST_DATE);
-    await this.pages.brpLostStolenPersonalDetailsPage.assertPageTitle();
+    await this.pages.brpLostStolenPersonalDetailsPage.assertPageTitle(this.pages.brpLostStolenPersonalDetailsPage.page, await this.pages.brpLostStolenPersonalDetailsPage.expectedPageTitle());
     await this.pages.brpLostStolenPersonalDetailsPage.enterDetails(c.FULL_NAME, c.DATE_OF_BIRTH, c.NATIONALITY, c.BRP_CARD_OPTION, c.BRP_NUMBER);
-    await this.pages.brpLostStolenHowContactPage.assertPageTitle();
+    await this.pages.brpLostStolenHowContactPage.assertPageTitle(this.pages.brpLostStolenHowContactPage.page, await this.pages.brpLostStolenHowContactPage.expectedPageTitle());
     await this.pages.brpLostStolenHowContactPage.answerHowContact(c.EMAIL, c.PHONE);
-    await this.pages.brpCheckDetailsPage.assertPageTitle();
+    await this.pages.brpCheckDetailsPage.assertPageTitle(this.pages.brpCheckDetailsPage.page, await this.pages.brpCheckDetailsPage.expectedPageTitle());
     await this.pages.brpCheckDetailsPage.answerNoAndSelectSendbutton();
   }
 
   async answerBrpNotDeliveredProcess(hasTrackingNumber: boolean, hasHomeOfficeLetter: boolean) {
-    await this.pages.brpNotArrivedWhereYouDueToCollectFromPOPage.assertPageTitle();
+    await this.pages.brpNotArrivedWhereYouDueToCollectFromPOPage.assertPageTitle(this.pages.brpNotArrivedWhereYouDueToCollectFromPOPage.page, await this.pages.brpNotArrivedWhereYouDueToCollectFromPOPage.expectedPageTitle());
     await this.pages.brpNotArrivedWhereYouDueToCollectFromPOPage.NotCollectFromPO(c.NO_OPTION);
     if (hasTrackingNumber) {
       await this.pages.brpNotArrivedTrackingNumPage.yesTrackingNum(c.YES_OPTION, c.TRACKING_NUMBER);
@@ -205,17 +205,17 @@ class BrpStepLib {
       await this.pages.brpNotArrivedTrackingNumPage.NoTrackingNum(c.NO_OPTION);
     }
     if (hasHomeOfficeLetter) {
-      await this.pages.brpNotArrivedHaveYouReceivedLetterFromHOPage.assertPageTitle();
+      await this.pages.brpNotArrivedHaveYouReceivedLetterFromHOPage.assertPageTitle(this.pages.brpNotArrivedHaveYouReceivedLetterFromHOPage.page, await this.pages.brpNotArrivedHaveYouReceivedLetterFromHOPage.expectedPageTitle());
       await this.pages.brpNotArrivedHaveYouReceivedLetterFromHOPage.answerYesReceivedLetterHO(c.YES_OPTION, c.COLLECTION_DATE, c.CASE_ID);
       await this.pages.brpNotArrivedWouldYouLikeBrpSentPage.yesBrpSent(c.YES_OPTION, c.DELIVERY_DETAILS);
-      await this.pages.brpNotArrivedPersonalDetailsPage.assertPageTitle();
+      await this.pages.brpNotArrivedPersonalDetailsPage.assertPageTitle(this.pages.brpNotArrivedPersonalDetailsPage.page, await this.pages.brpNotArrivedPersonalDetailsPage.expectedPageTitle());
       await this.pages.brpNotArrivedPersonalDetailsPage.enterDetailsND(c.FULL_NAME, c.ALTERNATIVE_DATE_OF_BIRTH, c.NATIONALITY, c.PASSPORT_NUMBER);
-      await this.pages.brpHowContactAboutBrpPage.assertPageTitle();
+      await this.pages.brpHowContactAboutBrpPage.assertPageTitle(this.pages.brpHowContactAboutBrpPage.page, await this.pages.brpHowContactAboutBrpPage.expectedPageTitle());
       await this.pages.brpHowContactAboutBrpPage.answerHowContact(c.EMAIL, c.PHONE);
-      await this.pages.brpCheckDetailsPage.assertPageTitle();
+      await this.pages.brpCheckDetailsPage.assertPageTitle(this.pages.brpCheckDetailsPage.page, await this.pages.brpCheckDetailsPage.expectedPageTitle());
       await this.pages.brpCheckDetailsPage.answerNoAndSelectSendbutton();
     } else {
-      await this.pages.brpNotArrivedHaveYouReceivedLetterFromHOPage.assertPageTitle();
+      await this.pages.brpNotArrivedHaveYouReceivedLetterFromHOPage.assertPageTitle(this.pages.brpNotArrivedHaveYouReceivedLetterFromHOPage.page, await this.pages.brpNotArrivedHaveYouReceivedLetterFromHOPage.expectedPageTitle());
       await this.pages.brpNotArrivedHaveYouReceivedLetterFromHOPage.answerNotReceivedLetterHO(c.NO_OPTION);
     }
   }
@@ -226,36 +226,36 @@ class BrpStepLib {
     answerAddressQuestionWithYes: boolean
   ) {
     if (whereApplied === c.OUTSIDE_UK_ROUTE) {
-      await this.pages.brpProblemWhereApplyPage.assertPageTitle();
+      await this.pages.brpProblemWhereApplyPage.assertPageTitle(this.pages.brpProblemWhereApplyPage.page, await this.pages.brpProblemWhereApplyPage.expectedPageTitle());
       await this.pages.brpProblemWhereApplyPage.answerOutsideUkButton(c.NO_OPTION);
       await this.answerProblemWithBrp(problem);
-      await this.pages.brpProblemIsThereSuitableUkAddressPage.assertPageTitle();
+      await this.pages.brpProblemIsThereSuitableUkAddressPage.assertPageTitle(this.pages.brpProblemIsThereSuitableUkAddressPage.page, await this.pages.brpProblemIsThereSuitableUkAddressPage.expectedPageTitle());
       if (answerAddressQuestionWithYes) {
         await this.pages.brpProblemIsThereSuitableUkAddressPage.answerYes(c.YES_OPTION, c.HOUSE_NUMBER, c.STREET, c.TOWN, c.COUNTY, c.POSTCODE);
       } else {
         await this.pages.brpProblemIsThereSuitableUkAddressPage.answerNoAndSelectContinueBtn(c.NO_OPTION);
       }
     } else {
-      await this.pages.brpProblemWhereApplyPage.assertPageTitle();
+      await this.pages.brpProblemWhereApplyPage.assertPageTitle(this.pages.brpProblemWhereApplyPage.page, await this.pages.brpProblemWhereApplyPage.expectedPageTitle());
       await this.pages.brpProblemWhereApplyPage.answerUkButton(c.YES_OPTION);
       await this.answerProblemWithBrp(problem);
-      await this.pages.brpProblemAddressSameAsDeliveryPage.assertPageTitle();
+      await this.pages.brpProblemAddressSameAsDeliveryPage.assertPageTitle(this.pages.brpProblemAddressSameAsDeliveryPage.page, await this.pages.brpProblemAddressSameAsDeliveryPage.expectedPageTitle());
       if (answerAddressQuestionWithYes) {
         await this.pages.brpProblemAddressSameAsDeliveryPage.answerYes(c.YES_OPTION);
       } else {
         await this.pages.brpProblemAddressSameAsDeliveryPage.answerNo(c.NO_OPTION, c.HOUSE_NUMBER, c.STREET, c.TOWN, c.COUNTY, c.POSTCODE);
       }
     }
-    await this.pages.brpHowPersonalDetailsAppearPage.assertPageTitle();
+    await this.pages.brpHowPersonalDetailsAppearPage.assertPageTitle(this.pages.brpHowPersonalDetailsAppearPage.page, await this.pages.brpHowPersonalDetailsAppearPage.expectedPageTitle());
     await this.pages.brpHowPersonalDetailsAppearPage.answerHowDoPersonalDetailAppearOnBrp(c.FULL_NAME, c.DATE_OF_BIRTH, c.NATIONALITY, c.BRP_CARD_OPTION, c.BRP_NUMBER);
-    await this.pages.brpHowContactAboutBrpPage.assertPageTitle();
+    await this.pages.brpHowContactAboutBrpPage.assertPageTitle(this.pages.brpHowContactAboutBrpPage.page, await this.pages.brpHowContactAboutBrpPage.expectedPageTitle());
     await this.pages.brpHowContactAboutBrpPage.answerHowContact(c.EMAIL, c.PHONE);
-    await this.pages.brpCheckDetailsPage.assertPageTitle();
+    await this.pages.brpCheckDetailsPage.assertPageTitle(this.pages.brpCheckDetailsPage.page, await this.pages.brpCheckDetailsPage.expectedPageTitle());
     await this.pages.brpCheckDetailsPage.answerNoAndSelectSendbutton();
   }
 
   async answerProblemWithBrp(problem: string) {
-    await this.pages.brpProblemWhatProblemPage.assertPageTitle();
+    await this.pages.brpProblemWhatProblemPage.assertPageTitle(this.pages.brpProblemWhatProblemPage.page, await this.pages.brpProblemWhatProblemPage.expectedPageTitle());
     switch (problem) {
       case c.PROBLEM_FAMILY_NAME:
         await this.pages.brpProblemWhatProblemPage.answerFamilyName(c.PROBLEM_FAMILY_NAME, c.FAMILY_NAME);
@@ -308,19 +308,19 @@ class BrpStepLib {
   }
 
   async someoneElseCollectingRoute(reason: typeof c.MEDICAL_HELP_REASON | typeof c.UNDER_18_REASON) {
-    await this.pages.whoWouldYouLikeToNominatePage.assertPageTitle();
+    await this.pages.whoWouldYouLikeToNominatePage.assertPageTitle(this.pages.whoWouldYouLikeToNominatePage.page, await this.pages.whoWouldYouLikeToNominatePage.expectedPageTitle());
     await this.pages.whoWouldYouLikeToNominatePage.enterDetailsOfPersonNominated(c.NOMINATED_FULL_NAME, c.DATE_OF_BIRTH, c.NATIONALITY, c.PASSPORT_OPTION, c.PASSPORT_NUMBER);
-    await this.pages.whyDoYouNeedSomeOneToCollectPage.assertPageTitle();
+    await this.pages.whyDoYouNeedSomeOneToCollectPage.assertPageTitle(this.pages.whyDoYouNeedSomeOneToCollectPage.page, await this.pages.whyDoYouNeedSomeOneToCollectPage.expectedPageTitle());
     if (reason === c.MEDICAL_HELP_REASON) {
       await this.pages.whyDoYouNeedSomeOneToCollectPage.medicalReasonForSomeOneElseToCollect(c.INCAPABLE_OPTION, c.SITUATION);
     } else {
       await this.pages.whyDoYouNeedSomeOneToCollectPage.ageReasonForSomeOneElseToCollect(c.UNDER_18_OPTION);
     }
-    await this.pages.brpSomeoneElsePersonalDetailsPage.assertPageTitle();
+    await this.pages.brpSomeoneElsePersonalDetailsPage.assertPageTitle(this.pages.brpSomeoneElsePersonalDetailsPage.page, await this.pages.brpSomeoneElsePersonalDetailsPage.expectedPageTitle());
     await this.pages.brpSomeoneElsePersonalDetailsPage.answerWhatAreYourPersonalDetailsSE(c.FULL_NAME, c.SOMEONE_ELSE_DATE_OF_BIRTH, c.NATIONALITY, c.PASSPORT_NUMBER);
-    await this.pages.brpHowContactAboutBrpPage.assertPageTitle();
+    await this.pages.brpHowContactAboutBrpPage.assertPageTitle(this.pages.brpHowContactAboutBrpPage.page, await this.pages.brpHowContactAboutBrpPage.expectedPageTitle());
     await this.pages.brpHowContactAboutBrpPage.answerHowContact(c.EMAIL, c.PHONE);
-    await this.pages.brpCheckDetailsPage.assertPageTitle();
+    await this.pages.brpCheckDetailsPage.assertPageTitle(this.pages.brpCheckDetailsPage.page, await this.pages.brpCheckDetailsPage.expectedPageTitle());
     await this.pages.brpCheckDetailsPage.answerNoAndSelectSendbutton();
   }
 }

@@ -14,7 +14,7 @@ export class brpHowPersonalDetailsAppearPage extends basePage {
   }
 
   async expectedPageTitle(): Promise<string> {
-    return 'How do your personal details appear on your BRP? - Biometric Residence Permit - GOV.UK';
+    return 'How do your personal details appear on your BRP? – Biometric Residence Permit – GOV.UK';
   }
 
   async answerHowDoPersonalDetailAppearOnBrp(fullName: string, dateOfBirth: string, nationality: string, cardOption: string, brpNumber: string) {
@@ -25,4 +25,5 @@ export class brpHowPersonalDetailsAppearPage extends basePage {
     await this.clearAndEnterTextInElement(this.brpNumberTextBox, brpNumber);
     await this.clickContinueBrp();
   }
+
 }

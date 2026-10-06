@@ -14,7 +14,7 @@ export class brpLostStolenPersonalDetailsPage extends basePage {
   }
 
   async expectedPageTitle(): Promise<string> {
-    return 'What are your personal details? - Biometric Residence Permit - GOV.UK';
+    return 'What are your personal details? – Biometric Residence Permit – GOV.UK';
   }
 
   async enterDetails(fullName: string, dateOfBirth: string, nationality: string, cardOption: string, brpNumber: string) {
@@ -25,4 +25,5 @@ export class brpLostStolenPersonalDetailsPage extends basePage {
     await this.clearAndEnterTextInElement(this.brpNumberTextBox, brpNumber);
     await this.clickContinueBrp();
   }
+
 }

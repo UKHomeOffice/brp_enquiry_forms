@@ -7,7 +7,7 @@ export class brpProblemWhereApplyPage extends basePage {
   }
 
   async expectedPageTitle(): Promise<string> {
-    return 'Where did you apply for your visa? - Biometric Residence Permit - GOV.UK';
+    return 'Where did you apply for your visa? – Biometric Residence Permit – GOV.UK';
   }
 
   async answerUkButton(yesOption: string) {
@@ -19,4 +19,5 @@ export class brpProblemWhereApplyPage extends basePage {
     await this.selectRadioByValue(noOption);
     await this.clickContinueBrp();
   }
+
 }

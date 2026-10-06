@@ -12,7 +12,7 @@ export class brpHowContactAboutBrpPage extends basePage {
   }
 
   async expectedPageTitle(): Promise<string> {
-    return 'How should we contact you about your BRP? - Biometric Residence Permit - GOV.UK';
+    return 'How should we contact you about your BRP? – Biometric Residence Permit – GOV.UK';
   }
 
   async answerHowContact(email: string, phone: string) {
@@ -20,4 +20,5 @@ export class brpHowContactAboutBrpPage extends basePage {
     await this.clearAndEnterTextInElement(this.phone, phone);
     await this.clickContinueBrp();
   }
+
 }

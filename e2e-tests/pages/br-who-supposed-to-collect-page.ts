@@ -14,7 +14,7 @@ export class brWhoSupposedToCollectPage extends basePage {
   }
 
   async expectedPageTitle(): Promise<string> {
-    return 'Who was supposed to collect your BRP on your behalf? - Biometric Residence Permit - GOV.UK';
+    return 'Who was supposed to collect your BRP on your behalf? – Biometric Residence Permit – GOV.UK';
   }
 
   async enterCollectingPersonPersonalDetails(fullName: string, dateOfBirth: string, nationality: string, passportNumber: string) {
@@ -24,4 +24,5 @@ export class brWhoSupposedToCollectPage extends basePage {
     await this.clearAndEnterTextInElement(this.nominatedIdNumber, passportNumber);
     await this.clickContinueBrp();
   }
+
 }

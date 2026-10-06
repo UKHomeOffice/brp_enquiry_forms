@@ -30,4 +30,5 @@ export class brpSomeOneElseHomePage extends basePage {
     }
     await this.clickStartNowIfPresent(this.startButton);
   }
+
 }
