@@ -54,7 +54,7 @@
     "install": "^0.13.0",
     "mocha": "^11.7.6",
     "nyc": "^18.0.0",
-    "parallelshell": "^3.0.2",
+    "parallelshell": "^4.0.0",
     "playwright": "1.63.0",
     "playwright-bdd": "^9.2.0",
     "proxyquire": "^2.1.3",
