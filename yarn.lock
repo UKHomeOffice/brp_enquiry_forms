@@ -4890,10 +4890,10 @@ pad-right@^0.2.2:
   dependencies:
     repeat-string "^1.5.2"
 
-parallelshell@^3.0.2:
-  version "3.2.1"
-  resolved "https://registry.yarnpkg.com/parallelshell/-/parallelshell-3.2.1.tgz#89fc1993bbd87b8cae8e8a9a85178c774749d094"
-  integrity sha512-BZ/yz65EL9zYAiJIUgExIy66DX4Zei8mYWxJvaGzFwsyXKtPyfmcr4wzttr2J+Lofypo4iTh65WaTW2V7X/jzg==
+parallelshell@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/parallelshell/-/parallelshell-4.0.0.tgz#6d6058a372d11b2dd6eaeb3f9992424e19643afd"
+  integrity sha512-GYltBibqyoSF/8rJGy1z9eN0xYETZM+F8z3isbpREKbQi63M6hI4XJ6DttNWMXpvfV7RBRJoKvU63dDB3p7O5A==
   dependencies:
     cross-spawn "^6.0.6"
     minimatch "^3.1.5"
