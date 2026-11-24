@@ -33,8 +33,7 @@ trigger:
   branch:
     <<: *include_default_and_feature_branches
 
-node_image_name: &node_image_name quay.io/ukhomeofficedigital/hof-nodejs:24.22.1_1-alpine@sha256:033927ee2316f3b3c7d22f3560c2e4201c4c751b7cb4664d0d9b9c28783d9473
-
+node_image_name: &node_image_name quay.io/ukhomeofficedigital/hof-nodejs:24.22.3_1-alpine@sha256:8533bcedc2dc86aceadaa8bab422931e8a33a81504c67247392eeffec6603cd5
 node_image: &node_image
   pull: if-not-exists
   image: *node_image_name
@@ -297,7 +296,7 @@ steps:
         path: /root/.dockersock
     commands:
       - npm install -g n
-      - n 24.22.1
+      - n 24.22.3
       - hash -r
       - node --version
       - yarn install --frozen-lockfile
@@ -644,7 +643,7 @@ steps:
         path: /root/.dockersock
     commands:
       - npm install -g n
-      - n 24.22.1
+      - n 24.22.3
       - hash -r
       - node --version
       - yarn install --frozen-lockfile
