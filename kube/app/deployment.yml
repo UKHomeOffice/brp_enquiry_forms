@@ -120,7 +120,7 @@ spec:
               name: public
               
         - name: nginx-proxy
-          image: 340268328991.dkr.ecr.eu-west-2.amazonaws.com/sas/hof-nginx@sha256:643c3e49ff6756ed0a886285fba3ca9d863de33a1c921db67848103963bfa5cb
+          image: 340268328991.dkr.ecr.***.amazonaws.com/sas/hof-nginx:aaab724535a88995319264609573cdfa2b27fd87-amd64
           resources:
             requests:
               memory: 10Mi
